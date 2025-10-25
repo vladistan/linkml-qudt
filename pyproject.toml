@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.20.0", "hatch-vcs", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qudt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.14"
+authors = [
+    {name = "Vlad Korolev", email="vlad@v-lad.org"},
+]
+dependencies = [
+    "schema-automator>=0.5.3",
+    "linkml-runtime",
+]
+
+[tool.uv.sources]
+linkml-runtime = { path = "../linkml-runtime", editable = true }
+linkml = { path = "../linkml", editable = true }
+grip = { git = "ssh://git@github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
+
+[dependency-groups]
+dev = [
+    "linkml",
+    "mkdocs-material>=8.2.8",
+    "mkdocs-mermaid2-plugin>=1.1.1",
+    "jupyter>=1.0.0",
+    "mknotebooks>= 0.8.0",
+    "grip>=4.6.0",
+    "markdown>=3.4.0",
+    "pygments>=2.14.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+fragments = [
+  { path = "README.md" },
+  { path = "CHANGES.md" },
+]
+
+[tool.hatch.version]
+path = "src/linkml_pokemon/__about__.py"
+
+[tool.hatch.version.raw-options]
+version_scheme = "no-guess-dev"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/linkml_pokemon"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
