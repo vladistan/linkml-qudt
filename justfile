@@ -79,9 +79,10 @@ gen-project:
 
 # Locally serve data dictionary
 [group('model development')]
-serve-data-dict: gen-project
-  cd {{dest}} && uv run --user-content --wide --group dev grip --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
+serve-data-dict:
+  cd {{dest}} && uv run --group dev grip --wide --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
 
+#gen-project
 
 # Status
 [group('project management')]
