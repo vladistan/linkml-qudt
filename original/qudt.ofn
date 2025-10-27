@@ -1,0 +1,2847 @@
+Prefix(:=<http://qudt.org/3.1.6/schema/qudt#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(qudt:=<http://qudt.org/schema/qudt/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(vaem:=<http://www.linkedmodel.org/schema/vaem#>)
+Prefix(voag:=<http://voag.linkedmodel.org/schema/voag#>)
+Prefix(dtype:=<http://www.linkedmodel.org/schema/dtype#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<http://qudt.org/3.1.6/schema/qudt>
+<http://qudt.org/3.1.6/schema/qudt>
+Import(<http://www.linkedmodel.org/schema/dtype>)
+Import(<http://www.linkedmodel.org/schema/vaem>)
+Import(<http://www.w3.org/2004/02/skos/core>)
+Annotation(vaem:hasGraphMetadata vaem:GMD_QUDT-SCHEMA)
+Annotation(rdfs:isDefinedBy <http://qudt.org/3.1.6/schema/qudt>)
+Annotation(rdfs:label "QUDT Schema - Version 3.1.6")
+
+Declaration(Class(<http://org.semanticweb.owlapi/error#Error1>))
+Declaration(Class(<http://org.semanticweb.owlapi/error#Error2>))
+Declaration(Class(<http://org.semanticweb.owlapi/error#Error3>))
+Declaration(Class(qudt:AbstractQuantityKind))
+Declaration(Class(qudt:AngleUnit))
+Declaration(Class(qudt:Aspect))
+Declaration(Class(qudt:AspectClass))
+Declaration(Class(qudt:BaseDimensionMagnitude))
+Declaration(Class(qudt:BinaryPrefix))
+Declaration(Class(qudt:BitEncodingType))
+Declaration(Class(qudt:BooleanEncodingType))
+Declaration(Class(qudt:ByteEncodingType))
+Declaration(Class(qudt:CardinalityType))
+Declaration(Class(qudt:CharEncodingType))
+Declaration(Class(qudt:Citation))
+Declaration(Class(qudt:Comment))
+Declaration(Class(qudt:Concept))
+Declaration(Class(qudt:ConstantValue))
+Declaration(Class(qudt:ContextualUnit))
+Declaration(Class(qudt:CountingUnit))
+Declaration(Class(qudt:CurrencyUnit))
+Declaration(Class(qudt:DataEncoding))
+Declaration(Class(qudt:DataItem))
+Declaration(Class(qudt:Datatype))
+Declaration(Class(qudt:DateTimeStringEncodingType))
+Declaration(Class(qudt:DecimalPrefix))
+Declaration(Class(qudt:DerivedUnit))
+Declaration(Class(qudt:DimensionlessUnit))
+Declaration(Class(qudt:Discipline))
+Declaration(Class(qudt:Encoding))
+Declaration(Class(qudt:EndianType))
+Declaration(Class(qudt:EnumeratedQuantity))
+Declaration(Class(qudt:EnumeratedValue))
+Declaration(Class(qudt:Enumeration))
+Declaration(Class(qudt:EnumerationScale))
+Declaration(Class(qudt:Figure))
+Declaration(Class(qudt:FloatingPointEncodingType))
+Declaration(Class(qudt:IntegerEncodingType))
+Declaration(Class(qudt:IntervalScale))
+Declaration(Class(qudt:LogarithmicUnit))
+Declaration(Class(qudt:MathsFunctionType))
+Declaration(Class(qudt:NIST_SP811_Comment))
+Declaration(Class(qudt:NominalScale))
+Declaration(Class(qudt:NumericUnion))
+Declaration(Class(qudt:OrderedType))
+Declaration(Class(qudt:OrdinalScale))
+Declaration(Class(qudt:Organization))
+Declaration(Class(qudt:PhysicalConstant))
+Declaration(Class(qudt:PlaneAngleUnit))
+Declaration(Class(qudt:Prefix))
+Declaration(Class(qudt:Quantifiable))
+Declaration(Class(qudt:Quantity))
+Declaration(Class(qudt:QuantityKind))
+Declaration(Class(qudt:QuantityKindDimensionVector))
+Declaration(Class(qudt:QuantityKindDimensionVector_CGS))
+Declaration(Class(qudt:QuantityKindDimensionVector_CGS-EMU))
+Declaration(Class(qudt:QuantityKindDimensionVector_CGS-ESU))
+Declaration(Class(qudt:QuantityKindDimensionVector_CGS-GAUSS))
+Declaration(Class(qudt:QuantityKindDimensionVector_CGS-LH))
+Declaration(Class(qudt:QuantityKindDimensionVector_ISO))
+Declaration(Class(qudt:QuantityKindDimensionVector_Imperial))
+Declaration(Class(qudt:QuantityKindDimensionVector_SI))
+Declaration(Class(qudt:QuantityType))
+Declaration(Class(qudt:QuantityValue))
+Declaration(Class(qudt:RatioScale))
+Declaration(Class(qudt:Rule))
+Declaration(Class(qudt:RuleType))
+Declaration(Class(qudt:ScalarDatatype))
+Declaration(Class(qudt:Scale))
+Declaration(Class(qudt:ScaleType))
+Declaration(Class(qudt:SignednessType))
+Declaration(Class(qudt:SolidAngleUnit))
+Declaration(Class(qudt:Statement))
+Declaration(Class(qudt:StringEncodingType))
+Declaration(Class(qudt:Symbol))
+Declaration(Class(qudt:SymmetricRelation))
+Declaration(Class(qudt:SystemOfQuantityKinds))
+Declaration(Class(qudt:SystemOfUnits))
+Declaration(Class(qudt:TransformType))
+Declaration(Class(qudt:Unit))
+Declaration(Class(qudt:UserQuantityKind))
+Declaration(Class(qudt:Verifiable))
+Declaration(Class(vaem:CatalogEntry))
+Declaration(Class(rdf:List))
+Declaration(Class(rdf:Statement))
+Declaration(Class(rdfs:Class))
+Declaration(Class(rdfs:Datatype))
+Declaration(Class(rdfs:Resource))
+Declaration(Class(xsd:gDay))
+Declaration(Class(xsd:gMonth))
+Declaration(Class(xsd:gMonthDay))
+Declaration(Class(xsd:gYear))
+Declaration(Class(xsd:gYearMonth))
+Declaration(Class(owl:Class))
+Declaration(Class(owl:Ontology))
+Declaration(ObjectProperty(dcterms:isReplacedBy))
+Declaration(ObjectProperty(qudt:ansiSQLName))
+Declaration(ObjectProperty(qudt:applicableCGSUnit))
+Declaration(ObjectProperty(qudt:applicableISOUnit))
+Declaration(ObjectProperty(qudt:applicableImperialUnit))
+Declaration(ObjectProperty(qudt:applicablePhysicalConstant))
+Declaration(ObjectProperty(qudt:applicablePlanckUnit))
+Declaration(ObjectProperty(qudt:applicableSIUnit))
+Declaration(ObjectProperty(qudt:applicableSystem))
+Declaration(ObjectProperty(qudt:applicableUSCustomaryUnit))
+Declaration(ObjectProperty(qudt:applicableUnit))
+Declaration(ObjectProperty(qudt:baseDimensionEnumeration))
+Declaration(ObjectProperty(qudt:baseUnitOfSystem))
+Declaration(ObjectProperty(qudt:basis))
+Declaration(ObjectProperty(qudt:belongsToSystemOfQuantities))
+Declaration(ObjectProperty(qudt:bitOrder))
+Declaration(ObjectProperty(qudt:byteOrder))
+Declaration(ObjectProperty(qudt:cName))
+Declaration(ObjectProperty(qudt:cardinality))
+Declaration(ObjectProperty(qudt:categorizedAs))
+Declaration(ObjectProperty(qudt:coherentUnitSystem))
+Declaration(ObjectProperty(qudt:dataEncoding))
+Declaration(ObjectProperty(qudt:datatype))
+Declaration(ObjectProperty(qudt:default))
+Declaration(ObjectProperty(qudt:definedUnitOfSystem))
+Declaration(ObjectProperty(qudt:denominatorDimensionVector))
+Declaration(ObjectProperty(qudt:derivedCoherentUnitOfSystem))
+Declaration(ObjectProperty(qudt:derivedNonCoherentUnitOfSystem))
+Declaration(ObjectProperty(qudt:derivedUnitOfSystem))
+Declaration(ObjectProperty(qudt:dimensionInverse))
+Declaration(ObjectProperty(qudt:dimensionVectorForSI))
+Declaration(ObjectProperty(qudt:element))
+Declaration(ObjectProperty(qudt:elementKind))
+Declaration(ObjectProperty(qudt:encoding))
+Declaration(ObjectProperty(qudt:enumeratedValue))
+Declaration(ObjectProperty(qudt:enumeration))
+Declaration(ObjectProperty(qudt:exactMatch))
+Declaration(ObjectProperty(qudt:exponent))
+Declaration(ObjectProperty(qudt:figure))
+Declaration(ObjectProperty(qudt:hasAllowedUnit))
+Declaration(ObjectProperty(qudt:hasBaseQuantityKind))
+Declaration(ObjectProperty(qudt:hasBaseUnit))
+Declaration(ObjectProperty(qudt:hasCoherentUnit))
+Declaration(ObjectProperty(qudt:hasDefinedUnit))
+Declaration(ObjectProperty(qudt:hasDenominatorPart))
+Declaration(ObjectProperty(qudt:hasDerivedCoherentUnit))
+Declaration(ObjectProperty(qudt:hasDerivedNonCoherentUnit))
+Declaration(ObjectProperty(qudt:hasDerivedUnit))
+Declaration(ObjectProperty(qudt:hasDimension))
+Declaration(ObjectProperty(qudt:hasDimensionExpression))
+Declaration(ObjectProperty(qudt:hasDimensionVector))
+Declaration(ObjectProperty(qudt:hasFactorUnit))
+Declaration(ObjectProperty(qudt:hasNumeratorPart))
+Declaration(ObjectProperty(qudt:hasPrefixUnit))
+Declaration(ObjectProperty(qudt:hasQuantity))
+Declaration(ObjectProperty(qudt:hasQuantityKind))
+Declaration(ObjectProperty(qudt:hasReciprocalUnit))
+Declaration(ObjectProperty(qudt:hasReferenceQuantityKind))
+Declaration(ObjectProperty(qudt:hasRule))
+Declaration(ObjectProperty(qudt:hasUnit))
+Declaration(ObjectProperty(qudt:hasUnitSystem))
+Declaration(ObjectProperty(qudt:hasVocabulary))
+Declaration(ObjectProperty(qudt:isDimensionInSystem))
+Declaration(ObjectProperty(qudt:isUnitOfSystem))
+Declaration(ObjectProperty(qudt:numeratorDimensionVector))
+Declaration(ObjectProperty(qudt:omUnit))
+Declaration(ObjectProperty(qudt:oracleSQLName))
+Declaration(ObjectProperty(qudt:orderedType))
+Declaration(ObjectProperty(qudt:permissibleMaths))
+Declaration(ObjectProperty(qudt:permissibleTransformation))
+Declaration(ObjectProperty(qudt:prefix))
+Declaration(ObjectProperty(qudt:protocolBuffersName))
+Declaration(ObjectProperty(qudt:pythonName))
+Declaration(ObjectProperty(qudt:qkdvDenominator))
+Declaration(ObjectProperty(qudt:qkdvNumerator))
+Declaration(ObjectProperty(qudt:quantity))
+Declaration(ObjectProperty(qudt:quantityValue))
+Declaration(ObjectProperty(qudt:reference))
+Declaration(ObjectProperty(qudt:referenceUnit))
+Declaration(ObjectProperty(qudt:relevantQuantityKind))
+Declaration(ObjectProperty(qudt:relevantUnit))
+Declaration(ObjectProperty(qudt:ruleType))
+Declaration(ObjectProperty(qudt:scaleType))
+Declaration(ObjectProperty(qudt:scalingOf))
+Declaration(ObjectProperty(qudt:siExactMatch))
+Declaration(ObjectProperty(qudt:systemDefinition))
+Declaration(ObjectProperty(qudt:systemDerivedQuantityKind))
+Declaration(ObjectProperty(qudt:systemDimension))
+Declaration(ObjectProperty(qudt:unitFor))
+Declaration(ObjectProperty(qudt:valueQuantity))
+Declaration(ObjectProperty(qudt:vbName))
+Declaration(ObjectProperty(voag:supersededBy))
+Declaration(ObjectProperty(prov:wasDerivedFrom))
+Declaration(DataProperty(dcterms:description))
+Declaration(DataProperty(qudt:abbreviation))
+Declaration(DataProperty(qudt:acronym))
+Declaration(DataProperty(qudt:allowedPattern))
+Declaration(DataProperty(qudt:altSymbol))
+Declaration(DataProperty(qudt:bits))
+Declaration(DataProperty(qudt:bounded))
+Declaration(DataProperty(qudt:bytes))
+Declaration(DataProperty(qudt:conversionMultiplier))
+Declaration(DataProperty(qudt:conversionMultiplierSN))
+Declaration(DataProperty(qudt:conversionOffset))
+Declaration(DataProperty(qudt:conversionOffsetSN))
+Declaration(DataProperty(qudt:currencyCode))
+Declaration(DataProperty(qudt:currencyExponent))
+Declaration(DataProperty(qudt:currencyNumber))
+Declaration(DataProperty(qudt:dataStructure))
+Declaration(DataProperty(qudt:deprecated))
+Declaration(DataProperty(qudt:dimensionExponent))
+Declaration(DataProperty(qudt:dimensionExponentForAmountOfSubstance))
+Declaration(DataProperty(qudt:dimensionExponentForElectricCurrent))
+Declaration(DataProperty(qudt:dimensionExponentForLength))
+Declaration(DataProperty(qudt:dimensionExponentForLuminousIntensity))
+Declaration(DataProperty(qudt:dimensionExponentForMass))
+Declaration(DataProperty(qudt:dimensionExponentForThermodynamicTemperature))
+Declaration(DataProperty(qudt:dimensionExponentForTime))
+Declaration(DataProperty(qudt:dimensionlessExponent))
+Declaration(DataProperty(qudt:exactConstant))
+Declaration(DataProperty(qudt:factorUnitScalar))
+Declaration(DataProperty(qudt:fieldCode))
+Declaration(DataProperty(qudt:figureCaption))
+Declaration(DataProperty(qudt:figureLabel))
+Declaration(DataProperty(qudt:guidance))
+Declaration(DataProperty(qudt:hasCitation))
+Declaration(DataProperty(qudt:height))
+Declaration(DataProperty(qudt:id))
+Declaration(DataProperty(qudt:iec61360Code))
+Declaration(DataProperty(qudt:image))
+Declaration(DataProperty(qudt:imageLocation))
+Declaration(DataProperty(qudt:isDeltaQuantity))
+Declaration(DataProperty(qudt:isMetricUnit))
+Declaration(DataProperty(qudt:isoNormativeReference))
+Declaration(DataProperty(qudt:javaName))
+Declaration(DataProperty(qudt:jsName))
+Declaration(DataProperty(qudt:landscape))
+Declaration(DataProperty(qudt:latexDefinition))
+Declaration(DataProperty(qudt:latexSymbol))
+Declaration(DataProperty(qudt:length))
+Declaration(DataProperty(qudt:lowerBound))
+Declaration(DataProperty(qudt:mathDefinition))
+Declaration(DataProperty(qudt:mathMLdefinition))
+Declaration(DataProperty(qudt:matlabName))
+Declaration(DataProperty(qudt:maxExclusive))
+Declaration(DataProperty(qudt:maxInclusive))
+Declaration(DataProperty(qudt:microsoftSQLServerName))
+Declaration(DataProperty(qudt:minExclusive))
+Declaration(DataProperty(qudt:minInclusive))
+Declaration(DataProperty(qudt:mySQLName))
+Declaration(DataProperty(qudt:negativeDeltaLimit))
+Declaration(DataProperty(qudt:normativeReference))
+Declaration(DataProperty(qudt:numericValue))
+Declaration(DataProperty(qudt:odbcName))
+Declaration(DataProperty(qudt:oleDBName))
+Declaration(DataProperty(qudt:onlineReference))
+Declaration(DataProperty(qudt:order))
+Declaration(DataProperty(qudt:outOfScope))
+Declaration(DataProperty(qudt:plainTextDescription))
+Declaration(DataProperty(qudt:positiveDeltaLimit))
+Declaration(DataProperty(qudt:prefixMultiplier))
+Declaration(DataProperty(qudt:prefixMultiplierSN))
+Declaration(DataProperty(qudt:rationale))
+Declaration(DataProperty(qudt:rdfsDatatype))
+Declaration(DataProperty(qudt:relativeStandardUncertainty))
+Declaration(DataProperty(qudt:siUnitsExpression))
+Declaration(DataProperty(qudt:standardUncertainty))
+Declaration(DataProperty(qudt:standardUncertaintySN))
+Declaration(DataProperty(qudt:symbol))
+Declaration(DataProperty(qudt:ucumCode))
+Declaration(DataProperty(qudt:udunitsCode))
+Declaration(DataProperty(qudt:uneceCommonCode))
+Declaration(DataProperty(qudt:upperBound))
+Declaration(DataProperty(qudt:url))
+Declaration(DataProperty(qudt:value))
+Declaration(DataProperty(qudt:valueSN))
+Declaration(DataProperty(qudt:vectorMagnitude))
+Declaration(DataProperty(qudt:width))
+Declaration(DataProperty(dtype:literal))
+Declaration(NamedIndividual(<http://dbpedia.org/resource/Category:Units_of_angle>))
+Declaration(NamedIndividual(qudt:AngleUnit))
+Declaration(NamedIndividual(qudt:Aspect))
+Declaration(NamedIndividual(qudt:BigEndian))
+Declaration(NamedIndividual(qudt:BitEncoding))
+Declaration(NamedIndividual(qudt:BooleanEncoding))
+Declaration(NamedIndividual(qudt:CT_COUNTABLY-INFINITE))
+Declaration(NamedIndividual(qudt:CT_FINITE))
+Declaration(NamedIndividual(qudt:CT_UNCOUNTABLE))
+Declaration(NamedIndividual(qudt:CardinalityType))
+Declaration(NamedIndividual(qudt:CharEncoding))
+Declaration(NamedIndividual(qudt:DoublePrecisionEncoding))
+Declaration(NamedIndividual(qudt:EndianType))
+Declaration(NamedIndividual(qudt:EnumeratedQuantity))
+Declaration(NamedIndividual(qudt:IEEE754_1985RealEncoding))
+Declaration(NamedIndividual(qudt:ISO8601-UTCDateTime-BasicFormat))
+Declaration(NamedIndividual(qudt:LittleEndian))
+Declaration(NamedIndividual(qudt:LongUnsignedIntegerEncoding))
+Declaration(NamedIndividual(qudt:OctetEncoding))
+Declaration(NamedIndividual(qudt:PartiallyOrdered))
+Declaration(NamedIndividual(qudt:ScaleType))
+Declaration(NamedIndividual(qudt:ShortSignedIntegerEncoding))
+Declaration(NamedIndividual(qudt:ShortUnsignedIntegerEncoding))
+Declaration(NamedIndividual(qudt:Signed))
+Declaration(NamedIndividual(qudt:SignedIntegerEncoding))
+Declaration(NamedIndividual(qudt:SinglePrecisionRealEncoding))
+Declaration(NamedIndividual(qudt:TotallyOrdered))
+Declaration(NamedIndividual(qudt:UNSIGNED))
+Declaration(NamedIndividual(qudt:Unordered))
+Declaration(NamedIndividual(qudt:UnsignedIntegerEncoding))
+Declaration(NamedIndividual(qudt:Verifiable))
+Declaration(NamedIndividual(qudt:exactMatch))
+Declaration(NamedIndividual(qudt:fieldCode))
+Declaration(NamedIndividual(qudt:hasCitation))
+Declaration(NamedIndividual(qudt:hasReciprocalUnit))
+Declaration(NamedIndividual(qudt:hasVocabulary))
+Declaration(NamedIndividual(voag:QUDT-SchemaCatalogEntry))
+Declaration(NamedIndividual(<http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US>))
+Declaration(NamedIndividual(<http://www.linkedmodel.org/schema/dtype>))
+Declaration(NamedIndividual(dtype:GMD_DTYPE))
+Declaration(NamedIndividual(vaem:CollectionGraph))
+Declaration(NamedIndividual(vaem:ConstraintsGraph))
+Declaration(NamedIndividual(vaem:ControllersGraph))
+Declaration(NamedIndividual(vaem:CurationGraph))
+Declaration(NamedIndividual(vaem:DataGraph))
+Declaration(NamedIndividual(vaem:DocumentationGraph))
+Declaration(NamedIndividual(vaem:FunctionsGraph))
+Declaration(NamedIndividual(vaem:GMD_QUDT-SCHEMA))
+Declaration(NamedIndividual(vaem:GMD_VAEM))
+Declaration(NamedIndividual(vaem:LinkSetGraph))
+Declaration(NamedIndividual(vaem:MappingGraph))
+Declaration(NamedIndividual(vaem:ProxyGraph))
+Declaration(NamedIndividual(vaem:QUDT))
+Declaration(NamedIndividual(vaem:RulesGraph))
+Declaration(NamedIndividual(vaem:SchemaGraph))
+Declaration(NamedIndividual(vaem:ScriptGraph))
+Declaration(NamedIndividual(vaem:TopQuadrant))
+Declaration(NamedIndividual(vaem:TransformsGraph))
+Declaration(NamedIndividual(vaem:ViewGraph))
+Declaration(NamedIndividual(vaem:VocabularyGraph))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dcterms:abstract))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:rights))
+Declaration(AnnotationProperty(dcterms:source))
+Declaration(AnnotationProperty(dcterms:subject))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(qudt:dbpediaMatch))
+Declaration(AnnotationProperty(qudt:example))
+Declaration(AnnotationProperty(qudt:expression))
+Declaration(AnnotationProperty(qudt:informativeReference))
+Declaration(AnnotationProperty(qudt:wikidataMatch))
+Declaration(AnnotationProperty(vaem:graphName))
+Declaration(AnnotationProperty(vaem:graphTitle))
+Declaration(AnnotationProperty(vaem:isMetadataFor))
+Declaration(AnnotationProperty(vaem:website))
+Declaration(AnnotationProperty(xsd:pattern))
+Declaration(AnnotationProperty(owl:maxCardinality))
+Declaration(AnnotationProperty(owl:minCardinality))
+Declaration(Datatype(qudt:LatexString))
+Declaration(Datatype(qudt:UCUMcs))
+Declaration(Datatype(qudt:UCUMcs-term))
+Declaration(Datatype(qudt:floatPercentage))
+Declaration(Datatype(qudt:integerPercentage))
+Declaration(Datatype(qudt:valueUnion))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: dcterms:abstract (abstract)
+
+AnnotationAssertion(rdfs:isDefinedBy dcterms:abstract <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label dcterms:abstract "abstract")
+AnnotationPropertyRange(dcterms:abstract xsd:string)
+
+# Annotation Property: dcterms:contributor (contributor)
+
+AnnotationAssertion(rdfs:label dcterms:contributor "contributor")
+
+# Annotation Property: dcterms:created (created)
+
+AnnotationAssertion(rdfs:label dcterms:created "created")
+AnnotationPropertyRange(dcterms:created xsd:date)
+
+# Annotation Property: dcterms:creator (creator)
+
+AnnotationAssertion(rdfs:label dcterms:creator "creator")
+
+# Annotation Property: dcterms:description (description)
+
+AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:modified (modified)
+
+AnnotationAssertion(rdfs:label dcterms:modified "modified")
+AnnotationPropertyRange(dcterms:modified xsd:date)
+
+# Annotation Property: dcterms:rights (rights)
+
+AnnotationAssertion(rdfs:label dcterms:rights "rights")
+AnnotationPropertyRange(dcterms:rights xsd:string)
+
+# Annotation Property: dcterms:source (source)
+
+AnnotationAssertion(rdfs:isDefinedBy dcterms:source <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label dcterms:source "source")
+AnnotationPropertyRange(dcterms:source xsd:anyURI)
+
+# Annotation Property: dcterms:subject (subject)
+
+AnnotationAssertion(rdfs:label dcterms:subject "subject")
+AnnotationPropertyRange(dcterms:subject xsd:string)
+
+# Annotation Property: dcterms:title (title)
+
+AnnotationAssertion(rdfs:label dcterms:title "title")
+AnnotationPropertyRange(dcterms:title xsd:string)
+
+# Annotation Property: qudt:dbpediaMatch (dbpedia match)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dbpediaMatch <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dbpediaMatch "dbpedia match")
+AnnotationPropertyRange(qudt:dbpediaMatch xsd:anyURI)
+
+# Annotation Property: qudt:example (example)
+
+AnnotationAssertion(rdfs:comment qudt:example "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:example <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:example "example")
+
+# Annotation Property: qudt:expression (expression)
+
+AnnotationAssertion(dcterms:description qudt:expression "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:expression <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:expression "expression")
+
+# Annotation Property: qudt:informativeReference (informative reference)
+
+AnnotationAssertion(dcterms:description qudt:informativeReference "Provides a way to reference a source that provided useful but non-normative information."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:informativeReference <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:informativeReference "informative reference")
+AnnotationPropertyRange(qudt:informativeReference xsd:anyURI)
+
+# Annotation Property: qudt:wikidataMatch (wikidata match)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:wikidataMatch <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:wikidataMatch "wikidata match")
+AnnotationPropertyRange(qudt:wikidataMatch xsd:anyURI)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: dcterms:isReplacedBy (is replaced by)
+
+AnnotationAssertion(rdfs:label dcterms:isReplacedBy "is replaced by")
+
+# Object Property: qudt:ansiSQLName (ANSI SQL Name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ansiSQLName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ansiSQLName "ANSI SQL Name")
+ObjectPropertyRange(qudt:ansiSQLName xsd:string)
+
+# Object Property: qudt:applicableCGSUnit (applicable CGS unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableCGSUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableCGSUnit "applicable CGS unit")
+SubObjectPropertyOf(qudt:applicableCGSUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicableCGSUnit qudt:Unit)
+
+# Object Property: qudt:applicableISOUnit (applicable ISO unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableISOUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableISOUnit "applicable ISO unit")
+SubObjectPropertyOf(qudt:applicableISOUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicableISOUnit qudt:Unit)
+
+# Object Property: qudt:applicableImperialUnit (applicable Imperial unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableImperialUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableImperialUnit "applicable Imperial unit")
+SubObjectPropertyOf(qudt:applicableImperialUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicableImperialUnit qudt:Unit)
+
+# Object Property: qudt:applicablePhysicalConstant (applicable physical constant)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicablePhysicalConstant <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicablePhysicalConstant "applicable physical constant")
+
+# Object Property: qudt:applicablePlanckUnit (applicable Planck unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicablePlanckUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicablePlanckUnit "applicable Planck unit")
+SubObjectPropertyOf(qudt:applicablePlanckUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicablePlanckUnit qudt:Unit)
+
+# Object Property: qudt:applicableSIUnit (applicable SI unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableSIUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableSIUnit "applicable SI unit")
+SubObjectPropertyOf(qudt:applicableSIUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicableSIUnit qudt:Unit)
+
+# Object Property: qudt:applicableSystem (applicable system)
+
+AnnotationAssertion(dcterms:description qudt:applicableSystem "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableSystem "applicable system")
+
+# Object Property: qudt:applicableUSCustomaryUnit (applicable US Customary unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableUSCustomaryUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableUSCustomaryUnit "applicable US Customary unit")
+SubObjectPropertyOf(qudt:applicableUSCustomaryUnit qudt:applicableUnit)
+ObjectPropertyRange(qudt:applicableUSCustomaryUnit qudt:Unit)
+
+# Object Property: qudt:applicableUnit (applicable unit)
+
+AnnotationAssertion(dcterms:description qudt:applicableUnit "See https://github.com/qudt/qudt-public-repo/wiki/Advanced-User-Guide#4-computing-applicable-units-for-a-quantitykind on how `qudt:applicableUnit` is computed from `qudt:hasQuantityKind` and then materialized"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:applicableUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:applicableUnit "applicable unit")
+ObjectPropertyRange(qudt:applicableUnit qudt:Unit)
+
+# Object Property: qudt:baseDimensionEnumeration (base dimension enumeration)
+
+AnnotationAssertion(dcterms:description qudt:baseDimensionEnumeration "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:baseDimensionEnumeration <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:baseDimensionEnumeration "base dimension enumeration")
+FunctionalObjectProperty(qudt:baseDimensionEnumeration)
+ObjectPropertyRange(qudt:baseDimensionEnumeration qudt:Enumeration)
+
+# Object Property: qudt:baseUnitOfSystem (is base unit of system)
+
+AnnotationAssertion(dcterms:description qudt:baseUnitOfSystem "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:baseUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:baseUnitOfSystem "is base unit of system")
+SubObjectPropertyOf(qudt:baseUnitOfSystem qudt:definedUnitOfSystem)
+InverseObjectProperties(qudt:baseUnitOfSystem qudt:hasBaseUnit)
+
+# Object Property: qudt:basis (basis)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:basis <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:basis "basis")
+
+# Object Property: qudt:belongsToSystemOfQuantities (belongs to system of quantities)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:belongsToSystemOfQuantities <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:belongsToSystemOfQuantities "belongs to system of quantities")
+ObjectPropertyDomain(qudt:belongsToSystemOfQuantities qudt:QuantityKind)
+ObjectPropertyRange(qudt:belongsToSystemOfQuantities qudt:SystemOfQuantityKinds)
+
+# Object Property: qudt:bitOrder (bit order)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:bitOrder <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:bitOrder "bit order")
+ObjectPropertyRange(qudt:bitOrder qudt:EndianType)
+
+# Object Property: qudt:byteOrder (byte order)
+
+AnnotationAssertion(dcterms:description qudt:byteOrder "Byte order is an enumeration of two values: 'Big Endian' and 'Little Endian' and is used to denote whether the most signiticant byte is either first or last, respectively.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:byteOrder <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:byteOrder "byte order")
+ObjectPropertyRange(qudt:byteOrder qudt:EndianType)
+
+# Object Property: qudt:cName (C Language name)
+
+AnnotationAssertion(rdfs:comment qudt:cName "Datatype name in the C programming language")
+AnnotationAssertion(rdfs:isDefinedBy qudt:cName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:cName "C Language name")
+ObjectPropertyRange(qudt:cName xsd:string)
+
+# Object Property: qudt:cardinality (cardinality)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:cardinality <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:cardinality "cardinality")
+
+# Object Property: qudt:categorizedAs (categorized as)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:categorizedAs <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:categorizedAs "categorized as")
+
+# Object Property: qudt:coherentUnitSystem (coherent unit system)
+
+AnnotationAssertion(dcterms:description qudt:coherentUnitSystem "
+  A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. 
+  In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units. 
+  For example, the $newton$ and the $joule$. 
+  These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per (1) second per (1) second, and the work done by 1 newton acting over 1 metre. 
+  Being coherent refers to this consistent use of 1. 
+  In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg,
+   respectively the force that causes 1 gram to be accelerated at 1 centimetre per (1) second per (1) second, and the work done by 1 dyne acting over 1 centimetre. 
+  So $1\\,newton = 10^5 dyne$, $1 joule = 10^7 erg$, making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.</p>
+  "^^qudt:LatexString)
+AnnotationAssertion(qudt:informativeReference qudt:coherentUnitSystem "https://en.wikipedia.org/wiki/Coherence_(units_of_measurement)"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:coherentUnitSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:coherentUnitSystem "coherent unit system")
+SubObjectPropertyOf(qudt:coherentUnitSystem qudt:hasUnitSystem)
+FunctionalObjectProperty(qudt:coherentUnitSystem)
+
+# Object Property: qudt:dataEncoding (data encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dataEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dataEncoding "data encoding")
+ObjectPropertyRange(qudt:dataEncoding qudt:DataEncoding)
+
+# Object Property: qudt:datatype (datatype)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:datatype <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:datatype "datatype")
+AnnotationAssertion(rdfs:label qudt:datatype "element type")
+
+# Object Property: qudt:default (default)
+
+AnnotationAssertion(dcterms:description qudt:default "The default element in an enumeration"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:default <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:default "default")
+
+# Object Property: qudt:definedUnitOfSystem (defined unit of system)
+
+AnnotationAssertion(dcterms:description qudt:definedUnitOfSystem "This property relates a unit of measure with the unit system that defines the unit."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:definedUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:definedUnitOfSystem "defined unit of system")
+SubObjectPropertyOf(qudt:definedUnitOfSystem qudt:isUnitOfSystem)
+InverseObjectProperties(qudt:definedUnitOfSystem qudt:hasDefinedUnit)
+
+# Object Property: qudt:denominatorDimensionVector (denominator dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:denominatorDimensionVector <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:denominatorDimensionVector "denominator dimension vector")
+ObjectPropertyRange(qudt:denominatorDimensionVector qudt:QuantityKindDimensionVector)
+
+# Object Property: qudt:derivedCoherentUnitOfSystem (is coherent derived unit of system)
+
+AnnotationAssertion(dcterms:description qudt:derivedCoherentUnitOfSystem "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:derivedCoherentUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:derivedCoherentUnitOfSystem "is coherent derived unit of system")
+SubObjectPropertyOf(qudt:derivedCoherentUnitOfSystem qudt:definedUnitOfSystem)
+SubObjectPropertyOf(qudt:derivedCoherentUnitOfSystem qudt:derivedUnitOfSystem)
+InverseObjectProperties(qudt:derivedCoherentUnitOfSystem qudt:hasDerivedCoherentUnit)
+
+# Object Property: qudt:derivedNonCoherentUnitOfSystem (is non-coherent derived unit of system)
+
+AnnotationAssertion(dcterms:description qudt:derivedNonCoherentUnitOfSystem "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:derivedNonCoherentUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:derivedNonCoherentUnitOfSystem "is non-coherent derived unit of system")
+SubObjectPropertyOf(qudt:derivedNonCoherentUnitOfSystem qudt:derivedUnitOfSystem)
+InverseObjectProperties(qudt:derivedNonCoherentUnitOfSystem qudt:hasDerivedNonCoherentUnit)
+ObjectPropertyRange(qudt:derivedNonCoherentUnitOfSystem qudt:SystemOfUnits)
+
+# Object Property: qudt:derivedUnitOfSystem (is derived unit of system)
+
+AnnotationAssertion(dcterms:description qudt:derivedUnitOfSystem "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:derivedUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:derivedUnitOfSystem "is derived unit of system")
+SubObjectPropertyOf(qudt:derivedUnitOfSystem qudt:isUnitOfSystem)
+InverseObjectProperties(qudt:derivedUnitOfSystem qudt:hasDerivedUnit)
+
+# Object Property: qudt:dimensionInverse (dimension inverse)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionInverse <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionInverse "dimension inverse")
+InverseObjectProperties(qudt:dimensionInverse qudt:dimensionInverse)
+FunctionalObjectProperty(qudt:dimensionInverse)
+InverseFunctionalObjectProperty(qudt:dimensionInverse)
+SymmetricObjectProperty(qudt:dimensionInverse)
+
+# Object Property: qudt:dimensionVectorForSI (dimension vector for SI)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionVectorForSI <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionVectorForSI "dimension vector for SI")
+ObjectPropertyRange(qudt:dimensionVectorForSI qudt:QuantityKindDimensionVector_SI)
+
+# Object Property: qudt:element (element)
+
+AnnotationAssertion(dcterms:description qudt:element "An element of an enumeration"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:element <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:element "element")
+
+# Object Property: qudt:elementKind (element kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:elementKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:elementKind "element kind")
+
+# Object Property: qudt:encoding (encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:encoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:encoding "encoding")
+
+# Object Property: qudt:enumeratedValue (enumerated value)
+
+AnnotationAssertion(rdfs:label qudt:enumeratedValue "enumerated value")
+ObjectPropertyRange(qudt:enumeratedValue qudt:EnumeratedValue)
+
+# Object Property: qudt:enumeration (enumeration)
+
+AnnotationAssertion(rdfs:label qudt:enumeration "enumeration")
+ObjectPropertyRange(qudt:enumeration qudt:Enumeration)
+
+# Object Property: qudt:exactMatch (exact match)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:exactMatch <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:exactMatch "exact match")
+
+# Object Property: qudt:exponent (exponent)
+
+AnnotationAssertion(dcterms:description qudt:exponent "This property relates a factor unit its exponent"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:exponent <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:exponent "exponent")
+
+# Object Property: qudt:figure (figure)
+
+AnnotationAssertion(dcterms:description qudt:figure "Provides a link to an image."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:figure <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:figure "figure")
+ObjectPropertyRange(qudt:figure qudt:Figure)
+
+# Object Property: qudt:guidance (guidance)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:guidance <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:guidance "guidance")
+ObjectPropertyDomain(qudt:guidance qudt:Concept)
+ObjectPropertyRange(qudt:guidance rdf:HTML)
+
+# Object Property: qudt:hasAllowedUnit (allowed unit)
+
+AnnotationAssertion(dcterms:description qudt:hasAllowedUnit "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasAllowedUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasAllowedUnit "allowed unit")
+SubObjectPropertyOf(qudt:hasAllowedUnit qudt:hasUnit)
+ObjectPropertyRange(qudt:hasAllowedUnit qudt:Unit)
+
+# Object Property: qudt:hasBaseQuantityKind (has base quantity kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasBaseQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasBaseQuantityKind "has base quantity kind")
+SubObjectPropertyOf(qudt:hasBaseQuantityKind qudt:hasQuantityKind)
+FunctionalObjectProperty(qudt:hasBaseQuantityKind)
+
+# Object Property: qudt:hasBaseUnit (base unit)
+
+AnnotationAssertion(dcterms:description qudt:hasBaseUnit "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasBaseUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasBaseUnit "base unit")
+SubObjectPropertyOf(qudt:hasBaseUnit qudt:hasCoherentUnit)
+
+# Object Property: qudt:hasCoherentUnit (coherent unit)
+
+AnnotationAssertion(dcterms:description qudt:hasCoherentUnit "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasCoherentUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasCoherentUnit "coherent unit")
+SubObjectPropertyOf(qudt:hasCoherentUnit qudt:hasDefinedUnit)
+
+# Object Property: qudt:hasDefinedUnit (defined unit)
+
+AnnotationAssertion(dcterms:description qudt:hasDefinedUnit "This property relates a unit system with a unit of measure that is defined by the system."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDefinedUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDefinedUnit "defined unit")
+SubObjectPropertyOf(qudt:hasDefinedUnit qudt:hasUnit)
+ObjectPropertyRange(qudt:hasDefinedUnit qudt:Unit)
+
+# Object Property: qudt:hasDenominatorPart (has quantity kind dimension vector denominator part)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDenominatorPart <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDenominatorPart "has quantity kind dimension vector denominator part")
+
+# Object Property: qudt:hasDerivedCoherentUnit (derived coherent unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDerivedCoherentUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDerivedCoherentUnit "derived coherent unit")
+SubObjectPropertyOf(qudt:hasDerivedCoherentUnit qudt:hasCoherentUnit)
+SubObjectPropertyOf(qudt:hasDerivedCoherentUnit qudt:hasDerivedUnit)
+
+# Object Property: qudt:hasDerivedNonCoherentUnit (has coherent derived unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDerivedNonCoherentUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDerivedNonCoherentUnit "has coherent derived unit")
+SubObjectPropertyOf(qudt:hasDerivedNonCoherentUnit qudt:hasDerivedUnit)
+
+# Object Property: qudt:hasDerivedUnit (derived unit)
+
+AnnotationAssertion(dcterms:description qudt:hasDerivedUnit "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDerivedUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDerivedUnit "derived unit")
+
+# Object Property: qudt:hasDimension (has dimension)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDimension <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDimension "has dimension")
+
+# Object Property: qudt:hasDimensionExpression (dimension expression)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDimensionExpression <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDimensionExpression "dimension expression")
+
+# Object Property: qudt:hasDimensionVector (has dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasDimensionVector <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasDimensionVector "has dimension vector")
+ObjectPropertyRange(qudt:hasDimensionVector qudt:QuantityKindDimensionVector)
+
+# Object Property: qudt:hasFactorUnit (hasFactorUnit)
+
+AnnotationAssertion(dcterms:description qudt:hasFactorUnit "This property relates a derived unit to one of its constituent factor units"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasFactorUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasFactorUnit "hasFactorUnit")
+
+# Object Property: qudt:hasNumeratorPart (has quantity kind dimension vector numerator part)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasNumeratorPart <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasNumeratorPart "has quantity kind dimension vector numerator part")
+
+# Object Property: qudt:hasPrefixUnit (prefix unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasPrefixUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasPrefixUnit "prefix unit")
+SubObjectPropertyOf(qudt:hasPrefixUnit qudt:hasDefinedUnit)
+
+# Object Property: qudt:hasQuantity (has quantity)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasQuantity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasQuantity "has quantity")
+ObjectPropertyRange(qudt:hasQuantity qudt:Quantity)
+
+# Object Property: qudt:hasQuantityKind (has quantity kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasQuantityKind "has quantity kind")
+ObjectPropertyRange(qudt:hasQuantityKind qudt:QuantityKind)
+
+# Object Property: qudt:hasReciprocalUnit (has reciprocal unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasReciprocalUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasReciprocalUnit "has reciprocal unit")
+ObjectPropertyDomain(qudt:hasReciprocalUnit qudt:Unit)
+ObjectPropertyRange(qudt:hasReciprocalUnit qudt:Unit)
+
+# Object Property: qudt:hasReferenceQuantityKind (has reference quantity kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasReferenceQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasReferenceQuantityKind "has reference quantity kind")
+
+# Object Property: qudt:hasRule (has rule)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasRule <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasRule "has rule")
+
+# Object Property: qudt:hasUnit (has unit)
+
+AnnotationAssertion(dcterms:description qudt:hasUnit "This property relates a factor unit its unit"^^rdf:HTML)
+AnnotationAssertion(dcterms:description qudt:hasUnit "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasUnit "has unit")
+AnnotationAssertion(rdfs:label qudt:hasUnit "hasUnit")
+InverseObjectProperties(qudt:hasUnit qudt:unitFor)
+ObjectPropertyRange(qudt:hasUnit qudt:Unit)
+
+# Object Property: qudt:hasUnitSystem (has unit system)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasUnitSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasUnitSystem "has unit system")
+FunctionalObjectProperty(qudt:hasUnitSystem)
+
+# Object Property: qudt:hasVocabulary (has vocabulary)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasVocabulary <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasVocabulary "has vocabulary")
+ObjectPropertyRange(qudt:hasVocabulary owl:Ontology)
+
+# Object Property: qudt:iec61360Code (iec-61360 code)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:iec61360Code <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:iec61360Code "iec-61360 code")
+
+# Object Property: qudt:isDimensionInSystem (is dimension in system)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:isDimensionInSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:isDimensionInSystem "is dimension in system")
+
+# Object Property: qudt:isUnitOfSystem (is unit of system)
+
+AnnotationAssertion(dcterms:description qudt:isUnitOfSystem "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:isUnitOfSystem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:isUnitOfSystem "is unit of system")
+ObjectPropertyDomain(qudt:isUnitOfSystem qudt:Unit)
+ObjectPropertyRange(qudt:isUnitOfSystem qudt:SystemOfUnits)
+
+# Object Property: qudt:numeratorDimensionVector (numerator dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:numeratorDimensionVector <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:numeratorDimensionVector "numerator dimension vector")
+ObjectPropertyRange(qudt:numeratorDimensionVector qudt:QuantityKindDimensionVector)
+
+# Object Property: qudt:numericValue (numeric value)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:numericValue <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:numericValue "numeric value")
+ObjectPropertyRange(qudt:numericValue qudt:NumericUnion)
+
+# Object Property: qudt:omUnit (om unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:omUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:omUnit "om unit")
+ObjectPropertyDomain(qudt:omUnit qudt:Unit)
+
+# Object Property: qudt:oracleSQLName (ORACLE SQL name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:oracleSQLName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:oracleSQLName "ORACLE SQL name")
+ObjectPropertyRange(qudt:oracleSQLName xsd:string)
+
+# Object Property: qudt:orderedType (ordered type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:orderedType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:orderedType "ordered type")
+
+# Object Property: qudt:permissibleMaths (permissible maths)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:permissibleMaths <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:permissibleMaths "permissible maths")
+
+# Object Property: qudt:permissibleTransformation (permissible transformation)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:permissibleTransformation <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:permissibleTransformation "permissible transformation")
+
+# Object Property: qudt:prefix (prefix)
+
+AnnotationAssertion(rdfs:comment qudt:prefix "Associates a unit with the appropriate prefix, if any.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:prefix <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:prefix "prefix")
+ObjectPropertyRange(qudt:prefix qudt:Prefix)
+
+# Object Property: qudt:protocolBuffersName (protocol buffers name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:protocolBuffersName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:protocolBuffersName "protocol buffers name")
+ObjectPropertyRange(qudt:protocolBuffersName xsd:string)
+
+# Object Property: qudt:pythonName (python name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:pythonName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:pythonName "python name")
+ObjectPropertyRange(qudt:pythonName xsd:string)
+
+# Object Property: qudt:qkdvDenominator (denominator dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:qkdvDenominator <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:qkdvDenominator "denominator dimension vector")
+ObjectPropertyRange(qudt:qkdvDenominator qudt:QuantityKindDimensionVector)
+
+# Object Property: qudt:qkdvNumerator (numerator dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:qkdvNumerator <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:qkdvNumerator "numerator dimension vector")
+ObjectPropertyRange(qudt:qkdvNumerator qudt:QuantityKindDimensionVector)
+
+# Object Property: qudt:quantity (quantity)
+
+AnnotationAssertion(dcterms:description qudt:quantity "a property to relate an observable thing with a quantity (qud:Quantity)"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:quantity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:quantity "quantity")
+
+# Object Property: qudt:quantityValue (quantity value)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:quantityValue <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:quantityValue "quantity value")
+InverseObjectProperties(qudt:quantityValue qudt:valueQuantity)
+ObjectPropertyRange(qudt:quantityValue qudt:QuantityValue)
+
+# Object Property: qudt:rationale (rationale)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:rationale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:rationale "rationale")
+ObjectPropertyRange(qudt:rationale rdf:HTML)
+
+# Object Property: qudt:rdfsDatatype (rdfs datatype)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:rdfsDatatype <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:rdfsDatatype "rdfs datatype")
+
+# Object Property: qudt:reference (reference)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:reference <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:reference "reference")
+
+# Object Property: qudt:referenceUnit (reference unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:referenceUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:referenceUnit "reference unit")
+FunctionalObjectProperty(qudt:referenceUnit)
+
+# Object Property: qudt:relevantQuantityKind (relevant quantity kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:relevantQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:relevantQuantityKind "relevant quantity kind")
+ObjectPropertyRange(qudt:relevantQuantityKind qudt:QuantityKind)
+
+# Object Property: qudt:relevantUnit (Relevant Unit)
+
+AnnotationAssertion(rdfs:comment qudt:relevantUnit "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:relevantUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:relevantUnit "Relevant Unit")
+ObjectPropertyRange(qudt:relevantUnit qudt:Unit)
+
+# Object Property: qudt:ruleType (rule type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ruleType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ruleType "rule type")
+
+# Object Property: qudt:scaleType (scale type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:scaleType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:scaleType "scale type")
+
+# Object Property: qudt:scalingOf (scalingOf)
+
+AnnotationAssertion(dcterms:description qudt:scalingOf "This property relates a unit that is scaled to the base unit that its qudt:conversionMultiplier converts it to"^^rdf:HTML)
+AnnotationAssertion(dcterms:description qudt:scalingOf "This property relates a unit to another unit it is scaled from"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:scalingOf <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:scalingOf "scalingOf")
+
+# Object Property: qudt:siExactMatch (Individual from SI Reference Point)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:siExactMatch <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:siExactMatch "Individual from SI Reference Point")
+
+# Object Property: qudt:systemDefinition (system definition)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:systemDefinition <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:systemDefinition "system definition")
+TransitiveObjectProperty(qudt:systemDefinition)
+
+# Object Property: qudt:systemDerivedQuantityKind (system derived quantity kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:systemDerivedQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:systemDerivedQuantityKind "system derived quantity kind")
+SubObjectPropertyOf(qudt:systemDerivedQuantityKind qudt:hasQuantityKind)
+
+# Object Property: qudt:systemDimension (system dimension)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:systemDimension <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:systemDimension "system dimension")
+
+# Object Property: qudt:ucumCode (ucum code)
+
+AnnotationAssertion(dcterms:description qudt:ucumCode "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>"^^rdf:HTML)
+AnnotationAssertion(dcterms:source qudt:ucumCode "https://ucum.org/ucum.html"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:ucumCode <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ucumCode "ucum code")
+AnnotationAssertion(rdfs:seeAlso qudt:ucumCode <https://ucum.org/ucum.html>)
+ObjectPropertyRange(qudt:ucumCode ObjectUnionOf(qudt:UCUMcs qudt:UCUMcs-term))
+
+# Object Property: qudt:udunitsCode (udunits code)
+
+AnnotationAssertion(dcterms:description qudt:udunitsCode "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values."^^rdf:HTML)
+AnnotationAssertion(dcterms:source qudt:udunitsCode "https://www.unidata.ucar.edu/software/udunits/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:udunitsCode <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:udunitsCode "udunits code")
+
+# Object Property: qudt:uneceCommonCode (unece common code)
+
+AnnotationAssertion(dcterms:description qudt:uneceCommonCode "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade."^^rdf:HTML)
+AnnotationAssertion(dcterms:source qudt:uneceCommonCode "https://service.unece.org/trade/uncefact/vocabulary/rec20/"^^xsd:anyURI)
+AnnotationAssertion(dcterms:source qudt:uneceCommonCode "https://unece.org/trade/documents/2021/06/uncefact-rec20-0"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:uneceCommonCode <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:uneceCommonCode "unece common code")
+
+# Object Property: qudt:unitFor (unit for)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:unitFor <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:unitFor "unit for")
+ObjectPropertyDomain(qudt:unitFor qudt:Unit)
+
+# Object Property: qudt:value (value)
+
+AnnotationAssertion(dcterms:description qudt:value "A property to relate an observable thing with a value of any kind"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:value <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:value "value")
+
+# Object Property: qudt:valueQuantity (value for quantity)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:valueQuantity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:valueQuantity "value for quantity")
+
+# Object Property: qudt:vbName (Vusal Basic name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:vbName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:vbName "Vusal Basic name")
+ObjectPropertyRange(qudt:vbName xsd:string)
+
+# Object Property: voag:supersededBy (superseded by)
+
+AnnotationAssertion(rdfs:isDefinedBy voag:supersededBy <http://voag.linkedmodel.org/schema/voag>)
+AnnotationAssertion(rdfs:label voag:supersededBy "superseded by")
+
+# Object Property: prov:wasDerivedFrom (was derived from)
+
+AnnotationAssertion(rdfs:isDefinedBy prov:wasDerivedFrom <http://www.w3.org/ns/prov>)
+AnnotationAssertion(rdfs:label prov:wasDerivedFrom "was derived from")
+ObjectPropertyRange(prov:wasDerivedFrom qudt:Concept)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: qudt:abbreviation (abbreviation)
+
+AnnotationAssertion(dcterms:description qudt:abbreviation "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:abbreviation <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:abbreviation "abbreviation")
+DataPropertyRange(qudt:abbreviation xsd:string)
+
+# Data Property: qudt:acronym (acronym)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:acronym <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:acronym "acronym")
+DataPropertyRange(qudt:acronym xsd:string)
+
+# Data Property: qudt:allowedPattern (allowed pattern)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:allowedPattern <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:allowedPattern "allowed pattern")
+
+# Data Property: qudt:altSymbol (alt symbol)
+
+AnnotationAssertion(dcterms:description qudt:altSymbol "An alternative symbol"^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:altSymbol <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:altSymbol "alt symbol")
+SubDataPropertyOf(qudt:altSymbol dtype:literal)
+
+# Data Property: qudt:bits (bits)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:bits <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:bits "bits")
+DataPropertyRange(qudt:bits xsd:integer)
+
+# Data Property: qudt:bounded (bounded)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:bounded <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:bounded "bounded")
+
+# Data Property: qudt:bytes (bytes)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:bytes <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:bytes "bytes")
+DataPropertyRange(qudt:bytes xsd:integer)
+
+# Data Property: qudt:conversionMultiplier (conversion multiplier)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:conversionMultiplier <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:conversionMultiplier "conversion multiplier")
+FunctionalDataProperty(qudt:conversionMultiplier)
+DataPropertyRange(qudt:conversionMultiplier xsd:decimal)
+
+# Data Property: qudt:conversionMultiplierSN (conversion multiplier scientific)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:conversionMultiplierSN <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:conversionMultiplierSN "conversion multiplier scientific")
+FunctionalDataProperty(qudt:conversionMultiplierSN)
+DataPropertyRange(qudt:conversionMultiplierSN xsd:decimal)
+
+# Data Property: qudt:conversionOffset (conversion offset)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:conversionOffset <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:conversionOffset "conversion offset")
+FunctionalDataProperty(qudt:conversionOffset)
+DataPropertyRange(qudt:conversionOffset xsd:decimal)
+
+# Data Property: qudt:conversionOffsetSN (conversion offset scientific)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:conversionOffsetSN <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:conversionOffsetSN "conversion offset scientific")
+FunctionalDataProperty(qudt:conversionOffsetSN)
+DataPropertyRange(qudt:conversionOffsetSN xsd:double)
+
+# Data Property: qudt:currencyCode (currency code)
+
+AnnotationAssertion(dcterms:description qudt:currencyCode "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:currencyCode <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:currencyCode "currency code")
+AnnotationAssertion(rdfs:seeAlso qudt:currencyCode "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI)
+FunctionalDataProperty(qudt:currencyCode)
+DataPropertyRange(qudt:currencyCode xsd:string)
+
+# Data Property: qudt:currencyExponent (currency exponent)
+
+AnnotationAssertion(dcterms:description qudt:currencyExponent "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:currencyExponent <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:currencyExponent "currency exponent")
+FunctionalDataProperty(qudt:currencyExponent)
+DataPropertyRange(qudt:currencyExponent xsd:integer)
+
+# Data Property: qudt:currencyNumber (currency number)
+
+AnnotationAssertion(dcterms:description qudt:currencyNumber "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:currencyNumber <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:currencyNumber "currency number")
+AnnotationAssertion(rdfs:seeAlso qudt:currencyNumber "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI)
+FunctionalDataProperty(qudt:currencyNumber)
+DataPropertyRange(qudt:currencyNumber xsd:string)
+
+# Data Property: qudt:dataStructure (data structure)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dataStructure <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dataStructure "data structure")
+DataPropertyRange(qudt:dataStructure xsd:string)
+
+# Data Property: qudt:deprecated (deprecated)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:deprecated <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:deprecated "deprecated")
+DataPropertyRange(qudt:deprecated xsd:boolean)
+
+# Data Property: qudt:dimensionExponent (dimension exponent)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponent <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponent "dimension exponent")
+
+# Data Property: qudt:dimensionExponentForAmountOfSubstance (dimension exponent for amount of substance)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForAmountOfSubstance <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForAmountOfSubstance "dimension exponent for amount of substance")
+
+# Data Property: qudt:dimensionExponentForElectricCurrent (dimension exponent for electric current)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForElectricCurrent <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForElectricCurrent "dimension exponent for electric current")
+
+# Data Property: qudt:dimensionExponentForLength (dimension exponent for length)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForLength <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForLength "dimension exponent for length")
+
+# Data Property: qudt:dimensionExponentForLuminousIntensity (dimension exponent for luminous intensity)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForLuminousIntensity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForLuminousIntensity "dimension exponent for luminous intensity")
+
+# Data Property: qudt:dimensionExponentForMass (dimension exponent for mass)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForMass <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForMass "dimension exponent for mass")
+
+# Data Property: qudt:dimensionExponentForThermodynamicTemperature (dimension exponent for thermodynamic temperature)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForThermodynamicTemperature <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForThermodynamicTemperature "dimension exponent for thermodynamic temperature")
+
+# Data Property: qudt:dimensionExponentForTime (dimension exponent for time)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionExponentForTime <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionExponentForTime "dimension exponent for time")
+
+# Data Property: qudt:dimensionlessExponent (dimensionless exponent)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:dimensionlessExponent <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:dimensionlessExponent "dimensionless exponent")
+
+# Data Property: qudt:exactConstant (exact constant)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:exactConstant <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:exactConstant "exact constant")
+DataPropertyRange(qudt:exactConstant xsd:boolean)
+
+# Data Property: qudt:factorUnitScalar (factorUnitScalar)
+
+AnnotationAssertion(dcterms:description qudt:factorUnitScalar "For a derived unit that is not exactly the product of its factor units, this property defines the scalar with which that product has to be multiplied with."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:factorUnitScalar <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:factorUnitScalar "factorUnitScalar")
+
+# Data Property: qudt:fieldCode (field code)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:fieldCode <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:fieldCode "field code")
+DataPropertyRange(qudt:fieldCode xsd:string)
+
+# Data Property: qudt:figureCaption (figure caption)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:figureCaption <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:figureCaption "figure caption")
+DataPropertyRange(qudt:figureCaption xsd:string)
+
+# Data Property: qudt:figureLabel (figure label)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:figureLabel <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:figureLabel "figure label")
+DataPropertyRange(qudt:figureLabel xsd:string)
+
+# Data Property: qudt:hasCitation (citation)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:hasCitation <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:hasCitation "citation")
+DataPropertyRange(qudt:hasCitation xsd:string)
+
+# Data Property: qudt:height (height)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:height <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:height "height")
+DataPropertyRange(qudt:height xsd:string)
+
+# Data Property: qudt:id (qudt id)
+
+AnnotationAssertion(dcterms:description qudt:id "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:id <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:id "qudt id")
+DataPropertyDomain(qudt:id qudt:Concept)
+DataPropertyRange(qudt:id xsd:string)
+
+# Data Property: qudt:iec61360Code (iec-61360 code)
+
+DataPropertyRange(qudt:iec61360Code xsd:string)
+
+# Data Property: qudt:image (image)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:image <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:image "image")
+DataPropertyRange(qudt:image xsd:anyURI)
+
+# Data Property: qudt:imageLocation (image location)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:imageLocation <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:imageLocation "image location")
+DataPropertyRange(qudt:imageLocation xsd:anyURI)
+
+# Data Property: qudt:isDeltaQuantity (is Delta Quantity)
+
+AnnotationAssertion(rdfs:comment qudt:isDeltaQuantity "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:isDeltaQuantity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:isDeltaQuantity "is Delta Quantity")
+DataPropertyRange(qudt:isDeltaQuantity xsd:boolean)
+
+# Data Property: qudt:isMetricUnit (is metric unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:isMetricUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:isMetricUnit "is metric unit")
+DataPropertyRange(qudt:isMetricUnit xsd:boolean)
+
+# Data Property: qudt:isoNormativeReference (normative reference (ISO))
+
+AnnotationAssertion(dcterms:description qudt:isoNormativeReference "Provides a way to reference the ISO unit definition."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:isoNormativeReference <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:isoNormativeReference "normative reference (ISO)")
+SubDataPropertyOf(qudt:isoNormativeReference qudt:normativeReference)
+DataPropertyRange(qudt:isoNormativeReference xsd:anyURI)
+
+# Data Property: qudt:javaName (java name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:javaName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:javaName "java name")
+DataPropertyRange(qudt:javaName xsd:string)
+
+# Data Property: qudt:jsName (Javascript name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:jsName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:jsName "Javascript name")
+DataPropertyRange(qudt:jsName xsd:string)
+
+# Data Property: qudt:landscape (landscape)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:landscape <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:landscape "landscape")
+DataPropertyRange(qudt:landscape xsd:boolean)
+
+# Data Property: qudt:latexDefinition (latex definition)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:latexDefinition <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:latexDefinition "latex definition")
+DataPropertyRange(qudt:latexDefinition qudt:LatexString)
+
+# Data Property: qudt:latexSymbol (latex symbol)
+
+AnnotationAssertion(dcterms:description qudt:latexSymbol "
+  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. 
+  For example, the symbol for an Ohm is $ohm$. 
+  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.
+  "^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:latexSymbol <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:latexSymbol "latex symbol")
+DataPropertyRange(qudt:latexSymbol qudt:LatexString)
+
+# Data Property: qudt:length (length)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:length <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:length "length")
+DataPropertyRange(qudt:length xsd:integer)
+
+# Data Property: qudt:lowerBound (lower bound)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:lowerBound <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:lowerBound "lower bound")
+
+# Data Property: qudt:mathDefinition (math definition)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:mathDefinition <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:mathDefinition "math definition")
+DataPropertyRange(qudt:mathDefinition xsd:string)
+
+# Data Property: qudt:mathMLdefinition (mathML definition)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:mathMLdefinition <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:mathMLdefinition "mathML definition")
+SubDataPropertyOf(qudt:mathMLdefinition qudt:mathDefinition)
+DataPropertyRange(qudt:mathMLdefinition xsd:string)
+
+# Data Property: qudt:matlabName (matlab name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:matlabName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:matlabName "matlab name")
+DataPropertyRange(qudt:matlabName xsd:string)
+
+# Data Property: qudt:maxExclusive (max exclusive)
+
+AnnotationAssertion(dcterms:description qudt:maxExclusive "maxExclusive is the exclusive upper bound of the value space for a datatype with the ordered property. The value of maxExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:maxExclusive <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:maxExclusive "max exclusive")
+SubDataPropertyOf(qudt:maxExclusive qudt:upperBound)
+DataPropertyRange(qudt:maxExclusive xsd:string)
+
+# Data Property: qudt:maxInclusive (max inclusive)
+
+AnnotationAssertion(dcterms:description qudt:maxInclusive "maxInclusive is the inclusive upper bound of the value space for a datatype with the ordered property. The value of maxInclusive must be in the value space of the base type.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:maxInclusive <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:maxInclusive "max inclusive")
+SubDataPropertyOf(qudt:maxInclusive qudt:upperBound)
+
+# Data Property: qudt:microsoftSQLServerName (Microsoft SQL Server name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:microsoftSQLServerName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:microsoftSQLServerName "Microsoft SQL Server name")
+DataPropertyRange(qudt:microsoftSQLServerName xsd:string)
+
+# Data Property: qudt:minExclusive (min exclusive)
+
+AnnotationAssertion(dcterms:description qudt:minExclusive "minExclusive is the exclusive lower bound of the value space for a datatype with the ordered property. The value of minExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:minExclusive <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:minExclusive "min exclusive")
+SubDataPropertyOf(qudt:minExclusive qudt:lowerBound)
+
+# Data Property: qudt:minInclusive (min inclusive)
+
+AnnotationAssertion(dcterms:description qudt:minInclusive "minInclusive is the inclusive lower bound of the value space for a datatype with the ordered property. The value of minInclusive must be in the value space of the base type.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:minInclusive <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:minInclusive "min inclusive")
+SubDataPropertyOf(qudt:minInclusive qudt:lowerBound)
+
+# Data Property: qudt:mySQLName (MySQL name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:mySQLName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:mySQLName "MySQL name")
+DataPropertyRange(qudt:mySQLName xsd:string)
+
+# Data Property: qudt:negativeDeltaLimit (negative delta limit)
+
+AnnotationAssertion(dcterms:description qudt:negativeDeltaLimit "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:negativeDeltaLimit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:negativeDeltaLimit "negative delta limit")
+DataPropertyRange(qudt:negativeDeltaLimit xsd:string)
+
+# Data Property: qudt:normativeReference (normative reference)
+
+AnnotationAssertion(dcterms:description qudt:normativeReference "Provides a way to reference information that is an authorative source providing a standard definition"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:normativeReference <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:normativeReference "normative reference")
+DataPropertyRange(qudt:normativeReference xsd:anyURI)
+
+# Data Property: qudt:odbcName (ODBC name)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:odbcName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:odbcName "ODBC name")
+DataPropertyRange(qudt:odbcName xsd:string)
+
+# Data Property: qudt:oleDBName (OLE DB name)
+
+AnnotationAssertion(dcterms:description qudt:oleDBName "OLE DB (Object Linking and Embedding, Database, sometimes written as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from a variety of sources in a uniform manner. The API provides a set of interfaces implemented using the Component Object Model (COM); it is otherwise unrelated to OLE. ")
+AnnotationAssertion(qudt:informativeReference qudt:oleDBName "http://en.wikipedia.org/wiki/OLE_DB"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:oleDBName "http://msdn.microsoft.com/en-us/library/windows/desktop/ms714931(v=vs.85).aspx"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:oleDBName <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:oleDBName "OLE DB name")
+DataPropertyRange(qudt:oleDBName xsd:string)
+
+# Data Property: qudt:onlineReference (online reference)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:onlineReference <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:onlineReference "online reference")
+DataPropertyRange(qudt:onlineReference xsd:anyURI)
+
+# Data Property: qudt:order (order)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:order <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:order "order")
+DataPropertyRange(qudt:order xsd:nonNegativeInteger)
+
+# Data Property: qudt:outOfScope (out of scope)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:outOfScope <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:outOfScope "out of scope")
+DataPropertyRange(qudt:outOfScope xsd:boolean)
+
+# Data Property: qudt:plainTextDescription (description (plain text))
+
+AnnotationAssertion(dcterms:description qudt:plainTextDescription "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:plainTextDescription <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:plainTextDescription "description (plain text)")
+DataPropertyRange(qudt:plainTextDescription xsd:string)
+
+# Data Property: qudt:positiveDeltaLimit (Positive delta limit)
+
+AnnotationAssertion(dcterms:description qudt:positiveDeltaLimit "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:positiveDeltaLimit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:positiveDeltaLimit "Positive delta limit")
+DataPropertyRange(qudt:positiveDeltaLimit xsd:string)
+
+# Data Property: qudt:prefixMultiplier (prefix multiplier)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:prefixMultiplier <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:prefixMultiplier "prefix multiplier")
+FunctionalDataProperty(qudt:prefixMultiplier)
+DataPropertyRange(qudt:prefixMultiplier xsd:decimal)
+
+# Data Property: qudt:prefixMultiplierSN (prefix multiplier scientific)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:prefixMultiplierSN <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:prefixMultiplierSN "prefix multiplier scientific")
+FunctionalDataProperty(qudt:prefixMultiplierSN)
+DataPropertyRange(qudt:prefixMultiplierSN xsd:double)
+
+# Data Property: qudt:relativeStandardUncertainty (relative standard uncertainty)
+
+AnnotationAssertion(dcterms:description qudt:relativeStandardUncertainty "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:relativeStandardUncertainty <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:relativeStandardUncertainty "relative standard uncertainty")
+DataPropertyRange(qudt:relativeStandardUncertainty xsd:double)
+
+# Data Property: qudt:siUnitsExpression (si units expression)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:siUnitsExpression <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:siUnitsExpression "si units expression")
+DataPropertyRange(qudt:siUnitsExpression xsd:string)
+
+# Data Property: qudt:standardUncertainty (standard uncertainty)
+
+AnnotationAssertion(dcterms:description qudt:standardUncertainty "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:standardUncertainty <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:standardUncertainty "standard uncertainty")
+DataPropertyRange(qudt:standardUncertainty xsd:decimal)
+
+# Data Property: qudt:standardUncertaintySN (standard uncertainty scientific)
+
+AnnotationAssertion(dcterms:description qudt:standardUncertaintySN "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:standardUncertaintySN <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:standardUncertaintySN "standard uncertainty scientific")
+DataPropertyRange(qudt:standardUncertaintySN xsd:double)
+
+# Data Property: qudt:symbol (symbol)
+
+AnnotationAssertion(dcterms:description qudt:symbol "
+  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. 
+  For example, the symbol for an Ohm is $ohm$. 
+  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.
+  "^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:symbol <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:symbol "symbol")
+SubDataPropertyOf(qudt:symbol dtype:literal)
+
+# Data Property: qudt:ucumCode (ucum code)
+
+SubDataPropertyOf(qudt:ucumCode skos:notation)
+
+# Data Property: qudt:udunitsCode (udunits code)
+
+DataPropertyRange(qudt:udunitsCode xsd:string)
+
+# Data Property: qudt:uneceCommonCode (unece common code)
+
+DataPropertyRange(qudt:uneceCommonCode xsd:string)
+
+# Data Property: qudt:upperBound (upper bound)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:upperBound <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:upperBound "upper bound")
+DataPropertyRange(qudt:upperBound xsd:anySimpleType)
+
+# Data Property: qudt:url (url)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:url <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:url "url")
+DataPropertyRange(qudt:url xsd:anyURI)
+
+# Data Property: qudt:valueSN (value scientific)
+
+AnnotationAssertion(dcterms:description qudt:valueSN "A property to relate an observable thing with a value of any kind"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:valueSN <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:valueSN "value scientific")
+
+# Data Property: qudt:vectorMagnitude (vector magnitude)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:vectorMagnitude <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:vectorMagnitude "vector magnitude")
+FunctionalDataProperty(qudt:vectorMagnitude)
+DataPropertyRange(qudt:vectorMagnitude xsd:float)
+
+# Data Property: qudt:width (width)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:width <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:width "width")
+DataPropertyRange(qudt:width xsd:string)
+
+# Data Property: dtype:literal (literal)
+
+AnnotationAssertion(rdfs:isDefinedBy dtype:literal <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label dtype:literal "literal")
+SubDataPropertyOf(dtype:literal dtype:literal)
+DataPropertyRange(dtype:literal xsd:string)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: qudt:LatexString (Latex String)
+
+AnnotationAssertion(rdfs:comment qudt:LatexString "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:LatexString <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:LatexString "Latex String")
+
+# Datatype: qudt:UCUMcs (case-sensitive UCUM code)
+
+AnnotationAssertion(dcterms:source qudt:UCUMcs "https://ucum.org/ucum.html"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:UCUMcs "Lexical pattern for the case-sensitive version of UCUM code")
+AnnotationAssertion(rdfs:isDefinedBy qudt:UCUMcs <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:UCUMcs "case-sensitive UCUM code")
+AnnotationAssertion(rdfs:seeAlso qudt:UCUMcs <https://ucum.org/ucum.html>)
+
+# Datatype: qudt:UCUMcs-term (case-sensitive UCUM terminal)
+
+AnnotationAssertion(dcterms:source qudt:UCUMcs-term "https://ucum.org/ucum.html"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:UCUMcs-term "Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code")
+AnnotationAssertion(rdfs:isDefinedBy qudt:UCUMcs-term <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:UCUMcs-term "case-sensitive UCUM terminal")
+AnnotationAssertion(rdfs:seeAlso qudt:UCUMcs-term <https://ucum.org/ucum.html>)
+
+# Datatype: qudt:floatPercentage (float percentage)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:floatPercentage <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:floatPercentage "float percentage")
+DatatypeDefinition(qudt:floatPercentage DatatypeRestriction(xsd:float xsd:minInclusive "0.0"^^xsd:float xsd:maxInclusive "100.0"^^xsd:float))
+
+# Datatype: qudt:integerPercentage (integer percentage)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:integerPercentage <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:integerPercentage "integer percentage")
+DatatypeDefinition(qudt:integerPercentage DatatypeRestriction(xsd:integer xsd:minInclusive "0"^^xsd:integer xsd:maxInclusive "100"^^xsd:integer))
+
+# Datatype: qudt:valueUnion (value union)
+
+AnnotationAssertion(dcterms:description qudt:valueUnion "A datatype that is the union of numeric xsd data types. \"numericUnion\" is equivalent to the xsd specification that uses an xsd:union of memberTypes=\"xsd:decimal xsd:double xsd:float xsd:integer\".")
+AnnotationAssertion(rdfs:isDefinedBy qudt:valueUnion <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:valueUnion "value union")
+
+
+############################
+#   Classes
+############################
+
+# Class: qudt:AbstractQuantityKind (Quantity Kind (abstract))
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:AbstractQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:AbstractQuantityKind "Quantity Kind (abstract)")
+SubClassOf(qudt:AbstractQuantityKind qudt:Concept)
+SubClassOf(qudt:AbstractQuantityKind ObjectAllValuesFrom(skos:broader qudt:QuantityKind))
+SubClassOf(qudt:AbstractQuantityKind DataMinCardinality(0 qudt:altSymbol))
+SubClassOf(qudt:AbstractQuantityKind DataMinCardinality(0 qudt:latexSymbol))
+SubClassOf(qudt:AbstractQuantityKind DataMaxCardinality(1 qudt:symbol))
+
+# Class: qudt:AngleUnit (Angle unit)
+
+AnnotationAssertion(dcterms:description qudt:AngleUnit "All units relating to specification of angles. ")
+AnnotationAssertion(rdfs:isDefinedBy qudt:AngleUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:AngleUnit "Angle unit")
+SubClassOf(qudt:AngleUnit qudt:DimensionlessUnit)
+
+# Class: qudt:Aspect (QUDT Aspect)
+
+AnnotationAssertion(rdfs:comment qudt:Aspect "An aspect is an abstract type class that defines properties that can be reused."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Aspect <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Aspect "QUDT Aspect")
+SubClassOf(qudt:Aspect owl:Thing)
+
+# Class: qudt:AspectClass (Aspect Class)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:AspectClass <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:AspectClass "Aspect Class")
+SubClassOf(qudt:AspectClass rdfs:Class)
+
+# Class: qudt:BaseDimensionMagnitude (Base Dimension Magnitude)
+
+AnnotationAssertion(qudt:informativeReference qudt:BaseDimensionMagnitude "http://en.wikipedia.org/wiki/Dimensional_analysis"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:BaseDimensionMagnitude "http://web.mit.edu/2.25/www/pdf/DA_unified.pdf"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:BaseDimensionMagnitude "<p class=\"lm-para\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>
+<p class=\"lm-para\">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:BaseDimensionMagnitude <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BaseDimensionMagnitude "Base Dimension Magnitude")
+SubClassOf(qudt:BaseDimensionMagnitude qudt:Concept)
+SubClassOf(qudt:BaseDimensionMagnitude ObjectAllValuesFrom(qudt:hasBaseQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:BaseDimensionMagnitude ObjectExactCardinality(1 qudt:hasBaseQuantityKind))
+SubClassOf(qudt:BaseDimensionMagnitude DataAllValuesFrom(qudt:vectorMagnitude xsd:float))
+SubClassOf(qudt:BaseDimensionMagnitude DataExactCardinality(1 qudt:vectorMagnitude))
+
+# Class: qudt:BinaryPrefix (Binary Prefix)
+
+AnnotationAssertion(rdfs:comment qudt:BinaryPrefix "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:BinaryPrefix <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BinaryPrefix "Binary Prefix")
+SubClassOf(qudt:BinaryPrefix qudt:Prefix)
+
+# Class: qudt:BitEncodingType (Bit Encoding)
+
+AnnotationAssertion(dcterms:description qudt:BitEncodingType "A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to True.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:BitEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BitEncodingType "Bit Encoding")
+EquivalentClasses(qudt:BitEncodingType ObjectOneOf(qudt:BitEncoding))
+SubClassOf(qudt:BitEncodingType qudt:Encoding)
+
+# Class: qudt:BooleanEncodingType (Boolean encoding type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:BooleanEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BooleanEncodingType "Boolean encoding type")
+EquivalentClasses(qudt:BooleanEncodingType ObjectOneOf(qudt:BitEncoding qudt:BooleanEncoding qudt:OctetEncoding))
+SubClassOf(qudt:BooleanEncodingType qudt:Encoding)
+
+# Class: qudt:ByteEncodingType (Byte Encoding)
+
+AnnotationAssertion(dcterms:description qudt:ByteEncodingType "This class contains the various ways that information may be encoded into bytes.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:ByteEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ByteEncodingType "Byte Encoding")
+SubClassOf(qudt:ByteEncodingType qudt:Encoding)
+
+# Class: qudt:CardinalityType (Cardinality Type)
+
+AnnotationAssertion(dcterms:description qudt:CardinalityType "
+  In mathematics, the cardinality of a set is a measure of the number of elements of the set.
+  For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3. 
+  There are two approaches to cardinality: one which compares sets directly using bijections and injections,
+   and another which uses cardinal numbers.
+  "^^qudt:LatexString)
+AnnotationAssertion(qudt:informativeReference qudt:CardinalityType "http://en.wikipedia.org/wiki/Cardinal_number"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:CardinalityType "http://en.wikipedia.org/wiki/Cardinality"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CardinalityType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CardinalityType "Cardinality Type")
+EquivalentClasses(qudt:CardinalityType ObjectOneOf(qudt:CT_COUNTABLY-INFINITE qudt:CT_FINITE qudt:CT_UNCOUNTABLE))
+SubClassOf(qudt:CardinalityType qudt:EnumeratedValue)
+SubClassOf(qudt:CardinalityType DataMaxCardinality(1 dtype:literal))
+
+# Class: qudt:CharEncodingType (Char Encoding Type)
+
+AnnotationAssertion(dcterms:description qudt:CharEncodingType "The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data as a sequence of bits or bytes.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:CharEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CharEncodingType "Char Encoding Type")
+EquivalentClasses(qudt:CharEncodingType ObjectOneOf(qudt:CharEncoding))
+SubClassOf(qudt:CharEncodingType qudt:Encoding)
+
+# Class: qudt:Citation (Citation)
+
+AnnotationAssertion(rdfs:comment qudt:Citation "Provides a simple way of making citations."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Citation <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Citation "Citation")
+SubClassOf(qudt:Citation qudt:Concept)
+SubClassOf(qudt:Citation DataExactCardinality(1 dcterms:description))
+SubClassOf(qudt:Citation DataMaxCardinality(1 qudt:url))
+
+# Class: qudt:Comment (Comment)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Comment <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Comment "Comment")
+SubClassOf(qudt:Comment qudt:Verifiable)
+SubClassOf(qudt:Comment owl:Thing)
+SubClassOf(qudt:Comment ObjectMinCardinality(0 qudt:rationale))
+SubClassOf(qudt:Comment DataMaxCardinality(1 dcterms:description))
+
+# Class: qudt:Concept (QUDT Concept)
+
+AnnotationAssertion(rdfs:comment qudt:Concept "The root class for all QUDT concepts."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Concept <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Concept "QUDT Concept")
+SubClassOf(qudt:Concept owl:Thing)
+SubClassOf(qudt:Concept ObjectAllValuesFrom(qudt:hasRule qudt:Rule))
+SubClassOf(qudt:Concept ObjectMaxCardinality(1 dcterms:isReplacedBy))
+SubClassOf(qudt:Concept DataMaxCardinality(1 dcterms:description))
+SubClassOf(qudt:Concept DataMaxCardinality(1 qudt:abbreviation))
+SubClassOf(qudt:Concept DataMaxCardinality(1 qudt:deprecated))
+SubClassOf(qudt:Concept DataMaxCardinality(1 qudt:id))
+SubClassOf(qudt:Concept DataMaxCardinality(1 qudt:plainTextDescription))
+
+# Class: qudt:ConstantValue (Constant value)
+
+AnnotationAssertion(rdfs:comment qudt:ConstantValue "Used to specify the values of a constant."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:ConstantValue <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ConstantValue "Constant value")
+SubClassOf(qudt:ConstantValue qudt:QuantityValue)
+SubClassOf(qudt:ConstantValue DataMinCardinality(0 qudt:exactConstant))
+
+# Class: qudt:ContextualUnit (Contextual Unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ContextualUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ContextualUnit "Contextual Unit")
+SubClassOf(qudt:ContextualUnit qudt:Unit)
+SubClassOf(qudt:ContextualUnit ObjectAllValuesFrom(skos:broader qudt:Unit))
+
+# Class: qudt:CountingUnit (Counting Unit)
+
+AnnotationAssertion(rdfs:comment qudt:CountingUnit "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CountingUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CountingUnit "Counting Unit")
+SubClassOf(qudt:CountingUnit qudt:DimensionlessUnit)
+
+# Class: qudt:CurrencyUnit (Currency Unit)
+
+AnnotationAssertion(rdfs:comment qudt:CurrencyUnit "Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units."^^rdf:HTML)
+AnnotationAssertion(rdfs:comment qudt:CurrencyUnit "Used for all units that express currency."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CurrencyUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CurrencyUnit "Currency Unit")
+SubClassOf(qudt:CurrencyUnit qudt:DimensionlessUnit)
+SubClassOf(qudt:CurrencyUnit DataMaxCardinality(1 qudt:currencyCode))
+SubClassOf(qudt:CurrencyUnit DataMaxCardinality(1 qudt:currencyExponent))
+
+# Class: qudt:DataEncoding (Data Encoding)
+
+AnnotationAssertion(rdfs:comment qudt:DataEncoding "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:DataEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DataEncoding "Data Encoding")
+SubClassOf(qudt:DataEncoding qudt:Aspect)
+SubClassOf(qudt:DataEncoding ObjectAllValuesFrom(qudt:bitOrder qudt:EndianType))
+SubClassOf(qudt:DataEncoding ObjectAllValuesFrom(qudt:encoding qudt:Encoding))
+SubClassOf(qudt:DataEncoding ObjectMaxCardinality(1 qudt:bitOrder))
+SubClassOf(qudt:DataEncoding ObjectMaxCardinality(1 qudt:byteOrder))
+SubClassOf(qudt:DataEncoding ObjectMaxCardinality(1 qudt:encoding))
+
+# Class: qudt:DataItem (Data Item)
+
+AnnotationAssertion(dcterms:description qudt:DataItem "
+  <p>A <em>Data Item</em> holds a value that maybe a scalar or structured datatype.
+  <em>Quantity Value</em> specifies which case applies.
+  </p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:DataItem <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DataItem "Data Item")
+SubClassOf(qudt:DataItem qudt:Concept)
+SubClassOf(qudt:DataItem ObjectAllValuesFrom(qudt:value xsd:string))
+SubClassOf(qudt:DataItem DataMaxCardinality(1 qudt:value))
+
+# Class: qudt:Datatype (QUDT Datatype)
+
+AnnotationAssertion(dcterms:description qudt:Datatype "
+   <p>A <em>Datatype</em> is a definition of the type of the \"value\" of a data item (for example, \"all integers between 0 and 10\"),
+   and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored. 
+  Some types are primitive - built-in to the language, with no visible internal structure.
+  For example \"Boolean\"; others are composite - constructed from one or more other types (of either kind).
+  For example lists, arrays, structures, unions. 
+  Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion.
+  </p>"^^rdf:HTML)
+AnnotationAssertion(qudt:informativeReference qudt:Datatype "http://en.wikipedia.org/wiki/Data_type"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:Datatype "http://foldoc.org/data+type"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:Datatype "http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Data_type.html"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Datatype <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Datatype "QUDT Datatype")
+SubClassOf(qudt:Datatype qudt:Concept)
+SubClassOf(qudt:Datatype ObjectAllValuesFrom(qudt:basis qudt:Datatype))
+SubClassOf(qudt:Datatype ObjectAllValuesFrom(qudt:cardinality qudt:CardinalityType))
+SubClassOf(qudt:Datatype ObjectAllValuesFrom(qudt:orderedType qudt:OrderedType))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:ansiSQLName))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:basis))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:cName))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:cardinality))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:oracleSQLName))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:orderedType))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:protocolBuffersName))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:pythonName))
+SubClassOf(qudt:Datatype ObjectMaxCardinality(1 qudt:vbName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:bounded))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:id))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:javaName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:jsName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:matlabName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:microsoftSQLServerName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:mySQLName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:odbcName))
+SubClassOf(qudt:Datatype DataMaxCardinality(1 qudt:oleDBName))
+
+# Class: qudt:DateTimeStringEncodingType (Date Time String Encoding Type)
+
+AnnotationAssertion(dcterms:description qudt:DateTimeStringEncodingType "Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous formatting and parsing rules.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:DateTimeStringEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DateTimeStringEncodingType "Date Time String Encoding Type")
+SubClassOf(qudt:DateTimeStringEncodingType qudt:StringEncodingType)
+SubClassOf(qudt:DateTimeStringEncodingType DataMinCardinality(1 qudt:allowedPattern))
+
+# Class: qudt:DecimalPrefix (Decimal Prefix)
+
+AnnotationAssertion(rdfs:comment qudt:DecimalPrefix "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:DecimalPrefix <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DecimalPrefix "Decimal Prefix")
+SubClassOf(qudt:DecimalPrefix qudt:Prefix)
+
+# Class: qudt:DerivedUnit (Derived Unit)
+
+AnnotationAssertion(qudt:dbpediaMatch qudt:DerivedUnit "http://dbpedia.org/resource/Category:SI_derived_units"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:DerivedUnit "A DerivedUnit is a type specification for units that are derived from other units."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:DerivedUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DerivedUnit "Derived Unit")
+SubClassOf(qudt:DerivedUnit qudt:Unit)
+
+# Class: qudt:DimensionlessUnit (Dimensionless Unit)
+
+AnnotationAssertion(rdfs:comment qudt:DimensionlessUnit "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:DimensionlessUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DimensionlessUnit "Dimensionless Unit")
+SubClassOf(qudt:DimensionlessUnit qudt:Unit)
+
+# Class: qudt:Discipline (Discipline)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Discipline <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Discipline "Discipline")
+SubClassOf(qudt:Discipline qudt:Concept)
+
+# Class: qudt:Encoding (Encoding)
+
+AnnotationAssertion(dcterms:description qudt:Encoding "An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:Encoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Encoding "Encoding")
+SubClassOf(qudt:Encoding qudt:Concept)
+SubClassOf(qudt:Encoding DataMaxCardinality(1 qudt:bits))
+SubClassOf(qudt:Encoding DataMaxCardinality(1 qudt:bytes))
+
+# Class: qudt:EndianType (Endian Type)
+
+AnnotationAssertion(qudt:informativeReference qudt:EndianType "http://en.wikipedia.org/wiki/Endianness"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:EndianType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:EndianType "Endian Type")
+EquivalentClasses(qudt:EndianType ObjectOneOf(qudt:BigEndian qudt:LittleEndian))
+SubClassOf(qudt:EndianType qudt:EnumeratedValue)
+
+# Class: qudt:EnumeratedQuantity (Enumerated Quantity)
+
+AnnotationAssertion(rdfs:label qudt:EnumeratedQuantity "Enumerated Quantity")
+SubClassOf(qudt:EnumeratedQuantity qudt:Concept)
+SubClassOf(qudt:EnumeratedQuantity ObjectAllValuesFrom(qudt:enumeratedValue qudt:EnumeratedValue))
+SubClassOf(qudt:EnumeratedQuantity ObjectAllValuesFrom(qudt:enumeration qudt:Enumeration))
+
+# Class: qudt:EnumeratedValue (Enumerated Value)
+
+AnnotationAssertion(dcterms:description qudt:EnumeratedValue "<p>This class is for all enumerated and/or coded values.  For example, it contains the dimension objects that are the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract vector space.</p>
+
+<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
+
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>"^^rdf:HTML)
+AnnotationAssertion(qudt:informativeReference qudt:EnumeratedValue "http://en.wikipedia.org/wiki/Enumeration"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:EnumeratedValue <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:EnumeratedValue "Enumerated Value")
+SubClassOf(qudt:EnumeratedValue qudt:Concept)
+SubClassOf(qudt:EnumeratedValue qudt:Verifiable)
+SubClassOf(qudt:EnumeratedValue dtype:EnumeratedValue)
+SubClassOf(qudt:EnumeratedValue DataMinCardinality(0 qudt:altSymbol))
+SubClassOf(qudt:EnumeratedValue DataMaxCardinality(1 dcterms:description))
+SubClassOf(qudt:EnumeratedValue DataMaxCardinality(1 qudt:abbreviation))
+SubClassOf(qudt:EnumeratedValue DataMaxCardinality(1 qudt:symbol))
+
+# Class: qudt:Enumeration (Enumeration)
+
+AnnotationAssertion(qudt:dbpediaMatch qudt:Enumeration "http://dbpedia.org/resource/Enumeration"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:Enumeration "http://en.wikipedia.org/wiki/Enumerated_type"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:Enumeration "http://en.wikipedia.org/wiki/Enumeration"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:Enumeration "<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
+
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Enumeration <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Enumeration "Enumeration")
+SubClassOf(qudt:Enumeration qudt:Concept)
+SubClassOf(qudt:Enumeration dtype:Enumeration)
+SubClassOf(qudt:Enumeration ObjectAllValuesFrom(qudt:default qudt:EnumeratedValue))
+SubClassOf(qudt:Enumeration ObjectAllValuesFrom(qudt:element qudt:EnumeratedValue))
+SubClassOf(qudt:Enumeration ObjectMinCardinality(1 qudt:element))
+SubClassOf(qudt:Enumeration ObjectMaxCardinality(1 qudt:default))
+SubClassOf(qudt:Enumeration DataMaxCardinality(1 qudt:abbreviation))
+
+# Class: qudt:EnumerationScale (Enumeration scale)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:EnumerationScale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:EnumerationScale "Enumeration scale")
+SubClassOf(qudt:EnumerationScale qudt:Scale)
+SubClassOf(qudt:EnumerationScale dtype:Enumeration)
+
+# Class: qudt:Figure (Figure)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Figure <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Figure "Figure")
+SubClassOf(qudt:Figure qudt:Concept)
+SubClassOf(qudt:Figure DataExactCardinality(1 qudt:imageLocation))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:figureCaption))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:figureLabel))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:height))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:image))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:landscape))
+SubClassOf(qudt:Figure DataMaxCardinality(1 qudt:width))
+
+# Class: qudt:FloatingPointEncodingType (Floating Point Encoding)
+
+AnnotationAssertion(dcterms:description qudt:FloatingPointEncodingType "A \"Encoding\" with the following instance(s): \"Double Precision Encoding\", \"Single Precision Real Encoding\".")
+AnnotationAssertion(rdfs:isDefinedBy qudt:FloatingPointEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:FloatingPointEncodingType "Floating Point Encoding")
+SubClassOf(qudt:FloatingPointEncodingType qudt:Encoding)
+
+# Class: qudt:IntegerEncodingType (Integer Encoding)
+
+AnnotationAssertion(dcterms:description qudt:IntegerEncodingType "The encoding scheme for integer types")
+AnnotationAssertion(rdfs:isDefinedBy qudt:IntegerEncodingType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:IntegerEncodingType "Integer Encoding")
+EquivalentClasses(qudt:IntegerEncodingType ObjectOneOf(qudt:LongUnsignedIntegerEncoding qudt:ShortUnsignedIntegerEncoding qudt:SignedIntegerEncoding qudt:UnsignedIntegerEncoding))
+SubClassOf(qudt:IntegerEncodingType qudt:Encoding)
+
+# Class: qudt:IntervalScale (Interval scale)
+
+AnnotationAssertion(qudt:informativeReference qudt:IntervalScale "https://en.wikipedia.org/wiki/Level_of_measurement"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:IntervalScale "<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be \"twice as hot\" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \"scaled variables\", but the formal mathematical term is an affine space (in this case an affine line).</p>
+<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:comment qudt:IntervalScale "median, percentile & Monotonic increasing (order (<)) & totally ordered set"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:IntervalScale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:IntervalScale "Interval scale")
+AnnotationAssertion(rdfs:seeAlso qudt:IntervalScale qudt:NominalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:IntervalScale qudt:OrdinalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:IntervalScale qudt:RatioScale)
+SubClassOf(qudt:IntervalScale qudt:Scale)
+
+# Class: qudt:LatexString (Latex String)
+
+SubClassOf(qudt:LatexString xsd:string)
+
+# Class: qudt:LogarithmicUnit (Logarithmic Unit)
+
+AnnotationAssertion(rdfs:comment qudt:LogarithmicUnit "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:LogarithmicUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:LogarithmicUnit "Logarithmic Unit")
+SubClassOf(qudt:LogarithmicUnit qudt:DimensionlessUnit)
+
+# Class: qudt:MathsFunctionType (Maths Function Type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:MathsFunctionType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:MathsFunctionType "Maths Function Type")
+SubClassOf(qudt:MathsFunctionType qudt:Concept)
+
+# Class: qudt:NIST_SP811_Comment (NIST SP~811 Comment)
+
+AnnotationAssertion(dc:description qudt:NIST_SP811_Comment "National Institute of Standards and Technology (NIST) Special Publication 811 Comments on some quantities and their units")
+AnnotationAssertion(rdfs:isDefinedBy qudt:NIST_SP811_Comment <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:NIST_SP811_Comment "NIST SP~811 Comment")
+SubClassOf(qudt:NIST_SP811_Comment qudt:Comment)
+
+# Class: qudt:NominalScale (Nominal scale)
+
+AnnotationAssertion(qudt:informativeReference qudt:NominalScale "https://en.wikipedia.org/wiki/Level_of_measurement"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:NominalScale "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:NominalScale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:NominalScale "Nominal scale")
+AnnotationAssertion(rdfs:seeAlso qudt:NominalScale qudt:IntervalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:NominalScale qudt:OrdinalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:NominalScale qudt:RatioScale)
+SubClassOf(qudt:NominalScale qudt:Scale)
+
+# Class: qudt:NumericUnion (Numeric union)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:NumericUnion <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:NumericUnion "Numeric union")
+SubClassOf(qudt:NumericUnion qudt:Concept)
+SubClassOf(qudt:NumericUnion dtype:numericUnion)
+
+# Class: qudt:OrderedType (Ordered type)
+
+AnnotationAssertion(dcterms:description qudt:OrderedType "Describes how a data or information structure is ordered.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:OrderedType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:OrderedType "Ordered type")
+EquivalentClasses(qudt:OrderedType ObjectOneOf(qudt:PartiallyOrdered qudt:TotallyOrdered qudt:Unordered))
+SubClassOf(qudt:OrderedType qudt:EnumeratedValue)
+SubClassOf(qudt:OrderedType DataMaxCardinality(1 dtype:literal))
+
+# Class: qudt:OrdinalScale (Ordinal scale)
+
+AnnotationAssertion(qudt:informativeReference qudt:OrdinalScale "https://en.wikipedia.org/wiki/Level_of_measurement"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:OrdinalScale "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:OrdinalScale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:OrdinalScale "Ordinal scale")
+AnnotationAssertion(rdfs:seeAlso qudt:OrdinalScale qudt:IntervalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:OrdinalScale qudt:NominalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:OrdinalScale qudt:RatioScale)
+SubClassOf(qudt:OrdinalScale qudt:Scale)
+SubClassOf(qudt:OrdinalScale DataExactCardinality(1 qudt:order))
+
+# Class: qudt:Organization (Organization)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Organization <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Organization "Organization")
+SubClassOf(qudt:Organization qudt:Concept)
+SubClassOf(qudt:Organization DataMinCardinality(0 qudt:url))
+
+# Class: qudt:PhysicalConstant (Physical Constant)
+
+AnnotationAssertion(qudt:dbpediaMatch qudt:PhysicalConstant "http://dbpedia.org/resource/Physical_constant"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:PhysicalConstant "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:PhysicalConstant <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:PhysicalConstant "Physical Constant")
+SubClassOf(qudt:PhysicalConstant <http://org.semanticweb.owlapi/error#Error1>)
+SubClassOf(qudt:PhysicalConstant qudt:Quantity)
+SubClassOf(qudt:PhysicalConstant ObjectAllValuesFrom(qudt:applicableSystem qudt:SystemOfUnits))
+SubClassOf(qudt:PhysicalConstant ObjectAllValuesFrom(qudt:applicableUnit qudt:Unit))
+SubClassOf(qudt:PhysicalConstant ObjectAllValuesFrom(qudt:exactMatch qudt:PhysicalConstant))
+SubClassOf(qudt:PhysicalConstant ObjectAllValuesFrom(qudt:hasDimensionVector qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:PhysicalConstant ObjectMinCardinality(0 qudt:ucumCode))
+SubClassOf(qudt:PhysicalConstant DataAllValuesFrom(qudt:exactConstant xsd:boolean))
+SubClassOf(qudt:PhysicalConstant DataMinCardinality(0 qudt:altSymbol))
+SubClassOf(qudt:PhysicalConstant DataMinCardinality(0 qudt:isoNormativeReference))
+SubClassOf(qudt:PhysicalConstant DataMinCardinality(0 qudt:latexSymbol))
+SubClassOf(qudt:PhysicalConstant DataMinCardinality(0 qudt:normativeReference))
+SubClassOf(qudt:PhysicalConstant DataMinCardinality(0 qudt:symbol))
+SubClassOf(qudt:PhysicalConstant DataMaxCardinality(1 qudt:latexDefinition))
+SubClassOf(qudt:PhysicalConstant DataMaxCardinality(1 qudt:mathMLdefinition))
+
+# Class: qudt:PlaneAngleUnit (Plane Angle Unit)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:PlaneAngleUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:PlaneAngleUnit "Plane Angle Unit")
+SubClassOf(qudt:PlaneAngleUnit qudt:AngleUnit)
+
+# Class: qudt:Prefix (Prefix)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Prefix <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Prefix "Prefix")
+SubClassOf(qudt:Prefix qudt:Concept)
+SubClassOf(qudt:Prefix qudt:Verifiable)
+SubClassOf(qudt:Prefix ObjectAllValuesFrom(qudt:exactMatch qudt:Prefix))
+SubClassOf(qudt:Prefix ObjectAllValuesFrom(qudt:ucumCode qudt:UCUMcs-term))
+SubClassOf(qudt:Prefix DataMinCardinality(0 qudt:altSymbol))
+SubClassOf(qudt:Prefix DataMinCardinality(0 qudt:latexSymbol))
+SubClassOf(qudt:Prefix DataMinCardinality(0 qudt:symbol))
+SubClassOf(qudt:Prefix DataMaxCardinality(1 qudt:prefixMultiplier))
+
+# Class: qudt:Quantifiable (Quantifiable)
+
+AnnotationAssertion(rdfs:comment qudt:Quantifiable "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Quantifiable <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Quantifiable "Quantifiable")
+SubClassOf(qudt:Quantifiable qudt:Aspect)
+SubClassOf(qudt:Quantifiable ObjectAllValuesFrom(qudt:dataEncoding qudt:DataEncoding))
+SubClassOf(qudt:Quantifiable ObjectAllValuesFrom(qudt:datatype qudt:Datatype))
+SubClassOf(qudt:Quantifiable ObjectAllValuesFrom(qudt:hasUnit qudt:Unit))
+SubClassOf(qudt:Quantifiable ObjectMaxCardinality(1 qudt:dataEncoding))
+SubClassOf(qudt:Quantifiable ObjectMaxCardinality(1 qudt:datatype))
+SubClassOf(qudt:Quantifiable ObjectMaxCardinality(1 qudt:hasUnit))
+SubClassOf(qudt:Quantifiable DataAllValuesFrom(qudt:relativeStandardUncertainty xsd:double))
+SubClassOf(qudt:Quantifiable DataAllValuesFrom(qudt:standardUncertainty xsd:decimal))
+SubClassOf(qudt:Quantifiable DataAllValuesFrom(qudt:standardUncertaintySN xsd:double))
+SubClassOf(qudt:Quantifiable DataMaxCardinality(1 qudt:relativeStandardUncertainty))
+SubClassOf(qudt:Quantifiable DataMaxCardinality(1 qudt:standardUncertainty))
+SubClassOf(qudt:Quantifiable DataMaxCardinality(1 qudt:value))
+SubClassOf(qudt:Quantifiable DataMaxCardinality(1 qudt:valueSN))
+
+# Class: qudt:Quantity (Quantity)
+
+AnnotationAssertion(qudt:dbpediaMatch qudt:Quantity "http://dbpedia.org/resource/Quantity"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:Quantity "<p class=\"lm-para\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. 
+  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the 
+  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific 
+  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as 
+  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, 
+velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p> 
+<p class=\"lm-para\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity 
+kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance 
+divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these 
+expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded 
+as \"fundamental\" in this sense.</p>
+<p class=\"lm-para\">A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Quantity <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Quantity "Quantity")
+SubClassOf(qudt:Quantity qudt:Concept)
+SubClassOf(qudt:Quantity qudt:Quantifiable)
+SubClassOf(qudt:Quantity ObjectAllValuesFrom(qudt:hasQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:Quantity ObjectAllValuesFrom(qudt:quantityValue qudt:QuantityValue))
+SubClassOf(qudt:Quantity ObjectMinCardinality(0 qudt:hasQuantityKind))
+SubClassOf(qudt:Quantity DataAllValuesFrom(qudt:isDeltaQuantity xsd:boolean))
+
+# Class: qudt:QuantityKind (Quantity Kind)
+
+AnnotationAssertion(qudt:informativeReference qudt:QuantityKind "http://www.electropedia.org/iev/iev.nsf/display?openform&ievref=112-01-04"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:QuantityKind "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKind "Quantity Kind")
+SubClassOf(qudt:QuantityKind qudt:AbstractQuantityKind)
+SubClassOf(qudt:QuantityKind qudt:Verifiable)
+SubClassOf(qudt:QuantityKind ObjectAllValuesFrom(qudt:dimensionVectorForSI qudt:QuantityKindDimensionVector_SI))
+SubClassOf(qudt:QuantityKind ObjectAllValuesFrom(qudt:exactMatch qudt:QuantityKind))
+SubClassOf(qudt:QuantityKind ObjectAllValuesFrom(qudt:hasDimensionVector qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:QuantityKind ObjectAllValuesFrom(qudt:iec61360Code xsd:string))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableCGSUnit))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableISOUnit))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableImperialUnit))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableSIUnit))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableUSCustomaryUnit))
+SubClassOf(qudt:QuantityKind ObjectMinCardinality(0 qudt:applicableUnit))
+SubClassOf(qudt:QuantityKind ObjectMaxCardinality(1 qudt:dimensionVectorForSI))
+SubClassOf(qudt:QuantityKind ObjectMaxCardinality(1 qudt:qkdvDenominator qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:QuantityKind ObjectMaxCardinality(1 qudt:qkdvNumerator qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:QuantityKind DataMaxCardinality(1 qudt:latexDefinition))
+SubClassOf(qudt:QuantityKind DataMaxCardinality(1 qudt:mathMLdefinition))
+
+# Class: qudt:QuantityKindDimensionVector (Quantity Kind Dimension Vector)
+
+AnnotationAssertion(qudt:informativeReference qudt:QuantityKindDimensionVector "http://en.wikipedia.org/wiki/Dimensional_analysis"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:QuantityKindDimensionVector "http://web.mit.edu/2.25/www/pdf/DA_unified.pdf"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector "<p class=\"lm-para\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\theta$) as $dim \\, Q = L^{\\alpha} \\, M^{\\beta} \\, T^{\\gamma} \\, I ^{\\delta} \\, \\theta ^{\\epsilon} \\, N^{\\eta} \\, J ^{\\nu}$.</p>
+
+<p class=\"lm-para\">The rational powers of the dimensional exponents, $\\alpha, \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\, \\eta, \\, \\nu$, are positive, negative, or zero.</p>
+
+<p class=\"lm-para\">For example, the dimension of the physical quantity kind $\\it{speed}$ is $\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\boxed{mass \\times acceleration}$ or $\\boxed{mass \\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>"^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector "Quantity Kind Dimension Vector")
+SubClassOf(qudt:QuantityKindDimensionVector qudt:Concept)
+SubClassOf(qudt:QuantityKindDimensionVector ObjectAllValuesFrom(qudt:hasReferenceQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:QuantityKindDimensionVector DataMinCardinality(0 qudt:latexSymbol))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForAmountOfSubstance))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForElectricCurrent))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForLength))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForLuminousIntensity))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForMass))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForThermodynamicTemperature))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionExponentForTime))
+SubClassOf(qudt:QuantityKindDimensionVector DataExactCardinality(1 qudt:dimensionlessExponent))
+SubClassOf(qudt:QuantityKindDimensionVector DataMaxCardinality(1 qudt:latexDefinition))
+
+# Class: qudt:QuantityKindDimensionVector_CGS (CGS Dimension vector)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector_CGS "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_CGS <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_CGS "CGS Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_CGS qudt:QuantityKindDimensionVector)
+
+# Class: qudt:QuantityKindDimensionVector_CGS-EMU (CGS EMU Dimension vector)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector_CGS-EMU "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_CGS-EMU <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_CGS-EMU "CGS EMU Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_CGS-EMU qudt:QuantityKindDimensionVector_CGS)
+
+# Class: qudt:QuantityKindDimensionVector_CGS-ESU (CGS ESU Dimension vector)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector_CGS-ESU "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_CGS-ESU <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_CGS-ESU "CGS ESU Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_CGS-ESU qudt:QuantityKindDimensionVector_CGS)
+
+# Class: qudt:QuantityKindDimensionVector_CGS-GAUSS (CGS GAUSS Dimension vector)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector_CGS-GAUSS "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_CGS-GAUSS <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_CGS-GAUSS "CGS GAUSS Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_CGS-GAUSS qudt:QuantityKindDimensionVector_CGS)
+
+# Class: qudt:QuantityKindDimensionVector_CGS-LH (CGS LH Dimension vector)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityKindDimensionVector_CGS-LH "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_CGS-LH <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_CGS-LH "CGS LH Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_CGS-LH qudt:QuantityKindDimensionVector_CGS)
+
+# Class: qudt:QuantityKindDimensionVector_ISO (ISO Dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_ISO <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_ISO "ISO Dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_ISO qudt:QuantityKindDimensionVector)
+
+# Class: qudt:QuantityKindDimensionVector_Imperial (Imperial dimension vector)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_Imperial <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_Imperial "Imperial dimension vector")
+SubClassOf(qudt:QuantityKindDimensionVector_Imperial qudt:QuantityKindDimensionVector)
+
+# Class: qudt:QuantityKindDimensionVector_SI (Quantity Kind Dimension vector (SI))
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityKindDimensionVector_SI <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityKindDimensionVector_SI "Quantity Kind Dimension vector (SI)")
+SubClassOf(qudt:QuantityKindDimensionVector_SI qudt:QuantityKindDimensionVector)
+
+# Class: qudt:QuantityType (Quantity type)
+
+AnnotationAssertion(dcterms:description qudt:QuantityType "
+  A $\\textit{Quantity Type}$ is an enumeration of quantity kinds. 
+  It specializes $\\boxed{dtype:EnumeratedValue}$ by constrinaing $\\boxed{dtype:value}$ to instances of $\\boxed{qudt:QuantityKind}$.
+  "^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityType "Quantity type")
+SubClassOf(qudt:QuantityType qudt:EnumeratedValue)
+SubClassOf(qudt:QuantityType ObjectAllValuesFrom(dtype:value qudt:QuantityKind))
+
+# Class: qudt:QuantityValue (Quantity value)
+
+AnnotationAssertion(rdfs:comment qudt:QuantityValue "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:QuantityValue <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:QuantityValue "Quantity value")
+SubClassOf(qudt:QuantityValue qudt:Concept)
+SubClassOf(qudt:QuantityValue qudt:Quantifiable)
+SubClassOf(qudt:QuantityValue ObjectMaxCardinality(1 qudt:hasUnit))
+
+# Class: qudt:RatioScale (Ratio scale)
+
+AnnotationAssertion(qudt:informativeReference qudt:RatioScale "https://en.wikipedia.org/wiki/Level_of_measurement"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:RatioScale "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:RatioScale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:RatioScale "Ratio scale")
+AnnotationAssertion(rdfs:seeAlso qudt:RatioScale qudt:IntervalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:RatioScale qudt:NominalScale)
+AnnotationAssertion(rdfs:seeAlso qudt:RatioScale qudt:OrdinalScale)
+SubClassOf(qudt:RatioScale qudt:Scale)
+
+# Class: qudt:Rule (Rule)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Rule <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Rule "Rule")
+SubClassOf(qudt:Rule qudt:Concept)
+SubClassOf(qudt:Rule qudt:Verifiable)
+SubClassOf(qudt:Rule ObjectAllValuesFrom(qudt:ruleType qudt:RuleType))
+SubClassOf(qudt:Rule ObjectMinCardinality(0 qudt:rationale))
+
+# Class: qudt:RuleType (Rule Type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:RuleType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:RuleType "Rule Type")
+SubClassOf(qudt:RuleType qudt:EnumeratedValue)
+
+# Class: qudt:ScalarDatatype (Scalar Datatype)
+
+AnnotationAssertion(dcterms:description qudt:ScalarDatatype "Scalar data types are those that have a single value. The permissible values are defined over a domain that may be integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:ScalarDatatype <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ScalarDatatype "Scalar Datatype")
+SubClassOf(qudt:ScalarDatatype qudt:Datatype)
+SubClassOf(qudt:ScalarDatatype ObjectAllValuesFrom(qudt:rdfsDatatype rdfs:Datatype))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:bits))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:bytes))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:length))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:maxExclusive))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:maxInclusive))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:minExclusive))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:minInclusive))
+SubClassOf(qudt:ScalarDatatype DataMaxCardinality(1 qudt:rdfsDatatype))
+
+# Class: qudt:Scale (Scale)
+
+AnnotationAssertion(rdfs:comment qudt:Scale "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Scale <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Scale "Scale")
+SubClassOf(qudt:Scale qudt:Concept)
+SubClassOf(qudt:Scale ObjectAllValuesFrom(qudt:permissibleMaths qudt:MathsFunctionType))
+SubClassOf(qudt:Scale ObjectAllValuesFrom(qudt:permissibleTransformation qudt:TransformType))
+SubClassOf(qudt:Scale ObjectAllValuesFrom(qudt:scaleType qudt:ScaleType))
+SubClassOf(qudt:Scale ObjectMaxCardinality(1 qudt:scaleType))
+SubClassOf(qudt:Scale DataMaxCardinality(1 qudt:dataStructure))
+
+# Class: qudt:ScaleType (Scale type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ScaleType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ScaleType "Scale type")
+SubClassOf(qudt:ScaleType qudt:EnumeratedValue)
+SubClassOf(qudt:ScaleType ObjectAllValuesFrom(qudt:permissibleMaths qudt:MathsFunctionType))
+SubClassOf(qudt:ScaleType ObjectAllValuesFrom(qudt:permissibleTransformation qudt:TransformType))
+SubClassOf(qudt:ScaleType DataMaxCardinality(1 qudt:dataStructure))
+
+# Class: qudt:SolidAngleUnit (Solid Angle Unit)
+
+AnnotationAssertion(dcterms:description qudt:SolidAngleUnit "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:SolidAngleUnit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:SolidAngleUnit "Solid Angle Unit")
+SubClassOf(qudt:SolidAngleUnit qudt:AngleUnit)
+
+# Class: qudt:Statement (Statement)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Statement <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Statement "Statement")
+SubClassOf(qudt:Statement rdf:Statement)
+
+# Class: qudt:Symbol (Symbol)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Symbol <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Symbol "Symbol")
+SubClassOf(qudt:Symbol qudt:Concept)
+
+# Class: qudt:SystemOfQuantityKinds (System of Quantity Kinds)
+
+AnnotationAssertion(rdfs:comment qudt:SystemOfQuantityKinds "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:SystemOfQuantityKinds <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:SystemOfQuantityKinds "System of Quantity Kinds")
+SubClassOf(qudt:SystemOfQuantityKinds qudt:Concept)
+SubClassOf(qudt:SystemOfQuantityKinds ObjectAllValuesFrom(qudt:baseDimensionEnumeration qudt:Enumeration))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectAllValuesFrom(qudt:hasBaseQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectAllValuesFrom(qudt:hasQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectAllValuesFrom(qudt:hasUnitSystem qudt:SystemOfUnits))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectAllValuesFrom(qudt:systemDerivedQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectMinCardinality(0 qudt:hasQuantityKind))
+SubClassOf(qudt:SystemOfQuantityKinds ObjectMaxCardinality(1 qudt:baseDimensionEnumeration))
+
+# Class: qudt:SystemOfUnits (System of Units)
+
+AnnotationAssertion(qudt:informativeReference qudt:SystemOfUnits "http://dbpedia.org/resource/Category:Systems_of_units"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:SystemOfUnits "http://www.ieeeghn.org/wiki/index.php/System_of_Measurement_Units"^^xsd:anyURI)
+AnnotationAssertion(rdfs:comment qudt:SystemOfUnits "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind."^^rdf:HTML)
+AnnotationAssertion(rdfs:isDefinedBy qudt:SystemOfUnits <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:SystemOfUnits "System of Units")
+SubClassOf(qudt:SystemOfUnits qudt:Concept)
+SubClassOf(qudt:SystemOfUnits qudt:Verifiable)
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:applicablePhysicalConstant qudt:PhysicalConstant))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasAllowedUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasBaseUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasCoherentUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasDefinedUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasDerivedCoherentUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasDerivedUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:hasUnit qudt:Unit))
+SubClassOf(qudt:SystemOfUnits ObjectAllValuesFrom(qudt:prefix qudt:Prefix))
+
+# Class: qudt:TransformType (Transform type)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:TransformType <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:TransformType "Transform type")
+AnnotationAssertion(skos:prefLabel qudt:TransformType "Transform type")
+SubClassOf(qudt:TransformType qudt:EnumeratedValue)
+
+# Class: qudt:UCUMcs (case-sensitive UCUM code)
+
+SubClassOf(qudt:UCUMcs rdfs:Resource)
+
+# Class: qudt:UCUMcs-term (case-sensitive UCUM terminal)
+
+SubClassOf(qudt:UCUMcs-term rdfs:Resource)
+
+# Class: qudt:Unit (Unit)
+
+AnnotationAssertion(dcterms:description qudt:Unit "
+  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
+  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). 
+  Any measurement of the length can be expressed as a number multiplied by the unit meter. 
+  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
+  "^^qudt:LatexString)
+AnnotationAssertion(qudt:informativeReference qudt:Unit "http://dbpedia.org/resource/Category:Units_of_measure"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference qudt:Unit "http://www.allmeasures.com/Fullconversion.asp"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:Unit <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Unit "Unit")
+SubClassOf(qudt:Unit qudt:Concept)
+SubClassOf(qudt:Unit qudt:Verifiable)
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:applicableSystem qudt:SystemOfUnits))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:definedUnitOfSystem qudt:SystemOfUnits))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:derivedCoherentUnitOfSystem qudt:SystemOfUnits))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:derivedUnitOfSystem qudt:SystemOfUnits))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:exactMatch qudt:Unit))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:hasDimensionVector qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:hasFactorUnit owl:Class))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:hasQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:iec61360Code xsd:string))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:prefix qudt:Prefix))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:qkdvDenominator qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:qkdvNumerator qudt:QuantityKindDimensionVector))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:scalingOf qudt:Unit))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:ucumCode qudt:UCUMcs))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:udunitsCode xsd:string))
+SubClassOf(qudt:Unit ObjectAllValuesFrom(qudt:uneceCommonCode xsd:string))
+SubClassOf(qudt:Unit ObjectMaxCardinality(1 qudt:hasDimensionVector))
+SubClassOf(qudt:Unit ObjectMaxCardinality(1 qudt:qkdvDenominator))
+SubClassOf(qudt:Unit ObjectMaxCardinality(1 qudt:qkdvNumerator))
+SubClassOf(qudt:Unit DataMinCardinality(0 qudt:altSymbol))
+SubClassOf(qudt:Unit DataMinCardinality(0 qudt:latexDefinition))
+SubClassOf(qudt:Unit DataMinCardinality(0 qudt:latexSymbol))
+SubClassOf(qudt:Unit DataMinCardinality(0 qudt:siUnitsExpression))
+SubClassOf(qudt:Unit DataMinCardinality(0 qudt:symbol))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:conversionMultiplier))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:conversionMultiplierSN))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:conversionOffset))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:conversionOffsetSN))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:factorUnitScalar))
+SubClassOf(qudt:Unit DataMaxCardinality(1 qudt:mathMLdefinition))
+
+# Class: qudt:UserQuantityKind (User Quantity Kind)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:UserQuantityKind <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:UserQuantityKind "User Quantity Kind")
+SubClassOf(qudt:UserQuantityKind qudt:AbstractQuantityKind)
+SubClassOf(qudt:UserQuantityKind ObjectAllValuesFrom(qudt:hasQuantityKind qudt:QuantityKind))
+SubClassOf(qudt:UserQuantityKind ObjectExactCardinality(1 qudt:hasQuantityKind))
+
+# Class: qudt:Verifiable (Verifiable)
+
+AnnotationAssertion(rdfs:comment qudt:Verifiable "An aspect class that holds properties that provide external knowledge and specifications of a given resource.")
+AnnotationAssertion(rdfs:isDefinedBy qudt:Verifiable <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Verifiable "Verifiable")
+SubClassOf(qudt:Verifiable <http://org.semanticweb.owlapi/error#Error2>)
+SubClassOf(qudt:Verifiable <http://org.semanticweb.owlapi/error#Error3>)
+SubClassOf(qudt:Verifiable qudt:Aspect)
+SubClassOf(qudt:Verifiable DataMinCardinality(0 qudt:isoNormativeReference))
+SubClassOf(qudt:Verifiable DataMinCardinality(0 qudt:normativeReference))
+
+# Class: qudt:valueUnion (value union)
+
+EquivalentClasses(qudt:valueUnion ObjectUnionOf(dtype:EnumeratedValue xsd:anySimpleType))
+SubClassOf(qudt:valueUnion rdfs:Resource)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: qudt:AngleUnit (Angle unit)
+
+ObjectPropertyAssertion(skos:exactMatch qudt:AngleUnit <http://dbpedia.org/resource/Category:Units_of_angle>)
+
+# Individual: qudt:Aspect (QUDT Aspect)
+
+ClassAssertion(qudt:AspectClass qudt:Aspect)
+
+# Individual: qudt:BigEndian (Big Endian)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:BigEndian <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BigEndian "Big Endian")
+ClassAssertion(qudt:EndianType qudt:BigEndian)
+DataPropertyAssertion(dtype:literal qudt:BigEndian "big")
+
+# Individual: qudt:BitEncoding (Bit Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:BitEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BitEncoding "Bit Encoding")
+ClassAssertion(qudt:BitEncodingType qudt:BitEncoding)
+DataPropertyAssertion(qudt:bits qudt:BitEncoding "1"^^xsd:integer)
+
+# Individual: qudt:BooleanEncoding (Boolean Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:BooleanEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:BooleanEncoding "Boolean Encoding")
+ClassAssertion(qudt:BooleanEncodingType qudt:BooleanEncoding)
+DataPropertyAssertion(qudt:bits qudt:BooleanEncoding "1"^^xsd:integer)
+
+# Individual: qudt:CT_COUNTABLY-INFINITE (Countably Infinite Cardinality Type)
+
+AnnotationAssertion(dcterms:description qudt:CT_COUNTABLY-INFINITE "
+  A set of numbers is called countably infinite if there is a way to enumerate them. 
+  Formally this is done with a bijection function that associates each number in the set with exactly one of the positive integers.
+  The set of all fractions is also countably infinite.
+  In other words, any set $X$ that has the same cardinality as the set of the natural numbers,
+   or $| X | \\; =  \\; | \\mathbb N | \\; = \\; \\aleph0$, is said to be a countably infinite set.
+  "^^qudt:LatexString)
+AnnotationAssertion(qudt:informativeReference qudt:CT_COUNTABLY-INFINITE "http://www.math.vanderbilt.edu/~schectex/courses/infinity.pdf"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CT_COUNTABLY-INFINITE <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CT_COUNTABLY-INFINITE "Countably Infinite Cardinality Type")
+ClassAssertion(qudt:CardinalityType qudt:CT_COUNTABLY-INFINITE)
+DataPropertyAssertion(dtype:literal qudt:CT_COUNTABLY-INFINITE "countable")
+
+# Individual: qudt:CT_FINITE (Finite Cardinality Type)
+
+AnnotationAssertion(dcterms:description qudt:CT_FINITE "Any set $X$ with cardinality less than that of the natural numbers, or $| X | \\\\; <  \\; | \\\\mathbb N | $, is said to be a finite set."^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CT_FINITE <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CT_FINITE "Finite Cardinality Type")
+ClassAssertion(qudt:CardinalityType qudt:CT_FINITE)
+DataPropertyAssertion(dtype:literal qudt:CT_FINITE "finite")
+
+# Individual: qudt:CT_UNCOUNTABLE (Uncountable Cardinality Type)
+
+AnnotationAssertion(dcterms:description qudt:CT_UNCOUNTABLE "Any set with cardinality greater than that of the natural numbers, or $| X | \\; >  \\; | \\mathbb N | $,  for example $| R| \\; =  \\;  c  \\; > |\\mathbb N |$, is said to be uncountable."^^qudt:LatexString)
+AnnotationAssertion(rdfs:isDefinedBy qudt:CT_UNCOUNTABLE <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CT_UNCOUNTABLE "Uncountable Cardinality Type")
+ClassAssertion(qudt:CardinalityType qudt:CT_UNCOUNTABLE)
+DataPropertyAssertion(dtype:literal qudt:CT_UNCOUNTABLE "uncountable")
+
+# Individual: qudt:CardinalityType (Cardinality Type)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:CardinalityType "In mathematics, the cardinality of a set is a measure of the number of elements of the set.  For example, the set 'A = {2, 4, 6}' contains 3 elements, and therefore 'A' has a cardinality of 3. There are two approaches to cardinality – one which compares sets directly using bijections and injections, and another which uses cardinal numbers.")
+
+# Individual: qudt:CharEncoding (Char Encoding)
+
+AnnotationAssertion(dc:description qudt:CharEncoding "7 bits of 1 octet")
+AnnotationAssertion(rdfs:isDefinedBy qudt:CharEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:CharEncoding "Char Encoding")
+ClassAssertion(qudt:BooleanEncodingType qudt:CharEncoding)
+ClassAssertion(qudt:CharEncodingType qudt:CharEncoding)
+DataPropertyAssertion(qudt:bytes qudt:CharEncoding "1"^^xsd:integer)
+
+# Individual: qudt:DoublePrecisionEncoding (Single Precision Real Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:DoublePrecisionEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:DoublePrecisionEncoding "Single Precision Real Encoding")
+ClassAssertion(qudt:FloatingPointEncodingType qudt:DoublePrecisionEncoding)
+DataPropertyAssertion(qudt:bytes qudt:DoublePrecisionEncoding "64"^^xsd:integer)
+
+# Individual: qudt:EndianType (Endian Type)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:EndianType "In computing, endianness is the ordering used to represent some kind of data as a sequence of smaller units. Typical cases are the order in which integer values are stored as bytes in computer memory (relative to a given memory addressing scheme) and the transmission order over a network or other medium. When specifically talking about bytes, endianness is also referred to simply as byte order.  Most computer processors simply store integers as sequences of bytes, so that, conceptually, the encoded value can be obtained by simple concatenation. For an 'n-byte' integer value this allows 'n!' (n factorial) possible representations (one for each byte permutation). The two most common of them are: increasing numeric significance with increasing memory addresses, known as little-endian, and its opposite, called big-endian.")
+
+# Individual: qudt:EnumeratedQuantity (Enumerated Quantity)
+
+ClassAssertion(qudt:AspectClass qudt:EnumeratedQuantity)
+
+# Individual: qudt:IEEE754_1985RealEncoding (IEEE 754 1985 Real Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:IEEE754_1985RealEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:IEEE754_1985RealEncoding "IEEE 754 1985 Real Encoding")
+ClassAssertion(qudt:FloatingPointEncodingType qudt:IEEE754_1985RealEncoding)
+DataPropertyAssertion(qudt:bytes qudt:IEEE754_1985RealEncoding "32"^^xsd:integer)
+
+# Individual: qudt:ISO8601-UTCDateTime-BasicFormat (ISO 8601 UTC Date Time - Basic Format)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ISO8601-UTCDateTime-BasicFormat <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ISO8601-UTCDateTime-BasicFormat "ISO 8601 UTC Date Time - Basic Format")
+ClassAssertion(qudt:DateTimeStringEncodingType qudt:ISO8601-UTCDateTime-BasicFormat)
+DataPropertyAssertion(qudt:allowedPattern qudt:ISO8601-UTCDateTime-BasicFormat "[0-9]{4}[0-9]{2}[0-9]{2}T[0-9]{2}[0-9]{2}[0-9]{2}.[0-9]+Z")
+DataPropertyAssertion(qudt:allowedPattern qudt:ISO8601-UTCDateTime-BasicFormat "[0-9]{4}[0-9]{2}[0-9]{2}T[0-9]{2}[0-9]{2}[0-9]{2}Z")
+
+# Individual: qudt:LittleEndian (Little Endian)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:LittleEndian <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:LittleEndian "Little Endian")
+ClassAssertion(qudt:EndianType qudt:LittleEndian)
+DataPropertyAssertion(dtype:literal qudt:LittleEndian "little")
+
+# Individual: qudt:LongUnsignedIntegerEncoding (Long Unsigned Integer Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:LongUnsignedIntegerEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:LongUnsignedIntegerEncoding "Long Unsigned Integer Encoding")
+ClassAssertion(qudt:IntegerEncodingType qudt:LongUnsignedIntegerEncoding)
+DataPropertyAssertion(qudt:bytes qudt:LongUnsignedIntegerEncoding "8"^^xsd:integer)
+
+# Individual: qudt:OctetEncoding (OCTET Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:OctetEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:OctetEncoding "OCTET Encoding")
+ClassAssertion(qudt:BooleanEncodingType qudt:OctetEncoding)
+ClassAssertion(qudt:ByteEncodingType qudt:OctetEncoding)
+DataPropertyAssertion(qudt:bytes qudt:OctetEncoding "1"^^xsd:integer)
+
+# Individual: qudt:PartiallyOrdered (Partially Ordered)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:PartiallyOrdered <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:PartiallyOrdered "Partially Ordered")
+ClassAssertion(qudt:OrderedType qudt:PartiallyOrdered)
+DataPropertyAssertion(qudt:plainTextDescription qudt:PartiallyOrdered "Partial ordered structure.")
+DataPropertyAssertion(dtype:literal qudt:PartiallyOrdered "partial")
+
+# Individual: qudt:ScaleType (Scale type)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:ScaleType "Scales, or scales of measurement (or categorization) provide ways of quantifying measurements, values and other enumerated values according to a normative frame of reference.  Four different types of scales are typically used. These are interval, nominal, ordinal and ratio scales.")
+
+# Individual: qudt:ShortSignedIntegerEncoding (Short Signed Integer Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ShortSignedIntegerEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ShortSignedIntegerEncoding "Short Signed Integer Encoding")
+ClassAssertion(qudt:IntegerEncodingType qudt:ShortSignedIntegerEncoding)
+DataPropertyAssertion(qudt:bytes qudt:ShortSignedIntegerEncoding "2"^^xsd:integer)
+
+# Individual: qudt:ShortUnsignedIntegerEncoding (Short Unsigned Integer Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:ShortUnsignedIntegerEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:ShortUnsignedIntegerEncoding "Short Unsigned Integer Encoding")
+ClassAssertion(qudt:BooleanEncodingType qudt:ShortUnsignedIntegerEncoding)
+ClassAssertion(qudt:IntegerEncodingType qudt:ShortUnsignedIntegerEncoding)
+DataPropertyAssertion(qudt:bytes qudt:ShortUnsignedIntegerEncoding "2"^^xsd:integer)
+
+# Individual: qudt:Signed (Signed)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Signed <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Signed "Signed")
+ClassAssertion(qudt:SignednessType qudt:Signed)
+DataPropertyAssertion(dtype:literal qudt:Signed "signed")
+
+# Individual: qudt:SignedIntegerEncoding (Signed Integer Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:SignedIntegerEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:SignedIntegerEncoding "Signed Integer Encoding")
+ClassAssertion(qudt:IntegerEncodingType qudt:SignedIntegerEncoding)
+DataPropertyAssertion(qudt:bytes qudt:SignedIntegerEncoding "4"^^xsd:integer)
+
+# Individual: qudt:SinglePrecisionRealEncoding (Single Precision Real Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:SinglePrecisionRealEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:SinglePrecisionRealEncoding "Single Precision Real Encoding")
+ClassAssertion(qudt:FloatingPointEncodingType qudt:SinglePrecisionRealEncoding)
+DataPropertyAssertion(qudt:bytes qudt:SinglePrecisionRealEncoding "32"^^xsd:integer)
+
+# Individual: qudt:TotallyOrdered (Totally Ordered)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:TotallyOrdered <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:TotallyOrdered "Totally Ordered")
+ClassAssertion(qudt:OrderedType qudt:TotallyOrdered)
+DataPropertyAssertion(qudt:plainTextDescription qudt:TotallyOrdered "Totally ordered structure.")
+DataPropertyAssertion(dtype:literal qudt:TotallyOrdered "total")
+
+# Individual: qudt:UNSIGNED (Unsigned)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:UNSIGNED <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:UNSIGNED "Unsigned")
+ClassAssertion(qudt:SignednessType qudt:UNSIGNED)
+DataPropertyAssertion(dtype:literal qudt:UNSIGNED "unsigned")
+
+# Individual: qudt:Unordered (Unordered)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:Unordered <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:Unordered "Unordered")
+ClassAssertion(qudt:OrderedType qudt:Unordered)
+DataPropertyAssertion(qudt:plainTextDescription qudt:Unordered "Unordered structure.")
+DataPropertyAssertion(dtype:literal qudt:Unordered "unordered")
+
+# Individual: qudt:UnsignedIntegerEncoding (Unsigned Integer Encoding)
+
+AnnotationAssertion(rdfs:isDefinedBy qudt:UnsignedIntegerEncoding <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label qudt:UnsignedIntegerEncoding "Unsigned Integer Encoding")
+ClassAssertion(qudt:IntegerEncodingType qudt:UnsignedIntegerEncoding)
+DataPropertyAssertion(qudt:bytes qudt:UnsignedIntegerEncoding "4"^^xsd:integer)
+
+# Individual: qudt:Verifiable (Verifiable)
+
+ClassAssertion(qudt:AspectClass qudt:Verifiable)
+
+# Individual: qudt:exactMatch (exact match)
+
+ClassAssertion(qudt:SymmetricRelation qudt:exactMatch)
+
+# Individual: qudt:fieldCode (field code)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:fieldCode "A field code is a generic property for representing unique codes that make up other identifers. For example each QuantityKind class caries a domain code as its field code.")
+
+# Individual: qudt:hasCitation (citation)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:hasCitation "Used to provide an annotation for an informative reference.")
+
+# Individual: qudt:hasReciprocalUnit (has reciprocal unit)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:hasReciprocalUnit "Used to relate a unit to its reciprocal unit.")
+
+# Individual: qudt:hasVocabulary (has vocabulary)
+
+DataPropertyAssertion(qudt:plainTextDescription qudt:hasVocabulary "Used to relate a class to one or more graphs where vocabularies for the class are defined.")
+
+# Individual: voag:QUDT-SchemaCatalogEntry (QUDT Schema Catalog Entry)
+
+AnnotationAssertion(rdfs:isDefinedBy voag:QUDT-SchemaCatalogEntry <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label voag:QUDT-SchemaCatalogEntry "QUDT Schema Catalog Entry")
+ClassAssertion(vaem:CatalogEntry voag:QUDT-SchemaCatalogEntry)
+
+# Individual: <http://www.linkedmodel.org/schema/dtype> (<http://www.linkedmodel.org/schema/dtype>)
+
+DataPropertyAssertion(vaem:namespace <http://www.linkedmodel.org/schema/dtype> "http://www.linkedmodel.org/schema/dtype#"^^xsd:anyURI)
+DataPropertyAssertion(vaem:namespacePrefix <http://www.linkedmodel.org/schema/dtype> "dtype")
+
+# Individual: vaem:GMD_QUDT-SCHEMA (QUDT Schema - Version 3.1.6)
+
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "Daniel Mekonnen")
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "David Price")
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "Jack Hodges")
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "James E. Masters")
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "Simon J D Cox")
+AnnotationAssertion(dcterms:contributor vaem:GMD_QUDT-SCHEMA "Steve Ray")
+AnnotationAssertion(dcterms:created vaem:GMD_QUDT-SCHEMA "2011-04-20"^^xsd:date)
+AnnotationAssertion(dcterms:creator vaem:GMD_QUDT-SCHEMA "Ralph Hodgson")
+AnnotationAssertion(dcterms:description vaem:GMD_QUDT-SCHEMA "<p class=\"lm-para\">The QUDT, or \"Quantity, Unit, Dimension and Type\" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.</p>
+
+<p class=\"lm-para\">Except for unit prefixes, all units are specified in separate vocabularies. Descriptions are provided in both HTML and LaTeX formats. A quantity is a measure of an observable phenomenon, that, when associated with something, becomes a property of that thing; a particular object, event, or physical system. </p>
+
+<p class=\"lm-para\">A quantity has meaning in the context of a measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc.  Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time).</p>"^^rdf:HTML)
+AnnotationAssertion(dcterms:modified vaem:GMD_QUDT-SCHEMA "2025-09-29T19:07:03Z"^^xsd:dateTime)
+AnnotationAssertion(dcterms:rights vaem:GMD_QUDT-SCHEMA "
+  This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
+
+THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  ")
+AnnotationAssertion(dcterms:rights vaem:GMD_QUDT-SCHEMA "The QUDT Ontologies are issued under a Creative Commons Attribution 4.0 International License (CC BY 4.0), available at https://creativecommons.org/licenses/by/4.0/. Attribution should be made to QUDT.org")
+AnnotationAssertion(dcterms:subject vaem:GMD_QUDT-SCHEMA "QUDT")
+AnnotationAssertion(dcterms:title vaem:GMD_QUDT-SCHEMA "QUDT Schema - Version 3.1.6")
+AnnotationAssertion(qudt:informativeReference vaem:GMD_QUDT-SCHEMA "http://unitsofmeasure.org/trac"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference vaem:GMD_QUDT-SCHEMA "http://www.bipm.org/en/publications/si-brochure"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference vaem:GMD_QUDT-SCHEMA "http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference vaem:GMD_QUDT-SCHEMA "https://books.google.com/books?id=pIlCAAAAIAAJ&dq=dimensional+analysis&hl=en"^^xsd:anyURI)
+AnnotationAssertion(qudt:informativeReference vaem:GMD_QUDT-SCHEMA "https://www.nist.gov/physical-measurement-laboratory/special-publication-811"^^xsd:anyURI)
+AnnotationAssertion(vaem:graphName vaem:GMD_QUDT-SCHEMA "qudt")
+AnnotationAssertion(vaem:graphTitle vaem:GMD_QUDT-SCHEMA "Quantities, Units, Dimensions and Types (QUDT) Schema - Version 3.1.6")
+AnnotationAssertion(vaem:isMetadataFor vaem:GMD_QUDT-SCHEMA <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(vaem:logo vaem:GMD_QUDT-SCHEMA "https://qudt.org/linkedmodels.org/assets/lib/lm/images/logos/qudt_logo-300x110.png"^^xsd:anyURI)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:abstract)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:contributor)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:created)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:description)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:modified)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:rights)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:source)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:subject)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA dcterms:title)
+AnnotationAssertion(vaem:usesNonImportedResource vaem:GMD_QUDT-SCHEMA voag:QUDT-Attribution)
+AnnotationAssertion(vaem:withAttributionTo vaem:GMD_QUDT-SCHEMA voag:QUDT-Attribution)
+AnnotationAssertion(rdfs:isDefinedBy vaem:GMD_QUDT-SCHEMA <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label vaem:GMD_QUDT-SCHEMA "QUDT Schema - Version 3.1.6")
+ClassAssertion(vaem:GraphMetaData vaem:GMD_QUDT-SCHEMA)
+ObjectPropertyAssertion(vaem:hasGraphRole vaem:GMD_QUDT-SCHEMA vaem:SchemaGraph)
+ObjectPropertyAssertion(vaem:hasOwner vaem:GMD_QUDT-SCHEMA vaem:QUDT)
+ObjectPropertyAssertion(vaem:hasSteward vaem:GMD_QUDT-SCHEMA vaem:QUDT)
+DataPropertyAssertion(vaem:intent vaem:GMD_QUDT-SCHEMA "Specifies the schema for quantities, units and dimensions. Types are defined in other schemas.")
+DataPropertyAssertion(vaem:latestPublishedVersion vaem:GMD_QUDT-SCHEMA "https://qudt.org/doc/2025/09/DOC_SCHEMA-QUDT.html"^^xsd:anyURI)
+DataPropertyAssertion(vaem:namespace vaem:GMD_QUDT-SCHEMA "http://qudt.org/schema/qudt/"^^xsd:anyURI)
+DataPropertyAssertion(vaem:namespacePrefix vaem:GMD_QUDT-SCHEMA "qudt")
+DataPropertyAssertion(vaem:owner vaem:GMD_QUDT-SCHEMA "qudt.org")
+DataPropertyAssertion(vaem:previousPublishedVersion vaem:GMD_QUDT-SCHEMA "https://qudt.org/doc/2025/08/DOC_SCHEMA-QUDT.html"^^xsd:anyURI)
+DataPropertyAssertion(vaem:turtleFileURL vaem:GMD_QUDT-SCHEMA "http://qudt.org/3.1.6/schema/qudt"^^xsd:anyURI)
+
+# Individual: vaem:QUDT (QUDT)
+
+AnnotationAssertion(dcterms:description vaem:QUDT "QUDT is a non-profit organization that governs the QUDT ontologies."^^rdf:HTML)
+AnnotationAssertion(vaem:graphName vaem:QUDT "qudt.org")
+AnnotationAssertion(vaem:website vaem:QUDT "http://www.qudt.org"^^xsd:anyURI)
+AnnotationAssertion(rdfs:isDefinedBy vaem:QUDT <http://qudt.org/3.1.6/schema/qudt>)
+AnnotationAssertion(rdfs:label vaem:QUDT "QUDT")
+ClassAssertion(vaem:Party vaem:QUDT)
+
+
+AnnotationAssertion(xsd:pattern _:genid2147483680 "^\\d{3}$")
+AnnotationAssertion(owl:maxCardinality _:genid2147483681 "1"^^xsd:nonNegativeInteger)
+AnnotationAssertion(owl:minCardinality _:genid2147483681 "0"^^xsd:nonNegativeInteger)
+AnnotationAssertion(owl:minCardinality _:genid2147483682 "0"^^xsd:nonNegativeInteger)
+AnnotationAssertion(owl:minCardinality _:genid2147483683 "0"^^xsd:nonNegativeInteger)
+AnnotationAssertion(xsd:pattern _:genid2147483684 "[\\x21,\\x23-\\x27,\\x2a,\\x2c,\\x30-\\x3c,\\x3e-\\x5a,\\x5c,\\x5e-\\x7a,\\x7c,\\x7e]+")
+AnnotationAssertion(xsd:pattern _:genid2147483685 "[\\x21-\\x7e]+")
+)
