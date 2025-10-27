@@ -140,9 +140,7 @@ Citation {
     stringList guidance  
     string id  
 }
-Class {
 
-}
 Concept {
     stringList guidance  
     string id  
@@ -584,22 +582,14 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 ```mermaid
 erDiagram
 AngleUnit {
-
-}
-Class {
-
 }
 Prefix {
-
 }
 QuantityKind {
-
 }
 QuantityKindDimensionVector {
-
 }
 Rule {
-
 }
 SystemOfUnits {
 
@@ -1004,9 +994,6 @@ Rule {
 
 ```mermaid
 erDiagram
-Class {
-
-}
 Unit {
 
 }
@@ -1188,9 +1175,6 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 ```mermaid
 erDiagram
-Class {
-
-}
 ContextualUnit {
 
 }
@@ -1254,9 +1238,6 @@ Used for all units that express counts. Examples are Atomic Number, Number, Numb
 
 ```mermaid
 erDiagram
-Class {
-
-}
 CountingUnit {
 
 }
@@ -1319,9 +1300,6 @@ Used for all units that express currency.
 
 ```mermaid
 erDiagram
-Class {
-
-}
 CurrencyUnit {
 
 }
@@ -1580,9 +1558,6 @@ A DerivedUnit is a type specification for units that are derived from other unit
 
 ```mermaid
 erDiagram
-Class {
-
-}
 DerivedUnit {
 
 }
@@ -1643,9 +1618,6 @@ A Dimensionless Unit is a quantity for which all the exponents of the factors co
 
 ```mermaid
 erDiagram
-Class {
-
-}
 DimensionlessUnit {
 
 }
@@ -2256,9 +2228,6 @@ Logarithmic units are abstract mathematical units that can be used to express an
 
 ```mermaid
 erDiagram
-Class {
-
-}
 LogarithmicUnit {
 
 }
@@ -2663,9 +2632,6 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 ```mermaid
 erDiagram
-Class {
-
-}
 PlaneAngleUnit {
 
 }
@@ -3749,9 +3715,6 @@ This class has no attributes
 
 ```mermaid
 erDiagram
-Class {
-
-}
 Prefix {
 
 }
@@ -4136,9 +4099,6 @@ This class has no attributes
 
 ```mermaid
 erDiagram
-Class {
-
-}
 ContextualUnit {
 
 }
