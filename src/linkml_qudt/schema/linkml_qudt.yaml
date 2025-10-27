@@ -7,8 +7,12 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   qudt: https://w3id.org/None/
+  owl: http://www.w3.org/2002/07/owl#
 default_prefix: qudt
 classes:
+  Thing:
+    description: The root class for all QUDT concepts
+    class_uri: owl:Thing
   Error1:
     class_uri: http://org.semanticweb.owlapi/error#Error1
   Error2:
@@ -52,7 +56,7 @@ classes:
         required: true
         multivalued: false
       vectorMagnitude:
-        range: xsd:float
+        range: float
         required: true
         multivalued: false
     class_uri: qudt:BaseDimensionMagnitude
@@ -273,7 +277,6 @@ classes:
   EnumeratedValue:
     is_a: Verifiable
     mixins:
-    - EnumeratedValue
     - Concept
     slot_usage:
       altSymbol:
@@ -303,8 +306,6 @@ classes:
       to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar
       Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>^^rdf:HTML'
     is_a: Concept
-    mixins:
-    - Enumeration
     slot_usage:
       default:
         range: EnumeratedValue
@@ -394,7 +395,6 @@ classes:
     is_a: Scale
     class_uri: qudt:NominalScale
   NumericUnion:
-    is_a: numericUnion
     mixins:
     - Concept
     class_uri: qudt:NumericUnion
@@ -452,7 +452,7 @@ classes:
       ucumCode:
         required: false
       exactConstant:
-        range: xsd:boolean
+        range: boolean
       altSymbol:
         required: false
       isoNormativeReference:
@@ -505,13 +505,13 @@ classes:
         range: Unit
         multivalued: false
       relativeStandardUncertainty:
-        range: xsd:double
+        range: double
         multivalued: false
       standardUncertainty:
-        range: xsd:decimal
+        range: decimal
         multivalued: false
       standardUncertaintySN:
-        range: xsd:double
+        range: double
       value:
         multivalued: false
       valueSN:
@@ -553,7 +553,7 @@ classes:
       quantityValue:
         range: QuantityValue
       isDeltaQuantity:
-        range: xsd:boolean
+        range: boolean
     class_uri: qudt:Quantity
   QuantityKind:
     comments:
@@ -792,7 +792,6 @@ classes:
     is_a: AngleUnit
     class_uri: qudt:SolidAngleUnit
   Statement:
-    is_a: Statement
     class_uri: rdf:Statement
   StringEncodingType:
     class_uri: qudt:StringEncodingType
@@ -979,7 +978,7 @@ classes:
     comments:
     - A type of string in which some characters may be wrapped with '$' and '$ characters
       for LaTeX rendering.
-    is_a: string
+    class_uri: qudt:LatexString
   UCUMcs:
     comments:
     - Lexical pattern for the case-sensitive version of UCUM code
@@ -1442,7 +1441,7 @@ slots:
     multivalued: true
   guidance:
     slot_uri: qudt:guidance
-    range: HTML
+    range: string
     multivalued: true
   hasCitation:
     slot_uri: qudt:hasCitation
@@ -1569,7 +1568,7 @@ slots:
     multivalued: true
   rationale:
     slot_uri: qudt:rationale
-    range: HTML
+    range: string
     multivalued: true
   rdfsDatatype:
     slot_uri: qudt:rdfsDatatype
@@ -1591,7 +1590,6 @@ slots:
     slot_uri: qudt:symbol
     multivalued: true
   ucumCode:
-    is_a: notation
     slot_uri: qudt:ucumCode
     multivalued: true
   udunitsCode:
@@ -1619,7 +1617,6 @@ slots:
     slot_uri: qudt:width
     multivalued: true
   literal:
-    is_a: literal
     slot_uri: dtype:literal
     multivalued: true
   abstract:
@@ -1635,7 +1632,7 @@ slots:
     multivalued: true
   source:
     slot_uri: dcterms:source
-    range: anyURI
+    range: uri
     multivalued: true
   subject:
     slot_uri: dcterms:subject
@@ -1647,7 +1644,7 @@ slots:
     multivalued: true
   dbpediaMatch:
     slot_uri: qudt:dbpediaMatch
-    range: anyURI
+    range: uri
     multivalued: true
   example:
     comments:
@@ -1661,11 +1658,11 @@ slots:
     multivalued: true
   informativeReference:
     slot_uri: qudt:informativeReference
-    range: anyURI
+    range: uri
     multivalued: true
   wikidataMatch:
     slot_uri: qudt:wikidataMatch
-    range: anyURI
+    range: uri
     multivalued: true
   graphName:
     slot_uri: vaem:graphName
