@@ -1,0 +1,1475 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
+message AbstractQuantityKind
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+  quantityKind broader = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ }
+message AngleUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message BaseDimensionMagnitude
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasBaseQuantityKind = 0
+ repeated  float vectorMagnitude = 0
+ }
+message BinaryPrefix
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  prefix exactMatch = 0
+ repeated  uCUMcs-term ucumCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ repeated  string prefixMultiplier = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message BitEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message BooleanEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message ByteEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message CardinalityType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string literal = 0
+ }
+message CharEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message Citation
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string description = 0
+ repeated  string url = 0
+ }
+message Comment
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string rationale = 0
+ repeated  string description = 0
+ }
+message Concept
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message ConstantValue
+ {
+ repeated  dataEncoding dataEncoding = 0
+ repeated  datatype datatype = 0
+ repeated  double relativeStandardUncertainty = 0
+ repeated  decimal standardUncertainty = 0
+ repeated  double standardUncertaintySN = 0
+ repeated  string value = 0
+ repeated  string valueSN = 0
+ repeated  unit hasUnit = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string exactConstant = 0
+ }
+message ContextualUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+  unit broader = 0
+ }
+message CountingUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message CurrencyUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string currencyCode = 0
+ repeated  string currencyExponent = 0
+ }
+message DataEncoding
+ {
+ repeated  endianType bitOrder = 0
+ repeated  encoding encoding = 0
+ repeated  endianType byteOrder = 0
+ }
+message DataItem
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string value = 0
+ }
+message Datatype
+ {
+ repeated  string guidance = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  datatype basis = 0
+ repeated  cardinalityType cardinality = 0
+ repeated  orderedType orderedType = 0
+ repeated  string ansiSQLName = 0
+ repeated  string cName = 0
+ repeated  string oracleSQLName = 0
+ repeated  string protocolBuffersName = 0
+ repeated  string pythonName = 0
+ repeated  string vbName = 0
+ repeated  string bounded = 0
+ repeated  string id = 0
+ repeated  string javaName = 0
+ repeated  string jsName = 0
+ repeated  string matlabName = 0
+ repeated  string microsoftSQLServerName = 0
+ repeated  string mySQLName = 0
+ repeated  string odbcName = 0
+ repeated  string oleDBName = 0
+ }
+message DateTimeStringEncodingType
+ {
+ repeated  string allowedPattern = 0
+ }
+message DecimalPrefix
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  prefix exactMatch = 0
+ repeated  uCUMcs-term ucumCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ repeated  string prefixMultiplier = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message DerivedUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message DimensionlessUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Discipline
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Encoding
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message EndianType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message EnumeratedQuantity
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  enumeratedValue enumeratedValue = 0
+ repeated  enumeration enumeration = 0
+ }
+message EnumeratedValue
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Enumeration
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  enumeratedValue default = 0
+ repeated  enumeratedValue element = 0
+ repeated  string abbreviation = 0
+ }
+message EnumerationScale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ repeated  enumeratedValue default = 0
+ repeated  enumeratedValue element = 0
+ }
+message Figure
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string imageLocation = 0
+ repeated  string figureCaption = 0
+ repeated  string figureLabel = 0
+ repeated  string height = 0
+ repeated  string image = 0
+ repeated  string landscape = 0
+ repeated  string width = 0
+ }
+message FloatingPointEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message IntegerEncodingType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ }
+message IntervalScale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ }
+message LogarithmicUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message MathsFunctionType
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message NISTSP811Comment
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string rationale = 0
+ repeated  string description = 0
+ }
+message NominalScale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ }
+message NumericUnion
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message OrderedType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string literal = 0
+ }
+message OrdinalScale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ repeated  string order = 0
+ }
+message Organization
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  string url = 0
+ }
+message PhysicalConstant
+ {
+ repeated  dataEncoding dataEncoding = 0
+ repeated  datatype datatype = 0
+ repeated  unit hasUnit = 0
+ repeated  double relativeStandardUncertainty = 0
+ repeated  decimal standardUncertainty = 0
+ repeated  double standardUncertaintySN = 0
+ repeated  string value = 0
+ repeated  string valueSN = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  quantityValue quantityValue = 0
+ repeated  boolean isDeltaQuantity = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  unit applicableUnit = 0
+ repeated  physicalConstant exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  string ucumCode = 0
+ repeated  boolean exactConstant = 0
+ repeated  string altSymbol = 0
+ repeated  string isoNormativeReference = 0
+ repeated  string latexSymbol = 0
+ repeated  string normativeReference = 0
+ repeated  string symbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string mathMLdefinition = 0
+ }
+message PlaneAngleUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Prefix
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  prefix exactMatch = 0
+ repeated  uCUMcs-term ucumCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ repeated  string prefixMultiplier = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Quantifiable
+ {
+ repeated  dataEncoding dataEncoding = 0
+ repeated  datatype datatype = 0
+ repeated  unit hasUnit = 0
+ repeated  double relativeStandardUncertainty = 0
+ repeated  decimal standardUncertainty = 0
+ repeated  double standardUncertaintySN = 0
+ repeated  string value = 0
+ repeated  string valueSN = 0
+ }
+message Quantity
+ {
+ repeated  dataEncoding dataEncoding = 0
+ repeated  datatype datatype = 0
+ repeated  unit hasUnit = 0
+ repeated  double relativeStandardUncertainty = 0
+ repeated  decimal standardUncertainty = 0
+ repeated  double standardUncertaintySN = 0
+ repeated  string value = 0
+ repeated  string valueSN = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  quantityValue quantityValue = 0
+ repeated  boolean isDeltaQuantity = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message QuantityKind
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  systemOfQuantityKinds belongsToSystemOfQuantities = 0
+ repeated  quantityKindDimensionVectorSI dimensionVectorForSI = 0
+ repeated  quantityKind exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  string iec61360Code = 0
+ repeated  unit applicableCGSUnit = 0
+ repeated  unit applicableISOUnit = 0
+ repeated  unit applicableImperialUnit = 0
+ repeated  unit applicableSIUnit = 0
+ repeated  unit applicableUSCustomaryUnit = 0
+ repeated  unit applicableUnit = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  string latexDefinition = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+  quantityKind broader = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ }
+message QuantityKindDimensionVector
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorCGS
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorCGS-EMU
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorCGS-ESU
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorCGS-GAUSS
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorCGS-LH
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorImperial
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorISO
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityKindDimensionVectorSI
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind hasReferenceQuantityKind = 0
+ repeated  string latexSymbol = 0
+ repeated  string dimensionExponentForAmountOfSubstance = 0
+ repeated  string dimensionExponentForElectricCurrent = 0
+ repeated  string dimensionExponentForLength = 0
+ repeated  string dimensionExponentForLuminousIntensity = 0
+ repeated  string dimensionExponentForMass = 0
+ repeated  string dimensionExponentForThermodynamicTemperature = 0
+ repeated  string dimensionExponentForTime = 0
+ repeated  string dimensionlessExponent = 0
+ repeated  string latexDefinition = 0
+ }
+message QuantityType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  quantityKind value = 0
+ }
+message QuantityValue
+ {
+ repeated  dataEncoding dataEncoding = 0
+ repeated  datatype datatype = 0
+ repeated  double relativeStandardUncertainty = 0
+ repeated  decimal standardUncertainty = 0
+ repeated  double standardUncertaintySN = 0
+ repeated  string value = 0
+ repeated  string valueSN = 0
+ repeated  unit hasUnit = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message RatioScale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ }
+message Rule
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  ruleType ruleType = 0
+ repeated  string rationale = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message RuleType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message ScalarDatatype
+ {
+ repeated  string guidance = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  datatype basis = 0
+ repeated  cardinalityType cardinality = 0
+ repeated  orderedType orderedType = 0
+ repeated  string ansiSQLName = 0
+ repeated  string cName = 0
+ repeated  string oracleSQLName = 0
+ repeated  string protocolBuffersName = 0
+ repeated  string pythonName = 0
+ repeated  string vbName = 0
+ repeated  string bounded = 0
+ repeated  string id = 0
+ repeated  string javaName = 0
+ repeated  string jsName = 0
+ repeated  string matlabName = 0
+ repeated  string microsoftSQLServerName = 0
+ repeated  string mySQLName = 0
+ repeated  string odbcName = 0
+ repeated  string oleDBName = 0
+ repeated  datatype rdfsDatatype = 0
+ repeated  string bits = 0
+ repeated  string bytes = 0
+ repeated  string length = 0
+ repeated  string maxExclusive = 0
+ repeated  string maxInclusive = 0
+ repeated  string minExclusive = 0
+ repeated  string minInclusive = 0
+ }
+message Scale
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  scaleType scaleType = 0
+ repeated  string dataStructure = 0
+ }
+message ScaleType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  mathsFunctionType permissibleMaths = 0
+ repeated  transformType permissibleTransformation = 0
+ repeated  string dataStructure = 0
+ }
+message SolidAngleUnit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Symbol
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message SystemOfQuantityKinds
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ repeated  enumeration baseDimensionEnumeration = 0
+ repeated  quantityKind hasBaseQuantityKind = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  systemOfUnits hasUnitSystem = 0
+ repeated  quantityKind systemDerivedQuantityKind = 0
+ }
+message SystemOfUnits
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  physicalConstant applicablePhysicalConstant = 0
+ repeated  unit hasAllowedUnit = 0
+ repeated  unit hasBaseUnit = 0
+ repeated  unit hasCoherentUnit = 0
+ repeated  unit hasDefinedUnit = 0
+ repeated  unit hasDerivedCoherentUnit = 0
+ repeated  unit hasDerivedUnit = 0
+ repeated  unit hasUnit = 0
+ repeated  prefix prefix = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message TransformType
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  string altSymbol = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string symbol = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message Unit
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ repeated  unit hasReciprocalUnit = 0
+ repeated  systemOfUnits isUnitOfSystem = 0
+ repeated  string omUnit = 0
+ repeated  string unitFor = 0
+ repeated  systemOfUnits applicableSystem = 0
+ repeated  systemOfUnits definedUnitOfSystem = 0
+ repeated  systemOfUnits derivedCoherentUnitOfSystem = 0
+ repeated  systemOfUnits derivedUnitOfSystem = 0
+ repeated  unit exactMatch = 0
+ repeated  quantityKindDimensionVector hasDimensionVector = 0
+ repeated  class hasFactorUnit = 0
+ repeated  quantityKind hasQuantityKind = 0
+ repeated  string iec61360Code = 0
+ repeated  prefix prefix = 0
+ repeated  quantityKindDimensionVector qkdvDenominator = 0
+ repeated  quantityKindDimensionVector qkdvNumerator = 0
+ repeated  unit scalingOf = 0
+ repeated  uCUMcs ucumCode = 0
+ repeated  string udunitsCode = 0
+ repeated  string uneceCommonCode = 0
+ repeated  string altSymbol = 0
+ repeated  string latexDefinition = 0
+ repeated  string latexSymbol = 0
+ repeated  string siUnitsExpression = 0
+ repeated  string symbol = 0
+ repeated  string conversionMultiplier = 0
+ repeated  string conversionMultiplierSN = 0
+ repeated  string conversionOffset = 0
+ repeated  string conversionOffsetSN = 0
+ repeated  string factorUnitScalar = 0
+ repeated  string mathMLdefinition = 0
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+ }
+message UserQuantityKind
+ {
+ repeated  string guidance = 0
+ repeated  string id = 0
+ repeated  rule hasRule = 0
+ repeated  string isReplacedBy = 0
+ repeated  string description = 0
+ repeated  string abbreviation = 0
+ repeated  string deprecated = 0
+ repeated  string plainTextDescription = 0
+  quantityKind broader = 0
+ repeated  string altSymbol = 0
+ repeated  string latexSymbol = 0
+ repeated  string symbol = 0
+ repeated  quantityKind hasQuantityKind = 0
+ }
+message Verifiable
+ {
+ repeated  string isoNormativeReference = 0
+ repeated  string normativeReference = 0
+ }

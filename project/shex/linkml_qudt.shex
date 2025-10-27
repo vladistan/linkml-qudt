@@ -1,0 +1,1133 @@
+# metamodel_version: 1.7.0
+BASE <https://w3id.org/None/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX dcterms1: <http://example.org/UNKNOWN/dcterms/>
+PREFIX dc1: <http://example.org/UNKNOWN/dc/>
+PREFIX dtype: <http://example.org/UNKNOWN/dtype/>
+PREFIX vaem: <http://example.org/UNKNOWN/vaem/>
+PREFIX rdfs1: <http://example.org/UNKNOWN/rdfs/>
+PREFIX rdf1: <http://example.org/UNKNOWN/rdf/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<AbstractQuantityKind>  (
+    CLOSED {
+       (  $<AbstractQuantityKind_tes> (  &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <broader> @<QuantityKind> ? ;
+             <altSymbol> @linkml:String * ;
+             <latexSymbol> @linkml:String * ;
+             <symbol> @linkml:String *
+          ) ;
+          rdf:type [ <AbstractQuantityKind> ] ?
+       )
+    } OR @<UserQuantityKind>
+)
+
+<AngleUnit>  (
+    CLOSED {
+       (  $<AngleUnit_tes> (  &<DimensionlessUnit_tes> ;
+             rdf:type [ <DimensionlessUnit> ] ?
+          ) ;
+          rdf:type [ <AngleUnit> ] ?
+       )
+    } OR @<PlaneAngleUnit> OR @<SolidAngleUnit>
+)
+
+<Aspect>  (
+    CLOSED {
+       (  $<Aspect_tes> (  &<Thing_tes> ;
+             rdf:type [ owl:Thing ] ?
+          ) ;
+          rdf:type [ <Aspect> ] ?
+       )
+    } OR @<DataEncoding> OR @<Quantifiable>
+)
+
+<AspectClass> CLOSED {
+    (  $<AspectClass_tes> (  &<Class_tes> ;
+          rdf:type [ owl:Class ] ?
+       ) ;
+       rdf:type [ <AspectClass> ] ?
+    )
+}
+
+<BaseDimensionMagnitude> CLOSED {
+    (  $<BaseDimensionMagnitude_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <hasBaseQuantityKind> @<QuantityKind> + ;
+          <vectorMagnitude> @linkml:Float +
+       ) ;
+       rdf:type [ <BaseDimensionMagnitude> ] ?
+    )
+}
+
+<BinaryPrefix> CLOSED {
+    (  $<BinaryPrefix_tes> (  &<Prefix_tes> ;
+          rdf:type [ <Prefix> ] ?
+       ) ;
+       rdf:type [ <BinaryPrefix> ] ?
+    )
+}
+
+<BitEncodingType> CLOSED {
+    (  $<BitEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <BitEncodingType> ] ?
+    )
+}
+
+<BooleanEncodingType> CLOSED {
+    (  $<BooleanEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <BooleanEncodingType> ] ?
+    )
+}
+
+<ByteEncodingType> CLOSED {
+    (  $<ByteEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <ByteEncodingType> ] ?
+    )
+}
+
+<CardinalityType> CLOSED {
+    (  $<CardinalityType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ? ;
+          dtype:literal @linkml:String *
+       ) ;
+       rdf:type [ <CardinalityType> ] ?
+    )
+}
+
+<CatalogEntry> CLOSED {
+    (  $<CatalogEntry_tes> rdf:type . * ;
+       rdf:type [ vaem:CatalogEntry ] ?
+    )
+}
+
+<CharEncodingType> CLOSED {
+    (  $<CharEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <CharEncodingType> ] ?
+    )
+}
+
+<Citation> CLOSED {
+    (  $<Citation_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          dc1:description @linkml:String + ;
+          <url> @linkml:String *
+       ) ;
+       rdf:type [ <Citation> ] ?
+    )
+}
+
+<Class>  (
+    CLOSED {
+       (  $<Class_tes> rdf:type . * ;
+          rdf:type [ owl:Class ] ?
+       )
+    } OR @<AspectClass>
+)
+
+<Comment>  (
+    CLOSED {
+       (  $<Comment_tes> (  &<Verifiable_tes> ;
+             rdf:type [ <Verifiable> ] ? ;
+             &<Thing_tes> ;
+             rdf:type [ owl:Thing ] ? ;
+             <rationale> @linkml:String * ;
+             dc1:description @linkml:String *
+          ) ;
+          rdf:type [ <Comment> ] ?
+       )
+    } OR @<NISTSP811Comment>
+)
+
+<Concept>  (
+    CLOSED {
+       (  $<Concept_tes> (  &<Thing_tes> ;
+             rdf:type [ owl:Thing ] ? ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <Concept> ] ?
+       )
+    } OR @<AbstractQuantityKind> OR @<BaseDimensionMagnitude> OR @<Citation> OR @<DataItem> OR @<Datatype> OR @<Discipline> OR
+    @<Encoding> OR @<EnumeratedQuantity> OR @<Enumeration> OR @<Figure> OR @<MathsFunctionType> OR @<Organization> OR
+    @<QuantityKindDimensionVector> OR @<Scale> OR @<Symbol> OR @<SystemOfQuantityKinds>
+)
+
+<ConstantValue> CLOSED {
+    (  $<ConstantValue_tes> (  &<QuantityValue_tes> ;
+          rdf:type [ <QuantityValue> ] ? ;
+          <exactConstant> @linkml:String *
+       ) ;
+       rdf:type [ <ConstantValue> ] ?
+    )
+}
+
+<ContextualUnit> CLOSED {
+    (  $<ContextualUnit_tes> (  &<Unit_tes> ;
+          rdf:type [ <Unit> ] ? ;
+          <broader> @<Unit> ?
+       ) ;
+       rdf:type [ <ContextualUnit> ] ?
+    )
+}
+
+<CountingUnit> CLOSED {
+    (  $<CountingUnit_tes> (  &<DimensionlessUnit_tes> ;
+          rdf:type [ <DimensionlessUnit> ] ?
+       ) ;
+       rdf:type [ <CountingUnit> ] ?
+    )
+}
+
+<CurrencyUnit> CLOSED {
+    (  $<CurrencyUnit_tes> (  &<DimensionlessUnit_tes> ;
+          rdf:type [ <DimensionlessUnit> ] ? ;
+          <currencyCode> @linkml:String * ;
+          <currencyExponent> @linkml:String *
+       ) ;
+       rdf:type [ <CurrencyUnit> ] ?
+    )
+}
+
+<DataEncoding> CLOSED {
+    (  $<DataEncoding_tes> (  &<Aspect_tes> ;
+          rdf:type [ <Aspect> ] ? ;
+          <bitOrder> @<EndianType> * ;
+          <encoding> @<Encoding> * ;
+          <byteOrder> @<EndianType> *
+       ) ;
+       rdf:type [ <DataEncoding> ] ?
+    )
+}
+
+<DataItem> CLOSED {
+    (  $<DataItem_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <value> @linkml:String *
+       ) ;
+       rdf:type [ <DataItem> ] ?
+    )
+}
+
+<Datatype>  (
+    CLOSED {
+       (  $<Datatype_tes> (  &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <basis> @<Datatype> * ;
+             <cardinality> @<CardinalityType> * ;
+             <orderedType> @<OrderedType> * ;
+             <ansiSQLName> @linkml:String * ;
+             <cName> @linkml:String * ;
+             <oracleSQLName> @linkml:String * ;
+             <protocolBuffersName> @linkml:String * ;
+             <pythonName> @linkml:String * ;
+             <vbName> @linkml:String * ;
+             <bounded> @linkml:String * ;
+             <id> @linkml:String * ;
+             <javaName> @linkml:String * ;
+             <jsName> @linkml:String * ;
+             <matlabName> @linkml:String * ;
+             <microsoftSQLServerName> @linkml:String * ;
+             <mySQLName> @linkml:String * ;
+             <odbcName> @linkml:String * ;
+             <oleDBName> @linkml:String *
+          ) ;
+          rdf:type [ rdfs1:Datatype ] ?
+       )
+    } OR @<ScalarDatatype>
+)
+
+<DateTimeStringEncodingType> CLOSED {
+    (  $<DateTimeStringEncodingType_tes> (  &<StringEncodingType_tes> ;
+          rdf:type [ <StringEncodingType> ] ? ;
+          <allowedPattern> @linkml:String +
+       ) ;
+       rdf:type [ <DateTimeStringEncodingType> ] ?
+    )
+}
+
+<DecimalPrefix> CLOSED {
+    (  $<DecimalPrefix_tes> (  &<Prefix_tes> ;
+          rdf:type [ <Prefix> ] ?
+       ) ;
+       rdf:type [ <DecimalPrefix> ] ?
+    )
+}
+
+<DerivedUnit> CLOSED {
+    (  $<DerivedUnit_tes> (  &<Unit_tes> ;
+          rdf:type [ <Unit> ] ?
+       ) ;
+       rdf:type [ <DerivedUnit> ] ?
+    )
+}
+
+<DimensionlessUnit>  (
+    CLOSED {
+       (  $<DimensionlessUnit_tes> (  &<Unit_tes> ;
+             rdf:type [ <Unit> ] ?
+          ) ;
+          rdf:type [ <DimensionlessUnit> ] ?
+       )
+    } OR @<AngleUnit> OR @<CountingUnit> OR @<CurrencyUnit> OR @<LogarithmicUnit>
+)
+
+<Discipline> CLOSED {
+    (  $<Discipline_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ?
+       ) ;
+       rdf:type [ <Discipline> ] ?
+    )
+}
+
+<Encoding>  (
+    CLOSED {
+       (  $<Encoding_tes> (  &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <bits> @linkml:String * ;
+             <bytes> @linkml:String *
+          ) ;
+          rdf:type [ <Encoding> ] ?
+       )
+    } OR @<BitEncodingType> OR @<BooleanEncodingType> OR @<ByteEncodingType> OR @<CharEncodingType> OR @<FloatingPointEncodingType>
+    OR @<IntegerEncodingType>
+)
+
+<EndianType> CLOSED {
+    (  $<EndianType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ?
+       ) ;
+       rdf:type [ <EndianType> ] ?
+    )
+}
+
+<EnumeratedQuantity> CLOSED {
+    (  $<EnumeratedQuantity_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <enumeratedValue> @<EnumeratedValue> * ;
+          <enumeration> @<Enumeration> *
+       ) ;
+       rdf:type [ <EnumeratedQuantity> ] ?
+    )
+}
+
+<EnumeratedValue>  (
+    CLOSED {
+       (  $<EnumeratedValue_tes> (  &<Verifiable_tes> ;
+             rdf:type [ <Verifiable> ] ? ;
+             &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <altSymbol> @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <symbol> @linkml:String * ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <EnumeratedValue> ] ?
+       )
+    } OR @<CardinalityType> OR @<EndianType> OR @<OrderedType> OR @<QuantityType> OR @<RuleType> OR @<ScaleType> OR
+    @<TransformType>
+)
+
+<Enumeration> CLOSED {
+    (  $<Enumeration_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <default> @<EnumeratedValue> * ;
+          <element> @<EnumeratedValue> + ;
+          <abbreviation> @linkml:String *
+       ) ;
+       rdf:type [ <Enumeration> ] ?
+    )
+}
+
+<EnumerationScale> CLOSED {
+    (  $<EnumerationScale_tes> (  &<Scale_tes> ;
+          rdf:type [ <Scale> ] ? ;
+          &<Enumeration_tes> ;
+          rdf:type [ <Enumeration> ] ? ;
+          <default> @<EnumeratedValue> * ;
+          <element> @<EnumeratedValue> +
+       ) ;
+       rdf:type [ <EnumerationScale> ] ?
+    )
+}
+
+<Error1> CLOSED {
+    (  $<Error1_tes> rdf:type . * ;
+       rdf:type [ <http://org.semanticweb.owlapi/error#Error1> ] ?
+    )
+}
+
+<Error2> CLOSED {
+    (  $<Error2_tes> rdf:type . * ;
+       rdf:type [ <http://org.semanticweb.owlapi/error#Error2> ] ?
+    )
+}
+
+<Error3>  (
+    CLOSED {
+       (  $<Error3_tes> rdf:type . * ;
+          rdf:type [ <http://org.semanticweb.owlapi/error#Error3> ] ?
+       )
+    } OR @<Verifiable>
+)
+
+<Figure> CLOSED {
+    (  $<Figure_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <imageLocation> @linkml:String + ;
+          <figureCaption> @linkml:String * ;
+          <figureLabel> @linkml:String * ;
+          <height> @linkml:String * ;
+          <image> @linkml:String * ;
+          <landscape> @linkml:String * ;
+          <width> @linkml:String *
+       ) ;
+       rdf:type [ <Figure> ] ?
+    )
+}
+
+<FloatingPointEncodingType> CLOSED {
+    (  $<FloatingPointEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <FloatingPointEncodingType> ] ?
+    )
+}
+
+<GDay> CLOSED {
+    (  $<GDay_tes> rdf:type . * ;
+       rdf:type [ xsd:gDay ] ?
+    )
+}
+
+<GMonth> CLOSED {
+    (  $<GMonth_tes> rdf:type . * ;
+       rdf:type [ xsd:gMonth ] ?
+    )
+}
+
+<GMonthDay> CLOSED {
+    (  $<GMonthDay_tes> rdf:type . * ;
+       rdf:type [ xsd:gMonthDay ] ?
+    )
+}
+
+<GYear> CLOSED {
+    (  $<GYear_tes> rdf:type . * ;
+       rdf:type [ xsd:gYear ] ?
+    )
+}
+
+<GYearMonth> CLOSED {
+    (  $<GYearMonth_tes> rdf:type . * ;
+       rdf:type [ xsd:gYearMonth ] ?
+    )
+}
+
+<IntegerEncodingType> CLOSED {
+    (  $<IntegerEncodingType_tes> (  &<Encoding_tes> ;
+          rdf:type [ <Encoding> ] ?
+       ) ;
+       rdf:type [ <IntegerEncodingType> ] ?
+    )
+}
+
+<IntervalScale> CLOSED {
+    (  $<IntervalScale_tes> (  &<Scale_tes> ;
+          rdf:type [ <Scale> ] ?
+       ) ;
+       rdf:type [ <IntervalScale> ] ?
+    )
+}
+
+<LatexString> CLOSED {
+    (  $<LatexString_tes> rdf:type . * ;
+       rdf:type [ <LatexString> ] ?
+    )
+}
+
+<List> CLOSED {
+    (  $<List_tes> rdf:type . * ;
+       rdf:type [ rdf1:List ] ?
+    )
+}
+
+<LogarithmicUnit> CLOSED {
+    (  $<LogarithmicUnit_tes> (  &<DimensionlessUnit_tes> ;
+          rdf:type [ <DimensionlessUnit> ] ?
+       ) ;
+       rdf:type [ <LogarithmicUnit> ] ?
+    )
+}
+
+<MathsFunctionType> CLOSED {
+    (  $<MathsFunctionType_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ?
+       ) ;
+       rdf:type [ <MathsFunctionType> ] ?
+    )
+}
+
+<NISTSP811Comment> CLOSED {
+    (  $<NISTSP811Comment_tes> (  &<Comment_tes> ;
+          rdf:type [ <Comment> ] ?
+       ) ;
+       rdf:type [ <NIST_SP811_Comment> ] ?
+    )
+}
+
+<NominalScale> CLOSED {
+    (  $<NominalScale_tes> (  &<Scale_tes> ;
+          rdf:type [ <Scale> ] ?
+       ) ;
+       rdf:type [ <NominalScale> ] ?
+    )
+}
+
+<NumericUnion> CLOSED {
+    (  $<NumericUnion_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <guidance> @linkml:String * ;
+          <id> @linkml:String * ;
+          <hasRule> @<Rule> * ;
+          dcterms1:isReplacedBy @linkml:String * ;
+          dc1:description @linkml:String * ;
+          <abbreviation> @linkml:String * ;
+          <deprecated> @linkml:String * ;
+          <plainTextDescription> @linkml:String *
+       ) ;
+       rdf:type [ <NumericUnion> ] ?
+    )
+}
+
+<Ontology> CLOSED {
+    (  $<Ontology_tes> rdf:type . * ;
+       rdf:type [ owl:Ontology ] ?
+    )
+}
+
+<OrderedType> CLOSED {
+    (  $<OrderedType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ? ;
+          dtype:literal @linkml:String *
+       ) ;
+       rdf:type [ <OrderedType> ] ?
+    )
+}
+
+<OrdinalScale> CLOSED {
+    (  $<OrdinalScale_tes> (  &<Scale_tes> ;
+          rdf:type [ <Scale> ] ? ;
+          <order> @linkml:String +
+       ) ;
+       rdf:type [ <OrdinalScale> ] ?
+    )
+}
+
+<Organization> CLOSED {
+    (  $<Organization_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <url> @linkml:String *
+       ) ;
+       rdf:type [ <Organization> ] ?
+    )
+}
+
+<PhysicalConstant> CLOSED {
+    (  $<PhysicalConstant_tes> (  &<Quantity_tes> ;
+          rdf:type [ <Quantity> ] ? ;
+          &<Error1_tes> ;
+          rdf:type [ <http://org.semanticweb.owlapi/error#Error1> ] ? ;
+          <applicableSystem> @<SystemOfUnits> * ;
+          <applicableUnit> @<Unit> * ;
+          <exactMatch> @<PhysicalConstant> * ;
+          <hasDimensionVector> @<QuantityKindDimensionVector> * ;
+          <ucumCode> @linkml:String * ;
+          <exactConstant> @linkml:Boolean * ;
+          <altSymbol> @linkml:String * ;
+          <isoNormativeReference> @linkml:String * ;
+          <latexSymbol> @linkml:String * ;
+          <normativeReference> @linkml:String * ;
+          <symbol> @linkml:String * ;
+          <latexDefinition> @linkml:String * ;
+          <mathMLdefinition> @linkml:String *
+       ) ;
+       rdf:type [ <PhysicalConstant> ] ?
+    )
+}
+
+<PlaneAngleUnit> CLOSED {
+    (  $<PlaneAngleUnit_tes> (  &<AngleUnit_tes> ;
+          rdf:type [ <AngleUnit> ] ?
+       ) ;
+       rdf:type [ <PlaneAngleUnit> ] ?
+    )
+}
+
+<Prefix>  (
+    CLOSED {
+       (  $<Prefix_tes> (  &<Verifiable_tes> ;
+             rdf:type [ <Verifiable> ] ? ;
+             &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <exactMatch> @<Prefix> * ;
+             <ucumCode> @<UCUMcs-term> * ;
+             <altSymbol> @linkml:String * ;
+             <latexSymbol> @linkml:String * ;
+             <symbol> @linkml:String * ;
+             <prefixMultiplier> @linkml:String * ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <Prefix> ] ?
+       )
+    } OR @<BinaryPrefix> OR @<DecimalPrefix>
+)
+
+<Quantifiable>  (
+    CLOSED {
+       (  $<Quantifiable_tes> (  &<Aspect_tes> ;
+             rdf:type [ <Aspect> ] ? ;
+             <dataEncoding> @<DataEncoding> * ;
+             <datatype> @<Datatype> * ;
+             <hasUnit> @<Unit> * ;
+             <relativeStandardUncertainty> @linkml:Double * ;
+             <standardUncertainty> @linkml:Decimal * ;
+             <standardUncertaintySN> @linkml:Double * ;
+             <value> @linkml:String * ;
+             <valueSN> @linkml:String *
+          ) ;
+          rdf:type [ <Quantifiable> ] ?
+       )
+    } OR @<Quantity> OR @<QuantityValue>
+)
+
+<Quantity>  (
+    CLOSED {
+       (  $<Quantity_tes> (  &<Quantifiable_tes> ;
+             rdf:type [ <Quantifiable> ] ? ;
+             &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <hasQuantityKind> @<QuantityKind> * ;
+             <quantityValue> @<QuantityValue> * ;
+             <isDeltaQuantity> @linkml:Boolean * ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <Quantity> ] ?
+       )
+    } OR @<PhysicalConstant>
+)
+
+<QuantityKind> CLOSED {
+    (  $<QuantityKind_tes> (  &<Verifiable_tes> ;
+          rdf:type [ <Verifiable> ] ? ;
+          &<AbstractQuantityKind_tes> ;
+          rdf:type [ <AbstractQuantityKind> ] ? ;
+          <belongsToSystemOfQuantities> @<SystemOfQuantityKinds> * ;
+          <dimensionVectorForSI> @<QuantityKindDimensionVectorSI> * ;
+          <exactMatch> @<QuantityKind> * ;
+          <hasDimensionVector> @<QuantityKindDimensionVector> * ;
+          <iec61360Code> @linkml:String * ;
+          <applicableCGSUnit> @<Unit> * ;
+          <applicableISOUnit> @<Unit> * ;
+          <applicableImperialUnit> @<Unit> * ;
+          <applicableSIUnit> @<Unit> * ;
+          <applicableUSCustomaryUnit> @<Unit> * ;
+          <applicableUnit> @<Unit> * ;
+          <qkdvDenominator> @<QuantityKindDimensionVector> * ;
+          <qkdvNumerator> @<QuantityKindDimensionVector> * ;
+          <latexDefinition> @linkml:String * ;
+          <mathMLdefinition> @linkml:String * ;
+          <guidance> @linkml:String * ;
+          <id> @linkml:String * ;
+          <hasRule> @<Rule> * ;
+          dcterms1:isReplacedBy @linkml:String * ;
+          dc1:description @linkml:String * ;
+          <abbreviation> @linkml:String * ;
+          <deprecated> @linkml:String * ;
+          <plainTextDescription> @linkml:String * ;
+          <broader> @<QuantityKind> ? ;
+          <altSymbol> @linkml:String * ;
+          <latexSymbol> @linkml:String * ;
+          <symbol> @linkml:String *
+       ) ;
+       rdf:type [ <QuantityKind> ] ?
+    )
+}
+
+<QuantityKindDimensionVector>  (
+    CLOSED {
+       (  $<QuantityKindDimensionVector_tes> (  &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <hasReferenceQuantityKind> @<QuantityKind> * ;
+             <latexSymbol> @linkml:String * ;
+             <dimensionExponentForAmountOfSubstance> @linkml:String + ;
+             <dimensionExponentForElectricCurrent> @linkml:String + ;
+             <dimensionExponentForLength> @linkml:String + ;
+             <dimensionExponentForLuminousIntensity> @linkml:String + ;
+             <dimensionExponentForMass> @linkml:String + ;
+             <dimensionExponentForThermodynamicTemperature> @linkml:String + ;
+             <dimensionExponentForTime> @linkml:String + ;
+             <dimensionlessExponent> @linkml:String + ;
+             <latexDefinition> @linkml:String *
+          ) ;
+          rdf:type [ <QuantityKindDimensionVector> ] ?
+       )
+    } OR @<QuantityKindDimensionVectorCGS> OR @<QuantityKindDimensionVectorISO> OR @<QuantityKindDimensionVectorImperial> OR
+    @<QuantityKindDimensionVectorSI>
+)
+
+<QuantityKindDimensionVectorCGS>  (
+    CLOSED {
+       (  $<QuantityKindDimensionVectorCGS_tes> (  &<QuantityKindDimensionVector_tes> ;
+             rdf:type [ <QuantityKindDimensionVector> ] ?
+          ) ;
+          rdf:type [ <QuantityKindDimensionVector_CGS> ] ?
+       )
+    } OR @<QuantityKindDimensionVectorCGS-EMU> OR @<QuantityKindDimensionVectorCGS-ESU> OR @<QuantityKindDimensionVectorCGS-GAUSS>
+    OR @<QuantityKindDimensionVectorCGS-LH>
+)
+
+<QuantityKindDimensionVectorCGS-EMU> CLOSED {
+    (  $<QuantityKindDimensionVectorCGS-EMU_tes> (  &<QuantityKindDimensionVectorCGS_tes> ;
+          rdf:type [ <QuantityKindDimensionVector_CGS> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_CGS-EMU> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorCGS-ESU> CLOSED {
+    (  $<QuantityKindDimensionVectorCGS-ESU_tes> (  &<QuantityKindDimensionVectorCGS_tes> ;
+          rdf:type [ <QuantityKindDimensionVector_CGS> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_CGS-ESU> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorCGS-GAUSS> CLOSED {
+    (  $<QuantityKindDimensionVectorCGS-GAUSS_tes> (  &<QuantityKindDimensionVectorCGS_tes> ;
+          rdf:type [ <QuantityKindDimensionVector_CGS> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_CGS-GAUSS> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorCGS-LH> CLOSED {
+    (  $<QuantityKindDimensionVectorCGS-LH_tes> (  &<QuantityKindDimensionVectorCGS_tes> ;
+          rdf:type [ <QuantityKindDimensionVector_CGS> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_CGS-LH> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorImperial> CLOSED {
+    (  $<QuantityKindDimensionVectorImperial_tes> (  &<QuantityKindDimensionVector_tes> ;
+          rdf:type [ <QuantityKindDimensionVector> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_Imperial> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorISO> CLOSED {
+    (  $<QuantityKindDimensionVectorISO_tes> (  &<QuantityKindDimensionVector_tes> ;
+          rdf:type [ <QuantityKindDimensionVector> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_ISO> ] ?
+    )
+}
+
+<QuantityKindDimensionVectorSI> CLOSED {
+    (  $<QuantityKindDimensionVectorSI_tes> (  &<QuantityKindDimensionVector_tes> ;
+          rdf:type [ <QuantityKindDimensionVector> ] ?
+       ) ;
+       rdf:type [ <QuantityKindDimensionVector_SI> ] ?
+    )
+}
+
+<QuantityType> CLOSED {
+    (  $<QuantityType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ? ;
+          <value> @<QuantityKind> *
+       ) ;
+       rdf:type [ <QuantityType> ] ?
+    )
+}
+
+<QuantityValue>  (
+    CLOSED {
+       (  $<QuantityValue_tes> (  &<Quantifiable_tes> ;
+             rdf:type [ <Quantifiable> ] ? ;
+             &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <hasUnit> @<Unit> * ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <QuantityValue> ] ?
+       )
+    } OR @<ConstantValue>
+)
+
+<RatioScale> CLOSED {
+    (  $<RatioScale_tes> (  &<Scale_tes> ;
+          rdf:type [ <Scale> ] ?
+       ) ;
+       rdf:type [ <RatioScale> ] ?
+    )
+}
+
+<Resource>  (
+    CLOSED {
+       (  $<Resource_tes> rdf:type . * ;
+          rdf:type [ rdfs1:Resource ] ?
+       )
+    } OR @<UCUMcs> OR @<UCUMcs-term> OR @<ValueUnion>
+)
+
+<Rule> CLOSED {
+    (  $<Rule_tes> (  &<Verifiable_tes> ;
+          rdf:type [ <Verifiable> ] ? ;
+          &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <ruleType> @<RuleType> * ;
+          <rationale> @linkml:String * ;
+          <guidance> @linkml:String * ;
+          <id> @linkml:String * ;
+          <hasRule> @<Rule> * ;
+          dcterms1:isReplacedBy @linkml:String * ;
+          dc1:description @linkml:String * ;
+          <abbreviation> @linkml:String * ;
+          <deprecated> @linkml:String * ;
+          <plainTextDescription> @linkml:String *
+       ) ;
+       rdf:type [ <Rule> ] ?
+    )
+}
+
+<RuleType> CLOSED {
+    (  $<RuleType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ?
+       ) ;
+       rdf:type [ <RuleType> ] ?
+    )
+}
+
+<ScalarDatatype> CLOSED {
+    (  $<ScalarDatatype_tes> (  &<Datatype_tes> ;
+          rdf:type [ rdfs1:Datatype ] ? ;
+          <rdfsDatatype> @<Datatype> * ;
+          <bits> @linkml:String * ;
+          <bytes> @linkml:String * ;
+          <length> @linkml:String * ;
+          <maxExclusive> @linkml:String * ;
+          <maxInclusive> @linkml:String * ;
+          <minExclusive> @linkml:String * ;
+          <minInclusive> @linkml:String *
+       ) ;
+       rdf:type [ <ScalarDatatype> ] ?
+    )
+}
+
+<Scale>  (
+    CLOSED {
+       (  $<Scale_tes> (  &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <permissibleMaths> @<MathsFunctionType> * ;
+             <permissibleTransformation> @<TransformType> * ;
+             <scaleType> @<ScaleType> * ;
+             <dataStructure> @linkml:String *
+          ) ;
+          rdf:type [ <Scale> ] ?
+       )
+    } OR @<EnumerationScale> OR @<IntervalScale> OR @<NominalScale> OR @<OrdinalScale> OR @<RatioScale>
+)
+
+<ScaleType> CLOSED {
+    (  $<ScaleType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ? ;
+          <permissibleMaths> @<MathsFunctionType> * ;
+          <permissibleTransformation> @<TransformType> * ;
+          <dataStructure> @linkml:String *
+       ) ;
+       rdf:type [ <ScaleType> ] ?
+    )
+}
+
+<SignednessType> CLOSED {
+    (  $<SignednessType_tes> rdf:type . * ;
+       rdf:type [ <SignednessType> ] ?
+    )
+}
+
+<SolidAngleUnit> CLOSED {
+    (  $<SolidAngleUnit_tes> (  &<AngleUnit_tes> ;
+          rdf:type [ <AngleUnit> ] ?
+       ) ;
+       rdf:type [ <SolidAngleUnit> ] ?
+    )
+}
+
+<Statement> CLOSED {
+    (  $<Statement_tes> rdf:type . * ;
+       rdf:type [ rdf1:Statement ] ?
+    )
+}
+
+<StringEncodingType>  (
+    CLOSED {
+       (  $<StringEncodingType_tes> rdf:type . * ;
+          rdf:type [ <StringEncodingType> ] ?
+       )
+    } OR @<DateTimeStringEncodingType>
+)
+
+<Symbol> CLOSED {
+    (  $<Symbol_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ?
+       ) ;
+       rdf:type [ <Symbol> ] ?
+    )
+}
+
+<SymmetricRelation> CLOSED {
+    (  $<SymmetricRelation_tes> rdf:type . * ;
+       rdf:type [ <SymmetricRelation> ] ?
+    )
+}
+
+<SystemOfQuantityKinds> CLOSED {
+    (  $<SystemOfQuantityKinds_tes> (  &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <baseDimensionEnumeration> @<Enumeration> * ;
+          <hasBaseQuantityKind> @<QuantityKind> * ;
+          <hasQuantityKind> @<QuantityKind> * ;
+          <hasUnitSystem> @<SystemOfUnits> * ;
+          <systemDerivedQuantityKind> @<QuantityKind> *
+       ) ;
+       rdf:type [ <SystemOfQuantityKinds> ] ?
+    )
+}
+
+<SystemOfUnits> CLOSED {
+    (  $<SystemOfUnits_tes> (  &<Verifiable_tes> ;
+          rdf:type [ <Verifiable> ] ? ;
+          &<Concept_tes> ;
+          rdf:type [ <Concept> ] ? ;
+          <applicablePhysicalConstant> @<PhysicalConstant> * ;
+          <hasAllowedUnit> @<Unit> * ;
+          <hasBaseUnit> @<Unit> * ;
+          <hasCoherentUnit> @<Unit> * ;
+          <hasDefinedUnit> @<Unit> * ;
+          <hasDerivedCoherentUnit> @<Unit> * ;
+          <hasDerivedUnit> @<Unit> * ;
+          <hasUnit> @<Unit> * ;
+          <prefix> @<Prefix> * ;
+          <guidance> @linkml:String * ;
+          <id> @linkml:String * ;
+          <hasRule> @<Rule> * ;
+          dcterms1:isReplacedBy @linkml:String * ;
+          dc1:description @linkml:String * ;
+          <abbreviation> @linkml:String * ;
+          <deprecated> @linkml:String * ;
+          <plainTextDescription> @linkml:String *
+       ) ;
+       rdf:type [ <SystemOfUnits> ] ?
+    )
+}
+
+<Thing>  (
+    CLOSED {
+       (  $<Thing_tes> rdf:type . * ;
+          rdf:type [ owl:Thing ] ?
+       )
+    } OR @<Aspect> OR @<Concept>
+)
+
+<TransformType> CLOSED {
+    (  $<TransformType_tes> (  &<EnumeratedValue_tes> ;
+          rdf:type [ <EnumeratedValue> ] ?
+       ) ;
+       rdf:type [ <TransformType> ] ?
+    )
+}
+
+<UCUMcs> CLOSED {
+    (  $<UCUMcs_tes> (  &<Resource_tes> ;
+          rdf:type [ rdfs1:Resource ] ?
+       ) ;
+       rdf:type [ <UCUMcs> ] ?
+    )
+}
+
+<UCUMcs-term> CLOSED {
+    (  $<UCUMcs-term_tes> (  &<Resource_tes> ;
+          rdf:type [ rdfs1:Resource ] ?
+       ) ;
+       rdf:type [ <UCUMcs-term> ] ?
+    )
+}
+
+<Unit>  (
+    CLOSED {
+       (  $<Unit_tes> (  &<Verifiable_tes> ;
+             rdf:type [ <Verifiable> ] ? ;
+             &<Concept_tes> ;
+             rdf:type [ <Concept> ] ? ;
+             <hasReciprocalUnit> @<Unit> * ;
+             <isUnitOfSystem> @<SystemOfUnits> * ;
+             <omUnit> @linkml:String * ;
+             <unitFor> @linkml:String * ;
+             <applicableSystem> @<SystemOfUnits> * ;
+             <definedUnitOfSystem> @<SystemOfUnits> * ;
+             <derivedCoherentUnitOfSystem> @<SystemOfUnits> * ;
+             <derivedUnitOfSystem> @<SystemOfUnits> * ;
+             <exactMatch> @<Unit> * ;
+             <hasDimensionVector> @<QuantityKindDimensionVector> * ;
+             <hasFactorUnit> @<Class> * ;
+             <hasQuantityKind> @<QuantityKind> * ;
+             <iec61360Code> @linkml:String * ;
+             <prefix> @<Prefix> * ;
+             <qkdvDenominator> @<QuantityKindDimensionVector> * ;
+             <qkdvNumerator> @<QuantityKindDimensionVector> * ;
+             <scalingOf> @<Unit> * ;
+             <ucumCode> @<UCUMcs> * ;
+             <udunitsCode> @linkml:String * ;
+             <uneceCommonCode> @linkml:String * ;
+             <altSymbol> @linkml:String * ;
+             <latexDefinition> @linkml:String * ;
+             <latexSymbol> @linkml:String * ;
+             <siUnitsExpression> @linkml:String * ;
+             <symbol> @linkml:String * ;
+             <conversionMultiplier> @linkml:String * ;
+             <conversionMultiplierSN> @linkml:String * ;
+             <conversionOffset> @linkml:String * ;
+             <conversionOffsetSN> @linkml:String * ;
+             <factorUnitScalar> @linkml:String * ;
+             <mathMLdefinition> @linkml:String * ;
+             <guidance> @linkml:String * ;
+             <id> @linkml:String * ;
+             <hasRule> @<Rule> * ;
+             dcterms1:isReplacedBy @linkml:String * ;
+             dc1:description @linkml:String * ;
+             <abbreviation> @linkml:String * ;
+             <deprecated> @linkml:String * ;
+             <plainTextDescription> @linkml:String *
+          ) ;
+          rdf:type [ <Unit> ] ?
+       )
+    } OR @<ContextualUnit> OR @<DerivedUnit> OR @<DimensionlessUnit>
+)
+
+<UserQuantityKind> CLOSED {
+    (  $<UserQuantityKind_tes> (  &<AbstractQuantityKind_tes> ;
+          rdf:type [ <AbstractQuantityKind> ] ? ;
+          <hasQuantityKind> @<QuantityKind> +
+       ) ;
+       rdf:type [ <UserQuantityKind> ] ?
+    )
+}
+
+<ValueUnion> CLOSED {
+    (  $<ValueUnion_tes> (  &<Resource_tes> ;
+          rdf:type [ rdfs1:Resource ] ?
+       ) ;
+       rdf:type [ <ValueUnion> ] ?
+    )
+}
+
+<Verifiable>  (
+    CLOSED {
+       (  $<Verifiable_tes> (  &<Error3_tes> ;
+             rdf:type [ <http://org.semanticweb.owlapi/error#Error3> ] ? ;
+             &<Error2_tes> ;
+             rdf:type [ <http://org.semanticweb.owlapi/error#Error2> ] ? ;
+             &<Aspect_tes> ;
+             rdf:type [ <Aspect> ] ? ;
+             <isoNormativeReference> @linkml:String * ;
+             <normativeReference> @linkml:String *
+          ) ;
+          rdf:type [ <Verifiable> ] ?
+       )
+    } OR @<Comment> OR @<EnumeratedValue> OR @<Prefix> OR @<QuantityKind> OR @<Rule> OR @<SystemOfUnits> OR @<Unit>
+)

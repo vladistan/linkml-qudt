@@ -1,0 +1,1726 @@
+{
+    "$defs": {
+        "AbstractQuantityKind": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "AbstractQuantityKind",
+            "type": "object"
+        },
+        "AngleUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "AngleUnit",
+            "type": "object"
+        },
+        "Aspect": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Aspect",
+            "type": "object"
+        },
+        "AspectClass": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "AspectClass",
+            "type": "object"
+        },
+        "BaseDimensionMagnitude": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "BaseDimensionMagnitude",
+            "type": "object"
+        },
+        "BinaryPrefix": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "BinaryPrefix",
+            "type": "object"
+        },
+        "BitEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "BitEncodingType",
+            "type": "object"
+        },
+        "BooleanEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "BooleanEncodingType",
+            "type": "object"
+        },
+        "ByteEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "ByteEncodingType",
+            "type": "object"
+        },
+        "CardinalityType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "CardinalityType",
+            "type": "object"
+        },
+        "CatalogEntry": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "CatalogEntry",
+            "type": "object"
+        },
+        "CharEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "CharEncodingType",
+            "type": "object"
+        },
+        "Citation": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Citation",
+            "type": "object"
+        },
+        "Class": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Class",
+            "type": "object"
+        },
+        "Comment": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Comment",
+            "type": "object"
+        },
+        "Concept": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Concept",
+            "type": "object"
+        },
+        "ConstantValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "ConstantValue",
+            "type": "object"
+        },
+        "ContextualUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "ContextualUnit",
+            "type": "object"
+        },
+        "CountingUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "CountingUnit",
+            "type": "object"
+        },
+        "CurrencyUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "CurrencyUnit",
+            "type": "object"
+        },
+        "DataEncoding": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "DataEncoding",
+            "type": "object"
+        },
+        "DataItem": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "DataItem",
+            "type": "object"
+        },
+        "Datatype": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Datatype",
+            "type": "object"
+        },
+        "DateTimeStringEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "DateTimeStringEncodingType",
+            "type": "object"
+        },
+        "DecimalPrefix": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "DecimalPrefix",
+            "type": "object"
+        },
+        "DerivedUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "DerivedUnit",
+            "type": "object"
+        },
+        "DimensionlessUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "DimensionlessUnit",
+            "type": "object"
+        },
+        "Discipline": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Discipline",
+            "type": "object"
+        },
+        "Encoding": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Encoding",
+            "type": "object"
+        },
+        "EndianType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "EndianType",
+            "type": "object"
+        },
+        "EnumeratedQuantity": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "EnumeratedQuantity",
+            "type": "object"
+        },
+        "EnumeratedValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "EnumeratedValue",
+            "type": "object"
+        },
+        "Enumeration": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Enumeration",
+            "type": "object"
+        },
+        "EnumerationScale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "EnumerationScale",
+            "type": "object"
+        },
+        "Error1": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Error1",
+            "type": "object"
+        },
+        "Error2": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Error2",
+            "type": "object"
+        },
+        "Error3": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Error3",
+            "type": "object"
+        },
+        "Figure": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Figure",
+            "type": "object"
+        },
+        "FloatingPointEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "FloatingPointEncodingType",
+            "type": "object"
+        },
+        "GDay": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "GDay",
+            "type": "object"
+        },
+        "GMonth": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "GMonth",
+            "type": "object"
+        },
+        "GMonthDay": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "GMonthDay",
+            "type": "object"
+        },
+        "GYear": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "GYear",
+            "type": "object"
+        },
+        "GYearMonth": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "GYearMonth",
+            "type": "object"
+        },
+        "IntegerEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "IntegerEncodingType",
+            "type": "object"
+        },
+        "IntervalScale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "IntervalScale",
+            "type": "object"
+        },
+        "LatexString": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "LatexString",
+            "type": "object"
+        },
+        "List": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "List",
+            "type": "object"
+        },
+        "LogarithmicUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "LogarithmicUnit",
+            "type": "object"
+        },
+        "MathsFunctionType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "MathsFunctionType",
+            "type": "object"
+        },
+        "NISTSP811Comment": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "NISTSP811Comment",
+            "type": "object"
+        },
+        "NominalScale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "NominalScale",
+            "type": "object"
+        },
+        "NumericUnion": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "NumericUnion",
+            "type": "object"
+        },
+        "Ontology": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Ontology",
+            "type": "object"
+        },
+        "OrderedType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "OrderedType",
+            "type": "object"
+        },
+        "OrdinalScale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "OrdinalScale",
+            "type": "object"
+        },
+        "Organization": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Organization",
+            "type": "object"
+        },
+        "PhysicalConstant": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "PhysicalConstant",
+            "type": "object"
+        },
+        "PlaneAngleUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "PlaneAngleUnit",
+            "type": "object"
+        },
+        "Prefix": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Prefix",
+            "type": "object"
+        },
+        "Quantifiable": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Quantifiable",
+            "type": "object"
+        },
+        "Quantity": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Quantity",
+            "type": "object"
+        },
+        "QuantityKind": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "belongsToSystemOfQuantities": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfQuantityKinds"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKind",
+            "type": "object"
+        },
+        "QuantityKindDimensionVector": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVector",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorCGS": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorCGS",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorCGS-EMU": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorCGS-EMU",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorCGS-ESU": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorCGS-ESU",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorCGS-GAUSS": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorCGS-GAUSS",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorCGS-LH": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorCGS-LH",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorISO": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorISO",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorImperial": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorImperial",
+            "type": "object"
+        },
+        "QuantityKindDimensionVectorSI": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityKindDimensionVectorSI",
+            "type": "object"
+        },
+        "QuantityType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityType",
+            "type": "object"
+        },
+        "QuantityValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "QuantityValue",
+            "type": "object"
+        },
+        "RatioScale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "RatioScale",
+            "type": "object"
+        },
+        "Resource": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Resource",
+            "type": "object"
+        },
+        "Rule": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Rule",
+            "type": "object"
+        },
+        "RuleType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "RuleType",
+            "type": "object"
+        },
+        "ScalarDatatype": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "ScalarDatatype",
+            "type": "object"
+        },
+        "Scale": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Scale",
+            "type": "object"
+        },
+        "ScaleType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "ScaleType",
+            "type": "object"
+        },
+        "SignednessType": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "SignednessType",
+            "type": "object"
+        },
+        "SolidAngleUnit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "SolidAngleUnit",
+            "type": "object"
+        },
+        "Statement": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Statement",
+            "type": "object"
+        },
+        "StringEncodingType": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "StringEncodingType",
+            "type": "object"
+        },
+        "Symbol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "Symbol",
+            "type": "object"
+        },
+        "SymmetricRelation": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "SymmetricRelation",
+            "type": "object"
+        },
+        "SystemOfQuantityKinds": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "SystemOfQuantityKinds",
+            "type": "object"
+        },
+        "SystemOfUnits": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "SystemOfUnits",
+            "type": "object"
+        },
+        "Thing": {
+            "additionalProperties": false,
+            "description": "The root class for all QUDT concepts",
+            "title": "Thing",
+            "type": "object"
+        },
+        "TransformType": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "TransformType",
+            "type": "object"
+        },
+        "UCUMcs": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "UCUMcs",
+            "type": "object"
+        },
+        "UCUMcs-term": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "UCUMcs-term",
+            "type": "object"
+        },
+        "Unit": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "hasReciprocalUnit": {
+                    "items": {
+                        "$ref": "#/$defs/Unit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {},
+                "isUnitOfSystem": {
+                    "items": {
+                        "$ref": "#/$defs/SystemOfUnits"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "omUnit": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "unitFor": {
+                    "items": {},
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "Unit",
+            "type": "object"
+        },
+        "UserQuantityKind": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "guidance": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {}
+            },
+            "title": "UserQuantityKind",
+            "type": "object"
+        },
+        "ValueUnion": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "ValueUnion",
+            "type": "object"
+        },
+        "Verifiable": {
+            "additionalProperties": false,
+            "description": "",
+            "title": "Verifiable",
+            "type": "object"
+        }
+    },
+    "$id": "http://qudt.org/3.1.6/schema/qudt",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "qudt",
+    "type": "object",
+    "version": null
+}
