@@ -70,7 +70,7 @@ gen-project:
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict {{source_schema_path}} > {{dest}}/datadict.md
+  uv run --group dev gen-markdown-datadict --debug {{source_schema_path}} > {{dest}}/datadict.md
 
 # Locally serve data dictionary
 [group('model development')]

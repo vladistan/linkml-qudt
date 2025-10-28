@@ -398,6 +398,9 @@ UserQuantityKind {
     stringList guidance  
     string id  
 }
+__Class {
+
+}
 
 AngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 AngleUnit ||--}o Unit : "hasReciprocalUnit"
@@ -472,6 +475,41 @@ These classes are completely isolated with no relationships and are not used as 
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+AbstractQuantityKind:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - AbstractQuantityKind_broader
+  - AbstractQuantityKind_altSymbol
+  - AbstractQuantityKind_latexSymbol
+  - AbstractQuantityKind_symbol
+  slot_usage:
+    broader:
+      range: QuantityKind
+    altSymbol:
+      required: false
+    latexSymbol:
+      required: false
+    symbol:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 AbstractQuantityKind {
@@ -515,6 +553,61 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+AngleUnit:
+  is_a: DimensionlessUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 AngleUnit {
@@ -539,6 +632,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -581,6 +677,19 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 An aspect is an abstract type class that defines properties that can be reused.
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Aspect:
+  is_a: Thing
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -615,6 +724,19 @@ This class has no attributes
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+AspectClass:
+  is_a: Class
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -639,6 +761,39 @@ This class has no attributes
 
 <p class=\"lm-para\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>
 <p class=\"lm-para\">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+BaseDimensionMagnitude:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - BaseDimensionMagnitude_hasBaseQuantityKind
+  - BaseDimensionMagnitude_vectorMagnitude
+  slot_usage:
+    hasBaseQuantityKind:
+      range: QuantityKind
+      required: true
+      multivalued: false
+    vectorMagnitude:
+      range: float
+      required: true
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -676,6 +831,36 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+BinaryPrefix:
+  is_a: Prefix
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Prefix_exactMatch
+  - Prefix_ucumCode
+  - Prefix_altSymbol
+  - Prefix_latexSymbol
+  - Prefix_symbol
+  - Prefix_prefixMultiplier
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -715,6 +900,30 @@ UCUMcs-term {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+BitEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
+
 ```mermaid
 erDiagram
 BitEncodingType {
@@ -746,6 +955,30 @@ Rule {
 ### BooleanEncodingType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+BooleanEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -779,6 +1012,30 @@ Rule {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+ByteEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
+
 ```mermaid
 erDiagram
 ByteEncodingType {
@@ -810,6 +1067,36 @@ Rule {
 ### CardinalityType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+CardinalityType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - CardinalityType_literal
+  slot_usage:
+    literal:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -851,6 +1138,18 @@ Rule {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+CatalogEntry: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -860,6 +1159,30 @@ This class has no attributes
 ### CharEncodingType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+CharEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -895,6 +1218,35 @@ Rule {
 
 Provides a simple way of making citations.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Citation:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Citation_description
+  - Citation_url
+  slot_usage:
+    description:
+      required: true
+      multivalued: false
+    url:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Citation {
@@ -927,9 +1279,24 @@ Rule {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Class: {}
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Unit {
+
+}
+__Class {
 
 }
 
@@ -956,6 +1323,31 @@ This class has no attributes
 ### Comment
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Comment:
+  is_a: Verifiable
+  mixins:
+  - Thing
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Comment_rationale
+  - Comment_description
+  slot_usage:
+    rationale:
+      required: false
+    description:
+      multivalued: false
+
+```
+</details>
 
 
 #### Local class diagram
@@ -992,6 +1384,43 @@ This class has no attributes
 
 
 The root class for all QUDT concepts.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Concept:
+  is_a: Thing
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    hasRule:
+      range: Rule
+    isReplacedBy:
+      multivalued: false
+    description:
+      multivalued: false
+    abbreviation:
+      multivalued: false
+    deprecated:
+      multivalued: false
+    id:
+      multivalued: false
+    plainTextDescription:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1060,6 +1489,40 @@ Rule {
 
 Used to specify the values of a constant.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+ConstantValue:
+  is_a: QuantityValue
+  slots:
+  - Quantifiable_dataEncoding
+  - Quantifiable_datatype
+  - Quantifiable_relativeStandardUncertainty
+  - Quantifiable_standardUncertainty
+  - Quantifiable_standardUncertaintySN
+  - Quantifiable_value
+  - Quantifiable_valueSN
+  - QuantityValue_hasUnit
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - ConstantValue_exactConstant
+  slot_usage:
+    exactConstant:
+      required: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 ConstantValue {
@@ -1102,6 +1565,65 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+ContextualUnit:
+  is_a: Unit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - ContextualUnit_broader
+  slot_usage:
+    broader:
+      range: Unit
+
+```
+</details>
+
 ```mermaid
 erDiagram
 ContextualUnit {
@@ -1126,6 +1648,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -1162,6 +1687,61 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+CountingUnit:
+  is_a: DimensionlessUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 CountingUnit {
@@ -1186,6 +1766,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -1224,6 +1807,68 @@ Currency Units have their own subclass of unit because: (a) they have additonal 
 
 Used for all units that express currency.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+CurrencyUnit:
+  is_a: DimensionlessUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - CurrencyUnit_currencyCode
+  - CurrencyUnit_currencyExponent
+  slot_usage:
+    currencyCode:
+      multivalued: false
+    currencyExponent:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 CurrencyUnit {
@@ -1248,6 +1893,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -1283,6 +1931,32 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 <p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DataEncoding:
+  is_a: Aspect
+  slots:
+  - DataEncoding_bitOrder
+  - DataEncoding_encoding
+  - DataEncoding_byteOrder
+  slot_usage:
+    bitOrder:
+      range: EndianType
+      multivalued: false
+    encoding:
+      range: Encoding
+      multivalued: false
+    byteOrder:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1322,6 +1996,33 @@ This class has no attributes
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DataItem:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - DataItem_value
+  slot_usage:
+    value:
+      range: string
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 DataItem {
@@ -1353,6 +2054,85 @@ Rule {
 ### Datatype
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Datatype:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Datatype_basis
+  - Datatype_cardinality
+  - Datatype_orderedType
+  - Datatype_ansiSQLName
+  - Datatype_cName
+  - Datatype_oracleSQLName
+  - Datatype_protocolBuffersName
+  - Datatype_pythonName
+  - Datatype_vbName
+  - Datatype_bounded
+  - Datatype_id
+  - Datatype_javaName
+  - Datatype_jsName
+  - Datatype_matlabName
+  - Datatype_microsoftSQLServerName
+  - Datatype_mySQLName
+  - Datatype_odbcName
+  - Datatype_oleDBName
+  slot_usage:
+    basis:
+      range: Datatype
+      multivalued: false
+    cardinality:
+      range: CardinalityType
+      multivalued: false
+    orderedType:
+      range: OrderedType
+      multivalued: false
+    ansiSQLName:
+      multivalued: false
+    cName:
+      multivalued: false
+    oracleSQLName:
+      multivalued: false
+    protocolBuffersName:
+      multivalued: false
+    pythonName:
+      multivalued: false
+    vbName:
+      multivalued: false
+    bounded:
+      multivalued: false
+    id:
+      multivalued: false
+    javaName:
+      multivalued: false
+    jsName:
+      multivalued: false
+    matlabName:
+      multivalued: false
+    microsoftSQLServerName:
+      multivalued: false
+    mySQLName:
+      multivalued: false
+    odbcName:
+      multivalued: false
+    oleDBName:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1409,6 +2189,24 @@ ScalarDatatype {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DateTimeStringEncodingType:
+  is_a: StringEncodingType
+  slots:
+  - DateTimeStringEncodingType_allowedPattern
+  slot_usage:
+    allowedPattern:
+      required: true
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -1432,6 +2230,36 @@ This class has no attributes
 
 
 A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DecimalPrefix:
+  is_a: Prefix
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Prefix_exactMatch
+  - Prefix_ucumCode
+  - Prefix_altSymbol
+  - Prefix_latexSymbol
+  - Prefix_symbol
+  - Prefix_prefixMultiplier
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1473,6 +2301,61 @@ UCUMcs-term {
 
 A DerivedUnit is a type specification for units that are derived from other units.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DerivedUnit:
+  is_a: Unit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 DerivedUnit {
@@ -1497,6 +2380,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -1533,6 +2419,61 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+DimensionlessUnit:
+  is_a: Unit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 DimensionlessUnit {
@@ -1557,6 +2498,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -1598,6 +2542,28 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Discipline:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Discipline {
@@ -1629,6 +2595,35 @@ Rule {
 ### Encoding
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Encoding:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+  slot_usage:
+    bits:
+      multivalued: false
+    bytes:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1678,6 +2673,32 @@ Rule {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+EndianType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 DataEncoding {
@@ -1718,6 +2739,35 @@ Rule {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+EnumeratedQuantity:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - EnumeratedQuantity_enumeratedValue
+  - EnumeratedQuantity_enumeration
+  slot_usage:
+    enumeratedValue:
+      range: EnumeratedValue
+    enumeration:
+      range: Enumeration
+
+```
+</details>
+
 ```mermaid
 erDiagram
 EnumeratedQuantity {
@@ -1755,6 +2805,43 @@ Rule {
 ### EnumeratedValue
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+EnumeratedValue:
+  is_a: Verifiable
+  mixins:
+  - Concept
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    altSymbol:
+      required: false
+    description:
+      multivalued: false
+    abbreviation:
+      multivalued: false
+    symbol:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -1818,6 +2905,39 @@ Rule {
 
 <p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Enumeration:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Enumeration_default
+  - Enumeration_element
+  - Enumeration_abbreviation
+  slot_usage:
+    default:
+      range: EnumeratedValue
+      multivalued: false
+    element:
+      range: EnumeratedValue
+      required: true
+    abbreviation:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 EnumeratedQuantity {
@@ -1868,6 +2988,36 @@ SystemOfQuantityKinds {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+EnumerationScale:
+  is_a: Scale
+  mixins:
+  - Enumeration
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+  - Enumeration_default
+  - Enumeration_element
+
+```
+</details>
+
 ```mermaid
 erDiagram
 EnumeratedValue {
@@ -1917,6 +3067,18 @@ TransformType {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Error1: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -1932,6 +3094,18 @@ This class has no attributes
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Error2: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -1945,6 +3119,18 @@ This class has no attributes
 ### Error3
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Error3: {}
+
+```
+</details>
 
 
 #### Local class diagram
@@ -1968,6 +3154,51 @@ This class has no attributes
 ### Figure
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Figure:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Figure_imageLocation
+  - Figure_figureCaption
+  - Figure_figureLabel
+  - Figure_height
+  - Figure_image
+  - Figure_landscape
+  - Figure_width
+  slot_usage:
+    imageLocation:
+      required: true
+      multivalued: false
+    figureCaption:
+      multivalued: false
+    figureLabel:
+      multivalued: false
+    height:
+      multivalued: false
+    image:
+      multivalued: false
+    landscape:
+      multivalued: false
+    width:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2004,6 +3235,30 @@ Rule {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+FloatingPointEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
+
 ```mermaid
 erDiagram
 FloatingPointEncodingType {
@@ -2035,6 +3290,30 @@ Rule {
 ### IntegerEncodingType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+IntegerEncodingType:
+  is_a: Encoding
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Encoding_bits
+  - Encoding_bytes
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2072,6 +3351,32 @@ Rule {
 <p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>
 
 median, percentile & Monotonic increasing (order (<)) & totally ordered set
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+IntervalScale:
+  is_a: Scale
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2117,6 +3422,18 @@ TransformType {
 A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering.
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+LatexString: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -2126,6 +3443,18 @@ This class has no attributes
 ### List
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+List: {}
+
+```
+</details>
 
 
 This class has no attributes
@@ -2139,6 +3468,61 @@ This class has no attributes
 
 
 Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+LogarithmicUnit:
+  is_a: DimensionlessUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2164,6 +3548,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -2197,6 +3584,28 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 ### MathsFunctionType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+MathsFunctionType:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2242,6 +3651,24 @@ ScaleType {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+NIST_SP811_Comment:
+  is_a: Comment
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Comment_rationale
+  - Comment_description
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -2267,6 +3694,32 @@ This class has no attributes
 
 
 A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+NominalScale:
+  is_a: Scale
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2309,6 +3762,29 @@ TransformType {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+NumericUnion:
+  mixins:
+  - Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 NumericUnion {
@@ -2345,6 +3821,18 @@ Rule {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Ontology: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -2357,6 +3845,36 @@ This class has no attributes
 ### OrderedType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+OrderedType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - OrderedType_literal
+  slot_usage:
+    literal:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2399,6 +3917,37 @@ Rule {
 
 The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+OrdinalScale:
+  is_a: Scale
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+  - OrdinalScale_order
+  slot_usage:
+    order:
+      required: true
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 MathsFunctionType {
@@ -2440,6 +3989,32 @@ TransformType {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Organization:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Organization_url
+  slot_usage:
+    url:
+      required: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Organization {
@@ -2473,6 +4048,81 @@ Rule {
 
 
 A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+PhysicalConstant:
+  is_a: Quantity
+  mixins:
+  - Error1
+  slots:
+  - Quantifiable_dataEncoding
+  - Quantifiable_datatype
+  - Quantifiable_hasUnit
+  - Quantifiable_relativeStandardUncertainty
+  - Quantifiable_standardUncertainty
+  - Quantifiable_standardUncertaintySN
+  - Quantifiable_value
+  - Quantifiable_valueSN
+  - Quantity_hasQuantityKind
+  - Quantity_quantityValue
+  - Quantity_isDeltaQuantity
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - PhysicalConstant_applicableSystem
+  - PhysicalConstant_applicableUnit
+  - PhysicalConstant_exactMatch
+  - PhysicalConstant_hasDimensionVector
+  - PhysicalConstant_ucumCode
+  - PhysicalConstant_exactConstant
+  - PhysicalConstant_altSymbol
+  - PhysicalConstant_isoNormativeReference
+  - PhysicalConstant_latexSymbol
+  - PhysicalConstant_normativeReference
+  - PhysicalConstant_symbol
+  - PhysicalConstant_latexDefinition
+  - PhysicalConstant_mathMLdefinition
+  slot_usage:
+    applicableSystem:
+      range: SystemOfUnits
+    applicableUnit:
+      range: Unit
+    exactMatch:
+      range: PhysicalConstant
+    hasDimensionVector:
+      range: QuantityKindDimensionVector
+    ucumCode:
+      required: false
+    exactConstant:
+      range: boolean
+    altSymbol:
+      required: false
+    isoNormativeReference:
+      required: false
+    latexSymbol:
+      required: false
+    normativeReference:
+      required: false
+    symbol:
+      required: false
+    latexDefinition:
+      multivalued: false
+    mathMLdefinition:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2538,6 +4188,61 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+PlaneAngleUnit:
+  is_a: AngleUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 PlaneAngleUnit {
@@ -2562,6 +4267,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -2595,6 +4303,51 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 ### Prefix
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Prefix:
+  is_a: Verifiable
+  mixins:
+  - Concept
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Prefix_exactMatch
+  - Prefix_ucumCode
+  - Prefix_altSymbol
+  - Prefix_latexSymbol
+  - Prefix_symbol
+  - Prefix_prefixMultiplier
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    exactMatch:
+      range: Prefix
+    ucumCode:
+      range: UCUMcs-term
+    altSymbol:
+      required: false
+    latexSymbol:
+      required: false
+    symbol:
+      required: false
+    prefixMultiplier:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2655,6 +4408,50 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 <p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Quantifiable:
+  is_a: Aspect
+  slots:
+  - Quantifiable_dataEncoding
+  - Quantifiable_datatype
+  - Quantifiable_hasUnit
+  - Quantifiable_relativeStandardUncertainty
+  - Quantifiable_standardUncertainty
+  - Quantifiable_standardUncertaintySN
+  - Quantifiable_value
+  - Quantifiable_valueSN
+  slot_usage:
+    dataEncoding:
+      range: DataEncoding
+      multivalued: false
+    datatype:
+      range: Datatype
+      multivalued: false
+    hasUnit:
+      range: Unit
+      multivalued: false
+    relativeStandardUncertainty:
+      range: double
+      multivalued: false
+    standardUncertainty:
+      range: decimal
+      multivalued: false
+    standardUncertaintySN:
+      range: double
+    value:
+      multivalued: false
+    valueSN:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 DataEncoding {
@@ -2708,6 +4505,49 @@ divided by time). In this way, some quantities can be calculated from other meas
 expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded 
 as \"fundamental\" in this sense.</p>
 <p class=\"lm-para\">A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.</p>
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Quantity:
+  is_a: Quantifiable
+  mixins:
+  - Concept
+  slots:
+  - Quantifiable_dataEncoding
+  - Quantifiable_datatype
+  - Quantifiable_hasUnit
+  - Quantifiable_relativeStandardUncertainty
+  - Quantifiable_standardUncertainty
+  - Quantifiable_standardUncertaintySN
+  - Quantifiable_value
+  - Quantifiable_valueSN
+  - Quantity_hasQuantityKind
+  - Quantity_quantityValue
+  - Quantity_isDeltaQuantity
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    hasQuantityKind:
+      range: QuantityKind
+      required: false
+    quantityValue:
+      range: QuantityValue
+    isDeltaQuantity:
+      range: boolean
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2770,6 +4610,81 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKind:
+  is_a: Verifiable
+  mixins:
+  - AbstractQuantityKind
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - belongsToSystemOfQuantities
+  - QuantityKind_dimensionVectorForSI
+  - QuantityKind_exactMatch
+  - QuantityKind_hasDimensionVector
+  - QuantityKind_iec61360Code
+  - QuantityKind_applicableCGSUnit
+  - QuantityKind_applicableISOUnit
+  - QuantityKind_applicableImperialUnit
+  - QuantityKind_applicableSIUnit
+  - QuantityKind_applicableUSCustomaryUnit
+  - QuantityKind_applicableUnit
+  - QuantityKind_qkdvDenominator
+  - QuantityKind_qkdvNumerator
+  - QuantityKind_latexDefinition
+  - QuantityKind_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - AbstractQuantityKind_broader
+  - AbstractQuantityKind_altSymbol
+  - AbstractQuantityKind_latexSymbol
+  - AbstractQuantityKind_symbol
+  slot_usage:
+    dimensionVectorForSI:
+      range: QuantityKindDimensionVector_SI
+      multivalued: false
+    exactMatch:
+      range: QuantityKind
+    hasDimensionVector:
+      range: QuantityKindDimensionVector
+    iec61360Code:
+      range: string
+    applicableCGSUnit:
+      required: false
+    applicableISOUnit:
+      required: false
+    applicableImperialUnit:
+      required: false
+    applicableSIUnit:
+      required: false
+    applicableUSCustomaryUnit:
+      required: false
+    applicableUnit:
+      required: false
+    qkdvDenominator:
+      multivalued: false
+    qkdvNumerator:
+      multivalued: false
+    latexDefinition:
+      multivalued: false
+    mathMLdefinition:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -2857,6 +4772,70 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 <p class=\"lm-para\">For example, the dimension of the physical quantity kind $\\it{speed}$ is $\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\boxed{mass \\times acceleration}$ or $\\boxed{mass \\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+  slot_usage:
+    hasReferenceQuantityKind:
+      range: QuantityKind
+    latexSymbol:
+      required: false
+    dimensionExponentForAmountOfSubstance:
+      required: true
+      multivalued: false
+    dimensionExponentForElectricCurrent:
+      required: true
+      multivalued: false
+    dimensionExponentForLength:
+      required: true
+      multivalued: false
+    dimensionExponentForLuminousIntensity:
+      required: true
+      multivalued: false
+    dimensionExponentForMass:
+      required: true
+      multivalued: false
+    dimensionExponentForThermodynamicTemperature:
+      required: true
+      multivalued: false
+    dimensionExponentForTime:
+      required: true
+      multivalued: false
+    dimensionlessExponent:
+      required: true
+      multivalued: false
+    latexDefinition:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 PhysicalConstant {
@@ -2919,6 +4898,39 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_CGS:
+  is_a: QuantityKindDimensionVector
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -2963,6 +4975,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_CGS-EMU:
+  is_a: QuantityKindDimensionVector_CGS
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -2999,6 +5044,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_CGS-ESU:
+  is_a: QuantityKindDimensionVector_CGS
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3037,6 +5115,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_CGS-GAUSS:
+  is_a: QuantityKindDimensionVector_CGS
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -3074,6 +5185,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_CGS-LH:
+  is_a: QuantityKindDimensionVector_CGS
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -3108,6 +5252,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 ### QuantityKindDimensionVector_ISO
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_ISO:
+  is_a: QuantityKindDimensionVector
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3144,6 +5321,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_Imperial:
+  is_a: QuantityKindDimensionVector
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -3178,6 +5388,39 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 ### QuantityKindDimensionVector_SI
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityKindDimensionVector_SI:
+  is_a: QuantityKindDimensionVector
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityKindDimensionVector_hasReferenceQuantityKind
+  - QuantityKindDimensionVector_latexSymbol
+  - QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance
+  - QuantityKindDimensionVector_dimensionExponentForElectricCurrent
+  - QuantityKindDimensionVector_dimensionExponentForLength
+  - QuantityKindDimensionVector_dimensionExponentForLuminousIntensity
+  - QuantityKindDimensionVector_dimensionExponentForMass
+  - QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature
+  - QuantityKindDimensionVector_dimensionExponentForTime
+  - QuantityKindDimensionVector_dimensionlessExponent
+  - QuantityKindDimensionVector_latexDefinition
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3218,6 +5461,36 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - QuantityType_value
+  slot_usage:
+    value:
+      range: QuantityKind
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -3254,6 +5527,41 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+QuantityValue:
+  is_a: Quantifiable
+  mixins:
+  - Concept
+  slots:
+  - Quantifiable_dataEncoding
+  - Quantifiable_datatype
+  - Quantifiable_relativeStandardUncertainty
+  - Quantifiable_standardUncertainty
+  - Quantifiable_standardUncertaintySN
+  - Quantifiable_value
+  - Quantifiable_valueSN
+  - QuantityValue_hasUnit
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    hasUnit:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3314,6 +5622,32 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero.
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+RatioScale:
+  is_a: Scale
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+
+```
+</details>
+
 ```mermaid
 erDiagram
 MathsFunctionType {
@@ -3356,6 +5690,18 @@ TransformType {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Resource: {}
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -3381,6 +5727,39 @@ This class has no attributes
 ### Rule
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Rule:
+  is_a: Verifiable
+  mixins:
+  - Concept
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - Rule_ruleType
+  - Rule_rationale
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    ruleType:
+      range: RuleType
+    rationale:
+      required: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3425,6 +5804,32 @@ RuleType {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+RuleType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Rule {
@@ -3460,6 +5865,71 @@ RuleType {
 ### ScalarDatatype
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+ScalarDatatype:
+  is_a: Datatype
+  slots:
+  - guidance
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Datatype_basis
+  - Datatype_cardinality
+  - Datatype_orderedType
+  - Datatype_ansiSQLName
+  - Datatype_cName
+  - Datatype_oracleSQLName
+  - Datatype_protocolBuffersName
+  - Datatype_pythonName
+  - Datatype_vbName
+  - Datatype_bounded
+  - Datatype_id
+  - Datatype_javaName
+  - Datatype_jsName
+  - Datatype_matlabName
+  - Datatype_microsoftSQLServerName
+  - Datatype_mySQLName
+  - Datatype_odbcName
+  - Datatype_oleDBName
+  - ScalarDatatype_rdfsDatatype
+  - ScalarDatatype_bits
+  - ScalarDatatype_bytes
+  - ScalarDatatype_length
+  - ScalarDatatype_maxExclusive
+  - ScalarDatatype_maxInclusive
+  - ScalarDatatype_minExclusive
+  - ScalarDatatype_minInclusive
+  slot_usage:
+    rdfsDatatype:
+      range: Datatype
+      multivalued: false
+    bits:
+      multivalued: false
+    bytes:
+      multivalued: false
+    length:
+      multivalued: false
+    maxExclusive:
+      multivalued: false
+    maxInclusive:
+      multivalued: false
+    minExclusive:
+      multivalued: false
+    minInclusive:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3503,6 +5973,42 @@ ScalarDatatype {
 
 
 Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Scale:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - Scale_permissibleMaths
+  - Scale_permissibleTransformation
+  - Scale_scaleType
+  - Scale_dataStructure
+  slot_usage:
+    permissibleMaths:
+      range: MathsFunctionType
+    permissibleTransformation:
+      range: TransformType
+    scaleType:
+      range: ScaleType
+      multivalued: false
+    dataStructure:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3553,6 +6059,42 @@ TransformType {
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+ScaleType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - ScaleType_permissibleMaths
+  - ScaleType_permissibleTransformation
+  - ScaleType_dataStructure
+  slot_usage:
+    permissibleMaths:
+      range: MathsFunctionType
+    permissibleTransformation:
+      range: TransformType
+    dataStructure:
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 MathsFunctionType {
@@ -3599,6 +6141,18 @@ TransformType {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+SignednessType: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -3608,6 +6162,61 @@ This class has no attributes
 ### SolidAngleUnit
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+SolidAngleUnit:
+  is_a: AngleUnit
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3633,6 +6242,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -3668,6 +6280,18 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Statement: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -3677,6 +6301,18 @@ This class has no attributes
 ### StringEncodingType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+StringEncodingType: {}
+
+```
+</details>
 
 
 #### Local class diagram
@@ -3700,6 +6336,28 @@ This class has no attributes
 ### Symbol
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Symbol:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3734,6 +6392,18 @@ Symbol {
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+SymmetricRelation: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -3745,6 +6415,46 @@ This class has no attributes
 
 
 A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+SystemOfQuantityKinds:
+  is_a: Concept
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - SystemOfQuantityKinds_baseDimensionEnumeration
+  - SystemOfQuantityKinds_hasBaseQuantityKind
+  - SystemOfQuantityKinds_hasQuantityKind
+  - SystemOfQuantityKinds_hasUnitSystem
+  - SystemOfQuantityKinds_systemDerivedQuantityKind
+  slot_usage:
+    baseDimensionEnumeration:
+      range: Enumeration
+      multivalued: false
+    hasBaseQuantityKind:
+      range: QuantityKind
+    hasQuantityKind:
+      range: QuantityKind
+      required: false
+    hasUnitSystem:
+      range: SystemOfUnits
+    systemDerivedQuantityKind:
+      range: QuantityKind
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3792,6 +6502,60 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+SystemOfUnits:
+  is_a: Verifiable
+  mixins:
+  - Concept
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - SystemOfUnits_applicablePhysicalConstant
+  - SystemOfUnits_hasAllowedUnit
+  - SystemOfUnits_hasBaseUnit
+  - SystemOfUnits_hasCoherentUnit
+  - SystemOfUnits_hasDefinedUnit
+  - SystemOfUnits_hasDerivedCoherentUnit
+  - SystemOfUnits_hasDerivedUnit
+  - SystemOfUnits_hasUnit
+  - SystemOfUnits_prefix
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    applicablePhysicalConstant:
+      range: PhysicalConstant
+    hasAllowedUnit:
+      range: Unit
+    hasBaseUnit:
+      range: Unit
+    hasCoherentUnit:
+      range: Unit
+    hasDefinedUnit:
+      range: Unit
+    hasDerivedCoherentUnit:
+      range: Unit
+    hasDerivedUnit:
+      range: Unit
+    hasUnit:
+      range: Unit
+    prefix:
+      range: Prefix
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3853,6 +6617,35 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 The root class for all QUDT concepts
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Thing:
+  description: !!python/object/new:linkml_runtime.utils.yamlutils.extended_str
+    args:
+    - The root class for all QUDT concepts
+    state:
+      _s: !!python/object/apply:yaml._yaml.__pyx_unpickle_Mark
+        args:
+        - !!python/name:yaml._yaml.Mark ''
+        - 41581148
+        - null
+        state: !!python/tuple
+        - null
+        - 17
+        - 620
+        - 21
+        - linkml_qudt.yaml
+        - null
+      _len: 36
+
+```
+</details>
+
+
 #### Local class diagram
 
 ```mermaid
@@ -3880,6 +6673,32 @@ This class has no attributes
 ### TransformType
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+TransformType:
+  is_a: EnumeratedValue
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - EnumeratedValue_altSymbol
+  - EnumeratedValue_description
+  - EnumeratedValue_abbreviation
+  - EnumeratedValue_symbol
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_deprecated
+  - Concept_plainTextDescription
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -3926,6 +6745,19 @@ TransformType {
 
 Lexical pattern for the case-sensitive version of UCUM code
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+UCUMcs:
+  is_a: Resource
+
+```
+</details>
+
 ```mermaid
 erDiagram
 UCUMcs {
@@ -3961,6 +6793,19 @@ This class has no attributes
 
 Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+UCUMcs-term:
+  is_a: Resource
+
+```
+</details>
+
 ```mermaid
 erDiagram
 Prefix {
@@ -3992,6 +6837,121 @@ This class has no attributes
 ### Unit
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Unit:
+  is_a: Verifiable
+  mixins:
+  - Concept
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  - hasReciprocalUnit
+  - isUnitOfSystem
+  - omUnit
+  - unitFor
+  - Unit_applicableSystem
+  - Unit_definedUnitOfSystem
+  - Unit_derivedCoherentUnitOfSystem
+  - Unit_derivedUnitOfSystem
+  - Unit_exactMatch
+  - Unit_hasDimensionVector
+  - Unit_hasFactorUnit
+  - Unit_hasQuantityKind
+  - Unit_iec61360Code
+  - Unit_prefix
+  - Unit_qkdvDenominator
+  - Unit_qkdvNumerator
+  - Unit_scalingOf
+  - Unit_ucumCode
+  - Unit_udunitsCode
+  - Unit_uneceCommonCode
+  - Unit_altSymbol
+  - Unit_latexDefinition
+  - Unit_latexSymbol
+  - Unit_siUnitsExpression
+  - Unit_symbol
+  - Unit_conversionMultiplier
+  - Unit_conversionMultiplierSN
+  - Unit_conversionOffset
+  - Unit_conversionOffsetSN
+  - Unit_factorUnitScalar
+  - Unit_mathMLdefinition
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  slot_usage:
+    applicableSystem:
+      range: SystemOfUnits
+    definedUnitOfSystem:
+      range: SystemOfUnits
+    derivedCoherentUnitOfSystem:
+      range: SystemOfUnits
+    derivedUnitOfSystem:
+      range: SystemOfUnits
+    exactMatch:
+      range: Unit
+    hasDimensionVector:
+      range: QuantityKindDimensionVector
+      multivalued: false
+    hasFactorUnit:
+      range: Class
+    hasQuantityKind:
+      range: QuantityKind
+    iec61360Code:
+      range: string
+    prefix:
+      range: Prefix
+    qkdvDenominator:
+      range: QuantityKindDimensionVector
+      multivalued: false
+    qkdvNumerator:
+      range: QuantityKindDimensionVector
+      multivalued: false
+    scalingOf:
+      range: Unit
+    ucumCode:
+      range: UCUMcs
+    udunitsCode:
+      range: string
+    uneceCommonCode:
+      range: string
+    altSymbol:
+      required: false
+    latexDefinition:
+      required: false
+    latexSymbol:
+      required: false
+    siUnitsExpression:
+      required: false
+    symbol:
+      required: false
+    conversionMultiplier:
+      multivalued: false
+    conversionMultiplierSN:
+      multivalued: false
+    conversionOffset:
+      multivalued: false
+    conversionOffsetSN:
+      multivalued: false
+    factorUnitScalar:
+      multivalued: false
+    mathMLdefinition:
+      multivalued: false
+
+```
+</details>
 
 ```mermaid
 erDiagram
@@ -4026,6 +6986,9 @@ UCUMcs {
 
 }
 Unit {
+
+}
+__Class {
 
 }
 
@@ -4093,6 +7056,38 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 
 
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+UserQuantityKind:
+  is_a: AbstractQuantityKind
+  slots:
+  - guidance
+  - Concept_id
+  - Concept_hasRule
+  - Concept_isReplacedBy
+  - Concept_description
+  - Concept_abbreviation
+  - Concept_deprecated
+  - Concept_plainTextDescription
+  - AbstractQuantityKind_broader
+  - AbstractQuantityKind_altSymbol
+  - AbstractQuantityKind_latexSymbol
+  - AbstractQuantityKind_symbol
+  - UserQuantityKind_hasQuantityKind
+  slot_usage:
+    hasQuantityKind:
+      range: QuantityKind
+      required: true
+      multivalued: false
+
+```
+</details>
+
 ```mermaid
 erDiagram
 QuantityKind {
@@ -4129,6 +7124,30 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 
 
 An aspect class that holds properties that provide external knowledge and specifications of a given resource.
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+Verifiable:
+  is_a: Error3
+  mixins:
+  - Error2
+  - Aspect
+  slots:
+  - Verifiable_isoNormativeReference
+  - Verifiable_normativeReference
+  slot_usage:
+    isoNormativeReference:
+      required: false
+    normativeReference:
+      required: false
+
+```
+</details>
 
 
 #### Local class diagram
@@ -4178,6 +7197,18 @@ This class has no attributes
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+gDay: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -4187,6 +7218,18 @@ This class has no attributes
 ### gMonth
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+gMonth: {}
+
+```
+</details>
 
 
 This class has no attributes
@@ -4200,6 +7243,18 @@ This class has no attributes
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+gMonthDay: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -4209,6 +7264,18 @@ This class has no attributes
 ### gYear
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+gYear: {}
+
+```
+</details>
 
 
 This class has no attributes
@@ -4222,6 +7289,18 @@ This class has no attributes
 
 
 
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+gYearMonth: {}
+
+```
+</details>
+
+
 This class has no attributes
 
 
@@ -4231,6 +7310,19 @@ This class has no attributes
 ### valueUnion
 
 
+
+
+#### YAML Definition
+
+<details>
+<summary>Click to expand</summary>
+
+```yaml
+valueUnion:
+  is_a: Resource
+
+```
+</details>
 
 
 #### Local class diagram
