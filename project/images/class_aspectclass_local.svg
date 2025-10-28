@@ -1,1 +1,126 @@
-<svg aria-roledescription="class" role="graphics-document document" viewBox="0 0 127.0625 234" height="234" class="classDiagram" xmlns="http://www.w3.org/2000/svg" width="127.0625" id="container"><style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#container g.classGroup text .title{font-weight:bolder;}#container .nodeLabel,#container .edgeLabel{color:#131300;}#container .edgeLabel .label rect{fill:#ECECFF;}#container .label text{fill:#131300;}#container .labelBkg{background:#ECECFF;}#container .edgeLabel .label span{background:#ECECFF;}#container .classTitle{font-weight:bolder;}#container .node rect,#container .node circle,#container .node ellipse,#container .node polygon,#container .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#container .divider{stroke:#9370DB;stroke-width:1;}#container g.clickable{cursor:pointer;}#container g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#container g.classGroup line{stroke:#9370DB;stroke-width:1;}#container .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#container .classLabel .label{fill:#9370DB;font-size:10px;}#container .relation{stroke:#333333;stroke-width:1;fill:none;}#container .dashed-line{stroke-dasharray:3;}#container .dotted-line{stroke-dasharray:1 2;}#container #compositionStart,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #compositionEnd,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #extensionStart,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #extensionEnd,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationStart,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationEnd,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #lollipopStart,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container #lollipopEnd,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container .edgeTerminals{font-size:11px;line-height:initial;}#container .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="container_class-aggregationStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="container_class-aggregationEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="container_class-extensionStart"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="container_class-extensionEnd"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="container_class-compositionStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="container_class-compositionEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="container_class-dependencyStart"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="container_class-dependencyEnd"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="container_class-lollipopStart"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="container_class-lollipopEnd"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Class_AspectClass_1" d="M63.531,110L63.531,111.167C63.531,112.333,63.531,114.667,63.531,120C63.531,125.333,63.531,133.667,63.531,137.833L63.531,142"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(63.53125, 50)" id="classId-Class-0" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-30.8359375 -42 L30.8359375 -42 L30.8359375 42 L-30.8359375 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 -42 C-14.732176276111687 -42, 1.3715849477766255 -42, 30.8359375 -42 M-30.8359375 -42 C-6.297877134320721 -42, 18.240183231358557 -42, 30.8359375 -42 M30.8359375 -42 C30.8359375 -20.79441391618565, 30.8359375 0.411172167628699, 30.8359375 42 M30.8359375 -42 C30.8359375 -10.516210252123209, 30.8359375 20.967579495753583, 30.8359375 42 M30.8359375 42 C15.514682629950473 42, 0.19342775990094552 42, -30.8359375 42 M30.8359375 42 C10.705254289454949 42, -9.425428921090102 42, -30.8359375 42 M-30.8359375 42 C-30.8359375 16.476321995343145, -30.8359375 -9.04735600931371, -30.8359375 -42 M-30.8359375 42 C-30.8359375 16.06827598141297, -30.8359375 -9.86344803717406, -30.8359375 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-18.8359375, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="37.671875"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 87px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>Class</p></span></div></foreignObject></g></g><g transform="translate(-18.8359375, 30)" class="members-group text"></g><g transform="translate(-18.8359375, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 6 C-7.128183685047837 6, 16.579570129904326 6, 30.8359375 6 M-30.8359375 6 C-7.371573466256542 6, 16.092790567486915 6, 30.8359375 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 24 C-16.254993957890896 24, -1.6740504157817924 24, 30.8359375 24 M-30.8359375 24 C-11.790309285884216 24, 7.255318928231567 24, 30.8359375 24"></path></g></g><g transform="translate(63.53125, 184)" id="classId-AspectClass-1" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-55.53125 -42 L55.53125 -42 L55.53125 42 L-55.53125 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 -42 C-16.240716756144742 -42, 23.049816487710515 -42, 55.53125 -42 M-55.53125 -42 C-26.03204061436348 -42, 3.4671687712730375 -42, 55.53125 -42 M55.53125 -42 C55.53125 -14.058886822897946, 55.53125 13.882226354204107, 55.53125 42 M55.53125 -42 C55.53125 -19.25632043925548, 55.53125 3.4873591214890425, 55.53125 42 M55.53125 42 C24.22615237662401 42, -7.078945246751978 42, -55.53125 42 M55.53125 42 C14.782692745690568 42, -25.965864508618864 42, -55.53125 42 M-55.53125 42 C-55.53125 20.098657255459674, -55.53125 -1.8026854890806518, -55.53125 -42 M-55.53125 42 C-55.53125 24.010833158191826, -55.53125 6.0216663163836515, -55.53125 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-43.53125, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="87.0625"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 136px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>AspectClass</p></span></div></foreignObject></g></g><g transform="translate(-43.53125, 30)" class="members-group text"></g><g transform="translate(-43.53125, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 6 C-27.711799250576693 6, 0.1076514988466144 6, 55.53125 6 M-55.53125 6 C-18.733610700661686 6, 18.06402859867663 6, 55.53125 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 24 C-19.086303659827365 24, 17.35864268034527 24, 55.53125 24 M-55.53125 24 C-17.09513687208277 24, 21.340976255834462 24, 55.53125 24"></path></g></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="class" role="graphics-document document" viewBox="0 0 127.0625 234" height="234" class="classDiagram" width="127.0625" id="container">
+  <style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#container g.classGroup text .title{font-weight:bolder;}#container .nodeLabel,#container .edgeLabel{color:#131300;}#container .edgeLabel .label rect{fill:#ECECFF;}#container .label text{fill:#131300;}#container .labelBkg{background:#ECECFF;}#container .edgeLabel .label span{background:#ECECFF;}#container .classTitle{font-weight:bolder;}#container .node rect,#container .node circle,#container .node ellipse,#container .node polygon,#container .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#container .divider{stroke:#9370DB;stroke-width:1;}#container g.clickable{cursor:pointer;}#container g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#container g.classGroup line{stroke:#9370DB;stroke-width:1;}#container .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#container .classLabel .label{fill:#9370DB;font-size:10px;}#container .relation{stroke:#333333;stroke-width:1;fill:none;}#container .dashed-line{stroke-dasharray:3;}#container .dotted-line{stroke-dasharray:1 2;}#container #compositionStart,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #compositionEnd,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #extensionStart,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #extensionEnd,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationStart,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationEnd,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #lollipopStart,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container #lollipopEnd,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container .edgeTerminals{font-size:11px;line-height:initial;}#container .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+  <g>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="container_class-aggregationStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="container_class-aggregationEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="container_class-extensionStart">
+        <path d="M 1,7 L18,13 V 1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="container_class-extensionEnd">
+        <path d="M 1,1 V 13 L18,7 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="container_class-compositionStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="container_class-compositionEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="container_class-dependencyStart">
+        <path d="M 5,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="container_class-dependencyEnd">
+        <path d="M 18,7 L9,13 L14,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="container_class-lollipopStart">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="container_class-lollipopEnd">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <g class="root">
+      <g class="clusters"/>
+      <g class="edgePaths">
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Class_AspectClass_1" d="M63.531,110L63.531,111.167C63.531,112.333,63.531,114.667,63.531,120C63.531,125.333,63.531,133.667,63.531,137.833L63.531,142"/>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g transform="translate(63.53125, 50)" id="classId-Class-0" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-30.8359375 -42 L30.8359375 -42 L30.8359375 42 L-30.8359375 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 -42 C-17.2976763062145 -42, -3.759415112429 -42, 30.8359375 -42 M-30.8359375 -42 C-13.928978589752752 -42, 2.9779803204944955 -42, 30.8359375 -42 M30.8359375 -42 C30.8359375 -17.184147058976887, 30.8359375 7.6317058820462265, 30.8359375 42 M30.8359375 -42 C30.8359375 -15.789068722522732, 30.8359375 10.421862554954537, 30.8359375 42 M30.8359375 42 C7.317552044300783 42, -16.200833411398435 42, -30.8359375 42 M30.8359375 42 C8.720109615796552 42, -13.395718268406895 42, -30.8359375 42 M-30.8359375 42 C-30.8359375 18.437686682480354, -30.8359375 -5.1246266350392915, -30.8359375 -42 M-30.8359375 42 C-30.8359375 17.200959813741317, -30.8359375 -7.598080372517366, -30.8359375 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-18.8359375, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="37.671875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 87px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>Class</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-18.8359375, 30)" class="members-group text"/>
+          <g transform="translate(-18.8359375, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 6 C-6.54879833143594 6, 17.73834083712812 6, 30.8359375 6 M-30.8359375 6 C-7.052034655539355 6, 16.73186818892129 6, 30.8359375 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-30.8359375 24 C-17.008147621943344 24, -3.1803577438866917 24, 30.8359375 24 M-30.8359375 24 C-9.544787240825283 24, 11.746363018349435 24, 30.8359375 24"/>
+          </g>
+        </g>
+        <g transform="translate(63.53125, 184)" id="classId-AspectClass-1" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-55.53125 -42 L55.53125 -42 L55.53125 42 L-55.53125 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 -42 C-15.103125861079434 -42, 25.324998277841132 -42, 55.53125 -42 M-55.53125 -42 C-18.359209247540797 -42, 18.812831504918407 -42, 55.53125 -42 M55.53125 -42 C55.53125 -20.861677054667062, 55.53125 0.2766458906658755, 55.53125 42 M55.53125 -42 C55.53125 -8.47631647461018, 55.53125 25.04736705077964, 55.53125 42 M55.53125 42 C13.857867067208552 42, -27.815515865582896 42, -55.53125 42 M55.53125 42 C18.88415379024768 42, -17.76294241950464 42, -55.53125 42 M-55.53125 42 C-55.53125 17.27515995144336, -55.53125 -7.44968009711328, -55.53125 -42 M-55.53125 42 C-55.53125 20.372624894513024, -55.53125 -1.2547502109739526, -55.53125 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-43.53125, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="87.0625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 136px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>AspectClass</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-43.53125, 30)" class="members-group text"/>
+          <g transform="translate(-43.53125, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 6 C-31.330041807497114 6, -7.128833614994228 6, 55.53125 6 M-55.53125 6 C-23.451223040319434 6, 8.628803919361133 6, 55.53125 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-55.53125 24 C-23.1473600305072 24, 9.236529938985598 24, 55.53125 24 M-55.53125 24 C-14.556536087236495 24, 26.41817782552701 24, 55.53125 24"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

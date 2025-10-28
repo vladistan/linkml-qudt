@@ -1,1 +1,198 @@
-<svg aria-roledescription="class" role="graphics-document document" viewBox="0 0 304.421875 368" height="368" class="classDiagram" xmlns="http://www.w3.org/2000/svg" width="304.421875" id="container"><style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#container g.classGroup text .title{font-weight:bolder;}#container .nodeLabel,#container .edgeLabel{color:#131300;}#container .edgeLabel .label rect{fill:#ECECFF;}#container .label text{fill:#131300;}#container .labelBkg{background:#ECECFF;}#container .edgeLabel .label span{background:#ECECFF;}#container .classTitle{font-weight:bolder;}#container .node rect,#container .node circle,#container .node ellipse,#container .node polygon,#container .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#container .divider{stroke:#9370DB;stroke-width:1;}#container g.clickable{cursor:pointer;}#container g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#container g.classGroup line{stroke:#9370DB;stroke-width:1;}#container .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#container .classLabel .label{fill:#9370DB;font-size:10px;}#container .relation{stroke:#333333;stroke-width:1;fill:none;}#container .dashed-line{stroke-dasharray:3;}#container .dotted-line{stroke-dasharray:1 2;}#container #compositionStart,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #compositionEnd,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #extensionStart,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #extensionEnd,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationStart,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationEnd,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #lollipopStart,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container #lollipopEnd,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container .edgeTerminals{font-size:11px;line-height:initial;}#container .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="container_class-aggregationStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="container_class-aggregationEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="container_class-extensionStart"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="container_class-extensionEnd"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="container_class-compositionStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="container_class-compositionEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="container_class-dependencyStart"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="container_class-dependencyEnd"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="container_class-lollipopStart"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="container_class-lollipopEnd"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Aspect_DataEncoding_1" d="M103.854,224.24L98.222,228.7C92.59,233.16,81.326,242.08,75.694,250.707C70.063,259.333,70.063,267.667,70.063,271.833L70.063,276"></path><path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Aspect_Quantifiable_2" d="M205.482,224.24L211.114,228.7C216.746,233.16,228.01,242.08,233.642,250.707C239.273,259.333,239.273,267.667,239.273,271.833L239.273,276"></path><path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Thing_Aspect_3" d="M154.668,110L154.668,111.167C154.668,112.333,154.668,114.667,154.668,120C154.668,125.333,154.668,133.667,154.668,137.833L154.668,142"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(154.66796875, 184)" id="classId-Aspect-0" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-36.703125 -42 L36.703125 -42 L36.703125 42 L-36.703125 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 -42 C-20.14066486748388 -42, -3.5782047349677626 -42, 36.703125 -42 M-36.703125 -42 C-21.524280394982757 -42, -6.345435789965514 -42, 36.703125 -42 M36.703125 -42 C36.703125 -13.735687237763504, 36.703125 14.528625524472993, 36.703125 42 M36.703125 -42 C36.703125 -12.109315724298394, 36.703125 17.78136855140321, 36.703125 42 M36.703125 42 C10.796765272932163 42, -15.109594454135674 42, -36.703125 42 M36.703125 42 C15.43279839171425 42, -5.837528216571499 42, -36.703125 42 M-36.703125 42 C-36.703125 11.64697093368725, -36.703125 -18.7060581326255, -36.703125 -42 M-36.703125 42 C-36.703125 19.873233351845204, -36.703125 -2.253533296309591, -36.703125 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-24.703125, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="49.40625"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 99px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>Aspect</p></span></div></foreignObject></g></g><g transform="translate(-24.703125, 30)" class="members-group text"></g><g transform="translate(-24.703125, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 6 C-11.738062941367478 6, 13.226999117265045 6, 36.703125 6 M-36.703125 6 C-7.605204806476067 6, 21.492715387047866 6, 36.703125 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 24 C-12.600866527696851 24, 11.501391944606297 24, 36.703125 24 M-36.703125 24 C-7.480641231887667 24, 21.741842536224667 24, 36.703125 24"></path></g></g><g transform="translate(70.0625, 318)" id="classId-DataEncoding-1" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-62.0625 -42 L62.0625 -42 L62.0625 42 L-62.0625 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 -42 C-21.77396250892881 -42, 18.514574982142378 -42, 62.0625 -42 M-62.0625 -42 C-13.391751136016602 -42, 35.2789977279668 -42, 62.0625 -42 M62.0625 -42 C62.0625 -17.891048347473856, 62.0625 6.217903305052289, 62.0625 42 M62.0625 -42 C62.0625 -13.88165074961407, 62.0625 14.236698500771858, 62.0625 42 M62.0625 42 C23.9356065208595 42, -14.191286958280998 42, -62.0625 42 M62.0625 42 C22.69016719176055 42, -16.682165616478898 42, -62.0625 42 M-62.0625 42 C-62.0625 22.01045703105757, -62.0625 2.020914062115139, -62.0625 -42 M-62.0625 42 C-62.0625 13.84495541200031, -62.0625 -14.31008917599938, -62.0625 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-50.0625, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="100.125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 152px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>DataEncoding</p></span></div></foreignObject></g></g><g transform="translate(-50.0625, 30)" class="members-group text"></g><g transform="translate(-50.0625, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 6 C-15.923338676850086 6, 30.215822646299827 6, 62.0625 6 M-62.0625 6 C-17.747019279073434 6, 26.56846144185313 6, 62.0625 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 24 C-36.36759579223062 24, -10.67269158446124 24, 62.0625 24 M-62.0625 24 C-25.922045007383957 24, 10.218409985232086 24, 62.0625 24"></path></g></g><g transform="translate(239.2734375, 318)" id="classId-Quantifiable-2" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-57.1484375 -42 L57.1484375 -42 L57.1484375 42 L-57.1484375 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 -42 C-21.32060199178982 -42, 14.507233516420357 -42, 57.1484375 -42 M-57.1484375 -42 C-31.878543686637354 -42, -6.608649873274707 -42, 57.1484375 -42 M57.1484375 -42 C57.1484375 -23.88811510420534, 57.1484375 -5.776230208410681, 57.1484375 42 M57.1484375 -42 C57.1484375 -20.582707547203285, 57.1484375 0.8345849055934309, 57.1484375 42 M57.1484375 42 C17.67401206599736 42, -21.80041336800528 42, -57.1484375 42 M57.1484375 42 C16.983793152843404 42, -23.180851194313192 42, -57.1484375 42 M-57.1484375 42 C-57.1484375 15.712454665945941, -57.1484375 -10.575090668108118, -57.1484375 -42 M-57.1484375 42 C-57.1484375 10.300711074826701, -57.1484375 -21.398577850346598, -57.1484375 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-45.1484375, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="90.296875"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 141px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>Quantifiable</p></span></div></foreignObject></g></g><g transform="translate(-45.1484375, 30)" class="members-group text"></g><g transform="translate(-45.1484375, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 6 C-28.803557021408736 6, -0.4586765428174715 6, 57.1484375 6 M-57.1484375 6 C-32.042725031985455 6, -6.93701256397091 6, 57.1484375 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 24 C-21.132482418437775 24, 14.88347266312445 24, 57.1484375 24 M-57.1484375 24 C-20.139272523945756 24, 16.869892452108488 24, 57.1484375 24"></path></g></g><g transform="translate(154.66796875, 50)" id="classId-Thing-3" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-32.21875 -42 L32.21875 -42 L32.21875 42 L-32.21875 42"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 -42 C-16.2274115624037 -42, -0.2360731248073975 -42, 32.21875 -42 M-32.21875 -42 C-16.744984461865183 -42, -1.2712189237303662 -42, 32.21875 -42 M32.21875 -42 C32.21875 -23.11370207801467, 32.21875 -4.227404156029337, 32.21875 42 M32.21875 -42 C32.21875 -19.69544702361388, 32.21875 2.6091059527722393, 32.21875 42 M32.21875 42 C11.115470471318382 42, -9.987809057363236 42, -32.21875 42 M32.21875 42 C15.853924027733505 42, -0.5109019445329892 42, -32.21875 42 M-32.21875 42 C-32.21875 15.44477910785233, -32.21875 -11.11044178429534, -32.21875 -42 M-32.21875 42 C-32.21875 9.798837266271931, -32.21875 -22.402325467456137, -32.21875 -42"></path></g><g transform="translate(0, -18)" class="annotation-group text"></g><g transform="translate(-20.21875, -18)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="40.4375"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 90px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>Thing</p></span></div></foreignObject></g></g><g transform="translate(-20.21875, 30)" class="members-group text"></g><g transform="translate(-20.21875, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 6 C-10.600916180634972 6, 11.016917638730057 6, 32.21875 6 M-32.21875 6 C-11.434072155811364 6, 9.350605688377271 6, 32.21875 6"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 24 C-16.46891072083734 24, -0.7190714416746786 24, 32.21875 24 M-32.21875 24 C-8.71645262193542 24, 14.785844756129158 24, 32.21875 24"></path></g></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="class" role="graphics-document document" viewBox="0 0 304.421875 368" height="368" class="classDiagram" width="304.421875" id="container">
+  <style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#container g.classGroup text .title{font-weight:bolder;}#container .nodeLabel,#container .edgeLabel{color:#131300;}#container .edgeLabel .label rect{fill:#ECECFF;}#container .label text{fill:#131300;}#container .labelBkg{background:#ECECFF;}#container .edgeLabel .label span{background:#ECECFF;}#container .classTitle{font-weight:bolder;}#container .node rect,#container .node circle,#container .node ellipse,#container .node polygon,#container .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#container .divider{stroke:#9370DB;stroke-width:1;}#container g.clickable{cursor:pointer;}#container g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#container g.classGroup line{stroke:#9370DB;stroke-width:1;}#container .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#container .classLabel .label{fill:#9370DB;font-size:10px;}#container .relation{stroke:#333333;stroke-width:1;fill:none;}#container .dashed-line{stroke-dasharray:3;}#container .dotted-line{stroke-dasharray:1 2;}#container #compositionStart,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #compositionEnd,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #extensionStart,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #extensionEnd,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationStart,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationEnd,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #lollipopStart,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container #lollipopEnd,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container .edgeTerminals{font-size:11px;line-height:initial;}#container .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+  <g>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="container_class-aggregationStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="container_class-aggregationEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="container_class-extensionStart">
+        <path d="M 1,7 L18,13 V 1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="container_class-extensionEnd">
+        <path d="M 1,1 V 13 L18,7 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="container_class-compositionStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="container_class-compositionEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="container_class-dependencyStart">
+        <path d="M 5,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="container_class-dependencyEnd">
+        <path d="M 18,7 L9,13 L14,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="container_class-lollipopStart">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="container_class-lollipopEnd">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <g class="root">
+      <g class="clusters"/>
+      <g class="edgePaths">
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Aspect_DataEncoding_1" d="M103.854,224.24L98.222,228.7C92.59,233.16,81.326,242.08,75.694,250.707C70.063,259.333,70.063,267.667,70.063,271.833L70.063,276"/>
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Aspect_Quantifiable_2" d="M205.482,224.24L211.114,228.7C216.746,233.16,228.01,242.08,233.642,250.707C239.273,259.333,239.273,267.667,239.273,271.833L239.273,276"/>
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Thing_Aspect_3" d="M154.668,110L154.668,111.167C154.668,112.333,154.668,114.667,154.668,120C154.668,125.333,154.668,133.667,154.668,137.833L154.668,142"/>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g transform="translate(154.66796875, 184)" id="classId-Aspect-0" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-36.703125 -42 L36.703125 -42 L36.703125 42 L-36.703125 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 -42 C-9.947014608511058 -42, 16.809095782977884 -42, 36.703125 -42 M-36.703125 -42 C-17.361234089958 -42, 1.9806568200840005 -42, 36.703125 -42 M36.703125 -42 C36.703125 -19.473961141241098, 36.703125 3.052077717517804, 36.703125 42 M36.703125 -42 C36.703125 -22.834788590786708, 36.703125 -3.669577181573416, 36.703125 42 M36.703125 42 C10.501981376495085 42, -15.69916224700983 42, -36.703125 42 M36.703125 42 C7.487518902365082 42, -21.728087195269836 42, -36.703125 42 M-36.703125 42 C-36.703125 11.244812338381092, -36.703125 -19.510375323237817, -36.703125 -42 M-36.703125 42 C-36.703125 15.756482491576271, -36.703125 -10.487035016847457, -36.703125 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-24.703125, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="49.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 99px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>Aspect</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-24.703125, 30)" class="members-group text"/>
+          <g transform="translate(-24.703125, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 6 C-20.979991610750442 6, -5.2568582215008846 6, 36.703125 6 M-36.703125 6 C-20.565695337562072 6, -4.428265675124145 6, 36.703125 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-36.703125 24 C-7.872306499610755 24, 20.95851200077849 24, 36.703125 24 M-36.703125 24 C-21.446600928837892 24, -6.190076857675784 24, 36.703125 24"/>
+          </g>
+        </g>
+        <g transform="translate(70.0625, 318)" id="classId-DataEncoding-1" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-62.0625 -42 L62.0625 -42 L62.0625 42 L-62.0625 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 -42 C-12.644080107010922 -42, 36.77433978597816 -42, 62.0625 -42 M-62.0625 -42 C-23.51086285308297 -42, 15.040774293834062 -42, 62.0625 -42 M62.0625 -42 C62.0625 -10.244952237494179, 62.0625 21.510095525011643, 62.0625 42 M62.0625 -42 C62.0625 -14.421872986368655, 62.0625 13.15625402726269, 62.0625 42 M62.0625 42 C28.033936274413726 42, -5.994627451172548 42, -62.0625 42 M62.0625 42 C12.694746710450914 42, -36.67300657909817 42, -62.0625 42 M-62.0625 42 C-62.0625 21.967444524158747, -62.0625 1.934889048317494, -62.0625 -42 M-62.0625 42 C-62.0625 16.772960159287273, -62.0625 -8.454079681425455, -62.0625 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-50.0625, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="100.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 152px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>DataEncoding</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-50.0625, 30)" class="members-group text"/>
+          <g transform="translate(-50.0625, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 6 C-23.438994547091973 6, 15.184510905816055 6, 62.0625 6 M-62.0625 6 C-30.183640702938966 6, 1.6952185941220677 6, 62.0625 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.0625 24 C-33.2916688203639 24, -4.520837640727805 24, 62.0625 24 M-62.0625 24 C-13.107933601638173 24, 35.846632796723654 24, 62.0625 24"/>
+          </g>
+        </g>
+        <g transform="translate(239.2734375, 318)" id="classId-Quantifiable-2" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-57.1484375 -42 L57.1484375 -42 L57.1484375 42 L-57.1484375 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 -42 C-28.043591479288317 -42, 1.0612545414233665 -42, 57.1484375 -42 M-57.1484375 -42 C-17.380607836319832 -42, 22.387221827360335 -42, 57.1484375 -42 M57.1484375 -42 C57.1484375 -23.11888799225061, 57.1484375 -4.237775984501219, 57.1484375 42 M57.1484375 -42 C57.1484375 -11.90909959367233, 57.1484375 18.18180081265534, 57.1484375 42 M57.1484375 42 C15.876669015417981 42, -25.395099469164037 42, -57.1484375 42 M57.1484375 42 C13.836269497783 42, -29.475898504434 42, -57.1484375 42 M-57.1484375 42 C-57.1484375 22.711436979776945, -57.1484375 3.4228739595538897, -57.1484375 -42 M-57.1484375 42 C-57.1484375 19.631524622108547, -57.1484375 -2.7369507557829067, -57.1484375 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-45.1484375, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="90.296875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 141px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>Quantifiable</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-45.1484375, 30)" class="members-group text"/>
+          <g transform="translate(-45.1484375, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 6 C-14.65793123729646 6, 27.83257502540708 6, 57.1484375 6 M-57.1484375 6 C-15.289267363667896 6, 26.569902772664207 6, 57.1484375 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-57.1484375 24 C-28.621433066896543 24, -0.09442863379308619 24, 57.1484375 24 M-57.1484375 24 C-26.323981689543327 24, 4.500474120913346 24, 57.1484375 24"/>
+          </g>
+        </g>
+        <g transform="translate(154.66796875, 50)" id="classId-Thing-3" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-32.21875 -42 L32.21875 -42 L32.21875 42 L-32.21875 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 -42 C-8.230564078771216 -42, 15.757621842457567 -42, 32.21875 -42 M-32.21875 -42 C-10.767595900222652 -42, 10.683558199554696 -42, 32.21875 -42 M32.21875 -42 C32.21875 -21.712892986047173, 32.21875 -1.4257859720943458, 32.21875 42 M32.21875 -42 C32.21875 -13.697694676037159, 32.21875 14.604610647925682, 32.21875 42 M32.21875 42 C12.163655893518186 42, -7.891438212963628 42, -32.21875 42 M32.21875 42 C15.14416723741385 42, -1.9304155251723003 42, -32.21875 42 M-32.21875 42 C-32.21875 20.82043462587302, -32.21875 -0.3591307482539605, -32.21875 -42 M-32.21875 42 C-32.21875 23.300037136671882, -32.21875 4.600074273343765, -32.21875 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-20.21875, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="40.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 90px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>Thing</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-20.21875, 30)" class="members-group text"/>
+          <g transform="translate(-20.21875, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 6 C-9.579093915437916 6, 13.060562169124168 6, 32.21875 6 M-32.21875 6 C-18.60379332456239 6, -4.988836649124774 6, 32.21875 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-32.21875 24 C-13.798818983921457 24, 4.621112032157086 24, 32.21875 24 M-32.21875 24 C-16.6241134025149 24, -1.0294768050298018 24, 32.21875 24"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
