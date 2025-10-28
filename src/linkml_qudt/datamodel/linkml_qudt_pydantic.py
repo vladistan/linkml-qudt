@@ -117,20 +117,6 @@ class Thing(ConfiguredBaseModel):
     pass
 
 
-class Error2(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'http://org.semanticweb.owlapi/error#Error2',
-         'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
-
-    pass
-
-
-class Error3(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'http://org.semanticweb.owlapi/error#Error3',
-         'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
-
-    pass
-
-
 class Aspect(Thing):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Aspect',
          'comments': ['An aspect is an abstract type class that defines properties '
@@ -940,16 +926,17 @@ class UserQuantityKind(AbstractQuantityKind):
     id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
-class Verifiable(Aspect, Error3, Error2):
+class Verifiable(Aspect):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Verifiable',
          'comments': ['An aspect class that holds properties that provide external '
                       'knowledge and specifications of a given resource.'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
-         'mixins': ['Error2', 'Aspect'],
-         'slot_usage': {'isoNormativeReference': {'name': 'isoNormativeReference',
+         'slot_usage': {'dbpediaMatch': {'name': 'dbpediaMatch', 'required': False},
+                        'isoNormativeReference': {'name': 'isoNormativeReference',
                                                   'required': False},
                         'normativeReference': {'name': 'normativeReference',
-                                               'required': False}}})
+                                               'required': False},
+                        'wikidataMatch': {'name': 'wikidataMatch', 'required': False}}})
 
     pass
 
@@ -1465,8 +1452,6 @@ class ValueUnion(Resource):
 # Model rebuild
 # see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
 Thing.model_rebuild()
-Error2.model_rebuild()
-Error3.model_rebuild()
 Aspect.model_rebuild()
 Concept.model_rebuild()
 AbstractQuantityKind.model_rebuild()

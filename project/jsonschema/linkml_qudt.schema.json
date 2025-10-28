@@ -720,18 +720,6 @@
             "title": "EnumerationScale",
             "type": "object"
         },
-        "Error2": {
-            "additionalProperties": false,
-            "description": "",
-            "title": "Error2",
-            "type": "object"
-        },
-        "Error3": {
-            "additionalProperties": false,
-            "description": "",
-            "title": "Error3",
-            "type": "object"
-        },
         "Figure": {
             "additionalProperties": false,
             "description": "",

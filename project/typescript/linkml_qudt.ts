@@ -8,16 +8,6 @@ export interface Thing {
 
 
 
-export interface Error2 {
-}
-
-
-
-export interface Error3 {
-}
-
-
-
 export interface AbstractQuantityKind extends Concept {
 }
 
@@ -415,7 +405,7 @@ export interface UserQuantityKind extends AbstractQuantityKind {
 
 
 
-export interface Verifiable extends Error3, Error2, Aspect {
+export interface Verifiable extends Aspect {
 }
 
 

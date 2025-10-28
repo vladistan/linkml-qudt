@@ -6,16 +6,6 @@
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://org.semanticweb.owlapi/error#Error2> a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:targetClass <http://org.semanticweb.owlapi/error#Error2> .
-
-<http://org.semanticweb.owlapi/error#Error3> a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( qudt:guidance qudt:hasReciprocalUnit qudt:unitFor qudt:isUnitOfSystem rdf:type qudt:omUnit qudt:belongsToSystemOfQuantities qudt:id ) ;
-    sh:targetClass <http://org.semanticweb.owlapi/error#Error3> .
-
 vaem:CatalogEntry a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
@@ -86,48 +76,48 @@ owl:Ontology a sh:NodeShape ;
 owl:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "The root class for all QUDT concepts" ;
-    sh:ignoredProperties ( rdf:type qudt:guidance qudt:id ) ;
+    sh:ignoredProperties ( qudt:belongsToSystemOfQuantities rdf:type qudt:unitFor qudt:omUnit qudt:isUnitOfSystem qudt:guidance qudt:id qudt:hasReciprocalUnit ) ;
     sh:targetClass owl:Thing .
 
 qudt:AbstractQuantityKind a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:AbstractQuantityKind .
 
 qudt:AngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
+    sh:property [ sh:order 3 ;
+            sh:path qudt:unitFor ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
         [ sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
-            sh:path qudt:guidance ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:AngleUnit .
 
 qudt:Aspect a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type qudt:guidance qudt:id ) ;
+    sh:ignoredProperties ( qudt:belongsToSystemOfQuantities rdf:type qudt:unitFor qudt:omUnit qudt:isUnitOfSystem qudt:guidance qudt:id qudt:hasReciprocalUnit ) ;
     sh:targetClass qudt:Aspect .
 
 qudt:AspectClass a sh:NodeShape ;
@@ -150,13 +140,13 @@ qudt:BaseDimensionMagnitude a sh:NodeShape ;
 qudt:BinaryPrefix a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:BinaryPrefix .
 
 qudt:BitEncodingType a sh:NodeShape ;
@@ -186,13 +176,13 @@ qudt:BooleanEncodingType a sh:NodeShape ;
 qudt:ByteEncodingType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:ByteEncodingType .
 
 qudt:CardinalityType a sh:NodeShape ;
@@ -210,18 +200,6 @@ qudt:CardinalityType a sh:NodeShape ;
 qudt:CharEncodingType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ] ;
-    sh:targetClass qudt:CharEncodingType .
-
-qudt:Citation a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
@@ -229,6 +207,18 @@ qudt:Citation a sh:NodeShape ;
         [ sh:maxCount 1 ;
             sh:order 1 ;
             sh:path qudt:id ] ;
+    sh:targetClass qudt:CharEncodingType .
+
+qudt:Citation a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:Citation .
 
 qudt:Comment a sh:NodeShape ;
@@ -251,29 +241,43 @@ qudt:Concept a sh:NodeShape ;
 qudt:ConstantValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:ConstantValue .
 
 qudt:ContextualUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:class qudt:SystemOfUnits ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
         [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
-        [ sh:class qudt:SystemOfUnits ;
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ] ;
+    sh:targetClass qudt:ContextualUnit .
+
+qudt:CountingUnit a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
@@ -281,31 +285,17 @@ qudt:ContextualUnit a sh:NodeShape ;
             sh:order 5 ;
             sh:path qudt:id ],
         [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
-    sh:targetClass qudt:ContextualUnit .
-
-qudt:CountingUnit a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 3 ;
+            sh:path qudt:omUnit ],
+        [ sh:order 3 ;
             sh:path qudt:unitFor ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
-        [ sh:class qudt:SystemOfUnits ;
+        [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ] ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ] ;
     sh:targetClass qudt:CountingUnit .
 
 qudt:CurrencyUnit a sh:NodeShape ;
@@ -315,21 +305,21 @@ qudt:CurrencyUnit a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
         [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
         [ sh:order 3 ;
             sh:path qudt:unitFor ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
         [ sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
-        [ sh:class qudt:SystemOfUnits ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ] ;
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ] ;
     sh:targetClass qudt:CurrencyUnit .
 
 qudt:DataEncoding a sh:NodeShape ;
@@ -373,57 +363,57 @@ qudt:DerivedUnit a sh:NodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ] ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:DerivedUnit .
 
 qudt:DimensionlessUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
         [ sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ] ;
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ] ;
     sh:targetClass qudt:DimensionlessUnit .
 
 qudt:Discipline a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:Discipline .
 
 qudt:Encoding a sh:NodeShape ;
@@ -465,25 +455,25 @@ qudt:EnumeratedQuantity a sh:NodeShape ;
 qudt:EnumeratedValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:EnumeratedValue .
 
 qudt:Enumeration a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:Enumeration .
 
 qudt:EnumerationScale a sh:NodeShape ;
@@ -525,18 +515,6 @@ qudt:FloatingPointEncodingType a sh:NodeShape ;
 qudt:IntegerEncodingType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ] ;
-    sh:targetClass qudt:IntegerEncodingType .
-
-qudt:IntervalScale a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
@@ -544,6 +522,18 @@ qudt:IntervalScale a sh:NodeShape ;
         [ sh:maxCount 1 ;
             sh:order 1 ;
             sh:path qudt:id ] ;
+    sh:targetClass qudt:IntegerEncodingType .
+
+qudt:IntervalScale a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:IntervalScale .
 
 qudt:LatexString a sh:NodeShape ;
@@ -554,25 +544,25 @@ qudt:LatexString a sh:NodeShape ;
 qudt:LogarithmicUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:class qudt:SystemOfUnits ;
+    sh:property [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
         [ sh:order 3 ;
             sh:path qudt:unitFor ],
-        [ sh:class qudt:Unit ;
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ] ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ] ;
     sh:targetClass qudt:LogarithmicUnit .
 
 qudt:MathsFunctionType a sh:NodeShape ;
@@ -631,13 +621,13 @@ qudt:OrderedType a sh:NodeShape ;
 qudt:OrdinalScale a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:OrdinalScale .
 
 qudt:Organization a sh:NodeShape ;
@@ -667,11 +657,14 @@ qudt:PhysicalConstant a sh:NodeShape ;
 qudt:PlaneAngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 3 ;
+    sh:property [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
+        [ sh:order 3 ;
             sh:path qudt:unitFor ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
@@ -680,12 +673,9 @@ qudt:PlaneAngleUnit a sh:NodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:PlaneAngleUnit .
 
 qudt:Prefix a sh:NodeShape ;
@@ -702,19 +692,19 @@ qudt:Prefix a sh:NodeShape ;
 
 qudt:Quantifiable a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type qudt:guidance qudt:id ) ;
+    sh:ignoredProperties ( qudt:id rdf:type qudt:guidance ) ;
     sh:targetClass qudt:Quantifiable .
 
 qudt:Quantity a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:Quantity .
 
 qudt:QuantityKind a sh:NodeShape ;
@@ -736,13 +726,13 @@ qudt:QuantityKind a sh:NodeShape ;
 qudt:QuantityKindDimensionVector a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:QuantityKindDimensionVector .
 
 qudt:QuantityKindDimensionVector_CGS a sh:NodeShape ;
@@ -760,18 +750,6 @@ qudt:QuantityKindDimensionVector_CGS a sh:NodeShape ;
 qudt:QuantityKindDimensionVector_CGS-EMU a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ] ;
-    sh:targetClass qudt:QuantityKindDimensionVector_CGS-EMU .
-
-qudt:QuantityKindDimensionVector_CGS-ESU a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
@@ -779,6 +757,18 @@ qudt:QuantityKindDimensionVector_CGS-ESU a sh:NodeShape ;
         [ sh:maxCount 1 ;
             sh:order 1 ;
             sh:path qudt:id ] ;
+    sh:targetClass qudt:QuantityKindDimensionVector_CGS-EMU .
+
+qudt:QuantityKindDimensionVector_CGS-ESU a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_CGS-ESU .
 
 qudt:QuantityKindDimensionVector_CGS-GAUSS a sh:NodeShape ;
@@ -808,25 +798,25 @@ qudt:QuantityKindDimensionVector_CGS-LH a sh:NodeShape ;
 qudt:QuantityKindDimensionVector_ISO a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_ISO .
 
 qudt:QuantityKindDimensionVector_Imperial a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_Imperial .
 
 qudt:QuantityKindDimensionVector_SI a sh:NodeShape ;
@@ -844,18 +834,6 @@ qudt:QuantityKindDimensionVector_SI a sh:NodeShape ;
 qudt:QuantityType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ] ;
-    sh:targetClass qudt:QuantityType .
-
-qudt:QuantityValue a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
@@ -863,6 +841,18 @@ qudt:QuantityValue a sh:NodeShape ;
         [ sh:maxCount 1 ;
             sh:order 1 ;
             sh:path qudt:id ] ;
+    sh:targetClass qudt:QuantityType .
+
+qudt:QuantityValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityValue .
 
 qudt:RatioScale a sh:NodeShape ;
@@ -928,13 +918,13 @@ qudt:Scale a sh:NodeShape ;
 qudt:ScaleType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:ScaleType .
 
 qudt:SignednessType a sh:NodeShape ;
@@ -945,7 +935,9 @@ qudt:SignednessType a sh:NodeShape ;
 qudt:SolidAngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
@@ -955,15 +947,13 @@ qudt:SolidAngleUnit a sh:NodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:SolidAngleUnit .
 
 qudt:StringEncodingType a sh:NodeShape ;
@@ -974,13 +964,13 @@ qudt:StringEncodingType a sh:NodeShape ;
 qudt:Symbol a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:Symbol .
 
 qudt:SymmetricRelation a sh:NodeShape ;
@@ -1029,7 +1019,7 @@ qudt:ValueUnion a sh:NodeShape ;
 
 qudt:Verifiable a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( qudt:guidance qudt:hasReciprocalUnit qudt:unitFor qudt:isUnitOfSystem rdf:type qudt:omUnit qudt:belongsToSystemOfQuantities qudt:id ) ;
+    sh:ignoredProperties ( qudt:belongsToSystemOfQuantities rdf:type qudt:unitFor qudt:omUnit qudt:isUnitOfSystem qudt:guidance qudt:id qudt:hasReciprocalUnit ) ;
     sh:targetClass qudt:Verifiable .
 
 qudt:SystemOfQuantityKinds a sh:NodeShape ;
@@ -1047,23 +1037,29 @@ qudt:SystemOfQuantityKinds a sh:NodeShape ;
 qudt:SystemOfUnits a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:SystemOfUnits .
 
 qudt:Unit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
+    sh:property [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
         [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
@@ -1071,12 +1067,6 @@ qudt:Unit a sh:NodeShape ;
         [ sh:class qudt:SystemOfUnits ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:isUnitOfSystem ] ;
     sh:targetClass qudt:Unit .
 

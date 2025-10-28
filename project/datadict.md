@@ -16,7 +16,7 @@ qudt
 
 ## ERD Diagram
 
-![erd_abstractquantitykind](images/erd_abstractquantitykind.svg)
+![erd_diagram](images/erd_diagram.svg)
 
 ## Base Classes
 
@@ -26,7 +26,6 @@ These classes have no direct relationships but serve as base classes for other c
 | Class | Description |
 | --- | --- |
 | [Aspect](#Aspect) |  |
-| [Error3](#Error3) |  |
 | [Resource](#Resource) |  |
 | [Thing](#Thing) | The root class for all QUDT concepts |
 | [Verifiable](#Verifiable) |  |
@@ -42,7 +41,6 @@ These classes are completely isolated with no relationships and are not used as 
 | [CatalogEntry](#CatalogEntry) |  |
 | [Comment](#Comment) |  |
 | [DateTimeStringEncodingType](#DateTimeStringEncodingType) |  |
-| [Error2](#Error2) |  |
 | [LatexString](#LatexString) |  |
 | [List](#List) |  |
 | [NISTSP811Comment](#NISTSP811Comment) |  |
@@ -147,6 +145,8 @@ AbstractQuantityKind:
 AngleUnit:
   is_a: DimensionlessUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -204,6 +204,7 @@ AngleUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -231,6 +232,7 @@ AngleUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -281,9 +283,6 @@ This class has no attributes
 
  * [DataEncoding](#DataEncoding)
  * [Quantifiable](#Quantifiable)
-
-#### Used as mixin by
-
  * [Verifiable](#Verifiable)
 
 
@@ -401,6 +400,8 @@ A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, 
 BinaryPrefix:
   is_a: Prefix
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Prefix_exactMatch
@@ -428,6 +429,7 @@ BinaryPrefix:
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | exactMatch | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | latexSymbol | <sub>0..\*</sub> | None |  |
@@ -435,6 +437,7 @@ BinaryPrefix:
 | prefixMultiplier | <sub>0..1</sub> | None |  |
 | symbol | <sub>0..\*</sub> | None |  |
 | ucumCode | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -615,6 +618,8 @@ ByteEncodingType:
 CardinalityType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -644,9 +649,11 @@ CardinalityType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **literal** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
@@ -843,6 +850,8 @@ Comment:
   mixins:
   - Thing
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Comment_rationale
@@ -865,8 +874,10 @@ Comment:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **description** | <sub>0..1</sub> | None |  |
 | **rationale** | <sub>0..\*</sub> | string |  |
 
@@ -1062,6 +1073,8 @@ ConstantValue:
 ContextualUnit:
   is_a: Unit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -1123,6 +1136,7 @@ ContextualUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -1150,6 +1164,7 @@ ContextualUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -1176,6 +1191,8 @@ Used for all units that express counts. Examples are Atomic Number, Number, Numb
 CountingUnit:
   is_a: DimensionlessUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -1233,6 +1250,7 @@ CountingUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -1260,6 +1278,7 @@ CountingUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -1288,6 +1307,8 @@ Used for all units that express currency.
 CurrencyUnit:
   is_a: DimensionlessUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -1352,6 +1373,7 @@ CurrencyUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -1379,6 +1401,7 @@ CurrencyUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **currencyCode** | <sub>0..1</sub> | None |  |
 | **currencyExponent** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
@@ -1686,6 +1709,8 @@ A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 
 DecimalPrefix:
   is_a: Prefix
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Prefix_exactMatch
@@ -1713,6 +1738,7 @@ DecimalPrefix:
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | exactMatch | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | latexSymbol | <sub>0..\*</sub> | None |  |
@@ -1720,6 +1746,7 @@ DecimalPrefix:
 | prefixMultiplier | <sub>0..1</sub> | None |  |
 | symbol | <sub>0..\*</sub> | None |  |
 | ucumCode | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -1746,6 +1773,8 @@ A DerivedUnit is a type specification for units that are derived from other unit
 DerivedUnit:
   is_a: Unit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -1803,6 +1832,7 @@ DerivedUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -1830,6 +1860,7 @@ DerivedUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -1856,6 +1887,8 @@ A Dimensionless Unit is a quantity for which all the exponents of the factors co
 DimensionlessUnit:
   is_a: Unit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -1913,6 +1946,7 @@ DimensionlessUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -1940,6 +1974,7 @@ DimensionlessUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -2089,6 +2124,8 @@ Encoding:
 EndianType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -2114,9 +2151,11 @@ EndianType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -2205,6 +2244,8 @@ EnumeratedValue:
   mixins:
   - Concept
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -2236,8 +2277,10 @@ EnumeratedValue:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 | **description** | <sub>0..1</sub> | None |  |
@@ -2406,64 +2449,6 @@ EnumerationScale:
 #### Uses
 
  *  mixin: [Enumeration](#Enumeration)
-
-
-
-
-### Error2
-
-
-
-
-#### YAML Definition
-
-<details>
-<summary>Click to expand</summary>
-
-```yaml
-Error2: {}
-
-```
-</details>
-
-
-This class has no attributes
-
-
-#### Used as mixin by
-
- * [Verifiable](#Verifiable)
-
-
-
-
-### Error3
-
-
-
-
-#### YAML Definition
-
-<details>
-<summary>Click to expand</summary>
-
-```yaml
-Error3: {}
-
-```
-</details>
-
-
-#### Local class diagram
-
-![class_error3_local](images/class_error3_local.svg)
-
-This class has no attributes
-
-
-#### Children
-
- * [Verifiable](#Verifiable)
 
 
 
@@ -2778,6 +2763,8 @@ Logarithmic units are abstract mathematical units that can be used to express an
 LogarithmicUnit:
   is_a: DimensionlessUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -2835,6 +2822,7 @@ LogarithmicUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -2862,6 +2850,7 @@ LogarithmicUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -2939,6 +2928,8 @@ MathsFunctionType:
 NIST_SP811_Comment:
   is_a: Comment
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Comment_rationale
@@ -2957,9 +2948,11 @@ NIST_SP811_Comment:
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | description | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | rationale | <sub>0..\*</sub> | string |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 
 #### Parents
 
@@ -3112,6 +3105,8 @@ This class has no attributes
 OrderedType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -3141,9 +3136,11 @@ OrderedType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **literal** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
@@ -3418,6 +3415,8 @@ PhysicalConstant:
 PlaneAngleUnit:
   is_a: AngleUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -3475,6 +3474,7 @@ PlaneAngleUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -3502,6 +3502,7 @@ PlaneAngleUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -3528,6 +3529,8 @@ Prefix:
   mixins:
   - Concept
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Prefix_exactMatch
@@ -3567,8 +3570,10 @@ Prefix:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 | **altSymbol** | <sub>0..\*</sub> | None |  |
@@ -3794,6 +3799,8 @@ QuantityKind:
   mixins:
   - AbstractQuantityKind
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - belongsToSystemOfQuantities
@@ -3863,8 +3870,10 @@ QuantityKind:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **applicableCGSUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
 | **applicableISOUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
 | **applicableImperialUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
@@ -4627,6 +4636,8 @@ QuantityKindDimensionVector_SI:
 QuantityType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -4656,9 +4667,11 @@ QuantityType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **value** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
@@ -4854,6 +4867,8 @@ Rule:
   mixins:
   - Concept
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - Rule_ruleType
@@ -4881,8 +4896,10 @@ Rule:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 | **rationale** | <sub>0..\*</sub> | string |  |
@@ -4917,6 +4934,8 @@ Rule:
 RuleType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -4942,9 +4961,11 @@ RuleType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -5165,6 +5186,8 @@ Scale:
 ScaleType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -5200,9 +5223,11 @@ ScaleType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | **dataStructure** | <sub>0..1</sub> | None |  |
 | **permissibleMaths** | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
 | **permissibleTransformation** | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
@@ -5257,6 +5282,8 @@ This class has no attributes
 SolidAngleUnit:
   is_a: AngleUnit
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -5314,6 +5341,7 @@ SolidAngleUnit:
 | conversionMultiplierSN | <sub>0..1</sub> | None |  |
 | conversionOffset | <sub>0..1</sub> | None |  |
 | conversionOffsetSN | <sub>0..1</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
@@ -5341,6 +5369,7 @@ SolidAngleUnit:
 | udunitsCode | <sub>0..\*</sub> | string |  |
 | uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -5571,6 +5600,8 @@ SystemOfUnits:
   mixins:
   - Concept
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - SystemOfUnits_applicablePhysicalConstant
@@ -5619,8 +5650,10 @@ SystemOfUnits:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 | **applicablePhysicalConstant** | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
@@ -5721,6 +5754,8 @@ This class has no attributes
 TransformType:
   is_a: EnumeratedValue
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - EnumeratedValue_altSymbol
@@ -5746,9 +5781,11 @@ TransformType:
 | description | <sub>0..1</sub> | None |  |
 | abbreviation | <sub>0..1</sub> | None |  |
 | altSymbol | <sub>0..\*</sub> | None |  |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
 | symbol | <sub>0..1</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 
@@ -5850,6 +5887,8 @@ Unit:
   mixins:
   - Concept
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   - hasReciprocalUnit
@@ -5959,8 +5998,10 @@ Unit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dbpediaMatch | <sub>0..\*</sub> | uri |  |
 | isoNormativeReference | <sub>0..\*</sub> | None |  |
 | normativeReference | <sub>0..\*</sub> | None |  |
+| wikidataMatch | <sub>0..\*</sub> | uri |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
 | **altSymbol** | <sub>0..\*</sub> | None |  |
@@ -6111,14 +6152,17 @@ An aspect class that holds properties that provide external knowledge and specif
 
 ```yaml
 Verifiable:
-  is_a: Error3
-  mixins:
-  - Error2
-  - Aspect
+  is_a: Aspect
   slots:
+  - Verifiable_wikidataMatch
+  - Verifiable_dbpediaMatch
   - Verifiable_isoNormativeReference
   - Verifiable_normativeReference
   slot_usage:
+    wikidataMatch:
+      required: false
+    dbpediaMatch:
+      required: false
     isoNormativeReference:
       required: false
     normativeReference:
@@ -6136,12 +6180,14 @@ Verifiable:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| **dbpediaMatch** | <sub>0..\*</sub> | uri |  |
 | **isoNormativeReference** | <sub>0..\*</sub> | None |  |
 | **normativeReference** | <sub>0..\*</sub> | None |  |
+| **wikidataMatch** | <sub>0..\*</sub> | uri |  |
 
 #### Parents
 
- * [Error3](#Error3)
+ * [Aspect](#Aspect)
 
 #### Children
 
@@ -6152,11 +6198,6 @@ Verifiable:
  * [Rule](#Rule)
  * [SystemOfUnits](#SystemOfUnits)
  * [Unit](#Unit)
-
-#### Uses
-
- *  mixin: [Aspect](#Aspect)
- *  mixin: [Error2](#Error2)
 
 
 

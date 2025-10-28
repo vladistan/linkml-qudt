@@ -21,10 +21,6 @@ classes:
   Thing:
     description: The root class for all QUDT concepts
     class_uri: owl:Thing
-  Error2:
-    class_uri: http://org.semanticweb.owlapi/error#Error2
-  Error3:
-    class_uri: http://org.semanticweb.owlapi/error#Error3
   AbstractQuantityKind:
     is_a: Concept
     slot_usage:
@@ -950,11 +946,12 @@ classes:
     comments:
     - An aspect class that holds properties that provide external knowledge and specifications
       of a given resource.
-    is_a: Error3
-    mixins:
-    - Error2
-    - Aspect
+    is_a: Aspect
     slot_usage:
+      wikidataMatch:
+        required: false
+      dbpediaMatch:
+        required: false
       isoNormativeReference:
         required: false
       normativeReference:

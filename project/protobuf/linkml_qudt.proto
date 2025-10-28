@@ -18,6 +18,8 @@ message AbstractQuantityKind
  }
 message AngleUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -75,6 +77,8 @@ message BaseDimensionMagnitude
  }
 message BinaryPrefix
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  prefix exactMatch = 0
@@ -133,6 +137,8 @@ message ByteEncodingType
  }
 message CardinalityType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -174,6 +180,8 @@ message Citation
  }
 message Comment
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string rationale = 0
@@ -212,6 +220,8 @@ message ConstantValue
  }
 message ContextualUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -257,6 +267,8 @@ message ContextualUnit
  }
 message CountingUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -301,6 +313,8 @@ message CountingUnit
  }
 message CurrencyUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -397,6 +411,8 @@ message DateTimeStringEncodingType
  }
 message DecimalPrefix
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  prefix exactMatch = 0
@@ -416,6 +432,8 @@ message DecimalPrefix
  }
 message DerivedUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -460,6 +478,8 @@ message DerivedUnit
  }
 message DimensionlessUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -528,6 +548,8 @@ message Encoding
  }
 message EndianType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -556,6 +578,8 @@ message EnumeratedQuantity
  }
 message EnumeratedValue
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -660,6 +684,8 @@ message IntervalScale
  }
 message LogarithmicUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -715,6 +741,8 @@ message MathsFunctionType
  }
 message NISTSP811Comment
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string rationale = 0
@@ -748,6 +776,8 @@ message NumericUnion
  }
 message OrderedType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -828,6 +858,8 @@ message PhysicalConstant
  }
 message PlaneAngleUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -872,6 +904,8 @@ message PlaneAngleUnit
  }
 message Prefix
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  prefix exactMatch = 0
@@ -924,6 +958,8 @@ message Quantity
  }
 message QuantityKind
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  systemOfQuantityKinds belongsToSystemOfQuantities = 0
@@ -1154,6 +1190,8 @@ message QuantityKindDimensionVectorSI
  }
 message QuantityType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -1204,6 +1242,8 @@ message RatioScale
  }
 message Rule
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  ruleType ruleType = 0
@@ -1219,6 +1259,8 @@ message Rule
  }
 message RuleType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -1285,6 +1327,8 @@ message Scale
  }
 message ScaleType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -1303,6 +1347,8 @@ message ScaleType
  }
 message SolidAngleUnit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -1374,6 +1420,8 @@ message SystemOfQuantityKinds
  }
 message SystemOfUnits
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  physicalConstant applicablePhysicalConstant = 0
@@ -1396,6 +1444,8 @@ message SystemOfUnits
  }
 message TransformType
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  string altSymbol = 0
@@ -1411,6 +1461,8 @@ message TransformType
  }
 message Unit
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  repeated  unit hasReciprocalUnit = 0
@@ -1471,6 +1523,8 @@ message UserQuantityKind
  }
 message Verifiable
  {
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
  }

@@ -80,7 +80,7 @@ linkml:Sparqlpath xsd:string
           ) ;
           rdf:type [ <Aspect> ] ?
        )
-    } OR @<DataEncoding> OR @<Quantifiable>
+    } OR @<DataEncoding> OR @<Quantifiable> OR @<Verifiable>
 )
 
 <AspectClass> CLOSED {
@@ -411,20 +411,6 @@ linkml:Sparqlpath xsd:string
        rdf:type [ <EnumerationScale> ] ?
     )
 }
-
-<Error2> CLOSED {
-    (  $<Error2_tes> rdf:type . * ;
-       rdf:type [ <http://org.semanticweb.owlapi/error#Error2> ] ?
-    )
-}
-
-<Error3>  (
-    CLOSED {
-       (  $<Error3_tes> rdf:type . * ;
-          rdf:type [ <http://org.semanticweb.owlapi/error#Error3> ] ?
-       )
-    } OR @<Verifiable>
-)
 
 <Figure> CLOSED {
     (  $<Figure_tes> (  &<Concept_tes> ;
@@ -1110,12 +1096,10 @@ linkml:Sparqlpath xsd:string
 
 <Verifiable>  (
     CLOSED {
-       (  $<Verifiable_tes> (  &<Error3_tes> ;
-             rdf:type [ <http://org.semanticweb.owlapi/error#Error3> ] ? ;
-             &<Error2_tes> ;
-             rdf:type [ <http://org.semanticweb.owlapi/error#Error2> ] ? ;
-             &<Aspect_tes> ;
+       (  $<Verifiable_tes> (  &<Aspect_tes> ;
              rdf:type [ <Aspect> ] ? ;
+             <wikidataMatch> @linkml:Uri * ;
+             <dbpediaMatch> @linkml:Uri * ;
              <isoNormativeReference> @linkml:String * ;
              <normativeReference> @linkml:String *
           ) ;

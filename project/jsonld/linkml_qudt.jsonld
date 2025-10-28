@@ -6942,6 +6942,48 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "Verifiable_wikidataMatch",
+      "definition_uri": "https://w3id.org/None/wikidataMatch",
+      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
+      "mappings": [
+        "https://w3id.org/None/wikidataMatch"
+      ],
+      "is_a": "wikidataMatch",
+      "domain": "Verifiable",
+      "slot_uri": "https://w3id.org/None/wikidataMatch",
+      "alias": "wikidataMatch",
+      "owner": "Verifiable",
+      "domain_of": [
+        "Verifiable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "wikidataMatch",
+      "range": "uri",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Verifiable_dbpediaMatch",
+      "definition_uri": "https://w3id.org/None/dbpediaMatch",
+      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
+      "mappings": [
+        "https://w3id.org/None/dbpediaMatch"
+      ],
+      "is_a": "dbpediaMatch",
+      "domain": "Verifiable",
+      "slot_uri": "https://w3id.org/None/dbpediaMatch",
+      "alias": "dbpediaMatch",
+      "owner": "Verifiable",
+      "domain_of": [
+        "Verifiable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dbpediaMatch",
+      "range": "uri",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "Verifiable_isoNormativeReference",
       "definition_uri": "https://w3id.org/None/isoNormativeReference",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -6998,28 +7040,6 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "Error2",
-      "definition_uri": "https://w3id.org/None/Error2",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "http://org.semanticweb.owlapi/error#Error2"
-      ],
-      "slot_usage": {},
-      "class_uri": "http://org.semanticweb.owlapi/error#Error2",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "Error3",
-      "definition_uri": "https://w3id.org/None/Error3",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "http://org.semanticweb.owlapi/error#Error3"
-      ],
-      "slot_usage": {},
-      "class_uri": "http://org.semanticweb.owlapi/error#Error3",
-      "@type": "ClassDefinition"
-    },
-    {
       "name": "AbstractQuantityKind",
       "definition_uri": "https://w3id.org/None/AbstractQuantityKind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -7054,6 +7074,8 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7166,6 +7188,8 @@
       ],
       "is_a": "Prefix",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Prefix_exactMatch",
@@ -7268,6 +7292,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -7348,6 +7374,8 @@
         "Thing"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Comment_rationale",
@@ -7425,6 +7453,8 @@
       ],
       "is_a": "Unit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7484,6 +7514,8 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7543,6 +7575,8 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7700,6 +7734,8 @@
       ],
       "is_a": "Prefix",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Prefix_exactMatch",
@@ -7733,6 +7769,8 @@
       ],
       "is_a": "Unit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7791,6 +7829,8 @@
       ],
       "is_a": "Unit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -7892,6 +7932,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -7945,6 +7987,8 @@
         "Concept"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -8139,6 +8183,8 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -8216,6 +8262,8 @@
       ],
       "is_a": "Comment",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Comment_rationale",
@@ -8287,6 +8335,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -8417,6 +8467,8 @@
       ],
       "is_a": "AngleUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -8475,6 +8527,8 @@
         "Concept"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Prefix_exactMatch",
@@ -8575,6 +8629,8 @@
         "AbstractQuantityKind"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "belongsToSystemOfQuantities",
@@ -8933,6 +8989,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -9028,6 +9086,8 @@
         "Concept"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "Rule_ruleType",
@@ -9054,6 +9114,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -9156,6 +9218,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -9196,6 +9260,8 @@
       ],
       "is_a": "AngleUnit",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -9342,6 +9408,8 @@
         "Concept"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "SystemOfUnits_applicablePhysicalConstant",
@@ -9375,6 +9443,8 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "EnumeratedValue_altSymbol",
@@ -9404,6 +9474,8 @@
         "Concept"
       ],
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
         "hasReciprocalUnit",
@@ -9487,12 +9559,10 @@
       "mappings": [
         "qudt:Verifiable"
       ],
-      "is_a": "Error3",
-      "mixins": [
-        "Error2",
-        "Aspect"
-      ],
+      "is_a": "Aspect",
       "slots": [
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference"
       ],
@@ -9660,9 +9730,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-10-28T08:43:35",
-  "source_file_size": 50879,
-  "generation_date": "2025-10-28T08:43:41",
+  "source_file_date": "2025-10-28T09:41:41",
+  "source_file_size": 50794,
+  "generation_date": "2025-10-28T10:15:45",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",
