@@ -101,6 +101,9 @@ erDiagram
 AbstractQuantityKind {
     stringList guidance  
     string id  
+    stringList altSymbol  
+    stringList latexSymbol  
+    string symbol  
 }
 AngleUnit {
     stringList omUnit  
@@ -111,6 +114,7 @@ AngleUnit {
 BaseDimensionMagnitude {
     stringList guidance  
     string id  
+    float vectorMagnitude  
 }
 BinaryPrefix {
     stringList guidance  
@@ -131,6 +135,7 @@ ByteEncodingType {
 CardinalityType {
     stringList guidance  
     string id  
+    string literal  
 }
 CharEncodingType {
     stringList guidance  
@@ -139,14 +144,22 @@ CharEncodingType {
 Citation {
     stringList guidance  
     string id  
+    string description  
+    string url  
 }
 Concept {
     stringList guidance  
     string id  
+    string isReplacedBy  
+    string description  
+    string abbreviation  
+    string deprecated  
+    string plainTextDescription  
 }
 ConstantValue {
     stringList guidance  
     string id  
+    stringList exactConstant  
 }
 ContextualUnit {
     stringList omUnit  
@@ -165,6 +178,8 @@ CurrencyUnit {
     stringList unitFor  
     stringList guidance  
     string id  
+    string currencyCode  
+    string currencyExponent  
 }
 DataEncoding {
 
@@ -172,10 +187,25 @@ DataEncoding {
 DataItem {
     stringList guidance  
     string id  
+    string value  
 }
 Datatype {
     stringList guidance  
     string id  
+    string ansiSQLName  
+    string cName  
+    string oracleSQLName  
+    string protocolBuffersName  
+    string pythonName  
+    string vbName  
+    string bounded  
+    string javaName  
+    string jsName  
+    string matlabName  
+    string microsoftSQLServerName  
+    string mySQLName  
+    string odbcName  
+    string oleDBName  
 }
 DecimalPrefix {
     stringList guidance  
@@ -200,6 +230,8 @@ Discipline {
 Encoding {
     stringList guidance  
     string id  
+    string bits  
+    string bytes  
 }
 EndianType {
     stringList guidance  
@@ -212,10 +244,15 @@ EnumeratedQuantity {
 EnumeratedValue {
     stringList guidance  
     string id  
+    stringList altSymbol  
+    string description  
+    string abbreviation  
+    string symbol  
 }
 Enumeration {
     stringList guidance  
     string id  
+    string abbreviation  
 }
 EnumerationScale {
     stringList guidance  
@@ -224,6 +261,13 @@ EnumerationScale {
 Figure {
     stringList guidance  
     string id  
+    string imageLocation  
+    string figureCaption  
+    string figureLabel  
+    string height  
+    string image  
+    string landscape  
+    string width  
 }
 FloatingPointEncodingType {
     stringList guidance  
@@ -258,18 +302,30 @@ NumericUnion {
 OrderedType {
     stringList guidance  
     string id  
+    string literal  
 }
 OrdinalScale {
     stringList guidance  
     string id  
+    string order  
 }
 Organization {
     stringList guidance  
     string id  
+    stringList url  
 }
 PhysicalConstant {
     stringList guidance  
     string id  
+    stringList ucumCode  
+    booleanList exactConstant  
+    stringList altSymbol  
+    stringList isoNormativeReference  
+    stringList latexSymbol  
+    stringList normativeReference  
+    stringList symbol  
+    string latexDefinition  
+    string mathMLdefinition  
 }
 PlaneAngleUnit {
     stringList omUnit  
@@ -280,21 +336,43 @@ PlaneAngleUnit {
 Prefix {
     stringList guidance  
     string id  
+    stringList altSymbol  
+    stringList latexSymbol  
+    stringList symbol  
+    string prefixMultiplier  
 }
 Quantifiable {
-
+    double relativeStandardUncertainty  
+    decimal standardUncertainty  
+    doubleList standardUncertaintySN  
+    string value  
+    string valueSN  
 }
 Quantity {
     stringList guidance  
     string id  
+    booleanList isDeltaQuantity  
 }
 QuantityKind {
     stringList guidance  
     string id  
+    stringList iec61360Code  
+    string latexDefinition  
+    string mathMLdefinition  
 }
 QuantityKindDimensionVector {
     stringList guidance  
     string id  
+    stringList latexSymbol  
+    string dimensionExponentForAmountOfSubstance  
+    string dimensionExponentForElectricCurrent  
+    string dimensionExponentForLength  
+    string dimensionExponentForLuminousIntensity  
+    string dimensionExponentForMass  
+    string dimensionExponentForThermodynamicTemperature  
+    string dimensionExponentForTime  
+    string dimensionlessExponent  
+    string latexDefinition  
 }
 QuantityKindDimensionVectorCGS {
     stringList guidance  
@@ -343,6 +421,7 @@ RatioScale {
 Rule {
     stringList guidance  
     string id  
+    stringList rationale  
 }
 RuleType {
     stringList guidance  
@@ -351,14 +430,23 @@ RuleType {
 ScalarDatatype {
     stringList guidance  
     string id  
+    string bits  
+    string bytes  
+    string length  
+    string maxExclusive  
+    string maxInclusive  
+    string minExclusive  
+    string minInclusive  
 }
 Scale {
     stringList guidance  
     string id  
+    string dataStructure  
 }
 ScaleType {
     stringList guidance  
     string id  
+    string dataStructure  
 }
 SolidAngleUnit {
     stringList omUnit  
@@ -393,6 +481,20 @@ Unit {
     stringList unitFor  
     stringList guidance  
     string id  
+    stringList iec61360Code  
+    stringList udunitsCode  
+    stringList uneceCommonCode  
+    stringList altSymbol  
+    stringList latexDefinition  
+    stringList latexSymbol  
+    stringList siUnitsExpression  
+    stringList symbol  
+    string conversionMultiplier  
+    string conversionMultiplierSN  
+    string conversionOffset  
+    string conversionOffsetSN  
+    string factorUnitScalar  
+    string mathMLdefinition  
 }
 UserQuantityKind {
     stringList guidance  
@@ -404,25 +506,97 @@ __Class {
 
 AngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 AngleUnit ||--}o Unit : "hasReciprocalUnit"
+BaseDimensionMagnitude ||--|| QuantityKind : "hasBaseQuantityKind"
+Concept ||--}o Rule : "hasRule"
 ContextualUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 ContextualUnit ||--}o Unit : "hasReciprocalUnit"
 CountingUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 CountingUnit ||--}o Unit : "hasReciprocalUnit"
 CurrencyUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 CurrencyUnit ||--}o Unit : "hasReciprocalUnit"
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
 DerivedUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 DerivedUnit ||--}o Unit : "hasReciprocalUnit"
 DimensionlessUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 DimensionlessUnit ||--}o Unit : "hasReciprocalUnit"
+EnumeratedQuantity ||--}o EnumeratedValue : "enumeratedValue"
+EnumeratedQuantity ||--}o Enumeration : "enumeration"
+Enumeration ||--|o EnumeratedValue : "default"
+Enumeration ||--}| EnumeratedValue : "element"
 LogarithmicUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 LogarithmicUnit ||--}o Unit : "hasReciprocalUnit"
+PhysicalConstant ||--}o PhysicalConstant : "exactMatch"
+PhysicalConstant ||--}o QuantityKindDimensionVector : "hasDimensionVector"
+PhysicalConstant ||--}o SystemOfUnits : "applicableSystem"
+PhysicalConstant ||--}o Unit : "applicableUnit"
 PlaneAngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 PlaneAngleUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Quantifiable ||--|o DataEncoding : "dataEncoding"
+Quantifiable ||--|o Datatype : "datatype"
+Quantifiable ||--|o Unit : "hasUnit"
+Quantity ||--}o QuantityKind : "hasQuantityKind"
+Quantity ||--}o QuantityValue : "quantityValue"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+QuantityType ||--}o QuantityKind : "value"
+QuantityValue ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+ScalarDatatype ||--|o Datatype : "rdfsDatatype"
+Scale ||--|o ScaleType : "scaleType"
+Scale ||--}o MathsFunctionType : "permissibleMaths"
+Scale ||--}o TransformType : "permissibleTransformation"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 SolidAngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 SolidAngleUnit ||--}o Unit : "hasReciprocalUnit"
+SystemOfQuantityKinds ||--|o Enumeration : "baseDimensionEnumeration"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasBaseQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "systemDerivedQuantityKind"
+SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
+UserQuantityKind ||--|| QuantityKind : "hasQuantityKind"
 
 ```
 
@@ -522,7 +696,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -640,9 +826,46 @@ __Class {
 
 AngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 AngleUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -807,7 +1030,20 @@ Rule {
 
 }
 
+BaseDimensionMagnitude ||--|| QuantityKind : "hasBaseQuantityKind"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -877,7 +1113,9 @@ UCUMcs-term {
 
 }
 
-
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -933,7 +1171,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -989,7 +1227,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1045,7 +1283,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1110,7 +1348,10 @@ Rule {
 
 }
 
-
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1193,7 +1434,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1256,7 +1497,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1300,8 +1541,21 @@ __Class {
 
 }
 
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -1431,7 +1685,8 @@ Rule {
 
 }
 
-
+Concept ||--}o Rule : "hasRule"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -1541,8 +1796,28 @@ Unit {
 
 }
 
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Rule ||--}o RuleType : "ruleType"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -1656,9 +1931,46 @@ __Class {
 
 ContextualUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 ContextualUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -1774,9 +2086,46 @@ __Class {
 
 CountingUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 CountingUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -1901,9 +2250,46 @@ __Class {
 
 CurrencyUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 CurrencyUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -1973,7 +2359,12 @@ Quantifiable {
 
 }
 
-
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Quantifiable ||--|o DataEncoding : "dataEncoding"
+Quantifiable ||--|o Datatype : "datatype"
+Quantifiable ||--|o Unit : "hasUnit"
 
 ```
 
@@ -2032,7 +2423,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2155,7 +2546,14 @@ ScalarDatatype {
 
 }
 
-
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Quantifiable ||--|o DataEncoding : "dataEncoding"
+Quantifiable ||--|o Datatype : "datatype"
+Quantifiable ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+ScalarDatatype ||--|o Datatype : "rdfsDatatype"
 
 ```
 
@@ -2276,7 +2674,9 @@ UCUMcs-term {
 
 }
 
-
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2388,9 +2788,46 @@ __Class {
 
 DerivedUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 DerivedUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -2506,9 +2943,46 @@ __Class {
 
 DimensionlessUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 DimensionlessUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -2573,7 +3047,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2637,7 +3111,10 @@ Rule {
 
 }
 
-
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2711,7 +3188,10 @@ Rule {
 
 }
 
-
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2783,7 +3263,11 @@ Rule {
 
 }
 
-
+EnumeratedQuantity ||--}o EnumeratedValue : "enumeratedValue"
+EnumeratedQuantity ||--}o Enumeration : "enumeration"
+Enumeration ||--|o EnumeratedValue : "default"
+Enumeration ||--}| EnumeratedValue : "element"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2858,7 +3342,11 @@ Rule {
 
 }
 
-
+EnumeratedQuantity ||--}o EnumeratedValue : "enumeratedValue"
+EnumeratedQuantity ||--}o Enumeration : "enumeration"
+Enumeration ||--|o EnumeratedValue : "default"
+Enumeration ||--}| EnumeratedValue : "element"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -2956,7 +3444,16 @@ SystemOfQuantityKinds {
 
 }
 
-
+EnumeratedQuantity ||--}o EnumeratedValue : "enumeratedValue"
+EnumeratedQuantity ||--}o Enumeration : "enumeration"
+Enumeration ||--|o EnumeratedValue : "default"
+Enumeration ||--}| EnumeratedValue : "element"
+Rule ||--}o RuleType : "ruleType"
+SystemOfQuantityKinds ||--|o Enumeration : "baseDimensionEnumeration"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasBaseQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "systemDerivedQuantityKind"
+SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
 
 ```
 
@@ -3039,7 +3536,9 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -3209,7 +3708,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -3268,7 +3767,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -3324,7 +3823,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -3396,7 +3895,9 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -3556,9 +4057,46 @@ __Class {
 
 LogarithmicUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 LogarithmicUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -3622,7 +4160,12 @@ ScaleType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+Scale ||--|o ScaleType : "scaleType"
+Scale ||--}o MathsFunctionType : "permissibleMaths"
+Scale ||--}o TransformType : "permissibleTransformation"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -3739,7 +4282,9 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -3794,7 +4339,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -3888,7 +4433,10 @@ Rule {
 
 }
 
-
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -3966,7 +4514,9 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -4024,7 +4574,7 @@ Rule {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -4154,9 +4704,55 @@ Unit {
 
 }
 
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+PhysicalConstant ||--}o PhysicalConstant : "exactMatch"
+PhysicalConstant ||--}o QuantityKindDimensionVector : "hasDimensionVector"
+PhysicalConstant ||--}o SystemOfUnits : "applicableSystem"
+PhysicalConstant ||--}o Unit : "applicableUnit"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+QuantityValue ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4275,9 +4871,46 @@ __Class {
 
 PlaneAngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 PlaneAngleUnit ||--}o Unit : "hasReciprocalUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4367,8 +5000,33 @@ Unit {
 
 }
 
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4467,8 +5125,30 @@ Unit {
 
 }
 
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Quantifiable ||--|o DataEncoding : "dataEncoding"
+Quantifiable ||--|o Datatype : "datatype"
+Quantifiable ||--|o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4573,9 +5253,43 @@ Unit {
 
 }
 
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Quantity ||--}o QuantityKind : "hasQuantityKind"
+Quantity ||--}o QuantityValue : "quantityValue"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityValue ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4722,9 +5436,45 @@ UserQuantityKind {
 
 }
 
+BaseDimensionMagnitude ||--|| QuantityKind : "hasBaseQuantityKind"
+Quantity ||--}o QuantityKind : "hasQuantityKind"
+Quantity ||--}o QuantityValue : "quantityValue"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+QuantityType ||--}o QuantityKind : "value"
+Rule ||--}o RuleType : "ruleType"
+SystemOfQuantityKinds ||--|o Enumeration : "baseDimensionEnumeration"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasBaseQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "systemDerivedQuantityKind"
+SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
+UserQuantityKind ||--|| QuantityKind : "hasQuantityKind"
 
 ```
 
@@ -4854,9 +5604,39 @@ Unit {
 
 }
 
+PhysicalConstant ||--}o PhysicalConstant : "exactMatch"
+PhysicalConstant ||--}o QuantityKindDimensionVector : "hasDimensionVector"
+PhysicalConstant ||--}o SystemOfUnits : "applicableSystem"
+PhysicalConstant ||--}o Unit : "applicableUnit"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -4943,7 +5723,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5020,7 +5812,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5090,7 +5894,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5160,7 +5976,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5230,7 +6058,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5298,7 +6138,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5366,7 +6218,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5434,7 +6298,19 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5503,7 +6379,20 @@ Rule {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityType ||--}o QuantityKind : "value"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5584,8 +6473,31 @@ Unit {
 
 }
 
+DataEncoding ||--|o Encoding : "encoding"
+DataEncoding ||--|o EndianType : "bitOrder"
+DataEncoding ||--|o EndianType : "byteOrder"
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Quantity ||--}o QuantityKind : "hasQuantityKind"
+Quantity ||--}o QuantityValue : "quantityValue"
+QuantityValue ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -5666,7 +6578,9 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -5773,7 +6687,8 @@ RuleType {
 
 }
 
-
+Concept ||--}o Rule : "hasRule"
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5839,7 +6754,7 @@ RuleType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -5949,7 +6864,11 @@ ScalarDatatype {
 
 }
 
-
+Datatype ||--|o CardinalityType : "cardinality"
+Datatype ||--|o Datatype : "basis"
+Datatype ||--|o OrderedType : "orderedType"
+Rule ||--}o RuleType : "ruleType"
+ScalarDatatype ||--|o Datatype : "rdfsDatatype"
 
 ```
 
@@ -6028,7 +6947,12 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+Scale ||--|o ScaleType : "scaleType"
+Scale ||--}o MathsFunctionType : "permissibleMaths"
+Scale ||--}o TransformType : "permissibleTransformation"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -6113,7 +7037,12 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+Scale ||--|o ScaleType : "scaleType"
+Scale ||--}o MathsFunctionType : "permissibleMaths"
+Scale ||--}o TransformType : "permissibleTransformation"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -6248,11 +7177,48 @@ __Class {
 
 }
 
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+Rule ||--}o RuleType : "ruleType"
 SolidAngleUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 SolidAngleUnit ||--}o Unit : "hasReciprocalUnit"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -6368,7 +7334,7 @@ Symbol {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
 
 ```
 
@@ -6474,7 +7440,35 @@ SystemOfUnits {
 
 }
 
+Enumeration ||--|o EnumeratedValue : "default"
+Enumeration ||--}| EnumeratedValue : "element"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
+SystemOfQuantityKinds ||--|o Enumeration : "baseDimensionEnumeration"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasBaseQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "systemDerivedQuantityKind"
+SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
 
 ```
 
@@ -6578,8 +7572,42 @@ Unit {
 
 }
 
+PhysicalConstant ||--}o PhysicalConstant : "exactMatch"
+PhysicalConstant ||--}o QuantityKindDimensionVector : "hasDimensionVector"
+PhysicalConstant ||--}o SystemOfUnits : "applicableSystem"
+PhysicalConstant ||--}o Unit : "applicableUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Rule ||--}o RuleType : "ruleType"
+SystemOfQuantityKinds ||--|o Enumeration : "baseDimensionEnumeration"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasBaseQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "hasQuantityKind"
+SystemOfQuantityKinds ||--}o QuantityKind : "systemDerivedQuantityKind"
+SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -6715,7 +7743,12 @@ TransformType {
 
 }
 
-
+Rule ||--}o RuleType : "ruleType"
+Scale ||--|o ScaleType : "scaleType"
+Scale ||--}o MathsFunctionType : "permissibleMaths"
+Scale ||--}o TransformType : "permissibleTransformation"
+ScaleType ||--}o MathsFunctionType : "permissibleMaths"
+ScaleType ||--}o TransformType : "permissibleTransformation"
 
 ```
 
@@ -6767,8 +7800,21 @@ Unit {
 
 }
 
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -6815,7 +7861,8 @@ UCUMcs-term {
 
 }
 
-
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
 
 ```
 
@@ -6994,9 +8041,54 @@ __Class {
 
 ContextualUnit ||--}o SystemOfUnits : "isUnitOfSystem"
 ContextualUnit ||--}o Unit : "hasReciprocalUnit"
+PhysicalConstant ||--}o PhysicalConstant : "exactMatch"
+PhysicalConstant ||--}o QuantityKindDimensionVector : "hasDimensionVector"
+PhysicalConstant ||--}o SystemOfUnits : "applicableSystem"
+PhysicalConstant ||--}o Unit : "applicableUnit"
+Prefix ||--}o Prefix : "exactMatch"
+Prefix ||--}o UCUMcs-term : "ucumCode"
+Quantifiable ||--|o DataEncoding : "dataEncoding"
+Quantifiable ||--|o Datatype : "datatype"
+Quantifiable ||--|o Unit : "hasUnit"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+QuantityKindDimensionVector ||--}o QuantityKind : "hasReferenceQuantityKind"
+QuantityValue ||--|o Unit : "hasUnit"
+Rule ||--}o RuleType : "ruleType"
+SystemOfUnits ||--}o PhysicalConstant : "applicablePhysicalConstant"
+SystemOfUnits ||--}o Prefix : "prefix"
+SystemOfUnits ||--}o Unit : "hasAllowedUnit"
+SystemOfUnits ||--}o Unit : "hasBaseUnit"
+SystemOfUnits ||--}o Unit : "hasCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDefinedUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedCoherentUnit"
+SystemOfUnits ||--}o Unit : "hasDerivedUnit"
+SystemOfUnits ||--}o Unit : "hasUnit"
+Unit ||--|o QuantityKindDimensionVector : "hasDimensionVector"
+Unit ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+Unit ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+Unit ||--}o Prefix : "prefix"
+Unit ||--}o QuantityKind : "hasQuantityKind"
+Unit ||--}o SystemOfUnits : "applicableSystem"
+Unit ||--}o SystemOfUnits : "definedUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedCoherentUnitOfSystem"
+Unit ||--}o SystemOfUnits : "derivedUnitOfSystem"
 Unit ||--}o SystemOfUnits : "isUnitOfSystem"
+Unit ||--}o UCUMcs : "ucumCode"
+Unit ||--}o Unit : "exactMatch"
 Unit ||--}o Unit : "hasReciprocalUnit"
+Unit ||--}o Unit : "scalingOf"
+Unit ||--}o __Class : "hasFactorUnit"
 
 ```
 
@@ -7100,7 +8192,20 @@ UserQuantityKind {
 
 }
 
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvDenominator"
+QuantityKind ||--|o QuantityKindDimensionVector : "qkdvNumerator"
+QuantityKind ||--|o QuantityKindDimensionVectorSI : "dimensionVectorForSI"
+QuantityKind ||--}o QuantityKind : "exactMatch"
+QuantityKind ||--}o QuantityKindDimensionVector : "hasDimensionVector"
 QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
+QuantityKind ||--}o Unit : "applicableCGSUnit"
+QuantityKind ||--}o Unit : "applicableISOUnit"
+QuantityKind ||--}o Unit : "applicableImperialUnit"
+QuantityKind ||--}o Unit : "applicableSIUnit"
+QuantityKind ||--}o Unit : "applicableUSCustomaryUnit"
+QuantityKind ||--}o Unit : "applicableUnit"
+Rule ||--}o RuleType : "ruleType"
+UserQuantityKind ||--|| QuantityKind : "hasQuantityKind"
 
 ```
 
