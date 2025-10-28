@@ -1444,16 +1444,16 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **altSymbol** | <sub>0..\*</sub> | None |  |
+| **latexSymbol** | <sub>0..\*</sub> | None |  |
+| **symbol** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -1623,41 +1623,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1832,15 +1832,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasBaseQuantityKind* | <sub>1..1</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *vectorMagnitude* | <sub>1..1</sub> | float |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **hasBaseQuantityKind** | <sub>1..1</sub> | [QuantityKind](#QuantityKind) |  |
+| **vectorMagnitude** | <sub>1..1</sub> | float |  |
 
 #### Parents
 
@@ -1913,16 +1913,16 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| exactMatch | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| prefixMultiplier | <sub>0..1</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *exactMatch* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefixMultiplier* | <sub>0..1</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
 
 #### Parents
 
@@ -1979,15 +1979,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2044,15 +2044,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2109,15 +2109,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2185,15 +2185,15 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
+| **literal** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *literal* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2277,15 +2277,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2349,14 +2349,14 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>1..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *url* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **description** | <sub>1..1</sub> | None |  |
+| **url** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2468,10 +2468,10 @@ Comment ..> Thing
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *description* | <sub>0..1</sub> | None |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *rationale* | <sub>0..\*</sub> | string |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| **description** | <sub>0..1</sub> | None |  |
+| **rationale** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -2551,13 +2551,13 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | **id** | <sub>0..1</sub> | None |  |
+| **description** | <sub>0..1</sub> | None |  |
+| **abbreviation** | <sub>0..1</sub> | None |  |
+| **deprecated** | <sub>0..1</sub> | None |  |
 | **guidance** | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| **hasRule** | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| **isReplacedBy** | <sub>0..1</sub> | None |  |
+| **plainTextDescription** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2691,17 +2691,17 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dataEncoding | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
+| datatype | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| hasUnit | <sub>0..1</sub> | [Unit](#Unit) |  |
+| relativeStandardUncertainty | <sub>0..1</sub> | double |  |
+| standardUncertainty | <sub>0..1</sub> | decimal |  |
+| standardUncertaintySN | <sub>0..\*</sub> | double |  |
+| value | <sub>0..1</sub> | None |  |
+| valueSN | <sub>0..1</sub> | None |  |
+| **exactConstant** | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *dataEncoding* | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
-| *datatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *exactConstant* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasUnit* | <sub>0..1</sub> | [Unit](#Unit) |  |
-| *relativeStandardUncertainty* | <sub>0..1</sub> | double |  |
-| *standardUncertainty* | <sub>0..1</sub> | decimal |  |
-| *standardUncertaintySN* | <sub>0..\*</sub> | double |  |
-| *value* | <sub>0..1</sub> | None |  |
-| *valueSN* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2867,41 +2867,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3065,41 +3065,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3272,43 +3272,43 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
+| **currencyCode** | <sub>0..1</sub> | None |  |
+| **currencyExponent** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *currencyCode* | <sub>0..1</sub> | None |  |
-| *currencyExponent* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3379,9 +3379,9 @@ Quantifiable ||--|o Unit : "hasUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *bitOrder* | <sub>0..1</sub> | [EndianType](#EndianType) |  |
-| *byteOrder* | <sub>0..1</sub> | [EndianType](#EndianType) |  |
-| *encoding* | <sub>0..1</sub> | [Encoding](#Encoding) |  |
+| **bitOrder** | <sub>0..1</sub> | [EndianType](#EndianType) |  |
+| **byteOrder** | <sub>0..1</sub> | [EndianType](#EndianType) |  |
+| **encoding** | <sub>0..1</sub> | [Encoding](#Encoding) |  |
 
 #### Parents
 
@@ -3445,14 +3445,14 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *value* | <sub>0..1</sub> | string |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **value** | <sub>0..1</sub> | string |  |
 
 #### Parents
 
@@ -3586,31 +3586,31 @@ ScalarDatatype ||--}o Rule : "hasRule"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *ansiSQLName* | <sub>0..1</sub> | string |  |
-| *basis* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *bounded* | <sub>0..1</sub> | None |  |
-| *cName* | <sub>0..1</sub> | string |  |
-| *cardinality* | <sub>0..1</sub> | [CardinalityType](#CardinalityType) |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *javaName* | <sub>0..1</sub> | None |  |
-| *jsName* | <sub>0..1</sub> | None |  |
-| *matlabName* | <sub>0..1</sub> | None |  |
-| *microsoftSQLServerName* | <sub>0..1</sub> | None |  |
-| *mySQLName* | <sub>0..1</sub> | None |  |
-| *odbcName* | <sub>0..1</sub> | None |  |
-| *oleDBName* | <sub>0..1</sub> | None |  |
-| *oracleSQLName* | <sub>0..1</sub> | string |  |
-| *orderedType* | <sub>0..1</sub> | [OrderedType](#OrderedType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *protocolBuffersName* | <sub>0..1</sub> | string |  |
-| *pythonName* | <sub>0..1</sub> | string |  |
-| *vbName* | <sub>0..1</sub> | string |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **id** | <sub>0..1</sub> | None |  |
+| **ansiSQLName** | <sub>0..1</sub> | string |  |
+| **basis** | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| **bounded** | <sub>0..1</sub> | None |  |
+| **cName** | <sub>0..1</sub> | string |  |
+| **cardinality** | <sub>0..1</sub> | [CardinalityType](#CardinalityType) |  |
+| **javaName** | <sub>0..1</sub> | None |  |
+| **jsName** | <sub>0..1</sub> | None |  |
+| **matlabName** | <sub>0..1</sub> | None |  |
+| **microsoftSQLServerName** | <sub>0..1</sub> | None |  |
+| **mySQLName** | <sub>0..1</sub> | None |  |
+| **odbcName** | <sub>0..1</sub> | None |  |
+| **oleDBName** | <sub>0..1</sub> | None |  |
+| **oracleSQLName** | <sub>0..1</sub> | string |  |
+| **orderedType** | <sub>0..1</sub> | [OrderedType](#OrderedType) |  |
+| **protocolBuffersName** | <sub>0..1</sub> | string |  |
+| **pythonName** | <sub>0..1</sub> | string |  |
+| **vbName** | <sub>0..1</sub> | string |  |
 
 #### Parents
 
@@ -3664,7 +3664,7 @@ StringEncodingType <|-- DateTimeStringEncodingType
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *allowedPattern* | <sub>1..\*</sub> | None |  |
+| **allowedPattern** | <sub>1..\*</sub> | None |  |
 
 #### Parents
 
@@ -3737,16 +3737,16 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| exactMatch | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| prefixMultiplier | <sub>0..1</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *exactMatch* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefixMultiplier* | <sub>0..1</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
 
 #### Parents
 
@@ -3910,41 +3910,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -4108,41 +4108,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -4204,13 +4204,13 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4278,15 +4278,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **bits** | <sub>0..1</sub> | None |  |
+| **bytes** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4362,14 +4362,14 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4447,15 +4447,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *enumeratedValue* | <sub>0..\*</sub> | [EnumeratedValue](#EnumeratedValue) |  |
-| *enumeration* | <sub>0..\*</sub> | [Enumeration](#Enumeration) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **enumeratedValue** | <sub>0..\*</sub> | [EnumeratedValue](#EnumeratedValue) |  |
+| **enumeration** | <sub>0..\*</sub> | [Enumeration](#Enumeration) |  |
 
 #### Parents
 
@@ -4535,14 +4535,14 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
+| **description** | <sub>0..1</sub> | None |  |
+| **abbreviation** | <sub>0..1</sub> | None |  |
+| **altSymbol** | <sub>0..\*</sub> | None |  |
+| **symbol** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4652,15 +4652,15 @@ SystemOfQuantityKinds ||--}o SystemOfUnits : "hasUnitSystem"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *default* | <sub>0..1</sub> | [EnumeratedValue](#EnumeratedValue) |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *element* | <sub>1..\*</sub> | [EnumeratedValue](#EnumeratedValue) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **abbreviation** | <sub>0..1</sub> | None |  |
+| **default** | <sub>0..1</sub> | [EnumeratedValue](#EnumeratedValue) |  |
+| **element** | <sub>1..\*</sub> | [EnumeratedValue](#EnumeratedValue) |  |
 
 #### Parents
 
@@ -4750,17 +4750,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| dataStructure | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| permissibleMaths | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| permissibleTransformation | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| scaleType | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 | *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 
 #### Parents
 
@@ -4931,20 +4931,20 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *figureCaption* | <sub>0..1</sub> | None |  |
-| *figureLabel* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *height* | <sub>0..1</sub> | None |  |
-| *image* | <sub>0..1</sub> | None |  |
-| *imageLocation* | <sub>1..1</sub> | None |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *landscape* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *width* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **figureCaption** | <sub>0..1</sub> | None |  |
+| **figureLabel** | <sub>0..1</sub> | None |  |
+| **height** | <sub>0..1</sub> | None |  |
+| **image** | <sub>0..1</sub> | None |  |
+| **imageLocation** | <sub>1..1</sub> | None |  |
+| **landscape** | <sub>0..1</sub> | None |  |
+| **width** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5004,15 +5004,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5069,15 +5069,15 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| bits | <sub>0..1</sub> | None |  |
+| bytes | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5156,17 +5156,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| dataStructure | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| permissibleMaths | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| permissibleTransformation | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| scaleType | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 
 #### Parents
 
@@ -5378,41 +5378,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5479,13 +5479,13 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5536,10 +5536,10 @@ Verifiable <|-- Comment
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *description* | <sub>0..1</sub> | None |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *rationale* | <sub>0..\*</sub> | string |  |
+| description | <sub>0..1</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| rationale | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5615,17 +5615,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| dataStructure | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| permissibleMaths | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| permissibleTransformation | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| scaleType | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 
 #### Parents
 
@@ -5777,15 +5777,15 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
+| **literal** | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *literal* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5870,18 +5870,18 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| dataStructure | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *order* | <sub>1..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| permissibleMaths | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| permissibleTransformation | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| scaleType | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| **order** | <sub>1..1</sub> | None |  |
 
 #### Parents
 
@@ -5940,14 +5940,14 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *url* | <sub>0..\*</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **url** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
@@ -6133,32 +6133,32 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dataEncoding | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
+| datatype | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasUnit | <sub>0..1</sub> | [Unit](#Unit) |  |
+| isDeltaQuantity | <sub>0..\*</sub> | boolean |  |
+| quantityValue | <sub>0..\*</sub> | [QuantityValue](#QuantityValue) |  |
+| relativeStandardUncertainty | <sub>0..1</sub> | double |  |
+| standardUncertainty | <sub>0..1</sub> | decimal |  |
+| standardUncertaintySN | <sub>0..\*</sub> | double |  |
+| value | <sub>0..1</sub> | None |  |
+| valueSN | <sub>0..1</sub> | None |  |
+| **altSymbol** | <sub>0..\*</sub> | None |  |
+| **applicableSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **applicableUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **exactConstant** | <sub>0..\*</sub> | boolean |  |
+| **exactMatch** | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
+| **hasDimensionVector** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **isoNormativeReference** | <sub>0..\*</sub> | None |  |
+| **latexDefinition** | <sub>0..1</sub> | None |  |
+| **latexSymbol** | <sub>0..\*</sub> | None |  |
+| **mathMLdefinition** | <sub>0..1</sub> | None |  |
+| **normativeReference** | <sub>0..\*</sub> | None |  |
+| **symbol** | <sub>0..\*</sub> | None |  |
+| **ucumCode** | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *applicableUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *dataEncoding* | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
-| *datatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *exactConstant* | <sub>0..\*</sub> | boolean |  |
-| *exactMatch* | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..\*</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasUnit* | <sub>0..1</sub> | [Unit](#Unit) |  |
-| *isDeltaQuantity* | <sub>0..\*</sub> | boolean |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *quantityValue* | <sub>0..\*</sub> | [QuantityValue](#QuantityValue) |  |
-| *relativeStandardUncertainty* | <sub>0..1</sub> | double |  |
-| *standardUncertainty* | <sub>0..1</sub> | decimal |  |
-| *standardUncertaintySN* | <sub>0..\*</sub> | double |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | None |  |
-| *value* | <sub>0..1</sub> | None |  |
-| *valueSN* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -6329,41 +6329,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -6474,16 +6474,16 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *exactMatch* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefixMultiplier* | <sub>0..1</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
+| **altSymbol** | <sub>0..\*</sub> | None |  |
+| **exactMatch** | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| **latexSymbol** | <sub>0..\*</sub> | None |  |
+| **prefixMultiplier** | <sub>0..1</sub> | None |  |
+| **symbol** | <sub>0..\*</sub> | None |  |
+| **ucumCode** | <sub>0..\*</sub> | [UCUMcs-term](#UCUMcs-term) |  |
 
 #### Parents
 
@@ -6605,14 +6605,14 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *dataEncoding* | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
-| *datatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *hasUnit* | <sub>0..1</sub> | [Unit](#Unit) |  |
-| *relativeStandardUncertainty* | <sub>0..1</sub> | double |  |
-| *standardUncertainty* | <sub>0..1</sub> | decimal |  |
-| *standardUncertaintySN* | <sub>0..\*</sub> | double |  |
-| *value* | <sub>0..1</sub> | None |  |
-| *valueSN* | <sub>0..1</sub> | None |  |
+| **dataEncoding** | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
+| **datatype** | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| **hasUnit** | <sub>0..1</sub> | [Unit](#Unit) |  |
+| **relativeStandardUncertainty** | <sub>0..1</sub> | double |  |
+| **standardUncertainty** | <sub>0..1</sub> | decimal |  |
+| **standardUncertaintySN** | <sub>0..\*</sub> | double |  |
+| **value** | <sub>0..1</sub> | None |  |
+| **valueSN** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -6762,19 +6762,19 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dataEncoding | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
+| datatype | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| hasUnit | <sub>0..1</sub> | [Unit](#Unit) |  |
+| relativeStandardUncertainty | <sub>0..1</sub> | double |  |
+| standardUncertainty | <sub>0..1</sub> | decimal |  |
+| standardUncertaintySN | <sub>0..\*</sub> | double |  |
+| value | <sub>0..1</sub> | None |  |
+| valueSN | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *dataEncoding* | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
-| *datatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasUnit* | <sub>0..1</sub> | [Unit](#Unit) |  |
-| *isDeltaQuantity* | <sub>0..\*</sub> | boolean |  |
-| *quantityValue* | <sub>0..\*</sub> | [QuantityValue](#QuantityValue) |  |
-| *relativeStandardUncertainty* | <sub>0..1</sub> | double |  |
-| *standardUncertainty* | <sub>0..1</sub> | decimal |  |
-| *standardUncertaintySN* | <sub>0..\*</sub> | double |  |
-| *value* | <sub>0..1</sub> | None |  |
-| *valueSN* | <sub>0..1</sub> | None |  |
+| **hasQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| **isDeltaQuantity** | <sub>0..\*</sub> | boolean |  |
+| **quantityValue** | <sub>0..\*</sub> | [QuantityValue](#QuantityValue) |  |
 
 #### Parents
 
@@ -6968,25 +6968,25 @@ UserQuantityKind ||--}o Rule : "hasRule"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| **applicableCGSUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **applicableISOUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **applicableImperialUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **applicableSIUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **applicableUSCustomaryUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **applicableUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
 | **belongsToSystemOfQuantities** | <sub>0..\*</sub> | [SystemOfQuantityKinds](#SystemOfQuantityKinds) |  |
+| **dimensionVectorForSI** | <sub>0..1</sub> | [QuantityKindDimensionVectorSI](#QuantityKindDimensionVectorSI) |  |
+| **exactMatch** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| **hasDimensionVector** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **iec61360Code** | <sub>0..\*</sub> | string |  |
+| **latexDefinition** | <sub>0..1</sub> | None |  |
+| **mathMLdefinition** | <sub>0..1</sub> | None |  |
+| **qkdvDenominator** | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **qkdvNumerator** | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *applicableCGSUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *applicableISOUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *applicableImperialUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *applicableSIUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *applicableUSCustomaryUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *applicableUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *dimensionVectorForSI* | <sub>0..1</sub> | [QuantityKindDimensionVectorSI](#QuantityKindDimensionVectorSI) |  |
-| *exactMatch* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..\*</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
 
 #### Parents
 
@@ -7153,24 +7153,24 @@ Unit ||--}o __Class : "hasFactorUnit"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **dimensionExponentForAmountOfSubstance** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForElectricCurrent** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForLength** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForLuminousIntensity** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForMass** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForThermodynamicTemperature** | <sub>1..1</sub> | None |  |
+| **dimensionExponentForTime** | <sub>1..1</sub> | None |  |
+| **dimensionlessExponent** | <sub>1..1</sub> | None |  |
+| **hasReferenceQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| **latexDefinition** | <sub>0..1</sub> | None |  |
+| **latexSymbol** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
@@ -7271,24 +7271,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7379,24 +7379,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7480,24 +7480,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7581,24 +7581,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7682,24 +7682,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7781,24 +7781,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7880,24 +7880,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -7979,24 +7979,24 @@ Rule ||--}o RuleType : "ruleType"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
+| dimensionExponentForAmountOfSubstance | <sub>1..1</sub> | None |  |
+| dimensionExponentForElectricCurrent | <sub>1..1</sub> | None |  |
+| dimensionExponentForLength | <sub>1..1</sub> | None |  |
+| dimensionExponentForLuminousIntensity | <sub>1..1</sub> | None |  |
+| dimensionExponentForMass | <sub>1..1</sub> | None |  |
+| dimensionExponentForThermodynamicTemperature | <sub>1..1</sub> | None |  |
+| dimensionExponentForTime | <sub>1..1</sub> | None |  |
+| dimensionlessExponent | <sub>1..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *dimensionExponentForAmountOfSubstance* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForElectricCurrent* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLength* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForLuminousIntensity* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForMass* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForThermodynamicTemperature* | <sub>1..1</sub> | None |  |
-| *dimensionExponentForTime* | <sub>1..1</sub> | None |  |
-| *dimensionlessExponent* | <sub>1..1</sub> | None |  |
-| *hasReferenceQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexDefinition* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasReferenceQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexDefinition | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -8077,15 +8077,15 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
+| **value** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
-| *value* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 
 #### Parents
 
@@ -8195,16 +8195,16 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| dataEncoding | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
+| datatype | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| relativeStandardUncertainty | <sub>0..1</sub> | double |  |
+| standardUncertainty | <sub>0..1</sub> | decimal |  |
+| standardUncertaintySN | <sub>0..\*</sub> | double |  |
+| value | <sub>0..1</sub> | None |  |
+| valueSN | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *dataEncoding* | <sub>0..1</sub> | [DataEncoding](#DataEncoding) |  |
-| *datatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *hasUnit* | <sub>0..1</sub> | [Unit](#Unit) |  |
-| *relativeStandardUncertainty* | <sub>0..1</sub> | double |  |
-| *standardUncertainty* | <sub>0..1</sub> | decimal |  |
-| *standardUncertaintySN* | <sub>0..\*</sub> | double |  |
-| *value* | <sub>0..1</sub> | None |  |
-| *valueSN* | <sub>0..1</sub> | None |  |
+| **hasUnit** | <sub>0..1</sub> | [Unit](#Unit) |  |
 
 #### Parents
 
@@ -8292,17 +8292,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| dataStructure | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| permissibleMaths | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| permissibleTransformation | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| scaleType | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 
 #### Parents
 
@@ -8409,12 +8409,12 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *rationale* | <sub>0..\*</sub> | string |  |
-| *ruleType* | <sub>0..\*</sub> | [RuleType](#RuleType) |  |
+| **rationale** | <sub>0..\*</sub> | string |  |
+| **ruleType** | <sub>0..\*</sub> | [RuleType](#RuleType) |  |
 
 #### Parents
 
@@ -8479,14 +8479,14 @@ Rule ||--}o RuleType : "ruleType"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -8605,38 +8605,38 @@ ScalarDatatype ||--}o Rule : "hasRule"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| ansiSQLName | <sub>0..1</sub> | string |  |
+| basis | <sub>0..1</sub> | [Datatype](#Datatype) |  |
+| bounded | <sub>0..1</sub> | None |  |
+| cName | <sub>0..1</sub> | string |  |
+| cardinality | <sub>0..1</sub> | [CardinalityType](#CardinalityType) |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *ansiSQLName* | <sub>0..1</sub> | string |  |
-| *basis* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *bits* | <sub>0..1</sub> | None |  |
-| *bounded* | <sub>0..1</sub> | None |  |
-| *bytes* | <sub>0..1</sub> | None |  |
-| *cName* | <sub>0..1</sub> | string |  |
-| *cardinality* | <sub>0..1</sub> | [CardinalityType](#CardinalityType) |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *javaName* | <sub>0..1</sub> | None |  |
-| *jsName* | <sub>0..1</sub> | None |  |
-| *length* | <sub>0..1</sub> | None |  |
-| *matlabName* | <sub>0..1</sub> | None |  |
-| *maxExclusive* | <sub>0..1</sub> | None |  |
-| *maxInclusive* | <sub>0..1</sub> | None |  |
-| *microsoftSQLServerName* | <sub>0..1</sub> | None |  |
-| *minExclusive* | <sub>0..1</sub> | None |  |
-| *minInclusive* | <sub>0..1</sub> | None |  |
-| *mySQLName* | <sub>0..1</sub> | None |  |
-| *odbcName* | <sub>0..1</sub> | None |  |
-| *oleDBName* | <sub>0..1</sub> | None |  |
-| *oracleSQLName* | <sub>0..1</sub> | string |  |
-| *orderedType* | <sub>0..1</sub> | [OrderedType](#OrderedType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *protocolBuffersName* | <sub>0..1</sub> | string |  |
-| *pythonName* | <sub>0..1</sub> | string |  |
-| *rdfsDatatype* | <sub>0..1</sub> | [Datatype](#Datatype) |  |
-| *vbName* | <sub>0..1</sub> | string |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| javaName | <sub>0..1</sub> | None |  |
+| jsName | <sub>0..1</sub> | None |  |
+| matlabName | <sub>0..1</sub> | None |  |
+| microsoftSQLServerName | <sub>0..1</sub> | None |  |
+| mySQLName | <sub>0..1</sub> | None |  |
+| odbcName | <sub>0..1</sub> | None |  |
+| oleDBName | <sub>0..1</sub> | None |  |
+| oracleSQLName | <sub>0..1</sub> | string |  |
+| orderedType | <sub>0..1</sub> | [OrderedType](#OrderedType) |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| protocolBuffersName | <sub>0..1</sub> | string |  |
+| pythonName | <sub>0..1</sub> | string |  |
+| vbName | <sub>0..1</sub> | string |  |
+| **bits** | <sub>0..1</sub> | None |  |
+| **bytes** | <sub>0..1</sub> | None |  |
+| **length** | <sub>0..1</sub> | None |  |
+| **maxExclusive** | <sub>0..1</sub> | None |  |
+| **maxInclusive** | <sub>0..1</sub> | None |  |
+| **minExclusive** | <sub>0..1</sub> | None |  |
+| **minInclusive** | <sub>0..1</sub> | None |  |
+| **rdfsDatatype** | <sub>0..1</sub> | [Datatype](#Datatype) |  |
 
 #### Parents
 
@@ -8722,17 +8722,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *scaleType* | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **dataStructure** | <sub>0..1</sub> | None |  |
+| **permissibleMaths** | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| **permissibleTransformation** | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
+| **scaleType** | <sub>0..1</sub> | [ScaleType](#ScaleType) |  |
 
 #### Parents
 
@@ -8823,17 +8823,17 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
+| **dataStructure** | <sub>0..1</sub> | None |  |
+| **permissibleMaths** | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
+| **permissibleTransformation** | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *dataStructure* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *permissibleMaths* | <sub>0..\*</sub> | [MathsFunctionType](#MathsFunctionType) |  |
-| *permissibleTransformation* | <sub>0..\*</sub> | [TransformType](#TransformType) |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -9022,41 +9022,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| applicableSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| conversionMultiplier | <sub>0..1</sub> | None |  |
+| conversionMultiplierSN | <sub>0..1</sub> | None |  |
+| conversionOffset | <sub>0..1</sub> | None |  |
+| conversionOffsetSN | <sub>0..1</sub> | None |  |
+| definedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedCoherentUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| derivedUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| exactMatch | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| factorUnitScalar | <sub>0..1</sub> | None |  |
+| hasDimensionVector | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| hasFactorUnit | <sub>0..\*</sub> | [Class](#Class) |  |
+| hasQuantityKind | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | hasReciprocalUnit | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| iec61360Code | <sub>0..\*</sub> | string |  |
 | isUnitOfSystem | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| latexDefinition | <sub>0..\*</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| mathMLdefinition | <sub>0..1</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | omUnit | <sub>0..\*</sub> | None |  |
+| prefix | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| qkdvDenominator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| qkdvNumerator | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| scalingOf | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| siUnitsExpression | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..\*</sub> | None |  |
+| ucumCode | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| udunitsCode | <sub>0..\*</sub> | string |  |
+| uneceCommonCode | <sub>0..\*</sub> | string |  |
 | unitFor | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -9169,13 +9169,13 @@ Symbol ||--}o Rule : "hasRule"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -9311,18 +9311,18 @@ SystemOfUnits ||--}o Unit : "hasUnit"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *baseDimensionEnumeration* | <sub>0..1</sub> | [Enumeration](#Enumeration) |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasBaseQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *hasUnitSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *systemDerivedQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| **baseDimensionEnumeration** | <sub>0..1</sub> | [Enumeration](#Enumeration) |  |
+| **hasBaseQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| **hasQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
+| **hasUnitSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **systemDerivedQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 
 #### Parents
 
@@ -9466,19 +9466,19 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *applicablePhysicalConstant* | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
-| *hasAllowedUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasBaseUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasCoherentUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasDefinedUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasDerivedCoherentUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasDerivedUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *hasUnit* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| **applicablePhysicalConstant** | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
+| **hasAllowedUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasBaseUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasCoherentUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasDefinedUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasDerivedCoherentUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasDerivedUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **hasUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **prefix** | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
 
 #### Parents
 
@@ -9619,14 +9619,14 @@ ScaleType ||--}o TransformType : "permissibleTransformation"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -9986,41 +9986,41 @@ Unit ||--}o __Class : "hasFactorUnit"
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
+| isoNormativeReference | <sub>0..\*</sub> | None |  |
+| normativeReference | <sub>0..\*</sub> | None |  |
 | *id* | <sub>0..1</sub> | None |  |
 | *guidance* | <sub>0..\*</sub> | string |  |
+| **altSymbol** | <sub>0..\*</sub> | None |  |
+| **applicableSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **conversionMultiplier** | <sub>0..1</sub> | None |  |
+| **conversionMultiplierSN** | <sub>0..1</sub> | None |  |
+| **conversionOffset** | <sub>0..1</sub> | None |  |
+| **conversionOffsetSN** | <sub>0..1</sub> | None |  |
+| **definedUnitOfSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **derivedCoherentUnitOfSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **derivedUnitOfSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **exactMatch** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **factorUnitScalar** | <sub>0..1</sub> | None |  |
+| **hasDimensionVector** | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **hasFactorUnit** | <sub>0..\*</sub> | [Class](#Class) |  |
+| **hasQuantityKind** | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
 | **hasReciprocalUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **iec61360Code** | <sub>0..\*</sub> | string |  |
 | **isUnitOfSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
+| **latexDefinition** | <sub>0..\*</sub> | None |  |
+| **latexSymbol** | <sub>0..\*</sub> | None |  |
+| **mathMLdefinition** | <sub>0..1</sub> | None |  |
 | **omUnit** | <sub>0..\*</sub> | None |  |
+| **prefix** | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
+| **qkdvDenominator** | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **qkdvNumerator** | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
+| **scalingOf** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **siUnitsExpression** | <sub>0..\*</sub> | None |  |
+| **symbol** | <sub>0..\*</sub> | None |  |
+| **ucumCode** | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
+| **udunitsCode** | <sub>0..\*</sub> | string |  |
+| **uneceCommonCode** | <sub>0..\*</sub> | string |  |
 | **unitFor** | <sub>0..\*</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *applicableSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *conversionMultiplier* | <sub>0..1</sub> | None |  |
-| *conversionMultiplierSN* | <sub>0..1</sub> | None |  |
-| *conversionOffset* | <sub>0..1</sub> | None |  |
-| *conversionOffsetSN* | <sub>0..1</sub> | None |  |
-| *definedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedCoherentUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *derivedUnitOfSystem* | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
-| *exactMatch* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *factorUnitScalar* | <sub>0..1</sub> | None |  |
-| *hasDimensionVector* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *hasFactorUnit* | <sub>0..\*</sub> | [Class](#Class) |  |
-| *hasQuantityKind* | <sub>0..\*</sub> | [QuantityKind](#QuantityKind) |  |
-| *iec61360Code* | <sub>0..\*</sub> | string |  |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *latexDefinition* | <sub>0..\*</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *mathMLdefinition* | <sub>0..1</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
-| *prefix* | <sub>0..\*</sub> | [Prefix](#Prefix) |  |
-| *qkdvDenominator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *qkdvNumerator* | <sub>0..1</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
-| *scalingOf* | <sub>0..\*</sub> | [Unit](#Unit) |  |
-| *siUnitsExpression* | <sub>0..\*</sub> | None |  |
-| *symbol* | <sub>0..\*</sub> | None |  |
-| *ucumCode* | <sub>0..\*</sub> | [UCUMcs](#UCUMcs) |  |
-| *udunitsCode* | <sub>0..\*</sub> | string |  |
-| *uneceCommonCode* | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -10134,17 +10134,17 @@ UserQuantityKind ||--}o Rule : "hasRule"
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
 | id | <sub>0..1</sub> | None |  |
+| description | <sub>0..1</sub> | None |  |
+| abbreviation | <sub>0..1</sub> | None |  |
+| altSymbol | <sub>0..\*</sub> | None |  |
+| deprecated | <sub>0..1</sub> | None |  |
 | guidance | <sub>0..\*</sub> | string |  |
-| *description* | <sub>0..1</sub> | None |  |
-| *abbreviation* | <sub>0..1</sub> | None |  |
-| *altSymbol* | <sub>0..\*</sub> | None |  |
-| *deprecated* | <sub>0..1</sub> | None |  |
-| *hasQuantityKind* | <sub>1..1</sub> | [QuantityKind](#QuantityKind) |  |
-| *hasRule* | <sub>0..\*</sub> | [Rule](#Rule) |  |
-| *isReplacedBy* | <sub>0..1</sub> | None |  |
-| *latexSymbol* | <sub>0..\*</sub> | None |  |
-| *plainTextDescription* | <sub>0..1</sub> | None |  |
-| *symbol* | <sub>0..1</sub> | None |  |
+| hasRule | <sub>0..\*</sub> | [Rule](#Rule) |  |
+| isReplacedBy | <sub>0..1</sub> | None |  |
+| latexSymbol | <sub>0..\*</sub> | None |  |
+| plainTextDescription | <sub>0..1</sub> | None |  |
+| symbol | <sub>0..1</sub> | None |  |
+| **hasQuantityKind** | <sub>1..1</sub> | [QuantityKind](#QuantityKind) |  |
 
 #### Parents
 
@@ -10205,8 +10205,8 @@ Verifiable ..> Error2
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| *isoNormativeReference* | <sub>0..\*</sub> | None |  |
-| *normativeReference* | <sub>0..\*</sub> | None |  |
+| **isoNormativeReference** | <sub>0..\*</sub> | None |  |
+| **normativeReference** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
