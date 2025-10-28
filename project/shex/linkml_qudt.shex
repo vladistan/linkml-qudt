@@ -178,8 +178,6 @@ linkml:Sparqlpath xsd:string
     CLOSED {
        (  $<Comment_tes> (  &<Verifiable_tes> ;
              rdf:type [ <Verifiable> ] ? ;
-             &<Thing_tes> ;
-             rdf:type [ owl:Thing ] ? ;
              <rationale> @linkml:String * ;
              dc:description @linkml:String *
           ) ;

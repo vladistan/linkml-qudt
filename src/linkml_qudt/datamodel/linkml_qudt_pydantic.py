@@ -941,10 +941,9 @@ class Verifiable(Aspect):
     pass
 
 
-class Comment(Verifiable, Thing):
+class Comment(Verifiable):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Comment',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
-         'mixins': ['Thing'],
          'slot_usage': {'description': {'multivalued': False, 'name': 'description'},
                         'rationale': {'name': 'rationale', 'required': False}}})
 

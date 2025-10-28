@@ -68,7 +68,7 @@ export interface Citation extends Concept {
 
 
 
-export interface Comment extends Verifiable, Thing {
+export interface Comment extends Verifiable {
 }
 
 

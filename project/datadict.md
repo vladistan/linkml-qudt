@@ -847,8 +847,6 @@ This class has no attributes
 ```yaml
 Comment:
   is_a: Verifiable
-  mixins:
-  - Thing
   slots:
   - Verifiable_wikidataMatch
   - Verifiable_dbpediaMatch
@@ -888,10 +886,6 @@ Comment:
 #### Children
 
  * [NISTSP811Comment](#NISTSP811Comment)
-
-#### Uses
-
- *  mixin: [Thing](#Thing) - The root class for all QUDT concepts
 
 
 
@@ -5732,10 +5726,6 @@ This class has no attributes
 
  * [Aspect](#Aspect)
  * [Concept](#Concept)
-
-#### Used as mixin by
-
- * [Comment](#Comment)
 
 
 

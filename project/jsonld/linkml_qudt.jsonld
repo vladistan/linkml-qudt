@@ -7370,9 +7370,6 @@
         "qudt:Comment"
       ],
       "is_a": "Verifiable",
-      "mixins": [
-        "Thing"
-      ],
       "slots": [
         "Verifiable_wikidataMatch",
         "Verifiable_dbpediaMatch",
@@ -9730,9 +9727,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-10-28T09:41:41",
-  "source_file_size": 50794,
-  "generation_date": "2025-10-28T10:15:45",
+  "source_file_date": "2025-10-28T10:27:25",
+  "source_file_size": 50770,
+  "generation_date": "2025-10-28T10:27:31",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

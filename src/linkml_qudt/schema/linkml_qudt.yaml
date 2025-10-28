@@ -100,8 +100,6 @@ classes:
     class_uri: qudt:Citation
   Comment:
     is_a: Verifiable
-    mixins:
-    - Thing
     slot_usage:
       rationale:
         required: false
