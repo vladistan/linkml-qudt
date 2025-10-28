@@ -140,7 +140,6 @@ Citation {
     stringList guidance  
     string id  
 }
-
 Concept {
     stringList guidance  
     string id  
@@ -430,101 +429,41 @@ Unit ||--}o Unit : "hasReciprocalUnit"
 
 These classes have no direct relationships but serve as base classes for other classes:
 
-```mermaid
-erDiagram
-Aspect {
-
-}
-Error3 {
-
-}
-Resource {
-
-}
-Thing {
-
-}
-Verifiable {
-
-}
-
-
-
-```
-
+| Class | Description |
+| --- | --- |
+| [Aspect](#Aspect) |  |
+| [Error3](#Error3) |  |
+| [Resource](#Resource) |  |
+| [Thing](#Thing) | The root class for all QUDT concepts |
+| [Verifiable](#Verifiable) |  |
 
 ## Standalone Classes
 
 
 These classes are completely isolated with no relationships and are not used as base classes:
 
-```mermaid
-erDiagram
-AspectClass {
-
-}
-CatalogEntry {
-
-}
-Comment {
-
-}
-DateTimeStringEncodingType {
-
-}
-Error1 {
-
-}
-Error2 {
-
-}
-GDay {
-
-}
-GMonth {
-
-}
-GMonthDay {
-
-}
-GYear {
-
-}
-GYearMonth {
-
-}
-LatexString {
-
-}
-List {
-
-}
-NISTSP811Comment {
-
-}
-Ontology {
-
-}
-SignednessType {
-
-}
-Statement {
-
-}
-StringEncodingType {
-
-}
-SymmetricRelation {
-
-}
-ValueUnion {
-
-}
-
-
-
-```
-
+| Class | Description |
+| --- | --- |
+| [AspectClass](#AspectClass) |  |
+| [CatalogEntry](#CatalogEntry) |  |
+| [Comment](#Comment) |  |
+| [DateTimeStringEncodingType](#DateTimeStringEncodingType) |  |
+| [Error1](#Error1) |  |
+| [Error2](#Error2) |  |
+| [LatexString](#LatexString) |  |
+| [List](#List) |  |
+| [NISTSP811Comment](#NISTSP811Comment) |  |
+| [Ontology](#Ontology) |  |
+| [SignednessType](#SignednessType) |  |
+| [Statement](#Statement) |  |
+| [StringEncodingType](#StringEncodingType) |  |
+| [SymmetricRelation](#SymmetricRelation) |  |
+| [GDay](#GDay) |  |
+| [GMonth](#GMonth) |  |
+| [GMonthDay](#GMonthDay) |  |
+| [GYear](#GYear) |  |
+| [GYearMonth](#GYearMonth) |  |
+| [ValueUnion](#ValueUnion) |  |
 
 ## Classes
 
@@ -582,14 +521,19 @@ QuantityKind ||--}o SystemOfQuantityKinds : "belongsToSystemOfQuantities"
 ```mermaid
 erDiagram
 AngleUnit {
+
 }
 Prefix {
+
 }
 QuantityKind {
+
 }
 QuantityKindDimensionVector {
+
 }
 Rule {
+
 }
 SystemOfUnits {
 
