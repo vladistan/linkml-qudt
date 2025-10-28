@@ -42,7 +42,6 @@ These classes are completely isolated with no relationships and are not used as 
 | [CatalogEntry](#CatalogEntry) |  |
 | [Comment](#Comment) |  |
 | [DateTimeStringEncodingType](#DateTimeStringEncodingType) |  |
-| [Error1](#Error1) |  |
 | [Error2](#Error2) |  |
 | [LatexString](#LatexString) |  |
 | [List](#List) |  |
@@ -2411,33 +2410,6 @@ EnumerationScale:
 
 
 
-### Error1
-
-
-
-
-#### YAML Definition
-
-<details>
-<summary>Click to expand</summary>
-
-```yaml
-Error1: {}
-
-```
-</details>
-
-
-This class has no attributes
-
-
-#### Used as mixin by
-
- * [PhysicalConstant](#PhysicalConstant)
-
-
-
-
 ### Error2
 
 
@@ -2953,7 +2925,7 @@ MathsFunctionType:
 
 
 
-### NIST_SP811_Comment
+### NISTSP811Comment
 
 
 
@@ -3319,8 +3291,6 @@ A physical constant is a physical quantity that is generally believed to be both
 ```yaml
 PhysicalConstant:
   is_a: Quantity
-  mixins:
-  - Error1
   slots:
   - Quantifiable_dataEncoding
   - Quantifiable_datatype
@@ -3343,6 +3313,7 @@ PhysicalConstant:
   - Concept_plainTextDescription
   - PhysicalConstant_applicableSystem
   - PhysicalConstant_applicableUnit
+  - PhysicalConstant_dbpediaMatch
   - PhysicalConstant_exactMatch
   - PhysicalConstant_hasDimensionVector
   - PhysicalConstant_ucumCode
@@ -3359,6 +3330,8 @@ PhysicalConstant:
       range: SystemOfUnits
     applicableUnit:
       range: Unit
+    dbpediaMatch:
+      range: uri
     exactMatch:
       range: PhysicalConstant
     hasDimensionVector:
@@ -3405,6 +3378,7 @@ PhysicalConstant:
 | **altSymbol** | <sub>0..\*</sub> | None |  |
 | **applicableSystem** | <sub>0..\*</sub> | [SystemOfUnits](#SystemOfUnits) |  |
 | **applicableUnit** | <sub>0..\*</sub> | [Unit](#Unit) |  |
+| **dbpediaMatch** | <sub>0..\*</sub> | uri |  |
 | **exactConstant** | <sub>0..\*</sub> | boolean |  |
 | **exactMatch** | <sub>0..\*</sub> | [PhysicalConstant](#PhysicalConstant) |  |
 | **hasDimensionVector** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#QuantityKindDimensionVector) |  |
@@ -3421,10 +3395,6 @@ PhysicalConstant:
 #### Parents
 
  * [Quantity](#Quantity)
-
-#### Uses
-
- *  mixin: [Error1](#Error1)
 
 #### Referenced by:
 
@@ -4062,7 +4032,7 @@ QuantityKindDimensionVector:
 
 
 
-### QuantityKindDimensionVector_CGS
+### QuantityKindDimensionVectorCGS
 
 
 
@@ -4141,7 +4111,7 @@ QuantityKindDimensionVector_CGS:
 
 
 
-### QuantityKindDimensionVector_CGS-EMU
+### QuantityKindDimensionVectorCGS-EMU
 
 
 
@@ -4213,7 +4183,7 @@ QuantityKindDimensionVector_CGS-EMU:
 
 
 
-### QuantityKindDimensionVector_CGS-ESU
+### QuantityKindDimensionVectorCGS-ESU
 
 
 
@@ -4285,7 +4255,7 @@ QuantityKindDimensionVector_CGS-ESU:
 
 
 
-### QuantityKindDimensionVector_CGS-GAUSS
+### QuantityKindDimensionVectorCGS-GAUSS
 
 
 
@@ -4357,7 +4327,7 @@ QuantityKindDimensionVector_CGS-GAUSS:
 
 
 
-### QuantityKindDimensionVector_CGS-LH
+### QuantityKindDimensionVectorCGS-LH
 
 
 
@@ -4429,7 +4399,7 @@ QuantityKindDimensionVector_CGS-LH:
 
 
 
-### QuantityKindDimensionVector_ISO
+### QuantityKindDimensionVectorISO
 
 
 
@@ -4499,7 +4469,7 @@ QuantityKindDimensionVector_ISO:
 
 
 
-### QuantityKindDimensionVector_Imperial
+### QuantityKindDimensionVectorImperial
 
 
 
@@ -4569,7 +4539,7 @@ QuantityKindDimensionVector_Imperial:
 
 
 
-### QuantityKindDimensionVector_SI
+### QuantityKindDimensionVectorSI
 
 
 
@@ -6191,7 +6161,7 @@ Verifiable:
 
 
 
-### gDay
+### GDay
 
 
 
@@ -6214,7 +6184,7 @@ This class has no attributes
 
 
 
-### gMonth
+### GMonth
 
 
 
@@ -6237,7 +6207,7 @@ This class has no attributes
 
 
 
-### gMonthDay
+### GMonthDay
 
 
 
@@ -6260,7 +6230,7 @@ This class has no attributes
 
 
 
-### gYear
+### GYear
 
 
 
@@ -6283,7 +6253,7 @@ This class has no attributes
 
 
 
-### gYearMonth
+### GYearMonth
 
 
 
@@ -6306,7 +6276,7 @@ This class has no attributes
 
 
 
-### valueUnion
+### ValueUnion
 
 
 
