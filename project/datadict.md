@@ -12,11 +12,11 @@ qudt
 
 ## Class Diagram
 
-![class_diagram](project/images/class_diagram.svg)
+![class_diagram](images/class_diagram.svg)
 
 ## ERD Diagram
 
-![erd_abstractquantitykind](project/images/erd_abstractquantitykind.svg)
+![erd_abstractquantitykind](images/erd_abstractquantitykind.svg)
 
 ## Base Classes
 
@@ -101,7 +101,7 @@ AbstractQuantityKind:
 ```
 </details>
 
-![class_abstractquantitykind_erd](project/images/class_abstractquantitykind_erd.svg)
+![class_abstractquantitykind_erd](images/class_abstractquantitykind_erd.svg)
 
 #### Attributes
 
@@ -193,7 +193,7 @@ AngleUnit:
 ```
 </details>
 
-![class_angleunit_erd](project/images/class_angleunit_erd.svg)
+![class_angleunit_erd](images/class_angleunit_erd.svg)
 
 #### Attributes
 
@@ -269,7 +269,7 @@ Aspect:
 
 #### Local class diagram
 
-![class_aspect_local](project/images/class_aspect_local.svg)
+![class_aspect_local](images/class_aspect_local.svg)
 
 This class has no attributes
 
@@ -310,7 +310,7 @@ AspectClass:
 
 #### Local class diagram
 
-![class_aspectclass_local](project/images/class_aspectclass_local.svg)
+![class_aspectclass_local](images/class_aspectclass_local.svg)
 
 This class has no attributes
 
@@ -362,7 +362,7 @@ BaseDimensionMagnitude:
 ```
 </details>
 
-![class_basedimensionmagnitude_erd](project/images/class_basedimensionmagnitude_erd.svg)
+![class_basedimensionmagnitude_erd](images/class_basedimensionmagnitude_erd.svg)
 
 #### Attributes
 
@@ -422,7 +422,7 @@ BinaryPrefix:
 ```
 </details>
 
-![class_binaryprefix_erd](project/images/class_binaryprefix_erd.svg)
+![class_binaryprefix_erd](images/class_binaryprefix_erd.svg)
 
 #### Attributes
 
@@ -474,7 +474,7 @@ BitEncodingType:
 ```
 </details>
 
-![class_bitencodingtype_erd](project/images/class_bitencodingtype_erd.svg)
+![class_bitencodingtype_erd](images/class_bitencodingtype_erd.svg)
 
 #### Attributes
 
@@ -526,7 +526,7 @@ BooleanEncodingType:
 ```
 </details>
 
-![class_booleanencodingtype_erd](project/images/class_booleanencodingtype_erd.svg)
+![class_booleanencodingtype_erd](images/class_booleanencodingtype_erd.svg)
 
 #### Attributes
 
@@ -578,7 +578,7 @@ ByteEncodingType:
 ```
 </details>
 
-![class_byteencodingtype_erd](project/images/class_byteencodingtype_erd.svg)
+![class_byteencodingtype_erd](images/class_byteencodingtype_erd.svg)
 
 #### Attributes
 
@@ -636,7 +636,7 @@ CardinalityType:
 ```
 </details>
 
-![class_cardinalitytype_erd](project/images/class_cardinalitytype_erd.svg)
+![class_cardinalitytype_erd](images/class_cardinalitytype_erd.svg)
 
 #### Attributes
 
@@ -714,7 +714,7 @@ CharEncodingType:
 ```
 </details>
 
-![class_charencodingtype_erd](project/images/class_charencodingtype_erd.svg)
+![class_charencodingtype_erd](images/class_charencodingtype_erd.svg)
 
 #### Attributes
 
@@ -773,7 +773,7 @@ Citation:
 ```
 </details>
 
-![class_citation_erd](project/images/class_citation_erd.svg)
+![class_citation_erd](images/class_citation_erd.svg)
 
 #### Attributes
 
@@ -812,7 +812,7 @@ Class: {}
 ```
 </details>
 
-![class_class_erd](project/images/class_class_erd.svg)
+![class_class_erd](images/class_class_erd.svg)
 
 This class has no attributes
 
@@ -860,7 +860,7 @@ Comment:
 
 #### Local class diagram
 
-![class_comment_local](project/images/class_comment_local.svg)
+![class_comment_local](images/class_comment_local.svg)
 
 #### Attributes
 
@@ -929,7 +929,7 @@ Concept:
 ```
 </details>
 
-![class_concept_erd](project/images/class_concept_erd.svg)
+![class_concept_erd](images/class_concept_erd.svg)
 
 #### Attributes
 
@@ -1024,7 +1024,7 @@ ConstantValue:
 ```
 </details>
 
-![class_constantvalue_erd](project/images/class_constantvalue_erd.svg)
+![class_constantvalue_erd](images/class_constantvalue_erd.svg)
 
 #### Attributes
 
@@ -1112,7 +1112,7 @@ ContextualUnit:
 ```
 </details>
 
-![class_contextualunit_erd](project/images/class_contextualunit_erd.svg)
+![class_contextualunit_erd](images/class_contextualunit_erd.svg)
 
 #### Attributes
 
@@ -1222,7 +1222,7 @@ CountingUnit:
 ```
 </details>
 
-![class_countingunit_erd](project/images/class_countingunit_erd.svg)
+![class_countingunit_erd](images/class_countingunit_erd.svg)
 
 #### Attributes
 
@@ -1341,7 +1341,7 @@ CurrencyUnit:
 ```
 </details>
 
-![class_currencyunit_erd](project/images/class_currencyunit_erd.svg)
+![class_currencyunit_erd](images/class_currencyunit_erd.svg)
 
 #### Attributes
 
@@ -1424,7 +1424,7 @@ DataEncoding:
 ```
 </details>
 
-![class_dataencoding_erd](project/images/class_dataencoding_erd.svg)
+![class_dataencoding_erd](images/class_dataencoding_erd.svg)
 
 #### Attributes
 
@@ -1476,7 +1476,7 @@ DataItem:
 ```
 </details>
 
-![class_dataitem_erd](project/images/class_dataitem_erd.svg)
+![class_dataitem_erd](images/class_dataitem_erd.svg)
 
 #### Attributes
 
@@ -1582,7 +1582,7 @@ Datatype:
 ```
 </details>
 
-![class_datatype_erd](project/images/class_datatype_erd.svg)
+![class_datatype_erd](images/class_datatype_erd.svg)
 
 #### Attributes
 
@@ -1656,7 +1656,7 @@ DateTimeStringEncodingType:
 
 #### Local class diagram
 
-![class_datetimestringencodingtype_local](project/images/class_datetimestringencodingtype_local.svg)
+![class_datetimestringencodingtype_local](images/class_datetimestringencodingtype_local.svg)
 
 #### Attributes
 
@@ -1707,7 +1707,7 @@ DecimalPrefix:
 ```
 </details>
 
-![class_decimalprefix_erd](project/images/class_decimalprefix_erd.svg)
+![class_decimalprefix_erd](images/class_decimalprefix_erd.svg)
 
 #### Attributes
 
@@ -1792,7 +1792,7 @@ DerivedUnit:
 ```
 </details>
 
-![class_derivedunit_erd](project/images/class_derivedunit_erd.svg)
+![class_derivedunit_erd](images/class_derivedunit_erd.svg)
 
 #### Attributes
 
@@ -1902,7 +1902,7 @@ DimensionlessUnit:
 ```
 </details>
 
-![class_dimensionlessunit_erd](project/images/class_dimensionlessunit_erd.svg)
+![class_dimensionlessunit_erd](images/class_dimensionlessunit_erd.svg)
 
 #### Attributes
 
@@ -1984,7 +1984,7 @@ Discipline:
 ```
 </details>
 
-![class_discipline_erd](project/images/class_discipline_erd.svg)
+![class_discipline_erd](images/class_discipline_erd.svg)
 
 #### Attributes
 
@@ -2039,7 +2039,7 @@ Encoding:
 ```
 </details>
 
-![class_encoding_erd](project/images/class_encoding_erd.svg)
+![class_encoding_erd](images/class_encoding_erd.svg)
 
 #### Attributes
 
@@ -2106,7 +2106,7 @@ EndianType:
 ```
 </details>
 
-![class_endiantype_erd](project/images/class_endiantype_erd.svg)
+![class_endiantype_erd](images/class_endiantype_erd.svg)
 
 #### Attributes
 
@@ -2166,7 +2166,7 @@ EnumeratedQuantity:
 ```
 </details>
 
-![class_enumeratedquantity_erd](project/images/class_enumeratedquantity_erd.svg)
+![class_enumeratedquantity_erd](images/class_enumeratedquantity_erd.svg)
 
 #### Attributes
 
@@ -2231,7 +2231,7 @@ EnumeratedValue:
 ```
 </details>
 
-![class_enumeratedvalue_erd](project/images/class_enumeratedvalue_erd.svg)
+![class_enumeratedvalue_erd](images/class_enumeratedvalue_erd.svg)
 
 #### Attributes
 
@@ -2314,7 +2314,7 @@ Enumeration:
 ```
 </details>
 
-![class_enumeration_erd](project/images/class_enumeration_erd.svg)
+![class_enumeration_erd](images/class_enumeration_erd.svg)
 
 #### Attributes
 
@@ -2381,7 +2381,7 @@ EnumerationScale:
 ```
 </details>
 
-![class_enumerationscale_erd](project/images/class_enumerationscale_erd.svg)
+![class_enumerationscale_erd](images/class_enumerationscale_erd.svg)
 
 #### Attributes
 
@@ -2484,7 +2484,7 @@ Error3: {}
 
 #### Local class diagram
 
-![class_error3_local](project/images/class_error3_local.svg)
+![class_error3_local](images/class_error3_local.svg)
 
 This class has no attributes
 
@@ -2545,7 +2545,7 @@ Figure:
 ```
 </details>
 
-![class_figure_erd](project/images/class_figure_erd.svg)
+![class_figure_erd](images/class_figure_erd.svg)
 
 #### Attributes
 
@@ -2605,7 +2605,7 @@ FloatingPointEncodingType:
 ```
 </details>
 
-![class_floatingpointencodingtype_erd](project/images/class_floatingpointencodingtype_erd.svg)
+![class_floatingpointencodingtype_erd](images/class_floatingpointencodingtype_erd.svg)
 
 #### Attributes
 
@@ -2657,7 +2657,7 @@ IntegerEncodingType:
 ```
 </details>
 
-![class_integerencodingtype_erd](project/images/class_integerencodingtype_erd.svg)
+![class_integerencodingtype_erd](images/class_integerencodingtype_erd.svg)
 
 #### Attributes
 
@@ -2716,7 +2716,7 @@ IntervalScale:
 ```
 </details>
 
-![class_intervalscale_erd](project/images/class_intervalscale_erd.svg)
+![class_intervalscale_erd](images/class_intervalscale_erd.svg)
 
 #### Attributes
 
@@ -2851,7 +2851,7 @@ LogarithmicUnit:
 ```
 </details>
 
-![class_logarithmicunit_erd](project/images/class_logarithmicunit_erd.svg)
+![class_logarithmicunit_erd](images/class_logarithmicunit_erd.svg)
 
 #### Attributes
 
@@ -2926,7 +2926,7 @@ MathsFunctionType:
 ```
 </details>
 
-![class_mathsfunctiontype_erd](project/images/class_mathsfunctiontype_erd.svg)
+![class_mathsfunctiontype_erd](images/class_mathsfunctiontype_erd.svg)
 
 #### Attributes
 
@@ -2978,7 +2978,7 @@ NIST_SP811_Comment:
 
 #### Local class diagram
 
-![class_nist_sp811_comment_local](project/images/class_nist_sp811_comment_local.svg)
+![class_nist_sp811_comment_local](images/class_nist_sp811_comment_local.svg)
 
 #### Attributes
 
@@ -3028,7 +3028,7 @@ NominalScale:
 ```
 </details>
 
-![class_nominalscale_erd](project/images/class_nominalscale_erd.svg)
+![class_nominalscale_erd](images/class_nominalscale_erd.svg)
 
 #### Attributes
 
@@ -3081,7 +3081,7 @@ NumericUnion:
 ```
 </details>
 
-![class_numericunion_erd](project/images/class_numericunion_erd.svg)
+![class_numericunion_erd](images/class_numericunion_erd.svg)
 
 #### Attributes
 
@@ -3160,7 +3160,7 @@ OrderedType:
 ```
 </details>
 
-![class_orderedtype_erd](project/images/class_orderedtype_erd.svg)
+![class_orderedtype_erd](images/class_orderedtype_erd.svg)
 
 #### Attributes
 
@@ -3224,7 +3224,7 @@ OrdinalScale:
 ```
 </details>
 
-![class_ordinalscale_erd](project/images/class_ordinalscale_erd.svg)
+![class_ordinalscale_erd](images/class_ordinalscale_erd.svg)
 
 #### Attributes
 
@@ -3281,7 +3281,7 @@ Organization:
 ```
 </details>
 
-![class_organization_erd](project/images/class_organization_erd.svg)
+![class_organization_erd](images/class_organization_erd.svg)
 
 #### Attributes
 
@@ -3385,7 +3385,7 @@ PhysicalConstant:
 ```
 </details>
 
-![class_physicalconstant_erd](project/images/class_physicalconstant_erd.svg)
+![class_physicalconstant_erd](images/class_physicalconstant_erd.svg)
 
 #### Attributes
 
@@ -3493,7 +3493,7 @@ PlaneAngleUnit:
 ```
 </details>
 
-![class_planeangleunit_erd](project/images/class_planeangleunit_erd.svg)
+![class_planeangleunit_erd](images/class_planeangleunit_erd.svg)
 
 #### Attributes
 
@@ -3591,7 +3591,7 @@ Prefix:
 ```
 </details>
 
-![class_prefix_erd](project/images/class_prefix_erd.svg)
+![class_prefix_erd](images/class_prefix_erd.svg)
 
 #### Attributes
 
@@ -3680,7 +3680,7 @@ Quantifiable:
 ```
 </details>
 
-![class_quantifiable_erd](project/images/class_quantifiable_erd.svg)
+![class_quantifiable_erd](images/class_quantifiable_erd.svg)
 
 #### Attributes
 
@@ -3768,7 +3768,7 @@ Quantity:
 ```
 </details>
 
-![class_quantity_erd](project/images/class_quantity_erd.svg)
+![class_quantity_erd](images/class_quantity_erd.svg)
 
 #### Attributes
 
@@ -3887,7 +3887,7 @@ QuantityKind:
 ```
 </details>
 
-![class_quantitykind_erd](project/images/class_quantitykind_erd.svg)
+![class_quantitykind_erd](images/class_quantitykind_erd.svg)
 
 #### Attributes
 
@@ -4012,7 +4012,7 @@ QuantityKindDimensionVector:
 ```
 </details>
 
-![class_quantitykinddimensionvector_erd](project/images/class_quantitykinddimensionvector_erd.svg)
+![class_quantitykinddimensionvector_erd](images/class_quantitykinddimensionvector_erd.svg)
 
 #### Attributes
 
@@ -4101,7 +4101,7 @@ QuantityKindDimensionVector_CGS:
 ```
 </details>
 
-![class_quantitykinddimensionvector_cgs_erd](project/images/class_quantitykinddimensionvector_cgs_erd.svg)
+![class_quantitykinddimensionvector_cgs_erd](images/class_quantitykinddimensionvector_cgs_erd.svg)
 
 #### Attributes
 
@@ -4180,7 +4180,7 @@ QuantityKindDimensionVector_CGS-EMU:
 ```
 </details>
 
-![class_quantitykinddimensionvector_cgs-emu_erd](project/images/class_quantitykinddimensionvector_cgs-emu_erd.svg)
+![class_quantitykinddimensionvector_cgs-emu_erd](images/class_quantitykinddimensionvector_cgs-emu_erd.svg)
 
 #### Attributes
 
@@ -4252,7 +4252,7 @@ QuantityKindDimensionVector_CGS-ESU:
 ```
 </details>
 
-![class_quantitykinddimensionvector_cgs-esu_erd](project/images/class_quantitykinddimensionvector_cgs-esu_erd.svg)
+![class_quantitykinddimensionvector_cgs-esu_erd](images/class_quantitykinddimensionvector_cgs-esu_erd.svg)
 
 #### Attributes
 
@@ -4324,7 +4324,7 @@ QuantityKindDimensionVector_CGS-GAUSS:
 ```
 </details>
 
-![class_quantitykinddimensionvector_cgs-gauss_erd](project/images/class_quantitykinddimensionvector_cgs-gauss_erd.svg)
+![class_quantitykinddimensionvector_cgs-gauss_erd](images/class_quantitykinddimensionvector_cgs-gauss_erd.svg)
 
 #### Attributes
 
@@ -4396,7 +4396,7 @@ QuantityKindDimensionVector_CGS-LH:
 ```
 </details>
 
-![class_quantitykinddimensionvector_cgs-lh_erd](project/images/class_quantitykinddimensionvector_cgs-lh_erd.svg)
+![class_quantitykinddimensionvector_cgs-lh_erd](images/class_quantitykinddimensionvector_cgs-lh_erd.svg)
 
 #### Attributes
 
@@ -4466,7 +4466,7 @@ QuantityKindDimensionVector_ISO:
 ```
 </details>
 
-![class_quantitykinddimensionvector_iso_erd](project/images/class_quantitykinddimensionvector_iso_erd.svg)
+![class_quantitykinddimensionvector_iso_erd](images/class_quantitykinddimensionvector_iso_erd.svg)
 
 #### Attributes
 
@@ -4536,7 +4536,7 @@ QuantityKindDimensionVector_Imperial:
 ```
 </details>
 
-![class_quantitykinddimensionvector_imperial_erd](project/images/class_quantitykinddimensionvector_imperial_erd.svg)
+![class_quantitykinddimensionvector_imperial_erd](images/class_quantitykinddimensionvector_imperial_erd.svg)
 
 #### Attributes
 
@@ -4606,7 +4606,7 @@ QuantityKindDimensionVector_SI:
 ```
 </details>
 
-![class_quantitykinddimensionvector_si_erd](project/images/class_quantitykinddimensionvector_si_erd.svg)
+![class_quantitykinddimensionvector_si_erd](images/class_quantitykinddimensionvector_si_erd.svg)
 
 #### Attributes
 
@@ -4677,7 +4677,7 @@ QuantityType:
 ```
 </details>
 
-![class_quantitytype_erd](project/images/class_quantitytype_erd.svg)
+![class_quantitytype_erd](images/class_quantitytype_erd.svg)
 
 #### Attributes
 
@@ -4741,7 +4741,7 @@ QuantityValue:
 ```
 </details>
 
-![class_quantityvalue_erd](project/images/class_quantityvalue_erd.svg)
+![class_quantityvalue_erd](images/class_quantityvalue_erd.svg)
 
 #### Attributes
 
@@ -4809,7 +4809,7 @@ RatioScale:
 ```
 </details>
 
-![class_ratioscale_erd](project/images/class_ratioscale_erd.svg)
+![class_ratioscale_erd](images/class_ratioscale_erd.svg)
 
 #### Attributes
 
@@ -4854,7 +4854,7 @@ Resource: {}
 
 #### Local class diagram
 
-![class_resource_local](project/images/class_resource_local.svg)
+![class_resource_local](images/class_resource_local.svg)
 
 This class has no attributes
 
@@ -4905,7 +4905,7 @@ Rule:
 ```
 </details>
 
-![class_rule_erd](project/images/class_rule_erd.svg)
+![class_rule_erd](images/class_rule_erd.svg)
 
 #### Attributes
 
@@ -4963,7 +4963,7 @@ RuleType:
 ```
 </details>
 
-![class_ruletype_erd](project/images/class_ruletype_erd.svg)
+![class_ruletype_erd](images/class_ruletype_erd.svg)
 
 #### Attributes
 
@@ -5058,7 +5058,7 @@ ScalarDatatype:
 ```
 </details>
 
-![class_scalardatatype_erd](project/images/class_scalardatatype_erd.svg)
+![class_scalardatatype_erd](images/class_scalardatatype_erd.svg)
 
 #### Attributes
 
@@ -5147,7 +5147,7 @@ Scale:
 ```
 </details>
 
-![class_scale_erd](project/images/class_scale_erd.svg)
+![class_scale_erd](images/class_scale_erd.svg)
 
 #### Attributes
 
@@ -5221,7 +5221,7 @@ ScaleType:
 ```
 </details>
 
-![class_scaletype_erd](project/images/class_scaletype_erd.svg)
+![class_scaletype_erd](images/class_scaletype_erd.svg)
 
 #### Attributes
 
@@ -5332,7 +5332,7 @@ SolidAngleUnit:
 ```
 </details>
 
-![class_solidangleunit_erd](project/images/class_solidangleunit_erd.svg)
+![class_solidangleunit_erd](images/class_solidangleunit_erd.svg)
 
 #### Attributes
 
@@ -5423,7 +5423,7 @@ StringEncodingType: {}
 
 #### Local class diagram
 
-![class_stringencodingtype_local](project/images/class_stringencodingtype_local.svg)
+![class_stringencodingtype_local](images/class_stringencodingtype_local.svg)
 
 This class has no attributes
 
@@ -5461,7 +5461,7 @@ Symbol:
 ```
 </details>
 
-![class_symbol_erd](project/images/class_symbol_erd.svg)
+![class_symbol_erd](images/class_symbol_erd.svg)
 
 #### Attributes
 
@@ -5552,7 +5552,7 @@ SystemOfQuantityKinds:
 ```
 </details>
 
-![class_systemofquantitykinds_erd](project/images/class_systemofquantitykinds_erd.svg)
+![class_systemofquantitykinds_erd](images/class_systemofquantitykinds_erd.svg)
 
 #### Attributes
 
@@ -5643,7 +5643,7 @@ SystemOfUnits:
 ```
 </details>
 
-![class_systemofunits_erd](project/images/class_systemofunits_erd.svg)
+![class_systemofunits_erd](images/class_systemofunits_erd.svg)
 
 #### Attributes
 
@@ -5720,7 +5720,7 @@ Thing:
 
 #### Local class diagram
 
-![class_thing_local](project/images/class_thing_local.svg)
+![class_thing_local](images/class_thing_local.svg)
 
 This class has no attributes
 
@@ -5767,7 +5767,7 @@ TransformType:
 ```
 </details>
 
-![class_transformtype_erd](project/images/class_transformtype_erd.svg)
+![class_transformtype_erd](images/class_transformtype_erd.svg)
 
 #### Attributes
 
@@ -5813,7 +5813,7 @@ UCUMcs:
 ```
 </details>
 
-![class_ucumcs_erd](project/images/class_ucumcs_erd.svg)
+![class_ucumcs_erd](images/class_ucumcs_erd.svg)
 
 This class has no attributes
 
@@ -5848,7 +5848,7 @@ UCUMcs-term:
 ```
 </details>
 
-![class_ucumcs-term_erd](project/images/class_ucumcs-term_erd.svg)
+![class_ucumcs-term_erd](images/class_ucumcs-term_erd.svg)
 
 This class has no attributes
 
@@ -5983,7 +5983,7 @@ Unit:
 ```
 </details>
 
-![class_unit_erd](project/images/class_unit_erd.svg)
+![class_unit_erd](images/class_unit_erd.svg)
 
 #### Attributes
 
@@ -6101,7 +6101,7 @@ UserQuantityKind:
 ```
 </details>
 
-![class_userquantitykind_erd](project/images/class_userquantitykind_erd.svg)
+![class_userquantitykind_erd](images/class_userquantitykind_erd.svg)
 
 #### Attributes
 
@@ -6160,7 +6160,7 @@ Verifiable:
 
 #### Local class diagram
 
-![class_verifiable_local](project/images/class_verifiable_local.svg)
+![class_verifiable_local](images/class_verifiable_local.svg)
 
 #### Attributes
 
@@ -6326,7 +6326,7 @@ valueUnion:
 
 #### Local class diagram
 
-![class_valueunion_local](project/images/class_valueunion_local.svg)
+![class_valueunion_local](images/class_valueunion_local.svg)
 
 This class has no attributes
 
