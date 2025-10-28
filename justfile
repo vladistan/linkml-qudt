@@ -1,12 +1,7 @@
 # Environment variables with defaults
 schema_name := 'linkml_qudt'
 source_schema_dir := "src" / schema_name / "schema"
-config_yaml := ""
-gen_doc_args := ""
-gen_java_args := ""
-gen_owl_args := ""
-gen_pydantic_args := ""
-gen_ts_args := ""
+gen_project_excludes := "-X graphql -X markdown -X excel"
 
 # Directory variables
 src := "src"
@@ -55,7 +50,7 @@ lint:
 # Generate md documentation for the schema
 [group('model development')]
 gen-doc: _gen-yaml
-  uv run --group dev gen-doc {{gen_doc_args}} -d {{docdir}} {{source_schema_path}}
+  uv run --group dev gen-doc -d {{docdir}} {{source_schema_path}}
 
 # Build docs and run test server
 [group('model development')]
@@ -63,18 +58,18 @@ testdoc: gen-doc _serve
 
 gen-python:
   uv run --group dev gen-project -d  {{pymodel}} -I python {{source_schema_path}}
-  uv run --group dev gen-pydantic {{gen_pydantic_args}} {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
 
 # Generate project files including Python data model
 [group('model development')]
 gen-project:
-  uv run --group dev gen-project {{config_yaml}} -d {{dest}} {{source_schema_path}}
-  uv run --group dev gen-pydantic {{gen_pydantic_args}} {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
   mv {{dest}}/*.py {{pymodel}}
   mkdir -p {{dest}}/owl
-  uv run --group dev gen-owl {{gen_owl_args}} {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
+  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
-  uv run --group dev gen-typescript {{gen_ts_args}} {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
   uv run --group dev gen-markdown-datadict {{source_schema_path}} > {{dest}}/datadict.md
 
 # Locally serve data dictionary
@@ -93,7 +88,7 @@ status:
 
 # Test schema generation
 _test-schema:
-  uv run --group dev gen-project {{config_yaml}} -d tmp {{source_schema_path}}
+  uv run --group dev gen-project {{gen_project_excludes}} -d tmp {{source_schema_path}}
 
 # Run Python unit tests with pytest
 _test-python: gen-python
