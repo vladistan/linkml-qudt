@@ -658,7 +658,7 @@ CardinalityType:
 
 #### Referenced by:
 
- *  **[Datatype](#Datatype)** : *[Datatype_cardinality](#Datatype_cardinality)*  <sub>0..\*</sub> 
+ *  **[Datatype](#Datatype)** : cardinality  <sub>0..\*</sub> 
 
 
 
@@ -823,7 +823,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Unit](#Unit)** : *[Unit_hasFactorUnit](#Unit_hasFactorUnit)*  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : hasFactorUnit  <sub>0..\*</sub> 
 
 
 
@@ -1440,7 +1440,7 @@ DataEncoding:
 
 #### Referenced by:
 
- *  **[Quantifiable](#Quantifiable)** : *[Quantifiable_dataEncoding](#Quantifiable_dataEncoding)*  <sub>0..\*</sub> 
+ *  **[Quantifiable](#Quantifiable)** : dataEncoding  <sub>0..\*</sub> 
 
 
 
@@ -1624,9 +1624,9 @@ Datatype:
 
 #### Referenced by:
 
- *  **[Datatype](#Datatype)** : *[Datatype_basis](#Datatype_basis)*  <sub>0..\*</sub> 
- *  **[Quantifiable](#Quantifiable)** : *[Quantifiable_datatype](#Quantifiable_datatype)*  <sub>0..\*</sub> 
- *  **[ScalarDatatype](#ScalarDatatype)** : *[ScalarDatatype_rdfsDatatype](#ScalarDatatype_rdfsDatatype)*  <sub>0..\*</sub> 
+ *  **[Datatype](#Datatype)** : basis  <sub>0..\*</sub> 
+ *  **[Quantifiable](#Quantifiable)** : datatype  <sub>0..\*</sub> 
+ *  **[ScalarDatatype](#ScalarDatatype)** : rdfsDatatype  <sub>0..\*</sub> 
 
 
 
@@ -2071,7 +2071,7 @@ Encoding:
 
 #### Referenced by:
 
- *  **[DataEncoding](#DataEncoding)** : *[DataEncoding_encoding](#DataEncoding_encoding)*  <sub>0..\*</sub> 
+ *  **[DataEncoding](#DataEncoding)** : encoding  <sub>0..\*</sub> 
 
 
 
@@ -2127,8 +2127,8 @@ EndianType:
 
 #### Referenced by:
 
- *  **[DataEncoding](#DataEncoding)** : *[DataEncoding_bitOrder](#DataEncoding_bitOrder)*  <sub>0..\*</sub> 
- *  **[DataEncoding](#DataEncoding)** : *[DataEncoding_byteOrder](#DataEncoding_byteOrder)*  <sub>0..\*</sub> 
+ *  **[DataEncoding](#DataEncoding)** : bitOrder  <sub>0..\*</sub> 
+ *  **[DataEncoding](#DataEncoding)** : byteOrder  <sub>0..\*</sub> 
 
 
 
@@ -2266,9 +2266,9 @@ EnumeratedValue:
 
 #### Referenced by:
 
- *  **[EnumeratedQuantity](#EnumeratedQuantity)** : *[EnumeratedQuantity_enumeratedValue](#EnumeratedQuantity_enumeratedValue)*  <sub>0..\*</sub> 
- *  **[Enumeration](#Enumeration)** : *[Enumeration_default](#Enumeration_default)*  <sub>0..\*</sub> 
- *  **[Enumeration](#Enumeration)** : *[Enumeration_element](#Enumeration_element)*  <sub>1..\*</sub> 
+ *  **[EnumeratedQuantity](#EnumeratedQuantity)** : enumeratedValue  <sub>0..\*</sub> 
+ *  **[Enumeration](#Enumeration)** : default  <sub>0..\*</sub> 
+ *  **[Enumeration](#Enumeration)** : element  <sub>1..\*</sub> 
 
 
 
@@ -2341,8 +2341,8 @@ Enumeration:
 
 #### Referenced by:
 
- *  **[EnumeratedQuantity](#EnumeratedQuantity)** : *[EnumeratedQuantity_enumeration](#EnumeratedQuantity_enumeration)*  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : *[SystemOfQuantityKinds_baseDimensionEnumeration](#SystemOfQuantityKinds_baseDimensionEnumeration)*  <sub>0..\*</sub> 
+ *  **[EnumeratedQuantity](#EnumeratedQuantity)** : enumeration  <sub>0..\*</sub> 
+ *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : baseDimensionEnumeration  <sub>0..\*</sub> 
 
 
 
@@ -2947,8 +2947,8 @@ MathsFunctionType:
 
 #### Referenced by:
 
- *  **[ScaleType](#ScaleType)** : *[ScaleType_permissibleMaths](#ScaleType_permissibleMaths)*  <sub>0..\*</sub> 
- *  **[Scale](#Scale)** : *[Scale_permissibleMaths](#Scale_permissibleMaths)*  <sub>0..\*</sub> 
+ *  **[ScaleType](#ScaleType)** : permissibleMaths  <sub>0..\*</sub> 
+ *  **[Scale](#Scale)** : permissibleMaths  <sub>0..\*</sub> 
 
 
 
@@ -3182,7 +3182,7 @@ OrderedType:
 
 #### Referenced by:
 
- *  **[Datatype](#Datatype)** : *[Datatype_orderedType](#Datatype_orderedType)*  <sub>0..\*</sub> 
+ *  **[Datatype](#Datatype)** : orderedType  <sub>0..\*</sub> 
 
 
 
@@ -3428,8 +3428,8 @@ PhysicalConstant:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#PhysicalConstant)** : *[PhysicalConstant_exactMatch](#PhysicalConstant_exactMatch)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_applicablePhysicalConstant](#SystemOfUnits_applicablePhysicalConstant)*  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#PhysicalConstant)** : exactMatch  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : applicablePhysicalConstant  <sub>0..\*</sub> 
 
 
 
@@ -3623,9 +3623,9 @@ Prefix:
 
 #### Referenced by:
 
- *  **[Prefix](#Prefix)** : *[Prefix_exactMatch](#Prefix_exactMatch)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_prefix](#SystemOfUnits_prefix)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_prefix](#Unit_prefix)*  <sub>0..\*</sub> 
+ *  **[Prefix](#Prefix)** : exactMatch  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : prefix  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : prefix  <sub>0..\*</sub> 
 
 
 
@@ -3923,17 +3923,17 @@ QuantityKind:
 
 #### Referenced by:
 
- *  **[AbstractQuantityKind](#AbstractQuantityKind)** : *[AbstractQuantityKind_broader](#AbstractQuantityKind_broader)*  <sub>0..1</sub> 
- *  **[BaseDimensionMagnitude](#BaseDimensionMagnitude)** : *[BaseDimensionMagnitude_hasBaseQuantityKind](#BaseDimensionMagnitude_hasBaseQuantityKind)*  <sub>1..\*</sub> 
- *  **[QuantityKindDimensionVector](#QuantityKindDimensionVector)** : *[QuantityKindDimensionVector_hasReferenceQuantityKind](#QuantityKindDimensionVector_hasReferenceQuantityKind)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_exactMatch](#QuantityKind_exactMatch)*  <sub>0..\*</sub> 
- *  **[QuantityType](#QuantityType)** : *[QuantityType_value](#QuantityType_value)*  <sub>0..\*</sub> 
- *  **[Quantity](#Quantity)** : *[Quantity_hasQuantityKind](#Quantity_hasQuantityKind)*  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : *[SystemOfQuantityKinds_hasBaseQuantityKind](#SystemOfQuantityKinds_hasBaseQuantityKind)*  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : *[SystemOfQuantityKinds_hasQuantityKind](#SystemOfQuantityKinds_hasQuantityKind)*  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : *[SystemOfQuantityKinds_systemDerivedQuantityKind](#SystemOfQuantityKinds_systemDerivedQuantityKind)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_hasQuantityKind](#Unit_hasQuantityKind)*  <sub>0..\*</sub> 
- *  **[UserQuantityKind](#UserQuantityKind)** : *[UserQuantityKind_hasQuantityKind](#UserQuantityKind_hasQuantityKind)*  <sub>1..\*</sub> 
+ *  **[AbstractQuantityKind](#AbstractQuantityKind)** : broader  <sub>0..1</sub> 
+ *  **[BaseDimensionMagnitude](#BaseDimensionMagnitude)** : hasBaseQuantityKind  <sub>1..\*</sub> 
+ *  **[QuantityKindDimensionVector](#QuantityKindDimensionVector)** : hasReferenceQuantityKind  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : exactMatch  <sub>0..\*</sub> 
+ *  **[QuantityType](#QuantityType)** : value  <sub>0..\*</sub> 
+ *  **[Quantity](#Quantity)** : hasQuantityKind  <sub>0..\*</sub> 
+ *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : hasBaseQuantityKind  <sub>0..\*</sub> 
+ *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : hasQuantityKind  <sub>0..\*</sub> 
+ *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : systemDerivedQuantityKind  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : hasQuantityKind  <sub>0..\*</sub> 
+ *  **[UserQuantityKind](#UserQuantityKind)** : hasQuantityKind  <sub>1..\*</sub> 
 
 
 
@@ -4051,13 +4051,13 @@ QuantityKindDimensionVector:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#PhysicalConstant)** : *[PhysicalConstant_hasDimensionVector](#PhysicalConstant_hasDimensionVector)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_hasDimensionVector](#QuantityKind_hasDimensionVector)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_qkdvDenominator](#QuantityKind_qkdvDenominator)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_qkdvNumerator](#QuantityKind_qkdvNumerator)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_hasDimensionVector](#Unit_hasDimensionVector)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_qkdvDenominator](#Unit_qkdvDenominator)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_qkdvNumerator](#Unit_qkdvNumerator)*  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#PhysicalConstant)** : hasDimensionVector  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : hasDimensionVector  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : qkdvDenominator  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : qkdvNumerator  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : hasDimensionVector  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : qkdvDenominator  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : qkdvNumerator  <sub>0..\*</sub> 
 
 
 
@@ -4638,7 +4638,7 @@ QuantityKindDimensionVector_SI:
 
 #### Referenced by:
 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_dimensionVectorForSI](#QuantityKind_dimensionVectorForSI)*  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : dimensionVectorForSI  <sub>0..\*</sub> 
 
 
 
@@ -4772,7 +4772,7 @@ QuantityValue:
 
 #### Referenced by:
 
- *  **[Quantity](#Quantity)** : *[Quantity_quantityValue](#Quantity_quantityValue)*  <sub>0..\*</sub> 
+ *  **[Quantity](#Quantity)** : quantityValue  <sub>0..\*</sub> 
 
 
 
@@ -4928,7 +4928,7 @@ Rule:
 
 #### Referenced by:
 
- *  **[Concept](#Concept)** : *[Concept_hasRule](#Concept_hasRule)*  <sub>0..\*</sub> 
+ *  **[Concept](#Concept)** : hasRule  <sub>0..\*</sub> 
 
 
 
@@ -4984,7 +4984,7 @@ RuleType:
 
 #### Referenced by:
 
- *  **[Rule](#Rule)** : *[Rule_ruleType](#Rule_ruleType)*  <sub>0..\*</sub> 
+ *  **[Rule](#Rule)** : ruleType  <sub>0..\*</sub> 
 
 
 
@@ -5245,7 +5245,7 @@ ScaleType:
 
 #### Referenced by:
 
- *  **[Scale](#Scale)** : *[Scale_scaleType](#Scale_scaleType)*  <sub>0..\*</sub> 
+ *  **[Scale](#Scale)** : scaleType  <sub>0..\*</sub> 
 
 
 
@@ -5578,7 +5578,7 @@ SystemOfQuantityKinds:
 
 #### Referenced by:
 
- *  **[QuantityKind](#QuantityKind)** : *[belongsToSystemOfQuantities](#belongsToSystemOfQuantities)*  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : belongsToSystemOfQuantities  <sub>0..\*</sub> 
 
 
 
@@ -5673,13 +5673,13 @@ SystemOfUnits:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#PhysicalConstant)** : *[PhysicalConstant_applicableSystem](#PhysicalConstant_applicableSystem)*  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : *[SystemOfQuantityKinds_hasUnitSystem](#SystemOfQuantityKinds_hasUnitSystem)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_applicableSystem](#Unit_applicableSystem)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_definedUnitOfSystem](#Unit_definedUnitOfSystem)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_derivedCoherentUnitOfSystem](#Unit_derivedCoherentUnitOfSystem)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_derivedUnitOfSystem](#Unit_derivedUnitOfSystem)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[isUnitOfSystem](#isUnitOfSystem)*  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#PhysicalConstant)** : applicableSystem  <sub>0..\*</sub> 
+ *  **[SystemOfQuantityKinds](#SystemOfQuantityKinds)** : hasUnitSystem  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : applicableSystem  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : definedUnitOfSystem  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : derivedCoherentUnitOfSystem  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : derivedUnitOfSystem  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : isUnitOfSystem  <sub>0..\*</sub> 
 
 
 
@@ -5788,8 +5788,8 @@ TransformType:
 
 #### Referenced by:
 
- *  **[ScaleType](#ScaleType)** : *[ScaleType_permissibleTransformation](#ScaleType_permissibleTransformation)*  <sub>0..\*</sub> 
- *  **[Scale](#Scale)** : *[Scale_permissibleTransformation](#Scale_permissibleTransformation)*  <sub>0..\*</sub> 
+ *  **[ScaleType](#ScaleType)** : permissibleTransformation  <sub>0..\*</sub> 
+ *  **[Scale](#Scale)** : permissibleTransformation  <sub>0..\*</sub> 
 
 
 
@@ -5824,7 +5824,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Unit](#Unit)** : *[Unit_ucumCode](#Unit_ucumCode)*  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : ucumCode  <sub>0..\*</sub> 
 
 
 
@@ -5859,7 +5859,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Prefix](#Prefix)** : *[Prefix_ucumCode](#Prefix_ucumCode)*  <sub>0..\*</sub> 
+ *  **[Prefix](#Prefix)** : ucumCode  <sub>0..\*</sub> 
 
 
 
@@ -6041,26 +6041,26 @@ Unit:
 
 #### Referenced by:
 
- *  **[ContextualUnit](#ContextualUnit)** : *[ContextualUnit_broader](#ContextualUnit_broader)*  <sub>0..1</sub> 
- *  **[PhysicalConstant](#PhysicalConstant)** : *[PhysicalConstant_applicableUnit](#PhysicalConstant_applicableUnit)*  <sub>0..\*</sub> 
- *  **[Quantifiable](#Quantifiable)** : *[Quantifiable_hasUnit](#Quantifiable_hasUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableCGSUnit](#QuantityKind_applicableCGSUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableISOUnit](#QuantityKind_applicableISOUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableImperialUnit](#QuantityKind_applicableImperialUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableSIUnit](#QuantityKind_applicableSIUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableUSCustomaryUnit](#QuantityKind_applicableUSCustomaryUnit)*  <sub>0..\*</sub> 
- *  **[QuantityKind](#QuantityKind)** : *[QuantityKind_applicableUnit](#QuantityKind_applicableUnit)*  <sub>0..\*</sub> 
- *  **[QuantityValue](#QuantityValue)** : *[QuantityValue_hasUnit](#QuantityValue_hasUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasAllowedUnit](#SystemOfUnits_hasAllowedUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasBaseUnit](#SystemOfUnits_hasBaseUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasCoherentUnit](#SystemOfUnits_hasCoherentUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasDefinedUnit](#SystemOfUnits_hasDefinedUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasDerivedCoherentUnit](#SystemOfUnits_hasDerivedCoherentUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasDerivedUnit](#SystemOfUnits_hasDerivedUnit)*  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#SystemOfUnits)** : *[SystemOfUnits_hasUnit](#SystemOfUnits_hasUnit)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_exactMatch](#Unit_exactMatch)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[Unit_scalingOf](#Unit_scalingOf)*  <sub>0..\*</sub> 
- *  **[Unit](#Unit)** : *[hasReciprocalUnit](#hasReciprocalUnit)*  <sub>0..\*</sub> 
+ *  **[ContextualUnit](#ContextualUnit)** : broader  <sub>0..1</sub> 
+ *  **[PhysicalConstant](#PhysicalConstant)** : applicableUnit  <sub>0..\*</sub> 
+ *  **[Quantifiable](#Quantifiable)** : hasUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableCGSUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableISOUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableImperialUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableSIUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableUSCustomaryUnit  <sub>0..\*</sub> 
+ *  **[QuantityKind](#QuantityKind)** : applicableUnit  <sub>0..\*</sub> 
+ *  **[QuantityValue](#QuantityValue)** : hasUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasAllowedUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasBaseUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasCoherentUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasDefinedUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasDerivedCoherentUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasDerivedUnit  <sub>0..\*</sub> 
+ *  **[SystemOfUnits](#SystemOfUnits)** : hasUnit  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : exactMatch  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : scalingOf  <sub>0..\*</sub> 
+ *  **[Unit](#Unit)** : hasReciprocalUnit  <sub>0..\*</sub> 
 
 
 
