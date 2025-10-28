@@ -21,8 +21,6 @@ classes:
   Thing:
     description: The root class for all QUDT concepts
     class_uri: owl:Thing
-  Error1:
-    class_uri: http://org.semanticweb.owlapi/error#Error1
   Error2:
     class_uri: http://org.semanticweb.owlapi/error#Error2
   Error3:
@@ -446,13 +444,13 @@ classes:
       \ many dimensional forms, or may be dimensionless depending on the system of\
       \ quantities and units used.^^rdf:HTML"
     is_a: Quantity
-    mixins:
-    - Error1
     slot_usage:
       applicableSystem:
         range: SystemOfUnits
       applicableUnit:
         range: Unit
+      dbpediaMatch:
+        range: uri
       exactMatch:
         range: PhysicalConstant
       hasDimensionVector:

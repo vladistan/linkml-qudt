@@ -117,13 +117,6 @@ class Thing(ConfiguredBaseModel):
     pass
 
 
-class Error1(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'http://org.semanticweb.owlapi/error#Error1',
-         'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
-
-    pass
-
-
 class Error2(ConfiguredBaseModel):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'http://org.semanticweb.owlapi/error#Error2',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
@@ -512,7 +505,7 @@ class Quantity(Quantifiable, Concept):
     id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
-class PhysicalConstant(Quantity, Error1):
+class PhysicalConstant(Quantity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:PhysicalConstant',
          'comments': ['A physical constant is a physical quantity that is generally '
                       'believed to be both universal in nature and constant in time. '
@@ -526,11 +519,11 @@ class PhysicalConstant(Quantity, Error1):
                       'dimensional forms, or may be dimensionless depending on the '
                       'system of quantities and units used.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
-         'mixins': ['Error1'],
          'slot_usage': {'altSymbol': {'name': 'altSymbol', 'required': False},
                         'applicableSystem': {'name': 'applicableSystem',
                                              'range': 'SystemOfUnits'},
                         'applicableUnit': {'name': 'applicableUnit', 'range': 'Unit'},
+                        'dbpediaMatch': {'name': 'dbpediaMatch', 'range': 'uri'},
                         'exactConstant': {'name': 'exactConstant', 'range': 'boolean'},
                         'exactMatch': {'name': 'exactMatch',
                                        'range': 'PhysicalConstant'},
@@ -1472,7 +1465,6 @@ class ValueUnion(Resource):
 # Model rebuild
 # see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
 Thing.model_rebuild()
-Error1.model_rebuild()
 Error2.model_rebuild()
 Error3.model_rebuild()
 Aspect.model_rebuild()

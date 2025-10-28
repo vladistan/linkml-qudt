@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-10-27T20:04:26
+# Generation date: 2025-10-28T08:43:43
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
@@ -94,15 +94,6 @@ class Thing(YAMLRoot):
     class_class_curie: ClassVar[str] = "owl:Thing"
     class_name: ClassVar[str] = "Thing"
     class_model_uri: ClassVar[URIRef] = QUDT.Thing
-
-
-class Error1(YAMLRoot):
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = URIRef("http://org.semanticweb.owlapi/error#Error1")
-    class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "Error1"
-    class_model_uri: ClassVar[URIRef] = QUDT.Error1
 
 
 class Error2(YAMLRoot):
@@ -834,6 +825,7 @@ class PhysicalConstant(Quantity):
 
     applicableSystem: Optional[Union[Union[dict, "SystemOfUnits"], list[Union[dict, "SystemOfUnits"]]]] = empty_list()
     applicableUnit: Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]] = empty_list()
+    dbpediaMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     exactMatch: Optional[Union[Union[dict, "PhysicalConstant"], list[Union[dict, "PhysicalConstant"]]]] = empty_list()
     hasDimensionVector: Optional[Union[Union[dict, "QuantityKindDimensionVector"], list[Union[dict, "QuantityKindDimensionVector"]]]] = empty_list()
     ucumCode: Optional[Union[str, list[str]]] = empty_list()
@@ -854,6 +846,10 @@ class PhysicalConstant(Quantity):
         if not isinstance(self.applicableUnit, list):
             self.applicableUnit = [self.applicableUnit] if self.applicableUnit is not None else []
         self.applicableUnit = [v if isinstance(v, Unit) else Unit(**as_dict(v)) for v in self.applicableUnit]
+
+        if not isinstance(self.dbpediaMatch, list):
+            self.dbpediaMatch = [self.dbpediaMatch] if self.dbpediaMatch is not None else []
+        self.dbpediaMatch = [v if isinstance(v, URI) else URI(v) for v in self.dbpediaMatch]
 
         if not isinstance(self.exactMatch, list):
             self.exactMatch = [self.exactMatch] if self.exactMatch is not None else []
@@ -3443,6 +3439,9 @@ slots.PhysicalConstant_applicableSystem = Slot(uri=QUDT.applicableSystem, name="
 
 slots.PhysicalConstant_applicableUnit = Slot(uri=QUDT.applicableUnit, name="PhysicalConstant_applicableUnit", curie=QUDT.curie('applicableUnit'),
                    model_uri=QUDT.PhysicalConstant_applicableUnit, domain=PhysicalConstant, range=Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]])
+
+slots.PhysicalConstant_dbpediaMatch = Slot(uri=QUDT.dbpediaMatch, name="PhysicalConstant_dbpediaMatch", curie=QUDT.curie('dbpediaMatch'),
+                   model_uri=QUDT.PhysicalConstant_dbpediaMatch, domain=PhysicalConstant, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
 
 slots.PhysicalConstant_exactMatch = Slot(uri=QUDT.exactMatch, name="PhysicalConstant_exactMatch", curie=QUDT.curie('exactMatch'),
                    model_uri=QUDT.PhysicalConstant_exactMatch, domain=PhysicalConstant, range=Optional[Union[Union[dict, "PhysicalConstant"], list[Union[dict, "PhysicalConstant"]]]])

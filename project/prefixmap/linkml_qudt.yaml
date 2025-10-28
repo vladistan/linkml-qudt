@@ -20,9 +20,6 @@
    "Datatype": {
       "@id": "rdfs:Datatype"
    },
-   "Error1": {
-      "@id": "http://org.semanticweb.owlapi/error#Error1"
-   },
    "Error2": {
       "@id": "http://org.semanticweb.owlapi/error#Error2"
    },

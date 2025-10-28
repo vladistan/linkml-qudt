@@ -143,11 +143,6 @@ qudt:currencyNumber a owl:ObjectProperty ;
     rdfs:label "currencyNumber" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
-qudt:dbpediaMatch a owl:DatatypeProperty ;
-    rdfs:label "dbpediaMatch" ;
-    rdfs:range xsd:anyURI ;
-    skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
-
 qudt:denominatorDimensionVector a owl:ObjectProperty ;
     rdfs:label "denominatorDimensionVector" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
@@ -442,17 +437,17 @@ qudt:CharEncodingType a owl:Class ;
 qudt:Citation a owl:Class ;
     rdfs:label "Citation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:url ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:description ],
+            owl:onProperty qudt:url ],
         qudt:Concept ;
     skos:exactMatch qudt:Citation ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -474,13 +469,13 @@ qudt:ConstantValue a owl:Class ;
 qudt:ContextualUnit a owl:Class ;
     rdfs:label "ContextualUnit" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:broader ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:broader ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty qudt:broader ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:broader ],
         qudt:Unit ;
     skos:exactMatch qudt:ContextualUnit ;
@@ -496,16 +491,16 @@ qudt:CountingUnit a owl:Class ;
 qudt:CurrencyUnit a owl:Class ;
     rdfs:label "CurrencyUnit" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:currencyExponent ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:currencyCode ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:currencyExponent ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:currencyCode ],
         qudt:DimensionlessUnit ;
     skos:exactMatch qudt:CurrencyUnit ;
@@ -516,10 +511,10 @@ qudt:CurrencyUnit a owl:Class ;
 qudt:DataItem a owl:Class ;
     rdfs:label "DataItem" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty qudt:value ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:value ],
         qudt:Concept ;
     skos:exactMatch qudt:DataItem ;
@@ -528,10 +523,10 @@ qudt:DataItem a owl:Class ;
 qudt:DateTimeStringEncodingType a owl:Class ;
     rdfs:label "DateTimeStringEncodingType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:allowedPattern ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 1 ;
             owl:onProperty qudt:allowedPattern ],
         qudt:StringEncodingType ;
     skos:exactMatch qudt:DateTimeStringEncodingType ;
@@ -560,17 +555,17 @@ qudt:Discipline a owl:Class ;
 qudt:EnumeratedQuantity a owl:Class ;
     rdfs:label "EnumeratedQuantity" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:enumeration ],
+        [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
             owl:onProperty qudt:enumeratedValue ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:enumeration ],
+            owl:onProperty qudt:enumeratedValue ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Enumeration ;
             owl:onProperty qudt:enumeration ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:enumeratedValue ],
         qudt:Concept ;
     skos:exactMatch qudt:EnumeratedQuantity ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -580,11 +575,6 @@ qudt:EnumerationScale a owl:Class ;
     rdfs:subClassOf qudt:Enumeration,
         qudt:Scale ;
     skos:exactMatch qudt:EnumerationScale ;
-    skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
-
-qudt:Error1 a owl:Class ;
-    rdfs:label "Error1" ;
-    skos:exactMatch <http://org.semanticweb.owlapi/error#Error1> ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Error2 a owl:Class ;
@@ -677,10 +667,10 @@ qudt:PlaneAngleUnit a owl:Class ;
 qudt:QuantityType a owl:Class ;
     rdfs:label "QuantityType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:value ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:value ],
         qudt:EnumeratedValue ;
     skos:exactMatch qudt:QuantityType ;
@@ -696,53 +686,53 @@ qudt:RatioScale a owl:Class ;
 qudt:ScalarDatatype a owl:Class ;
     rdfs:label "ScalarDatatype" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:minExclusive ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:bytes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:length ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:minExclusive ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:bits ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:maxExclusive ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:maxInclusive ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:bytes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:maxExclusive ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:bits ],
+            owl:onProperty qudt:minExclusive ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:minInclusive ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:maxInclusive ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:maxExclusive ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Datatype ;
             owl:onProperty qudt:rdfsDatatype ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:minInclusive ],
+            owl:onProperty qudt:length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:bytes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:rdfsDatatype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:minInclusive ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:bits ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:maxInclusive ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:bytes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:bits ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:maxExclusive ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:maxInclusive ],
         qudt:Datatype ;
     skos:exactMatch qudt:ScalarDatatype ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -784,10 +774,10 @@ qudt:UCUMcs-term a owl:Class ;
 qudt:UserQuantityKind a owl:Class ;
     rdfs:label "UserQuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
+            owl:minCardinality 1 ;
             owl:onProperty qudt:hasQuantityKind ],
         qudt:AbstractQuantityKind ;
     skos:exactMatch qudt:UserQuantityKind ;
@@ -817,16 +807,16 @@ qudt:Class a owl:Class ;
 qudt:Comment a owl:Class ;
     rdfs:label "Comment" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:rationale ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:rationale ],
         qudt:Thing,
         qudt:Verifiable ;
@@ -836,47 +826,47 @@ qudt:Comment a owl:Class ;
 qudt:Figure a owl:Class ;
     rdfs:label "Figure" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:height ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:landscape ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:imageLocation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:figureLabel ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:width ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:figureCaption ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:height ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:landscape ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:imageLocation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:height ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:height ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:figureLabel ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:figureCaption ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:image ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:figureLabel ],
+            owl:onProperty qudt:width ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:figureCaption ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:imageLocation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:image ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:landscape ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:landscape ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:width ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:figureLabel ],
         qudt:Concept ;
     skos:exactMatch qudt:Figure ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -915,10 +905,10 @@ qudt:Rule a owl:Class ;
             owl:onProperty qudt:ruleType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:rationale ],
+            owl:onProperty qudt:ruleType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:ruleType ],
+            owl:onProperty qudt:rationale ],
         qudt:Concept,
         qudt:Verifiable ;
     skos:exactMatch qudt:Rule ;
@@ -934,6 +924,9 @@ qudt:ScaleType a owl:Class ;
     rdfs:label "ScaleType" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:permissibleTransformation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:MathsFunctionType ;
             owl:onProperty qudt:permissibleMaths ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:TransformType ;
@@ -943,13 +936,10 @@ qudt:ScaleType a owl:Class ;
             owl:onProperty qudt:dataStructure ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:dataStructure ],
+            owl:onProperty qudt:permissibleMaths ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:permissibleTransformation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:MathsFunctionType ;
-            owl:onProperty qudt:permissibleMaths ],
+            owl:onProperty qudt:dataStructure ],
         qudt:EnumeratedValue ;
     skos:exactMatch qudt:ScaleType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -1071,6 +1061,11 @@ qudt:dataEncoding a owl:ObjectProperty ;
 
 qudt:datatype a owl:ObjectProperty ;
     rdfs:label "datatype" ;
+    skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
+
+qudt:dbpediaMatch a owl:DatatypeProperty ;
+    rdfs:label "dbpediaMatch" ;
+    rdfs:range xsd:anyURI ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:default a owl:ObjectProperty ;
@@ -1388,30 +1383,30 @@ qudt:AbstractQuantityKind a owl:Class ;
     rdfs:label "AbstractQuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:broader ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:broader ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty qudt:broader ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:broader ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:broader ],
         qudt:Concept ;
     skos:exactMatch qudt:AbstractQuantityKind ;
@@ -1429,14 +1424,14 @@ qudt:DataEncoding a owl:Class ;
             owl:allValuesFrom qudt:EndianType ;
             owl:onProperty qudt:bitOrder ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Encoding ;
-            owl:onProperty qudt:encoding ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:bitOrder ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:byteOrder ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:bitOrder ],
+            owl:allValuesFrom qudt:Encoding ;
+            owl:onProperty qudt:encoding ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:encoding ],
@@ -1457,68 +1452,41 @@ qudt:MathsFunctionType a owl:Class ;
 qudt:PhysicalConstant a owl:Class ;
     rdfs:label "PhysicalConstant" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDimensionVector ],
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty qudt:dbpediaMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:isoNormativeReference ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:normativeReference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty qudt:exactConstant ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:PhysicalConstant ;
             owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:latexSymbol ],
+            owl:onProperty qudt:applicableSystem ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:boolean ;
             owl:onProperty qudt:exactConstant ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:normativeReference ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:isoNormativeReference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:isoNormativeReference ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:symbol ],
@@ -1526,15 +1494,47 @@ qudt:PhysicalConstant a owl:Class ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:applicableUnit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:PhysicalConstant ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:ucumCode ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:ucumCode ],
-        qudt:Error1,
+            owl:onProperty qudt:exactConstant ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:isoNormativeReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dbpediaMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:applicableSystem ],
         qudt:Quantity ;
     skos:exactMatch qudt:PhysicalConstant ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -1543,41 +1543,23 @@ qudt:PhysicalConstant a owl:Class ;
 qudt:Quantifiable a owl:Class ;
     rdfs:label "Quantifiable" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:double ;
-            owl:onProperty qudt:relativeStandardUncertainty ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dataEncoding ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:value ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:valueSN ],
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Datatype ;
+            owl:onProperty qudt:datatype ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:DataEncoding ;
             owl:onProperty qudt:dataEncoding ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:dataEncoding ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Datatype ;
-            owl:onProperty qudt:datatype ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:standardUncertaintySN ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:valueSN ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:value ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:datatype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:decimal ;
-            owl:onProperty qudt:standardUncertainty ],
+            owl:onProperty qudt:relativeStandardUncertainty ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasUnit ],
@@ -1585,10 +1567,28 @@ qudt:Quantifiable a owl:Class ;
             owl:allValuesFrom xsd:double ;
             owl:onProperty qudt:standardUncertaintySN ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:valueSN ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:valueSN ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:standardUncertainty ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:datatype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:double ;
             owl:onProperty qudt:relativeStandardUncertainty ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:standardUncertaintySN ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
             owl:onProperty qudt:standardUncertainty ],
         qudt:Aspect ;
     skos:exactMatch qudt:Quantifiable ;
@@ -1601,20 +1601,20 @@ qudt:Quantity a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:quantityValue ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityValue ;
-            owl:onProperty qudt:quantityValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:boolean ;
             owl:onProperty qudt:isDeltaQuantity ],
         [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:isDeltaQuantity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
         qudt:Concept,
         qudt:Quantifiable ;
     skos:exactMatch qudt:Quantity ;
@@ -1642,34 +1642,34 @@ qudt:SystemOfQuantityKinds a owl:Class ;
     rdfs:label "SystemOfQuantityKinds" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
+            owl:onProperty qudt:hasBaseQuantityKind ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:baseDimensionEnumeration ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasUnitSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:systemDerivedQuantityKind ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasBaseQuantityKind ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:SystemOfUnits ;
             owl:onProperty qudt:hasUnitSystem ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:systemDerivedQuantityKind ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:systemDerivedQuantityKind ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:baseDimensionEnumeration ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:Enumeration ;
             owl:onProperty qudt:baseDimensionEnumeration ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasBaseQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasBaseQuantityKind ],
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasUnitSystem ],
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:systemDerivedQuantityKind ],
         qudt:Concept ;
     skos:exactMatch qudt:SystemOfQuantityKinds ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -1701,113 +1701,113 @@ qudt:Aspect a owl:Class ;
 qudt:Datatype a owl:Class ;
     rdfs:label "Datatype" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:cName ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:odbcName ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:OrderedType ;
-            owl:onProperty qudt:orderedType ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:ansiSQLName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:vbName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:pythonName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:microsoftSQLServerName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:bounded ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:id ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:ansiSQLName ],
+            owl:onProperty qudt:protocolBuffersName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:jsName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:OrderedType ;
+            owl:onProperty qudt:orderedType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:protocolBuffersName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:vbName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:javaName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:pythonName ],
+            owl:onProperty qudt:cName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:cardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:jsName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:microsoftSQLServerName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:mySQLName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:oracleSQLName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:cName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:jsName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:matlabName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:oracleSQLName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:odbcName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:bounded ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:oracleSQLName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:microsoftSQLServerName ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:orderedType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Datatype ;
-            owl:onProperty qudt:basis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:matlabName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:vbName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:odbcName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:microsoftSQLServerName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:bounded ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:oleDBName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:jsName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:ansiSQLName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:mySQLName ],
+            owl:onProperty qudt:oracleSQLName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:cardinality ],
+            owl:onProperty qudt:matlabName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:javaName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:pythonName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:oleDBName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:orderedType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:matlabName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Datatype ;
+            owl:onProperty qudt:basis ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:basis ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:CardinalityType ;
             owl:onProperty qudt:cardinality ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:mySQLName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:pythonName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:protocolBuffersName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:javaName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:protocolBuffersName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:basis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:oleDBName ],
         qudt:Concept ;
     skos:exactMatch rdfs:Datatype ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -1955,13 +1955,13 @@ qudt:Enumeration a owl:Class ;
     rdfs:label "Enumeration" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
-            owl:onProperty qudt:element ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:abbreviation ],
+            owl:onProperty qudt:default ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:default ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:abbreviation ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:element ],
@@ -1970,7 +1970,7 @@ qudt:Enumeration a owl:Class ;
             owl:onProperty qudt:abbreviation ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
-            owl:onProperty qudt:default ],
+            owl:onProperty qudt:element ],
         qudt:Concept ;
     skos:exactMatch qudt:Enumeration ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -1981,14 +1981,8 @@ qudt:Enumeration a owl:Class ;
 qudt:Scale a owl:Class ;
     rdfs:label "Scale" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dataStructure ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:permissibleTransformation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:dataStructure ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:scaleType ],
@@ -1996,14 +1990,20 @@ qudt:Scale a owl:Class ;
             owl:allValuesFrom qudt:MathsFunctionType ;
             owl:onProperty qudt:permissibleMaths ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:ScaleType ;
-            owl:onProperty qudt:scaleType ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:permissibleMaths ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dataStructure ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:TransformType ;
             owl:onProperty qudt:permissibleTransformation ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:permissibleMaths ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dataStructure ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:ScaleType ;
+            owl:onProperty qudt:scaleType ],
         qudt:Concept ;
     skos:exactMatch qudt:Scale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -2041,38 +2041,38 @@ qudt:Prefix a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Prefix ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:prefixMultiplier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:prefixMultiplier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:UCUMcs-term ;
+            owl:onProperty qudt:ucumCode ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:prefixMultiplier ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:prefixMultiplier ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:UCUMcs-term ;
-            owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Prefix ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
         qudt:Concept,
         qudt:Verifiable ;
     skos:exactMatch qudt:Prefix ;
@@ -2082,16 +2082,16 @@ qudt:Encoding a owl:Class ;
     rdfs:label "Encoding" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:bytes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bits ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bytes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:bits ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:bits ],
+            owl:onProperty qudt:bytes ],
         qudt:Concept ;
     skos:exactMatch qudt:Encoding ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -2099,16 +2099,16 @@ qudt:Encoding a owl:Class ;
 qudt:Verifiable a owl:Class ;
     rdfs:label "Verifiable" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:normativeReference ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:normativeReference ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:isoNormativeReference ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:isoNormativeReference ],
         qudt:Aspect,
         qudt:Error2,
@@ -2141,55 +2141,55 @@ qudt:SystemOfUnits a owl:Class ;
             owl:onProperty qudt:applicablePhysicalConstant ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasUnit ],
+            owl:onProperty qudt:hasAllowedUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasBaseUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasBaseUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:hasUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasCoherentUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasDerivedCoherentUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasDerivedUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:prefix ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:hasDefinedUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:hasUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:hasDerivedUnit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Prefix ;
-            owl:onProperty qudt:prefix ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasBaseUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:applicablePhysicalConstant ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasDerivedUnit ],
+            owl:onProperty qudt:hasBaseUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasDerivedCoherentUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:hasCoherentUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:prefix ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasDerivedCoherentUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDerivedCoherentUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasDefinedUnit ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasAllowedUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasAllowedUnit ],
+            owl:allValuesFrom qudt:Prefix ;
+            owl:onProperty qudt:prefix ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasCoherentUnit ],
+            owl:onProperty qudt:hasAllowedUnit ],
         qudt:Concept,
         qudt:Verifiable ;
     skos:exactMatch qudt:SystemOfUnits ;
@@ -2223,26 +2223,26 @@ qudt:symbol a owl:ObjectProperty ;
 qudt:EnumeratedValue a owl:Class ;
     rdfs:label "EnumeratedValue" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:altSymbol ],
+            owl:onProperty qudt:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
+            owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:abbreviation ],
@@ -2255,94 +2255,94 @@ qudt:QuantityKind a owl:Class ;
     rdfs:label "QuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableISOUnit ],
+            owl:onProperty qudt:applicableUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:applicableUSCustomaryUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableSIUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableCGSUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:iec61360Code ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:belongsToSystemOfQuantities ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableCGSUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableISOUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableSIUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:dimensionVectorForSI ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfQuantityKinds ;
-            owl:onProperty qudt:belongsToSystemOfQuantities ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKindDimensionVectorSI ;
             owl:onProperty qudt:dimensionVectorForSI ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableImperialUnit ],
+            owl:onProperty qudt:qkdvDenominator ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:applicableImperialUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:belongsToSystemOfQuantities ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableSIUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dimensionVectorForSI ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableSIUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableCGSUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexDefinition ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty qudt:iec61360Code ],
         [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfQuantityKinds ;
+            owl:onProperty qudt:belongsToSystemOfQuantities ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableImperialUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:qkdvNumerator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableISOUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableCGSUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableISOUnit ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:applicableUSCustomaryUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:qkdvNumerator ],
         qudt:AbstractQuantityKind,
         qudt:Verifiable ;
     skos:exactMatch qudt:QuantityKind ;
@@ -2352,71 +2352,71 @@ qudt:QuantityKind a owl:Class ;
 qudt:QuantityKindDimensionVector a owl:Class ;
     rdfs:label "QuantityKindDimensionVector" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForMass ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionlessExponent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionlessExponent ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForTime ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForMass ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForLength ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForLength ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasReferenceQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForTime ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasReferenceQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasReferenceQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionlessExponent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForTime ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForMass ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForTime ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForMass ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionlessExponent ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForLength ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForLength ],
         qudt:Concept ;
     skos:exactMatch qudt:QuantityKindDimensionVector ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -2429,53 +2429,53 @@ qudt:QuantityKindDimensionVector a owl:Class ;
 qudt:Concept a owl:Class ;
     rdfs:label "Concept" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasRule ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:guidance ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:deprecated ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:plainTextDescription ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:isReplacedBy ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Rule ;
             owl:onProperty qudt:hasRule ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:plainTextDescription ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:isReplacedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:deprecated ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:id ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty qudt:guidance ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:deprecated ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:plainTextDescription ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:isReplacedBy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:isReplacedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:plainTextDescription ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasRule ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:guidance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:abbreviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:abbreviation ],
         qudt:Thing ;
     skos:exactMatch qudt:Concept ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -2484,191 +2484,191 @@ qudt:Concept a owl:Class ;
 qudt:Unit a owl:Class ;
     rdfs:label "Unit" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:iec61360Code ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:conversionMultiplierSN ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:conversionOffsetSN ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:derivedUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:omUnit ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:conversionOffset ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:unitFor ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:definedUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
             owl:onProperty qudt:isUnitOfSystem ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:prefix ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:scalingOf ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
+            owl:onProperty qudt:omUnit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:applicableSystem ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:factorUnitScalar ],
+            owl:onProperty qudt:conversionOffset ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:udunitsCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:UCUMcs ;
-            owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasFactorUnit ],
+            owl:onProperty qudt:definedUnitOfSystem ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:conversionMultiplier ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Class ;
-            owl:onProperty qudt:hasFactorUnit ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:conversionOffset ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:isUnitOfSystem ],
+            owl:onProperty qudt:conversionMultiplierSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:siUnitsExpression ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:derivedUnitOfSystem ],
+            owl:onProperty qudt:qkdvNumerator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasReciprocalUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Prefix ;
             owl:onProperty qudt:prefix ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:siUnitsExpression ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
             owl:onProperty qudt:qkdvNumerator ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:scalingOf ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:applicableSystem ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:prefix ],
+            owl:onProperty qudt:uneceCommonCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:definedUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:udunitsCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Class ;
+            owl:onProperty qudt:hasFactorUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:UCUMcs ;
+            owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:isUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasReciprocalUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:factorUnitScalar ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:derivedUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:udunitsCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:unitFor ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:conversionMultiplier ],
+            owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:conversionMultiplierSN ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:uneceCommonCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasReciprocalUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:factorUnitScalar ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:uneceCommonCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:unitFor ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasReciprocalUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:definedUnitOfSystem ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
+            owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:scalingOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:iec61360Code ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:omUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:udunitsCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:hasDimensionVector ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:conversionOffsetSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:altSymbol ],
+            owl:onProperty qudt:derivedUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasFactorUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:omUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:applicableSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:unitFor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:conversionOffsetSN ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:siUnitsExpression ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:factorUnitScalar ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:uneceCommonCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:conversionMultiplier ],
         qudt:Concept,
         qudt:Verifiable ;
     skos:exactMatch qudt:Unit ;

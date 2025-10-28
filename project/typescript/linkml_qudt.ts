@@ -8,11 +8,6 @@ export interface Thing {
 
 
 
-export interface Error1 {
-}
-
-
-
 export interface Error2 {
 }
 
@@ -245,7 +240,7 @@ export interface Organization extends Concept {
 
 
 
-export interface PhysicalConstant extends Quantity, Error1 {
+export interface PhysicalConstant extends Quantity {
 }
 
 

@@ -4387,6 +4387,27 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "PhysicalConstant_dbpediaMatch",
+      "definition_uri": "https://w3id.org/None/dbpediaMatch",
+      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
+      "mappings": [
+        "https://w3id.org/None/dbpediaMatch"
+      ],
+      "is_a": "dbpediaMatch",
+      "domain": "PhysicalConstant",
+      "slot_uri": "https://w3id.org/None/dbpediaMatch",
+      "alias": "dbpediaMatch",
+      "owner": "PhysicalConstant",
+      "domain_of": [
+        "PhysicalConstant"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dbpediaMatch",
+      "range": "uri",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "PhysicalConstant_exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -6977,17 +6998,6 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "Error1",
-      "definition_uri": "https://w3id.org/None/Error1",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "http://org.semanticweb.owlapi/error#Error1"
-      ],
-      "slot_usage": {},
-      "class_uri": "http://org.semanticweb.owlapi/error#Error1",
-      "@type": "ClassDefinition"
-    },
-    {
       "name": "Error2",
       "definition_uri": "https://w3id.org/None/Error2",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -8359,9 +8369,6 @@
         "qudt:PhysicalConstant"
       ],
       "is_a": "Quantity",
-      "mixins": [
-        "Error1"
-      ],
       "slots": [
         "Quantifiable_dataEncoding",
         "Quantifiable_datatype",
@@ -8384,6 +8391,7 @@
         "Concept_plainTextDescription",
         "PhysicalConstant_applicableSystem",
         "PhysicalConstant_applicableUnit",
+        "PhysicalConstant_dbpediaMatch",
         "PhysicalConstant_exactMatch",
         "PhysicalConstant_hasDimensionVector",
         "PhysicalConstant_ucumCode",
@@ -9652,9 +9660,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-10-27T19:58:16",
-  "source_file_size": 50933,
-  "generation_date": "2025-10-27T20:04:24",
+  "source_file_date": "2025-10-28T08:43:35",
+  "source_file_size": 50879,
+  "generation_date": "2025-10-28T08:43:41",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

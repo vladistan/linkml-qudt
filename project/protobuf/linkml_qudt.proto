@@ -813,6 +813,7 @@ message PhysicalConstant
  repeated  string plainTextDescription = 0
  repeated  systemOfUnits applicableSystem = 0
  repeated  unit applicableUnit = 0
+ repeated  uri dbpediaMatch = 0
  repeated  physicalConstant exactMatch = 0
  repeated  quantityKindDimensionVector hasDimensionVector = 0
  repeated  string ucumCode = 0
