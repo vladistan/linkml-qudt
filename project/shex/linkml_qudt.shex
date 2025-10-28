@@ -1,15 +1,14 @@
 # metamodel_version: 1.7.0
 BASE <https://w3id.org/None/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
-PREFIX dcterms1: <http://example.org/UNKNOWN/dcterms/>
-PREFIX dc1: <http://example.org/UNKNOWN/dc/>
-PREFIX dtype: <http://example.org/UNKNOWN/dtype/>
-PREFIX vaem: <http://example.org/UNKNOWN/vaem/>
-PREFIX rdfs1: <http://example.org/UNKNOWN/rdfs/>
-PREFIX rdf1: <http://example.org/UNKNOWN/rdf/>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX dtype: <http://www.linkedmodel.org/schema/dtype#>
 
 
 linkml:String xsd:string
@@ -160,7 +159,7 @@ linkml:Sparqlpath xsd:string
 <Citation> CLOSED {
     (  $<Citation_tes> (  &<Concept_tes> ;
           rdf:type [ <Concept> ] ? ;
-          dc1:description @linkml:String + ;
+          dc:description @linkml:String + ;
           <url> @linkml:String *
        ) ;
        rdf:type [ <Citation> ] ?
@@ -182,7 +181,7 @@ linkml:Sparqlpath xsd:string
              &<Thing_tes> ;
              rdf:type [ owl:Thing ] ? ;
              <rationale> @linkml:String * ;
-             dc1:description @linkml:String *
+             dc:description @linkml:String *
           ) ;
           rdf:type [ <Comment> ] ?
        )
@@ -196,8 +195,8 @@ linkml:Sparqlpath xsd:string
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
@@ -288,7 +287,7 @@ linkml:Sparqlpath xsd:string
              <odbcName> @linkml:String * ;
              <oleDBName> @linkml:String *
           ) ;
-          rdf:type [ rdfs1:Datatype ] ?
+          rdf:type [ rdfs:Datatype ] ?
        )
     } OR @<ScalarDatatype>
 )
@@ -374,13 +373,13 @@ linkml:Sparqlpath xsd:string
              &<Concept_tes> ;
              rdf:type [ <Concept> ] ? ;
              <altSymbol> @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <symbol> @linkml:String * ;
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
           ) ;
@@ -510,7 +509,7 @@ linkml:Sparqlpath xsd:string
 
 <List> CLOSED {
     (  $<List_tes> rdf:type . * ;
-       rdf:type [ rdf1:List ] ?
+       rdf:type [ rdf:List ] ?
     )
 }
 
@@ -552,8 +551,8 @@ linkml:Sparqlpath xsd:string
           <guidance> @linkml:String * ;
           <id> @linkml:String * ;
           <hasRule> @<Rule> * ;
-          dcterms1:isReplacedBy @linkml:String * ;
-          dc1:description @linkml:String * ;
+          dcterms:isReplacedBy @linkml:String * ;
+          dc:description @linkml:String * ;
           <abbreviation> @linkml:String * ;
           <deprecated> @linkml:String * ;
           <plainTextDescription> @linkml:String *
@@ -641,8 +640,8 @@ linkml:Sparqlpath xsd:string
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
@@ -682,8 +681,8 @@ linkml:Sparqlpath xsd:string
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
@@ -716,8 +715,8 @@ linkml:Sparqlpath xsd:string
           <guidance> @linkml:String * ;
           <id> @linkml:String * ;
           <hasRule> @<Rule> * ;
-          dcterms1:isReplacedBy @linkml:String * ;
-          dc1:description @linkml:String * ;
+          dcterms:isReplacedBy @linkml:String * ;
+          dc:description @linkml:String * ;
           <abbreviation> @linkml:String * ;
           <deprecated> @linkml:String * ;
           <plainTextDescription> @linkml:String * ;
@@ -838,8 +837,8 @@ linkml:Sparqlpath xsd:string
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
@@ -860,7 +859,7 @@ linkml:Sparqlpath xsd:string
 <Resource>  (
     CLOSED {
        (  $<Resource_tes> rdf:type . * ;
-          rdf:type [ rdfs1:Resource ] ?
+          rdf:type [ rdfs:Resource ] ?
        )
     } OR @<UCUMcs> OR @<UCUMcs-term> OR @<ValueUnion>
 )
@@ -875,8 +874,8 @@ linkml:Sparqlpath xsd:string
           <guidance> @linkml:String * ;
           <id> @linkml:String * ;
           <hasRule> @<Rule> * ;
-          dcterms1:isReplacedBy @linkml:String * ;
-          dc1:description @linkml:String * ;
+          dcterms:isReplacedBy @linkml:String * ;
+          dc:description @linkml:String * ;
           <abbreviation> @linkml:String * ;
           <deprecated> @linkml:String * ;
           <plainTextDescription> @linkml:String *
@@ -895,7 +894,7 @@ linkml:Sparqlpath xsd:string
 
 <ScalarDatatype> CLOSED {
     (  $<ScalarDatatype_tes> (  &<Datatype_tes> ;
-          rdf:type [ rdfs1:Datatype ] ? ;
+          rdf:type [ rdfs:Datatype ] ? ;
           <rdfsDatatype> @<Datatype> * ;
           <bits> @linkml:String * ;
           <bytes> @linkml:String * ;
@@ -950,7 +949,7 @@ linkml:Sparqlpath xsd:string
 
 <Statement> CLOSED {
     (  $<Statement_tes> rdf:type . * ;
-       rdf:type [ rdf1:Statement ] ?
+       rdf:type [ rdf:Statement ] ?
     )
 }
 
@@ -1006,8 +1005,8 @@ linkml:Sparqlpath xsd:string
           <guidance> @linkml:String * ;
           <id> @linkml:String * ;
           <hasRule> @<Rule> * ;
-          dcterms1:isReplacedBy @linkml:String * ;
-          dc1:description @linkml:String * ;
+          dcterms:isReplacedBy @linkml:String * ;
+          dc:description @linkml:String * ;
           <abbreviation> @linkml:String * ;
           <deprecated> @linkml:String * ;
           <plainTextDescription> @linkml:String *
@@ -1034,7 +1033,7 @@ linkml:Sparqlpath xsd:string
 
 <UCUMcs> CLOSED {
     (  $<UCUMcs_tes> (  &<Resource_tes> ;
-          rdf:type [ rdfs1:Resource ] ?
+          rdf:type [ rdfs:Resource ] ?
        ) ;
        rdf:type [ <UCUMcs> ] ?
     )
@@ -1042,7 +1041,7 @@ linkml:Sparqlpath xsd:string
 
 <UCUMcs-term> CLOSED {
     (  $<UCUMcs-term_tes> (  &<Resource_tes> ;
-          rdf:type [ rdfs1:Resource ] ?
+          rdf:type [ rdfs:Resource ] ?
        ) ;
        rdf:type [ <UCUMcs-term> ] ?
     )
@@ -1088,8 +1087,8 @@ linkml:Sparqlpath xsd:string
              <guidance> @linkml:String * ;
              <id> @linkml:String * ;
              <hasRule> @<Rule> * ;
-             dcterms1:isReplacedBy @linkml:String * ;
-             dc1:description @linkml:String * ;
+             dcterms:isReplacedBy @linkml:String * ;
+             dc:description @linkml:String * ;
              <abbreviation> @linkml:String * ;
              <deprecated> @linkml:String * ;
              <plainTextDescription> @linkml:String *
@@ -1110,7 +1109,7 @@ linkml:Sparqlpath xsd:string
 
 <ValueUnion> CLOSED {
     (  $<ValueUnion_tes> (  &<Resource_tes> ;
-          rdf:type [ rdfs1:Resource ] ?
+          rdf:type [ rdfs:Resource ] ?
        ) ;
        rdf:type [ <ValueUnion> ] ?
     )

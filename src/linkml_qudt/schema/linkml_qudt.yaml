@@ -8,6 +8,14 @@ prefixes:
   linkml: https://w3id.org/linkml/
   qudt: https://w3id.org/None/
   owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  prov: http://www.w3.org/ns/prov#
+  voag: http://voag.linkedmodel.org/schema/voag#
+  vaem: http://www.linkedmodel.org/schema/vaem#
+  dtype: http://www.linkedmodel.org/schema/dtype#
 default_prefix: qudt
 classes:
   Thing:

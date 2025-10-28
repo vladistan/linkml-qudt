@@ -1,15 +1,15 @@
 {
-   "dc": "http://example.org/UNKNOWN/dc/",
-   "dcterms": "http://example.org/UNKNOWN/dcterms/",
-   "dtype": "http://example.org/UNKNOWN/dtype/",
+   "dc": "http://purl.org/dc/elements/1.1/",
+   "dcterms": "http://purl.org/dc/terms/",
+   "dtype": "http://www.linkedmodel.org/schema/dtype#",
    "linkml": "https://w3id.org/linkml/",
    "owl": "http://www.w3.org/2002/07/owl#",
-   "prov": "http://example.org/UNKNOWN/prov/",
+   "prov": "http://www.w3.org/ns/prov#",
    "qudt": "https://w3id.org/None/",
-   "rdf": "http://example.org/UNKNOWN/rdf/",
-   "rdfs": "http://example.org/UNKNOWN/rdfs/",
-   "vaem": "http://example.org/UNKNOWN/vaem/",
-   "voag": "http://example.org/UNKNOWN/voag/",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "vaem": "http://www.linkedmodel.org/schema/vaem#",
+   "voag": "http://voag.linkedmodel.org/schema/voag#",
    "xsd": "http://www.w3.org/2001/XMLSchema#",
    "CatalogEntry": {
       "@id": "vaem:CatalogEntry"

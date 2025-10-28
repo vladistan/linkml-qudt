@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-10-25T14:32:24
+# Generation date: 2025-10-27T20:04:26
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
@@ -63,17 +63,17 @@ metamodel_version = "1.7.0"
 version = None
 
 # Namespaces
-DC = CurieNamespace('dc', 'http://example.org/UNKNOWN/dc/')
-DCTERMS = CurieNamespace('dcterms', 'http://example.org/UNKNOWN/dcterms/')
-DTYPE = CurieNamespace('dtype', 'http://example.org/UNKNOWN/dtype/')
+DC = CurieNamespace('dc', 'http://purl.org/dc/elements/1.1/')
+DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')
+DTYPE = CurieNamespace('dtype', 'http://www.linkedmodel.org/schema/dtype#')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OWL = CurieNamespace('owl', 'http://www.w3.org/2002/07/owl#')
-PROV = CurieNamespace('prov', 'http://example.org/UNKNOWN/prov/')
+PROV = CurieNamespace('prov', 'http://www.w3.org/ns/prov#')
 QUDT = CurieNamespace('qudt', 'https://w3id.org/None/')
-RDF = CurieNamespace('rdf', 'http://example.org/UNKNOWN/rdf/')
-RDFS = CurieNamespace('rdfs', 'http://example.org/UNKNOWN/rdfs/')
-VAEM = CurieNamespace('vaem', 'http://example.org/UNKNOWN/vaem/')
-VOAG = CurieNamespace('voag', 'http://example.org/UNKNOWN/voag/')
+RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
+VAEM = CurieNamespace('vaem', 'http://www.linkedmodel.org/schema/vaem#')
+VOAG = CurieNamespace('voag', 'http://voag.linkedmodel.org/schema/voag#')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = QUDT
 

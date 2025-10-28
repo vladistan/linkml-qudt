@@ -18,6 +18,38 @@
     {
       "prefix_prefix": "owl",
       "prefix_reference": "http://www.w3.org/2002/07/owl#"
+    },
+    {
+      "prefix_prefix": "rdf",
+      "prefix_reference": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "prefix_prefix": "rdfs",
+      "prefix_reference": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    {
+      "prefix_prefix": "dc",
+      "prefix_reference": "http://purl.org/dc/elements/1.1/"
+    },
+    {
+      "prefix_prefix": "dcterms",
+      "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix_prefix": "prov",
+      "prefix_reference": "http://www.w3.org/ns/prov#"
+    },
+    {
+      "prefix_prefix": "voag",
+      "prefix_reference": "http://voag.linkedmodel.org/schema/voag#"
+    },
+    {
+      "prefix_prefix": "vaem",
+      "prefix_reference": "http://www.linkedmodel.org/schema/vaem#"
+    },
+    {
+      "prefix_prefix": "dtype",
+      "prefix_reference": "http://www.linkedmodel.org/schema/dtype#"
     }
   ],
   "default_prefix": "qudt",
@@ -338,9 +370,9 @@
       "definition_uri": "https://w3id.org/None/isReplacedBy",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/isReplacedBy"
+        "http://purl.org/dc/terms/isReplacedBy"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/isReplacedBy",
+      "slot_uri": "http://purl.org/dc/terms/isReplacedBy",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -1574,9 +1606,9 @@
       "definition_uri": "https://w3id.org/None/supersededBy",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/voag/supersededBy"
+        "http://voag.linkedmodel.org/schema/voag#supersededBy"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/voag/supersededBy",
+      "slot_uri": "http://voag.linkedmodel.org/schema/voag#supersededBy",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -1586,9 +1618,9 @@
       "definition_uri": "https://w3id.org/None/wasDerivedFrom",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/prov/wasDerivedFrom"
+        "http://www.w3.org/ns/prov#wasDerivedFrom"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/prov/wasDerivedFrom",
+      "slot_uri": "http://www.w3.org/ns/prov#wasDerivedFrom",
       "range": "Concept",
       "multivalued": true,
       "inlined": true,
@@ -1600,9 +1632,9 @@
       "definition_uri": "https://w3id.org/None/description",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dc/description"
+        "http://purl.org/dc/elements/1.1/description"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dc/description",
+      "slot_uri": "http://purl.org/dc/elements/1.1/description",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2641,9 +2673,9 @@
       "definition_uri": "https://w3id.org/None/literal",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dtype/literal"
+        "http://www.linkedmodel.org/schema/dtype#literal"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dtype/literal",
+      "slot_uri": "http://www.linkedmodel.org/schema/dtype#literal",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2653,9 +2685,9 @@
       "definition_uri": "https://w3id.org/None/abstract",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/abstract"
+        "http://purl.org/dc/terms/abstract"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/abstract",
+      "slot_uri": "http://purl.org/dc/terms/abstract",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2665,9 +2697,9 @@
       "definition_uri": "https://w3id.org/None/creator",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/creator"
+        "http://purl.org/dc/terms/creator"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/creator",
+      "slot_uri": "http://purl.org/dc/terms/creator",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2677,9 +2709,9 @@
       "definition_uri": "https://w3id.org/None/rights",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/rights"
+        "http://purl.org/dc/terms/rights"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/rights",
+      "slot_uri": "http://purl.org/dc/terms/rights",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2689,9 +2721,9 @@
       "definition_uri": "https://w3id.org/None/source",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/source"
+        "http://purl.org/dc/terms/source"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/source",
+      "slot_uri": "http://purl.org/dc/terms/source",
       "range": "uri",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2701,9 +2733,9 @@
       "definition_uri": "https://w3id.org/None/subject",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/subject"
+        "http://purl.org/dc/terms/subject"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/subject",
+      "slot_uri": "http://purl.org/dc/terms/subject",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2713,9 +2745,9 @@
       "definition_uri": "https://w3id.org/None/title",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/title"
+        "http://purl.org/dc/terms/title"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/title",
+      "slot_uri": "http://purl.org/dc/terms/title",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2788,9 +2820,9 @@
       "definition_uri": "https://w3id.org/None/graphName",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/vaem/graphName"
+        "http://www.linkedmodel.org/schema/vaem#graphName"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/vaem/graphName",
+      "slot_uri": "http://www.linkedmodel.org/schema/vaem#graphName",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2800,9 +2832,9 @@
       "definition_uri": "https://w3id.org/None/graphTitle",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/vaem/graphTitle"
+        "http://www.linkedmodel.org/schema/vaem#graphTitle"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/vaem/graphTitle",
+      "slot_uri": "http://www.linkedmodel.org/schema/vaem#graphTitle",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2812,9 +2844,9 @@
       "definition_uri": "https://w3id.org/None/isMetadataFor",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/vaem/isMetadataFor"
+        "http://www.linkedmodel.org/schema/vaem#isMetadataFor"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/vaem/isMetadataFor",
+      "slot_uri": "http://www.linkedmodel.org/schema/vaem#isMetadataFor",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -2824,9 +2856,9 @@
       "definition_uri": "https://w3id.org/None/website",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/vaem/website"
+        "http://www.linkedmodel.org/schema/vaem#website"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/vaem/website",
+      "slot_uri": "http://www.linkedmodel.org/schema/vaem#website",
       "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
@@ -3026,11 +3058,11 @@
       "definition_uri": "https://w3id.org/None/literal",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dtype/literal"
+        "http://www.linkedmodel.org/schema/dtype#literal"
       ],
       "is_a": "literal",
       "domain": "CardinalityType",
-      "slot_uri": "http://example.org/UNKNOWN/dtype/literal",
+      "slot_uri": "http://www.linkedmodel.org/schema/dtype#literal",
       "alias": "literal",
       "owner": "CardinalityType",
       "domain_of": [
@@ -3047,11 +3079,11 @@
       "definition_uri": "https://w3id.org/None/description",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dc/description"
+        "http://purl.org/dc/elements/1.1/description"
       ],
       "is_a": "description",
       "domain": "Citation",
-      "slot_uri": "http://example.org/UNKNOWN/dc/description",
+      "slot_uri": "http://purl.org/dc/elements/1.1/description",
       "alias": "description",
       "owner": "Citation",
       "domain_of": [
@@ -3111,11 +3143,11 @@
       "definition_uri": "https://w3id.org/None/description",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dc/description"
+        "http://purl.org/dc/elements/1.1/description"
       ],
       "is_a": "description",
       "domain": "Comment",
-      "slot_uri": "http://example.org/UNKNOWN/dc/description",
+      "slot_uri": "http://purl.org/dc/elements/1.1/description",
       "alias": "description",
       "owner": "Comment",
       "domain_of": [
@@ -3155,11 +3187,11 @@
       "definition_uri": "https://w3id.org/None/isReplacedBy",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dcterms/isReplacedBy"
+        "http://purl.org/dc/terms/isReplacedBy"
       ],
       "is_a": "isReplacedBy",
       "domain": "Concept",
-      "slot_uri": "http://example.org/UNKNOWN/dcterms/isReplacedBy",
+      "slot_uri": "http://purl.org/dc/terms/isReplacedBy",
       "alias": "isReplacedBy",
       "owner": "Concept",
       "domain_of": [
@@ -3176,11 +3208,11 @@
       "definition_uri": "https://w3id.org/None/description",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dc/description"
+        "http://purl.org/dc/elements/1.1/description"
       ],
       "is_a": "description",
       "domain": "Concept",
-      "slot_uri": "http://example.org/UNKNOWN/dc/description",
+      "slot_uri": "http://purl.org/dc/elements/1.1/description",
       "alias": "description",
       "owner": "Concept",
       "domain_of": [
@@ -3970,11 +4002,11 @@
       "definition_uri": "https://w3id.org/None/description",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dc/description"
+        "http://purl.org/dc/elements/1.1/description"
       ],
       "is_a": "Concept_description",
       "domain": "EnumeratedValue",
-      "slot_uri": "http://example.org/UNKNOWN/dc/description",
+      "slot_uri": "http://purl.org/dc/elements/1.1/description",
       "alias": "description",
       "owner": "EnumeratedValue",
       "domain_of": [
@@ -4249,11 +4281,11 @@
       "definition_uri": "https://w3id.org/None/literal",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
-        "http://example.org/UNKNOWN/dtype/literal"
+        "http://www.linkedmodel.org/schema/dtype#literal"
       ],
       "is_a": "literal",
       "domain": "OrderedType",
-      "slot_uri": "http://example.org/UNKNOWN/dtype/literal",
+      "slot_uri": "http://www.linkedmodel.org/schema/dtype#literal",
       "alias": "literal",
       "owner": "OrderedType",
       "domain_of": [
@@ -7628,7 +7660,7 @@
         "Datatype_oleDBName"
       ],
       "slot_usage": {},
-      "class_uri": "http://example.org/UNKNOWN/rdfs/Datatype",
+      "class_uri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
       "@type": "ClassDefinition"
     },
     {
@@ -9210,7 +9242,7 @@
         "rdf:Statement"
       ],
       "slot_usage": {},
-      "class_uri": "http://example.org/UNKNOWN/rdf/Statement",
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
       "@type": "ClassDefinition"
     },
     {
@@ -9468,7 +9500,7 @@
         "vaem:CatalogEntry"
       ],
       "slot_usage": {},
-      "class_uri": "http://example.org/UNKNOWN/vaem/CatalogEntry",
+      "class_uri": "http://www.linkedmodel.org/schema/vaem#CatalogEntry",
       "@type": "ClassDefinition"
     },
     {
@@ -9479,7 +9511,7 @@
         "rdf:List"
       ],
       "slot_usage": {},
-      "class_uri": "http://example.org/UNKNOWN/rdf/List",
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
       "@type": "ClassDefinition"
     },
     {
@@ -9501,7 +9533,7 @@
         "rdfs:Resource"
       ],
       "slot_usage": {},
-      "class_uri": "http://example.org/UNKNOWN/rdfs/Resource",
+      "class_uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
       "@type": "ClassDefinition"
     },
     {
@@ -9620,9 +9652,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-10-25T14:12:45",
-  "source_file_size": 50578,
-  "generation_date": "2025-10-25T14:32:21",
+  "source_file_date": "2025-10-27T19:58:16",
+  "source_file_size": 50933,
+  "generation_date": "2025-10-27T20:04:24",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",
