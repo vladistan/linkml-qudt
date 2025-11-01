@@ -116,12 +116,14 @@ gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" diagram_dir="
 serve-data-dict:
   cd {{dest}} && uv run --group dev grip --wide --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
 
-# Update documentation site content (copy README and datadict to docs/)
+# Update documentation site content (symlink README and datadict to docs/)
 [group('documentation')]
 update-docs:
-  cp README.md docs/about.md
-  cp {{dest}}/datadict.md docs/datadict.md
-  cp -r {{dest}}/images docs/
+  rm -f docs/about.md docs/datadict.md
+  ln -s ../README.md docs/about.md
+  ln -s ../{{dest}}/datadict.md docs/datadict.md
+  rm -rf docs/images
+  ln -s ../{{dest}}/images docs/images
 
 # Serve documentation site locally
 [group('documentation')]
