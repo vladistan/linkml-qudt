@@ -24,12 +24,12 @@ install:
 [group('project management')]
 clean: _clean_project
   rm -rf tmp
-  rm -rf {{docdir}}/*.md
+  rm -rf docs/elements
 
 # (Re-)Generate project and documentation locally
 
 [group('model development')]
-site: gen-project gen-doc
+site: gen-project
 
 # Deploy documentation site to Github Pages
 [group('deployment')]
@@ -57,7 +57,7 @@ gen-doc: _gen-yaml
 
 # Build docs and run test server
 [group('model development')]
-testdoc: gen-doc _serve
+testdoc: update-docs _serve
 
 gen-python:
   uv run --group dev gen-project -d  {{pymodel}} -I python {{source_schema_path}}
