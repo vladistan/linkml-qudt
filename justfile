@@ -9,7 +9,7 @@ dest := "project"
 pymodel := src / schema_name / "datamodel"
 source_schema_path := source_schema_dir / schema_name + ".yaml"
 docdir := "docs/elements"  # Directory for generated documentation
-merged_schema_path := "docs/schema/{{schema_name}}.yaml"
+merged_schema_path := "docs/schema" / schema_name + ".yaml"
 
 # List all commands as default command. The prefix "_" hides the command.
 _default:
@@ -52,6 +52,9 @@ lint:
 gen-doc: _gen-yaml
   uv run --group dev gen-doc -d {{docdir}} {{source_schema_path}}
 
+
+
+
 # Build docs and run test server
 [group('model development')]
 testdoc: gen-doc _serve
@@ -70,12 +73,70 @@ gen-project:
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug {{source_schema_path}} > {{dest}}/datadict.md
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs {{source_schema_path}} > {{dest}}/datadict.md
+
+# Generate project with SVG diagrams rendered via Kroki server
+[group('model development')]
+gen-project-kroki kroki_server="https://kroki.r4.v-lad.org":
+  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  mv {{dest}}/*.py {{pymodel}}
+  mkdir -p {{dest}}/owl
+  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p {{dest}}/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} {{source_schema_path}} > {{dest}}/datadict.md
+
+# Generate project with SVG diagrams saved as separate files
+[group('model development')]
+gen-project-kroki-files kroki_server="https://kroki.r4.v-lad.org" diagram_dir="project/images":
+  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  mv {{dest}}/*.py {{pymodel}}
+  mkdir -p {{dest}}/owl
+  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p {{dest}}/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{diagram_dir}} --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
+
+# Generate project with SVG diagrams with clickable links (for GitHub Pages or other hosted docs)
+[group('model development')]
+gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" diagram_dir="project/images" base_url="https://example.com/schema":
+  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  mv {{dest}}/*.py {{pymodel}}
+  mkdir -p {{dest}}/owl
+  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p {{dest}}/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{diagram_dir}} --add-svg-links {{base_url}} --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
 
 # Locally serve data dictionary
 [group('model development')]
 serve-data-dict:
   cd {{dest}} && uv run --group dev grip --wide --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
+
+# Update documentation site content (copy README and datadict to docs/)
+[group('documentation')]
+update-docs:
+  cp README.md docs/about.md
+  cp {{dest}}/datadict.md docs/datadict.md
+  cp -r {{dest}}/images docs/
+
+# Serve documentation site locally
+[group('documentation')]
+serve-docs: update-docs
+  uv run --group dev mkdocs serve
+
+# Build documentation site
+[group('documentation')]
+build-docs: update-docs
+  uv run --group dev mkdocs build
+
+# Deploy documentation site to GitHub Pages
+[group('documentation')]
+deploy-docs: update-docs
+  uv run --group dev mkdocs gh-deploy --force
 
 #gen-project
 

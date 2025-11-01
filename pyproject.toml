@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "qudt"
 version = "0.1.0"
-description = "Add your description here"
+description = "QUDT LinkML Schema"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11,<3.14"
@@ -13,7 +13,7 @@ authors = [
     {name = "Vlad Korolev", email="vlad@v-lad.org"},
 ]
 dependencies = [
-    "schema-automator>=0.5.3",
+    #"schema-automator>=0.5.3",
     "linkml-runtime",
 ]
 

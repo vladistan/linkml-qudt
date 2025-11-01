@@ -1,0 +1,80 @@
+---
+site_name: QUDT LinkML Model
+site_description: LinkML model for QUDT (Quantities, Units, Dimensions and Types) ontology
+site_author: QUDT LinkML Contributors
+repo_url: https://github.com/linkml/linkml-qudt
+repo_name: linkml/linkml-qudt
+
+theme:
+  name: material
+  toc_depth: 3
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Data Dictionary: datadict.md
+  - Schema: schema.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/linkml/linkml-qudt
+    - icon: fontawesome/solid/globe
+      link: https://qudt.org
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; 2025 QUDT LinkML Contributors
