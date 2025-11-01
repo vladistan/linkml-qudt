@@ -1,0 +1,40 @@
+{
+  "name": "QUDT Linkml Schema",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": "true"
+    },
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "theme": "robbyrussell",
+      "plugins": "git",
+      "setLocale": false,
+      "desiredLocale": "en_US.UTF-8"
+    },
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-python.python@2024.1.10401008",
+        "ms-vscode-remote.remote-containers@0.342.0",
+        "tamasfe.even-better-toml@0.19.2",
+        "eamodio.gitlens@14.8.2",
+        "ms-vscode.live-server@0.5.2024010901",
+        "MS-vsliveshare.vsliveshare@1.0.5905",
+        "ms-python.debugpy@2024.6.0",
+        "github.copilot@1.172.0",
+        "github.copilot-chat@0.13.0"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  }
+}
