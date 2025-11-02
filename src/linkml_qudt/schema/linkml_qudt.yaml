@@ -1,7 +1,11 @@
 ---
-name: qudt
-description: qudt
 id: http://qudt.org/3.1.6/schema/qudt
+name: qudt
+title: QUDT Ontology in LinkML
+version: 0.0.1
+description: |-
+  This is a LinkML representation of the QUDT (Quantities, Units, Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.
+license: CC-BY-4.0
 imports:
 - linkml:types
 prefixes:

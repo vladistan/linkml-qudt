@@ -10,29 +10,29 @@ This is a **first draft attempt** to create a [LinkML](https://linkml.io) model 
 
 The original QUDT ontology files are vendored in the `original/` directory:
 
-- [original/qudt.ttl](original/qudt.ttl) - QUDT ontology in Turtle format
-- [original/qudt.ofn](original/qudt.ofn) - QUDT ontology in OWL Functional Syntax
+- [original/qudt.ttl](https://github.com/vladistan/linkml-qudt/blob/main/original/qudt.ttl) - QUDT ontology in Turtle format
+- [original/qudt.ofn](https://github.com/vladistan/linkml-qudt/blob/main/original/qudt.ofn) - QUDT ontology in OWL Functional Syntax
 
 ## Important Files (Start Here)
 
-- **[project/datadict.md](project/datadict.md)** - Single page data dictionary (Look here first)
-- **[src/linkml_qudt/schema/linkml_qudt.yaml](src/linkml_qudt/schema/linkml_qudt.yaml)** - The main LinkML schema
-- **[src/linkml_qudt/datamodel/linkml_qudt_pydantic.py](src/linkml_qudt/datamodel/linkml_qudt_pydantic.py)** - Pydantic v2 model
+- **[Data Dictionary](datadict.md)** - Single page data dictionary (Look here first)
+- **[src/linkml_qudt/schema/linkml_qudt.yaml](https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/schema/linkml_qudt.yaml)** - The main LinkML schema
+- **[src/linkml_qudt/datamodel/linkml_qudt_pydantic.py](https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/datamodel/linkml_qudt_pydantic.py)** - Pydantic v2 model
 
 ### Additional Generated Artifacts
 
 The `project/` directory contains various generated artifacts:
 
-- [project/jsonld/](project/jsonld/) - JSON-LD context and schema
-- [project/jsonschema/](project/jsonschema/) - JSON Schema validation files
-- [project/owl/](project/owl/) - OWL/RDF representation (Turtle format)
-- [project/shacl/](project/shacl/) - SHACL validation shapes
-- [project/shex/](project/shex/) - ShEx schemas
-- [project/protobuf/](project/protobuf/) - Protocol Buffers definitions
-- [project/sqlschema/](project/sqlschema/) - SQL DDL schemas
-- [project/typescript/](project/typescript/) - TypeScript type definitions
-- [project/prefixmap/](project/prefixmap/) - Prefix mappings
-- [src/linkml_qudt/datamodel/linkml_qudt.py](src/linkml_qudt/datamodel/linkml_qudt.py) - Python dataclasses
+- [project/jsonld/](https://github.com/vladistan/linkml-qudt/tree/main/project/jsonld) - JSON-LD context and schema
+- [project/jsonschema/](https://github.com/vladistan/linkml-qudt/tree/main/project/jsonschema) - JSON Schema validation files
+- [project/owl/](https://github.com/vladistan/linkml-qudt/tree/main/project/owl) - OWL/RDF representation (Turtle format)
+- [project/shacl/](https://github.com/vladistan/linkml-qudt/tree/main/project/shacl) - SHACL validation shapes
+- [project/shex/](https://github.com/vladistan/linkml-qudt/tree/main/project/shex) - ShEx schemas
+- [project/protobuf/](https://github.com/vladistan/linkml-qudt/tree/main/project/protobuf) - Protocol Buffers definitions
+- [project/sqlschema/](https://github.com/vladistan/linkml-qudt/tree/main/project/sqlschema) - SQL DDL schemas
+- [project/typescript/](https://github.com/vladistan/linkml-qudt/tree/main/project/typescript) - TypeScript type definitions
+- [project/prefixmap/](https://github.com/vladistan/linkml-qudt/tree/main/project/prefixmap) - Prefix mappings
+- [src/linkml_qudt/datamodel/linkml_qudt.py](https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/datamodel/linkml_qudt.py) - Python dataclasses
 
 ## Conversion Process
 
@@ -43,6 +43,7 @@ Syntax (OFN) format. Then, [Schema
 Automator](https://github.com/linkml/schema-automator) was applied
 to generate the LinkML model from the OFN representation.
 
+### Manual Corrections Applied
 
 Unfortunately, the automated conversion process did not yield a usable LinkML schema. The generated output had several structural and type issues. The following corrections were made
 to make the schema useful.
@@ -56,13 +57,15 @@ to make the schema useful.
 
 ## Known Issues & Limitations
 
-� **This is a first draft with known limitations:**
+**This is a first draft with known limitations:**
 
 - The automated conversion may not have captured all semantic nuances from the QUDT ontology
 - Some complex OWL patterns may not translate perfectly to LinkML
 - Not all QUDT constraints may be fully represented
 - The model may require additional validation rules
 - Some class hierarchies may need refinement
+- Some attributes did not transfer from the original ontology. For example all most of the DublinCore metatadata attributes are missing from the LinkML model.  Looks like they could be added with an addtional automated step.
+- So far only classess from main ontology were transferred. We need to transfer individuals.
 
 ## Development
 
@@ -110,7 +113,7 @@ The documentation site includes:
 - **Data Dictionary** - Comprehensive model documentation with diagrams
 - **Schema** - Direct access to the LinkML YAML schema
 
-Visit the live site at: https://linkml.github.io/linkml-qudt (once deployed)
+Visit the live site at: https://vladistan.github.io/linkml-qudt
 
 ## Contributing
 

@@ -94,8 +94,6 @@ cd linkml-qudt
 # Install dependencies
 uv sync --group dev
 
-# Or with pip
-pip install -e .
 ```
 
 ### Explore the Model
