@@ -847,8 +847,11 @@
 
 <h1 id="qudt-linkml-model">QUDT LinkML Model<a class="headerlink" href="#qudt-linkml-model" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This is a <strong>first draft attempt</strong> to create a <a href="https://linkml.io">LinkML</a> model from the <a href="https://qudt.org">QUDT (Quantities, Units, Dimensions and Types)</a> ontology. QUDT is a comprehensive ontology that provides a structured vocabulary for describing physical quantities, units of measure, and their relationships.</p>
-<p><strong>This is an initial attempt and likely contains numerous issues.</strong> Suggestions and contributions on how to make this more useful are very welcome!</p>
+<p>This is a <a href="https://linkml.io">LinkML</a> model for the <a href="https://qudt.org">QUDT (Quantities, Units, Dimensions and Types)</a> ontology. QUDT is a comprehensive ontology that provides a structured vocabulary for describing physical quantities, units of measure, and their relationships.</p>
+<div class="admonition warning">
+<p class="admonition-title">Early Stage Project</p>
+<p>This is a <strong>first draft attempt</strong> at converting the QUDT ontology to LinkML. It likely contains issues and limitations. In a very likely event you find a problem please file a <a href="https://github.com/vladistan/linkml-qudt/issues">GitHub Issue</a> here. Or submit a pull request with your suggested improvement!</p>
+</div>
 <h2 id="original-qudt-files">Original QUDT Files<a class="headerlink" href="#original-qudt-files" title="Permanent link">&para;</a></h2>
 <p>The original QUDT ontology files are vendored in the <code>original/</code> directory:</p>
 <ul>
@@ -876,12 +879,12 @@
 <li><a href="https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/datamodel/linkml_qudt.py">src/linkml_qudt/datamodel/linkml_qudt.py</a> - Python dataclasses</li>
 </ul>
 <h2 id="conversion-process">Conversion Process<a class="headerlink" href="#conversion-process" title="Permanent link">&para;</a></h2>
-<p>This LinkML model was created through a two-step automated conversion
-process. First, the <a href="http://robot.obolibrary.org/">ROBOT</a> tool was
-used to convert the published QUDT ontology files to OWL Functional
-Syntax (OFN) format. Then, <a href="https://github.com/linkml/schema-automator">Schema
-Automator</a> was applied
-to generate the LinkML model from the OFN representation.</p>
+<p>This LinkML model was created through an automated conversion process with the following steps:</p>
+<ul>
+<li>Used <a href="http://robot.obolibrary.org/">ROBOT</a> tool to convert the published QUDT ontology files to OWL Functional Syntax (OFN) format</li>
+<li>Applied <a href="https://github.com/linkml/schema-automator">Schema Automator</a> to generate the LinkML model from the OFN representation</li>
+<li>Made manual corrections to address issues in the automated conversion (see below)</li>
+</ul>
 <h3 id="manual-corrections-applied">Manual Corrections Applied<a class="headerlink" href="#manual-corrections-applied" title="Permanent link">&para;</a></h3>
 <p>Unfortunately, the automated conversion process did not yield a usable LinkML schema. The generated output had several structural and type issues. The following corrections were made
 to make the schema useful.</p>
@@ -940,13 +943,13 @@ to make the schema useful.</p>
 <h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
 <p><strong>We welcome contributions!</strong> This is an early draft and there's much room for improvement. Areas where help is particularly appreciated:</p>
 <ul>
-<li>✅ Improving the schema structure and class hierarchies</li>
-<li>✅ Adding better documentation and examples</li>
-<li>✅ Identifying and fixing conversion issues</li>
-<li>✅ Adding validation rules and constraints</li>
-<li>✅ Creating example data and use cases</li>
-<li>✅ Improving alignment with QUDT semantics</li>
-<li>✅ Testing and validation</li>
+<li>Improving the schema structure and class hierarchies</li>
+<li>Adding better documentation and examples</li>
+<li>Identifying and fixing conversion issues</li>
+<li>Adding validation rules and constraints</li>
+<li>Creating example data and use cases</li>
+<li>Improving alignment with QUDT semantics</li>
+<li>Testing and validation</li>
 </ul>
 <p>Please open an issue or pull request if you have suggestions or improvements!</p>
 <h2 id="related-resources">Related Resources<a class="headerlink" href="#related-resources" title="Permanent link">&para;</a></h2>
