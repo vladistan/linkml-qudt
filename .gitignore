@@ -35,3 +35,6 @@ venv.bak/
 
 # Ruff stuff:
 .ruff_cache/
+
+# Kroki SVG cache
+.kroki-cache/

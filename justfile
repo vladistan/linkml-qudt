@@ -65,7 +65,7 @@ gen-python:
 
 # Generate project files including Python data model
 [group('model development')]
-gen-project:
+gen-project kroki_server="https://kroki.r4.v-lad.org":
   uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
   uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
   mv {{dest}}/*.py {{pymodel}}
@@ -73,7 +73,7 @@ gen-project:
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs {{source_schema_path}} > {{dest}}/datadict.md
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{dest}}/images --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
 
 # Generate project with SVG diagrams rendered via Kroki server
 [group('model development')]

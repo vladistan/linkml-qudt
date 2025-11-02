@@ -1,5 +1,20 @@
 /* Custom styles for QUDT LinkML documentation */
 
+/* Hide the left navigation sidebar - we use tabs at the top instead */
+.md-sidebar--primary {
+    display: none;
+}
+
+/* Adjust grid to not reserve space for the hidden sidebar */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        display: none;
+    }
+    .md-grid {
+        grid-template-columns: 0 1fr;
+    }
+}
+
 /* Increase content width for better use of screen space */
 .md-grid {
     max-width: 90%;

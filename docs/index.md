@@ -5,7 +5,8 @@
 This is a **LinkML model** for the [QUDT (Quantities, Units, Dimensions and Types)](https://qudt.org) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.
 
 !!! warning "Early Stage Project"
-    This is a **first draft attempt** at converting the QUDT ontology to LinkML. It likely contains issues and limitations. We welcome suggestions and contributions!
+    This is a **first draft attempt** at converting the QUDT ontology to LinkML. It likely contains issues and limitations. In a very likely
+    event you find a problem please file a [GitHub Issue](https://github.com/vladistan/linkml-qudt/issues) here. Or submit a pull request with your suggested improvement!
 
 ## Quick Links
 

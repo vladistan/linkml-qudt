@@ -21,14 +21,16 @@ qudt
 ## Base Classes
 
 
-These classes have no direct relationships but serve as base classes for other classes:
+Foundational classes in the hierarchy (root classes and direct children of Thing):
 
 | Class | Description |
 | --- | --- |
 | [Aspect](#aspect) |  |
+| [Class](#class) |  |
+| [Concept](#concept) |  |
 | [Resource](#resource) |  |
+| [StringEncodingType](#stringencodingtype) |  |
 | [Thing](#thing) | The root class for all QUDT concepts |
-| [Verifiable](#verifiable) |  |
 
 ## Standalone Classes
 
@@ -47,8 +49,8 @@ These classes are completely isolated with no relationships and are not used as 
 | [Ontology](#ontology) |  |
 | [SignednessType](#signednesstype) |  |
 | [Statement](#statement) |  |
-| [StringEncodingType](#stringencodingtype) |  |
 | [SymmetricRelation](#symmetricrelation) |  |
+| [Verifiable](#verifiable) |  |
 | [GDay](#gday) |  |
 | [GMonth](#gmonth) |  |
 | [GMonthDay](#gmonthday) |  |
@@ -104,17 +106,17 @@ AbstractQuantityKind:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -198,43 +200,43 @@ AngleUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -366,16 +368,16 @@ BaseDimensionMagnitude:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[HasBaseQuantityKind](#hasbasequantitykind)** | <sub>1..1</sub> | [QuantityKind](#quantitykind) |  |
-| **[VectorMagnitude](#vectormagnitude)** | <sub>1..1</sub> | float |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[hasBaseQuantityKind](#hasbasequantitykind)** | <sub>1..1</sub> | [QuantityKind](#quantitykind) |  |
+| **[vectorMagnitude](#vectormagnitude)** | <sub>1..1</sub> | float |  |
 
 #### Parents
 
@@ -428,18 +430,18 @@ BinaryPrefix:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[PrefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[prefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -482,16 +484,16 @@ BitEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -534,16 +536,16 @@ BooleanEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -586,16 +588,16 @@ ByteEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -646,17 +648,17 @@ CardinalityType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Literal](#literal)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[literal](#literal)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -726,16 +728,16 @@ CharEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -785,15 +787,15 @@ Citation:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>1..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Url](#url)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>1..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[url](#url)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -872,12 +874,12 @@ Comment:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Rationale](#rationale)** | <sub>0..\*</sub> | string |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[rationale](#rationale)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -939,14 +941,14 @@ Concept:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -1034,17 +1036,17 @@ ConstantValue:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
-| **[Datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[HasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
-| **[RelativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
-| **[StandardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
-| **[StandardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
-| **[Value](#value)** | <sub>0..1</sub> | None |  |
-| **[ValueSN](#valuesn)** | <sub>0..1</sub> | None |  |
-| **[ExactConstant](#exactconstant)** | <sub>0..\*</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
+| **[datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[hasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
+| **[relativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
+| **[standardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
+| **[standardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
+| **[value](#value)** | <sub>0..1</sub> | None |  |
+| **[valueSN](#valuesn)** | <sub>0..1</sub> | None |  |
+| **[exactConstant](#exactconstant)** | <sub>0..\*</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1124,43 +1126,43 @@ ContextualUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1238,43 +1240,43 @@ CountingUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1361,45 +1363,45 @@ CurrencyUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[CurrencyCode](#currencycode)** | <sub>0..1</sub> | None |  |
-| **[CurrencyExponent](#currencyexponent)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[currencyCode](#currencycode)** | <sub>0..1</sub> | None |  |
+| **[currencyExponent](#currencyexponent)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1446,9 +1448,9 @@ DataEncoding:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[BitOrder](#bitorder)** | <sub>0..1</sub> | [EndianType](#endiantype) |  |
-| **[ByteOrder](#byteorder)** | <sub>0..1</sub> | [EndianType](#endiantype) |  |
-| **[Encoding](#encoding)** | <sub>0..1</sub> | [Encoding](#encoding) |  |
+| **[bitOrder](#bitorder)** | <sub>0..1</sub> | [EndianType](#endiantype) |  |
+| **[byteOrder](#byteorder)** | <sub>0..1</sub> | [EndianType](#endiantype) |  |
+| **[encoding](#encoding)** | <sub>0..1</sub> | [Encoding](#encoding) |  |
 
 #### Parents
 
@@ -1498,15 +1500,15 @@ DataItem:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Value](#value)** | <sub>0..1</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[value](#value)** | <sub>0..1</sub> | string |  |
 
 #### Parents
 
@@ -1604,31 +1606,31 @@ Datatype:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[AnsiSQLName](#ansisqlname)** | <sub>0..1</sub> | string |  |
-| **[Basis](#basis)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[Bounded](#bounded)** | <sub>0..1</sub> | None |  |
-| **[CName](#cname)** | <sub>0..1</sub> | string |  |
-| **[Cardinality](#cardinality)** | <sub>0..1</sub> | [CardinalityType](#cardinalitytype) |  |
-| **[JavaName](#javaname)** | <sub>0..1</sub> | None |  |
-| **[JsName](#jsname)** | <sub>0..1</sub> | None |  |
-| **[MatlabName](#matlabname)** | <sub>0..1</sub> | None |  |
-| **[MicrosoftSQLServerName](#microsoftsqlservername)** | <sub>0..1</sub> | None |  |
-| **[MySQLName](#mysqlname)** | <sub>0..1</sub> | None |  |
-| **[OdbcName](#odbcname)** | <sub>0..1</sub> | None |  |
-| **[OleDBName](#oledbname)** | <sub>0..1</sub> | None |  |
-| **[OracleSQLName](#oraclesqlname)** | <sub>0..1</sub> | string |  |
-| **[OrderedType](#orderedtype)** | <sub>0..1</sub> | [OrderedType](#orderedtype) |  |
-| **[ProtocolBuffersName](#protocolbuffersname)** | <sub>0..1</sub> | string |  |
-| **[PythonName](#pythonname)** | <sub>0..1</sub> | string |  |
-| **[VbName](#vbname)** | <sub>0..1</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[ansiSQLName](#ansisqlname)** | <sub>0..1</sub> | string |  |
+| **[basis](#basis)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[bounded](#bounded)** | <sub>0..1</sub> | None |  |
+| **[cName](#cname)** | <sub>0..1</sub> | string |  |
+| **[cardinality](#cardinality)** | <sub>0..1</sub> | [CardinalityType](#cardinalitytype) |  |
+| **[javaName](#javaname)** | <sub>0..1</sub> | None |  |
+| **[jsName](#jsname)** | <sub>0..1</sub> | None |  |
+| **[matlabName](#matlabname)** | <sub>0..1</sub> | None |  |
+| **[microsoftSQLServerName](#microsoftsqlservername)** | <sub>0..1</sub> | None |  |
+| **[mySQLName](#mysqlname)** | <sub>0..1</sub> | None |  |
+| **[odbcName](#odbcname)** | <sub>0..1</sub> | None |  |
+| **[oleDBName](#oledbname)** | <sub>0..1</sub> | None |  |
+| **[oracleSQLName](#oraclesqlname)** | <sub>0..1</sub> | string |  |
+| **[orderedType](#orderedtype)** | <sub>0..1</sub> | [OrderedType](#orderedtype) |  |
+| **[protocolBuffersName](#protocolbuffersname)** | <sub>0..1</sub> | string |  |
+| **[pythonName](#pythonname)** | <sub>0..1</sub> | string |  |
+| **[vbName](#vbname)** | <sub>0..1</sub> | string |  |
 
 #### Parents
 
@@ -1678,7 +1680,7 @@ DateTimeStringEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[AllowedPattern](#allowedpattern)** | <sub>1..\*</sub> | None |  |
+| **[allowedPattern](#allowedpattern)** | <sub>1..\*</sub> | None |  |
 
 #### Parents
 
@@ -1731,18 +1733,18 @@ DecimalPrefix:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[PrefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[prefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1820,43 +1822,43 @@ DerivedUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -1934,43 +1936,43 @@ DimensionlessUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -2018,14 +2020,14 @@ Discipline:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2073,16 +2075,16 @@ Encoding:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2142,16 +2144,16 @@ EndianType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -2204,16 +2206,16 @@ EnumeratedQuantity:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[EnumeratedValue](#enumeratedvalue)** | <sub>0..\*</sub> | [EnumeratedValue](#enumeratedvalue) |  |
-| **[Enumeration](#enumeration)** | <sub>0..\*</sub> | [Enumeration](#enumeration) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[enumeratedValue](#enumeratedvalue)** | <sub>0..\*</sub> | [EnumeratedValue](#enumeratedvalue) |  |
+| **[enumeration](#enumeration)** | <sub>0..\*</sub> | [Enumeration](#enumeration) |  |
 
 #### Parents
 
@@ -2271,16 +2273,16 @@ EnumeratedValue:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2356,16 +2358,16 @@ Enumeration:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Default](#default)** | <sub>0..1</sub> | [EnumeratedValue](#enumeratedvalue) |  |
-| **[Element](#element)** | <sub>1..\*</sub> | [EnumeratedValue](#enumeratedvalue) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[default](#default)** | <sub>0..1</sub> | [EnumeratedValue](#enumeratedvalue) |  |
+| **[element](#element)** | <sub>1..\*</sub> | [EnumeratedValue](#enumeratedvalue) |  |
 
 #### Parents
 
@@ -2423,18 +2425,18 @@ EnumerationScale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2502,21 +2504,21 @@ Figure:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[FigureCaption](#figurecaption)** | <sub>0..1</sub> | None |  |
-| **[FigureLabel](#figurelabel)** | <sub>0..1</sub> | None |  |
-| **[Height](#height)** | <sub>0..1</sub> | None |  |
-| **[Image](#image)** | <sub>0..1</sub> | None |  |
-| **[ImageLocation](#imagelocation)** | <sub>1..1</sub> | None |  |
-| **[Landscape](#landscape)** | <sub>0..1</sub> | None |  |
-| **[Width](#width)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[figureCaption](#figurecaption)** | <sub>0..1</sub> | None |  |
+| **[figureLabel](#figurelabel)** | <sub>0..1</sub> | None |  |
+| **[height](#height)** | <sub>0..1</sub> | None |  |
+| **[image](#image)** | <sub>0..1</sub> | None |  |
+| **[imageLocation](#imagelocation)** | <sub>1..1</sub> | None |  |
+| **[landscape](#landscape)** | <sub>0..1</sub> | None |  |
+| **[width](#width)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2562,16 +2564,16 @@ FloatingPointEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2614,16 +2616,16 @@ IntegerEncodingType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2673,18 +2675,18 @@ IntervalScale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
 
 #### Parents
 
@@ -2810,43 +2812,43 @@ LogarithmicUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -2887,14 +2889,14 @@ MathsFunctionType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -2941,12 +2943,12 @@ NIST_SP811_Comment:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Rationale](#rationale)** | <sub>0..\*</sub> | string |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[rationale](#rationale)** | <sub>0..\*</sub> | string |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
 
 #### Parents
 
@@ -2993,18 +2995,18 @@ NominalScale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
 
 #### Parents
 
@@ -3046,8 +3048,8 @@ NumericUnion:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Uses
 
@@ -3127,17 +3129,17 @@ OrderedType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Literal](#literal)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[literal](#literal)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3193,19 +3195,19 @@ OrdinalScale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
-| **[Order](#order)** | <sub>1..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[order](#order)** | <sub>1..1</sub> | None |  |
 
 #### Parents
 
@@ -3250,15 +3252,15 @@ Organization:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Url](#url)** | <sub>0..\*</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[url](#url)** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
@@ -3355,33 +3357,33 @@ PhysicalConstant:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
-| **[Datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
-| **[IsDeltaQuantity](#isdeltaquantity)** | <sub>0..\*</sub> | boolean |  |
-| **[QuantityValue](#quantityvalue)** | <sub>0..\*</sub> | [QuantityValue](#quantityvalue) |  |
-| **[RelativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
-| **[StandardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
-| **[StandardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
-| **[Value](#value)** | <sub>0..1</sub> | None |  |
-| **[ValueSN](#valuesn)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ApplicableUnit](#applicableunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[ExactConstant](#exactconstant)** | <sub>0..\*</sub> | boolean |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [PhysicalConstant](#physicalconstant) |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
+| **[datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
+| **[isDeltaQuantity](#isdeltaquantity)** | <sub>0..\*</sub> | boolean |  |
+| **[quantityValue](#quantityvalue)** | <sub>0..\*</sub> | [QuantityValue](#quantityvalue) |  |
+| **[relativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
+| **[standardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
+| **[standardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
+| **[value](#value)** | <sub>0..1</sub> | None |  |
+| **[valueSN](#valuesn)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[applicableUnit](#applicableunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[exactConstant](#exactconstant)** | <sub>0..\*</sub> | boolean |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [PhysicalConstant](#physicalconstant) |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3462,43 +3464,43 @@ PlaneAngleUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3564,18 +3566,18 @@ Prefix:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PrefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[prefixMultiplier](#prefixmultiplier)** | <sub>0..1</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs-term](#ucumcs-term) |  |
 
 #### Parents
 
@@ -3655,14 +3657,14 @@ Quantifiable:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[DataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
-| **[Datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[HasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
-| **[RelativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
-| **[StandardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
-| **[StandardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
-| **[Value](#value)** | <sub>0..1</sub> | None |  |
-| **[ValueSN](#valuesn)** | <sub>0..1</sub> | None |  |
+| **[dataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
+| **[datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[hasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
+| **[relativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
+| **[standardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
+| **[standardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
+| **[value](#value)** | <sub>0..1</sub> | None |  |
+| **[valueSN](#valuesn)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -3743,19 +3745,19 @@ Quantity:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
-| **[Datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[HasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
-| **[RelativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
-| **[StandardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
-| **[StandardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
-| **[Value](#value)** | <sub>0..1</sub> | None |  |
-| **[ValueSN](#valuesn)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[IsDeltaQuantity](#isdeltaquantity)** | <sub>0..\*</sub> | boolean |  |
-| **[QuantityValue](#quantityvalue)** | <sub>0..\*</sub> | [QuantityValue](#quantityvalue) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
+| **[datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[hasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
+| **[relativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
+| **[standardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
+| **[standardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
+| **[value](#value)** | <sub>0..1</sub> | None |  |
+| **[valueSN](#valuesn)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[isDeltaQuantity](#isdeltaquantity)** | <sub>0..\*</sub> | boolean |  |
+| **[quantityValue](#quantityvalue)** | <sub>0..\*</sub> | [QuantityValue](#quantityvalue) |  |
 
 #### Parents
 
@@ -3864,27 +3866,27 @@ QuantityKind:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[ApplicableCGSUnit](#applicablecgsunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[ApplicableISOUnit](#applicableisounit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[ApplicableImperialUnit](#applicableimperialunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[ApplicableSIUnit](#applicablesiunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[ApplicableUSCustomaryUnit](#applicableuscustomaryunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[ApplicableUnit](#applicableunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[BelongsToSystemOfQuantities](#belongstosystemofquantities)** | <sub>0..\*</sub> | [SystemOfQuantityKinds](#systemofquantitykinds) |  |
-| **[DimensionVectorForSI](#dimensionvectorforsi)** | <sub>0..1</sub> | [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[applicableCGSUnit](#applicablecgsunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[applicableISOUnit](#applicableisounit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[applicableImperialUnit](#applicableimperialunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[applicableSIUnit](#applicablesiunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[applicableUSCustomaryUnit](#applicableuscustomaryunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[applicableUnit](#applicableunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[belongsToSystemOfQuantities](#belongstosystemofquantities)** | <sub>0..\*</sub> | [SystemOfQuantityKinds](#systemofquantitykinds) |  |
+| **[dimensionVectorForSI](#dimensionvectorforsi)** | <sub>0..1</sub> | [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..\*</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -3991,25 +3993,25 @@ QuantityKindDimensionVector:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
@@ -4080,25 +4082,25 @@ QuantityKindDimensionVector_CGS:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4159,25 +4161,25 @@ QuantityKindDimensionVector_CGS-EMU:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4231,25 +4233,25 @@ QuantityKindDimensionVector_CGS-ESU:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4303,25 +4305,25 @@ QuantityKindDimensionVector_CGS-GAUSS:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4375,25 +4377,25 @@ QuantityKindDimensionVector_CGS-LH:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4445,25 +4447,25 @@ QuantityKindDimensionVector_ISO:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4515,25 +4517,25 @@ QuantityKindDimensionVector_Imperial:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4585,25 +4587,25 @@ QuantityKindDimensionVector_SI:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[DimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
-| **[DimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
-| **[DimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[dimensionExponentForAmountOfSubstance](#dimensionexponentforamountofsubstance)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForElectricCurrent](#dimensionexponentforelectriccurrent)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLength](#dimensionexponentforlength)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForLuminousIntensity](#dimensionexponentforluminousintensity)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForMass](#dimensionexponentformass)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForThermodynamicTemperature](#dimensionexponentforthermodynamictemperature)** | <sub>1..1</sub> | None |  |
+| **[dimensionExponentForTime](#dimensionexponentfortime)** | <sub>1..1</sub> | None |  |
+| **[dimensionlessExponent](#dimensionlessexponent)** | <sub>1..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasReferenceQuantityKind](#hasreferencequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -4658,17 +4660,17 @@ QuantityType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Value](#value)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[value](#value)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -4724,16 +4726,16 @@ QuantityValue:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
-| **[Datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[RelativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
-| **[StandardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
-| **[StandardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
-| **[Value](#value)** | <sub>0..1</sub> | None |  |
-| **[ValueSN](#valuesn)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dataEncoding](#dataencoding)** | <sub>0..1</sub> | [DataEncoding](#dataencoding) |  |
+| **[datatype](#datatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[relativeStandardUncertainty](#relativestandarduncertainty)** | <sub>0..1</sub> | double |  |
+| **[standardUncertainty](#standarduncertainty)** | <sub>0..1</sub> | decimal |  |
+| **[standardUncertaintySN](#standarduncertaintysn)** | <sub>0..\*</sub> | double |  |
+| **[value](#value)** | <sub>0..1</sub> | None |  |
+| **[valueSN](#valuesn)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasUnit](#hasunit)** | <sub>0..1</sub> | [Unit](#unit) |  |
 
 #### Parents
 
@@ -4792,18 +4794,18 @@ RatioScale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
 
 #### Parents
 
@@ -4890,14 +4892,14 @@ Rule:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[Rationale](#rationale)** | <sub>0..\*</sub> | string |  |
-| **[RuleType](#ruletype)** | <sub>0..\*</sub> | [RuleType](#ruletype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[rationale](#rationale)** | <sub>0..\*</sub> | string |  |
+| **[ruleType](#ruletype)** | <sub>0..\*</sub> | [RuleType](#ruletype) |  |
 
 #### Parents
 
@@ -4952,16 +4954,16 @@ RuleType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5049,39 +5051,39 @@ ScalarDatatype:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AnsiSQLName](#ansisqlname)** | <sub>0..1</sub> | string |  |
-| **[Basis](#basis)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
-| **[Bounded](#bounded)** | <sub>0..1</sub> | None |  |
-| **[CName](#cname)** | <sub>0..1</sub> | string |  |
-| **[Cardinality](#cardinality)** | <sub>0..1</sub> | [CardinalityType](#cardinalitytype) |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[JavaName](#javaname)** | <sub>0..1</sub> | None |  |
-| **[JsName](#jsname)** | <sub>0..1</sub> | None |  |
-| **[MatlabName](#matlabname)** | <sub>0..1</sub> | None |  |
-| **[MicrosoftSQLServerName](#microsoftsqlservername)** | <sub>0..1</sub> | None |  |
-| **[MySQLName](#mysqlname)** | <sub>0..1</sub> | None |  |
-| **[OdbcName](#odbcname)** | <sub>0..1</sub> | None |  |
-| **[OleDBName](#oledbname)** | <sub>0..1</sub> | None |  |
-| **[OracleSQLName](#oraclesqlname)** | <sub>0..1</sub> | string |  |
-| **[OrderedType](#orderedtype)** | <sub>0..1</sub> | [OrderedType](#orderedtype) |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[ProtocolBuffersName](#protocolbuffersname)** | <sub>0..1</sub> | string |  |
-| **[PythonName](#pythonname)** | <sub>0..1</sub> | string |  |
-| **[VbName](#vbname)** | <sub>0..1</sub> | string |  |
-| **[Bits](#bits)** | <sub>0..1</sub> | None |  |
-| **[Bytes](#bytes)** | <sub>0..1</sub> | None |  |
-| **[Length](#length)** | <sub>0..1</sub> | None |  |
-| **[MaxExclusive](#maxexclusive)** | <sub>0..1</sub> | None |  |
-| **[MaxInclusive](#maxinclusive)** | <sub>0..1</sub> | None |  |
-| **[MinExclusive](#minexclusive)** | <sub>0..1</sub> | None |  |
-| **[MinInclusive](#mininclusive)** | <sub>0..1</sub> | None |  |
-| **[RdfsDatatype](#rdfsdatatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[ansiSQLName](#ansisqlname)** | <sub>0..1</sub> | string |  |
+| **[basis](#basis)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
+| **[bounded](#bounded)** | <sub>0..1</sub> | None |  |
+| **[cName](#cname)** | <sub>0..1</sub> | string |  |
+| **[cardinality](#cardinality)** | <sub>0..1</sub> | [CardinalityType](#cardinalitytype) |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[javaName](#javaname)** | <sub>0..1</sub> | None |  |
+| **[jsName](#jsname)** | <sub>0..1</sub> | None |  |
+| **[matlabName](#matlabname)** | <sub>0..1</sub> | None |  |
+| **[microsoftSQLServerName](#microsoftsqlservername)** | <sub>0..1</sub> | None |  |
+| **[mySQLName](#mysqlname)** | <sub>0..1</sub> | None |  |
+| **[odbcName](#odbcname)** | <sub>0..1</sub> | None |  |
+| **[oleDBName](#oledbname)** | <sub>0..1</sub> | None |  |
+| **[oracleSQLName](#oraclesqlname)** | <sub>0..1</sub> | string |  |
+| **[orderedType](#orderedtype)** | <sub>0..1</sub> | [OrderedType](#orderedtype) |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[protocolBuffersName](#protocolbuffersname)** | <sub>0..1</sub> | string |  |
+| **[pythonName](#pythonname)** | <sub>0..1</sub> | string |  |
+| **[vbName](#vbname)** | <sub>0..1</sub> | string |  |
+| **[bits](#bits)** | <sub>0..1</sub> | None |  |
+| **[bytes](#bytes)** | <sub>0..1</sub> | None |  |
+| **[length](#length)** | <sub>0..1</sub> | None |  |
+| **[maxExclusive](#maxexclusive)** | <sub>0..1</sub> | None |  |
+| **[maxInclusive](#maxinclusive)** | <sub>0..1</sub> | None |  |
+| **[minExclusive](#minexclusive)** | <sub>0..1</sub> | None |  |
+| **[minInclusive](#mininclusive)** | <sub>0..1</sub> | None |  |
+| **[rdfsDatatype](#rdfsdatatype)** | <sub>0..1</sub> | [Datatype](#datatype) |  |
 
 #### Parents
 
@@ -5138,18 +5140,18 @@ Scale:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[ScaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[scaleType](#scaletype)** | <sub>0..1</sub> | [ScaleType](#scaletype) |  |
 
 #### Parents
 
@@ -5214,19 +5216,19 @@ ScaleType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
-| **[PermissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
-| **[PermissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[dataStructure](#datastructure)** | <sub>0..1</sub> | None |  |
+| **[permissibleMaths](#permissiblemaths)** | <sub>0..\*</sub> | [MathsFunctionType](#mathsfunctiontype) |  |
+| **[permissibleTransformation](#permissibletransformation)** | <sub>0..\*</sub> | [TransformType](#transformtype) |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5329,43 +5331,43 @@ SolidAngleUnit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5460,14 +5462,14 @@ Symbol:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
 
 #### Parents
 
@@ -5551,19 +5553,19 @@ SystemOfQuantityKinds:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[BaseDimensionEnumeration](#basedimensionenumeration)** | <sub>0..1</sub> | [Enumeration](#enumeration) |  |
-| **[HasBaseQuantityKind](#hasbasequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasUnitSystem](#hasunitsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[SystemDerivedQuantityKind](#systemderivedquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[baseDimensionEnumeration](#basedimensionenumeration)** | <sub>0..1</sub> | [Enumeration](#enumeration) |  |
+| **[hasBaseQuantityKind](#hasbasequantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasUnitSystem](#hasunitsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[systemDerivedQuantityKind](#systemderivedquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
 
 #### Parents
 
@@ -5644,21 +5646,21 @@ SystemOfUnits:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[ApplicablePhysicalConstant](#applicablephysicalconstant)** | <sub>0..\*</sub> | [PhysicalConstant](#physicalconstant) |  |
-| **[HasAllowedUnit](#hasallowedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasBaseUnit](#hasbaseunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasCoherentUnit](#hascoherentunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasDefinedUnit](#hasdefinedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasDerivedCoherentUnit](#hasderivedcoherentunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasDerivedUnit](#hasderivedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[HasUnit](#hasunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[applicablePhysicalConstant](#applicablephysicalconstant)** | <sub>0..\*</sub> | [PhysicalConstant](#physicalconstant) |  |
+| **[hasAllowedUnit](#hasallowedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasBaseUnit](#hasbaseunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasCoherentUnit](#hascoherentunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasDefinedUnit](#hasdefinedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasDerivedCoherentUnit](#hasderivedcoherentunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasDerivedUnit](#hasderivedunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[hasUnit](#hasunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
 
 #### Parents
 
@@ -5768,16 +5770,16 @@ TransformType:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
 
 #### Parents
 
@@ -5988,43 +5990,43 @@ Unit:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[ApplicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ConversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
-| **[ConversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
-| **[ConversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
-| **[DefinedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[DerivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[ExactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[FactorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
-| **[HasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[HasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
-| **[HasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[Iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
-| **[IsUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
-| **[LatexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[MathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
-| **[OmUnit](#omunit)** | <sub>0..\*</sub> | None |  |
-| **[Prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
-| **[QkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[QkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
-| **[ScalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
-| **[SiUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..\*</sub> | None |  |
-| **[UcumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
-| **[UdunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
-| **[UneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
-| **[UnitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[applicableSystem](#applicablesystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[conversionMultiplier](#conversionmultiplier)** | <sub>0..1</sub> | None |  |
+| **[conversionMultiplierSN](#conversionmultipliersn)** | <sub>0..1</sub> | None |  |
+| **[conversionOffset](#conversionoffset)** | <sub>0..1</sub> | None |  |
+| **[conversionOffsetSN](#conversionoffsetsn)** | <sub>0..1</sub> | None |  |
+| **[definedUnitOfSystem](#definedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedCoherentUnitOfSystem](#derivedcoherentunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[derivedUnitOfSystem](#derivedunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[exactMatch](#exactmatch)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[factorUnitScalar](#factorunitscalar)** | <sub>0..1</sub> | None |  |
+| **[hasDimensionVector](#hasdimensionvector)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[hasFactorUnit](#hasfactorunit)** | <sub>0..\*</sub> | [Class](#class) |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>0..\*</sub> | [QuantityKind](#quantitykind) |  |
+| **[hasReciprocalUnit](#hasreciprocalunit)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[iec61360Code](#iec61360code)** | <sub>0..\*</sub> | string |  |
+| **[isUnitOfSystem](#isunitofsystem)** | <sub>0..\*</sub> | [SystemOfUnits](#systemofunits) |  |
+| **[latexDefinition](#latexdefinition)** | <sub>0..\*</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[mathMLdefinition](#mathmldefinition)** | <sub>0..1</sub> | None |  |
+| **[omUnit](#omunit)** | <sub>0..\*</sub> | None |  |
+| **[prefix](#prefix)** | <sub>0..\*</sub> | [Prefix](#prefix) |  |
+| **[qkdvDenominator](#qkdvdenominator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[qkdvNumerator](#qkdvnumerator)** | <sub>0..1</sub> | [QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| **[scalingOf](#scalingof)** | <sub>0..\*</sub> | [Unit](#unit) |  |
+| **[siUnitsExpression](#siunitsexpression)** | <sub>0..\*</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..\*</sub> | None |  |
+| **[ucumCode](#ucumcode)** | <sub>0..\*</sub> | [UCUMcs](#ucumcs) |  |
+| **[udunitsCode](#udunitscode)** | <sub>0..\*</sub> | string |  |
+| **[uneceCommonCode](#unececommoncode)** | <sub>0..\*</sub> | string |  |
+| **[unitFor](#unitfor)** | <sub>0..\*</sub> | None |  |
 
 #### Parents
 
@@ -6108,18 +6110,18 @@ UserQuantityKind:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[Id](#id)** | <sub>0..1</sub> | None |  |
-| **[Description](#description)** | <sub>0..1</sub> | None |  |
-| **[Abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
-| **[AltSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
-| **[Deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
-| **[Guidance](#guidance)** | <sub>0..\*</sub> | string |  |
-| **[HasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
-| **[IsReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
-| **[LatexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
-| **[PlainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
-| **[Symbol](#symbol)** | <sub>0..1</sub> | None |  |
-| **[HasQuantityKind](#hasquantitykind)** | <sub>1..1</sub> | [QuantityKind](#quantitykind) |  |
+| **[id](#id)** | <sub>0..1</sub> | None |  |
+| **[description](#description)** | <sub>0..1</sub> | None |  |
+| **[abbreviation](#abbreviation)** | <sub>0..1</sub> | None |  |
+| **[altSymbol](#altsymbol)** | <sub>0..\*</sub> | None |  |
+| **[deprecated](#deprecated)** | <sub>0..1</sub> | None |  |
+| **[guidance](#guidance)** | <sub>0..\*</sub> | string |  |
+| **[hasRule](#hasrule)** | <sub>0..\*</sub> | [Rule](#rule) |  |
+| **[isReplacedBy](#isreplacedby)** | <sub>0..1</sub> | None |  |
+| **[latexSymbol](#latexsymbol)** | <sub>0..\*</sub> | None |  |
+| **[plainTextDescription](#plaintextdescription)** | <sub>0..1</sub> | None |  |
+| **[symbol](#symbol)** | <sub>0..1</sub> | None |  |
+| **[hasQuantityKind](#hasquantitykind)** | <sub>1..1</sub> | [QuantityKind](#quantitykind) |  |
 
 #### Parents
 
@@ -6170,10 +6172,10 @@ Verifiable:
 
 | Name | Cardinality: | Type | Description |
 | --- | --- | --- | --- |
-| **[DbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
-| **[IsoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
-| **[NormativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
-| **[WikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
+| **[dbpediaMatch](#dbpediamatch)** | <sub>0..\*</sub> | uri |  |
+| **[isoNormativeReference](#isonormativereference)** | <sub>0..\*</sub> | None |  |
+| **[normativeReference](#normativereference)** | <sub>0..\*</sub> | None |  |
+| **[wikidataMatch](#wikidatamatch)** | <sub>0..\*</sub> | uri |  |
 
 #### Parents
 
@@ -6341,393 +6343,393 @@ This class has no attributes
 
 ## Slots
 
-| Name | Range | Cardinality | Description | Used By |
-| --- | --- | --- | --- | --- |
-| <a id="id"></a>**Id** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BaseDimensionMagnitude](#basedimensionmagnitude), [BinaryPrefix](#binaryprefix), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [ConstantValue](#constantvalue), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DataItem](#dataitem), [Datatype](#datatype), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [LogarithmicUnit](#logarithmicunit), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [NumericUnion](#numericunion), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [Quantity](#quantity), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue), [RatioScale](#ratioscale), [Rule](#rule), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="description"></a>**Description** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Comment](#comment), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NISTSP811Comment](#nistsp811comment), [NominalScale](#nominalscale), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [RatioScale](#ratioscale), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [TransformType](#transformtype), [UserQuantityKind](#userquantitykind) |
-| <a id="abstractquantitykind_altsymbol"></a>**AbstractQuantityKindAltSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="abstractquantitykind_broader"></a>**AbstractQuantityKindBroader** | [QuantityKind](#quantitykind) | <sub>0..1</sub> |  |  |
-| <a id="abstractquantitykind_latexsymbol"></a>**AbstractQuantityKindLatexSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="abstractquantitykind_symbol"></a>**AbstractQuantityKindSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="basedimensionmagnitude_hasbasequantitykind"></a>**BaseDimensionMagnitudeHasBaseQuantityKind** | [QuantityKind](#quantitykind) | <sub>1..\*</sub> |  |  |
-| <a id="basedimensionmagnitude_vectormagnitude"></a>**BaseDimensionMagnitudeVectorMagnitude** | float | <sub>1..\*</sub> |  |  |
-| <a id="cardinalitytype_literal"></a>**CardinalityTypeLiteral** | string | <sub>0..\*</sub> |  |  |
-| <a id="citation_description"></a>**CitationDescription** | string | <sub>1..\*</sub> |  |  |
-| <a id="citation_url"></a>**CitationUrl** | string | <sub>0..\*</sub> |  |  |
-| <a id="comment_description"></a>**CommentDescription** | string | <sub>0..\*</sub> |  |  |
-| <a id="comment_rationale"></a>**CommentRationale** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_abbreviation"></a>**ConceptAbbreviation** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_deprecated"></a>**ConceptDeprecated** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_description"></a>**ConceptDescription** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_hasrule"></a>**ConceptHasRule** | [Rule](#rule) | <sub>0..\*</sub> |  |  |
-| <a id="concept_id"></a>**ConceptId** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_isreplacedby"></a>**ConceptIsReplacedBy** | string | <sub>0..\*</sub> |  |  |
-| <a id="concept_plaintextdescription"></a>**ConceptPlainTextDescription** | string | <sub>0..\*</sub> |  |  |
-| <a id="constantvalue_exactconstant"></a>**ConstantValueExactConstant** | string | <sub>0..\*</sub> |  |  |
-| <a id="contextualunit_broader"></a>**ContextualUnitBroader** | [Unit](#unit) | <sub>0..1</sub> |  |  |
-| <a id="currencyunit_currencycode"></a>**CurrencyUnitCurrencyCode** | string | <sub>0..\*</sub> |  |  |
-| <a id="currencyunit_currencyexponent"></a>**CurrencyUnitCurrencyExponent** | string | <sub>0..\*</sub> |  |  |
-| <a id="dataencoding_bitorder"></a>**DataEncodingBitOrder** | [EndianType](#endiantype) | <sub>0..\*</sub> |  |  |
-| <a id="dataencoding_byteorder"></a>**DataEncodingByteOrder** | [EndianType](#endiantype) | <sub>0..\*</sub> |  |  |
-| <a id="dataencoding_encoding"></a>**DataEncodingEncoding** | [Encoding](#encoding) | <sub>0..\*</sub> |  |  |
-| <a id="dataitem_value"></a>**DataItemValue** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_ansisqlname"></a>**DatatypeAnsiSQLName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_basis"></a>**DatatypeBasis** | [Datatype](#datatype) | <sub>0..\*</sub> |  |  |
-| <a id="datatype_bounded"></a>**DatatypeBounded** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_cname"></a>**DatatypeCName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_cardinality"></a>**DatatypeCardinality** | [CardinalityType](#cardinalitytype) | <sub>0..\*</sub> |  |  |
-| <a id="datatype_id"></a>**DatatypeId** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_javaname"></a>**DatatypeJavaName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_jsname"></a>**DatatypeJsName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_matlabname"></a>**DatatypeMatlabName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_microsoftsqlservername"></a>**DatatypeMicrosoftSQLServerName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_mysqlname"></a>**DatatypeMySQLName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_odbcname"></a>**DatatypeOdbcName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_oledbname"></a>**DatatypeOleDBName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_oraclesqlname"></a>**DatatypeOracleSQLName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_orderedtype"></a>**DatatypeOrderedType** | [OrderedType](#orderedtype) | <sub>0..\*</sub> |  |  |
-| <a id="datatype_protocolbuffersname"></a>**DatatypeProtocolBuffersName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_pythonname"></a>**DatatypePythonName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datatype_vbname"></a>**DatatypeVbName** | string | <sub>0..\*</sub> |  |  |
-| <a id="datetimestringencodingtype_allowedpattern"></a>**DateTimeStringEncodingTypeAllowedPattern** | string | <sub>1..\*</sub> |  |  |
-| <a id="encoding_bits"></a>**EncodingBits** | string | <sub>0..\*</sub> |  |  |
-| <a id="encoding_bytes"></a>**EncodingBytes** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedquantity_enumeratedvalue"></a>**EnumeratedQuantityEnumeratedValue** | [EnumeratedValue](#enumeratedvalue) | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedquantity_enumeration"></a>**EnumeratedQuantityEnumeration** | [Enumeration](#enumeration) | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedvalue_abbreviation"></a>**EnumeratedValueAbbreviation** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedvalue_altsymbol"></a>**EnumeratedValueAltSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedvalue_description"></a>**EnumeratedValueDescription** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeratedvalue_symbol"></a>**EnumeratedValueSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeration_abbreviation"></a>**EnumerationAbbreviation** | string | <sub>0..\*</sub> |  |  |
-| <a id="enumeration_default"></a>**EnumerationDefault** | [EnumeratedValue](#enumeratedvalue) | <sub>0..\*</sub> |  |  |
-| <a id="enumeration_element"></a>**EnumerationElement** | [EnumeratedValue](#enumeratedvalue) | <sub>1..\*</sub> |  |  |
-| <a id="figure_figurecaption"></a>**FigureFigureCaption** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure_figurelabel"></a>**FigureFigureLabel** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure_height"></a>**FigureHeight** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure_image"></a>**FigureImage** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure_imagelocation"></a>**FigureImageLocation** | string | <sub>1..\*</sub> |  |  |
-| <a id="figure_landscape"></a>**FigureLandscape** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure_width"></a>**FigureWidth** | string | <sub>0..\*</sub> |  |  |
-| <a id="orderedtype_literal"></a>**OrderedTypeLiteral** | string | <sub>0..\*</sub> |  |  |
-| <a id="ordinalscale_order"></a>**OrdinalScaleOrder** | string | <sub>1..\*</sub> |  |  |
-| <a id="organization_url"></a>**OrganizationUrl** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_altsymbol"></a>**PhysicalConstantAltSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_applicablesystem"></a>**PhysicalConstantApplicableSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_applicableunit"></a>**PhysicalConstantApplicableUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_dbpediamatch"></a>**PhysicalConstantDbpediaMatch** | uri | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_exactconstant"></a>**PhysicalConstantExactConstant** | boolean | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_exactmatch"></a>**PhysicalConstantExactMatch** | [PhysicalConstant](#physicalconstant) | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_hasdimensionvector"></a>**PhysicalConstantHasDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_isonormativereference"></a>**PhysicalConstantIsoNormativeReference** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_latexdefinition"></a>**PhysicalConstantLatexDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_latexsymbol"></a>**PhysicalConstantLatexSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_mathmldefinition"></a>**PhysicalConstantMathMLdefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_normativereference"></a>**PhysicalConstantNormativeReference** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_symbol"></a>**PhysicalConstantSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="physicalconstant_ucumcode"></a>**PhysicalConstantUcumCode** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix_altsymbol"></a>**PrefixAltSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix_exactmatch"></a>**PrefixExactMatch** | [Prefix](#prefix) | <sub>0..\*</sub> |  |  |
-| <a id="prefix_latexsymbol"></a>**PrefixLatexSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix_prefixmultiplier"></a>**PrefixPrefixMultiplier** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix_symbol"></a>**PrefixSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix_ucumcode"></a>**PrefixUcumCode** | [UCUMcs-term](#ucumcs-term) | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_dataencoding"></a>**QuantifiableDataEncoding** | [DataEncoding](#dataencoding) | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_datatype"></a>**QuantifiableDatatype** | [Datatype](#datatype) | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_hasunit"></a>**QuantifiableHasUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_relativestandarduncertainty"></a>**QuantifiableRelativeStandardUncertainty** | double | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_standarduncertainty"></a>**QuantifiableStandardUncertainty** | decimal | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_standarduncertaintysn"></a>**QuantifiableStandardUncertaintySN** | double | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_value"></a>**QuantifiableValue** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantifiable_valuesn"></a>**QuantifiableValueSN** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentforamountofsubstance"></a>**QuantityKindDimensionVectorDimensionExponentForAmountOfSubstance** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentforelectriccurrent"></a>**QuantityKindDimensionVectorDimensionExponentForElectricCurrent** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentforlength"></a>**QuantityKindDimensionVectorDimensionExponentForLength** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentforluminousintensity"></a>**QuantityKindDimensionVectorDimensionExponentForLuminousIntensity** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentformass"></a>**QuantityKindDimensionVectorDimensionExponentForMass** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentforthermodynamictemperature"></a>**QuantityKindDimensionVectorDimensionExponentForThermodynamicTemperature** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionexponentfortime"></a>**QuantityKindDimensionVectorDimensionExponentForTime** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_dimensionlessexponent"></a>**QuantityKindDimensionVectorDimensionlessExponent** | string | <sub>1..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_hasreferencequantitykind"></a>**QuantityKindDimensionVectorHasReferenceQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_latexdefinition"></a>**QuantityKindDimensionVectorLatexDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykinddimensionvector_latexsymbol"></a>**QuantityKindDimensionVectorLatexSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicablecgsunit"></a>**QuantityKindApplicableCGSUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicableisounit"></a>**QuantityKindApplicableISOUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicableimperialunit"></a>**QuantityKindApplicableImperialUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicablesiunit"></a>**QuantityKindApplicableSIUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicableuscustomaryunit"></a>**QuantityKindApplicableUSCustomaryUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_applicableunit"></a>**QuantityKindApplicableUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_dimensionvectorforsi"></a>**QuantityKindDimensionVectorForSI** | [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_exactmatch"></a>**QuantityKindExactMatch** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_hasdimensionvector"></a>**QuantityKindHasDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_iec61360code"></a>**QuantityKindIec61360Code** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_latexdefinition"></a>**QuantityKindLatexDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_mathmldefinition"></a>**QuantityKindMathMLdefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_qkdvdenominator"></a>**QuantityKindQkdvDenominator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="quantitykind_qkdvnumerator"></a>**QuantityKindQkdvNumerator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="quantitytype_value"></a>**QuantityTypeValue** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="quantityvalue_hasunit"></a>**QuantityValueHasUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="quantity_hasquantitykind"></a>**QuantityHasQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="quantity_isdeltaquantity"></a>**QuantityIsDeltaQuantity** | boolean | <sub>0..\*</sub> |  |  |
-| <a id="quantity_quantityvalue"></a>**QuantityQuantityValue** | [QuantityValue](#quantityvalue) | <sub>0..\*</sub> |  |  |
-| <a id="rule_rationale"></a>**RuleRationale** | string | <sub>0..\*</sub> |  |  |
-| <a id="rule_ruletype"></a>**RuleRuleType** | [RuleType](#ruletype) | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_bits"></a>**ScalarDatatypeBits** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_bytes"></a>**ScalarDatatypeBytes** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_length"></a>**ScalarDatatypeLength** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_maxexclusive"></a>**ScalarDatatypeMaxExclusive** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_maxinclusive"></a>**ScalarDatatypeMaxInclusive** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_minexclusive"></a>**ScalarDatatypeMinExclusive** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_mininclusive"></a>**ScalarDatatypeMinInclusive** | string | <sub>0..\*</sub> |  |  |
-| <a id="scalardatatype_rdfsdatatype"></a>**ScalarDatatypeRdfsDatatype** | [Datatype](#datatype) | <sub>0..\*</sub> |  |  |
-| <a id="scaletype_datastructure"></a>**ScaleTypeDataStructure** | string | <sub>0..\*</sub> |  |  |
-| <a id="scaletype_permissiblemaths"></a>**ScaleTypePermissibleMaths** | [MathsFunctionType](#mathsfunctiontype) | <sub>0..\*</sub> |  |  |
-| <a id="scaletype_permissibletransformation"></a>**ScaleTypePermissibleTransformation** | [TransformType](#transformtype) | <sub>0..\*</sub> |  |  |
-| <a id="scale_datastructure"></a>**ScaleDataStructure** | string | <sub>0..\*</sub> |  |  |
-| <a id="scale_permissiblemaths"></a>**ScalePermissibleMaths** | [MathsFunctionType](#mathsfunctiontype) | <sub>0..\*</sub> |  |  |
-| <a id="scale_permissibletransformation"></a>**ScalePermissibleTransformation** | [TransformType](#transformtype) | <sub>0..\*</sub> |  |  |
-| <a id="scale_scaletype"></a>**ScaleScaleType** | [ScaleType](#scaletype) | <sub>0..\*</sub> |  |  |
-| <a id="systemofquantitykinds_basedimensionenumeration"></a>**SystemOfQuantityKindsBaseDimensionEnumeration** | [Enumeration](#enumeration) | <sub>0..\*</sub> |  |  |
-| <a id="systemofquantitykinds_hasbasequantitykind"></a>**SystemOfQuantityKindsHasBaseQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="systemofquantitykinds_hasquantitykind"></a>**SystemOfQuantityKindsHasQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="systemofquantitykinds_hasunitsystem"></a>**SystemOfQuantityKindsHasUnitSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="systemofquantitykinds_systemderivedquantitykind"></a>**SystemOfQuantityKindsSystemDerivedQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_applicablephysicalconstant"></a>**SystemOfUnitsApplicablePhysicalConstant** | [PhysicalConstant](#physicalconstant) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasallowedunit"></a>**SystemOfUnitsHasAllowedUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasbaseunit"></a>**SystemOfUnitsHasBaseUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hascoherentunit"></a>**SystemOfUnitsHasCoherentUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasdefinedunit"></a>**SystemOfUnitsHasDefinedUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasderivedcoherentunit"></a>**SystemOfUnitsHasDerivedCoherentUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasderivedunit"></a>**SystemOfUnitsHasDerivedUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_hasunit"></a>**SystemOfUnitsHasUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="systemofunits_prefix"></a>**SystemOfUnitsPrefix** | [Prefix](#prefix) | <sub>0..\*</sub> |  |  |
-| <a id="unit_altsymbol"></a>**UnitAltSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_applicablesystem"></a>**UnitApplicableSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="unit_conversionmultiplier"></a>**UnitConversionMultiplier** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_conversionmultipliersn"></a>**UnitConversionMultiplierSN** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_conversionoffset"></a>**UnitConversionOffset** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_conversionoffsetsn"></a>**UnitConversionOffsetSN** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_definedunitofsystem"></a>**UnitDefinedUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="unit_derivedcoherentunitofsystem"></a>**UnitDerivedCoherentUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="unit_derivedunitofsystem"></a>**UnitDerivedUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="unit_exactmatch"></a>**UnitExactMatch** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="unit_factorunitscalar"></a>**UnitFactorUnitScalar** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_hasdimensionvector"></a>**UnitHasDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="unit_hasfactorunit"></a>**UnitHasFactorUnit** | [Class](#class) | <sub>0..\*</sub> |  |  |
-| <a id="unit_hasquantitykind"></a>**UnitHasQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="unit_iec61360code"></a>**UnitIec61360Code** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_latexdefinition"></a>**UnitLatexDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_latexsymbol"></a>**UnitLatexSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_mathmldefinition"></a>**UnitMathMLdefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_prefix"></a>**UnitPrefix** | [Prefix](#prefix) | <sub>0..\*</sub> |  |  |
-| <a id="unit_qkdvdenominator"></a>**UnitQkdvDenominator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="unit_qkdvnumerator"></a>**UnitQkdvNumerator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="unit_scalingof"></a>**UnitScalingOf** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="unit_siunitsexpression"></a>**UnitSiUnitsExpression** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_symbol"></a>**UnitSymbol** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_ucumcode"></a>**UnitUcumCode** | [UCUMcs](#ucumcs) | <sub>0..\*</sub> |  |  |
-| <a id="unit_udunitscode"></a>**UnitUdunitsCode** | string | <sub>0..\*</sub> |  |  |
-| <a id="unit_unececommoncode"></a>**UnitUneceCommonCode** | string | <sub>0..\*</sub> |  |  |
-| <a id="userquantitykind_hasquantitykind"></a>**UserQuantityKindHasQuantityKind** | [QuantityKind](#quantitykind) | <sub>1..\*</sub> |  |  |
-| <a id="verifiable_dbpediamatch"></a>**VerifiableDbpediaMatch** | uri | <sub>0..\*</sub> |  |  |
-| <a id="verifiable_isonormativereference"></a>**VerifiableIsoNormativeReference** | string | <sub>0..\*</sub> |  |  |
-| <a id="verifiable_normativereference"></a>**VerifiableNormativeReference** | string | <sub>0..\*</sub> |  |  |
-| <a id="verifiable_wikidatamatch"></a>**VerifiableWikidataMatch** | uri | <sub>0..\*</sub> |  |  |
-| <a id="abbreviation"></a>**Abbreviation** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [RatioScale](#ratioscale), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [TransformType](#transformtype), [UserQuantityKind](#userquantitykind) |
-| <a id="abstract"></a>**Abstract** | string | <sub>0..\*</sub> |  |  |
-| <a id="acronym"></a>**Acronym** | string | <sub>0..\*</sub> |  |  |
-| <a id="allowedpattern"></a>**AllowedPattern** | string | <sub>0..\*</sub> |  | [DateTimeStringEncodingType](#datetimestringencodingtype) |
-| <a id="altsymbol"></a>**AltSymbol** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityType](#quantitytype), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="ansisqlname"></a>**AnsiSQLName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="applicablecgsunit"></a>**ApplicableCGSUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="applicableisounit"></a>**ApplicableISOUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="applicableimperialunit"></a>**ApplicableImperialUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="applicablephysicalconstant"></a>**ApplicablePhysicalConstant** | string | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="applicableplanckunit"></a>**ApplicablePlanckUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="applicablesiunit"></a>**ApplicableSIUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="applicablesystem"></a>**ApplicableSystem** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="applicableuscustomaryunit"></a>**ApplicableUSCustomaryUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="applicableunit"></a>**ApplicableUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [PhysicalConstant](#physicalconstant), [QuantityKind](#quantitykind) |
-| <a id="basedimensionenumeration"></a>**BaseDimensionEnumeration** | [Enumeration](#enumeration) | <sub>0..\*</sub> |  | [SystemOfQuantityKinds](#systemofquantitykinds) |
-| <a id="baseunitofsystem"></a>**BaseUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="basis"></a>**Basis** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="belongstosystemofquantities"></a>**BelongsToSystemOfQuantities** | [SystemOfQuantityKinds](#systemofquantitykinds) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="bitorder"></a>**BitOrder** | [EndianType](#endiantype) | <sub>0..\*</sub> |  | [DataEncoding](#dataencoding) |
-| <a id="bits"></a>**Bits** | string | <sub>0..\*</sub> |  | [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Encoding](#encoding), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [ScalarDatatype](#scalardatatype) |
-| <a id="bounded"></a>**Bounded** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="broader"></a>**Broader** | [QuantityKind](#quantitykind) | <sub>0..1</sub> |  |  |
-| <a id="byteorder"></a>**ByteOrder** | [EndianType](#endiantype) | <sub>0..\*</sub> |  | [DataEncoding](#dataencoding) |
-| <a id="bytes"></a>**Bytes** | string | <sub>0..\*</sub> |  | [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Encoding](#encoding), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [ScalarDatatype](#scalardatatype) |
-| <a id="cname"></a>**CName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="cardinality"></a>**Cardinality** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="categorizedas"></a>**CategorizedAs** | string | <sub>0..\*</sub> |  |  |
-| <a id="coherentunitsystem"></a>**CoherentUnitSystem** | string | <sub>0..\*</sub> |  |  |
-| <a id="conversionmultiplier"></a>**ConversionMultiplier** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="conversionmultipliersn"></a>**ConversionMultiplierSN** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="conversionoffset"></a>**ConversionOffset** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="conversionoffsetsn"></a>**ConversionOffsetSN** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="created"></a>**Created** | date | <sub>0..\*</sub> |  |  |
-| <a id="creator"></a>**Creator** | string | <sub>0..\*</sub> |  |  |
-| <a id="currencycode"></a>**CurrencyCode** | string | <sub>0..\*</sub> |  | [CurrencyUnit](#currencyunit) |
-| <a id="currencyexponent"></a>**CurrencyExponent** | string | <sub>0..\*</sub> |  | [CurrencyUnit](#currencyunit) |
-| <a id="currencynumber"></a>**CurrencyNumber** | string | <sub>0..\*</sub> |  |  |
-| <a id="dataencoding"></a>**DataEncoding** | [DataEncoding](#dataencoding) | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="datastructure"></a>**DataStructure** | string | <sub>0..\*</sub> |  | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
-| <a id="datatype"></a>**Datatype** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="dbpediamatch"></a>**DbpediaMatch** | uri | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
-| <a id="default"></a>**Default** | string | <sub>0..\*</sub> |  | [Enumeration](#enumeration) |
-| <a id="definedunitofsystem"></a>**DefinedUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="denominatordimensionvector"></a>**DenominatorDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="deprecated"></a>**Deprecated** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
-| <a id="derivedcoherentunitofsystem"></a>**DerivedCoherentUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="derivednoncoherentunitofsystem"></a>**DerivedNonCoherentUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  |  |
-| <a id="derivedunitofsystem"></a>**DerivedUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="dimensionexponent"></a>**DimensionExponent** | string | <sub>0..\*</sub> |  |  |
-| <a id="dimensionexponentforamountofsubstance"></a>**DimensionExponentForAmountOfSubstance** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentforelectriccurrent"></a>**DimensionExponentForElectricCurrent** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentforlength"></a>**DimensionExponentForLength** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentforluminousintensity"></a>**DimensionExponentForLuminousIntensity** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentformass"></a>**DimensionExponentForMass** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentforthermodynamictemperature"></a>**DimensionExponentForThermodynamicTemperature** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensionexponentfortime"></a>**DimensionExponentForTime** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="dimensioninverse"></a>**DimensionInverse** | string | <sub>0..\*</sub> |  |  |
-| <a id="dimensionvectorforsi"></a>**DimensionVectorForSI** | [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) | <sub>0..\*</sub> |  | [QuantityKind](#quantitykind) |
-| <a id="dimensionlessexponent"></a>**DimensionlessExponent** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="element"></a>**Element** | string | <sub>0..\*</sub> |  | [Enumeration](#enumeration) |
-| <a id="elementkind"></a>**ElementKind** | string | <sub>0..\*</sub> |  |  |
-| <a id="encoding"></a>**Encoding** | string | <sub>0..\*</sub> |  | [DataEncoding](#dataencoding) |
-| <a id="enumeratedvalue"></a>**EnumeratedValue** | [EnumeratedValue](#enumeratedvalue) | <sub>0..\*</sub> |  | [EnumeratedQuantity](#enumeratedquantity) |
-| <a id="enumeration"></a>**Enumeration** | [Enumeration](#enumeration) | <sub>0..\*</sub> |  | [EnumeratedQuantity](#enumeratedquantity) |
-| <a id="exactconstant"></a>**ExactConstant** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant) |
-| <a id="exactmatch"></a>**ExactMatch** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="example"></a>**Example** | string | <sub>0..\*</sub> |  |  |
-| <a id="exponent"></a>**Exponent** | string | <sub>0..\*</sub> |  |  |
-| <a id="expression"></a>**Expression** | string | <sub>0..\*</sub> |  |  |
-| <a id="factorunitscalar"></a>**FactorUnitScalar** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="fieldcode"></a>**FieldCode** | string | <sub>0..\*</sub> |  |  |
-| <a id="figure"></a>**Figure** | [Figure](#figure) | <sub>0..\*</sub> |  |  |
-| <a id="figurecaption"></a>**FigureCaption** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="figurelabel"></a>**FigureLabel** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="graphname"></a>**GraphName** | string | <sub>0..\*</sub> |  |  |
-| <a id="graphtitle"></a>**GraphTitle** | string | <sub>0..\*</sub> |  |  |
-| <a id="guidance"></a>**Guidance** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BaseDimensionMagnitude](#basedimensionmagnitude), [BinaryPrefix](#binaryprefix), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [ConstantValue](#constantvalue), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DataItem](#dataitem), [Datatype](#datatype), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [LogarithmicUnit](#logarithmicunit), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [NumericUnion](#numericunion), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [Quantity](#quantity), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue), [RatioScale](#ratioscale), [Rule](#rule), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="hasallowedunit"></a>**HasAllowedUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hasbasequantitykind"></a>**HasBaseQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  | [BaseDimensionMagnitude](#basedimensionmagnitude), [SystemOfQuantityKinds](#systemofquantitykinds) |
-| <a id="hasbaseunit"></a>**HasBaseUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hascitation"></a>**HasCitation** | string | <sub>0..\*</sub> |  |  |
-| <a id="hascoherentunit"></a>**HasCoherentUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hasdefinedunit"></a>**HasDefinedUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hasdenominatorpart"></a>**HasDenominatorPart** | string | <sub>0..\*</sub> |  |  |
-| <a id="hasderivedcoherentunit"></a>**HasDerivedCoherentUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hasderivednoncoherentunit"></a>**HasDerivedNonCoherentUnit** | string | <sub>0..\*</sub> |  |  |
-| <a id="hasderivedunit"></a>**HasDerivedUnit** | string | <sub>0..\*</sub> |  | [SystemOfUnits](#systemofunits) |
-| <a id="hasdimension"></a>**HasDimension** | string | <sub>0..\*</sub> |  |  |
-| <a id="hasdimensionexpression"></a>**HasDimensionExpression** | string | <sub>0..\*</sub> |  |  |
-| <a id="hasdimensionvector"></a>**HasDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="hasfactorunit"></a>**HasFactorUnit** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="hasnumeratorpart"></a>**HasNumeratorPart** | string | <sub>0..\*</sub> |  |  |
-| <a id="hasprefixunit"></a>**HasPrefixUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="hasquantity"></a>**HasQuantity** | [Quantity](#quantity) | <sub>0..\*</sub> |  |  |
-| <a id="hasquantitykind"></a>**HasQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Quantity](#quantity), [SolidAngleUnit](#solidangleunit), [SystemOfQuantityKinds](#systemofquantitykinds), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="hasreciprocalunit"></a>**HasReciprocalUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="hasreferencequantitykind"></a>**HasReferenceQuantityKind** | string | <sub>0..\*</sub> |  | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
-| <a id="hasrule"></a>**HasRule** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
-| <a id="hasunit"></a>**HasUnit** | [Unit](#unit) | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue), [SystemOfUnits](#systemofunits) |
-| <a id="hasunitsystem"></a>**HasUnitSystem** | string | <sub>0..\*</sub> |  | [SystemOfQuantityKinds](#systemofquantitykinds) |
-| <a id="hasvocabulary"></a>**HasVocabulary** | [Ontology](#ontology) | <sub>0..\*</sub> |  |  |
-| <a id="height"></a>**Height** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="iec61360code"></a>**Iec61360Code** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="image"></a>**Image** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="imagelocation"></a>**ImageLocation** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="informativereference"></a>**InformativeReference** | uri | <sub>0..\*</sub> |  |  |
-| <a id="isdeltaquantity"></a>**IsDeltaQuantity** | string | <sub>0..\*</sub> |  | [PhysicalConstant](#physicalconstant), [Quantity](#quantity) |
-| <a id="isdimensioninsystem"></a>**IsDimensionInSystem** | string | <sub>0..\*</sub> |  |  |
-| <a id="ismetadatafor"></a>**IsMetadataFor** | string | <sub>0..\*</sub> |  |  |
-| <a id="ismetricunit"></a>**IsMetricUnit** | string | <sub>0..\*</sub> |  |  |
-| <a id="isreplacedby"></a>**IsReplacedBy** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
-| <a id="isunitofsystem"></a>**IsUnitOfSystem** | [SystemOfUnits](#systemofunits) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="isonormativereference"></a>**IsoNormativeReference** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
-| <a id="javaname"></a>**JavaName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="jsname"></a>**JsName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="landscape"></a>**Landscape** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="latexdefinition"></a>**LatexDefinition** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="latexsymbol"></a>**LatexSymbol** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [SolidAngleUnit](#solidangleunit), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="length"></a>**Length** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="literal"></a>**Literal** | string | <sub>0..\*</sub> |  | [CardinalityType](#cardinalitytype), [OrderedType](#orderedtype) |
-| <a id="lowerbound"></a>**LowerBound** | string | <sub>0..\*</sub> |  |  |
-| <a id="mathdefinition"></a>**MathDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="mathmldefinition"></a>**MathMLdefinition** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="matlabname"></a>**MatlabName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="maxcardinality"></a>**MaxCardinality** | string | <sub>0..\*</sub> |  |  |
-| <a id="maxexclusive"></a>**MaxExclusive** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="maxinclusive"></a>**MaxInclusive** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="microsoftsqlservername"></a>**MicrosoftSQLServerName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="mincardinality"></a>**MinCardinality** | string | <sub>0..\*</sub> |  |  |
-| <a id="minexclusive"></a>**MinExclusive** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="mininclusive"></a>**MinInclusive** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="modified"></a>**Modified** | date | <sub>0..\*</sub> |  |  |
-| <a id="mysqlname"></a>**MySQLName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="negativedeltalimit"></a>**NegativeDeltaLimit** | string | <sub>0..\*</sub> |  |  |
-| <a id="normativereference"></a>**NormativeReference** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
-| <a id="numeratordimensionvector"></a>**NumeratorDimensionVector** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  |  |
-| <a id="numericvalue"></a>**NumericValue** | [NumericUnion](#numericunion) | <sub>0..\*</sub> |  |  |
-| <a id="odbcname"></a>**OdbcName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="oledbname"></a>**OleDBName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="omunit"></a>**OmUnit** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="onlinereference"></a>**OnlineReference** | string | <sub>0..\*</sub> |  |  |
-| <a id="oraclesqlname"></a>**OracleSQLName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="order"></a>**Order** | string | <sub>0..\*</sub> |  | [OrdinalScale](#ordinalscale) |
-| <a id="orderedtype"></a>**OrderedType** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="outofscope"></a>**OutOfScope** | string | <sub>0..\*</sub> |  |  |
-| <a id="pattern"></a>**Pattern** | string | <sub>0..\*</sub> |  |  |
-| <a id="permissiblemaths"></a>**PermissibleMaths** | string | <sub>0..\*</sub> |  | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
-| <a id="permissibletransformation"></a>**PermissibleTransformation** | string | <sub>0..\*</sub> |  | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
-| <a id="plaintextdescription"></a>**PlainTextDescription** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
-| <a id="positivedeltalimit"></a>**PositiveDeltaLimit** | string | <sub>0..\*</sub> |  |  |
-| <a id="prefix"></a>**Prefix** | [Prefix](#prefix) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [Unit](#unit) |
-| <a id="prefixmultiplier"></a>**PrefixMultiplier** | string | <sub>0..\*</sub> |  | [BinaryPrefix](#binaryprefix), [DecimalPrefix](#decimalprefix), [Prefix](#prefix) |
-| <a id="prefixmultipliersn"></a>**PrefixMultiplierSN** | string | <sub>0..\*</sub> |  |  |
-| <a id="protocolbuffersname"></a>**ProtocolBuffersName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="pythonname"></a>**PythonName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="qkdvdenominator"></a>**QkdvDenominator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="qkdvnumerator"></a>**QkdvNumerator** | [QuantityKindDimensionVector](#quantitykinddimensionvector) | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="quantity"></a>**Quantity** | string | <sub>0..\*</sub> |  |  |
-| <a id="quantityvalue"></a>**QuantityValue** | [QuantityValue](#quantityvalue) | <sub>0..\*</sub> |  | [PhysicalConstant](#physicalconstant), [Quantity](#quantity) |
-| <a id="rationale"></a>**Rationale** | string | <sub>0..\*</sub> |  | [Comment](#comment), [NISTSP811Comment](#nistsp811comment), [Rule](#rule) |
-| <a id="rdfsdatatype"></a>**RdfsDatatype** | string | <sub>0..\*</sub> |  | [ScalarDatatype](#scalardatatype) |
-| <a id="reference"></a>**Reference** | string | <sub>0..\*</sub> |  |  |
-| <a id="referenceunit"></a>**ReferenceUnit** | string | <sub>0..\*</sub> |  |  |
-| <a id="relativestandarduncertainty"></a>**RelativeStandardUncertainty** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="relevantquantitykind"></a>**RelevantQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  |  |
-| <a id="relevantunit"></a>**RelevantUnit** | [Unit](#unit) | <sub>0..\*</sub> |  |  |
-| <a id="rights"></a>**Rights** | string | <sub>0..\*</sub> |  |  |
-| <a id="ruletype"></a>**RuleType** | string | <sub>0..\*</sub> |  | [Rule](#rule) |
-| <a id="scaletype"></a>**ScaleType** | string | <sub>0..\*</sub> |  | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale) |
-| <a id="scalingof"></a>**ScalingOf** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="siexactmatch"></a>**SiExactMatch** | string | <sub>0..\*</sub> |  |  |
-| <a id="siunitsexpression"></a>**SiUnitsExpression** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="source"></a>**Source** | uri | <sub>0..\*</sub> |  |  |
-| <a id="standarduncertainty"></a>**StandardUncertainty** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="standarduncertaintysn"></a>**StandardUncertaintySN** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="subject"></a>**Subject** | string | <sub>0..\*</sub> |  |  |
-| <a id="supersededby"></a>**SupersededBy** | string | <sub>0..\*</sub> |  |  |
-| <a id="symbol"></a>**Symbol** | string | <sub>0..\*</sub> |  | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityType](#quantitytype), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
-| <a id="systemdefinition"></a>**SystemDefinition** | string | <sub>0..\*</sub> |  |  |
-| <a id="systemderivedquantitykind"></a>**SystemDerivedQuantityKind** | [QuantityKind](#quantitykind) | <sub>0..\*</sub> |  | [SystemOfQuantityKinds](#systemofquantitykinds) |
-| <a id="systemdimension"></a>**SystemDimension** | string | <sub>0..\*</sub> |  |  |
-| <a id="title"></a>**Title** | string | <sub>0..\*</sub> |  |  |
-| <a id="ucumcode"></a>**UcumCode** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="udunitscode"></a>**UdunitsCode** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="unececommoncode"></a>**UneceCommonCode** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="unitfor"></a>**UnitFor** | string | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
-| <a id="upperbound"></a>**UpperBound** | string | <sub>0..\*</sub> |  |  |
-| <a id="url"></a>**Url** | string | <sub>0..\*</sub> |  | [Citation](#citation), [Organization](#organization) |
-| <a id="value"></a>**Value** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [DataItem](#dataitem), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue) |
-| <a id="valuequantity"></a>**ValueQuantity** | string | <sub>0..\*</sub> |  |  |
-| <a id="valuesn"></a>**ValueSN** | string | <sub>0..\*</sub> |  | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
-| <a id="vbname"></a>**VbName** | string | <sub>0..\*</sub> |  | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
-| <a id="vectormagnitude"></a>**VectorMagnitude** | string | <sub>0..\*</sub> |  | [BaseDimensionMagnitude](#basedimensionmagnitude) |
-| <a id="wasderivedfrom"></a>**WasDerivedFrom** | [Concept](#concept) | <sub>0..\*</sub> |  |  |
-| <a id="website"></a>**Website** | string | <sub>0..\*</sub> |  |  |
-| <a id="width"></a>**Width** | string | <sub>0..\*</sub> |  | [Figure](#figure) |
-| <a id="wikidatamatch"></a>**WikidataMatch** | uri | <sub>0..\*</sub> |  | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
+| Name | Cardinality/Range | Used By |
+| --- | --- | --- |
+| <a id="id"></a>**id** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BaseDimensionMagnitude](#basedimensionmagnitude), [BinaryPrefix](#binaryprefix), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [ConstantValue](#constantvalue), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DataItem](#dataitem), [Datatype](#datatype), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [LogarithmicUnit](#logarithmicunit), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [NumericUnion](#numericunion), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [Quantity](#quantity), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue), [RatioScale](#ratioscale), [Rule](#rule), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="description"></a>**description** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Comment](#comment), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NISTSP811Comment](#nistsp811comment), [NominalScale](#nominalscale), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [RatioScale](#ratioscale), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [TransformType](#transformtype), [UserQuantityKind](#userquantitykind) |
+| <a id="abstractquantitykind_altsymbol"></a>**AbstractQuantityKind_altSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="abstractquantitykind_broader"></a>**AbstractQuantityKind_broader** | <sub>0..1</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="abstractquantitykind_latexsymbol"></a>**AbstractQuantityKind_latexSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="abstractquantitykind_symbol"></a>**AbstractQuantityKind_symbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="basedimensionmagnitude_hasbasequantitykind"></a>**BaseDimensionMagnitude_hasBaseQuantityKind** | <sub>1..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="basedimensionmagnitude_vectormagnitude"></a>**BaseDimensionMagnitude_vectorMagnitude** | <sub>1..\*</sub><br/>float |  |
+| <a id="cardinalitytype_literal"></a>**CardinalityType_literal** | <sub>0..\*</sub><br/>string |  |
+| <a id="citation_description"></a>**Citation_description** | <sub>1..\*</sub><br/>string |  |
+| <a id="citation_url"></a>**Citation_url** | <sub>0..\*</sub><br/>string |  |
+| <a id="comment_description"></a>**Comment_description** | <sub>0..\*</sub><br/>string |  |
+| <a id="comment_rationale"></a>**Comment_rationale** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_abbreviation"></a>**Concept_abbreviation** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_deprecated"></a>**Concept_deprecated** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_description"></a>**Concept_description** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_hasrule"></a>**Concept_hasRule** | <sub>0..\*</sub><br/>[Rule](#rule) |  |
+| <a id="concept_id"></a>**Concept_id** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_isreplacedby"></a>**Concept_isReplacedBy** | <sub>0..\*</sub><br/>string |  |
+| <a id="concept_plaintextdescription"></a>**Concept_plainTextDescription** | <sub>0..\*</sub><br/>string |  |
+| <a id="constantvalue_exactconstant"></a>**ConstantValue_exactConstant** | <sub>0..\*</sub><br/>string |  |
+| <a id="contextualunit_broader"></a>**ContextualUnit_broader** | <sub>0..1</sub><br/>[Unit](#unit) |  |
+| <a id="currencyunit_currencycode"></a>**CurrencyUnit_currencyCode** | <sub>0..\*</sub><br/>string |  |
+| <a id="currencyunit_currencyexponent"></a>**CurrencyUnit_currencyExponent** | <sub>0..\*</sub><br/>string |  |
+| <a id="dataencoding_bitorder"></a>**DataEncoding_bitOrder** | <sub>0..\*</sub><br/>[EndianType](#endiantype) |  |
+| <a id="dataencoding_byteorder"></a>**DataEncoding_byteOrder** | <sub>0..\*</sub><br/>[EndianType](#endiantype) |  |
+| <a id="dataencoding_encoding"></a>**DataEncoding_encoding** | <sub>0..\*</sub><br/>[Encoding](#encoding) |  |
+| <a id="dataitem_value"></a>**DataItem_value** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_ansisqlname"></a>**Datatype_ansiSQLName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_basis"></a>**Datatype_basis** | <sub>0..\*</sub><br/>[Datatype](#datatype) |  |
+| <a id="datatype_bounded"></a>**Datatype_bounded** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_cname"></a>**Datatype_cName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_cardinality"></a>**Datatype_cardinality** | <sub>0..\*</sub><br/>[CardinalityType](#cardinalitytype) |  |
+| <a id="datatype_id"></a>**Datatype_id** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_javaname"></a>**Datatype_javaName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_jsname"></a>**Datatype_jsName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_matlabname"></a>**Datatype_matlabName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_microsoftsqlservername"></a>**Datatype_microsoftSQLServerName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_mysqlname"></a>**Datatype_mySQLName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_odbcname"></a>**Datatype_odbcName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_oledbname"></a>**Datatype_oleDBName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_oraclesqlname"></a>**Datatype_oracleSQLName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_orderedtype"></a>**Datatype_orderedType** | <sub>0..\*</sub><br/>[OrderedType](#orderedtype) |  |
+| <a id="datatype_protocolbuffersname"></a>**Datatype_protocolBuffersName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_pythonname"></a>**Datatype_pythonName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datatype_vbname"></a>**Datatype_vbName** | <sub>0..\*</sub><br/>string |  |
+| <a id="datetimestringencodingtype_allowedpattern"></a>**DateTimeStringEncodingType_allowedPattern** | <sub>1..\*</sub><br/>string |  |
+| <a id="encoding_bits"></a>**Encoding_bits** | <sub>0..\*</sub><br/>string |  |
+| <a id="encoding_bytes"></a>**Encoding_bytes** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeratedquantity_enumeratedvalue"></a>**EnumeratedQuantity_enumeratedValue** | <sub>0..\*</sub><br/>[EnumeratedValue](#enumeratedvalue) |  |
+| <a id="enumeratedquantity_enumeration"></a>**EnumeratedQuantity_enumeration** | <sub>0..\*</sub><br/>[Enumeration](#enumeration) |  |
+| <a id="enumeratedvalue_abbreviation"></a>**EnumeratedValue_abbreviation** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeratedvalue_altsymbol"></a>**EnumeratedValue_altSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeratedvalue_description"></a>**EnumeratedValue_description** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeratedvalue_symbol"></a>**EnumeratedValue_symbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeration_abbreviation"></a>**Enumeration_abbreviation** | <sub>0..\*</sub><br/>string |  |
+| <a id="enumeration_default"></a>**Enumeration_default** | <sub>0..\*</sub><br/>[EnumeratedValue](#enumeratedvalue) |  |
+| <a id="enumeration_element"></a>**Enumeration_element** | <sub>1..\*</sub><br/>[EnumeratedValue](#enumeratedvalue) |  |
+| <a id="figure_figurecaption"></a>**Figure_figureCaption** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure_figurelabel"></a>**Figure_figureLabel** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure_height"></a>**Figure_height** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure_image"></a>**Figure_image** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure_imagelocation"></a>**Figure_imageLocation** | <sub>1..\*</sub><br/>string |  |
+| <a id="figure_landscape"></a>**Figure_landscape** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure_width"></a>**Figure_width** | <sub>0..\*</sub><br/>string |  |
+| <a id="orderedtype_literal"></a>**OrderedType_literal** | <sub>0..\*</sub><br/>string |  |
+| <a id="ordinalscale_order"></a>**OrdinalScale_order** | <sub>1..\*</sub><br/>string |  |
+| <a id="organization_url"></a>**Organization_url** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_altsymbol"></a>**PhysicalConstant_altSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_applicablesystem"></a>**PhysicalConstant_applicableSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="physicalconstant_applicableunit"></a>**PhysicalConstant_applicableUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="physicalconstant_dbpediamatch"></a>**PhysicalConstant_dbpediaMatch** | <sub>0..\*</sub><br/>uri |  |
+| <a id="physicalconstant_exactconstant"></a>**PhysicalConstant_exactConstant** | <sub>0..\*</sub><br/>boolean |  |
+| <a id="physicalconstant_exactmatch"></a>**PhysicalConstant_exactMatch** | <sub>0..\*</sub><br/>[PhysicalConstant](#physicalconstant) |  |
+| <a id="physicalconstant_hasdimensionvector"></a>**PhysicalConstant_hasDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="physicalconstant_isonormativereference"></a>**PhysicalConstant_isoNormativeReference** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_latexdefinition"></a>**PhysicalConstant_latexDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_latexsymbol"></a>**PhysicalConstant_latexSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_mathmldefinition"></a>**PhysicalConstant_mathMLdefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_normativereference"></a>**PhysicalConstant_normativeReference** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_symbol"></a>**PhysicalConstant_symbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="physicalconstant_ucumcode"></a>**PhysicalConstant_ucumCode** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix_altsymbol"></a>**Prefix_altSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix_exactmatch"></a>**Prefix_exactMatch** | <sub>0..\*</sub><br/>[Prefix](#prefix) |  |
+| <a id="prefix_latexsymbol"></a>**Prefix_latexSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix_prefixmultiplier"></a>**Prefix_prefixMultiplier** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix_symbol"></a>**Prefix_symbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix_ucumcode"></a>**Prefix_ucumCode** | <sub>0..\*</sub><br/>[UCUMcs-term](#ucumcs-term) |  |
+| <a id="quantifiable_dataencoding"></a>**Quantifiable_dataEncoding** | <sub>0..\*</sub><br/>[DataEncoding](#dataencoding) |  |
+| <a id="quantifiable_datatype"></a>**Quantifiable_datatype** | <sub>0..\*</sub><br/>[Datatype](#datatype) |  |
+| <a id="quantifiable_hasunit"></a>**Quantifiable_hasUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantifiable_relativestandarduncertainty"></a>**Quantifiable_relativeStandardUncertainty** | <sub>0..\*</sub><br/>double |  |
+| <a id="quantifiable_standarduncertainty"></a>**Quantifiable_standardUncertainty** | <sub>0..\*</sub><br/>decimal |  |
+| <a id="quantifiable_standarduncertaintysn"></a>**Quantifiable_standardUncertaintySN** | <sub>0..\*</sub><br/>double |  |
+| <a id="quantifiable_value"></a>**Quantifiable_value** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantifiable_valuesn"></a>**Quantifiable_valueSN** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentforamountofsubstance"></a>**QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentforelectriccurrent"></a>**QuantityKindDimensionVector_dimensionExponentForElectricCurrent** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentforlength"></a>**QuantityKindDimensionVector_dimensionExponentForLength** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentforluminousintensity"></a>**QuantityKindDimensionVector_dimensionExponentForLuminousIntensity** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentformass"></a>**QuantityKindDimensionVector_dimensionExponentForMass** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentforthermodynamictemperature"></a>**QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionexponentfortime"></a>**QuantityKindDimensionVector_dimensionExponentForTime** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_dimensionlessexponent"></a>**QuantityKindDimensionVector_dimensionlessExponent** | <sub>1..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_hasreferencequantitykind"></a>**QuantityKindDimensionVector_hasReferenceQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="quantitykinddimensionvector_latexdefinition"></a>**QuantityKindDimensionVector_latexDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykinddimensionvector_latexsymbol"></a>**QuantityKindDimensionVector_latexSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykind_applicablecgsunit"></a>**QuantityKind_applicableCGSUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_applicableisounit"></a>**QuantityKind_applicableISOUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_applicableimperialunit"></a>**QuantityKind_applicableImperialUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_applicablesiunit"></a>**QuantityKind_applicableSIUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_applicableuscustomaryunit"></a>**QuantityKind_applicableUSCustomaryUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_applicableunit"></a>**QuantityKind_applicableUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantitykind_dimensionvectorforsi"></a>**QuantityKind_dimensionVectorForSI** | <sub>0..\*</sub><br/>[QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |  |
+| <a id="quantitykind_exactmatch"></a>**QuantityKind_exactMatch** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="quantitykind_hasdimensionvector"></a>**QuantityKind_hasDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="quantitykind_iec61360code"></a>**QuantityKind_iec61360Code** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykind_latexdefinition"></a>**QuantityKind_latexDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykind_mathmldefinition"></a>**QuantityKind_mathMLdefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantitykind_qkdvdenominator"></a>**QuantityKind_qkdvDenominator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="quantitykind_qkdvnumerator"></a>**QuantityKind_qkdvNumerator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="quantitytype_value"></a>**QuantityType_value** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="quantityvalue_hasunit"></a>**QuantityValue_hasUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="quantity_hasquantitykind"></a>**Quantity_hasQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="quantity_isdeltaquantity"></a>**Quantity_isDeltaQuantity** | <sub>0..\*</sub><br/>boolean |  |
+| <a id="quantity_quantityvalue"></a>**Quantity_quantityValue** | <sub>0..\*</sub><br/>[QuantityValue](#quantityvalue) |  |
+| <a id="rule_rationale"></a>**Rule_rationale** | <sub>0..\*</sub><br/>string |  |
+| <a id="rule_ruletype"></a>**Rule_ruleType** | <sub>0..\*</sub><br/>[RuleType](#ruletype) |  |
+| <a id="scalardatatype_bits"></a>**ScalarDatatype_bits** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_bytes"></a>**ScalarDatatype_bytes** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_length"></a>**ScalarDatatype_length** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_maxexclusive"></a>**ScalarDatatype_maxExclusive** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_maxinclusive"></a>**ScalarDatatype_maxInclusive** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_minexclusive"></a>**ScalarDatatype_minExclusive** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_mininclusive"></a>**ScalarDatatype_minInclusive** | <sub>0..\*</sub><br/>string |  |
+| <a id="scalardatatype_rdfsdatatype"></a>**ScalarDatatype_rdfsDatatype** | <sub>0..\*</sub><br/>[Datatype](#datatype) |  |
+| <a id="scaletype_datastructure"></a>**ScaleType_dataStructure** | <sub>0..\*</sub><br/>string |  |
+| <a id="scaletype_permissiblemaths"></a>**ScaleType_permissibleMaths** | <sub>0..\*</sub><br/>[MathsFunctionType](#mathsfunctiontype) |  |
+| <a id="scaletype_permissibletransformation"></a>**ScaleType_permissibleTransformation** | <sub>0..\*</sub><br/>[TransformType](#transformtype) |  |
+| <a id="scale_datastructure"></a>**Scale_dataStructure** | <sub>0..\*</sub><br/>string |  |
+| <a id="scale_permissiblemaths"></a>**Scale_permissibleMaths** | <sub>0..\*</sub><br/>[MathsFunctionType](#mathsfunctiontype) |  |
+| <a id="scale_permissibletransformation"></a>**Scale_permissibleTransformation** | <sub>0..\*</sub><br/>[TransformType](#transformtype) |  |
+| <a id="scale_scaletype"></a>**Scale_scaleType** | <sub>0..\*</sub><br/>[ScaleType](#scaletype) |  |
+| <a id="systemofquantitykinds_basedimensionenumeration"></a>**SystemOfQuantityKinds_baseDimensionEnumeration** | <sub>0..\*</sub><br/>[Enumeration](#enumeration) |  |
+| <a id="systemofquantitykinds_hasbasequantitykind"></a>**SystemOfQuantityKinds_hasBaseQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="systemofquantitykinds_hasquantitykind"></a>**SystemOfQuantityKinds_hasQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="systemofquantitykinds_hasunitsystem"></a>**SystemOfQuantityKinds_hasUnitSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="systemofquantitykinds_systemderivedquantitykind"></a>**SystemOfQuantityKinds_systemDerivedQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="systemofunits_applicablephysicalconstant"></a>**SystemOfUnits_applicablePhysicalConstant** | <sub>0..\*</sub><br/>[PhysicalConstant](#physicalconstant) |  |
+| <a id="systemofunits_hasallowedunit"></a>**SystemOfUnits_hasAllowedUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hasbaseunit"></a>**SystemOfUnits_hasBaseUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hascoherentunit"></a>**SystemOfUnits_hasCoherentUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hasdefinedunit"></a>**SystemOfUnits_hasDefinedUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hasderivedcoherentunit"></a>**SystemOfUnits_hasDerivedCoherentUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hasderivedunit"></a>**SystemOfUnits_hasDerivedUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_hasunit"></a>**SystemOfUnits_hasUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="systemofunits_prefix"></a>**SystemOfUnits_prefix** | <sub>0..\*</sub><br/>[Prefix](#prefix) |  |
+| <a id="unit_altsymbol"></a>**Unit_altSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_applicablesystem"></a>**Unit_applicableSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="unit_conversionmultiplier"></a>**Unit_conversionMultiplier** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_conversionmultipliersn"></a>**Unit_conversionMultiplierSN** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_conversionoffset"></a>**Unit_conversionOffset** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_conversionoffsetsn"></a>**Unit_conversionOffsetSN** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_definedunitofsystem"></a>**Unit_definedUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="unit_derivedcoherentunitofsystem"></a>**Unit_derivedCoherentUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="unit_derivedunitofsystem"></a>**Unit_derivedUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="unit_exactmatch"></a>**Unit_exactMatch** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="unit_factorunitscalar"></a>**Unit_factorUnitScalar** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_hasdimensionvector"></a>**Unit_hasDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="unit_hasfactorunit"></a>**Unit_hasFactorUnit** | <sub>0..\*</sub><br/>[Class](#class) |  |
+| <a id="unit_hasquantitykind"></a>**Unit_hasQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="unit_iec61360code"></a>**Unit_iec61360Code** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_latexdefinition"></a>**Unit_latexDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_latexsymbol"></a>**Unit_latexSymbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_mathmldefinition"></a>**Unit_mathMLdefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_prefix"></a>**Unit_prefix** | <sub>0..\*</sub><br/>[Prefix](#prefix) |  |
+| <a id="unit_qkdvdenominator"></a>**Unit_qkdvDenominator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="unit_qkdvnumerator"></a>**Unit_qkdvNumerator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="unit_scalingof"></a>**Unit_scalingOf** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="unit_siunitsexpression"></a>**Unit_siUnitsExpression** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_symbol"></a>**Unit_symbol** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_ucumcode"></a>**Unit_ucumCode** | <sub>0..\*</sub><br/>[UCUMcs](#ucumcs) |  |
+| <a id="unit_udunitscode"></a>**Unit_udunitsCode** | <sub>0..\*</sub><br/>string |  |
+| <a id="unit_unececommoncode"></a>**Unit_uneceCommonCode** | <sub>0..\*</sub><br/>string |  |
+| <a id="userquantitykind_hasquantitykind"></a>**UserQuantityKind_hasQuantityKind** | <sub>1..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="verifiable_dbpediamatch"></a>**Verifiable_dbpediaMatch** | <sub>0..\*</sub><br/>uri |  |
+| <a id="verifiable_isonormativereference"></a>**Verifiable_isoNormativeReference** | <sub>0..\*</sub><br/>string |  |
+| <a id="verifiable_normativereference"></a>**Verifiable_normativeReference** | <sub>0..\*</sub><br/>string |  |
+| <a id="verifiable_wikidatamatch"></a>**Verifiable_wikidataMatch** | <sub>0..\*</sub><br/>uri |  |
+| <a id="abbreviation"></a>**abbreviation** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [RatioScale](#ratioscale), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [TransformType](#transformtype), [UserQuantityKind](#userquantitykind) |
+| <a id="abstract"></a>**abstract** | <sub>0..\*</sub><br/>string |  |
+| <a id="acronym"></a>**acronym** | <sub>0..\*</sub><br/>string |  |
+| <a id="allowedpattern"></a>**allowedPattern** | <sub>0..\*</sub><br/>string | [DateTimeStringEncodingType](#datetimestringencodingtype) |
+| <a id="altsymbol"></a>**altSymbol** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityType](#quantitytype), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="ansisqlname"></a>**ansiSQLName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="applicablecgsunit"></a>**applicableCGSUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [QuantityKind](#quantitykind) |
+| <a id="applicableisounit"></a>**applicableISOUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [QuantityKind](#quantitykind) |
+| <a id="applicableimperialunit"></a>**applicableImperialUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [QuantityKind](#quantitykind) |
+| <a id="applicablephysicalconstant"></a>**applicablePhysicalConstant** | <sub>0..\*</sub><br/>string | [SystemOfUnits](#systemofunits) |
+| <a id="applicableplanckunit"></a>**applicablePlanckUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="applicablesiunit"></a>**applicableSIUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [QuantityKind](#quantitykind) |
+| <a id="applicablesystem"></a>**applicableSystem** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="applicableuscustomaryunit"></a>**applicableUSCustomaryUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [QuantityKind](#quantitykind) |
+| <a id="applicableunit"></a>**applicableUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [PhysicalConstant](#physicalconstant), [QuantityKind](#quantitykind) |
+| <a id="basedimensionenumeration"></a>**baseDimensionEnumeration** | <sub>0..\*</sub><br/>[Enumeration](#enumeration) | [SystemOfQuantityKinds](#systemofquantitykinds) |
+| <a id="baseunitofsystem"></a>**baseUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="basis"></a>**basis** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="belongstosystemofquantities"></a>**belongsToSystemOfQuantities** | <sub>0..\*</sub><br/>[SystemOfQuantityKinds](#systemofquantitykinds) | [QuantityKind](#quantitykind) |
+| <a id="bitorder"></a>**bitOrder** | <sub>0..\*</sub><br/>[EndianType](#endiantype) | [DataEncoding](#dataencoding) |
+| <a id="bits"></a>**bits** | <sub>0..\*</sub><br/>string | [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Encoding](#encoding), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [ScalarDatatype](#scalardatatype) |
+| <a id="bounded"></a>**bounded** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="broader"></a>**broader** | <sub>0..1</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="byteorder"></a>**byteOrder** | <sub>0..\*</sub><br/>[EndianType](#endiantype) | [DataEncoding](#dataencoding) |
+| <a id="bytes"></a>**bytes** | <sub>0..\*</sub><br/>string | [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Encoding](#encoding), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [ScalarDatatype](#scalardatatype) |
+| <a id="cname"></a>**cName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="cardinality"></a>**cardinality** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="categorizedas"></a>**categorizedAs** | <sub>0..\*</sub><br/>string |  |
+| <a id="coherentunitsystem"></a>**coherentUnitSystem** | <sub>0..\*</sub><br/>string |  |
+| <a id="conversionmultiplier"></a>**conversionMultiplier** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="conversionmultipliersn"></a>**conversionMultiplierSN** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="conversionoffset"></a>**conversionOffset** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="conversionoffsetsn"></a>**conversionOffsetSN** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="created"></a>**created** | <sub>0..\*</sub><br/>date |  |
+| <a id="creator"></a>**creator** | <sub>0..\*</sub><br/>string |  |
+| <a id="currencycode"></a>**currencyCode** | <sub>0..\*</sub><br/>string | [CurrencyUnit](#currencyunit) |
+| <a id="currencyexponent"></a>**currencyExponent** | <sub>0..\*</sub><br/>string | [CurrencyUnit](#currencyunit) |
+| <a id="currencynumber"></a>**currencyNumber** | <sub>0..\*</sub><br/>string |  |
+| <a id="dataencoding"></a>**dataEncoding** | <sub>0..\*</sub><br/>[DataEncoding](#dataencoding) | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="datastructure"></a>**dataStructure** | <sub>0..\*</sub><br/>string | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
+| <a id="datatype"></a>**datatype** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="dbpediamatch"></a>**dbpediaMatch** | <sub>0..\*</sub><br/>uri | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
+| <a id="default"></a>**default** | <sub>0..\*</sub><br/>string | [Enumeration](#enumeration) |
+| <a id="definedunitofsystem"></a>**definedUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="denominatordimensionvector"></a>**denominatorDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="deprecated"></a>**deprecated** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
+| <a id="derivedcoherentunitofsystem"></a>**derivedCoherentUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="derivednoncoherentunitofsystem"></a>**derivedNonCoherentUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) |  |
+| <a id="derivedunitofsystem"></a>**derivedUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="dimensionexponent"></a>**dimensionExponent** | <sub>0..\*</sub><br/>string |  |
+| <a id="dimensionexponentforamountofsubstance"></a>**dimensionExponentForAmountOfSubstance** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentforelectriccurrent"></a>**dimensionExponentForElectricCurrent** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentforlength"></a>**dimensionExponentForLength** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentforluminousintensity"></a>**dimensionExponentForLuminousIntensity** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentformass"></a>**dimensionExponentForMass** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentforthermodynamictemperature"></a>**dimensionExponentForThermodynamicTemperature** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensionexponentfortime"></a>**dimensionExponentForTime** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="dimensioninverse"></a>**dimensionInverse** | <sub>0..\*</sub><br/>string |  |
+| <a id="dimensionvectorforsi"></a>**dimensionVectorForSI** | <sub>0..\*</sub><br/>[QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) | [QuantityKind](#quantitykind) |
+| <a id="dimensionlessexponent"></a>**dimensionlessExponent** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="element"></a>**element** | <sub>0..\*</sub><br/>string | [Enumeration](#enumeration) |
+| <a id="elementkind"></a>**elementKind** | <sub>0..\*</sub><br/>string |  |
+| <a id="encoding"></a>**encoding** | <sub>0..\*</sub><br/>string | [DataEncoding](#dataencoding) |
+| <a id="enumeratedvalue"></a>**enumeratedValue** | <sub>0..\*</sub><br/>[EnumeratedValue](#enumeratedvalue) | [EnumeratedQuantity](#enumeratedquantity) |
+| <a id="enumeration"></a>**enumeration** | <sub>0..\*</sub><br/>[Enumeration](#enumeration) | [EnumeratedQuantity](#enumeratedquantity) |
+| <a id="exactconstant"></a>**exactConstant** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant) |
+| <a id="exactmatch"></a>**exactMatch** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="example"></a>**example** | <sub>0..\*</sub><br/>string |  |
+| <a id="exponent"></a>**exponent** | <sub>0..\*</sub><br/>string |  |
+| <a id="expression"></a>**expression** | <sub>0..\*</sub><br/>string |  |
+| <a id="factorunitscalar"></a>**factorUnitScalar** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="fieldcode"></a>**fieldCode** | <sub>0..\*</sub><br/>string |  |
+| <a id="figure"></a>**figure** | <sub>0..\*</sub><br/>[Figure](#figure) |  |
+| <a id="figurecaption"></a>**figureCaption** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="figurelabel"></a>**figureLabel** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="graphname"></a>**graphName** | <sub>0..\*</sub><br/>string |  |
+| <a id="graphtitle"></a>**graphTitle** | <sub>0..\*</sub><br/>string |  |
+| <a id="guidance"></a>**guidance** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BaseDimensionMagnitude](#basedimensionmagnitude), [BinaryPrefix](#binaryprefix), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CardinalityType](#cardinalitytype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [ConstantValue](#constantvalue), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DataItem](#dataitem), [Datatype](#datatype), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [Discipline](#discipline), [Encoding](#encoding), [EndianType](#endiantype), [EnumeratedQuantity](#enumeratedquantity), [EnumeratedValue](#enumeratedvalue), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [LogarithmicUnit](#logarithmicunit), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [NumericUnion](#numericunion), [OrderedType](#orderedtype), [OrdinalScale](#ordinalscale), [Organization](#organization), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [Quantity](#quantity), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue), [RatioScale](#ratioscale), [Rule](#rule), [RuleType](#ruletype), [ScalarDatatype](#scalardatatype), [Scale](#scale), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="hasallowedunit"></a>**hasAllowedUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [SystemOfUnits](#systemofunits) |
+| <a id="hasbasequantitykind"></a>**hasBaseQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) | [BaseDimensionMagnitude](#basedimensionmagnitude), [SystemOfQuantityKinds](#systemofquantitykinds) |
+| <a id="hasbaseunit"></a>**hasBaseUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [SystemOfUnits](#systemofunits) |
+| <a id="hascitation"></a>**hasCitation** | <sub>0..\*</sub><br/>string |  |
+| <a id="hascoherentunit"></a>**hasCoherentUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [SystemOfUnits](#systemofunits) |
+| <a id="hasdefinedunit"></a>**hasDefinedUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [SystemOfUnits](#systemofunits) |
+| <a id="hasdenominatorpart"></a>**hasDenominatorPart** | <sub>0..\*</sub><br/>string |  |
+| <a id="hasderivedcoherentunit"></a>**hasDerivedCoherentUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [SystemOfUnits](#systemofunits) |
+| <a id="hasderivednoncoherentunit"></a>**hasDerivedNonCoherentUnit** | <sub>0..\*</sub><br/>string |  |
+| <a id="hasderivedunit"></a>**hasDerivedUnit** | <sub>0..\*</sub><br/>string | [SystemOfUnits](#systemofunits) |
+| <a id="hasdimension"></a>**hasDimension** | <sub>0..\*</sub><br/>string |  |
+| <a id="hasdimensionexpression"></a>**hasDimensionExpression** | <sub>0..\*</sub><br/>string |  |
+| <a id="hasdimensionvector"></a>**hasDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="hasfactorunit"></a>**hasFactorUnit** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="hasnumeratorpart"></a>**hasNumeratorPart** | <sub>0..\*</sub><br/>string |  |
+| <a id="hasprefixunit"></a>**hasPrefixUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="hasquantity"></a>**hasQuantity** | <sub>0..\*</sub><br/>[Quantity](#quantity) |  |
+| <a id="hasquantitykind"></a>**hasQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Quantity](#quantity), [SolidAngleUnit](#solidangleunit), [SystemOfQuantityKinds](#systemofquantitykinds), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="hasreciprocalunit"></a>**hasReciprocalUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="hasreferencequantitykind"></a>**hasReferenceQuantityKind** | <sub>0..\*</sub><br/>string | [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi) |
+| <a id="hasrule"></a>**hasRule** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
+| <a id="hasunit"></a>**hasUnit** | <sub>0..\*</sub><br/>[Unit](#unit) | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue), [SystemOfUnits](#systemofunits) |
+| <a id="hasunitsystem"></a>**hasUnitSystem** | <sub>0..\*</sub><br/>string | [SystemOfQuantityKinds](#systemofquantitykinds) |
+| <a id="hasvocabulary"></a>**hasVocabulary** | <sub>0..\*</sub><br/>[Ontology](#ontology) |  |
+| <a id="height"></a>**height** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="iec61360code"></a>**iec61360Code** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="image"></a>**image** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="imagelocation"></a>**imageLocation** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="informativereference"></a>**informativeReference** | <sub>0..\*</sub><br/>uri |  |
+| <a id="isdeltaquantity"></a>**isDeltaQuantity** | <sub>0..\*</sub><br/>string | [PhysicalConstant](#physicalconstant), [Quantity](#quantity) |
+| <a id="isdimensioninsystem"></a>**isDimensionInSystem** | <sub>0..\*</sub><br/>string |  |
+| <a id="ismetadatafor"></a>**isMetadataFor** | <sub>0..\*</sub><br/>string |  |
+| <a id="ismetricunit"></a>**isMetricUnit** | <sub>0..\*</sub><br/>string |  |
+| <a id="isreplacedby"></a>**isReplacedBy** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
+| <a id="isunitofsystem"></a>**isUnitOfSystem** | <sub>0..\*</sub><br/>[SystemOfUnits](#systemofunits) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="isonormativereference"></a>**isoNormativeReference** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
+| <a id="javaname"></a>**javaName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="jsname"></a>**jsName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="landscape"></a>**landscape** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="latexdefinition"></a>**latexDefinition** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="latexsymbol"></a>**latexSymbol** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [SolidAngleUnit](#solidangleunit), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="length"></a>**length** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="literal"></a>**literal** | <sub>0..\*</sub><br/>string | [CardinalityType](#cardinalitytype), [OrderedType](#orderedtype) |
+| <a id="lowerbound"></a>**lowerBound** | <sub>0..\*</sub><br/>string |  |
+| <a id="mathdefinition"></a>**mathDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="mathmldefinition"></a>**mathMLdefinition** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="matlabname"></a>**matlabName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="maxcardinality"></a>**maxCardinality** | <sub>0..\*</sub><br/>string |  |
+| <a id="maxexclusive"></a>**maxExclusive** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="maxinclusive"></a>**maxInclusive** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="microsoftsqlservername"></a>**microsoftSQLServerName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="mincardinality"></a>**minCardinality** | <sub>0..\*</sub><br/>string |  |
+| <a id="minexclusive"></a>**minExclusive** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="mininclusive"></a>**minInclusive** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="modified"></a>**modified** | <sub>0..\*</sub><br/>date |  |
+| <a id="mysqlname"></a>**mySQLName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="negativedeltalimit"></a>**negativeDeltaLimit** | <sub>0..\*</sub><br/>string |  |
+| <a id="normativereference"></a>**normativeReference** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
+| <a id="numeratordimensionvector"></a>**numeratorDimensionVector** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) |  |
+| <a id="numericvalue"></a>**numericValue** | <sub>0..\*</sub><br/>[NumericUnion](#numericunion) |  |
+| <a id="odbcname"></a>**odbcName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="oledbname"></a>**oleDBName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="omunit"></a>**omUnit** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="onlinereference"></a>**onlineReference** | <sub>0..\*</sub><br/>string |  |
+| <a id="oraclesqlname"></a>**oracleSQLName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="order"></a>**order** | <sub>0..\*</sub><br/>string | [OrdinalScale](#ordinalscale) |
+| <a id="orderedtype"></a>**orderedType** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="outofscope"></a>**outOfScope** | <sub>0..\*</sub><br/>string |  |
+| <a id="pattern"></a>**pattern** | <sub>0..\*</sub><br/>string |  |
+| <a id="permissiblemaths"></a>**permissibleMaths** | <sub>0..\*</sub><br/>string | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
+| <a id="permissibletransformation"></a>**permissibleTransformation** | <sub>0..\*</sub><br/>string | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale), [ScaleType](#scaletype) |
+| <a id="plaintextdescription"></a>**plainTextDescription** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [BaseDimensionMagnitude](#basedimensionmagnitude), [BitEncodingType](#bitencodingtype), [BooleanEncodingType](#booleanencodingtype), [ByteEncodingType](#byteencodingtype), [CharEncodingType](#charencodingtype), [Citation](#citation), [Concept](#concept), [DataItem](#dataitem), [Datatype](#datatype), [Discipline](#discipline), [Encoding](#encoding), [EnumeratedQuantity](#enumeratedquantity), [Enumeration](#enumeration), [EnumerationScale](#enumerationscale), [Figure](#figure), [FloatingPointEncodingType](#floatingpointencodingtype), [IntegerEncodingType](#integerencodingtype), [IntervalScale](#intervalscale), [MathsFunctionType](#mathsfunctiontype), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [Organization](#organization), [QuantityKindDimensionVector](#quantitykinddimensionvector), [QuantityKindDimensionVectorCGS](#quantitykinddimensionvectorcgs), [QuantityKindDimensionVectorCGS-EMU](#quantitykinddimensionvectorcgs-emu), [QuantityKindDimensionVectorCGS-ESU](#quantitykinddimensionvectorcgs-esu), [QuantityKindDimensionVectorCGS-GAUSS](#quantitykinddimensionvectorcgs-gauss), [QuantityKindDimensionVectorCGS-LH](#quantitykinddimensionvectorcgs-lh), [QuantityKindDimensionVectorISO](#quantitykinddimensionvectoriso), [QuantityKindDimensionVectorImperial](#quantitykinddimensionvectorimperial), [QuantityKindDimensionVectorSI](#quantitykinddimensionvectorsi), [RatioScale](#ratioscale), [ScalarDatatype](#scalardatatype), [Scale](#scale), [Symbol](#symbol), [SystemOfQuantityKinds](#systemofquantitykinds), [UserQuantityKind](#userquantitykind) |
+| <a id="positivedeltalimit"></a>**positiveDeltaLimit** | <sub>0..\*</sub><br/>string |  |
+| <a id="prefix"></a>**prefix** | <sub>0..\*</sub><br/>[Prefix](#prefix) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [Unit](#unit) |
+| <a id="prefixmultiplier"></a>**prefixMultiplier** | <sub>0..\*</sub><br/>string | [BinaryPrefix](#binaryprefix), [DecimalPrefix](#decimalprefix), [Prefix](#prefix) |
+| <a id="prefixmultipliersn"></a>**prefixMultiplierSN** | <sub>0..\*</sub><br/>string |  |
+| <a id="protocolbuffersname"></a>**protocolBuffersName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="pythonname"></a>**pythonName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="qkdvdenominator"></a>**qkdvDenominator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="qkdvnumerator"></a>**qkdvNumerator** | <sub>0..\*</sub><br/>[QuantityKindDimensionVector](#quantitykinddimensionvector) | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [QuantityKind](#quantitykind), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="quantity"></a>**quantity** | <sub>0..\*</sub><br/>string |  |
+| <a id="quantityvalue"></a>**quantityValue** | <sub>0..\*</sub><br/>[QuantityValue](#quantityvalue) | [PhysicalConstant](#physicalconstant), [Quantity](#quantity) |
+| <a id="rationale"></a>**rationale** | <sub>0..\*</sub><br/>string | [Comment](#comment), [NISTSP811Comment](#nistsp811comment), [Rule](#rule) |
+| <a id="rdfsdatatype"></a>**rdfsDatatype** | <sub>0..\*</sub><br/>string | [ScalarDatatype](#scalardatatype) |
+| <a id="reference"></a>**reference** | <sub>0..\*</sub><br/>string |  |
+| <a id="referenceunit"></a>**referenceUnit** | <sub>0..\*</sub><br/>string |  |
+| <a id="relativestandarduncertainty"></a>**relativeStandardUncertainty** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="relevantquantitykind"></a>**relevantQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) |  |
+| <a id="relevantunit"></a>**relevantUnit** | <sub>0..\*</sub><br/>[Unit](#unit) |  |
+| <a id="rights"></a>**rights** | <sub>0..\*</sub><br/>string |  |
+| <a id="ruletype"></a>**ruleType** | <sub>0..\*</sub><br/>string | [Rule](#rule) |
+| <a id="scaletype"></a>**scaleType** | <sub>0..\*</sub><br/>string | [EnumerationScale](#enumerationscale), [IntervalScale](#intervalscale), [NominalScale](#nominalscale), [OrdinalScale](#ordinalscale), [RatioScale](#ratioscale), [Scale](#scale) |
+| <a id="scalingof"></a>**scalingOf** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="siexactmatch"></a>**siExactMatch** | <sub>0..\*</sub><br/>string |  |
+| <a id="siunitsexpression"></a>**siUnitsExpression** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="source"></a>**source** | <sub>0..\*</sub><br/>uri |  |
+| <a id="standarduncertainty"></a>**standardUncertainty** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="standarduncertaintysn"></a>**standardUncertaintySN** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="subject"></a>**subject** | <sub>0..\*</sub><br/>string |  |
+| <a id="supersededby"></a>**supersededBy** | <sub>0..\*</sub><br/>string |  |
+| <a id="symbol"></a>**symbol** | <sub>0..\*</sub><br/>string | [AbstractQuantityKind](#abstractquantitykind), [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [OrderedType](#orderedtype), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityType](#quantitytype), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [TransformType](#transformtype), [Unit](#unit), [UserQuantityKind](#userquantitykind) |
+| <a id="systemdefinition"></a>**systemDefinition** | <sub>0..\*</sub><br/>string |  |
+| <a id="systemderivedquantitykind"></a>**systemDerivedQuantityKind** | <sub>0..\*</sub><br/>[QuantityKind](#quantitykind) | [SystemOfQuantityKinds](#systemofquantitykinds) |
+| <a id="systemdimension"></a>**systemDimension** | <sub>0..\*</sub><br/>string |  |
+| <a id="title"></a>**title** | <sub>0..\*</sub><br/>string |  |
+| <a id="ucumcode"></a>**ucumCode** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PhysicalConstant](#physicalconstant), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="udunitscode"></a>**udunitsCode** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="unececommoncode"></a>**uneceCommonCode** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="unitfor"></a>**unitFor** | <sub>0..\*</sub><br/>string | [AngleUnit](#angleunit), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [LogarithmicUnit](#logarithmicunit), [PlaneAngleUnit](#planeangleunit), [SolidAngleUnit](#solidangleunit), [Unit](#unit) |
+| <a id="upperbound"></a>**upperBound** | <sub>0..\*</sub><br/>string |  |
+| <a id="url"></a>**url** | <sub>0..\*</sub><br/>string | [Citation](#citation), [Organization](#organization) |
+| <a id="value"></a>**value** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [DataItem](#dataitem), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityType](#quantitytype), [QuantityValue](#quantityvalue) |
+| <a id="valuequantity"></a>**valueQuantity** | <sub>0..\*</sub><br/>string |  |
+| <a id="valuesn"></a>**valueSN** | <sub>0..\*</sub><br/>string | [ConstantValue](#constantvalue), [PhysicalConstant](#physicalconstant), [Quantifiable](#quantifiable), [Quantity](#quantity), [QuantityValue](#quantityvalue) |
+| <a id="vbname"></a>**vbName** | <sub>0..\*</sub><br/>string | [Datatype](#datatype), [ScalarDatatype](#scalardatatype) |
+| <a id="vectormagnitude"></a>**vectorMagnitude** | <sub>0..\*</sub><br/>string | [BaseDimensionMagnitude](#basedimensionmagnitude) |
+| <a id="wasderivedfrom"></a>**wasDerivedFrom** | <sub>0..\*</sub><br/>[Concept](#concept) |  |
+| <a id="website"></a>**website** | <sub>0..\*</sub><br/>string |  |
+| <a id="width"></a>**width** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
+| <a id="wikidatamatch"></a>**wikidataMatch** | <sub>0..\*</sub><br/>uri | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
 
