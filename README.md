@@ -31,7 +31,7 @@ See the **[project/](project/)** directory for all generated artifacts.
 ### Prerequisites
 
 - Python 3.12+
-- [uv](https://github.com/astral-sh/uv) (recommended) or pip
+- [uv](https://github.com/astral-sh/uv)
 
 ### Installation
 
@@ -46,9 +46,6 @@ uv sync --group dev
 ```bash
 # Regenerate all project artifacts
 just gen-project
-
-# Regenerate with Kroki diagrams (requires Kroki server)
-just gen-project-kroki-files
 ```
 
 ### Documentation Website
