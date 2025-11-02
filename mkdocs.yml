@@ -75,6 +75,9 @@ nav:
   - About: about.md
 
 extra:
+  analytics:
+    provider: google
+    property: G-4KG00QCXJD
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/vladistan/linkml-qudt
