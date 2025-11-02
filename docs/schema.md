@@ -6,7 +6,7 @@ The QUDT LinkML schema is the core definition file that describes all classes, s
 
 ## Schema File
 
-**Location**: [`src/linkml_qudt/schema/linkml_qudt.yaml`](https://github.com/linkml/linkml-qudt/blob/main/src/linkml_qudt/schema/linkml_qudt.yaml)
+**Location**: [`src/linkml_qudt/schema/linkml_qudt.yaml`](https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/schema/linkml_qudt.yaml)
 
 ## Schema Metadata
 
@@ -47,11 +47,11 @@ The schema defines a comprehensive class hierarchy starting from `Thing` (owl:Th
 
 For the complete schema definition, you can:
 
-1. **[View on GitHub](https://github.com/linkml/linkml-qudt/blob/main/src/linkml_qudt/schema/linkml_qudt.yaml)** - Browse the YAML file online
+1. **[View on GitHub](https://github.com/vladistan/linkml-qudt/blob/main/src/linkml_qudt/schema/linkml_qudt.yaml)** - Browse the YAML file online
 
 2. **Clone the repository** and view locally:
    ```bash
-   git clone https://github.com/linkml/linkml-qudt.git
+   git clone https://github.com/vladistan/linkml-qudt.git
    cd linkml-qudt
    cat src/linkml_qudt/schema/linkml_qudt.yaml
    ```

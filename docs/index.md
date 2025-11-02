@@ -1,9 +1,5 @@
 # QUDT LinkML Model
 
-<div style="text-align: center; margin: 2em 0;">
-  <img src="https://qudt.org/2.1/catalog/qudt-catalog-page_files/qudt-logo-300x110.png" alt="QUDT Logo" style="max-width: 300px;">
-</div>
-
 ## Welcome
 
 This is a **LinkML model** for the [QUDT (Quantities, Units, Dimensions and Types)](https://qudt.org) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.
@@ -27,7 +23,7 @@ This is a **LinkML model** for the [QUDT (Quantities, Units, Dimensions and Type
 
     View the LinkML YAML schema
 
-- :material-github: **[GitHub Repository](https://github.com/linkml/linkml-qudt)**
+- :material-github: **[GitHub Repository](https://github.com/vladistan/linkml-qudt)**
 
     Access the source code, issues, and contribute
 
@@ -91,7 +87,7 @@ QUDT is an ontology that provides:
 
 ```bash
 # Clone the repository
-git clone https://github.com/linkml/linkml-qudt.git
+git clone https://github.com/vladistan/linkml-qudt.git
 cd linkml-qudt
 
 # Install dependencies
@@ -115,4 +111,4 @@ This is an early-stage project and we welcome contributions! See the [About page
 
 - [QUDT Website](https://qudt.org)
 - [LinkML Documentation](https://linkml.io)
-- [GitHub Repository](https://github.com/linkml/linkml-qudt)
+- [GitHub Repository](https://github.com/vladistan/linkml-qudt)

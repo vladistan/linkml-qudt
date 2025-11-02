@@ -2,8 +2,8 @@
 site_name: QUDT LinkML Model
 site_description: LinkML model for QUDT (Quantities, Units, Dimensions and Types) ontology
 site_author: QUDT LinkML Contributors
-repo_url: https://github.com/linkml/linkml-qudt
-repo_name: linkml/linkml-qudt
+repo_url: https://github.com/vladistan/linkml-qudt
+repo_name: vladistan/linkml-qudt
 
 theme:
   name: material
@@ -76,7 +76,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/linkml/linkml-qudt
+      link: https://github.com/vladistan/linkml-qudt
     - icon: fontawesome/solid/globe
       link: https://qudt.org
 
