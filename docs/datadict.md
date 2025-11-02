@@ -1,1 +1,1 @@
-../project/datadict.md
+../datadict/datadict.md

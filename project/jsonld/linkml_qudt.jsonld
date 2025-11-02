@@ -1,11 +1,13 @@
 {
   "name": "qudt",
-  "description": "qudt",
+  "description": "This is a LinkML representation of the QUDT (Quantities, Units, Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.",
+  "title": "QUDT Ontology in LinkML",
   "id": "http://qudt.org/3.1.6/schema/qudt",
+  "version": "0.0.1",
   "imports": [
     "linkml:types"
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "CC-BY-4.0",
   "prefixes": [
     {
       "prefix_prefix": "linkml",
@@ -9727,9 +9729,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-10-28T10:27:25",
-  "source_file_size": 50770,
-  "generation_date": "2025-11-01T18:32:12",
+  "source_file_date": "2025-11-02T06:47:09",
+  "source_file_size": 51080,
+  "generation_date": "2025-11-02T17:17:06",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

@@ -1,4 +1,5 @@
 # metamodel_version: 1.7.0
+# version: 0.0.1
 BASE <https://w3id.org/None/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>

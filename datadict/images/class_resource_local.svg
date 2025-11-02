@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="class" role="graphics-document document" viewBox="0 0 427.96875 234" height="234" class="classDiagram" width="427.96875" id="container">
+  <style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#container g.classGroup text .title{font-weight:bolder;}#container .nodeLabel,#container .edgeLabel{color:#131300;}#container .edgeLabel .label rect{fill:#ECECFF;}#container .label text{fill:#131300;}#container .labelBkg{background:#ECECFF;}#container .edgeLabel .label span{background:#ECECFF;}#container .classTitle{font-weight:bolder;}#container .node rect,#container .node circle,#container .node ellipse,#container .node polygon,#container .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#container .divider{stroke:#9370DB;stroke-width:1;}#container g.clickable{cursor:pointer;}#container g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#container g.classGroup line{stroke:#9370DB;stroke-width:1;}#container .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#container .classLabel .label{fill:#9370DB;font-size:10px;}#container .relation{stroke:#333333;stroke-width:1;fill:none;}#container .dashed-line{stroke-dasharray:3;}#container .dotted-line{stroke-dasharray:1 2;}#container #compositionStart,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #compositionEnd,#container .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #dependencyStart,#container .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#container #extensionStart,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #extensionEnd,#container .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationStart,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #aggregationEnd,#container .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#container #lollipopStart,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container #lollipopEnd,#container .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#container .edgeTerminals{font-size:11px;line-height:initial;}#container .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+  <g>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="container_class-aggregationStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="container_class-aggregationEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="container_class-extensionStart">
+        <path d="M 1,7 L18,13 V 1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="container_class-extensionEnd">
+        <path d="M 1,1 V 13 L18,7 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="container_class-compositionStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="container_class-compositionEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="container_class-dependencyStart">
+        <path d="M 5,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="container_class-dependencyEnd">
+        <path d="M 18,7 L9,13 L14,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="container_class-lollipopStart">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="container_class-lollipopEnd">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <g class="root">
+      <g class="clusters"/>
+      <g class="edgePaths">
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Resource_UCUMcs_1" d="M140.043,77.102L124.856,83.751C109.669,90.401,79.295,103.701,64.109,114.517C48.922,125.333,48.922,133.667,48.922,137.833L48.922,142"/>
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Resource_UCUMcs_term_2" d="M201.938,110L201.938,111.167C201.938,112.333,201.938,114.667,201.938,120C201.938,125.333,201.938,133.667,201.938,137.833L201.938,142"/>
+        <path marker-start="url(#container_class-extensionStart)" style=";" class="edge-thickness-normal edge-pattern-solid relation" id="id_Resource_valueUnion_3" d="M264.022,75.201L281.185,82.167C298.348,89.134,332.674,103.067,349.837,114.2C367,125.333,367,133.667,367,137.833L367,142"/>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, -12)" class="label">
+            <foreignObject height="24" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                <span class="edgeLabel" style=";display: inline-block"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g transform="translate(201.9375, 50)" id="classId-Resource-0" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-45.40625 -42 L45.40625 -42 L45.40625 42 L-45.40625 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-45.40625 -42 C-9.359270743715676 -42, 26.687708512568648 -42, 45.40625 -42 M-45.40625 -42 C-9.609811769275218 -42, 26.186626461449563 -42, 45.40625 -42 M45.40625 -42 C45.40625 -20.626933037473574, 45.40625 0.7461339250528525, 45.40625 42 M45.40625 -42 C45.40625 -20.269154871105258, 45.40625 1.4616902577894848, 45.40625 42 M45.40625 42 C15.582756703952295 42, -14.24073659209541 42, -45.40625 42 M45.40625 42 C26.28122768700743 42, 7.15620537401486 42, -45.40625 42 M-45.40625 42 C-45.40625 17.603931827292847, -45.40625 -6.792136345414306, -45.40625 -42 M-45.40625 42 C-45.40625 8.839092634788514, -45.40625 -24.32181473042297, -45.40625 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-33.40625, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="66.8125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 117px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>Resource</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-33.40625, 30)" class="members-group text"/>
+          <g transform="translate(-33.40625, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-45.40625 6 C-20.93931782033687 6, 3.5276143593262574 6, 45.40625 6 M-45.40625 6 C-11.342041255733953 6, 22.722167488532094 6, 45.40625 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-45.40625 24 C-20.59167106620295 24, 4.2229078675941025 24, 45.40625 24 M-45.40625 24 C-26.46238870203221 24, -7.518527404064422 24, 45.40625 24"/>
+          </g>
+        </g>
+        <g transform="translate(48.921875, 184)" id="classId-UCUMcs-1" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-40.921875 -42 L40.921875 -42 L40.921875 42 L-40.921875 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-40.921875 -42 C-19.966347729671863 -42, 0.9891795406562736 -42, 40.921875 -42 M-40.921875 -42 C-18.750165721269827 -42, 3.421543557460346 -42, 40.921875 -42 M40.921875 -42 C40.921875 -13.211008798498913, 40.921875 15.577982403002174, 40.921875 42 M40.921875 -42 C40.921875 -19.81884880017514, 40.921875 2.362302399649721, 40.921875 42 M40.921875 42 C8.734340154792832 42, -23.453194690414335 42, -40.921875 42 M40.921875 42 C22.559355936269846 42, 4.196836872539691 42, -40.921875 42 M-40.921875 42 C-40.921875 16.134527750767983, -40.921875 -9.730944498464034, -40.921875 -42 M-40.921875 42 C-40.921875 8.760345857743815, -40.921875 -24.47930828451237, -40.921875 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-28.921875, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="57.84375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 108px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>UCUMcs</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-28.921875, 30)" class="members-group text"/>
+          <g transform="translate(-28.921875, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-40.921875 6 C-17.876998669364365 6, 5.16787766127127 6, 40.921875 6 M-40.921875 6 C-10.339785926617651 6, 20.242303146764698 6, 40.921875 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-40.921875 24 C-12.029068805929906 24, 16.863737388140187 24, 40.921875 24 M-40.921875 24 C-11.841862784194287 24, 17.238149431611426 24, 40.921875 24"/>
+          </g>
+        </g>
+        <g transform="translate(201.9375, 184)" id="classId-UCUMcs_term-2" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-62.09375 -42 L62.09375 -42 L62.09375 42 L-62.09375 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.09375 -42 C-24.001830081890063 -42, 14.090089836219875 -42, 62.09375 -42 M-62.09375 -42 C-26.338167383657797 -42, 9.417415232684405 -42, 62.09375 -42 M62.09375 -42 C62.09375 -17.795697086954185, 62.09375 6.40860582609163, 62.09375 42 M62.09375 -42 C62.09375 -16.822153743203998, 62.09375 8.355692513592004, 62.09375 42 M62.09375 42 C36.4190294733182 42, 10.744308946636394 42, -62.09375 42 M62.09375 42 C24.065700937711874 42, -13.962348124576252 42, -62.09375 42 M-62.09375 42 C-62.09375 16.375430528193824, -62.09375 -9.249138943612351, -62.09375 -42 M-62.09375 42 C-62.09375 14.604927466286739, -62.09375 -12.790145067426522, -62.09375 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-50.09375, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="100.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 151px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>UCUMcs_term</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-50.09375, 30)" class="members-group text"/>
+          <g transform="translate(-50.09375, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.09375 6 C-22.09876597306863 6, 17.89621805386274 6, 62.09375 6 M-62.09375 6 C-37.12864754871579 6, -12.163545097431573 6, 62.09375 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-62.09375 24 C-22.567281916148318 24, 16.959186167703365 24, 62.09375 24 M-62.09375 24 C-20.09893873181285 24, 21.8958725363743 24, 62.09375 24"/>
+          </g>
+        </g>
+        <g transform="translate(367, 184)" id="classId-valueUnion-3" class="node default">
+          <g class="basic label-container">
+            <path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-52.96875 -42 L52.96875 -42 L52.96875 42 L-52.96875 42"/>
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-52.96875 -42 C-14.807465969607293 -42, 23.353818060785414 -42, 52.96875 -42 M-52.96875 -42 C-14.774412005679864 -42, 23.419925988640273 -42, 52.96875 -42 M52.96875 -42 C52.96875 -12.687830213579389, 52.96875 16.624339572841222, 52.96875 42 M52.96875 -42 C52.96875 -17.25817427298734, 52.96875 7.4836514540253205, 52.96875 42 M52.96875 42 C18.736032716488012 42, -15.496684567023976 42, -52.96875 42 M52.96875 42 C23.37857009478611 42, -6.211609810427781 42, -52.96875 42 M-52.96875 42 C-52.96875 11.230093169197612, -52.96875 -19.539813661604775, -52.96875 -42 M-52.96875 42 C-52.96875 15.12437910050707, -52.96875 -11.751241798985859, -52.96875 -42"/>
+          </g>
+          <g transform="translate(0, -18)" class="annotation-group text"/>
+          <g transform="translate(-40.96875, -18)" class="label-group text">
+            <g transform="translate(0,-12)" style="font-weight: bolder" class="label">
+              <foreignObject height="24" width="81.9375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 133px; text-align: center;">
+                  <span style="" class="nodeLabel markdown-node-label">
+                    <p>valueUnion</p>
+                  </span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <g transform="translate(-40.96875, 30)" class="members-group text"/>
+          <g transform="translate(-40.96875, 60)" class="methods-group text"/>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-52.96875 6 C-28.188005038025807 6, -3.407260076051614 6, 52.96875 6 M-52.96875 6 C-30.451784207954493 6, -7.934818415908985 6, 52.96875 6"/>
+          </g>
+          <g style="" class="divider">
+            <path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-52.96875 24 C-27.59317158156555 24, -2.2175931631310988 24, 52.96875 24 M-52.96875 24 C-28.026226173514665 24, -3.0837023470293303 24, 52.96875 24"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

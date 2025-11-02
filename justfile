@@ -25,6 +25,7 @@ install:
 clean: _clean_project
   rm -rf tmp
   rm -rf docs/elements
+  rm -rf datadict
 
 # (Re-)Generate project and documentation locally
 
@@ -73,7 +74,8 @@ gen-project kroki_server="https://kroki.r4.v-lad.org":
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{dest}}/images --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
+  mkdir -p datadict/images
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
 # Generate project with SVG diagrams rendered via Kroki server
 [group('model development')]
@@ -85,11 +87,12 @@ gen-project-kroki kroki_server="https://kroki.r4.v-lad.org":
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} {{source_schema_path}} > {{dest}}/datadict.md
+  mkdir -p datadict
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} {{source_schema_path}} > datadict/datadict.md
 
 # Generate project with SVG diagrams saved as separate files
 [group('model development')]
-gen-project-kroki-files kroki_server="https://kroki.r4.v-lad.org" diagram_dir="project/images":
+gen-project-kroki-files kroki_server="https://kroki.r4.v-lad.org":
   uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
   uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
   mv {{dest}}/*.py {{pymodel}}
@@ -97,11 +100,12 @@ gen-project-kroki-files kroki_server="https://kroki.r4.v-lad.org" diagram_dir="p
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{diagram_dir}} --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
+  mkdir -p datadict/images
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
 # Generate project with SVG diagrams with clickable links (for GitHub Pages or other hosted docs)
 [group('model development')]
-gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" diagram_dir="project/images" base_url="https://example.com/schema":
+gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" base_url="https://example.com/schema":
   uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
   uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
   mv {{dest}}/*.py {{pymodel}}
@@ -109,20 +113,21 @@ gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" diagram_dir="
   uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
   mkdir -p {{dest}}/typescript
   uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir {{diagram_dir}} --add-svg-links {{base_url}} --pretty-format-svg {{source_schema_path}} > {{dest}}/datadict.md
+  mkdir -p datadict/images
+  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --add-svg-links {{base_url}} --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
 # Locally serve data dictionary
 [group('model development')]
 serve-data-dict:
-  cd {{dest}} && uv run --group dev grip --wide --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
+  cd datadict && uv run --group dev grip --wide --with-mermaid --case-insensitive-anchors datadict.md localhost:6419 --norefresh
 
 # Update documentation site content (symlink datadict and images to docs/)
 [group('documentation')]
 update-docs:
   rm -f docs/datadict.md
-  ln -s ../{{dest}}/datadict.md docs/datadict.md
+  ln -s ../datadict/datadict.md docs/datadict.md
   rm -rf docs/images
-  ln -s ../{{dest}}/images docs/images
+  ln -s ../datadict/images docs/images
 
 # Serve documentation site locally
 [group('documentation')]
@@ -179,8 +184,8 @@ _serve:
 
 _export-datadict-html:
   @echo "Exporting enhanced data dictionary to HTML..."
-  cd {{dest}} && uv run --group dev grip --with-mermaid --case-insensitive-anchors datadict.md --export datadict.html
-  @echo "Generated: {{dest}}/datadict.html (with visual Mermaid diagrams)"
+  cd datadict && uv run --group dev grip --with-mermaid --case-insensitive-anchors datadict.md --export datadict.html
+  @echo "Generated: datadict/datadict.html (with visual Mermaid diagrams)"
 
 _clean_project:
     #!/usr/bin/env python3
