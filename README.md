@@ -16,14 +16,14 @@ A [LinkML](https://linkml.io) model for the [QUDT (Quantities, Units, Dimensions
 
 ## What This Provides
 
-- Complete QUDT class hierarchy in LinkML format
+- QUDT main ontology class hierarchy in LinkML format
 - Generated artifacts in multiple formats:
   - Python dataclasses and Pydantic models
   - JSON Schema, TypeScript, SQL DDL
-  - OWL/RDF, SHACL, ShEx
+  - OWL/RDF, SHACL, ShEx (OWL is regenerated from LinkML)
   - Protocol Buffers, Prefix maps
-- Comprehensive documentation with interactive diagrams
-- Validation tools and examples
+- Documentation 
+- Validation tools and examples (TODO)
 
 See the **[project/](project/)** directory for all generated artifacts.
 

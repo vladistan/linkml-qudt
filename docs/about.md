@@ -29,10 +29,9 @@ QUDT provides a comprehensive vocabulary for:
 
 This LinkML model provides:
 
-- Comprehensive class hierarchy from QUDT
-- Generated artifacts in multiple formats (Python, TypeScript, JSON Schema, OWL, etc.)
-- Interactive documentation with diagrams
-- Pydantic v2 models for type-safe Python development
+- Class hierarchy from QUDT (so far only main ontology classes, additional ontologies and individuals are coming soon)
+- Generated artifacts in multiple formats (Python, JSON Schema, OWL, etc.)
+- Documentation with diagrams
 
 ## Conversion Process
 

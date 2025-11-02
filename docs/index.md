@@ -20,10 +20,6 @@ This is a **LinkML model** for the [QUDT (Quantities, Units, Dimensions and Type
 
     Browse the comprehensive data dictionary with class diagrams and documentation
 
-- :material-code-json: **[Schema](schema.md)**
-
-    View the LinkML YAML schema
-
 - :material-github: **[GitHub Repository](https://github.com/vladistan/linkml-qudt)**
 
     Access the source code, issues, and contribute
@@ -48,40 +44,6 @@ QUDT is an ontology that provides:
 - **Documentation** - Auto-generate comprehensive documentation
 - **Interoperability** - Bridge between different data formats and systems
 
-## Key Features
-
-=== "Python Integration"
-
-    ```python
-    from linkml_qudt.datamodel.linkml_qudt_pydantic import Unit, Quantity
-
-    # Create a unit
-    meter = Unit(id="http://qudt.org/vocab/unit/M", symbol="m")
-
-    # Work with quantities
-    length = Quantity(value=5.0, unit=meter)
-    ```
-
-=== "Generated Artifacts"
-
-    - **Pydantic Models** - Type-safe Python models
-    - **JSON Schema** - For validation
-    - **OWL/RDF** - Semantic web formats
-    - **SQL DDL** - Database schemas
-    - **TypeScript** - Type definitions
-    - **And more...**
-
-=== "Validation"
-
-    ```bash
-    # Validate instance data
-    linkml-validate -s src/linkml_qudt/schema/linkml_qudt.yaml data.yaml
-
-    # Generate other formats
-    gen-json-schema src/linkml_qudt/schema/linkml_qudt.yaml
-    gen-pydantic src/linkml_qudt/schema/linkml_qudt.yaml
-    ```
-
 ## Get Started
 
 ### Installation
@@ -99,15 +61,10 @@ uv sync --group dev
 ### Explore the Model
 
 - **[Browse the Data Dictionary](datadict.md)** - Visual exploration with class diagrams
-- **[Read About the Project](about.md)** - Conversion process and details
-- **[View the Schema](schema.md)** - Raw LinkML YAML schema
-
-## Contributing
-
-This is an early-stage project and we welcome contributions! See the [About page](about.md#contributing) for areas where help is needed.
+- **[Read About the Project](about.md)** - Details about the conversion process and known issues
+- **[GitHub Repository](https://github.com/vladistan/linkml-qudt)** -- Source code 
 
 ## Resources
 
 - [QUDT Website](https://qudt.org)
 - [LinkML Documentation](https://linkml.io)
-- [GitHub Repository](https://github.com/vladistan/linkml-qudt)
