@@ -70,9 +70,9 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - About: about.md
   - Data Dictionary: datadict.md
   - Schema: schema.md
+  - About: about.md
 
 extra:
   social:
