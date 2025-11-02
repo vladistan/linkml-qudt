@@ -2,9 +2,10 @@
 
 ## Overview
 
-This is a **first draft attempt** to create a [LinkML](https://linkml.io) model from the [QUDT (Quantities, Units, Dimensions and Types)](https://qudt.org) ontology. QUDT is a comprehensive ontology that provides a structured vocabulary for describing physical quantities, units of measure, and their relationships.
+This is a [LinkML](https://linkml.io) model for the [QUDT (Quantities, Units, Dimensions and Types)](https://qudt.org) ontology. QUDT is a comprehensive ontology that provides a structured vocabulary for describing physical quantities, units of measure, and their relationships.
 
-**This is an initial attempt and likely contains numerous issues.** Suggestions and contributions on how to make this more useful are very welcome!
+!!! warning "Early Stage Project"
+    This is a **first draft attempt** at converting the QUDT ontology to LinkML. It likely contains issues and limitations. In a very likely event you find a problem please file a [GitHub Issue](https://github.com/vladistan/linkml-qudt/issues) here. Or submit a pull request with your suggested improvement!
 
 ## Original QUDT Files
 
@@ -36,12 +37,11 @@ The `project/` directory contains various generated artifacts:
 
 ## Conversion Process
 
-This LinkML model was created through a two-step automated conversion
-process. First, the [ROBOT](http://robot.obolibrary.org/) tool was
-used to convert the published QUDT ontology files to OWL Functional
-Syntax (OFN) format. Then, [Schema
-Automator](https://github.com/linkml/schema-automator) was applied
-to generate the LinkML model from the OFN representation.
+This LinkML model was created through an automated conversion process with the following steps:
+
+- Used [ROBOT](http://robot.obolibrary.org/) tool to convert the published QUDT ontology files to OWL Functional Syntax (OFN) format
+- Applied [Schema Automator](https://github.com/linkml/schema-automator) to generate the LinkML model from the OFN representation
+- Made manual corrections to address issues in the automated conversion (see below)
 
 ### Manual Corrections Applied
 
@@ -119,13 +119,13 @@ Visit the live site at: https://vladistan.github.io/linkml-qudt
 
 **We welcome contributions!** This is an early draft and there's much room for improvement. Areas where help is particularly appreciated:
 
-- ✅ Improving the schema structure and class hierarchies
-- ✅ Adding better documentation and examples
-- ✅ Identifying and fixing conversion issues
-- ✅ Adding validation rules and constraints
-- ✅ Creating example data and use cases
-- ✅ Improving alignment with QUDT semantics
-- ✅ Testing and validation
+- Improving the schema structure and class hierarchies
+- Adding better documentation and examples
+- Identifying and fixing conversion issues
+- Adding validation rules and constraints
+- Creating example data and use cases
+- Improving alignment with QUDT semantics
+- Testing and validation
 
 Please open an issue or pull request if you have suggestions or improvements!
 
