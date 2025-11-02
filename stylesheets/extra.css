@@ -1,0 +1,54 @@
+/* Custom styles for QUDT LinkML documentation */
+
+/* Hide the left navigation sidebar - we use tabs at the top instead */
+.md-sidebar--primary {
+    display: none;
+}
+
+/* Adjust grid to not reserve space for the hidden sidebar */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        display: none;
+    }
+    .md-grid {
+        grid-template-columns: 0 1fr;
+    }
+}
+
+/* Increase content width for better use of screen space */
+.md-grid {
+    max-width: 90%;
+}
+
+.md-main__inner {
+    max-width: none;
+}
+
+/* For very wide screens, cap at a reasonable max */
+@media screen and (min-width: 2000px) {
+    .md-grid {
+        max-width: 1800px;
+    }
+}
+
+/* Better spacing for data dictionary tables and diagrams */
+.md-content {
+    max-width: none;
+}
+
+/* Ensure images and diagrams can use the full width */
+.md-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Better table styling for wider content */
+.md-typeset table:not([class]) {
+    display: table;
+    width: 100%;
+}
+
+/* Improve code blocks for wider content */
+.md-typeset pre {
+    max-width: 100%;
+}
