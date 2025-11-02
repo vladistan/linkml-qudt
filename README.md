@@ -1,6 +1,7 @@
 # QUDT LinkML Model
 
 [![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://vladistan.github.io/linkml-qudt/)
+[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-blue?logo=github)](https://codespaces.new/vladistan/linkml-qudt)
 
 A [LinkML](https://linkml.io) model for the [QUDT (Quantities, Units, Dimensions and Types)](https://qudt.org) ontology.
 
