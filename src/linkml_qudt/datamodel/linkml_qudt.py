@@ -1,10 +1,10 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-10-28T10:15:47
+# Generation date: 2025-11-02T17:17:08
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
-# description: qudt
-# license: https://creativecommons.org/publicdomain/zero/1.0/
+# description: This is a LinkML representation of the QUDT (Quantities, Units, Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.
+# license: CC-BY-4.0
 
 import dataclasses
 import re
@@ -60,7 +60,7 @@ from linkml_runtime.linkml_model.types import Boolean, Date, Decimal, Double, Fl
 from linkml_runtime.utils.metamodelcore import Bool, Decimal, URI, XSDDate
 
 metamodel_version = "1.7.0"
-version = None
+version = "0.0.1"
 
 # Namespaces
 DC = CurieNamespace('dc', 'http://purl.org/dc/elements/1.1/')

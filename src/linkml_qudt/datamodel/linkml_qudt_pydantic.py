@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "None"
-version = "None"
+version = "0.0.1"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -79,9 +79,14 @@ class LinkMLMeta(RootModel):
 
 
 linkml_meta = LinkMLMeta({'default_prefix': 'qudt',
-     'description': 'qudt',
+     'description': 'This is a LinkML representation of the QUDT (Quantities, '
+                    'Units, Dimensions and Types) ontology. QUDT provides a '
+                    'comprehensive vocabulary for describing physical quantities, '
+                    'units of measure, and their relationships in a '
+                    'machine-readable format.',
      'id': 'http://qudt.org/3.1.6/schema/qudt',
      'imports': ['linkml:types'],
+     'license': 'CC-BY-4.0',
      'name': 'qudt',
      'prefixes': {'dc': {'prefix_prefix': 'dc',
                          'prefix_reference': 'http://purl.org/dc/elements/1.1/'},
@@ -105,7 +110,8 @@ linkml_meta = LinkMLMeta({'default_prefix': 'qudt',
                            'prefix_reference': 'http://www.linkedmodel.org/schema/vaem#'},
                   'voag': {'prefix_prefix': 'voag',
                            'prefix_reference': 'http://voag.linkedmodel.org/schema/voag#'}},
-     'source_file': 'src/linkml_qudt/schema/linkml_qudt.yaml'} )
+     'source_file': 'src/linkml_qudt/schema/linkml_qudt.yaml',
+     'title': 'QUDT Ontology in LinkML'} )
 
 
 class Thing(ConfiguredBaseModel):
