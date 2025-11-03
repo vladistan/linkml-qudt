@@ -7,10 +7,6 @@ gen_project_excludes := "-X graphql -X markdown -X excel"
 _default:
     @just --list
 
-# Install project dependencies
-[group('project management')]
-install:
-  uv sync --group dev
 
 # Clean all generated files
 [group('project management')]
@@ -52,9 +48,6 @@ gen-doc: _gen-yaml
 [group('model development')]
 testdoc: update-docs _serve
 
-gen-python:
-  uv run --group dev gen-project -d  src/linkml_qudt/datamodel -I python {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
 
 # Generate project files including Python data model
 [group('model development')]
@@ -124,13 +117,6 @@ build-docs: update-docs
 deploy-docs: update-docs
   uv run --group dev mkdocs gh-deploy --force
 
-#gen-project
-
-# Status
-[group('project management')]
-status:
-  @echo "Project: {{schema_name}}"
-  @echo "Source: {{source_schema_path}}"
 
 
 # Test schema generation
