@@ -1292,7 +1292,7 @@ class CountingUnit(DimensionlessUnit):
 class CurrencyUnit(DimensionlessUnit):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:CurrencyUnit',
          'comments': ['Currency Units have their own subclass of unit because: (a) '
-                      "they have additonal properites such as 'country' and (b) their "
+                      "they have additional properties such as 'country' and (b) their "
                       'URIs do not conform to the same rules as other units.^^rdf:HTML',
                       'Used for all units that express currency.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
@@ -1440,7 +1440,7 @@ class UCUMcs(Resource):
     pass
 
 
-class UCUMcs-term(Resource):
+class UCUMcs_term(Resource):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'comments': ['Lexical pattern for the terminal symbols in the case-sensitive '
                       'version of UCUM code'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})

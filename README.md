@@ -22,7 +22,7 @@ A [LinkML](https://linkml.io) model for the [QUDT (Quantities, Units, Dimensions
   - JSON Schema, TypeScript, SQL DDL
   - OWL/RDF, SHACL, ShEx (OWL is regenerated from LinkML)
   - Protocol Buffers, Prefix maps
-- Documentation 
+- Documentation
 - Validation tools and examples (TODO)
 
 See the **[project/](project/)** directory for all generated artifacts.

@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-02T17:17:08
+# Generation date: 2025-11-02T18:54:16
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt

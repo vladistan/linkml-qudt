@@ -666,7 +666,7 @@ CardinalityType:
 
 #### Referenced by:
 
- *  **[Datatype](#datatype)** : cardinality  <sub>0..\*</sub> 
+ *  **[Datatype](#datatype)** : cardinality  <sub>0..\*</sub>
 
 
 
@@ -831,7 +831,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Unit](#unit)** : hasFactorUnit  <sub>0..\*</sub> 
+ *  **[Unit](#unit)** : hasFactorUnit  <sub>0..\*</sub>
 
 
 
@@ -1289,7 +1289,7 @@ CountingUnit:
 
 
 
-Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units.
+Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units.
 
 Used for all units that express currency.
 
@@ -1458,7 +1458,7 @@ DataEncoding:
 
 #### Referenced by:
 
- *  **[Quantifiable](#quantifiable)** : dataEncoding  <sub>0..\*</sub> 
+ *  **[Quantifiable](#quantifiable)** : dataEncoding  <sub>0..\*</sub>
 
 
 
@@ -1642,9 +1642,9 @@ Datatype:
 
 #### Referenced by:
 
- *  **[Datatype](#datatype)** : basis  <sub>0..\*</sub> 
- *  **[Quantifiable](#quantifiable)** : datatype  <sub>0..\*</sub> 
- *  **[ScalarDatatype](#scalardatatype)** : rdfsDatatype  <sub>0..\*</sub> 
+ *  **[Datatype](#datatype)** : basis  <sub>0..\*</sub>
+ *  **[Quantifiable](#quantifiable)** : datatype  <sub>0..\*</sub>
+ *  **[ScalarDatatype](#scalardatatype)** : rdfsDatatype  <sub>0..\*</sub>
 
 
 
@@ -2101,7 +2101,7 @@ Encoding:
 
 #### Referenced by:
 
- *  **[DataEncoding](#dataencoding)** : encoding  <sub>0..\*</sub> 
+ *  **[DataEncoding](#dataencoding)** : encoding  <sub>0..\*</sub>
 
 
 
@@ -2161,8 +2161,8 @@ EndianType:
 
 #### Referenced by:
 
- *  **[DataEncoding](#dataencoding)** : bitOrder  <sub>0..\*</sub> 
- *  **[DataEncoding](#dataencoding)** : byteOrder  <sub>0..\*</sub> 
+ *  **[DataEncoding](#dataencoding)** : bitOrder  <sub>0..\*</sub>
+ *  **[DataEncoding](#dataencoding)** : byteOrder  <sub>0..\*</sub>
 
 
 
@@ -2304,9 +2304,9 @@ EnumeratedValue:
 
 #### Referenced by:
 
- *  **[EnumeratedQuantity](#enumeratedquantity)** : enumeratedValue  <sub>0..\*</sub> 
- *  **[Enumeration](#enumeration)** : default  <sub>0..\*</sub> 
- *  **[Enumeration](#enumeration)** : element  <sub>1..\*</sub> 
+ *  **[EnumeratedQuantity](#enumeratedquantity)** : enumeratedValue  <sub>0..\*</sub>
+ *  **[Enumeration](#enumeration)** : default  <sub>0..\*</sub>
+ *  **[Enumeration](#enumeration)** : element  <sub>1..\*</sub>
 
 
 
@@ -2379,8 +2379,8 @@ Enumeration:
 
 #### Referenced by:
 
- *  **[EnumeratedQuantity](#enumeratedquantity)** : enumeration  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : baseDimensionEnumeration  <sub>0..\*</sub> 
+ *  **[EnumeratedQuantity](#enumeratedquantity)** : enumeration  <sub>0..\*</sub>
+ *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : baseDimensionEnumeration  <sub>0..\*</sub>
 
 
 
@@ -2904,8 +2904,8 @@ MathsFunctionType:
 
 #### Referenced by:
 
- *  **[ScaleType](#scaletype)** : permissibleMaths  <sub>0..\*</sub> 
- *  **[Scale](#scale)** : permissibleMaths  <sub>0..\*</sub> 
+ *  **[ScaleType](#scaletype)** : permissibleMaths  <sub>0..\*</sub>
+ *  **[Scale](#scale)** : permissibleMaths  <sub>0..\*</sub>
 
 
 
@@ -3147,7 +3147,7 @@ OrderedType:
 
 #### Referenced by:
 
- *  **[Datatype](#datatype)** : orderedType  <sub>0..\*</sub> 
+ *  **[Datatype](#datatype)** : orderedType  <sub>0..\*</sub>
 
 
 
@@ -3391,8 +3391,8 @@ PhysicalConstant:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#physicalconstant)** : exactMatch  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : applicablePhysicalConstant  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#physicalconstant)** : exactMatch  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : applicablePhysicalConstant  <sub>0..\*</sub>
 
 
 
@@ -3594,9 +3594,9 @@ Prefix:
 
 #### Referenced by:
 
- *  **[Prefix](#prefix)** : exactMatch  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : prefix  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : prefix  <sub>0..\*</sub> 
+ *  **[Prefix](#prefix)** : exactMatch  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : prefix  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : prefix  <sub>0..\*</sub>
 
 
 
@@ -3682,17 +3682,17 @@ Quantifiable:
 
 
 
-<p class=\"lm-para\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. 
-  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the 
-  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific 
-  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as 
+<p class=\"lm-para\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.
+  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the
+  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific
+  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as
   the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
-<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, 
-velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p> 
-<p class=\"lm-para\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity 
-kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance 
-divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these 
-expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded 
+<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points,
+velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p>
+<p class=\"lm-para\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity
+kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance
+divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these
+expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded
 as \"fundamental\" in this sense.</p>
 <p class=\"lm-para\">A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.</p>
 
@@ -3898,17 +3898,17 @@ QuantityKind:
 
 #### Referenced by:
 
- *  **[AbstractQuantityKind](#abstractquantitykind)** : broader  <sub>0..1</sub> 
- *  **[BaseDimensionMagnitude](#basedimensionmagnitude)** : hasBaseQuantityKind  <sub>1..\*</sub> 
- *  **[QuantityKindDimensionVector](#quantitykinddimensionvector)** : hasReferenceQuantityKind  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : exactMatch  <sub>0..\*</sub> 
- *  **[QuantityType](#quantitytype)** : value  <sub>0..\*</sub> 
- *  **[Quantity](#quantity)** : hasQuantityKind  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasBaseQuantityKind  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasQuantityKind  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : systemDerivedQuantityKind  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : hasQuantityKind  <sub>0..\*</sub> 
- *  **[UserQuantityKind](#userquantitykind)** : hasQuantityKind  <sub>1..\*</sub> 
+ *  **[AbstractQuantityKind](#abstractquantitykind)** : broader  <sub>0..1</sub>
+ *  **[BaseDimensionMagnitude](#basedimensionmagnitude)** : hasBaseQuantityKind  <sub>1..\*</sub>
+ *  **[QuantityKindDimensionVector](#quantitykinddimensionvector)** : hasReferenceQuantityKind  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : exactMatch  <sub>0..\*</sub>
+ *  **[QuantityType](#quantitytype)** : value  <sub>0..\*</sub>
+ *  **[Quantity](#quantity)** : hasQuantityKind  <sub>0..\*</sub>
+ *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasBaseQuantityKind  <sub>0..\*</sub>
+ *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasQuantityKind  <sub>0..\*</sub>
+ *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : systemDerivedQuantityKind  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : hasQuantityKind  <sub>0..\*</sub>
+ *  **[UserQuantityKind](#userquantitykind)** : hasQuantityKind  <sub>1..\*</sub>
 
 
 
@@ -4026,13 +4026,13 @@ QuantityKindDimensionVector:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#physicalconstant)** : hasDimensionVector  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : hasDimensionVector  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : qkdvDenominator  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : qkdvNumerator  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : hasDimensionVector  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : qkdvDenominator  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : qkdvNumerator  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#physicalconstant)** : hasDimensionVector  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : hasDimensionVector  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : qkdvDenominator  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : qkdvNumerator  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : hasDimensionVector  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : qkdvDenominator  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : qkdvNumerator  <sub>0..\*</sub>
 
 
 
@@ -4613,7 +4613,7 @@ QuantityKindDimensionVector_SI:
 
 #### Referenced by:
 
- *  **[QuantityKind](#quantitykind)** : dimensionVectorForSI  <sub>0..\*</sub> 
+ *  **[QuantityKind](#quantitykind)** : dimensionVectorForSI  <sub>0..\*</sub>
 
 
 
@@ -4751,7 +4751,7 @@ QuantityValue:
 
 #### Referenced by:
 
- *  **[Quantity](#quantity)** : quantityValue  <sub>0..\*</sub> 
+ *  **[Quantity](#quantity)** : quantityValue  <sub>0..\*</sub>
 
 
 
@@ -4911,7 +4911,7 @@ Rule:
 
 #### Referenced by:
 
- *  **[Concept](#concept)** : hasRule  <sub>0..\*</sub> 
+ *  **[Concept](#concept)** : hasRule  <sub>0..\*</sub>
 
 
 
@@ -4971,7 +4971,7 @@ RuleType:
 
 #### Referenced by:
 
- *  **[Rule](#rule)** : ruleType  <sub>0..\*</sub> 
+ *  **[Rule](#rule)** : ruleType  <sub>0..\*</sub>
 
 
 
@@ -5236,7 +5236,7 @@ ScaleType:
 
 #### Referenced by:
 
- *  **[Scale](#scale)** : scaleType  <sub>0..\*</sub> 
+ *  **[Scale](#scale)** : scaleType  <sub>0..\*</sub>
 
 
 
@@ -5573,7 +5573,7 @@ SystemOfQuantityKinds:
 
 #### Referenced by:
 
- *  **[QuantityKind](#quantitykind)** : belongsToSystemOfQuantities  <sub>0..\*</sub> 
+ *  **[QuantityKind](#quantitykind)** : belongsToSystemOfQuantities  <sub>0..\*</sub>
 
 
 
@@ -5672,13 +5672,13 @@ SystemOfUnits:
 
 #### Referenced by:
 
- *  **[PhysicalConstant](#physicalconstant)** : applicableSystem  <sub>0..\*</sub> 
- *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasUnitSystem  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : applicableSystem  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : definedUnitOfSystem  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : derivedCoherentUnitOfSystem  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : derivedUnitOfSystem  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : isUnitOfSystem  <sub>0..\*</sub> 
+ *  **[PhysicalConstant](#physicalconstant)** : applicableSystem  <sub>0..\*</sub>
+ *  **[SystemOfQuantityKinds](#systemofquantitykinds)** : hasUnitSystem  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : applicableSystem  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : definedUnitOfSystem  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : derivedCoherentUnitOfSystem  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : derivedUnitOfSystem  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : isUnitOfSystem  <sub>0..\*</sub>
 
 
 
@@ -5787,8 +5787,8 @@ TransformType:
 
 #### Referenced by:
 
- *  **[ScaleType](#scaletype)** : permissibleTransformation  <sub>0..\*</sub> 
- *  **[Scale](#scale)** : permissibleTransformation  <sub>0..\*</sub> 
+ *  **[ScaleType](#scaletype)** : permissibleTransformation  <sub>0..\*</sub>
+ *  **[Scale](#scale)** : permissibleTransformation  <sub>0..\*</sub>
 
 
 
@@ -5823,7 +5823,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Unit](#unit)** : ucumCode  <sub>0..\*</sub> 
+ *  **[Unit](#unit)** : ucumCode  <sub>0..\*</sub>
 
 
 
@@ -5858,7 +5858,7 @@ This class has no attributes
 
 #### Referenced by:
 
- *  **[Prefix](#prefix)** : ucumCode  <sub>0..\*</sub> 
+ *  **[Prefix](#prefix)** : ucumCode  <sub>0..\*</sub>
 
 
 
@@ -6044,26 +6044,26 @@ Unit:
 
 #### Referenced by:
 
- *  **[ContextualUnit](#contextualunit)** : broader  <sub>0..1</sub> 
- *  **[PhysicalConstant](#physicalconstant)** : applicableUnit  <sub>0..\*</sub> 
- *  **[Quantifiable](#quantifiable)** : hasUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableCGSUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableISOUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableImperialUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableSIUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableUSCustomaryUnit  <sub>0..\*</sub> 
- *  **[QuantityKind](#quantitykind)** : applicableUnit  <sub>0..\*</sub> 
- *  **[QuantityValue](#quantityvalue)** : hasUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasAllowedUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasBaseUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasCoherentUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasDefinedUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasDerivedCoherentUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasDerivedUnit  <sub>0..\*</sub> 
- *  **[SystemOfUnits](#systemofunits)** : hasUnit  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : exactMatch  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : scalingOf  <sub>0..\*</sub> 
- *  **[Unit](#unit)** : hasReciprocalUnit  <sub>0..\*</sub> 
+ *  **[ContextualUnit](#contextualunit)** : broader  <sub>0..1</sub>
+ *  **[PhysicalConstant](#physicalconstant)** : applicableUnit  <sub>0..\*</sub>
+ *  **[Quantifiable](#quantifiable)** : hasUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableCGSUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableISOUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableImperialUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableSIUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableUSCustomaryUnit  <sub>0..\*</sub>
+ *  **[QuantityKind](#quantitykind)** : applicableUnit  <sub>0..\*</sub>
+ *  **[QuantityValue](#quantityvalue)** : hasUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasAllowedUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasBaseUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasCoherentUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasDefinedUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasDerivedCoherentUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasDerivedUnit  <sub>0..\*</sub>
+ *  **[SystemOfUnits](#systemofunits)** : hasUnit  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : exactMatch  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : scalingOf  <sub>0..\*</sub>
+ *  **[Unit](#unit)** : hasReciprocalUnit  <sub>0..\*</sub>
 
 
 
@@ -6732,4 +6732,3 @@ This class has no attributes
 | <a id="website"></a>**website** | <sub>0..\*</sub><br/>string |  |
 | <a id="width"></a>**width** | <sub>0..\*</sub><br/>string | [Figure](#figure) |
 | <a id="wikidatamatch"></a>**wikidataMatch** | <sub>0..\*</sub><br/>uri | [AngleUnit](#angleunit), [BinaryPrefix](#binaryprefix), [CardinalityType](#cardinalitytype), [Comment](#comment), [ContextualUnit](#contextualunit), [CountingUnit](#countingunit), [CurrencyUnit](#currencyunit), [DecimalPrefix](#decimalprefix), [DerivedUnit](#derivedunit), [DimensionlessUnit](#dimensionlessunit), [EndianType](#endiantype), [EnumeratedValue](#enumeratedvalue), [LogarithmicUnit](#logarithmicunit), [NISTSP811Comment](#nistsp811comment), [OrderedType](#orderedtype), [PlaneAngleUnit](#planeangleunit), [Prefix](#prefix), [QuantityKind](#quantitykind), [QuantityType](#quantitytype), [Rule](#rule), [RuleType](#ruletype), [ScaleType](#scaletype), [SolidAngleUnit](#solidangleunit), [SystemOfUnits](#systemofunits), [TransformType](#transformtype), [Unit](#unit), [Verifiable](#verifiable) |
-

@@ -77,18 +77,6 @@ gen-project kroki_server="https://kroki.r4.v-lad.org":
   mkdir -p datadict/images
   uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
-# Generate project with SVG diagrams rendered via Kroki server
-[group('model development')]
-gen-project-kroki kroki_server="https://kroki.r4.v-lad.org":
-  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
-  mv {{dest}}/*.py {{pymodel}}
-  mkdir -p {{dest}}/owl
-  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
-  mkdir -p {{dest}}/typescript
-  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
-  mkdir -p datadict
-  uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} {{source_schema_path}} > datadict/datadict.md
 
 # Generate project with SVG diagrams saved as separate files
 [group('model development')]

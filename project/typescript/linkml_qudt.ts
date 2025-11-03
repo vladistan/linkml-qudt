@@ -477,6 +477,3 @@ export interface UCUMcs-term extends Resource {
 
 export interface ValueUnion extends Resource {
 }
-
-
-

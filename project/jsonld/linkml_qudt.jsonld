@@ -7565,7 +7565,7 @@
       "name": "CurrencyUnit",
       "definition_uri": "https://w3id.org/None/CurrencyUnit",
       "comments": [
-        "Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units.^^rdf:HTML",
+        "Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units.^^rdf:HTML",
         "Used for all units that express currency.^^rdf:HTML"
       ],
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -9729,9 +9729,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-11-02T06:47:09",
-  "source_file_size": 51080,
-  "generation_date": "2025-11-02T17:17:06",
+  "source_file_date": "2025-11-02T18:49:48",
+  "source_file_size": 51082,
+  "generation_date": "2025-11-02T18:54:14",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

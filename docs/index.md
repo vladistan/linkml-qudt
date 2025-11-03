@@ -62,7 +62,7 @@ uv sync --group dev
 
 - **[Browse the Data Dictionary](datadict.md)** - Visual exploration with class diagrams
 - **[Read About the Project](about.md)** - Details about the conversion process and known issues
-- **[GitHub Repository](https://github.com/vladistan/linkml-qudt)** -- Source code 
+- **[GitHub Repository](https://github.com/vladistan/linkml-qudt)** -- Source code
 
 ## Resources
 

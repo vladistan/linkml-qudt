@@ -155,8 +155,8 @@ classes:
     class_uri: qudt:CountingUnit
   CurrencyUnit:
     comments:
-    - 'Currency Units have their own subclass of unit because: (a) they have additonal
-      properites such as ''country'' and (b) their URIs do not conform to the same
+    - 'Currency Units have their own subclass of unit because: (a) they have additional
+      properties such as ''country'' and (b) their URIs do not conform to the same
       rules as other units.^^rdf:HTML'
     - Used for all units that express currency.^^rdf:HTML
     is_a: DimensionlessUnit
