@@ -1,15 +1,7 @@
 # Environment variables with defaults
 schema_name := 'linkml_qudt'
-source_schema_dir := "src" / schema_name / "schema"
+source_schema_path := "src/linkml_qudt/schema/linkml_qudt.yaml"
 gen_project_excludes := "-X graphql -X markdown -X excel"
-
-# Directory variables
-src := "src"
-dest := "project"
-pymodel := src / schema_name / "datamodel"
-source_schema_path := source_schema_dir / schema_name + ".yaml"
-docdir := "docs/elements"  # Directory for generated documentation
-merged_schema_path := "docs/schema" / schema_name + ".yaml"
 
 # List all commands as default command. The prefix "_" hides the command.
 _default:
@@ -45,13 +37,13 @@ test: _test-schema _test-python _test-examples
 # Run linting
 [group('model development')]
 lint:
-  uv run --group dev linkml-lint {{source_schema_dir}}
+  uv run --group dev linkml-lint src/linkml_qudt/schema
 
 
 # Generate md documentation for the schema
 [group('model development')]
 gen-doc: _gen-yaml
-  uv run --group dev gen-doc -d {{docdir}} {{source_schema_path}}
+  uv run --group dev gen-doc -d docs/elements {{source_schema_path}}
 
 
 
@@ -61,19 +53,19 @@ gen-doc: _gen-yaml
 testdoc: update-docs _serve
 
 gen-python:
-  uv run --group dev gen-project -d  {{pymodel}} -I python {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
+  uv run --group dev gen-project -d  src/linkml_qudt/datamodel -I python {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
 
 # Generate project files including Python data model
 [group('model development')]
 gen-project kroki_server="https://kroki.r4.v-lad.org":
-  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
-  mv {{dest}}/*.py {{pymodel}}
-  mkdir -p {{dest}}/owl
-  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
-  mkdir -p {{dest}}/typescript
-  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-project {{gen_project_excludes}} -d project {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
+  mv project/*.py src/linkml_qudt/datamodel
+  mkdir -p project/owl
+  uv run --group dev gen-owl {{source_schema_path}} > project/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p project/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > project/typescript/{{schema_name}}.ts || true ; \
   mkdir -p datadict/images
   uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
@@ -81,26 +73,26 @@ gen-project kroki_server="https://kroki.r4.v-lad.org":
 # Generate project with SVG diagrams saved as separate files
 [group('model development')]
 gen-project-kroki-files kroki_server="https://kroki.r4.v-lad.org":
-  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
-  mv {{dest}}/*.py {{pymodel}}
-  mkdir -p {{dest}}/owl
-  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
-  mkdir -p {{dest}}/typescript
-  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-project {{gen_project_excludes}} -d project {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
+  mv project/*.py src/linkml_qudt/datamodel
+  mkdir -p project/owl
+  uv run --group dev gen-owl {{source_schema_path}} > project/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p project/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > project/typescript/{{schema_name}}.ts || true ; \
   mkdir -p datadict/images
   uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
 # Generate project with SVG diagrams with clickable links (for GitHub Pages or other hosted docs)
 [group('model development')]
 gen-project-kroki-linked kroki_server="https://kroki.r4.v-lad.org" base_url="https://example.com/schema":
-  uv run --group dev gen-project {{gen_project_excludes}} -d {{dest}} {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > {{pymodel}}/{{schema_name}}_pydantic.py
-  mv {{dest}}/*.py {{pymodel}}
-  mkdir -p {{dest}}/owl
-  uv run --group dev gen-owl {{source_schema_path}} > {{dest}}/owl/{{schema_name}}.owl.ttl || true ; \
-  mkdir -p {{dest}}/typescript
-  uv run --group dev gen-typescript {{source_schema_path}} > {{dest}}/typescript/{{schema_name}}.ts || true ; \
+  uv run --group dev gen-project {{gen_project_excludes}} -d project {{source_schema_path}}
+  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
+  mv project/*.py src/linkml_qudt/datamodel
+  mkdir -p project/owl
+  uv run --group dev gen-owl {{source_schema_path}} > project/owl/{{schema_name}}.owl.ttl || true ; \
+  mkdir -p project/typescript
+  uv run --group dev gen-typescript {{source_schema_path}} > project/typescript/{{schema_name}}.ts || true ; \
   mkdir -p datadict/images
   uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --add-svg-links {{base_url}} --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
 
@@ -164,7 +156,7 @@ _test-examples: _ensure_examples_output
 # Generate merged model
 _gen-yaml:
   -mkdir -p docs/schema
-  uv run --group dev gen-yaml {{source_schema_path}} > {{merged_schema_path}}
+  uv run --group dev gen-yaml {{source_schema_path}} > docs/schema/linkml_qudt.yaml
 
 # Run documentation server
 _serve:
@@ -179,11 +171,11 @@ _clean_project:
     #!/usr/bin/env python3
     import shutil, pathlib
     # remove the generated project files
-    for d in pathlib.Path("{{dest}}").iterdir():
+    for d in pathlib.Path("project").iterdir():
       if d.is_dir():
         shutil.rmtree(d, ignore_errors=True)
     # remove the generated python data model
-    for d in pathlib.Path("{{pymodel}}").iterdir():
+    for d in pathlib.Path("src/linkml_qudt/datamodel").iterdir():
       if d.name == "__init__.py":
         continue
       print(f'removing "{d}"')
