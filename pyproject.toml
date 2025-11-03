@@ -18,9 +18,9 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-linkml-runtime = { path = "../linkml-runtime", editable = true }
 linkml = { path = "../linkml", editable = true }
-grip = { git = "ssh://git@github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
+linkml-runtime = { path = "../linkml-runtime", editable = true }
+grip = { git = "https://github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
 
 [dependency-groups]
 dev = [

@@ -7,19 +7,12 @@ gen_project_excludes := "-X graphql -X markdown -X excel"
 _default:
     @just --list
 
-# Install project dependencies
-[group('project management')]
-install:
-  uv sync --group dev
-
 # Clean all generated files
 [group('project management')]
 clean: _clean_project
   rm -rf tmp
   rm -rf docs/elements
   rm -rf datadict
-
-# (Re-)Generate project and documentation locally
 
 [group('model development')]
 site: gen-project
@@ -28,7 +21,6 @@ site: gen-project
 [group('deployment')]
 deploy: site
   mkd-gh-deploy
-
 
 # Run all tests
 [group('model development')]
@@ -39,22 +31,14 @@ test: _test-schema _test-python _test-examples
 lint:
   uv run --group dev linkml-lint src/linkml_qudt/schema
 
-
 # Generate md documentation for the schema
 [group('model development')]
 gen-doc: _gen-yaml
   uv run --group dev gen-doc -d docs/elements {{source_schema_path}}
 
-
-
-
 # Build docs and run test server
 [group('model development')]
 testdoc: update-docs _serve
-
-gen-python:
-  uv run --group dev gen-project -d  src/linkml_qudt/datamodel -I python {{source_schema_path}}
-  uv run --group dev gen-pydantic {{source_schema_path}} > src/linkml_qudt/datamodel/{{schema_name}}_pydantic.py
 
 # Generate project files including Python data model
 [group('model development')]
@@ -68,7 +52,6 @@ gen-project kroki_server="https://kroki.r4.v-lad.org":
   uv run --group dev gen-typescript {{source_schema_path}} > project/typescript/{{schema_name}}.ts || true ; \
   mkdir -p datadict/images
   uv run --group dev gen-markdown-datadict --debug --anchor-style mkdocs --kroki-server {{kroki_server}} --diagram-dir datadict/images --pretty-format-svg {{source_schema_path}} > datadict/datadict.md
-
 
 # Generate project with SVG diagrams saved as separate files
 [group('model development')]
@@ -123,15 +106,6 @@ build-docs: update-docs
 [group('documentation')]
 deploy-docs: update-docs
   uv run --group dev mkdocs gh-deploy --force
-
-#gen-project
-
-# Status
-[group('project management')]
-status:
-  @echo "Project: {{schema_name}}"
-  @echo "Source: {{source_schema_path}}"
-
 
 # Test schema generation
 _test-schema:
