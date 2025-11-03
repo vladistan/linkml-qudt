@@ -7,7 +7,7 @@ name = "qudt"
 version = "0.1.0"
 description = "QUDT LinkML Schema"
 readme = "README.md"
-license = "MIT"
+license = "CC-BY-4.0"
 requires-python = ">=3.11,<3.14"
 authors = [
     {name = "Vlad Korolev", email="vlad@v-lad.org"},
@@ -45,13 +45,13 @@ fragments = [
 ]
 
 [tool.hatch.version]
-path = "src/linkml_pokemon/__about__.py"
+path = "src/linkml_qudt/__about__.py"
 
 [tool.hatch.version.raw-options]
 version_scheme = "no-guess-dev"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/linkml_pokemon"]
+packages = ["src/linkml_qudt"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
