@@ -26,14 +26,9 @@ clean: _clean_project
   rm -rf tmp
   rm -rf {{docdir}}/*.md
 
-# (Re-)Generate project and documentation locally
-
-[group('model development')]
-site: gen-project gen-doc
-
 # Deploy documentation site to Github Pages
 [group('deployment')]
-deploy: site
+deploy:
   mkd-gh-deploy
 
 

@@ -13,14 +13,14 @@ authors = [
     {name = "Vlad Korolev", email="vlad@v-lad.org"},
 ]
 dependencies = [
-    "schema-automator>=0.5.3",
-    "linkml-runtime",
+    #"schema-automator>=0.5.3",
+    #"linkml-runtime",
 ]
 
 [tool.uv.sources]
 linkml-runtime = { path = "../linkml-runtime", editable = true }
 linkml = { path = "../linkml", editable = true }
-grip = { git = "ssh://git@github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
+grip = { git = "https://github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
 
 [dependency-groups]
 dev = [
