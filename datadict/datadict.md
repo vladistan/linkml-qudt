@@ -5695,23 +5695,7 @@ The root class for all QUDT concepts
 
 ```yaml
 Thing:
-  description: !!python/object/new:linkml_runtime.utils.yamlutils.extended_str
-    args:
-    - The root class for all QUDT concepts
-    state:
-      _s: !!python/object/apply:yaml._yaml.__pyx_unpickle_Mark
-        args:
-        - !!python/name:yaml._yaml.Mark ''
-        - 41581148
-        - null
-        state: !!python/tuple
-        - null
-        - 17
-        - 930
-        - 25
-        - linkml_qudt.yaml
-        - null
-      _len: 36
+  description: The root class for all QUDT concepts
 
 ```
 </details>

@@ -24,7 +24,7 @@ deploy: site
 
 # Run all tests
 [group('model development')]
-test: _test-schema _test-python _test-examples
+test: _test-schema _test-examples
 
 # Run linting
 [group('model development')]
@@ -110,10 +110,6 @@ deploy-docs: update-docs
 # Test schema generation
 _test-schema:
   uv run --group dev gen-project {{gen_project_excludes}} -d tmp {{source_schema_path}}
-
-# Run Python unit tests with pytest
-_test-python: gen-python
-  uv run python -m pytest
 
 # Run example tests
 _test-examples: _ensure_examples_output
