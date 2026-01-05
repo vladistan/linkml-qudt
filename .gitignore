@@ -72,3 +72,4 @@ dmypy.json
 
 # Kroki SVG cache
 .kroki-cache/
+/__marimo__

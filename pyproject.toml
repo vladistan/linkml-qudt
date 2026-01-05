@@ -8,13 +8,15 @@ version = "0.1.0"
 description = "QUDT LinkML Schema"
 readme = "README.md"
 license = "CC-BY-4.0"
-requires-python = ">=3.11,<3.14"
+requires-python = ">=3.12,<3.14"
 authors = [
     {name = "Vlad Korolev", email="vlad@v-lad.org"},
 ]
 dependencies = [
     #"schema-automator>=0.5.3",
     "linkml-runtime",
+    "marimo>=0.18.4",
+    "rdflib>=7.3.0",
     "ruamel-yaml>=0.19.1",
     "typer>=0.9.0",
 ]
