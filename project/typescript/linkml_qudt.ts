@@ -75,6 +75,7 @@ export interface Comment extends Verifiable {
 
 export interface Concept extends Thing {
     guidance?: string[],
+    /** The "qudt:id" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: "UCCCENNNN", where "CCC" is a numeric code or a category and "NNNN" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format "QNN" where "NN" is a digit string representing an exponent power, and "Q" is a qualifier that indicates with the code "P" that the power is a positive decimal exponent, or the code "N" for a negative decimal exponent, or the code "B" for binary positive exponents. */
     id?: string,
 }
 
@@ -393,6 +394,7 @@ export interface TransformType extends EnumeratedValue {
 
 export interface Unit extends Verifiable, Concept {
     hasReciprocalUnit?: Unit[],
+    /** This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system. */
     isUnitOfSystem?: SystemOfUnits[],
     omUnit?: string,
     unitFor?: string,
@@ -477,3 +479,6 @@ export interface UCUMcs-term extends Resource {
 
 export interface ValueUnion extends Resource {
 }
+
+
+

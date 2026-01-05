@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "None"
-version = "0.0.1"
+version = "0.0.2"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -45,19 +45,7 @@ class ConfiguredBaseModel(BaseModel):
         strict = False,
     )
 
-    @model_serializer(mode='wrap', when_used='unless-none')
-    def treat_empty_lists_as_none(
-            self, handler: SerializerFunctionWrapHandler,
-            info: SerializationInfo) -> dict[str, Any]:
-        if info.exclude_none:
-            _instance = self.model_copy()
-            for field, field_info in type(_instance).model_fields.items():
-                if getattr(_instance, field) == [] and not(
-                        field_info.is_required()):
-                    setattr(_instance, field, None)
-        else:
-            _instance = self
-        return handler(_instance, info)
+
 
 
 
@@ -145,8 +133,8 @@ class Concept(Thing):
                         'plainTextDescription': {'multivalued': False,
                                                  'name': 'plainTextDescription'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class AbstractQuantityKind(Concept):
@@ -157,8 +145,8 @@ class AbstractQuantityKind(Concept):
                         'latexSymbol': {'name': 'latexSymbol', 'required': False},
                         'symbol': {'multivalued': False, 'name': 'symbol'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class BaseDimensionMagnitude(Concept):
@@ -179,8 +167,8 @@ class BaseDimensionMagnitude(Concept):
                                             'range': 'float',
                                             'required': True}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Citation(Concept):
@@ -192,8 +180,8 @@ class Citation(Concept):
                                         'required': True},
                         'url': {'multivalued': False, 'name': 'url'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class DataEncoding(Aspect):
@@ -221,8 +209,8 @@ class DataItem(Concept):
                                   'name': 'value',
                                   'range': 'string'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Datatype(Concept):
@@ -256,16 +244,16 @@ class Datatype(Concept):
                         'pythonName': {'multivalued': False, 'name': 'pythonName'},
                         'vbName': {'multivalued': False, 'name': 'vbName'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Discipline(Concept):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Discipline',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Encoding(Concept):
@@ -274,40 +262,40 @@ class Encoding(Concept):
          'slot_usage': {'bits': {'multivalued': False, 'name': 'bits'},
                         'bytes': {'multivalued': False, 'name': 'bytes'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class BitEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:BitEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class BooleanEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:BooleanEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class ByteEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:ByteEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class CharEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:CharEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class EnumeratedQuantity(Concept):
@@ -317,8 +305,8 @@ class EnumeratedQuantity(Concept):
                                             'range': 'EnumeratedValue'},
                         'enumeration': {'name': 'enumeration', 'range': 'Enumeration'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Enumeration(Concept):
@@ -352,8 +340,8 @@ class Enumeration(Concept):
                                     'range': 'EnumeratedValue',
                                     'required': True}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Figure(Concept):
@@ -370,32 +358,32 @@ class Figure(Concept):
                         'landscape': {'multivalued': False, 'name': 'landscape'},
                         'width': {'multivalued': False, 'name': 'width'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class FloatingPointEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:FloatingPointEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class IntegerEncodingType(Encoding):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:IntegerEncodingType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class MathsFunctionType(Concept):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:MathsFunctionType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class NumericUnion(Concept):
@@ -403,8 +391,8 @@ class NumericUnion(Concept):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'mixins': ['Concept']})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Organization(Concept):
@@ -412,8 +400,8 @@ class Organization(Concept):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'url': {'name': 'url', 'required': False}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Quantifiable(Aspect):
@@ -448,37 +436,37 @@ class Quantity(Quantifiable, Concept):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Quantity',
          'comments': ['<p class=\\"lm-para\\">A <b>quantity</b> is the measurement of '
                       'an observable property of a particular object, event, or '
-                      'physical system. \n'
+                      'physical system.\n'
                       '  A quantity is always associated with the context of '
                       'measurement (i.e. the thing measured, the measured value, the '
-                      'accuracy of measurement, etc.) whereas the \n'
+                      'accuracy of measurement, etc.) whereas the\n'
                       '  underlying <b>quantity kind</b> is independent of any '
                       'particular measurement. Thus, length is a quantity kind while '
-                      'the height of a rocket is a specific \n'
+                      'the height of a rocket is a specific\n'
                       '  quantity of length; its magnitude that may be expressed in '
                       'meters, feet, inches, etc. Examples of physical quantities '
-                      'include physical constants, such as \n'
+                      'include physical constants, such as\n'
                       "  the speed of light in a vacuum, Planck's constant, the "
                       'electric permittivity of free space, and the fine structure '
                       'constant. </p>\n'
                       '<p class=\\"lm-para\\">In other words, quantities are '
                       'quantifiable aspects of the world, such as the duration of a '
-                      'movie, the distance between two points, \n'
+                      'movie, the distance between two points,\n'
                       'velocity of a car, the pressure of the atmosphere, and a '
                       "person's weight; and units are used to describe their numerical "
-                      'measure.</p> \n'
+                      'measure.</p>\n'
                       '<p class=\\"lm-para\\">Many <b>quantity kinds</b> are related '
                       'to each other by various physical laws, and as a result, the '
-                      'associated units of some quantity \n'
+                      'associated units of some quantity\n'
                       'kinds can be expressed as products (or ratios) of powers of '
                       'other quantity kinds (e.g., momentum is mass times velocity and '
-                      'velocity is defined as distance \n'
+                      'velocity is defined as distance\n'
                       'divided by time). In this way, some quantities can be '
                       'calculated from other measured quantities using their '
-                      'associations to the quantity kinds in these \n'
+                      'associations to the quantity kinds in these\n'
                       'expressions. These quantity kind relationships are also '
                       'discussed in dimensional analysis. Those that cannot be so '
-                      'expressed can be regarded \n'
+                      'expressed can be regarded\n'
                       'as \\"fundamental\\" in this sense.</p>\n'
                       '<p class=\\"lm-para\\">A quantity is distinguished from a '
                       '\\"quantity kind\\" in that the former carries a value and the '
@@ -493,8 +481,8 @@ class Quantity(Quantifiable, Concept):
                         'quantityValue': {'name': 'quantityValue',
                                           'range': 'QuantityValue'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class PhysicalConstant(Quantity):
@@ -515,7 +503,6 @@ class PhysicalConstant(Quantity):
                         'applicableSystem': {'name': 'applicableSystem',
                                              'range': 'SystemOfUnits'},
                         'applicableUnit': {'name': 'applicableUnit', 'range': 'Unit'},
-                        'dbpediaMatch': {'name': 'dbpediaMatch', 'range': 'uri'},
                         'exactConstant': {'name': 'exactConstant', 'range': 'boolean'},
                         'exactMatch': {'name': 'exactMatch',
                                        'range': 'PhysicalConstant'},
@@ -533,8 +520,8 @@ class PhysicalConstant(Quantity):
                         'symbol': {'name': 'symbol', 'required': False},
                         'ucumCode': {'name': 'ucumCode', 'required': False}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVector(Concept):
@@ -547,7 +534,7 @@ class QuantityKindDimensionVector(Concept):
                       '($T$) current ($I$), amount of substance ($N$), luminous '
                       'intensity ($J$) and absolute temperature ($\\\\theta$) as $dim '
                       '\\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta} \\\\, T^{\\\\gamma} '
-                      '\\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\, '
+                      '\\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\ , '
                       'N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>\n'
                       '\n'
                       '<p class=\\"lm-para\\">The rational powers of the dimensional '
@@ -593,8 +580,8 @@ class QuantityKindDimensionVector(Concept):
                                             'name': 'latexDefinition'},
                         'latexSymbol': {'name': 'latexSymbol', 'required': False}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorCGS(QuantityKindDimensionVector):
@@ -603,8 +590,8 @@ class QuantityKindDimensionVectorCGS(QuantityKindDimensionVector):
                       'dimensions for a C.G.S. quantity kind.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorCGS-EMU(QuantityKindDimensionVectorCGS):
@@ -613,8 +600,8 @@ class QuantityKindDimensionVectorCGS-EMU(QuantityKindDimensionVectorCGS):
                       'dimensions for EMU C.G.S. quantity kind.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorCGS-ESU(QuantityKindDimensionVectorCGS):
@@ -623,8 +610,8 @@ class QuantityKindDimensionVectorCGS-ESU(QuantityKindDimensionVectorCGS):
                       'dimensions for ESU C.G.S. quantity kind.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorCGS-GAUSS(QuantityKindDimensionVectorCGS):
@@ -633,8 +620,8 @@ class QuantityKindDimensionVectorCGS-GAUSS(QuantityKindDimensionVectorCGS):
                       'dimensions for Gaussioan C.G.S. quantity kind.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorCGS-LH(QuantityKindDimensionVectorCGS):
@@ -644,32 +631,32 @@ class QuantityKindDimensionVectorCGS-LH(QuantityKindDimensionVectorCGS):
                       'kind.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorISO(QuantityKindDimensionVector):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:QuantityKindDimensionVector_ISO',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorImperial(QuantityKindDimensionVector):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:QuantityKindDimensionVector_Imperial',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKindDimensionVectorSI(QuantityKindDimensionVector):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:QuantityKindDimensionVector_SI',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityValue(Quantifiable, Concept):
@@ -685,8 +672,8 @@ class QuantityValue(Quantifiable, Concept):
          'mixins': ['Concept'],
          'slot_usage': {'hasUnit': {'multivalued': False, 'name': 'hasUnit'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class ConstantValue(QuantityValue):
@@ -695,8 +682,8 @@ class ConstantValue(QuantityValue):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'exactConstant': {'name': 'exactConstant', 'required': False}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class ScalarDatatype(Datatype):
@@ -713,8 +700,8 @@ class ScalarDatatype(Datatype):
                                          'name': 'rdfsDatatype',
                                          'range': 'Datatype'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Scale(Concept):
@@ -733,8 +720,8 @@ class Scale(Concept):
                                       'name': 'scaleType',
                                       'range': 'ScaleType'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class EnumerationScale(Scale, Enumeration):
@@ -742,8 +729,8 @@ class EnumerationScale(Scale, Enumeration):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'mixins': ['Enumeration']})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class IntervalScale(Scale):
@@ -771,8 +758,8 @@ class IntervalScale(Scale):
                       'ordered set^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class NominalScale(Scale):
@@ -791,8 +778,8 @@ class NominalScale(Scale):
                       'affiliation as an example.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class OrdinalScale(Scale):
@@ -813,8 +800,8 @@ class OrdinalScale(Scale):
                                   'name': 'order',
                                   'required': True}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class RatioScale(Scale):
@@ -837,8 +824,8 @@ class RatioScale(Scale):
                       'called absolute zero.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class SignednessType(ConfiguredBaseModel):
@@ -873,8 +860,8 @@ class DateTimeStringEncodingType(StringEncodingType):
 class Symbol(Concept):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Symbol', 'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class SymmetricRelation(ConfiguredBaseModel):
@@ -916,8 +903,8 @@ class SystemOfQuantityKinds(Concept):
                         'systemDerivedQuantityKind': {'name': 'systemDerivedQuantityKind',
                                                       'range': 'QuantityKind'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class UserQuantityKind(AbstractQuantityKind):
@@ -928,8 +915,8 @@ class UserQuantityKind(AbstractQuantityKind):
                                             'range': 'QuantityKind',
                                             'required': True}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Verifiable(Aspect):
@@ -965,8 +952,8 @@ class EnumeratedValue(Verifiable, Concept):
                         'description': {'multivalued': False, 'name': 'description'},
                         'symbol': {'multivalued': False, 'name': 'symbol'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class CardinalityType(EnumeratedValue):
@@ -974,16 +961,16 @@ class CardinalityType(EnumeratedValue):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'literal': {'multivalued': False, 'name': 'literal'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class EndianType(EnumeratedValue):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:EndianType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class NISTSP811Comment(Comment):
@@ -998,8 +985,8 @@ class OrderedType(EnumeratedValue):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'literal': {'multivalued': False, 'name': 'literal'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Prefix(Verifiable, Concept):
@@ -1014,8 +1001,8 @@ class Prefix(Verifiable, Concept):
                         'symbol': {'name': 'symbol', 'required': False},
                         'ucumCode': {'name': 'ucumCode', 'range': 'UCUMcs-term'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class BinaryPrefix(Prefix):
@@ -1026,8 +1013,8 @@ class BinaryPrefix(Prefix):
                       'power of 2.'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class DecimalPrefix(Prefix):
@@ -1036,8 +1023,8 @@ class DecimalPrefix(Prefix):
                       'that are powers of 10.'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityKind(Verifiable, AbstractQuantityKind):
@@ -1077,9 +1064,9 @@ class QuantityKind(Verifiable, AbstractQuantityKind):
                         'qkdvNumerator': {'multivalued': False,
                                           'name': 'qkdvNumerator'}}})
 
-    belongsToSystemOfQuantities: Optional[list[SystemOfQuantityKinds]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['QuantityKind'], 'slot_uri': 'qudt:belongsToSystemOfQuantities'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    belongsToSystemOfQuantities: Optional[list[SystemOfQuantityKinds]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['QuantityKind'], 'slot_uri': 'qudt:belongsToSystemOfQuantities'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class QuantityType(EnumeratedValue):
@@ -1087,8 +1074,8 @@ class QuantityType(EnumeratedValue):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'value': {'name': 'value', 'range': 'QuantityKind'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Rule(Verifiable, Concept):
@@ -1098,16 +1085,16 @@ class Rule(Verifiable, Concept):
          'slot_usage': {'rationale': {'name': 'rationale', 'required': False},
                         'ruleType': {'name': 'ruleType', 'range': 'RuleType'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class RuleType(EnumeratedValue):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:RuleType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class ScaleType(EnumeratedValue):
@@ -1120,8 +1107,8 @@ class ScaleType(EnumeratedValue):
                         'permissibleTransformation': {'name': 'permissibleTransformation',
                                                       'range': 'TransformType'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class SystemOfUnits(Verifiable, Concept):
@@ -1148,16 +1135,16 @@ class SystemOfUnits(Verifiable, Concept):
                         'hasUnit': {'name': 'hasUnit', 'range': 'Unit'},
                         'prefix': {'name': 'prefix', 'range': 'Prefix'}}})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class TransformType(EnumeratedValue):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:TransformType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class Unit(Verifiable, Concept):
@@ -1212,12 +1199,12 @@ class Unit(Verifiable, Concept):
                         'uneceCommonCode': {'name': 'uneceCommonCode',
                                             'range': 'string'}}})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class ContextualUnit(Unit):
@@ -1225,12 +1212,12 @@ class ContextualUnit(Unit):
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
          'slot_usage': {'broader': {'name': 'broader', 'range': 'Unit'}}})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class DerivedUnit(Unit):
@@ -1239,12 +1226,12 @@ class DerivedUnit(Unit):
                       'derived from other units.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class DimensionlessUnit(Unit):
@@ -1254,24 +1241,24 @@ class DimensionlessUnit(Unit):
                       'quantity dimension are zero.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class AngleUnit(DimensionlessUnit):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:AngleUnit',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class CountingUnit(DimensionlessUnit):
@@ -1281,12 +1268,12 @@ class CountingUnit(DimensionlessUnit):
                       'Second.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class CurrencyUnit(DimensionlessUnit):
@@ -1300,12 +1287,12 @@ class CurrencyUnit(DimensionlessUnit):
                         'currencyExponent': {'multivalued': False,
                                              'name': 'currencyExponent'}}})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class LogarithmicUnit(DimensionlessUnit):
@@ -1320,36 +1307,36 @@ class LogarithmicUnit(DimensionlessUnit):
                       'decibel.^^rdf:HTML'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class PlaneAngleUnit(AngleUnit):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:PlaneAngleUnit',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class SolidAngleUnit(AngleUnit):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:SolidAngleUnit',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
-    hasReciprocalUnit: Optional[list[Unit]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
-    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
-    omUnit: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
-    unitFor: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
-    guidance: Optional[list[str]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
-    id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
+    hasReciprocalUnit: Optional[list[Unit]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:hasReciprocalUnit'} })
+    isUnitOfSystem: Optional[list[SystemOfUnits]] = Field(default=None, description="""This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:isUnitOfSystem'} })
+    omUnit: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:omUnit'} })
+    unitFor: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Unit'], 'slot_uri': 'qudt:unitFor'} })
+    guidance: Optional[list[str]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:guidance'} })
+    id: Optional[str] = Field(default=None, description="""The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'qudt:id'} })
 
 
 class CatalogEntry(ConfiguredBaseModel):
@@ -1425,8 +1412,7 @@ class Ontology(ConfiguredBaseModel):
 
 
 class LatexString(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:LatexString',
-         'comments': ['A type of string in which some characters may be wrapped with '
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'comments': ['A type of string in which some characters may be wrapped with '
                       "'$' and '$ characters for LaTeX rendering."],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
 
@@ -1440,7 +1426,7 @@ class UCUMcs(Resource):
     pass
 
 
-class UCUMcs_term(Resource):
+class UCUMcs-term(Resource):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'comments': ['Lexical pattern for the terminal symbols in the case-sensitive '
                       'version of UCUM code'],
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})

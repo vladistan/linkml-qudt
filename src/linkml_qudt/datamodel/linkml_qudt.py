@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-02T18:54:16
+# Generation date: 2026-01-05T11:18:16
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
@@ -60,7 +60,7 @@ from linkml_runtime.linkml_model.types import Boolean, Date, Decimal, Double, Fl
 from linkml_runtime.utils.metamodelcore import Bool, Decimal, URI, XSDDate
 
 metamodel_version = "1.7.0"
-version = "0.0.1"
+version = "0.0.2"
 
 # Namespaces
 DC = CurieNamespace('dc', 'http://purl.org/dc/elements/1.1/')
@@ -807,7 +807,6 @@ class PhysicalConstant(Quantity):
 
     applicableSystem: Optional[Union[Union[dict, "SystemOfUnits"], list[Union[dict, "SystemOfUnits"]]]] = empty_list()
     applicableUnit: Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]] = empty_list()
-    dbpediaMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     exactMatch: Optional[Union[Union[dict, "PhysicalConstant"], list[Union[dict, "PhysicalConstant"]]]] = empty_list()
     hasDimensionVector: Optional[Union[Union[dict, "QuantityKindDimensionVector"], list[Union[dict, "QuantityKindDimensionVector"]]]] = empty_list()
     ucumCode: Optional[Union[str, list[str]]] = empty_list()
@@ -828,10 +827,6 @@ class PhysicalConstant(Quantity):
         if not isinstance(self.applicableUnit, list):
             self.applicableUnit = [self.applicableUnit] if self.applicableUnit is not None else []
         self.applicableUnit = [v if isinstance(v, Unit) else Unit(**as_dict(v)) for v in self.applicableUnit]
-
-        if not isinstance(self.dbpediaMatch, list):
-            self.dbpediaMatch = [self.dbpediaMatch] if self.dbpediaMatch is not None else []
-        self.dbpediaMatch = [v if isinstance(v, URI) else URI(v) for v in self.dbpediaMatch]
 
         if not isinstance(self.exactMatch, list):
             self.exactMatch = [self.exactMatch] if self.exactMatch is not None else []
@@ -1524,20 +1519,12 @@ class Verifiable(Aspect):
     class_name: ClassVar[str] = "Verifiable"
     class_model_uri: ClassVar[URIRef] = QUDT.Verifiable
 
-    wikidataMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
-    dbpediaMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     isoNormativeReference: Optional[Union[str, list[str]]] = empty_list()
     normativeReference: Optional[Union[str, list[str]]] = empty_list()
+    wikidataMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
+    dbpediaMatch: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if not isinstance(self.wikidataMatch, list):
-            self.wikidataMatch = [self.wikidataMatch] if self.wikidataMatch is not None else []
-        self.wikidataMatch = [v if isinstance(v, URI) else URI(v) for v in self.wikidataMatch]
-
-        if not isinstance(self.dbpediaMatch, list):
-            self.dbpediaMatch = [self.dbpediaMatch] if self.dbpediaMatch is not None else []
-        self.dbpediaMatch = [v if isinstance(v, URI) else URI(v) for v in self.dbpediaMatch]
-
         if not isinstance(self.isoNormativeReference, list):
             self.isoNormativeReference = [self.isoNormativeReference] if self.isoNormativeReference is not None else []
         self.isoNormativeReference = [v if isinstance(v, str) else str(v) for v in self.isoNormativeReference]
@@ -1545,6 +1532,14 @@ class Verifiable(Aspect):
         if not isinstance(self.normativeReference, list):
             self.normativeReference = [self.normativeReference] if self.normativeReference is not None else []
         self.normativeReference = [v if isinstance(v, str) else str(v) for v in self.normativeReference]
+
+        if not isinstance(self.wikidataMatch, list):
+            self.wikidataMatch = [self.wikidataMatch] if self.wikidataMatch is not None else []
+        self.wikidataMatch = [v if isinstance(v, URI) else URI(v) for v in self.wikidataMatch]
+
+        if not isinstance(self.dbpediaMatch, list):
+            self.dbpediaMatch = [self.dbpediaMatch] if self.dbpediaMatch is not None else []
+        self.dbpediaMatch = [v if isinstance(v, URI) else URI(v) for v in self.dbpediaMatch]
 
         super().__post_init__(**kwargs)
 
@@ -3432,9 +3427,6 @@ slots.PhysicalConstant_applicableSystem = Slot(uri=QUDT.applicableSystem, name="
 slots.PhysicalConstant_applicableUnit = Slot(uri=QUDT.applicableUnit, name="PhysicalConstant_applicableUnit", curie=QUDT.curie('applicableUnit'),
                    model_uri=QUDT.PhysicalConstant_applicableUnit, domain=PhysicalConstant, range=Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]])
 
-slots.PhysicalConstant_dbpediaMatch = Slot(uri=QUDT.dbpediaMatch, name="PhysicalConstant_dbpediaMatch", curie=QUDT.curie('dbpediaMatch'),
-                   model_uri=QUDT.PhysicalConstant_dbpediaMatch, domain=PhysicalConstant, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
-
 slots.PhysicalConstant_exactMatch = Slot(uri=QUDT.exactMatch, name="PhysicalConstant_exactMatch", curie=QUDT.curie('exactMatch'),
                    model_uri=QUDT.PhysicalConstant_exactMatch, domain=PhysicalConstant, range=Optional[Union[Union[dict, "PhysicalConstant"], list[Union[dict, "PhysicalConstant"]]]])
 
@@ -3777,14 +3769,14 @@ slots.Unit_mathMLdefinition = Slot(uri=QUDT.mathMLdefinition, name="Unit_mathMLd
 slots.UserQuantityKind_hasQuantityKind = Slot(uri=QUDT.hasQuantityKind, name="UserQuantityKind_hasQuantityKind", curie=QUDT.curie('hasQuantityKind'),
                    model_uri=QUDT.UserQuantityKind_hasQuantityKind, domain=UserQuantityKind, range=Union[Union[dict, "QuantityKind"], list[Union[dict, "QuantityKind"]]])
 
-slots.Verifiable_wikidataMatch = Slot(uri=QUDT.wikidataMatch, name="Verifiable_wikidataMatch", curie=QUDT.curie('wikidataMatch'),
-                   model_uri=QUDT.Verifiable_wikidataMatch, domain=Verifiable, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
-
-slots.Verifiable_dbpediaMatch = Slot(uri=QUDT.dbpediaMatch, name="Verifiable_dbpediaMatch", curie=QUDT.curie('dbpediaMatch'),
-                   model_uri=QUDT.Verifiable_dbpediaMatch, domain=Verifiable, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
-
 slots.Verifiable_isoNormativeReference = Slot(uri=QUDT.isoNormativeReference, name="Verifiable_isoNormativeReference", curie=QUDT.curie('isoNormativeReference'),
                    model_uri=QUDT.Verifiable_isoNormativeReference, domain=Verifiable, range=Optional[Union[str, list[str]]])
 
 slots.Verifiable_normativeReference = Slot(uri=QUDT.normativeReference, name="Verifiable_normativeReference", curie=QUDT.curie('normativeReference'),
                    model_uri=QUDT.Verifiable_normativeReference, domain=Verifiable, range=Optional[Union[str, list[str]]])
+
+slots.Verifiable_wikidataMatch = Slot(uri=QUDT.wikidataMatch, name="Verifiable_wikidataMatch", curie=QUDT.curie('wikidataMatch'),
+                   model_uri=QUDT.Verifiable_wikidataMatch, domain=Verifiable, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
+
+slots.Verifiable_dbpediaMatch = Slot(uri=QUDT.dbpediaMatch, name="Verifiable_dbpediaMatch", curie=QUDT.curie('dbpediaMatch'),
+                   model_uri=QUDT.Verifiable_dbpediaMatch, domain=Verifiable, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])

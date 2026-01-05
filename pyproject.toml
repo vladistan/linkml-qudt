@@ -15,11 +15,13 @@ authors = [
 dependencies = [
     #"schema-automator>=0.5.3",
     "linkml-runtime",
+    "ruamel-yaml>=0.19.1",
+    "typer>=0.9.0",
 ]
 
 [tool.uv.sources]
-linkml = { path = "../linkml", editable = true }
-linkml-runtime = { path = "../linkml-runtime", editable = true }
+linkml = { path = "../linkml/packages/linkml", editable = true }
+linkml-runtime = { path = "../linkml/packages/linkml_runtime", editable = true }
 grip = { git = "https://github.com/vladistan/grip.git", branch = "handle-test-sensitive-anchors" }
 
 [dependency-groups]
@@ -52,6 +54,9 @@ version_scheme = "no-guess-dev"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/linkml_qudt"]
+
+[project.scripts]
+patch-qudt-schema = "linkml_qudt.cli.patch_schema:app"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

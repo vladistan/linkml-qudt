@@ -3,7 +3,7 @@
   "description": "This is a LinkML representation of the QUDT (Quantities, Units, Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.",
   "title": "QUDT Ontology in LinkML",
   "id": "http://qudt.org/3.1.6/schema/qudt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "imports": [
     "linkml:types"
   ],
@@ -18,12 +18,12 @@
       "prefix_reference": "https://w3id.org/None/"
     },
     {
-      "prefix_prefix": "owl",
-      "prefix_reference": "http://www.w3.org/2002/07/owl#"
-    },
-    {
       "prefix_prefix": "rdf",
       "prefix_reference": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "prefix_prefix": "owl",
+      "prefix_reference": "http://www.w3.org/2002/07/owl#"
     },
     {
       "prefix_prefix": "rdfs",
@@ -481,6 +481,7 @@
     {
       "name": "applicableSystem",
       "definition_uri": "https://w3id.org/None/applicableSystem",
+      "description": "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableSystem"
@@ -508,6 +509,7 @@
     {
       "name": "applicableUnit",
       "definition_uri": "https://w3id.org/None/applicableUnit",
+      "description": "See https://github.com/qudt/qudt-public-repo/wiki/Advanced-User-Guide#4-computing-applicable-units-for-a-quantitykind on how `qudt:applicableUnit` is computed from `qudt:hasQuantityKind` and then materialized",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableUnit"
@@ -522,6 +524,7 @@
     {
       "name": "baseDimensionEnumeration",
       "definition_uri": "https://w3id.org/None/baseDimensionEnumeration",
+      "description": "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/baseDimensionEnumeration"
@@ -536,6 +539,7 @@
     {
       "name": "baseUnitOfSystem",
       "definition_uri": "https://w3id.org/None/baseUnitOfSystem",
+      "description": "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/baseUnitOfSystem"
@@ -595,6 +599,7 @@
     {
       "name": "byteOrder",
       "definition_uri": "https://w3id.org/None/byteOrder",
+      "description": "Byte order is an enumeration of two values: 'Big Endian' and 'Little Endian' and is used to denote whether the most signiticant byte is either first or last, respectively.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/byteOrder"
@@ -648,6 +653,7 @@
     {
       "name": "coherentUnitSystem",
       "definition_uri": "https://w3id.org/None/coherentUnitSystem",
+      "description": "\n  A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities.\n  In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units.\n  For example, the $newton$ and the $joule$.\n  These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per (1) second per (1) second, and the work done by 1 newton acting over 1 metre.\n  Being coherent refers to this consistent use of 1.\n  In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg,\n   respectively the force that causes 1 gram to be accelerated at 1 centimetre per (1) second per (1) second, and the work done by 1 dyne acting over 1 centimetre.\n  So $1\\,newton = 10^5 dyne$, $1 joule = 10^7 erg$, making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.</p>\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/coherentUnitSystem"
@@ -687,6 +693,7 @@
     {
       "name": "default",
       "definition_uri": "https://w3id.org/None/default",
+      "description": "The default element in an enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/default"
@@ -699,6 +706,7 @@
     {
       "name": "definedUnitOfSystem",
       "definition_uri": "https://w3id.org/None/definedUnitOfSystem",
+      "description": "This property relates a unit of measure with the unit system that defines the unit.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/definedUnitOfSystem"
@@ -728,6 +736,7 @@
     {
       "name": "derivedCoherentUnitOfSystem",
       "definition_uri": "https://w3id.org/None/derivedCoherentUnitOfSystem",
+      "description": "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/derivedCoherentUnitOfSystem"
@@ -746,6 +755,7 @@
     {
       "name": "derivedNonCoherentUnitOfSystem",
       "definition_uri": "https://w3id.org/None/derivedNonCoherentUnitOfSystem",
+      "description": "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/derivedNonCoherentUnitOfSystem"
@@ -761,6 +771,7 @@
     {
       "name": "derivedUnitOfSystem",
       "definition_uri": "https://w3id.org/None/derivedUnitOfSystem",
+      "description": "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/derivedUnitOfSystem"
@@ -802,6 +813,7 @@
     {
       "name": "element",
       "definition_uri": "https://w3id.org/None/element",
+      "description": "An element of an enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/element"
@@ -878,6 +890,7 @@
     {
       "name": "exponent",
       "definition_uri": "https://w3id.org/None/exponent",
+      "description": "This property relates a factor unit its exponent",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exponent"
@@ -890,6 +903,7 @@
     {
       "name": "figure",
       "definition_uri": "https://w3id.org/None/figure",
+      "description": "Provides a link to an image.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/figure"
@@ -904,6 +918,7 @@
     {
       "name": "hasAllowedUnit",
       "definition_uri": "https://w3id.org/None/hasAllowedUnit",
+      "description": "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasAllowedUnit"
@@ -934,6 +949,7 @@
     {
       "name": "hasBaseUnit",
       "definition_uri": "https://w3id.org/None/hasBaseUnit",
+      "description": "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasBaseUnit"
@@ -949,6 +965,7 @@
     {
       "name": "hasCoherentUnit",
       "definition_uri": "https://w3id.org/None/hasCoherentUnit",
+      "description": "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasCoherentUnit"
@@ -964,6 +981,7 @@
     {
       "name": "hasDefinedUnit",
       "definition_uri": "https://w3id.org/None/hasDefinedUnit",
+      "description": "This property relates a unit system with a unit of measure that is defined by the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDefinedUnit"
@@ -1022,6 +1040,7 @@
     {
       "name": "hasDerivedUnit",
       "definition_uri": "https://w3id.org/None/hasDerivedUnit",
+      "description": "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDerivedUnit"
@@ -1072,6 +1091,7 @@
     {
       "name": "hasFactorUnit",
       "definition_uri": "https://w3id.org/None/hasFactorUnit",
+      "description": "This property relates a derived unit to one of its constituent factor units",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasFactorUnit"
@@ -1181,6 +1201,7 @@
     {
       "name": "hasUnit",
       "definition_uri": "https://w3id.org/None/hasUnit",
+      "description": "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnit"
@@ -1233,6 +1254,7 @@
     {
       "name": "isUnitOfSystem",
       "definition_uri": "https://w3id.org/None/isUnitOfSystem",
+      "description": "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/isUnitOfSystem"
@@ -1398,6 +1420,7 @@
     {
       "name": "quantity",
       "definition_uri": "https://w3id.org/None/quantity",
+      "description": "a property to relate an observable thing with a quantity (qud:Quantity)",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/quantity"
@@ -1503,6 +1526,7 @@
     {
       "name": "scalingOf",
       "definition_uri": "https://w3id.org/None/scalingOf",
+      "description": "This property relates a unit to another unit it is scaled from",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/scalingOf"
@@ -1644,6 +1668,7 @@
     {
       "name": "abbreviation",
       "definition_uri": "https://w3id.org/None/abbreviation",
+      "description": "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/abbreviation"
@@ -1680,6 +1705,7 @@
     {
       "name": "altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -1777,6 +1803,7 @@
     {
       "name": "currencyCode",
       "definition_uri": "https://w3id.org/None/currencyCode",
+      "description": "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/currencyCode"
@@ -1789,6 +1816,7 @@
     {
       "name": "currencyExponent",
       "definition_uri": "https://w3id.org/None/currencyExponent",
+      "description": "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/currencyExponent"
@@ -1801,6 +1829,7 @@
     {
       "name": "currencyNumber",
       "definition_uri": "https://w3id.org/None/currencyNumber",
+      "description": "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/currencyNumber"
@@ -1957,6 +1986,7 @@
     {
       "name": "factorUnitScalar",
       "definition_uri": "https://w3id.org/None/factorUnitScalar",
+      "description": "For a derived unit that is not exactly the product of its factor units, this property defines the scalar with which that product has to be multiplied with.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/factorUnitScalar"
@@ -2045,6 +2075,7 @@
     {
       "name": "id",
       "definition_uri": "https://w3id.org/None/id",
+      "description": "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/id"
@@ -2124,6 +2155,7 @@
     {
       "name": "isoNormativeReference",
       "definition_uri": "https://w3id.org/None/isoNormativeReference",
+      "description": "Provides a way to reference the ISO unit definition.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/isoNormativeReference"
@@ -2185,6 +2217,7 @@
     {
       "name": "latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -2258,6 +2291,7 @@
     {
       "name": "maxExclusive",
       "definition_uri": "https://w3id.org/None/maxExclusive",
+      "description": "maxExclusive is the exclusive upper bound of the value space for a datatype with the ordered property. The value of maxExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/maxExclusive"
@@ -2271,6 +2305,7 @@
     {
       "name": "maxInclusive",
       "definition_uri": "https://w3id.org/None/maxInclusive",
+      "description": "maxInclusive is the inclusive upper bound of the value space for a datatype with the ordered property. The value of maxInclusive must be in the value space of the base type.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/maxInclusive"
@@ -2296,6 +2331,7 @@
     {
       "name": "minExclusive",
       "definition_uri": "https://w3id.org/None/minExclusive",
+      "description": "minExclusive is the exclusive lower bound of the value space for a datatype with the ordered property. The value of minExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/minExclusive"
@@ -2309,6 +2345,7 @@
     {
       "name": "minInclusive",
       "definition_uri": "https://w3id.org/None/minInclusive",
+      "description": "minInclusive is the inclusive lower bound of the value space for a datatype with the ordered property. The value of minInclusive must be in the value space of the base type.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/minInclusive"
@@ -2334,6 +2371,7 @@
     {
       "name": "negativeDeltaLimit",
       "definition_uri": "https://w3id.org/None/negativeDeltaLimit",
+      "description": "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/negativeDeltaLimit"
@@ -2346,6 +2384,7 @@
     {
       "name": "normativeReference",
       "definition_uri": "https://w3id.org/None/normativeReference",
+      "description": "Provides a way to reference information that is an authoritative source providing a standard definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/normativeReference"
@@ -2384,6 +2423,7 @@
     {
       "name": "oleDBName",
       "definition_uri": "https://w3id.org/None/oleDBName",
+      "description": "OLE DB (Object Linking and Embedding, Database, sometimes written as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from a variety of sources in a uniform manner. The API provides a set of interfaces implemented using the Component Object Model (COM); it is otherwise unrelated to OLE. ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/oleDBName"
@@ -2432,6 +2472,7 @@
     {
       "name": "plainTextDescription",
       "definition_uri": "https://w3id.org/None/plainTextDescription",
+      "description": "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/plainTextDescription"
@@ -2444,6 +2485,7 @@
     {
       "name": "positiveDeltaLimit",
       "definition_uri": "https://w3id.org/None/positiveDeltaLimit",
+      "description": "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/positiveDeltaLimit"
@@ -2504,6 +2546,7 @@
     {
       "name": "relativeStandardUncertainty",
       "definition_uri": "https://w3id.org/None/relativeStandardUncertainty",
+      "description": "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/relativeStandardUncertainty"
@@ -2528,6 +2571,7 @@
     {
       "name": "standardUncertainty",
       "definition_uri": "https://w3id.org/None/standardUncertainty",
+      "description": "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/standardUncertainty"
@@ -2540,6 +2584,7 @@
     {
       "name": "standardUncertaintySN",
       "definition_uri": "https://w3id.org/None/standardUncertaintySN",
+      "description": "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/standardUncertaintySN"
@@ -2552,6 +2597,7 @@
     {
       "name": "symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -2565,6 +2611,7 @@
     {
       "name": "ucumCode",
       "definition_uri": "https://w3id.org/None/ucumCode",
+      "description": "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ucumCode"
@@ -2577,6 +2624,7 @@
     {
       "name": "udunitsCode",
       "definition_uri": "https://w3id.org/None/udunitsCode",
+      "description": "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/udunitsCode"
@@ -2589,6 +2637,7 @@
     {
       "name": "uneceCommonCode",
       "definition_uri": "https://w3id.org/None/uneceCommonCode",
+      "description": "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/uneceCommonCode"
@@ -2625,6 +2674,7 @@
     {
       "name": "value",
       "definition_uri": "https://w3id.org/None/value",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/value"
@@ -2637,6 +2687,7 @@
     {
       "name": "valueSN",
       "definition_uri": "https://w3id.org/None/valueSN",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/valueSN"
@@ -2949,6 +3000,7 @@
     {
       "name": "AbstractQuantityKind_altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -2970,6 +3022,7 @@
     {
       "name": "AbstractQuantityKind_latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -2991,6 +3044,7 @@
     {
       "name": "AbstractQuantityKind_symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -3229,6 +3283,7 @@
     {
       "name": "Concept_abbreviation",
       "definition_uri": "https://w3id.org/None/abbreviation",
+      "description": "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/abbreviation"
@@ -3271,6 +3326,7 @@
     {
       "name": "Concept_id",
       "definition_uri": "https://w3id.org/None/id",
+      "description": "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/id"
@@ -3292,6 +3348,7 @@
     {
       "name": "Concept_plainTextDescription",
       "definition_uri": "https://w3id.org/None/plainTextDescription",
+      "description": "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/plainTextDescription"
@@ -3352,6 +3409,7 @@
     {
       "name": "CurrencyUnit_currencyCode",
       "definition_uri": "https://w3id.org/None/currencyCode",
+      "description": "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/currencyCode"
@@ -3373,6 +3431,7 @@
     {
       "name": "CurrencyUnit_currencyExponent",
       "definition_uri": "https://w3id.org/None/currencyExponent",
+      "description": "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/currencyExponent"
@@ -3440,6 +3499,7 @@
     {
       "name": "DataEncoding_byteOrder",
       "definition_uri": "https://w3id.org/None/byteOrder",
+      "description": "Byte order is an enumeration of two values: 'Big Endian' and 'Little Endian' and is used to denote whether the most signiticant byte is either first or last, respectively.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/byteOrder"
@@ -3463,6 +3523,7 @@
     {
       "name": "DataItem_value",
       "definition_uri": "https://w3id.org/None/value",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/value"
@@ -3703,6 +3764,7 @@
     {
       "name": "Datatype_id",
       "definition_uri": "https://w3id.org/None/id",
+      "description": "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/id"
@@ -3850,6 +3912,7 @@
     {
       "name": "Datatype_oleDBName",
       "definition_uri": "https://w3id.org/None/oleDBName",
+      "description": "OLE DB (Object Linking and Embedding, Database, sometimes written as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from a variety of sources in a uniform manner. The API provides a set of interfaces implemented using the Component Object Model (COM); it is otherwise unrelated to OLE. ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/oleDBName"
@@ -3981,6 +4044,7 @@
     {
       "name": "EnumeratedValue_altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -4023,6 +4087,7 @@
     {
       "name": "EnumeratedValue_abbreviation",
       "definition_uri": "https://w3id.org/None/abbreviation",
+      "description": "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/abbreviation"
@@ -4044,6 +4109,7 @@
     {
       "name": "EnumeratedValue_symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -4065,6 +4131,7 @@
     {
       "name": "Enumeration_default",
       "definition_uri": "https://w3id.org/None/default",
+      "description": "The default element in an enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/default"
@@ -4088,6 +4155,7 @@
     {
       "name": "Enumeration_element",
       "definition_uri": "https://w3id.org/None/element",
+      "description": "An element of an enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/element"
@@ -4112,6 +4180,7 @@
     {
       "name": "Enumeration_abbreviation",
       "definition_uri": "https://w3id.org/None/abbreviation",
+      "description": "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/abbreviation"
@@ -4345,6 +4414,7 @@
     {
       "name": "PhysicalConstant_applicableSystem",
       "definition_uri": "https://w3id.org/None/applicableSystem",
+      "description": "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableSystem"
@@ -4368,6 +4438,7 @@
     {
       "name": "PhysicalConstant_applicableUnit",
       "definition_uri": "https://w3id.org/None/applicableUnit",
+      "description": "See https://github.com/qudt/qudt-public-repo/wiki/Advanced-User-Guide#4-computing-applicable-units-for-a-quantitykind on how `qudt:applicableUnit` is computed from `qudt:hasQuantityKind` and then materialized",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableUnit"
@@ -4386,27 +4457,6 @@
       "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "PhysicalConstant_dbpediaMatch",
-      "definition_uri": "https://w3id.org/None/dbpediaMatch",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "https://w3id.org/None/dbpediaMatch"
-      ],
-      "is_a": "dbpediaMatch",
-      "domain": "PhysicalConstant",
-      "slot_uri": "https://w3id.org/None/dbpediaMatch",
-      "alias": "dbpediaMatch",
-      "owner": "PhysicalConstant",
-      "domain_of": [
-        "PhysicalConstant"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dbpediaMatch",
-      "range": "uri",
-      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -4458,6 +4508,7 @@
     {
       "name": "PhysicalConstant_ucumCode",
       "definition_uri": "https://w3id.org/None/ucumCode",
+      "description": "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ucumCode"
@@ -4500,6 +4551,7 @@
     {
       "name": "PhysicalConstant_altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -4521,6 +4573,7 @@
     {
       "name": "PhysicalConstant_isoNormativeReference",
       "definition_uri": "https://w3id.org/None/isoNormativeReference",
+      "description": "Provides a way to reference the ISO unit definition.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/isoNormativeReference"
@@ -4542,6 +4595,7 @@
     {
       "name": "PhysicalConstant_latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -4563,6 +4617,7 @@
     {
       "name": "PhysicalConstant_normativeReference",
       "definition_uri": "https://w3id.org/None/normativeReference",
+      "description": "Provides a way to reference information that is an authoritative source providing a standard definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/normativeReference"
@@ -4584,6 +4639,7 @@
     {
       "name": "PhysicalConstant_symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -4670,6 +4726,7 @@
     {
       "name": "Prefix_ucumCode",
       "definition_uri": "https://w3id.org/None/ucumCode",
+      "description": "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ucumCode"
@@ -4693,6 +4750,7 @@
     {
       "name": "Prefix_altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -4714,6 +4772,7 @@
     {
       "name": "Prefix_latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -4735,6 +4794,7 @@
     {
       "name": "Prefix_symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -4823,6 +4883,7 @@
     {
       "name": "Quantifiable_hasUnit",
       "definition_uri": "https://w3id.org/None/hasUnit",
+      "description": "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnit"
@@ -4846,6 +4907,7 @@
     {
       "name": "Quantifiable_relativeStandardUncertainty",
       "definition_uri": "https://w3id.org/None/relativeStandardUncertainty",
+      "description": "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/relativeStandardUncertainty"
@@ -4867,6 +4929,7 @@
     {
       "name": "Quantifiable_standardUncertainty",
       "definition_uri": "https://w3id.org/None/standardUncertainty",
+      "description": "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/standardUncertainty"
@@ -4888,6 +4951,7 @@
     {
       "name": "Quantifiable_standardUncertaintySN",
       "definition_uri": "https://w3id.org/None/standardUncertaintySN",
+      "description": "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/standardUncertaintySN"
@@ -4909,6 +4973,7 @@
     {
       "name": "Quantifiable_value",
       "definition_uri": "https://w3id.org/None/value",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/value"
@@ -4930,6 +4995,7 @@
     {
       "name": "Quantifiable_valueSN",
       "definition_uri": "https://w3id.org/None/valueSN",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/valueSN"
@@ -5226,6 +5292,7 @@
     {
       "name": "QuantityKind_applicableUnit",
       "definition_uri": "https://w3id.org/None/applicableUnit",
+      "description": "See https://github.com/qudt/qudt-public-repo/wiki/Advanced-User-Guide#4-computing-applicable-units-for-a-quantitykind on how `qudt:applicableUnit` is computed from `qudt:hasQuantityKind` and then materialized",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableUnit"
@@ -5360,6 +5427,7 @@
     {
       "name": "QuantityKindDimensionVector_latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -5578,6 +5646,7 @@
     {
       "name": "QuantityType_value",
       "definition_uri": "https://w3id.org/None/value",
+      "description": "A property to relate an observable thing with a value of any kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/value"
@@ -5601,6 +5670,7 @@
     {
       "name": "QuantityValue_hasUnit",
       "definition_uri": "https://w3id.org/None/hasUnit",
+      "description": "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnit"
@@ -5754,6 +5824,7 @@
     {
       "name": "ScalarDatatype_maxExclusive",
       "definition_uri": "https://w3id.org/None/maxExclusive",
+      "description": "maxExclusive is the exclusive upper bound of the value space for a datatype with the ordered property. The value of maxExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/maxExclusive"
@@ -5775,6 +5846,7 @@
     {
       "name": "ScalarDatatype_maxInclusive",
       "definition_uri": "https://w3id.org/None/maxInclusive",
+      "description": "maxInclusive is the inclusive upper bound of the value space for a datatype with the ordered property. The value of maxInclusive must be in the value space of the base type.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/maxInclusive"
@@ -5796,6 +5868,7 @@
     {
       "name": "ScalarDatatype_minExclusive",
       "definition_uri": "https://w3id.org/None/minExclusive",
+      "description": "minExclusive is the exclusive lower bound of the value space for a datatype with the ordered property. The value of minExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/minExclusive"
@@ -5817,6 +5890,7 @@
     {
       "name": "ScalarDatatype_minInclusive",
       "definition_uri": "https://w3id.org/None/minInclusive",
+      "description": "minInclusive is the inclusive lower bound of the value space for a datatype with the ordered property. The value of minInclusive must be in the value space of the base type.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/minInclusive"
@@ -5995,6 +6069,7 @@
     {
       "name": "SystemOfQuantityKinds_baseDimensionEnumeration",
       "definition_uri": "https://w3id.org/None/baseDimensionEnumeration",
+      "description": "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/baseDimensionEnumeration"
@@ -6133,6 +6208,7 @@
     {
       "name": "SystemOfUnits_hasAllowedUnit",
       "definition_uri": "https://w3id.org/None/hasAllowedUnit",
+      "description": "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasAllowedUnit"
@@ -6156,6 +6232,7 @@
     {
       "name": "SystemOfUnits_hasBaseUnit",
       "definition_uri": "https://w3id.org/None/hasBaseUnit",
+      "description": "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasBaseUnit"
@@ -6179,6 +6256,7 @@
     {
       "name": "SystemOfUnits_hasCoherentUnit",
       "definition_uri": "https://w3id.org/None/hasCoherentUnit",
+      "description": "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasCoherentUnit"
@@ -6202,6 +6280,7 @@
     {
       "name": "SystemOfUnits_hasDefinedUnit",
       "definition_uri": "https://w3id.org/None/hasDefinedUnit",
+      "description": "This property relates a unit system with a unit of measure that is defined by the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDefinedUnit"
@@ -6251,6 +6330,7 @@
     {
       "name": "SystemOfUnits_hasDerivedUnit",
       "definition_uri": "https://w3id.org/None/hasDerivedUnit",
+      "description": "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDerivedUnit"
@@ -6274,6 +6354,7 @@
     {
       "name": "SystemOfUnits_hasUnit",
       "definition_uri": "https://w3id.org/None/hasUnit",
+      "description": "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnit"
@@ -6323,6 +6404,7 @@
     {
       "name": "Unit_applicableSystem",
       "definition_uri": "https://w3id.org/None/applicableSystem",
+      "description": "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableSystem"
@@ -6346,6 +6428,7 @@
     {
       "name": "Unit_definedUnitOfSystem",
       "definition_uri": "https://w3id.org/None/definedUnitOfSystem",
+      "description": "This property relates a unit of measure with the unit system that defines the unit.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/definedUnitOfSystem"
@@ -6369,6 +6452,7 @@
     {
       "name": "Unit_derivedCoherentUnitOfSystem",
       "definition_uri": "https://w3id.org/None/derivedCoherentUnitOfSystem",
+      "description": "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/derivedCoherentUnitOfSystem"
@@ -6395,6 +6479,7 @@
     {
       "name": "Unit_derivedUnitOfSystem",
       "definition_uri": "https://w3id.org/None/derivedUnitOfSystem",
+      "description": "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/derivedUnitOfSystem"
@@ -6464,6 +6549,7 @@
     {
       "name": "Unit_hasFactorUnit",
       "definition_uri": "https://w3id.org/None/hasFactorUnit",
+      "description": "This property relates a derived unit to one of its constituent factor units",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasFactorUnit"
@@ -6603,6 +6689,7 @@
     {
       "name": "Unit_scalingOf",
       "definition_uri": "https://w3id.org/None/scalingOf",
+      "description": "This property relates a unit to another unit it is scaled from",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/scalingOf"
@@ -6626,6 +6713,7 @@
     {
       "name": "Unit_ucumCode",
       "definition_uri": "https://w3id.org/None/ucumCode",
+      "description": "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ucumCode"
@@ -6649,6 +6737,7 @@
     {
       "name": "Unit_udunitsCode",
       "definition_uri": "https://w3id.org/None/udunitsCode",
+      "description": "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/udunitsCode"
@@ -6670,6 +6759,7 @@
     {
       "name": "Unit_uneceCommonCode",
       "definition_uri": "https://w3id.org/None/uneceCommonCode",
+      "description": "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/uneceCommonCode"
@@ -6691,6 +6781,7 @@
     {
       "name": "Unit_altSymbol",
       "definition_uri": "https://w3id.org/None/altSymbol",
+      "description": "An alternative symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/altSymbol"
@@ -6733,6 +6824,7 @@
     {
       "name": "Unit_latexSymbol",
       "definition_uri": "https://w3id.org/None/latexSymbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexSymbol"
@@ -6775,6 +6867,7 @@
     {
       "name": "Unit_symbol",
       "definition_uri": "https://w3id.org/None/symbol",
+      "description": "\n  The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form.\n  For example, the symbol for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/symbol"
@@ -6880,6 +6973,7 @@
     {
       "name": "Unit_factorUnitScalar",
       "definition_uri": "https://w3id.org/None/factorUnitScalar",
+      "description": "For a derived unit that is not exactly the product of its factor units, this property defines the scalar with which that product has to be multiplied with.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/factorUnitScalar"
@@ -6944,6 +7038,50 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "Verifiable_isoNormativeReference",
+      "definition_uri": "https://w3id.org/None/isoNormativeReference",
+      "description": "Provides a way to reference the ISO unit definition.",
+      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
+      "mappings": [
+        "https://w3id.org/None/isoNormativeReference"
+      ],
+      "is_a": "isoNormativeReference",
+      "domain": "Verifiable",
+      "slot_uri": "https://w3id.org/None/isoNormativeReference",
+      "alias": "isoNormativeReference",
+      "owner": "Verifiable",
+      "domain_of": [
+        "Verifiable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "isoNormativeReference",
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Verifiable_normativeReference",
+      "definition_uri": "https://w3id.org/None/normativeReference",
+      "description": "Provides a way to reference information that is an authoritative source providing a standard definition",
+      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
+      "mappings": [
+        "https://w3id.org/None/normativeReference"
+      ],
+      "is_a": "normativeReference",
+      "domain": "Verifiable",
+      "slot_uri": "https://w3id.org/None/normativeReference",
+      "alias": "normativeReference",
+      "owner": "Verifiable",
+      "domain_of": [
+        "Verifiable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "normativeReference",
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "Verifiable_wikidataMatch",
       "definition_uri": "https://w3id.org/None/wikidataMatch",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
@@ -6982,48 +7120,6 @@
       "is_usage_slot": true,
       "usage_slot_name": "dbpediaMatch",
       "range": "uri",
-      "multivalued": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "Verifiable_isoNormativeReference",
-      "definition_uri": "https://w3id.org/None/isoNormativeReference",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "https://w3id.org/None/isoNormativeReference"
-      ],
-      "is_a": "isoNormativeReference",
-      "domain": "Verifiable",
-      "slot_uri": "https://w3id.org/None/isoNormativeReference",
-      "alias": "isoNormativeReference",
-      "owner": "Verifiable",
-      "domain_of": [
-        "Verifiable"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "isoNormativeReference",
-      "range": "string",
-      "multivalued": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "Verifiable_normativeReference",
-      "definition_uri": "https://w3id.org/None/normativeReference",
-      "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "https://w3id.org/None/normativeReference"
-      ],
-      "is_a": "normativeReference",
-      "domain": "Verifiable",
-      "slot_uri": "https://w3id.org/None/normativeReference",
-      "alias": "normativeReference",
-      "owner": "Verifiable",
-      "domain_of": [
-        "Verifiable"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "normativeReference",
-      "range": "string",
       "multivalued": true,
       "@type": "SlotDefinition"
     }
@@ -7076,10 +7172,10 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7190,10 +7286,10 @@
       ],
       "is_a": "Prefix",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Prefix_exactMatch",
         "Prefix_ucumCode",
         "Prefix_altSymbol",
@@ -7294,10 +7390,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -7373,10 +7469,10 @@
       ],
       "is_a": "Verifiable",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Comment_rationale",
         "Comment_description"
       ],
@@ -7452,10 +7548,10 @@
       ],
       "is_a": "Unit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7513,10 +7609,10 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7574,10 +7670,10 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7733,10 +7829,10 @@
       ],
       "is_a": "Prefix",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Prefix_exactMatch",
         "Prefix_ucumCode",
         "Prefix_altSymbol",
@@ -7768,10 +7864,10 @@
       ],
       "is_a": "Unit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7828,10 +7924,10 @@
       ],
       "is_a": "Unit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -7931,10 +8027,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -7986,10 +8082,10 @@
         "Concept"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -8182,10 +8278,10 @@
       ],
       "is_a": "DimensionlessUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -8261,10 +8357,10 @@
       ],
       "is_a": "Comment",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Comment_rationale",
         "Comment_description"
       ],
@@ -8334,10 +8430,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -8440,7 +8536,6 @@
         "Concept_plainTextDescription",
         "PhysicalConstant_applicableSystem",
         "PhysicalConstant_applicableUnit",
-        "PhysicalConstant_dbpediaMatch",
         "PhysicalConstant_exactMatch",
         "PhysicalConstant_hasDimensionVector",
         "PhysicalConstant_ucumCode",
@@ -8466,10 +8561,10 @@
       ],
       "is_a": "AngleUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -8526,10 +8621,10 @@
         "Concept"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Prefix_exactMatch",
         "Prefix_ucumCode",
         "Prefix_altSymbol",
@@ -8578,7 +8673,7 @@
       "name": "Quantity",
       "definition_uri": "https://w3id.org/None/Quantity",
       "comments": [
-        "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. \n  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the \n  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific \n  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as \n  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n<p class=\\\"lm-para\\\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, \nvelocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p> \n<p class=\\\"lm-para\\\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity \nkinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance \ndivided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these \nexpressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded \nas \\\"fundamental\\\" in this sense.</p>\n<p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\" in that the former carries a value and the latter is a type specifier.</p>^^rdf:HTML"
+        "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.\n  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the\n  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific\n  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as\n  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n<p class=\\\"lm-para\\\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points,\nvelocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p>\n<p class=\\\"lm-para\\\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity\nkinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance\ndivided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these\nexpressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded\nas \\\"fundamental\\\" in this sense.</p>\n<p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\" in that the former carries a value and the latter is a type specifier.</p>^^rdf:HTML"
       ],
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
@@ -8628,10 +8723,10 @@
         "AbstractQuantityKind"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "belongsToSystemOfQuantities",
         "QuantityKind_dimensionVectorForSI",
         "QuantityKind_exactMatch",
@@ -8668,7 +8763,7 @@
       "name": "QuantityKindDimensionVector",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVector",
       "comments": [
-        "<p class=\\\"lm-para\\\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\\\theta$) as $dim \\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta} \\\\, T^{\\\\gamma} \\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\, N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>\n\n<p class=\\\"lm-para\\\">The rational powers of the dimensional exponents, $\\\\alpha, \\\\, \\\\beta, \\\\, \\\\gamma, \\\\, \\\\delta, \\\\, \\\\epsilon, \\\\, \\\\eta, \\\\, \\\\nu$, are positive, negative, or zero.</p>\n\n<p class=\\\"lm-para\\\">For example, the dimension of the physical quantity kind $\\\\it{speed}$ is $\\\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\\\boxed{mass \\\\times acceleration}$ or $\\\\boxed{mass \\\\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>^^rdf:HTML"
+        "<p class=\\\"lm-para\\\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\\\theta$) as $dim \\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta} \\\\, T^{\\\\gamma} \\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\ , N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>\n\n<p class=\\\"lm-para\\\">The rational powers of the dimensional exponents, $\\\\alpha, \\\\, \\\\beta, \\\\, \\\\gamma, \\\\, \\\\delta, \\\\, \\\\epsilon, \\\\, \\\\eta, \\\\, \\\\nu$, are positive, negative, or zero.</p>\n\n<p class=\\\"lm-para\\\">For example, the dimension of the physical quantity kind $\\\\it{speed}$ is $\\\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\\\boxed{mass \\\\times acceleration}$ or $\\\\boxed{mass \\\\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>^^rdf:HTML"
       ],
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
@@ -8988,10 +9083,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -9085,10 +9180,10 @@
         "Concept"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "Rule_ruleType",
         "Rule_rationale",
         "guidance",
@@ -9113,10 +9208,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -9217,10 +9312,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -9259,10 +9354,10 @@
       ],
       "is_a": "AngleUnit",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -9407,10 +9502,10 @@
         "Concept"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "SystemOfUnits_applicablePhysicalConstant",
         "SystemOfUnits_hasAllowedUnit",
         "SystemOfUnits_hasBaseUnit",
@@ -9442,10 +9537,10 @@
       ],
       "is_a": "EnumeratedValue",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "EnumeratedValue_altSymbol",
         "EnumeratedValue_description",
         "EnumeratedValue_abbreviation",
@@ -9473,10 +9568,10 @@
         "Concept"
       ],
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
         "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch",
         "hasReciprocalUnit",
         "isUnitOfSystem",
         "omUnit",
@@ -9560,10 +9655,10 @@
       ],
       "is_a": "Aspect",
       "slots": [
-        "Verifiable_wikidataMatch",
-        "Verifiable_dbpediaMatch",
         "Verifiable_isoNormativeReference",
-        "Verifiable_normativeReference"
+        "Verifiable_normativeReference",
+        "Verifiable_wikidataMatch",
+        "Verifiable_dbpediaMatch"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/Verifiable",
@@ -9686,9 +9781,6 @@
         "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering."
       ],
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
-      "mappings": [
-        "qudt:LatexString"
-      ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/LatexString",
       "@type": "ClassDefinition"
@@ -9729,9 +9821,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2025-11-02T18:49:48",
-  "source_file_size": 51082,
-  "generation_date": "2025-11-02T18:54:14",
+  "source_file_date": "2026-01-04T22:27:50",
+  "source_file_size": 63354,
+  "generation_date": "2026-01-05T11:18:14",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

@@ -1,7 +1,7 @@
  syntax="proto3";
  package
 // metamodel_version: 1.7.0
-// version: 0.0.1
+// version: 0.0.2
 message AbstractQuantityKind
  {
  repeated  string guidance = 0
@@ -19,10 +19,10 @@ message AbstractQuantityKind
  }
 message AngleUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -78,10 +78,10 @@ message BaseDimensionMagnitude
  }
 message BinaryPrefix
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  prefix exactMatch = 0
  repeated  uCUMcs-term ucumCode = 0
  repeated  string altSymbol = 0
@@ -138,10 +138,10 @@ message ByteEncodingType
  }
 message CardinalityType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -181,10 +181,10 @@ message Citation
  }
 message Comment
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string rationale = 0
  repeated  string description = 0
  }
@@ -221,10 +221,10 @@ message ConstantValue
  }
 message ContextualUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -268,10 +268,10 @@ message ContextualUnit
  }
 message CountingUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -314,10 +314,10 @@ message CountingUnit
  }
 message CurrencyUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -412,10 +412,10 @@ message DateTimeStringEncodingType
  }
 message DecimalPrefix
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  prefix exactMatch = 0
  repeated  uCUMcs-term ucumCode = 0
  repeated  string altSymbol = 0
@@ -433,10 +433,10 @@ message DecimalPrefix
  }
 message DerivedUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -479,10 +479,10 @@ message DerivedUnit
  }
 message DimensionlessUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -549,10 +549,10 @@ message Encoding
  }
 message EndianType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -579,10 +579,10 @@ message EnumeratedQuantity
  }
 message EnumeratedValue
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -685,10 +685,10 @@ message IntervalScale
  }
 message LogarithmicUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -742,10 +742,10 @@ message MathsFunctionType
  }
 message NISTSP811Comment
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string rationale = 0
  repeated  string description = 0
  }
@@ -777,10 +777,10 @@ message NumericUnion
  }
 message OrderedType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -844,7 +844,6 @@ message PhysicalConstant
  repeated  string plainTextDescription = 0
  repeated  systemOfUnits applicableSystem = 0
  repeated  unit applicableUnit = 0
- repeated  uri dbpediaMatch = 0
  repeated  physicalConstant exactMatch = 0
  repeated  quantityKindDimensionVector hasDimensionVector = 0
  repeated  string ucumCode = 0
@@ -859,10 +858,10 @@ message PhysicalConstant
  }
 message PlaneAngleUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -905,10 +904,10 @@ message PlaneAngleUnit
  }
 message Prefix
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  prefix exactMatch = 0
  repeated  uCUMcs-term ucumCode = 0
  repeated  string altSymbol = 0
@@ -959,10 +958,10 @@ message Quantity
  }
 message QuantityKind
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  systemOfQuantityKinds belongsToSystemOfQuantities = 0
  repeated  quantityKindDimensionVectorSI dimensionVectorForSI = 0
  repeated  quantityKind exactMatch = 0
@@ -1191,10 +1190,10 @@ message QuantityKindDimensionVectorSI
  }
 message QuantityType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -1243,10 +1242,10 @@ message RatioScale
  }
 message Rule
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  ruleType ruleType = 0
  repeated  string rationale = 0
  repeated  string guidance = 0
@@ -1260,10 +1259,10 @@ message Rule
  }
 message RuleType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -1328,10 +1327,10 @@ message Scale
  }
 message ScaleType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -1348,10 +1347,10 @@ message ScaleType
  }
 message SolidAngleUnit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -1421,10 +1420,10 @@ message SystemOfQuantityKinds
  }
 message SystemOfUnits
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  physicalConstant applicablePhysicalConstant = 0
  repeated  unit hasAllowedUnit = 0
  repeated  unit hasBaseUnit = 0
@@ -1445,10 +1444,10 @@ message SystemOfUnits
  }
 message TransformType
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  string altSymbol = 0
  repeated  string description = 0
  repeated  string abbreviation = 0
@@ -1462,10 +1461,10 @@ message TransformType
  }
 message Unit
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  repeated  unit hasReciprocalUnit = 0
  repeated  systemOfUnits isUnitOfSystem = 0
  repeated  string omUnit = 0
@@ -1524,8 +1523,8 @@ message UserQuantityKind
  }
 message Verifiable
  {
- repeated  uri wikidataMatch = 0
- repeated  uri dbpediaMatch = 0
  repeated  string isoNormativeReference = 0
  repeated  string normativeReference = 0
+ repeated  uri wikidataMatch = 0
+ repeated  uri dbpediaMatch = 0
  }

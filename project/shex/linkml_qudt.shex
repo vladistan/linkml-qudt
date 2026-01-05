@@ -1,5 +1,5 @@
 # metamodel_version: 1.7.0
-# version: 0.0.1
+# version: 0.0.2
 BASE <https://w3id.org/None/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -578,7 +578,6 @@ linkml:Sparqlpath xsd:string
           rdf:type [ <Quantity> ] ? ;
           <applicableSystem> @<SystemOfUnits> * ;
           <applicableUnit> @<Unit> * ;
-          <dbpediaMatch> @linkml:Uri * ;
           <exactMatch> @<PhysicalConstant> * ;
           <hasDimensionVector> @<QuantityKindDimensionVector> * ;
           <ucumCode> @linkml:String * ;
@@ -1097,10 +1096,10 @@ linkml:Sparqlpath xsd:string
     CLOSED {
        (  $<Verifiable_tes> (  &<Aspect_tes> ;
              rdf:type [ <Aspect> ] ? ;
-             <wikidataMatch> @linkml:Uri * ;
-             <dbpediaMatch> @linkml:Uri * ;
              <isoNormativeReference> @linkml:String * ;
-             <normativeReference> @linkml:String *
+             <normativeReference> @linkml:String * ;
+             <wikidataMatch> @linkml:Uri * ;
+             <dbpediaMatch> @linkml:Uri *
           ) ;
           rdf:type [ <Verifiable> ] ?
        )

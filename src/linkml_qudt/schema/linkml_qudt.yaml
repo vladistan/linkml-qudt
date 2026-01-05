@@ -1,18 +1,19 @@
----
 id: http://qudt.org/3.1.6/schema/qudt
 name: qudt
 title: QUDT Ontology in LinkML
-version: 0.0.1
-description: |-
-  This is a LinkML representation of the QUDT (Quantities, Units, Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for describing physical quantities, units of measure, and their relationships in a machine-readable format.
+version: 0.0.2
+description: This is a LinkML representation of the QUDT (Quantities, Units, 
+  Dimensions and Types) ontology. QUDT provides a comprehensive vocabulary for 
+  describing physical quantities, units of measure, and their relationships in a
+  machine-readable format.
 license: CC-BY-4.0
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
   qudt: https://w3id.org/None/
-  owl: http://www.w3.org/2002/07/owl#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  owl: http://www.w3.org/2002/07/owl#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   dc: http://purl.org/dc/elements/1.1/
   dcterms: http://purl.org/dc/terms/
@@ -42,7 +43,8 @@ classes:
     class_uri: qudt:AngleUnit
   Aspect:
     comments:
-    - An aspect is an abstract type class that defines properties that can be reused.^^rdf:HTML
+    - An aspect is an abstract type class that defines properties that can be 
+      reused.^^rdf:HTML
     is_a: Thing
     class_uri: qudt:Aspect
   AspectClass:
@@ -50,11 +52,10 @@ classes:
     class_uri: qudt:AspectClass
   BaseDimensionMagnitude:
     comments:
-    - '<p class=\"lm-para\">A <em>Dimension</em> expresses a magnitude for a base
-      quantiy kind such as mass, length and time.</p>
-
-      <p class=\"lm-para\">DEPRECATED - each exponent is expressed as a property.
-      Keep until a validaiton of this has been done.</p>^^rdf:HTML'
+    - "<p class=\\\"lm-para\\\">A <em>Dimension</em> expresses a magnitude for a base
+      quantiy kind such as mass, length and time.</p>\n<p class=\\\"lm-para\\\">DEPRECATED
+      - each exponent is expressed as a property. Keep until a validaiton of this
+      has been done.</p>^^rdf:HTML"
     is_a: Concept
     slot_usage:
       hasBaseQuantityKind:
@@ -68,9 +69,9 @@ classes:
     class_uri: qudt:BaseDimensionMagnitude
   BinaryPrefix:
     comments:
-    - A <em>Binary Prefix</em> is a prefix for multiples of units in data processing,
-      data transmission, and digital information, notably the bit and the byte, to
-      indicate multiplication by a power of 2.
+    - A <em>Binary Prefix</em> is a prefix for multiples of units in data 
+      processing, data transmission, and digital information, notably the bit 
+      and the byte, to indicate multiplication by a power of 2.
     is_a: Prefix
     class_uri: qudt:BinaryPrefix
   BitEncodingType:
@@ -149,15 +150,15 @@ classes:
     class_uri: qudt:ContextualUnit
   CountingUnit:
     comments:
-    - Used for all units that express counts. Examples are Atomic Number, Number,
-      Number per Year, Percent and Sample per Second.^^rdf:HTML
+    - Used for all units that express counts. Examples are Atomic Number, 
+      Number, Number per Year, Percent and Sample per Second.^^rdf:HTML
     is_a: DimensionlessUnit
     class_uri: qudt:CountingUnit
   CurrencyUnit:
     comments:
-    - 'Currency Units have their own subclass of unit because: (a) they have additional
-      properties such as ''country'' and (b) their URIs do not conform to the same
-      rules as other units.^^rdf:HTML'
+    - "Currency Units have their own subclass of unit because: (a) they have additional
+      properties such as 'country' and (b) their URIs do not conform to the same rules
+      as other units.^^rdf:HTML"
     - Used for all units that express currency.^^rdf:HTML
     is_a: DimensionlessUnit
     slot_usage:
@@ -168,9 +169,9 @@ classes:
     class_uri: qudt:CurrencyUnit
   DataEncoding:
     comments:
-    - <p><em>Data Encoding</em> expresses the properties that specify how data is
-      represented at the bit and byte level. These properties are applicable to describing
-      raw data.</p>^^rdf:HTML
+    - <p><em>Data Encoding</em> expresses the properties that specify how data 
+      is represented at the bit and byte level. These properties are applicable 
+      to describing raw data.</p>^^rdf:HTML
     is_a: Aspect
     slot_usage:
       bitOrder:
@@ -240,20 +241,21 @@ classes:
     class_uri: qudt:DateTimeStringEncodingType
   DecimalPrefix:
     comments:
-    - A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers
-      of 10.
+    - A <em>Decimal Prefix</em> is a prefix for multiples of units that are 
+      powers of 10.
     is_a: Prefix
     class_uri: qudt:DecimalPrefix
   DerivedUnit:
     comments:
-    - A DerivedUnit is a type specification for units that are derived from other
-      units.^^rdf:HTML
+    - A DerivedUnit is a type specification for units that are derived from 
+      other units.^^rdf:HTML
     is_a: Unit
     class_uri: qudt:DerivedUnit
   DimensionlessUnit:
     comments:
-    - A Dimensionless Unit is a quantity for which all the exponents of the factors
-      corresponding to the base quantities in its quantity dimension are zero.^^rdf:HTML
+    - A Dimensionless Unit is a quantity for which all the exponents of the 
+      factors corresponding to the base quantities in its quantity dimension are
+      zero.^^rdf:HTML
     is_a: Unit
     class_uri: qudt:DimensionlessUnit
   Discipline:
@@ -294,21 +296,19 @@ classes:
     class_uri: qudt:EnumeratedValue
   Enumeration:
     comments:
-    - '<p>An enumeration is a set of literals from which a single value is selected.
+    - "<p>An enumeration is a set of literals from which a single value is selected.
       Each literal can have a tag as an integer within a standard encoding appropriate
       to the range of integer values. Consistency of enumeration types will allow
       them, and the enumerated values, to be referred to unambiguously either through
       symbolic name or encoding. Enumerated values are also controlled vocabularies
       and as such need to be standardized. Without this consistency enumeration literals
-      can be stated differently and result in  data conflicts and misinterpretations.</p>
-
-
-      <p>The tags are a set of positive whole numbers, not necessarily contiguous
+      can be stated differently and result in  data conflicts and misinterpretations.</p>\n\
+      \n<p>The tags are a set of positive whole numbers, not necessarily contiguous
       and having no numerical significance, each corresponding to the associated literal
       identifier. An order attribute can also be given on the enumeration elements.
       An enumeration can itself be a member of an enumeration. This allows enumerations
       to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar
-      Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>^^rdf:HTML'
+      Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>^^rdf:HTML"
     is_a: Concept
     slot_usage:
       default:
@@ -352,31 +352,32 @@ classes:
     class_uri: qudt:IntegerEncodingType
   IntervalScale:
     comments:
-    - "<p>The interval type allows for the degree of difference between items, but\
-      \ not the ratio between them. Examples include temperature with the Celsius\
-      \ scale, which has two defined points (the freezing and boiling point of water\
-      \ at specific conditions) and then separated into 100 intervals, date when measured\
-      \ from an arbitrary epoch (such as AD), percentage such as a percentage return\
-      \ on a stock,[16] location in Cartesian coordinates, and direction measured\
-      \ in degrees from true or magnetic north. Ratios are not meaningful since 20\
-      \ \xB0C cannot be said to be \\\"twice as hot\\\" as 10 \xB0C, nor can multiplication/division\
-      \ be carried out between any two dates directly. However, ratios of differences\
-      \ can be expressed; for example, one difference can be twice another. Interval\
-      \ type variables are sometimes also called \\\"scaled variables\\\", but the\
-      \ formal mathematical term is an affine space (in this case an affine line).</p>\n\
-      <p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;)\
-      \ &amp; totally ordered set</p>^^rdf:HTML"
-    - median, percentile & Monotonic increasing (order (<)) & totally ordered set^^rdf:HTML
+    - "<p>The interval type allows for the degree of difference between items, but
+      not the ratio between them. Examples include temperature with the Celsius scale,
+      which has two defined points (the freezing and boiling point of water at specific
+      conditions) and then separated into 100 intervals, date when measured from an
+      arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16]
+      location in Cartesian coordinates, and direction measured in degrees from true
+      or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be
+      \\\"twice as hot\\\" as 10 °C, nor can multiplication/division be carried out
+      between any two dates directly. However, ratios of differences can be expressed;
+      for example, one difference can be twice another. Interval type variables are
+      sometimes also called \\\"scaled variables\\\", but the formal mathematical
+      term is an affine space (in this case an affine line).</p>\n<p>Characteristics:
+      median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered
+      set</p>^^rdf:HTML"
+    - median, percentile & Monotonic increasing (order (<)) & totally ordered 
+      set^^rdf:HTML
     is_a: Scale
     class_uri: qudt:IntervalScale
   LogarithmicUnit:
     comments:
-    - Logarithmic units are abstract mathematical units that can be used to express
-      any quantities (physical or mathematical) that are defined on a logarithmic
-      scale, that is, as being proportional to the value of a logarithm function.
-      Examples of logarithmic units include common units of information and entropy,
-      such as the bit, and the byte, as well as units of relative signal strength
-      magnitude such as the decibel.^^rdf:HTML
+    - Logarithmic units are abstract mathematical units that can be used to 
+      express any quantities (physical or mathematical) that are defined on a 
+      logarithmic scale, that is, as being proportional to the value of a 
+      logarithm function. Examples of logarithmic units include common units of 
+      information and entropy, such as the bit, and the byte, as well as units 
+      of relative signal strength magnitude such as the decibel.^^rdf:HTML
     is_a: DimensionlessUnit
     class_uri: qudt:LogarithmicUnit
   MathsFunctionType:
@@ -410,13 +411,14 @@ classes:
     class_uri: qudt:OrderedType
   OrdinalScale:
     comments:
-    - The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can
-      be sorted, but still does not allow for relative degree of difference between
-      them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized)
-      values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent'
-      when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring
-      truth value, and, on the other hand, non-dichotomous data consisting of a spectrum
-      of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely
+    - The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data
+      can be sorted, but still does not allow for relative degree of difference 
+      between them. Examples include, on one hand, dichotomous data with 
+      dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when 
+      measuring health, 'guilty' vs. 'innocent' when making judgments in courts,
+      'wrong/false' vs. 'right/true' when measuring truth value, and, on the 
+      other hand, non-dichotomous data consisting of a spectrum of values, such 
+      as 'completely agree', 'mostly agree', 'mostly disagree', 'completely 
       disagree' when measuring opinion.^^rdf:HTML
     is_a: Scale
     slot_usage:
@@ -432,23 +434,22 @@ classes:
     class_uri: qudt:Organization
   PhysicalConstant:
     comments:
-    - "A physical constant is a physical quantity that is generally believed to be\
-      \ both universal in nature and constant in time. It can be contrasted with a\
-      \ mathematical constant, which is a fixed numerical value but does not directly\
-      \ involve any physical measurement. There are many physical constants in science,\
-      \ some of the most widely recognized being the speed of light in vacuum c, Newton's\
-      \ gravitational constant G, Planck's constant h, the electric permittivity of\
-      \ free space \u03B50, and the elementary charge e. Physical constants can take\
-      \ many dimensional forms, or may be dimensionless depending on the system of\
-      \ quantities and units used.^^rdf:HTML"
+    - A physical constant is a physical quantity that is generally believed to 
+      be both universal in nature and constant in time. It can be contrasted 
+      with a mathematical constant, which is a fixed numerical value but does 
+      not directly involve any physical measurement. There are many physical 
+      constants in science, some of the most widely recognized being the speed 
+      of light in vacuum c, Newton's gravitational constant G, Planck's constant
+      h, the electric permittivity of free space ε0, and the elementary charge 
+      e. Physical constants can take many dimensional forms, or may be 
+      dimensionless depending on the system of quantities and units 
+      used.^^rdf:HTML
     is_a: Quantity
     slot_usage:
       applicableSystem:
         range: SystemOfUnits
       applicableUnit:
         range: Unit
-      dbpediaMatch:
-        range: uri
       exactMatch:
         range: PhysicalConstant
       hasDimensionVector:
@@ -495,8 +496,8 @@ classes:
     class_uri: qudt:Prefix
   Quantifiable:
     comments:
-    - <p><em>Quantifiable</em> ascribes to some thing the capability of being measured,
-      observed, or counted.</p>^^rdf:HTML
+    - <p><em>Quantifiable</em> ascribes to some thing the capability of being 
+      measured, observed, or counted.</p>^^rdf:HTML
     is_a: Aspect
     slot_usage:
       dataEncoding:
@@ -523,30 +524,30 @@ classes:
     class_uri: qudt:Quantifiable
   Quantity:
     comments:
-    - "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable\
-      \ property of a particular object, event, or physical system. \n  A quantity\
-      \ is always associated with the context of measurement (i.e. the thing measured,\
-      \ the measured value, the accuracy of measurement, etc.) whereas the \n  underlying\
-      \ <b>quantity kind</b> is independent of any particular measurement. Thus, length\
-      \ is a quantity kind while the height of a rocket is a specific \n  quantity\
-      \ of length; its magnitude that may be expressed in meters, feet, inches, etc.\
-      \ Examples of physical quantities include physical constants, such as \n  the\
-      \ speed of light in a vacuum, Planck's constant, the electric permittivity of\
-      \ free space, and the fine structure constant. </p>\n<p class=\\\"lm-para\\\"\
-      >In other words, quantities are quantifiable aspects of the world, such as the\
-      \ duration of a movie, the distance between two points, \nvelocity of a car,\
-      \ the pressure of the atmosphere, and a person's weight; and units are used\
-      \ to describe their numerical measure.</p> \n<p class=\\\"lm-para\\\">Many <b>quantity\
-      \ kinds</b> are related to each other by various physical laws, and as a result,\
-      \ the associated units of some quantity \nkinds can be expressed as products\
-      \ (or ratios) of powers of other quantity kinds (e.g., momentum is mass times\
-      \ velocity and velocity is defined as distance \ndivided by time). In this way,\
-      \ some quantities can be calculated from other measured quantities using their\
-      \ associations to the quantity kinds in these \nexpressions. These quantity\
-      \ kind relationships are also discussed in dimensional analysis. Those that\
-      \ cannot be so expressed can be regarded \nas \\\"fundamental\\\" in this sense.</p>\n\
-      <p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\
-      \" in that the former carries a value and the latter is a type specifier.</p>^^rdf:HTML"
+    - "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable
+      property of a particular object, event, or physical system.\n  A quantity is
+      always associated with the context of measurement (i.e. the thing measured,
+      the measured value, the accuracy of measurement, etc.) whereas the\n  underlying
+      <b>quantity kind</b> is independent of any particular measurement. Thus, length
+      is a quantity kind while the height of a rocket is a specific\n  quantity of
+      length; its magnitude that may be expressed in meters, feet, inches, etc. Examples
+      of physical quantities include physical constants, such as\n  the speed of light
+      in a vacuum, Planck's constant, the electric permittivity of free space, and
+      the fine structure constant. </p>\n<p class=\\\"lm-para\\\">In other words,
+      quantities are quantifiable aspects of the world, such as the duration of a
+      movie, the distance between two points,\nvelocity of a car, the pressure of
+      the atmosphere, and a person's weight; and units are used to describe their
+      numerical measure.</p>\n<p class=\\\"lm-para\\\">Many <b>quantity kinds</b>
+      are related to each other by various physical laws, and as a result, the associated
+      units of some quantity\nkinds can be expressed as products (or ratios) of powers
+      of other quantity kinds (e.g., momentum is mass times velocity and velocity
+      is defined as distance\ndivided by time). In this way, some quantities can be
+      calculated from other measured quantities using their associations to the quantity
+      kinds in these\nexpressions. These quantity kind relationships are also discussed
+      in dimensional analysis. Those that cannot be so expressed can be regarded\n\
+      as \\\"fundamental\\\" in this sense.</p>\n<p class=\\\"lm-para\\\">A quantity
+      is distinguished from a \\\"quantity kind\\\" in that the former carries a value
+      and the latter is a type specifier.</p>^^rdf:HTML"
     is_a: Quantifiable
     mixins:
     - Concept
@@ -561,11 +562,11 @@ classes:
     class_uri: qudt:Quantity
   QuantityKind:
     comments:
-    - A <b>Quantity Kind</b> is any observable property that can be  measured and
-      quantified numerically. Familiar examples include physical properties such as
-      length, mass, time, force, energy, power, electric charge, etc. Less familiar
-      examples include currency, interest rate, price to earning ratio, and information
-      capacity.^^rdf:HTML
+    - A <b>Quantity Kind</b> is any observable property that can be  measured 
+      and quantified numerically. Familiar examples include physical properties 
+      such as length, mass, time, force, energy, power, electric charge, etc. 
+      Less familiar examples include currency, interest rate, price to earning 
+      ratio, and information capacity.^^rdf:HTML
     is_a: Verifiable
     mixins:
     - AbstractQuantityKind
@@ -604,24 +605,21 @@ classes:
     class_uri: qudt:QuantityKind
   QuantityKindDimensionVector:
     comments:
-    - '<p class=\"lm-para\">A  <em>Quantity Kind Dimension Vector</em> describes the
-      dimensionality of a quantity kind in the context of a system of units. In the
-      SI system of units, the dimensions of a quantity kind are expressed as a product
-      of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current
-      ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature
-      ($\\theta$) as $dim \\, Q = L^{\\alpha} \\, M^{\\beta} \\, T^{\\gamma} \\, I
-      ^{\\delta} \\, \\theta ^{\\epsilon} \\, N^{\\eta} \\, J ^{\\nu}$.</p>
-
-
-      <p class=\"lm-para\">The rational powers of the dimensional exponents, $\\alpha,
-      \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\, \\eta, \\, \\nu$, are
-      positive, negative, or zero.</p>
-
-
-      <p class=\"lm-para\">For example, the dimension of the physical quantity kind
-      $\\it{speed}$ is $\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension
-      of the physical quantity kind force is $\\boxed{mass \\times acceleration}$
-      or $\\boxed{mass \\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>^^rdf:HTML'
+    - "<p class=\\\"lm-para\\\">A  <em>Quantity Kind Dimension Vector</em> describes
+      the dimensionality of a quantity kind in the context of a system of units. In
+      the SI system of units, the dimensions of a quantity kind are expressed as a
+      product of the basic physical dimensions mass ($M$), length ($L$), time ($T$)
+      current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute
+      temperature ($\\\\theta$) as $dim \\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta}
+      \\\\, T^{\\\\gamma} \\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\
+      , N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>\n\n<p class=\\\"lm-para\\\">The rational
+      powers of the dimensional exponents, $\\\\alpha, \\\\, \\\\beta, \\\\, \\\\\
+      gamma, \\\\, \\\\delta, \\\\, \\\\epsilon, \\\\, \\\\eta, \\\\, \\\\nu$, are
+      positive, negative, or zero.</p>\n\n<p class=\\\"lm-para\\\">For example, the
+      dimension of the physical quantity kind $\\\\it{speed}$ is $\\\\boxed{length/time}$,
+      $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is
+      $\\\\boxed{mass \\\\times acceleration}$ or $\\\\boxed{mass \\\\times (length/time)/time}$,
+      $ML/T^2$ or $MLT^{-2}$ respectively.</p>^^rdf:HTML"
     is_a: Concept
     slot_usage:
       hasReferenceQuantityKind:
@@ -657,32 +655,32 @@ classes:
     class_uri: qudt:QuantityKindDimensionVector
   QuantityKindDimensionVector_CGS:
     comments:
-    - A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S.
-      quantity kind.^^rdf:HTML
+    - A <em>CGS Dimension Vector</em> is used to specify the dimensions for a 
+      C.G.S. quantity kind.^^rdf:HTML
     is_a: QuantityKindDimensionVector
     class_uri: qudt:QuantityKindDimensionVector_CGS
   QuantityKindDimensionVector_CGS-EMU:
     comments:
-    - A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU
-      C.G.S. quantity kind.^^rdf:HTML
+    - A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for 
+      EMU C.G.S. quantity kind.^^rdf:HTML
     is_a: QuantityKindDimensionVector_CGS
     class_uri: qudt:QuantityKindDimensionVector_CGS-EMU
   QuantityKindDimensionVector_CGS-ESU:
     comments:
-    - A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU
-      C.G.S. quantity kind.^^rdf:HTML
+    - A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for 
+      ESU C.G.S. quantity kind.^^rdf:HTML
     is_a: QuantityKindDimensionVector_CGS
     class_uri: qudt:QuantityKindDimensionVector_CGS-ESU
   QuantityKindDimensionVector_CGS-GAUSS:
     comments:
-    - A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for
-      Gaussioan C.G.S. quantity kind.^^rdf:HTML
+    - A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions 
+      for Gaussioan C.G.S. quantity kind.^^rdf:HTML
     is_a: QuantityKindDimensionVector_CGS
     class_uri: qudt:QuantityKindDimensionVector_CGS-GAUSS
   QuantityKindDimensionVector_CGS-LH:
     comments:
-    - A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside
-      C.G.S. quantity kind.^^rdf:HTML
+    - A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for 
+      Lorentz-Heaviside C.G.S. quantity kind.^^rdf:HTML
     is_a: QuantityKindDimensionVector_CGS
     class_uri: qudt:QuantityKindDimensionVector_CGS-LH
   QuantityKindDimensionVector_ISO:
@@ -702,11 +700,12 @@ classes:
     class_uri: qudt:QuantityType
   QuantityValue:
     comments:
-    - A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is
-      given by the product of a numerical value <code>n</code> and a unit of measure
-      <code>U</code>. The number multiplying the unit is referred to as the numerical
-      value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST
-      SP 811 section 7</a> for more on quantity values.^^rdf:HTML
+    - A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and
+      is given by the product of a numerical value <code>n</code> and a unit of 
+      measure <code>U</code>. The number multiplying the unit is referred to as 
+      the numerical value of the quantity expressed in that unit. Refer to <a 
+      href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section
+      7</a> for more on quantity values.^^rdf:HTML
     is_a: Quantifiable
     mixins:
     - Concept
@@ -716,18 +715,20 @@ classes:
     class_uri: qudt:QuantityValue
   RatioScale:
     comments:
-    - The ratio type takes its name from the fact that measurement is the estimation
-      of the ratio between a magnitude of a continuous quantity and a unit magnitude
-      of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful
-      (unique and non-arbitrary) zero value. Most measurement in the physical sciences
-      and engineering is done on ratio scales. Examples include mass, length, duration,
-      plane angle, energy and electric charge. In contrast to interval scales, ratios
-      are now meaningful because having a non-arbitrary zero point makes it meaningful
-      to say, for example, that one object has \"twice the length\" of another (=
-      is \"twice as long\"). Very informally, many ratio scales can be described as
-      specifying \"how much\" of something (i.e. an amount or magnitude) or \"how
-      many\" (a count). The Kelvin temperature scale is a ratio scale because it has
-      a unique, non-arbitrary zero point called absolute zero.^^rdf:HTML
+    - The ratio type takes its name from the fact that measurement is the 
+      estimation of the ratio between a magnitude of a continuous quantity and a
+      unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale 
+      possesses a meaningful (unique and non-arbitrary) zero value. Most 
+      measurement in the physical sciences and engineering is done on ratio 
+      scales. Examples include mass, length, duration, plane angle, energy and 
+      electric charge. In contrast to interval scales, ratios are now meaningful
+      because having a non-arbitrary zero point makes it meaningful to say, for 
+      example, that one object has \"twice the length\" of another (= is \"twice
+      as long\"). Very informally, many ratio scales can be described as 
+      specifying \"how much\" of something (i.e. an amount or magnitude) or 
+      \"how many\" (a count). The Kelvin temperature scale is a ratio scale 
+      because it has a unique, non-arbitrary zero point called absolute 
+      zero.^^rdf:HTML
     is_a: Scale
     class_uri: qudt:RatioScale
   Rule:
@@ -766,8 +767,9 @@ classes:
     class_uri: qudt:ScalarDatatype
   Scale:
     comments:
-    - Scales (also called \"scales of measurement\" or \"levels of measurement\")  are
-      expressions that typically refer to the theory of scale types.^^rdf:HTML
+    - Scales (also called \"scales of measurement\" or \"levels of 
+      measurement\")  are expressions that typically refer to the theory of 
+      scale types.^^rdf:HTML
     is_a: Concept
     slot_usage:
       permissibleMaths:
@@ -806,19 +808,20 @@ classes:
     class_uri: qudt:SymmetricRelation
   SystemOfQuantityKinds:
     comments:
-    - "A system of quantity kinds is a set of one or more quantity kinds together\
-      \ with a set of zero or more algebraic equations that define relationships between\
-      \ quantity kinds in the set. In the physical sciences, the equations relating\
-      \ quantity kinds are typically physical laws and definitional relations, and\
-      \ constants of proportionality. Examples include Newton\u2019s First Law of\
-      \ Motion, Coulomb\u2019s Law, and the definition of velocity as the instantaneous\
-      \ change in position.  In almost all cases, the system identifies a subset of\
-      \ base quantity kinds. The base set is chosen so that all other quantity kinds\
-      \ of interest can be derived from the base quantity kinds and the algebraic\
-      \ equations. If the unit system is explicitly associated with a quantity kind\
-      \ system, then the unit system must define at least one unit for each quantity\
-      \ kind.  From a scientific point of view, the division of quantities into base\
-      \ quantities and derived quantities is a matter of convention.^^rdf:HTML"
+    - A system of quantity kinds is a set of one or more quantity kinds together
+      with a set of zero or more algebraic equations that define relationships 
+      between quantity kinds in the set. In the physical sciences, the equations
+      relating quantity kinds are typically physical laws and definitional 
+      relations, and constants of proportionality. Examples include Newton’s 
+      First Law of Motion, Coulomb’s Law, and the definition of velocity as the 
+      instantaneous change in position.  In almost all cases, the system 
+      identifies a subset of base quantity kinds. The base set is chosen so that
+      all other quantity kinds of interest can be derived from the base quantity
+      kinds and the algebraic equations. If the unit system is explicitly 
+      associated with a quantity kind system, then the unit system must define 
+      at least one unit for each quantity kind.  From a scientific point of 
+      view, the division of quantities into base quantities and derived 
+      quantities is a matter of convention.^^rdf:HTML
     is_a: Concept
     slot_usage:
       baseDimensionEnumeration:
@@ -836,12 +839,12 @@ classes:
     class_uri: qudt:SystemOfQuantityKinds
   SystemOfUnits:
     comments:
-    - A system of units is a set of units which are chosen as the reference scales
-      for some set of quantity kinds together with the definitions of each unit. Units
-      may be defined by experimental observation or by proportion to another unit
-      not included in the system. If the unit system is explicitly associated with
-      a quantity kind system, then the unit system must define at least one unit for
-      each quantity kind.^^rdf:HTML
+    - A system of units is a set of units which are chosen as the reference 
+      scales for some set of quantity kinds together with the definitions of 
+      each unit. Units may be defined by experimental observation or by 
+      proportion to another unit not included in the system. If the unit system 
+      is explicitly associated with a quantity kind system, then the unit system
+      must define at least one unit for each quantity kind.^^rdf:HTML
     is_a: Verifiable
     mixins:
     - Concept
@@ -946,17 +949,17 @@ classes:
     class_uri: qudt:UserQuantityKind
   Verifiable:
     comments:
-    - An aspect class that holds properties that provide external knowledge and specifications
-      of a given resource.
+    - An aspect class that holds properties that provide external knowledge and 
+      specifications of a given resource.
     is_a: Aspect
     slot_usage:
-      wikidataMatch:
-        required: false
-      dbpediaMatch:
-        required: false
       isoNormativeReference:
         required: false
       normativeReference:
+        required: false
+      wikidataMatch:
+        required: false
+      dbpediaMatch:
         required: false
     class_uri: qudt:Verifiable
   CatalogEntry:
@@ -981,22 +984,19 @@ classes:
     class_uri: owl:Ontology
   LatexString:
     comments:
-    - A type of string in which some characters may be wrapped with '$' and '$ characters
-      for LaTeX rendering.
-    class_uri: qudt:LatexString
+    - A type of string in which some characters may be wrapped with '$' and '$ 
+      characters for LaTeX rendering.
   UCUMcs:
     comments:
     - Lexical pattern for the case-sensitive version of UCUM code
     is_a: Resource
   UCUMcs-term:
     comments:
-    - Lexical pattern for the terminal symbols in the case-sensitive version of UCUM
-      code
+    - Lexical pattern for the terminal symbols in the case-sensitive version of 
+      UCUM code
     is_a: Resource
   valueUnion:
     is_a: Resource
-
-
 slots:
   isReplacedBy:
     slot_uri: dcterms:isReplacedBy
@@ -1036,6 +1036,8 @@ slots:
   applicableSystem:
     slot_uri: qudt:applicableSystem
     multivalued: true
+    description: This property relates a unit of measure with a unit system that
+      may or may not define the unit, but within which the unit is compatible.
   applicableUSCustomaryUnit:
     is_a: applicableUnit
     slot_uri: qudt:applicableUSCustomaryUnit
@@ -1045,14 +1047,26 @@ slots:
     slot_uri: qudt:applicableUnit
     range: Unit
     multivalued: true
+    description: See 
+      https://github.com/qudt/qudt-public-repo/wiki/Advanced-User-Guide#4-computing-applicable-units-for-a-quantitykind
+      on how `qudt:applicableUnit` is computed from `qudt:hasQuantityKind` and 
+      then materialized
   baseDimensionEnumeration:
     slot_uri: qudt:baseDimensionEnumeration
     range: Enumeration
     multivalued: true
+    description: This property associates a system of quantities with an 
+      enumeration that enumerates the base dimensions of the system in canonical
+      order.
   baseUnitOfSystem:
     is_a: definedUnitOfSystem
     slot_uri: qudt:baseUnitOfSystem
     multivalued: true
+    description: This property relates a unit of measure to the system of units 
+      in which it is defined as a base unit for the system. The base units of a 
+      system are used to define the derived units of the system by expressing 
+      the derived units as products of the base units raised to a rational 
+      power.
   basis:
     slot_uri: qudt:basis
     multivalued: true
@@ -1068,6 +1082,9 @@ slots:
     slot_uri: qudt:byteOrder
     range: EndianType
     multivalued: true
+    description: "Byte order is an enumeration of two values: 'Big Endian' and 'Little
+      Endian' and is used to denote whether the most signiticant byte is either first
+      or last, respectively."
   cName:
     comments:
     - Datatype name in the C programming language
@@ -1084,6 +1101,22 @@ slots:
     is_a: hasUnitSystem
     slot_uri: qudt:coherentUnitSystem
     multivalued: true
+    description: "\n  A system of units is coherent with respect to a system of quantities
+      and equations if the system of units is chosen in such a way that the equations
+      between numerical values have exactly the same form (including the numerical
+      factors) as the corresponding equations between the quantities.\n  In such a
+      coherent system, no numerical factor other than the number 1 ever occurs in
+      the expressions for the derived units in terms of the base units.\n  For example,
+      the $newton$ and the $joule$.\n  These two are, respectively, the force that
+      causes one kilogram to be accelerated at 1 metre per (1) second per (1) second,
+      and the work done by 1 newton acting over 1 metre.\n  Being coherent refers
+      to this consistent use of 1.\n  In the old c.g.s. system , with its base units
+      the centimetre and the gram, the corresponding coherent units were the dyne
+      and the erg,\n   respectively the force that causes 1 gram to be accelerated
+      at 1 centimetre per (1) second per (1) second, and the work done by 1 dyne acting
+      over 1 centimetre.\n  So $1\\,newton = 10^5 dyne$, $1 joule = 10^7 erg$, making
+      each of the four compatible in a decimal sense within its respective other system,
+      but not coherent therein.</p>\n  "
   dataEncoding:
     slot_uri: qudt:dataEncoding
     range: DataEncoding
@@ -1094,10 +1127,13 @@ slots:
   default:
     slot_uri: qudt:default
     multivalued: true
+    description: The default element in an enumeration
   definedUnitOfSystem:
     is_a: isUnitOfSystem
     slot_uri: qudt:definedUnitOfSystem
     multivalued: true
+    description: This property relates a unit of measure with the unit system 
+      that defines the unit.
   denominatorDimensionVector:
     slot_uri: qudt:denominatorDimensionVector
     range: QuantityKindDimensionVector
@@ -1108,15 +1144,25 @@ slots:
     - definedUnitOfSystem
     slot_uri: qudt:derivedCoherentUnitOfSystem
     multivalued: true
+    description: This property relates a unit of measure to the unit system in 
+      which the unit is derived from the system's base units with a 
+      proportionality constant of one.
   derivedNonCoherentUnitOfSystem:
     is_a: derivedUnitOfSystem
     slot_uri: qudt:derivedNonCoherentUnitOfSystem
     range: SystemOfUnits
     multivalued: true
+    description: This property relates a unit of measure to the unit system in 
+      which the unit is derived from the system's base units without 
+      proportionality constant of one.
   derivedUnitOfSystem:
     is_a: isUnitOfSystem
     slot_uri: qudt:derivedUnitOfSystem
     multivalued: true
+    description: This property relates a unit of measure to the system of units 
+      in which it is defined as a derived unit. That is, the derived unit is 
+      defined as a product of the base units for the system raised to some 
+      rational power.
   dimensionInverse:
     slot_uri: qudt:dimensionInverse
     multivalued: true
@@ -1127,6 +1173,7 @@ slots:
   element:
     slot_uri: qudt:element
     multivalued: true
+    description: An element of an enumeration
   elementKind:
     slot_uri: qudt:elementKind
     multivalued: true
@@ -1147,15 +1194,21 @@ slots:
   exponent:
     slot_uri: qudt:exponent
     multivalued: true
+    description: This property relates a factor unit its exponent
   figure:
     slot_uri: qudt:figure
     range: Figure
     multivalued: true
+    description: Provides a link to an image.
   hasAllowedUnit:
     is_a: hasUnit
     slot_uri: qudt:hasAllowedUnit
     range: Unit
     multivalued: true
+    description: This property relates a unit system with a unit of measure that
+      is not defined by or part of the system, but is allowed for use within the
+      system. An allowed unit must be convertible to some dimensionally 
+      eqiuvalent unit that is defined by the system.
   hasBaseQuantityKind:
     is_a: hasQuantityKind
     slot_uri: qudt:hasBaseQuantityKind
@@ -1164,15 +1217,24 @@ slots:
     is_a: hasCoherentUnit
     slot_uri: qudt:hasBaseUnit
     multivalued: true
+    description: This property relates a system of units to a base unit defined 
+      within the system. The base units of a system are used to define the 
+      derived units of the system by expressing the derived units as products of
+      the base units raised to a rational power.
   hasCoherentUnit:
     is_a: hasDefinedUnit
     slot_uri: qudt:hasCoherentUnit
     multivalued: true
+    description: A coherent unit of measurement for a unit system is a defined 
+      unit that may be expressed as a product of powers of the system's base 
+      units with the proportionality factor of one.
   hasDefinedUnit:
     is_a: hasUnit
     slot_uri: qudt:hasDefinedUnit
     range: Unit
     multivalued: true
+    description: This property relates a unit system with a unit of measure that
+      is defined by the system.
   hasDenominatorPart:
     slot_uri: qudt:hasDenominatorPart
     multivalued: true
@@ -1189,6 +1251,10 @@ slots:
   hasDerivedUnit:
     slot_uri: qudt:hasDerivedUnit
     multivalued: true
+    description: This property relates a system of units to a unit of measure 
+      that is defined within the system in terms of the base units for the 
+      system. That is, the derived unit is defined as a product of the base 
+      units for the system raised to some rational power.
   hasDimension:
     slot_uri: qudt:hasDimension
     multivalued: true
@@ -1202,6 +1268,8 @@ slots:
   hasFactorUnit:
     slot_uri: qudt:hasFactorUnit
     multivalued: true
+    description: This property relates a derived unit to one of its constituent 
+      factor units
   hasNumeratorPart:
     slot_uri: qudt:hasNumeratorPart
     multivalued: true
@@ -1231,6 +1299,15 @@ slots:
     slot_uri: qudt:hasUnit
     range: Unit
     multivalued: true
+    description: This property relates a factor unit to its unit or a system of 
+      units with a unit of measure that is either a) defined by the system, or 
+      b) accepted for use by the system and is convertible to a unit of 
+      equivalent dimension that is defined by the system. Systems of units may 
+      distinguish between base and derived units. Base units are the units which
+      measure the base quantities for the corresponding system of quantities. 
+      The base units are used to define units for all other quantities as 
+      products of powers of the base units. Such units are called derived units 
+      for the system.
   hasUnitSystem:
     slot_uri: qudt:hasUnitSystem
     multivalued: true
@@ -1245,6 +1322,9 @@ slots:
     slot_uri: qudt:isUnitOfSystem
     range: SystemOfUnits
     multivalued: true
+    description: This property relates a unit of measure with a system of units 
+      that either a) defines the unit or b) allows the unit to be used within 
+      the system.
   numeratorDimensionVector:
     slot_uri: qudt:numeratorDimensionVector
     range: QuantityKindDimensionVector
@@ -1290,6 +1370,8 @@ slots:
   quantity:
     slot_uri: qudt:quantity
     multivalued: true
+    description: a property to relate an observable thing with a quantity 
+      (qud:Quantity)
   quantityValue:
     slot_uri: qudt:quantityValue
     range: QuantityValue
@@ -1306,8 +1388,8 @@ slots:
     multivalued: true
   relevantUnit:
     comments:
-    - This property is used for qudt:Discipline instances to identify the Unit instances
-      that are used within a given discipline.
+    - This property is used for qudt:Discipline instances to identify the Unit 
+      instances that are used within a given discipline.
     slot_uri: qudt:relevantUnit
     range: Unit
     multivalued: true
@@ -1320,6 +1402,7 @@ slots:
   scalingOf:
     slot_uri: qudt:scalingOf
     multivalued: true
+    description: This property relates a unit to another unit it is scaled from
   siExactMatch:
     slot_uri: qudt:siExactMatch
     multivalued: true
@@ -1356,6 +1439,13 @@ slots:
   abbreviation:
     slot_uri: qudt:abbreviation
     multivalued: true
+    description: An abbreviation for a unit is a short ASCII string that is used
+      in place of the full name for the unit in contexts where non-ASCII 
+      characters would be problematic, or where using the abbreviation will 
+      enhance readability. When a power of abase unit needs to be expressed, 
+      such as squares this can be done using abbreviations rather than symbols. 
+      For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em>
+      means <em>cubic foot</em>.
   acronym:
     slot_uri: qudt:acronym
     multivalued: true
@@ -1366,6 +1456,7 @@ slots:
     is_a: literal
     slot_uri: qudt:altSymbol
     multivalued: true
+    description: An alternative symbol
   bits:
     slot_uri: qudt:bits
     multivalued: true
@@ -1390,12 +1481,22 @@ slots:
   currencyCode:
     slot_uri: qudt:currencyCode
     multivalued: true
+    description: Alphabetic Currency Code as defined by ISO 4217. For example, 
+      US Dollar has the code 'USD'.
   currencyExponent:
     slot_uri: qudt:currencyExponent
     multivalued: true
+    description: The currency exponent indicates the number of decimal places 
+      between a major currency unit and its minor currency unit. For example, 
+      the US dollar is the major currency unit of the United States, and the US 
+      cent is the minor currency unit. Since one cent is 1/100 of a dollar, the 
+      US dollar has a currency exponent of 2. However, the Japanese Yen has no 
+      minor currency units, so the yen has a currency exponent of 0.
   currencyNumber:
     slot_uri: qudt:currencyNumber
     multivalued: true
+    description: Numeric currency Code as defined by ISO 4217. For example, US 
+      Dollar has the number 840.
   dataStructure:
     slot_uri: qudt:dataStructure
     multivalued: true
@@ -1435,6 +1536,9 @@ slots:
   factorUnitScalar:
     slot_uri: qudt:factorUnitScalar
     multivalued: true
+    description: For a derived unit that is not exactly the product of its 
+      factor units, this property defines the scalar with which that product has
+      to be multiplied with.
   fieldCode:
     slot_uri: qudt:fieldCode
     multivalued: true
@@ -1457,6 +1561,15 @@ slots:
   id:
     slot_uri: qudt:id
     multivalued: true
+    description: 'The "qudt:id" is an identifier string that uniquely identifies a
+      QUDT concept.  The identifier is constructed using a prefix. For example, units
+      are coded using the pattern: "UCCCENNNN", where "CCC" is a numeric code or a
+      category and "NNNN" is a digit string for a member element of that category.
+      For scaled units there may be an addition field that has the format "QNN" where
+      "NN" is a digit string representing an exponent power, and "Q" is a qualifier
+      that indicates with the code "P" that the power is a positive decimal exponent,
+      or the code "N" for a negative decimal exponent, or the code "B" for binary
+      positive exponents.'
   iec61360Code:
     slot_uri: qudt:iec61360Code
     multivalued: true
@@ -1468,10 +1581,11 @@ slots:
     multivalued: true
   isDeltaQuantity:
     comments:
-    - This property is used to identify a Quantity instance that is a measure of a
-      change, or interval, of some property, rather than a measure of its absolute
-      value. This is important for measurements such as temperature differences where
-      the conversion among units would be calculated differently because of offsets.
+    - This property is used to identify a Quantity instance that is a measure of
+      a change, or interval, of some property, rather than a measure of its 
+      absolute value. This is important for measurements such as temperature 
+      differences where the conversion among units would be calculated 
+      differently because of offsets.
     slot_uri: qudt:isDeltaQuantity
     multivalued: true
   isMetricUnit:
@@ -1481,6 +1595,7 @@ slots:
     is_a: normativeReference
     slot_uri: qudt:isoNormativeReference
     multivalued: true
+    description: Provides a way to reference the ISO unit definition.
   javaName:
     slot_uri: qudt:javaName
     multivalued: true
@@ -1496,6 +1611,10 @@ slots:
   latexSymbol:
     slot_uri: qudt:latexSymbol
     multivalued: true
+    description: "\n  The symbol is a glyph that is used to represent some concept,
+      typically a unit or a quantity, in a compact form.\n  For example, the symbol
+      for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives
+      a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  "
   length:
     slot_uri: qudt:length
     multivalued: true
@@ -1516,10 +1635,17 @@ slots:
     is_a: upperBound
     slot_uri: qudt:maxExclusive
     multivalued: true
+    description: maxExclusive is the exclusive upper bound of the value space 
+      for a datatype with the ordered property. The value of maxExclusive must 
+      be in the value space of the base type or be equal to {value} in {base 
+      type definition}.
   maxInclusive:
     is_a: upperBound
     slot_uri: qudt:maxInclusive
     multivalued: true
+    description: maxInclusive is the inclusive upper bound of the value space 
+      for a datatype with the ordered property. The value of maxInclusive must 
+      be in the value space of the base type.
   microsoftSQLServerName:
     slot_uri: qudt:microsoftSQLServerName
     multivalued: true
@@ -1527,19 +1653,31 @@ slots:
     is_a: lowerBound
     slot_uri: qudt:minExclusive
     multivalued: true
+    description: minExclusive is the exclusive lower bound of the value space 
+      for a datatype with the ordered property. The value of minExclusive must 
+      be in the value space of the base type or be equal to {value} in {base 
+      type definition}.
   minInclusive:
     is_a: lowerBound
     slot_uri: qudt:minInclusive
     multivalued: true
+    description: minInclusive is the inclusive lower bound of the value space 
+      for a datatype with the ordered property. The value of minInclusive must 
+      be in the value space of the base type.
   mySQLName:
     slot_uri: qudt:mySQLName
     multivalued: true
   negativeDeltaLimit:
     slot_uri: qudt:negativeDeltaLimit
     multivalued: true
+    description: A negative change limit between consecutive sample values for a
+      parameter. The Negative Delta may be the encoded value or engineering 
+      units value depending on whether or not a Calibrator is defined.
   normativeReference:
     slot_uri: qudt:normativeReference
     multivalued: true
+    description: Provides a way to reference information that is an 
+      authoritative source providing a standard definition
   numericValue:
     slot_uri: qudt:numericValue
     range: NumericUnion
@@ -1550,6 +1688,11 @@ slots:
   oleDBName:
     slot_uri: qudt:oleDBName
     multivalued: true
+    description: 'OLE DB (Object Linking and Embedding, Database, sometimes written
+      as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from
+      a variety of sources in a uniform manner. The API provides a set of interfaces
+      implemented using the Component Object Model (COM); it is otherwise unrelated
+      to OLE. '
   onlineReference:
     slot_uri: qudt:onlineReference
     multivalued: true
@@ -1562,9 +1705,15 @@ slots:
   plainTextDescription:
     slot_uri: qudt:plainTextDescription
     multivalued: true
+    description: A plain text description is used to provide a description with 
+      only simple ASCII characters for cases where LaTeX , HTML or other markup 
+      would not be appropriate.
   positiveDeltaLimit:
     slot_uri: qudt:positiveDeltaLimit
     multivalued: true
+    description: A positive change limit between consecutive sample values for a
+      parameter. The Positive Delta may be the encoded value or engineering 
+      units value depending on whether or not a Calibrator is defined.
   prefixMultiplier:
     slot_uri: qudt:prefixMultiplier
     multivalued: true
@@ -1581,28 +1730,54 @@ slots:
   relativeStandardUncertainty:
     slot_uri: qudt:relativeStandardUncertainty
     multivalued: true
+    description: The relative standard uncertainty of a measurement is the 
+      (absolute) standard uncertainty divided by the magnitude of the exact 
+      value.
   siUnitsExpression:
     slot_uri: qudt:siUnitsExpression
     multivalued: true
   standardUncertainty:
     slot_uri: qudt:standardUncertainty
     multivalued: true
+    description: The standard uncertainty of a quantity is the estimated 
+      standard deviation of the mean taken from a series of measurements.
   standardUncertaintySN:
     slot_uri: qudt:standardUncertaintySN
     multivalued: true
+    description: The standard uncertainty of a quantity is the estimated 
+      standard deviation of the mean taken from a series of measurements.
   symbol:
     is_a: literal
     slot_uri: qudt:symbol
     multivalued: true
+    description: "\n  The symbol is a glyph that is used to represent some concept,
+      typically a unit or a quantity, in a compact form.\n  For example, the symbol
+      for an Ohm is $ohm$.\n  This contrasts with 'unit:abbreviation', which gives
+      a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.\n  "
   ucumCode:
     slot_uri: qudt:ucumCode
     multivalued: true
+    description: <p><em>ucumCode</em> associates a QUDT unit with its UCUM code 
+      (case-sensitive). </p><p>In SHACL the values are derived from specific 
+      ucum properties using 'sh:values'.</p>
   udunitsCode:
     slot_uri: qudt:udunitsCode
     multivalued: true
+    description: The UDUNITS package supports units of physical quantities. Its 
+      C library provides for arithmetic manipulation of units and for conversion
+      of numeric values between compatible units. The package contains an 
+      extensive unit database, which is in XML format and user-extendable. The 
+      package also contains a command-line utility for investigating units and 
+      converting values.
   uneceCommonCode:
     slot_uri: qudt:uneceCommonCode
     multivalued: true
+    description: The UN/CEFACT Recommendation 20 provides three character 
+      alphabetic and alphanumeric codes for representing units of measurement 
+      for length, area, volume/capacity, mass (weight), time, and other 
+      quantities used in international trade. The codes are intended for use in 
+      manual and/or automated systems for the exchange of information between 
+      participants in international trade.
   upperBound:
     slot_uri: qudt:upperBound
     multivalued: true
@@ -1612,9 +1787,13 @@ slots:
   value:
     slot_uri: qudt:value
     multivalued: true
+    description: A property to relate an observable thing with a value of any 
+      kind
   valueSN:
     slot_uri: qudt:valueSN
     multivalued: true
+    description: A property to relate an observable thing with a value of any 
+      kind
   vectorMagnitude:
     slot_uri: qudt:vectorMagnitude
     multivalued: true
@@ -1653,9 +1832,10 @@ slots:
     multivalued: true
   example:
     comments:
-    - The 'qudt:example' property is used to annotate an instance of a class with
-      a reference to a concept that is an example. The type of this property is 'rdf:Property'.
-      This allows both scalar and object ranges.^^rdf:HTML
+    - The 'qudt:example' property is used to annotate an instance of a class 
+      with a reference to a concept that is an example. The type of this 
+      property is 'rdf:Property'. This allows both scalar and object 
+      ranges.^^rdf:HTML
     slot_uri: qudt:example
     multivalued: true
   expression:
