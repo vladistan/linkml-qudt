@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="er" role="graphics-document document" viewBox="0 0 348.171875 290" height="290" width="348.171875" id="container">
+<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="er" role="graphics-document document" viewBox="0 0 264.9014587402344 465" height="465" width="264.9014587402344" id="container">
   <style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container .entityBox{fill:#ECECFF;stroke:#9370DB;}#container .attributeBoxOdd{fill:#ffffff;stroke:#9370DB;}#container .attributeBoxEven{fill:#f2f2f2;stroke:#9370DB;}#container .relationshipLabelBox{fill:hsl(80, 100%, 96.2745098039%);opacity:0.7;background-color:hsl(80, 100%, 96.2745098039%);}#container .relationshipLabelBox rect{opacity:0.5;}#container .relationshipLine{stroke:#333333;}#container .entityTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container #MD_PARENT_START{fill:#f5f5f5!important;stroke:#333333!important;stroke-width:1;}#container #MD_PARENT_END{fill:#f5f5f5!important;stroke:#333333!important;stroke-width:1;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
   <g/>
   <defs>
@@ -55,19 +55,25 @@
       <path d="M21,18 Q39,0 57,18 Q39,36 21,18" fill="none" stroke="gray"/>
     </marker>
   </defs>
-  <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M278.172,95L278.172,103.333C278.172,111.667,278.172,128.333,278.172,145C278.172,161.667,278.172,178.333,278.172,186.667L278.172,195" class="er relationshipLine"/>
+  <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M74.086,95L74.086,103.333C74.086,111.667,74.086,128.333,74.086,145C74.086,161.667,74.086,178.333,74.086,186.667L74.086,195" class="er relationshipLine"/>
+  <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M124.086,216.875L135.753,213.229C147.419,209.583,170.753,202.292,185.336,198.646C199.919,195,205.753,195,211.586,201.25C217.419,207.5,223.253,220,223.253,232.5C223.253,245,217.419,257.5,211.586,263.75C205.753,270,199.919,270,185.336,266.354C170.753,262.708,147.419,255.417,135.753,251.771L124.086,248.125" class="er relationshipLine"/>
+  <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M74.086,270L74.086,278.333C74.086,286.667,74.086,303.333,74.086,320C74.086,336.667,74.086,353.333,74.086,361.667L74.086,370" class="er relationshipLine"/>
   <g transform="translate(20,20 )" id="entity-NumericUnion-ff81c9c7-7c52-5606-a0e2-ced42f443647">
     <rect height="75" width="108.171875" y="0" x="0" class="er entityBox"/>
     <text style="dominant-baseline: middle; text-anchor: middle; font-size: 12px;" transform="translate(54.0859375,37.5)" y="0" x="0" id="text-entity-NumericUnion-ff81c9c7-7c52-5606-a0e2-ced42f443647" class="er entityLabel">NumericUnion</text>
   </g>
-  <g transform="translate(228.171875,20 )" id="entity-Rule-886caf8e-59ff-5db3-a492-27242971196f">
+  <g transform="translate(24.0859375,195 )" id="entity-Rule-886caf8e-59ff-5db3-a492-27242971196f">
     <rect height="75" width="100" y="0" x="0" class="er entityBox"/>
     <text style="dominant-baseline: middle; text-anchor: middle; font-size: 12px;" transform="translate(50,37.5)" y="0" x="0" id="text-entity-Rule-886caf8e-59ff-5db3-a492-27242971196f" class="er entityLabel">Rule</text>
   </g>
-  <g transform="translate(228.171875,195 )" id="entity-RuleType-d54df1a6-a17d-5920-9344-6f805c739e55">
+  <g transform="translate(24.0859375,370 )" id="entity-RuleType-d54df1a6-a17d-5920-9344-6f805c739e55">
     <rect height="75" width="100" y="0" x="0" class="er entityBox"/>
     <text style="dominant-baseline: middle; text-anchor: middle; font-size: 12px;" transform="translate(50,37.5)" y="0" x="0" id="text-entity-RuleType-d54df1a6-a17d-5920-9344-6f805c739e55" class="er entityLabel">RuleType</text>
   </g>
-  <rect height="14" width="46.921875" y="138" x="254.7110595703125" class="er relationshipLabelBox"/>
-  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="145" x="278.1719970703125" id="rel1" class="er relationshipLabel">ruleType</text>
+  <rect height="14" width="43.296875" y="138" x="52.43756103515625" class="er relationshipLabelBox"/>
+  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="145" x="74.08599853515625" id="rel1" class="er relationshipLabel">hasRule</text>
+  <rect height="14" width="43.296875" y="225.5" x="201.6045684814453" class="er relationshipLabelBox"/>
+  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="232.5" x="223.2530059814453" id="rel2" class="er relationshipLabel">hasRule</text>
+  <rect height="14" width="46.921875" y="313" x="50.62506103515625" class="er relationshipLabelBox"/>
+  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="320" x="74.08599853515625" id="rel3" class="er relationshipLabel">ruleType</text>
 </svg>

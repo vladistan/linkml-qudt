@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="er" role="graphics-document document" viewBox="0 0 216.96875 465" height="465" width="216.96875" id="container">
+<svg xmlns="http://www.w3.org/2000/svg" aria-roledescription="er" role="graphics-document document" viewBox="0 0 299.2994384765625 465" height="465" width="299.2994384765625" id="container">
   <style>#container{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#container .error-icon{fill:#552222;}#container .error-text{fill:#552222;stroke:#552222;}#container .edge-thickness-normal{stroke-width:1px;}#container .edge-thickness-thick{stroke-width:3.5px;}#container .edge-pattern-solid{stroke-dasharray:0;}#container .edge-thickness-invisible{stroke-width:0;fill:none;}#container .edge-pattern-dashed{stroke-dasharray:3;}#container .edge-pattern-dotted{stroke-dasharray:2;}#container .marker{fill:#333333;stroke:#333333;}#container .marker.cross{stroke:#333333;}#container svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#container p{margin:0;}#container .entityBox{fill:#ECECFF;stroke:#9370DB;}#container .attributeBoxOdd{fill:#ffffff;stroke:#9370DB;}#container .attributeBoxEven{fill:#f2f2f2;stroke:#9370DB;}#container .relationshipLabelBox{fill:hsl(80, 100%, 96.2745098039%);opacity:0.7;background-color:hsl(80, 100%, 96.2745098039%);}#container .relationshipLabelBox rect{opacity:0.5;}#container .relationshipLine{stroke:#333333;}#container .entityTitleText{text-anchor:middle;font-size:18px;fill:#333;}#container #MD_PARENT_START{fill:#f5f5f5!important;stroke:#333333!important;stroke-width:1;}#container #MD_PARENT_END{fill:#f5f5f5!important;stroke:#333333!important;stroke-width:1;}#container :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
   <g/>
   <defs>
@@ -56,6 +56,7 @@
     </marker>
   </defs>
   <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M108.484,95L108.484,103.333C108.484,111.667,108.484,128.333,108.484,145C108.484,161.667,108.484,178.333,108.484,186.667L108.484,195" class="er relationshipLine"/>
+  <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M158.484,216.875L170.151,213.229C181.818,209.583,205.151,202.292,219.734,198.646C234.318,195,240.151,195,245.984,201.25C251.818,207.5,257.651,220,257.651,232.5C257.651,245,251.818,257.5,245.984,263.75C240.151,270,234.318,270,219.734,266.354C205.151,262.708,181.818,255.417,170.151,251.771L158.484,248.125" class="er relationshipLine"/>
   <path style="stroke: gray; fill: none;" marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M108.484,270L108.484,278.333C108.484,286.667,108.484,303.333,108.484,320C108.484,336.667,108.484,353.333,108.484,361.667L108.484,370" class="er relationshipLine"/>
   <g transform="translate(20,20 )" id="entity-FloatingPointEncodingType-12d9dbb3-27c7-5b1d-bea0-182c457d7d80">
     <rect height="75" width="176.96875" y="0" x="0" class="er entityBox"/>
@@ -71,6 +72,8 @@
   </g>
   <rect height="14" width="43.296875" y="138" x="86.83556365966797" class="er relationshipLabelBox"/>
   <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="145" x="108.48400115966797" id="rel1" class="er relationshipLabel">hasRule</text>
+  <rect height="14" width="43.296875" y="225.50001525878906" x="236.0025634765625" class="er relationshipLabelBox"/>
+  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="232.50001525878906" x="257.6510009765625" id="rel2" class="er relationshipLabel">hasRule</text>
   <rect height="14" width="46.921875" y="313" x="85.02306365966797" class="er relationshipLabelBox"/>
-  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="320" x="108.48400115966797" id="rel2" class="er relationshipLabel">ruleType</text>
+  <text style="text-anchor: middle; dominant-baseline: middle; font-size: 12px;" y="320" x="108.48400115966797" id="rel3" class="er relationshipLabel">ruleType</text>
 </svg>
