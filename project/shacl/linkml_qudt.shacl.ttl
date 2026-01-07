@@ -77,51 +77,51 @@ owl:Ontology a sh:NodeShape ;
 owl:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "The root class for all QUDT concepts" ;
-    sh:ignoredProperties ( qudt:unitFor qudt:hasReciprocalUnit qudt:omUnit qudt:id qudt:guidance rdf:type qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
+    sh:ignoredProperties ( qudt:unitFor qudt:omUnit qudt:guidance qudt:id rdf:type qudt:hasReciprocalUnit qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
     sh:targetClass owl:Thing .
 
 qudt:AbstractQuantityKind a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:AbstractQuantityKind .
 
 qudt:AngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
         [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ] ;
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ] ;
     sh:targetClass qudt:AngleUnit .
 
 qudt:Aspect a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( qudt:unitFor qudt:hasReciprocalUnit qudt:omUnit qudt:id qudt:guidance rdf:type qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
+    sh:ignoredProperties ( qudt:unitFor qudt:omUnit qudt:guidance qudt:id rdf:type qudt:hasReciprocalUnit qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
     sh:targetClass qudt:Aspect .
 
 qudt:AspectClass a sh:NodeShape ;
@@ -158,14 +158,14 @@ qudt:BinaryPrefix a sh:NodeShape ;
 qudt:BitEncodingType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:BitEncodingType .
 
 qudt:BooleanEncodingType a sh:NodeShape ;
@@ -197,14 +197,14 @@ qudt:ByteEncodingType a sh:NodeShape ;
 qudt:CardinalityType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:CardinalityType .
 
 qudt:CharEncodingType a sh:NodeShape ;
@@ -223,14 +223,14 @@ qudt:CharEncodingType a sh:NodeShape ;
 qudt:Citation a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:Citation .
 
 qudt:Comment a sh:NodeShape ;
@@ -241,19 +241,6 @@ qudt:Comment a sh:NodeShape ;
 qudt:Concept a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
-    sh:targetClass qudt:Concept .
-
-qudt:ConstantValue a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
@@ -262,35 +249,74 @@ qudt:ConstantValue a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path qudt:guidance ] ;
+    sh:targetClass qudt:Concept .
+
+qudt:ConstantValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:ConstantValue .
 
 qudt:ContextualUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
         [ sh:order 3 ;
             sh:path qudt:unitFor ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ] ;
     sh:targetClass qudt:ContextualUnit .
 
 qudt:CountingUnit a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ] ;
+    sh:targetClass qudt:CountingUnit .
+
+qudt:CurrencyUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class qudt:SystemOfUnits ;
@@ -306,40 +332,14 @@ qudt:CountingUnit a sh:NodeShape ;
             sh:path qudt:omUnit ],
         [ sh:order 3 ;
             sh:path qudt:unitFor ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ] ;
-    sh:targetClass qudt:CountingUnit .
-
-qudt:CurrencyUnit a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ] ;
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ] ;
     sh:targetClass qudt:CurrencyUnit .
 
 qudt:DataEncoding a sh:NodeShape ;
@@ -350,14 +350,14 @@ qudt:DataEncoding a sh:NodeShape ;
 qudt:DataItem a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:DataItem .
 
 qudt:DateTimeStringEncodingType a sh:NodeShape ;
@@ -381,66 +381,66 @@ qudt:DecimalPrefix a sh:NodeShape ;
 qudt:DerivedUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
-    sh:targetClass qudt:DerivedUnit .
-
-qudt:DimensionlessUnit a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
         [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
         [ sh:class qudt:SystemOfUnits ;
             sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:datatype xsd:string ;
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ] ;
+    sh:targetClass qudt:DerivedUnit .
+
+qudt:DimensionlessUnit a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
         [ sh:order 2 ;
-            sh:path qudt:omUnit ] ;
+            sh:path qudt:omUnit ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ] ;
     sh:targetClass qudt:DimensionlessUnit .
 
 qudt:Discipline a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:Discipline .
 
 qudt:Encoding a sh:NodeShape ;
@@ -498,27 +498,27 @@ qudt:EnumeratedValue a sh:NodeShape ;
 qudt:Enumeration a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:Enumeration .
 
 qudt:EnumerationScale a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:EnumerationScale .
 
 qudt:Figure a sh:NodeShape ;
@@ -585,10 +585,15 @@ qudt:LogarithmicUnit a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:order 3 ;
-            sh:path qudt:unitFor ],
         [ sh:order 2 ;
             sh:path qudt:omUnit ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
         [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
@@ -596,25 +601,20 @@ qudt:LogarithmicUnit a sh:NodeShape ;
         [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 5 ;
-            sh:path qudt:id ],
-        [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ] ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:LogarithmicUnit .
 
 qudt:MathsFunctionType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:MathsFunctionType .
 
 qudt:NIST_SP811_Comment a sh:NodeShape ;
@@ -664,14 +664,14 @@ qudt:OrderedType a sh:NodeShape ;
 qudt:OrdinalScale a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:OrdinalScale .
 
 qudt:Organization a sh:NodeShape ;
@@ -703,25 +703,25 @@ qudt:PhysicalConstant a sh:NodeShape ;
 qudt:PlaneAngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:Unit ;
+    sh:property [ sh:order 2 ;
+            sh:path qudt:omUnit ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ],
+        [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
         [ sh:class qudt:SystemOfUnits ;
             sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path qudt:isUnitOfSystem ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
         [ sh:order 3 ;
             sh:path qudt:unitFor ] ;
     sh:targetClass qudt:PlaneAngleUnit .
@@ -741,37 +741,37 @@ qudt:Prefix a sh:NodeShape ;
 
 qudt:Quantifiable a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type qudt:id qudt:guidance ) ;
+    sh:ignoredProperties ( rdf:type qudt:guidance qudt:id ) ;
     sh:targetClass qudt:Quantifiable .
 
 qudt:Quantity a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:Quantity .
 
 qudt:QuantityKind a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path qudt:id ],
         [ sh:class qudt:SystemOfQuantityKinds ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
-            sh:path qudt:belongsToSystemOfQuantities ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:belongsToSystemOfQuantities ] ;
     sh:targetClass qudt:QuantityKind .
 
 qudt:QuantityKindDimensionVector a sh:NodeShape ;
@@ -790,6 +790,19 @@ qudt:QuantityKindDimensionVector a sh:NodeShape ;
 qudt:QuantityKindDimensionVector_CGS a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
+    sh:targetClass qudt:QuantityKindDimensionVector_CGS .
+
+qudt:QuantityKindDimensionVector_CGS-EMU a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
@@ -798,32 +811,19 @@ qudt:QuantityKindDimensionVector_CGS a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path qudt:guidance ] ;
-    sh:targetClass qudt:QuantityKindDimensionVector_CGS .
-
-qudt:QuantityKindDimensionVector_CGS-EMU a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_CGS-EMU .
 
 qudt:QuantityKindDimensionVector_CGS-ESU a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_CGS-ESU .
 
 qudt:QuantityKindDimensionVector_CGS-GAUSS a sh:NodeShape ;
@@ -881,71 +881,84 @@ qudt:QuantityKindDimensionVector_Imperial a sh:NodeShape ;
 qudt:QuantityKindDimensionVector_SI a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityKindDimensionVector_SI .
 
 qudt:QuantityType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityType .
 
 qudt:QuantityValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:QuantityValue .
 
 qudt:RatioScale a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:RatioScale .
 
 qudt:Rule a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:Rule .
 
 qudt:RuleType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
+    sh:targetClass qudt:RuleType .
+
+qudt:ScalarDatatype a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
@@ -954,9 +967,9 @@ qudt:RuleType a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 1 ;
             sh:path qudt:id ] ;
-    sh:targetClass qudt:RuleType .
+    sh:targetClass qudt:ScalarDatatype .
 
-qudt:ScalarDatatype a sh:NodeShape ;
+qudt:Scale a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
@@ -967,19 +980,6 @@ qudt:ScalarDatatype a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path qudt:guidance ] ;
-    sh:targetClass qudt:ScalarDatatype .
-
-qudt:Scale a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ] ;
     sh:targetClass qudt:Scale .
 
 qudt:ScaleType a sh:NodeShape ;
@@ -1003,27 +1003,27 @@ qudt:SignednessType a sh:NodeShape ;
 qudt:SolidAngleUnit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class qudt:SystemOfUnits ;
-            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path qudt:guidance ],
-        [ sh:class qudt:Unit ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 0 ;
-            sh:path qudt:hasReciprocalUnit ],
-        [ sh:order 2 ;
-            sh:path qudt:omUnit ],
         [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path qudt:id ],
         [ sh:order 3 ;
-            sh:path qudt:unitFor ] ;
+            sh:path qudt:unitFor ],
+        [ sh:class qudt:Unit ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path qudt:hasReciprocalUnit ],
+        [ sh:class qudt:SystemOfUnits ;
+            sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path qudt:isUnitOfSystem ],
+        [ sh:order 2 ;
+            sh:path qudt:omUnit ] ;
     sh:targetClass qudt:SolidAngleUnit .
 
 qudt:StringEncodingType a sh:NodeShape ;
@@ -1052,14 +1052,14 @@ qudt:SymmetricRelation a sh:NodeShape ;
 qudt:TransformType a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path qudt:id ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:guidance ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path qudt:id ] ;
     sh:targetClass qudt:TransformType .
 
 qudt:UCUMcs a sh:NodeShape ;
@@ -1092,58 +1092,58 @@ qudt:ValueUnion a sh:NodeShape ;
 
 qudt:Verifiable a sh:NodeShape ;
     sh:closed true ;
-    sh:ignoredProperties ( qudt:unitFor qudt:hasReciprocalUnit qudt:omUnit qudt:id qudt:guidance rdf:type qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
+    sh:ignoredProperties ( qudt:unitFor qudt:omUnit qudt:guidance qudt:id rdf:type qudt:hasReciprocalUnit qudt:isUnitOfSystem qudt:belongsToSystemOfQuantities ) ;
     sh:targetClass qudt:Verifiable .
 
 qudt:SystemOfQuantityKinds a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:SystemOfQuantityKinds .
 
 qudt:SystemOfUnits a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path qudt:guidance ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+    sh:property [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path qudt:id ] ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qudt:guidance ] ;
     sh:targetClass qudt:SystemOfUnits .
 
 qudt:Unit a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 3 ;
-            sh:path qudt:unitFor ],
-        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path qudt:id ],
-        [ sh:order 2 ;
+    sh:property [ sh:order 2 ;
             sh:path qudt:omUnit ],
         [ sh:class qudt:Unit ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 0 ;
             sh:path qudt:hasReciprocalUnit ],
+        [ sh:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path qudt:id ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path qudt:guidance ],
+        [ sh:order 3 ;
+            sh:path qudt:unitFor ],
         [ sh:class qudt:SystemOfUnits ;
             sh:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
-            sh:path qudt:isUnitOfSystem ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path qudt:guidance ] ;
+            sh:path qudt:isUnitOfSystem ] ;
     sh:targetClass qudt:Unit .
 

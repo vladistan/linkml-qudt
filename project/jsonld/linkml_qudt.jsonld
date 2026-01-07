@@ -9823,7 +9823,7 @@
   "source_file": "linkml_qudt.yaml",
   "source_file_date": "2026-01-04T22:27:50",
   "source_file_size": 63354,
-  "generation_date": "2026-01-05T11:18:14",
+  "generation_date": "2026-01-06T20:52:59",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",
