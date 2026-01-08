@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-01-05T11:18:16
+# Generation date: 2026-01-07T23:17:18
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
@@ -107,6 +107,9 @@ class Aspect(Thing):
 
 @dataclass(repr=False)
 class Concept(Thing):
+    """
+    The root class for all QUDT concepts.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Concept"]
@@ -161,6 +164,9 @@ class Concept(Thing):
 
 @dataclass(repr=False)
 class AbstractQuantityKind(Concept):
+    """
+    Quantity Kind (abstract)
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["AbstractQuantityKind"]
@@ -194,6 +200,12 @@ class AbstractQuantityKind(Concept):
 
 @dataclass(repr=False)
 class BaseDimensionMagnitude(Concept):
+    """
+    <p class="lm-para">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and
+    time.</p>
+    <p class="lm-para">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been
+    done.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["BaseDimensionMagnitude"]
@@ -222,6 +234,9 @@ class BaseDimensionMagnitude(Concept):
 
 @dataclass(repr=False)
 class Citation(Concept):
+    """
+    Provides a simple way of making citations.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Citation"]
@@ -248,6 +263,10 @@ class Citation(Concept):
 
 @dataclass(repr=False)
 class DataEncoding(Aspect):
+    """
+    <p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level.
+    These properties are applicable to describing raw data.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DataEncoding"]
@@ -277,6 +296,11 @@ class DataEncoding(Aspect):
 
 @dataclass(repr=False)
 class DataItem(Concept):
+    """
+    <p>A <em>Data Item</em> holds a value that maybe a scalar or structured datatype.
+    <em>Quantity Value</em> specifies which case applies.
+    </p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DataItem"]
@@ -296,6 +320,17 @@ class DataItem(Concept):
 
 @dataclass(repr=False)
 class Datatype(Concept):
+    """
+    <p>A <em>Datatype</em> is a definition of the type of the "value" of a data item (for example, "all integers
+    between 0 and 10"),
+    and the allowable operations on those values; the meaning of the data; and the way values of that type can be
+    stored.
+    Some types are primitive - built-in to the language, with no visible internal structure.
+    For example "Boolean"; others are composite - constructed from one or more other types (of either kind).
+    For example lists, arrays, structures, unions.
+    Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion.
+    </p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = RDFS["Datatype"]
@@ -399,6 +434,9 @@ class Datatype(Concept):
 
 
 class Discipline(Concept):
+    """
+    Discipline
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Discipline"]
@@ -409,6 +447,10 @@ class Discipline(Concept):
 
 @dataclass(repr=False)
 class Encoding(Concept):
+    """
+    An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific
+    form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Encoding"]
@@ -432,6 +474,11 @@ class Encoding(Concept):
 
 
 class BitEncodingType(Encoding):
+    """
+    A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For
+    example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to
+    True.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["BitEncodingType"]
@@ -441,6 +488,9 @@ class BitEncodingType(Encoding):
 
 
 class BooleanEncodingType(Encoding):
+    """
+    Boolean encoding type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["BooleanEncodingType"]
@@ -450,6 +500,9 @@ class BooleanEncodingType(Encoding):
 
 
 class ByteEncodingType(Encoding):
+    """
+    This class contains the various ways that information may be encoded into bytes.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ByteEncodingType"]
@@ -459,6 +512,10 @@ class ByteEncodingType(Encoding):
 
 
 class CharEncodingType(Encoding):
+    """
+    The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data
+    as a sequence of bits or bytes.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["CharEncodingType"]
@@ -493,6 +550,20 @@ class EnumeratedQuantity(Concept):
 
 @dataclass(repr=False)
 class Enumeration(Concept):
+    """
+    <p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an
+    integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types
+    will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or
+    encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this
+    consistency enumeration literals can be stated differently and result in data conflicts and
+    misinterpretations.</p>
+
+    <p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance,
+    each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration
+    elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a
+    selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the
+    reference of a datatype specification.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Enumeration"]
@@ -524,6 +595,9 @@ class Enumeration(Concept):
 
 @dataclass(repr=False)
 class Figure(Concept):
+    """
+    Figure
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Figure"]
@@ -574,6 +648,9 @@ class Figure(Concept):
 
 
 class FloatingPointEncodingType(Encoding):
+    """
+    A "Encoding" with the following instance(s): "Double Precision Encoding", "Single Precision Real Encoding".
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["FloatingPointEncodingType"]
@@ -583,6 +660,9 @@ class FloatingPointEncodingType(Encoding):
 
 
 class IntegerEncodingType(Encoding):
+    """
+    The encoding scheme for integer types
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["IntegerEncodingType"]
@@ -592,6 +672,9 @@ class IntegerEncodingType(Encoding):
 
 
 class MathsFunctionType(Concept):
+    """
+    Maths Function Type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["MathsFunctionType"]
@@ -602,6 +685,9 @@ class MathsFunctionType(Concept):
 
 @dataclass(repr=False)
 class NumericUnion(YAMLRoot):
+    """
+    Numeric union
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["NumericUnion"]
@@ -656,6 +742,9 @@ class NumericUnion(YAMLRoot):
 
 @dataclass(repr=False)
 class Organization(Concept):
+    """
+    Organization
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Organization"]
@@ -675,6 +764,9 @@ class Organization(Concept):
 
 @dataclass(repr=False)
 class Quantifiable(Aspect):
+    """
+    <p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Quantifiable"]
@@ -729,6 +821,33 @@ class Quantifiable(Aspect):
 
 @dataclass(repr=False)
 class Quantity(Quantifiable):
+    """
+    <p class="lm-para">A <b>quantity</b> is the measurement of an observable property of a particular object, event,
+    or physical system.
+    A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the
+    accuracy of measurement, etc.) whereas the
+    underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind
+    while the height of a rocket is a specific
+    quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical
+    quantities include physical constants, such as
+    the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure
+    constant. </p>
+    <p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a
+    movie, the distance between two points,
+    velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their
+    numerical measure.</p>
+    <p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result,
+    the associated units of some quantity
+    kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times
+    velocity and velocity is defined as distance
+    divided by time). In this way, some quantities can be calculated from other measured quantities using their
+    associations to the quantity kinds in these
+    expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so
+    expressed can be regarded
+    as "fundamental" in this sense.</p>
+    <p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the
+    latter is a type specifier.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Quantity"]
@@ -798,6 +917,14 @@ class Quantity(Quantifiable):
 
 @dataclass(repr=False)
 class PhysicalConstant(Quantity):
+    """
+    A physical constant is a physical quantity that is generally believed to be both universal in nature and constant
+    in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly
+    involve any physical measurement. There are many physical constants in science, some of the most widely recognized
+    being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric
+    permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or
+    may be dimensionless depending on the system of quantities and units used.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["PhysicalConstant"]
@@ -877,6 +1004,20 @@ class PhysicalConstant(Quantity):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVector(Concept):
+    """
+    <p class="lm-para">A <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in
+    the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a
+    product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance
+    ($N$), luminous intensity ($J$) and absolute temperature ($\theta$) as $dim \, Q = L^{\alpha} \, M^{\beta} \,
+    T^{\gamma} \, I ^{\delta} \, \theta ^{\epsilon} \, N^{\eta} \, J ^{\nu}$.</p>
+
+    <p class="lm-para">The rational powers of the dimensional exponents, $\alpha, \, \beta, \, \gamma, \, \delta, \,
+    \epsilon, \ , \eta, \, \nu$, are positive, negative, or zero.</p>
+
+    <p class="lm-para">For example, the dimension of the physical quantity kind $\it{speed}$ is $\
+    boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\boxed{mass
+    \times acceleration}$ or $\boxed{mass \times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector"]
@@ -962,6 +1103,9 @@ class QuantityKindDimensionVector(Concept):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorCGS(QuantityKindDimensionVector):
+    """
+    A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_CGS"]
@@ -980,6 +1124,9 @@ class QuantityKindDimensionVectorCGS(QuantityKindDimensionVector):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorCGS-EMU(QuantityKindDimensionVectorCGS):
+    """
+    A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_CGS-EMU"]
@@ -998,6 +1145,9 @@ class QuantityKindDimensionVectorCGS-EMU(QuantityKindDimensionVectorCGS):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorCGS-ESU(QuantityKindDimensionVectorCGS):
+    """
+    A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_CGS-ESU"]
@@ -1016,6 +1166,9 @@ class QuantityKindDimensionVectorCGS-ESU(QuantityKindDimensionVectorCGS):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorCGS-GAUSS(QuantityKindDimensionVectorCGS):
+    """
+    A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_CGS-GAUSS"]
@@ -1034,6 +1187,9 @@ class QuantityKindDimensionVectorCGS-GAUSS(QuantityKindDimensionVectorCGS):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorCGS-LH(QuantityKindDimensionVectorCGS):
+    """
+    A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_CGS-LH"]
@@ -1052,6 +1208,9 @@ class QuantityKindDimensionVectorCGS-LH(QuantityKindDimensionVectorCGS):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorISO(QuantityKindDimensionVector):
+    """
+    ISO Dimension vector
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_ISO"]
@@ -1070,6 +1229,9 @@ class QuantityKindDimensionVectorISO(QuantityKindDimensionVector):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorImperial(QuantityKindDimensionVector):
+    """
+    Imperial dimension vector
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_Imperial"]
@@ -1088,6 +1250,9 @@ class QuantityKindDimensionVectorImperial(QuantityKindDimensionVector):
 
 @dataclass(repr=False)
 class QuantityKindDimensionVectorSI(QuantityKindDimensionVector):
+    """
+    Quantity Kind Dimension vector (SI)
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKindDimensionVector_SI"]
@@ -1106,6 +1271,12 @@ class QuantityKindDimensionVectorSI(QuantityKindDimensionVector):
 
 @dataclass(repr=False)
 class QuantityValue(Quantifiable):
+    """
+    A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical
+    value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the
+    numerical value of the quantity expressed in that unit. Refer to <a
+    href="http://physics.nist.gov/Pubs/SP811/sec07.html">NIST SP 811 section 7</a> for more on quantity values.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityValue"]
@@ -1165,6 +1336,9 @@ class QuantityValue(Quantifiable):
 
 @dataclass(repr=False)
 class ConstantValue(QuantityValue):
+    """
+    Used to specify the values of a constant.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ConstantValue"]
@@ -1184,6 +1358,10 @@ class ConstantValue(QuantityValue):
 
 @dataclass(repr=False)
 class ScalarDatatype(Datatype):
+    """
+    Scalar data types are those that have a single value. The permissible values are defined over a domain that may be
+    integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ScalarDatatype"]
@@ -1238,6 +1416,10 @@ class ScalarDatatype(Datatype):
 
 @dataclass(repr=False)
 class Scale(Concept):
+    """
+    Scales (also called "scales of measurement" or "levels of measurement") are expressions that typically refer to
+    the theory of scale types.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Scale"]
@@ -1272,6 +1454,9 @@ class Scale(Concept):
 
 @dataclass(repr=False)
 class EnumerationScale(Scale):
+    """
+    Enumeration scale
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["EnumerationScale"]
@@ -1337,6 +1522,18 @@ class EnumerationScale(Scale):
 
 
 class IntervalScale(Scale):
+    """
+    <p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples
+    include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water
+    at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as
+    AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction
+    measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be "twice
+    as hot" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios
+    of differences can be expressed; for example, one difference can be twice another. Interval type variables are
+    sometimes also called "scaled variables", but the formal mathematical term is an affine space (in this case an
+    affine line).</p>
+    <p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["IntervalScale"]
@@ -1346,6 +1543,15 @@ class IntervalScale(Scale):
 
 
 class NominalScale(Scale):
+    """
+    A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other
+    qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as
+    well as the classification of items. Discovery of an exception to a classification can be viewed as progress.
+    Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For
+    example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity,
+    language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an
+    example.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["NominalScale"]
@@ -1356,6 +1562,14 @@ class NominalScale(Scale):
 
 @dataclass(repr=False)
 class OrdinalScale(Scale):
+    """
+    The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow
+    for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous
+    (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making
+    judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand,
+    non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly
+    disagree', 'completely disagree' when measuring opinion.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["OrdinalScale"]
@@ -1376,6 +1590,17 @@ class OrdinalScale(Scale):
 
 
 class RatioScale(Scale):
+    """
+    The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of
+    a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a
+    meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is
+    done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In
+    contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it
+    meaningful to say, for example, that one object has "twice the length" of another (= is "twice as long"). Very
+    informally, many ratio scales can be described as specifying "how much" of something (i.e. an amount or magnitude)
+    or "how many" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero
+    point called absolute zero.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["RatioScale"]
@@ -1413,6 +1638,10 @@ class StringEncodingType(YAMLRoot):
 
 @dataclass(repr=False)
 class DateTimeStringEncodingType(StringEncodingType):
+    """
+    Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous
+    formatting and parsing rules.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DateTimeStringEncodingType"]
@@ -1433,6 +1662,9 @@ class DateTimeStringEncodingType(StringEncodingType):
 
 
 class Symbol(Concept):
+    """
+    Symbol
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Symbol"]
@@ -1452,6 +1684,17 @@ class SymmetricRelation(YAMLRoot):
 
 @dataclass(repr=False)
 class SystemOfQuantityKinds(Concept):
+    """
+    A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic
+    equations that define relationships between quantity kinds in the set. In the physical sciences, the equations
+    relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality.
+    Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous
+    change in position. In almost all cases, the system identifies a subset of base quantity kinds. The base set is
+    chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic
+    equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must
+    define at least one unit for each quantity kind. From a scientific point of view, the division of quantities into
+    base quantities and derived quantities is a matter of convention.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["SystemOfQuantityKinds"]
@@ -1491,6 +1734,9 @@ class SystemOfQuantityKinds(Concept):
 
 @dataclass(repr=False)
 class UserQuantityKind(AbstractQuantityKind):
+    """
+    User Quantity Kind
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["UserQuantityKind"]
@@ -1546,6 +1792,9 @@ class Verifiable(Aspect):
 
 @dataclass(repr=False)
 class Comment(Verifiable):
+    """
+    Comment
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Comment"]
@@ -1570,6 +1819,27 @@ class Comment(Verifiable):
 
 @dataclass(repr=False)
 class EnumeratedValue(Verifiable):
+    """
+    <p>This class is for all enumerated and/or coded values. For example, it contains the dimension objects that are
+    the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the
+    base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding
+    ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the
+    dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract
+    vector space.</p>
+
+    <p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an
+    integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types
+    will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or
+    encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this
+    consistency enumeration literals can be stated differently and result in data conflicts and
+    misinterpretations.</p>
+
+    <p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance,
+    each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration
+    elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a
+    selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a
+    datatype specification.</p>
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["EnumeratedValue"]
@@ -1634,6 +1904,12 @@ class EnumeratedValue(Verifiable):
 
 @dataclass(repr=False)
 class CardinalityType(EnumeratedValue):
+    """
+    In mathematics, the cardinality of a set is a measure of the number of elements of the set.
+    For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.
+    There are two approaches to cardinality: one which compares sets directly using bijections and injections,
+    and another which uses cardinal numbers.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["CardinalityType"]
@@ -1652,6 +1928,9 @@ class CardinalityType(EnumeratedValue):
 
 
 class EndianType(EnumeratedValue):
+    """
+    Endian Type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["EndianType"]
@@ -1661,6 +1940,9 @@ class EndianType(EnumeratedValue):
 
 
 class NISTSP811Comment(Comment):
+    """
+    NIST SP~811 Comment
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["NIST_SP811_Comment"]
@@ -1671,6 +1953,9 @@ class NISTSP811Comment(Comment):
 
 @dataclass(repr=False)
 class OrderedType(EnumeratedValue):
+    """
+    Describes how a data or information structure is ordered.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["OrderedType"]
@@ -1690,6 +1975,9 @@ class OrderedType(EnumeratedValue):
 
 @dataclass(repr=False)
 class Prefix(Verifiable):
+    """
+    Prefix
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Prefix"]
@@ -1773,6 +2061,10 @@ class Prefix(Verifiable):
 
 
 class BinaryPrefix(Prefix):
+    """
+    A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital
+    information, notably the bit and the byte, to indicate multiplication by a power of 2.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["BinaryPrefix"]
@@ -1782,6 +2074,9 @@ class BinaryPrefix(Prefix):
 
 
 class DecimalPrefix(Prefix):
+    """
+    A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DecimalPrefix"]
@@ -1792,6 +2087,11 @@ class DecimalPrefix(Prefix):
 
 @dataclass(repr=False)
 class QuantityKind(Verifiable):
+    """
+    A <b>Quantity Kind</b> is any observable property that can be measured and quantified numerically. Familiar
+    examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less
+    familiar examples include currency, interest rate, price to earning ratio, and information capacity.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityKind"]
@@ -1940,6 +2240,11 @@ class QuantityKind(Verifiable):
 
 @dataclass(repr=False)
 class QuantityType(EnumeratedValue):
+    """
+    A $\textit{Quantity Type}$ is an enumeration of quantity kinds.
+    It specializes $\boxed{dtype:EnumeratedValue}$ by constrinaing $\boxed{dtype:value}$ to instances of
+    $\boxed{qudt:QuantityKind}$.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["QuantityType"]
@@ -1959,6 +2264,9 @@ class QuantityType(EnumeratedValue):
 
 @dataclass(repr=False)
 class Rule(Verifiable):
+    """
+    Rule
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Rule"]
@@ -2022,6 +2330,9 @@ class Rule(Verifiable):
 
 
 class RuleType(EnumeratedValue):
+    """
+    Rule Type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["RuleType"]
@@ -2032,6 +2343,9 @@ class RuleType(EnumeratedValue):
 
 @dataclass(repr=False)
 class ScaleType(EnumeratedValue):
+    """
+    Scale type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ScaleType"]
@@ -2061,6 +2375,12 @@ class ScaleType(EnumeratedValue):
 
 @dataclass(repr=False)
 class SystemOfUnits(Verifiable):
+    """
+    A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds
+    together with the definitions of each unit. Units may be defined by experimental observation or by proportion to
+    another unit not included in the system. If the unit system is explicitly associated with a quantity kind system,
+    then the unit system must define at least one unit for each quantity kind.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["SystemOfUnits"]
@@ -2159,6 +2479,9 @@ class SystemOfUnits(Verifiable):
 
 
 class TransformType(EnumeratedValue):
+    """
+    Transform type
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["TransformType"]
@@ -2169,6 +2492,15 @@ class TransformType(EnumeratedValue):
 
 @dataclass(repr=False)
 class Unit(Verifiable):
+    """
+    A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other
+    quantities the same kind (more generally of equivalent dimension).
+    For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM
+    (International Board of Weights and Measures).
+    Any measurement of the length can be expressed as a number multiplied by the unit meter.
+    More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple
+    of a real number (n) and U, as $Q = nU$.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["Unit"]
@@ -2378,6 +2710,9 @@ class Unit(Verifiable):
 
 @dataclass(repr=False)
 class ContextualUnit(Unit):
+    """
+    Contextual Unit
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ContextualUnit"]
@@ -2395,6 +2730,9 @@ class ContextualUnit(Unit):
 
 
 class DerivedUnit(Unit):
+    """
+    A DerivedUnit is a type specification for units that are derived from other units.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DerivedUnit"]
@@ -2404,6 +2742,10 @@ class DerivedUnit(Unit):
 
 
 class DimensionlessUnit(Unit):
+    """
+    A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities
+    in its quantity dimension are zero.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["DimensionlessUnit"]
@@ -2413,6 +2755,9 @@ class DimensionlessUnit(Unit):
 
 
 class AngleUnit(DimensionlessUnit):
+    """
+    All units relating to specification of angles.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["AngleUnit"]
@@ -2422,6 +2767,10 @@ class AngleUnit(DimensionlessUnit):
 
 
 class CountingUnit(DimensionlessUnit):
+    """
+    Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample
+    per Second.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["CountingUnit"]
@@ -2432,6 +2781,10 @@ class CountingUnit(DimensionlessUnit):
 
 @dataclass(repr=False)
 class CurrencyUnit(DimensionlessUnit):
+    """
+    Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and
+    (b) their URIs do not conform to the same rules as other units.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["CurrencyUnit"]
@@ -2455,6 +2808,12 @@ class CurrencyUnit(DimensionlessUnit):
 
 
 class LogarithmicUnit(DimensionlessUnit):
+    """
+    Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or
+    mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm
+    function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the
+    byte, as well as units of relative signal strength magnitude such as the decibel.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["LogarithmicUnit"]
@@ -2464,6 +2823,9 @@ class LogarithmicUnit(DimensionlessUnit):
 
 
 class PlaneAngleUnit(AngleUnit):
+    """
+    Plane Angle Unit
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["PlaneAngleUnit"]
@@ -2473,6 +2835,12 @@ class PlaneAngleUnit(AngleUnit):
 
 
 class SolidAngleUnit(AngleUnit):
+    """
+    The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface
+    S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary
+    angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the
+    measure of solid angle will always be between 0 and 4*pi.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["SolidAngleUnit"]
@@ -2509,6 +2877,9 @@ class Class(YAMLRoot):
 
 
 class AspectClass(Class):
+    """
+    Aspect Class
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["AspectClass"]
@@ -2581,6 +2952,9 @@ class Ontology(YAMLRoot):
 
 
 class LatexString(YAMLRoot):
+    """
+    A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering.
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["LatexString"]
@@ -2590,6 +2964,9 @@ class LatexString(YAMLRoot):
 
 
 class UCUMcs(Resource):
+    """
+    Lexical pattern for the case-sensitive version of UCUM code
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["UCUMcs"]
@@ -2599,6 +2976,9 @@ class UCUMcs(Resource):
 
 
 class UCUMcs-term(Resource):
+    """
+    Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["UCUMcs-term"]
@@ -2608,6 +2988,10 @@ class UCUMcs-term(Resource):
 
 
 class ValueUnion(Resource):
+    """
+    A datatype that is the union of numeric xsd data types. "numericUnion" is equivalent to the xsd specification that
+    uses an xsd:union of memberTypes="xsd:decimal xsd:double xsd:float xsd:integer".
+    """
     _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = QUDT["ValueUnion"]

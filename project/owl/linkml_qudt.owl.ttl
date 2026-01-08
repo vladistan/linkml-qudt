@@ -47,6 +47,7 @@ qudt:GYearMonth a owl:Class ;
 
 qudt:LatexString a owl:Class ;
     rdfs:label "LatexString" ;
+    skos:definition "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering." .
 
@@ -58,12 +59,14 @@ qudt:List a owl:Class ;
 qudt:NISTSP811Comment a owl:Class ;
     rdfs:label "NIST_SP811_Comment" ;
     rdfs:subClassOf qudt:Comment ;
+    skos:definition "NIST SP~811 Comment" ;
     skos:exactMatch qudt:NIST_SP811_Comment ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityKindDimensionVectorCGS-EMU a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_CGS-EMU" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVectorCGS ;
+    skos:definition "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind." ;
     skos:exactMatch qudt:QuantityKindDimensionVector_CGS-EMU ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.^^rdf:HTML" .
@@ -71,6 +74,7 @@ qudt:QuantityKindDimensionVectorCGS-EMU a owl:Class ;
 qudt:QuantityKindDimensionVectorCGS-ESU a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_CGS-ESU" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVectorCGS ;
+    skos:definition "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind." ;
     skos:exactMatch qudt:QuantityKindDimensionVector_CGS-ESU ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.^^rdf:HTML" .
@@ -78,6 +82,7 @@ qudt:QuantityKindDimensionVectorCGS-ESU a owl:Class ;
 qudt:QuantityKindDimensionVectorCGS-GAUSS a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_CGS-GAUSS" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVectorCGS ;
+    skos:definition "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind." ;
     skos:exactMatch qudt:QuantityKindDimensionVector_CGS-GAUSS ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.^^rdf:HTML" .
@@ -85,6 +90,7 @@ qudt:QuantityKindDimensionVectorCGS-GAUSS a owl:Class ;
 qudt:QuantityKindDimensionVectorCGS-LH a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_CGS-LH" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVectorCGS ;
+    skos:definition "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind." ;
     skos:exactMatch qudt:QuantityKindDimensionVector_CGS-LH ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.^^rdf:HTML" .
@@ -92,12 +98,14 @@ qudt:QuantityKindDimensionVectorCGS-LH a owl:Class ;
 qudt:QuantityKindDimensionVectorISO a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_ISO" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVector ;
+    skos:definition "ISO Dimension vector" ;
     skos:exactMatch qudt:QuantityKindDimensionVector_ISO ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityKindDimensionVectorImperial a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_Imperial" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVector ;
+    skos:definition "Imperial dimension vector" ;
     skos:exactMatch qudt:QuantityKindDimensionVector_Imperial ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -109,6 +117,7 @@ qudt:Statement a owl:Class ;
 qudt:ValueUnion a owl:Class ;
     rdfs:label "valueUnion" ;
     rdfs:subClassOf qudt:Resource ;
+    skos:definition "A datatype that is the union of numeric xsd data types. \"numericUnion\" is equivalent to the xsd specification that uses an xsd:union of memberTypes=\"xsd:decimal xsd:double xsd:float xsd:integer\"." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:abstract a owl:DatatypeProperty ;
@@ -118,12 +127,14 @@ qudt:abstract a owl:DatatypeProperty ;
 
 qudt:acronym a owl:ObjectProperty ;
     rdfs:label "acronym" ;
+    skos:definition "acronym" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicablePlanckUnit a owl:ObjectProperty ;
     rdfs:label "applicablePlanckUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable Planck unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:baseUnitOfSystem a owl:ObjectProperty ;
@@ -134,6 +145,7 @@ qudt:baseUnitOfSystem a owl:ObjectProperty ;
 
 qudt:categorizedAs a owl:ObjectProperty ;
     rdfs:label "categorizedAs" ;
+    skos:definition "categorized as" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:coherentUnitSystem a owl:ObjectProperty ;
@@ -168,6 +180,7 @@ qudt:currencyNumber a owl:ObjectProperty ;
 qudt:denominatorDimensionVector a owl:ObjectProperty ;
     rdfs:label "denominatorDimensionVector" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
+    skos:definition "denominator dimension vector" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:derivedNonCoherentUnitOfSystem a owl:ObjectProperty ;
@@ -179,18 +192,22 @@ qudt:derivedNonCoherentUnitOfSystem a owl:ObjectProperty ;
 
 qudt:dimensionExponent a owl:ObjectProperty ;
     rdfs:label "dimensionExponent" ;
+    skos:definition "dimension exponent" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionInverse a owl:ObjectProperty ;
     rdfs:label "dimensionInverse" ;
+    skos:definition "dimension inverse" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:elementKind a owl:ObjectProperty ;
     rdfs:label "elementKind" ;
+    skos:definition "element kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:example a owl:ObjectProperty ;
     rdfs:label "example" ;
+    skos:definition "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges.^^rdf:HTML" .
 
@@ -201,10 +218,12 @@ qudt:exponent a owl:ObjectProperty ;
 
 qudt:expression a owl:ObjectProperty ;
     rdfs:label "expression" ;
+    skos:definition "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:fieldCode a owl:ObjectProperty ;
     rdfs:label "fieldCode" ;
+    skos:definition "field code" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:figure a owl:ObjectProperty ;
@@ -223,51 +242,62 @@ qudt:graphTitle a owl:ObjectProperty ;
 
 qudt:hasCitation a owl:ObjectProperty ;
     rdfs:label "hasCitation" ;
+    skos:definition "citation" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasDenominatorPart a owl:ObjectProperty ;
     rdfs:label "hasDenominatorPart" ;
+    skos:definition "has quantity kind dimension vector denominator part" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasDerivedNonCoherentUnit a owl:ObjectProperty ;
     rdfs:label "hasDerivedNonCoherentUnit" ;
     rdfs:subPropertyOf qudt:hasDerivedUnit ;
+    skos:definition "has coherent derived unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasDimension a owl:ObjectProperty ;
     rdfs:label "hasDimension" ;
+    skos:definition "has dimension" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasDimensionExpression a owl:ObjectProperty ;
     rdfs:label "hasDimensionExpression" ;
+    skos:definition "dimension expression" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasNumeratorPart a owl:ObjectProperty ;
     rdfs:label "hasNumeratorPart" ;
+    skos:definition "has quantity kind dimension vector numerator part" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasPrefixUnit a owl:ObjectProperty ;
     rdfs:label "hasPrefixUnit" ;
     rdfs:subPropertyOf qudt:hasDefinedUnit ;
+    skos:definition "prefix unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasQuantity a owl:ObjectProperty ;
     rdfs:label "hasQuantity" ;
     rdfs:range qudt:Quantity ;
+    skos:definition "has quantity" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasVocabulary a owl:ObjectProperty ;
     rdfs:label "hasVocabulary" ;
     rdfs:range qudt:Ontology ;
+    skos:definition "has vocabulary" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:informativeReference a owl:DatatypeProperty ;
     rdfs:label "informativeReference" ;
     rdfs:range xsd:anyURI ;
+    skos:definition "Provides a way to reference a source that provided useful but non-normative information." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:isDimensionInSystem a owl:ObjectProperty ;
     rdfs:label "isDimensionInSystem" ;
+    skos:definition "is dimension in system" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:isMetadataFor a owl:ObjectProperty ;
@@ -276,6 +306,7 @@ qudt:isMetadataFor a owl:ObjectProperty ;
 
 qudt:isMetricUnit a owl:ObjectProperty ;
     rdfs:label "isMetricUnit" ;
+    skos:definition "is metric unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:maxCardinality a owl:ObjectProperty ;
@@ -299,19 +330,23 @@ qudt:negativeDeltaLimit a owl:ObjectProperty ;
 qudt:numeratorDimensionVector a owl:ObjectProperty ;
     rdfs:label "numeratorDimensionVector" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
+    skos:definition "numerator dimension vector" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:numericValue a owl:ObjectProperty ;
     rdfs:label "numericValue" ;
     rdfs:range qudt:NumericUnion ;
+    skos:definition "numeric value" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:onlineReference a owl:ObjectProperty ;
     rdfs:label "onlineReference" ;
+    skos:definition "online reference" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:outOfScope a owl:ObjectProperty ;
     rdfs:label "outOfScope" ;
+    skos:definition "out of scope" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:pattern a owl:ObjectProperty ;
@@ -325,6 +360,7 @@ qudt:positiveDeltaLimit a owl:ObjectProperty ;
 
 qudt:prefixMultiplierSN a owl:ObjectProperty ;
     rdfs:label "prefixMultiplierSN" ;
+    skos:definition "prefix multiplier scientific" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:quantity a owl:ObjectProperty ;
@@ -334,20 +370,24 @@ qudt:quantity a owl:ObjectProperty ;
 
 qudt:reference a owl:ObjectProperty ;
     rdfs:label "reference" ;
+    skos:definition "reference" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:referenceUnit a owl:ObjectProperty ;
     rdfs:label "referenceUnit" ;
+    skos:definition "reference unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:relevantQuantityKind a owl:ObjectProperty ;
     rdfs:label "relevantQuantityKind" ;
     rdfs:range qudt:QuantityKind ;
+    skos:definition "relevant quantity kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:relevantUnit a owl:ObjectProperty ;
     rdfs:label "relevantUnit" ;
     rdfs:range qudt:Unit ;
+    skos:definition "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline." .
 
@@ -358,6 +398,7 @@ qudt:rights a owl:DatatypeProperty ;
 
 qudt:siExactMatch a owl:ObjectProperty ;
     rdfs:label "siExactMatch" ;
+    skos:definition "Individual from SI Reference Point" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:source a owl:DatatypeProperty ;
@@ -376,10 +417,12 @@ qudt:supersededBy a owl:ObjectProperty ;
 
 qudt:systemDefinition a owl:ObjectProperty ;
     rdfs:label "systemDefinition" ;
+    skos:definition "system definition" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:systemDimension a owl:ObjectProperty ;
     rdfs:label "systemDimension" ;
+    skos:definition "system dimension" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:title a owl:DatatypeProperty ;
@@ -389,6 +432,7 @@ qudt:title a owl:DatatypeProperty ;
 
 qudt:valueQuantity a owl:ObjectProperty ;
     rdfs:label "valueQuantity" ;
+    skos:definition "value for quantity" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:wasDerivedFrom a owl:ObjectProperty ;
@@ -403,12 +447,16 @@ qudt:website a owl:ObjectProperty ;
 qudt:AspectClass a owl:Class ;
     rdfs:label "AspectClass" ;
     rdfs:subClassOf qudt:Class ;
+    skos:definition "Aspect Class" ;
     skos:exactMatch qudt:AspectClass ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:BaseDimensionMagnitude a owl:Class ;
     rdfs:label "BaseDimensionMagnitude" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:vectorMagnitude ],
+        [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasBaseQuantityKind ],
         [ a owl:Restriction ;
@@ -416,11 +464,10 @@ qudt:BaseDimensionMagnitude a owl:Class ;
             owl:onProperty qudt:vectorMagnitude ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty qudt:vectorMagnitude ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
             owl:onProperty qudt:hasBaseQuantityKind ],
         qudt:Concept ;
+    skos:definition """<p class="lm-para">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>
+<p class="lm-para">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>""" ;
     skos:exactMatch qudt:BaseDimensionMagnitude ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note """<p class=\\"lm-para\\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>
@@ -429,6 +476,7 @@ qudt:BaseDimensionMagnitude a owl:Class ;
 qudt:BinaryPrefix a owl:Class ;
     rdfs:label "BinaryPrefix" ;
     rdfs:subClassOf qudt:Prefix ;
+    skos:definition "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2." ;
     skos:exactMatch qudt:BinaryPrefix ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2." .
@@ -436,42 +484,47 @@ qudt:BinaryPrefix a owl:Class ;
 qudt:BitEncodingType a owl:Class ;
     rdfs:label "BitEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to True." ;
     skos:exactMatch qudt:BitEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:BooleanEncodingType a owl:Class ;
     rdfs:label "BooleanEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "Boolean encoding type" ;
     skos:exactMatch qudt:BooleanEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:ByteEncodingType a owl:Class ;
     rdfs:label "ByteEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "This class contains the various ways that information may be encoded into bytes." ;
     skos:exactMatch qudt:ByteEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:CharEncodingType a owl:Class ;
     rdfs:label "CharEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data as a sequence of bits or bytes." ;
     skos:exactMatch qudt:CharEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Citation a owl:Class ;
     rdfs:label "Citation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:description ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:url ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:url ],
+            owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:url ],
         qudt:Concept ;
+    skos:definition "Provides a simple way of making citations." ;
     skos:exactMatch qudt:Citation ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Provides a simple way of making citations.^^rdf:HTML" .
@@ -479,12 +532,13 @@ qudt:Citation a owl:Class ;
 qudt:ConstantValue a owl:Class ;
     rdfs:label "ConstantValue" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactConstant ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:exactConstant ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactConstant ],
         qudt:QuantityValue ;
+    skos:definition "Used to specify the values of a constant." ;
     skos:exactMatch qudt:ConstantValue ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Used to specify the values of a constant.^^rdf:HTML" .
@@ -492,21 +546,23 @@ qudt:ConstantValue a owl:Class ;
 qudt:ContextualUnit a owl:Class ;
     rdfs:label "ContextualUnit" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:broader ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty qudt:broader ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:broader ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:broader ],
         qudt:Unit ;
+    skos:definition "Contextual Unit" ;
     skos:exactMatch qudt:ContextualUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:CountingUnit a owl:Class ;
     rdfs:label "CountingUnit" ;
     rdfs:subClassOf qudt:DimensionlessUnit ;
+    skos:definition "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second." ;
     skos:exactMatch qudt:CountingUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second.^^rdf:HTML" .
@@ -520,12 +576,13 @@ qudt:CurrencyUnit a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:currencyCode ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:currencyExponent ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:currencyExponent ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:currencyExponent ],
         qudt:DimensionlessUnit ;
+    skos:definition "Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units." ;
     skos:exactMatch qudt:CurrencyUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units.^^rdf:HTML",
@@ -534,30 +591,36 @@ qudt:CurrencyUnit a owl:Class ;
 qudt:DataItem a owl:Class ;
     rdfs:label "DataItem" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:value ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:value ],
         qudt:Concept ;
+    skos:definition """
+  <p>A <em>Data Item</em> holds a value that maybe a scalar or structured datatype.
+  <em>Quantity Value</em> specifies which case applies.
+  </p>""" ;
     skos:exactMatch qudt:DataItem ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:DateTimeStringEncodingType a owl:Class ;
     rdfs:label "DateTimeStringEncodingType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:allowedPattern ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:allowedPattern ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:allowedPattern ],
         qudt:StringEncodingType ;
+    skos:definition "Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous formatting and parsing rules." ;
     skos:exactMatch qudt:DateTimeStringEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:DecimalPrefix a owl:Class ;
     rdfs:label "DecimalPrefix" ;
     rdfs:subClassOf qudt:Prefix ;
+    skos:definition "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10." ;
     skos:exactMatch qudt:DecimalPrefix ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10." .
@@ -565,6 +628,7 @@ qudt:DecimalPrefix a owl:Class ;
 qudt:DerivedUnit a owl:Class ;
     rdfs:label "DerivedUnit" ;
     rdfs:subClassOf qudt:Unit ;
+    skos:definition "A DerivedUnit is a type specification for units that are derived from other units." ;
     skos:exactMatch qudt:DerivedUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A DerivedUnit is a type specification for units that are derived from other units.^^rdf:HTML" .
@@ -572,12 +636,16 @@ qudt:DerivedUnit a owl:Class ;
 qudt:Discipline a owl:Class ;
     rdfs:label "Discipline" ;
     rdfs:subClassOf qudt:Concept ;
+    skos:definition "Discipline" ;
     skos:exactMatch qudt:Discipline ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:EnumeratedQuantity a owl:Class ;
     rdfs:label "EnumeratedQuantity" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:enumeration ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:enumeratedValue ],
         [ a owl:Restriction ;
@@ -586,9 +654,6 @@ qudt:EnumeratedQuantity a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
             owl:onProperty qudt:enumeratedValue ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:enumeration ],
         qudt:Concept ;
     skos:exactMatch qudt:EnumeratedQuantity ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
@@ -597,24 +662,29 @@ qudt:EnumerationScale a owl:Class ;
     rdfs:label "EnumerationScale" ;
     rdfs:subClassOf qudt:Enumeration,
         qudt:Scale ;
+    skos:definition "Enumeration scale" ;
     skos:exactMatch qudt:EnumerationScale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:FloatingPointEncodingType a owl:Class ;
     rdfs:label "FloatingPointEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "A \"Encoding\" with the following instance(s): \"Double Precision Encoding\", \"Single Precision Real Encoding\"." ;
     skos:exactMatch qudt:FloatingPointEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:IntegerEncodingType a owl:Class ;
     rdfs:label "IntegerEncodingType" ;
     rdfs:subClassOf qudt:Encoding ;
+    skos:definition "The encoding scheme for integer types" ;
     skos:exactMatch qudt:IntegerEncodingType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:IntervalScale a owl:Class ;
     rdfs:label "IntervalScale" ;
     rdfs:subClassOf qudt:Scale ;
+    skos:definition """<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be "twice as hot" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called "scaled variables", but the formal mathematical term is an affine space (in this case an affine line).</p>
+<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>""" ;
     skos:exactMatch qudt:IntervalScale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note """<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be \\"twice as hot\\" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \\"scaled variables\\", but the formal mathematical term is an affine space (in this case an affine line).</p>
@@ -624,6 +694,7 @@ qudt:IntervalScale a owl:Class ;
 qudt:LogarithmicUnit a owl:Class ;
     rdfs:label "LogarithmicUnit" ;
     rdfs:subClassOf qudt:DimensionlessUnit ;
+    skos:definition "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel." ;
     skos:exactMatch qudt:LogarithmicUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel.^^rdf:HTML" .
@@ -631,6 +702,7 @@ qudt:LogarithmicUnit a owl:Class ;
 qudt:NominalScale a owl:Class ;
     rdfs:label "NominalScale" ;
     rdfs:subClassOf qudt:Scale ;
+    skos:definition "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example." ;
     skos:exactMatch qudt:NominalScale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example.^^rdf:HTML" .
@@ -643,12 +715,13 @@ qudt:Ontology a owl:Class ;
 qudt:OrdinalScale a owl:Class ;
     rdfs:label "OrdinalScale" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:order ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:order ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:order ],
         qudt:Scale ;
+    skos:definition "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion." ;
     skos:exactMatch qudt:OrdinalScale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion.^^rdf:HTML" .
@@ -656,36 +729,43 @@ qudt:OrdinalScale a owl:Class ;
 qudt:Organization a owl:Class ;
     rdfs:label "Organization" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:url ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:url ],
         qudt:Concept ;
+    skos:definition "Organization" ;
     skos:exactMatch qudt:Organization ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:PlaneAngleUnit a owl:Class ;
     rdfs:label "PlaneAngleUnit" ;
     rdfs:subClassOf qudt:AngleUnit ;
+    skos:definition "Plane Angle Unit" ;
     skos:exactMatch qudt:PlaneAngleUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityType a owl:Class ;
     rdfs:label "QuantityType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:value ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:value ],
         qudt:EnumeratedValue ;
+    skos:definition """
+  A $\\textit{Quantity Type}$ is an enumeration of quantity kinds.
+  It specializes $\\boxed{dtype:EnumeratedValue}$ by constrinaing $\\boxed{dtype:value}$ to instances of $\\boxed{qudt:QuantityKind}$.
+  """ ;
     skos:exactMatch qudt:QuantityType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:RatioScale a owl:Class ;
     rdfs:label "RatioScale" ;
     rdfs:subClassOf qudt:Scale ;
+    skos:definition "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero." ;
     skos:exactMatch qudt:RatioScale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \\\"twice the length\\\" of another (= is \\\"twice as long\\\"). Very informally, many ratio scales can be described as specifying \\\"how much\\\" of something (i.e. an amount or magnitude) or \\\"how many\\\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero.^^rdf:HTML" .
@@ -696,20 +776,41 @@ qudt:ScalarDatatype a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:minInclusive ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:length ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:rdfsDatatype ],
+            owl:onProperty qudt:bits ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:maxInclusive ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:minExclusive ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:bytes ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:maxInclusive ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:minExclusive ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bits ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:maxExclusive ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:maxInclusive ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:maxInclusive ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Datatype ;
+            owl:onProperty qudt:rdfsDatatype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:bytes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:minInclusive ],
@@ -718,29 +819,9 @@ qudt:ScalarDatatype a owl:Class ;
             owl:onProperty qudt:maxExclusive ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:bytes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Datatype ;
             owl:onProperty qudt:rdfsDatatype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:maxExclusive ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:minExclusive ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:minExclusive ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:bits ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:length ],
         qudt:Datatype ;
+    skos:definition "Scalar data types are those that have a single value. The permissible values are defined over a domain that may be integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type." ;
     skos:exactMatch qudt:ScalarDatatype ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -752,12 +833,14 @@ qudt:SignednessType a owl:Class ;
 qudt:SolidAngleUnit a owl:Class ;
     rdfs:label "SolidAngleUnit" ;
     rdfs:subClassOf qudt:AngleUnit ;
+    skos:definition "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi." ;
     skos:exactMatch qudt:SolidAngleUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Symbol a owl:Class ;
     rdfs:label "Symbol" ;
     rdfs:subClassOf qudt:Concept ;
+    skos:definition "Symbol" ;
     skos:exactMatch qudt:Symbol ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -769,40 +852,50 @@ qudt:SymmetricRelation a owl:Class ;
 qudt:UCUMcs a owl:Class ;
     rdfs:label "UCUMcs" ;
     rdfs:subClassOf qudt:Resource ;
+    skos:definition "Lexical pattern for the case-sensitive version of UCUM code" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Lexical pattern for the case-sensitive version of UCUM code" .
 
 qudt:UCUMcs-term a owl:Class ;
     rdfs:label "UCUMcs-term" ;
     rdfs:subClassOf qudt:Resource ;
+    skos:definition "Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code" .
 
 qudt:UserQuantityKind a owl:Class ;
     rdfs:label "UserQuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
         qudt:AbstractQuantityKind ;
+    skos:definition "User Quantity Kind" ;
     skos:exactMatch qudt:UserQuantityKind ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:mathDefinition a owl:ObjectProperty ;
     rdfs:label "mathDefinition" ;
+    skos:definition "math definition" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:CardinalityType a owl:Class ;
     rdfs:label "CardinalityType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:literal ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:literal ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:literal ],
         qudt:EnumeratedValue ;
+    skos:definition """
+  In mathematics, the cardinality of a set is a measure of the number of elements of the set.
+  For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.
+  There are two approaches to cardinality: one which compares sets directly using bijections and injections,
+   and another which uses cardinal numbers.
+  """ ;
     skos:exactMatch qudt:CardinalityType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -814,35 +907,33 @@ qudt:Class a owl:Class ;
 qudt:Comment a owl:Class ;
     rdfs:label "Comment" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:rationale ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:rationale ],
         qudt:Verifiable ;
+    skos:definition "Comment" ;
     skos:exactMatch qudt:Comment ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Figure a owl:Class ;
     rdfs:label "Figure" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:figureLabel ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:figureCaption ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:imageLocation ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:height ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:landscape ],
+            owl:onProperty qudt:image ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:height ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:width ],
@@ -850,36 +941,41 @@ qudt:Figure a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:image ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:figureLabel ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:height ],
+            owl:onProperty qudt:figureLabel ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:imageLocation ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:figureLabel ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:landscape ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:figureCaption ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:figureCaption ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:height ],
+            owl:onProperty qudt:landscape ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:imageLocation ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:width ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:landscape ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:image ],
         qudt:Concept ;
+    skos:definition "Figure" ;
     skos:exactMatch qudt:Figure ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:NumericUnion a owl:Class ;
     rdfs:label "NumericUnion" ;
     rdfs:subClassOf qudt:Concept ;
+    skos:definition "Numeric union" ;
     skos:exactMatch qudt:NumericUnion ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -892,12 +988,14 @@ qudt:OrderedType a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:literal ],
         qudt:EnumeratedValue ;
+    skos:definition "Describes how a data or information structure is ordered." ;
     skos:exactMatch qudt:OrderedType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityKindDimensionVectorSI a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_SI" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVector ;
+    skos:definition "Quantity Kind Dimension vector (SI)" ;
     skos:exactMatch qudt:QuantityKindDimensionVector_SI ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -905,32 +1003,34 @@ qudt:Rule a owl:Class ;
     rdfs:label "Rule" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:rationale ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:ruleType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:rationale ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:RuleType ;
             owl:onProperty qudt:ruleType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:rationale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:rationale ],
         qudt:Concept,
         qudt:Verifiable ;
+    skos:definition "Rule" ;
     skos:exactMatch qudt:Rule ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:RuleType a owl:Class ;
     rdfs:label "RuleType" ;
     rdfs:subClassOf qudt:EnumeratedValue ;
+    skos:definition "Rule Type" ;
     skos:exactMatch qudt:RuleType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:ScaleType a owl:Class ;
     rdfs:label "ScaleType" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:dataStructure ],
+            owl:allValuesFrom qudt:TransformType ;
+            owl:onProperty qudt:permissibleTransformation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:permissibleTransformation ],
@@ -941,12 +1041,13 @@ qudt:ScaleType a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:permissibleMaths ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:TransformType ;
-            owl:onProperty qudt:permissibleTransformation ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dataStructure ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:MathsFunctionType ;
             owl:onProperty qudt:permissibleMaths ],
         qudt:EnumeratedValue ;
+    skos:definition "Scale type" ;
     skos:exactMatch qudt:ScaleType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -963,6 +1064,7 @@ qudt:Thing a owl:Class ;
 
 qudt:allowedPattern a owl:ObjectProperty ;
     rdfs:label "allowedPattern" ;
+    skos:definition "allowed pattern" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:ansiSQLName a owl:DatatypeProperty ;
@@ -974,34 +1076,40 @@ qudt:applicableCGSUnit a owl:ObjectProperty ;
     rdfs:label "applicableCGSUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable CGS unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicableISOUnit a owl:ObjectProperty ;
     rdfs:label "applicableISOUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable ISO unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicableImperialUnit a owl:ObjectProperty ;
     rdfs:label "applicableImperialUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable Imperial unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicablePhysicalConstant a owl:ObjectProperty ;
     rdfs:label "applicablePhysicalConstant" ;
+    skos:definition "applicable physical constant" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicableSIUnit a owl:ObjectProperty ;
     rdfs:label "applicableSIUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable SI unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:applicableUSCustomaryUnit a owl:ObjectProperty ;
     rdfs:label "applicableUSCustomaryUnit" ;
     rdfs:range qudt:Unit ;
     rdfs:subPropertyOf qudt:applicableUnit ;
+    skos:definition "applicable US Customary unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:baseDimensionEnumeration a owl:ObjectProperty ;
@@ -1012,20 +1120,24 @@ qudt:baseDimensionEnumeration a owl:ObjectProperty ;
 
 qudt:basis a owl:ObjectProperty ;
     rdfs:label "basis" ;
+    skos:definition "basis" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:belongsToSystemOfQuantities a owl:ObjectProperty ;
     rdfs:label "belongsToSystemOfQuantities" ;
     rdfs:range qudt:SystemOfQuantityKinds ;
+    skos:definition "belongs to system of quantities" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:bitOrder a owl:ObjectProperty ;
     rdfs:label "bitOrder" ;
     rdfs:range qudt:EndianType ;
+    skos:definition "bit order" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:bounded a owl:ObjectProperty ;
     rdfs:label "bounded" ;
+    skos:definition "bounded" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:byteOrder a owl:ObjectProperty ;
@@ -1042,22 +1154,27 @@ qudt:cName a owl:DatatypeProperty ;
 
 qudt:cardinality a owl:ObjectProperty ;
     rdfs:label "cardinality" ;
+    skos:definition "cardinality" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:conversionMultiplier a owl:ObjectProperty ;
     rdfs:label "conversionMultiplier" ;
+    skos:definition "conversion multiplier" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:conversionMultiplierSN a owl:ObjectProperty ;
     rdfs:label "conversionMultiplierSN" ;
+    skos:definition "conversion multiplier scientific" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:conversionOffset a owl:ObjectProperty ;
     rdfs:label "conversionOffset" ;
+    skos:definition "conversion offset" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:conversionOffsetSN a owl:ObjectProperty ;
     rdfs:label "conversionOffsetSN" ;
+    skos:definition "conversion offset scientific" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:currencyCode a owl:ObjectProperty ;
@@ -1073,15 +1190,18 @@ qudt:currencyExponent a owl:ObjectProperty ;
 qudt:dataEncoding a owl:ObjectProperty ;
     rdfs:label "dataEncoding" ;
     rdfs:range qudt:DataEncoding ;
+    skos:definition "data encoding" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:datatype a owl:ObjectProperty ;
     rdfs:label "datatype" ;
+    skos:definition "datatype" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dbpediaMatch a owl:DatatypeProperty ;
     rdfs:label "dbpediaMatch" ;
     rdfs:range xsd:anyURI ;
+    skos:definition "dbpedia match" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:default a owl:ObjectProperty ;
@@ -1091,6 +1211,7 @@ qudt:default a owl:ObjectProperty ;
 
 qudt:deprecated a owl:ObjectProperty ;
     rdfs:label "deprecated" ;
+    skos:definition "deprecated" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:derivedCoherentUnitOfSystem a owl:ObjectProperty ;
@@ -1102,39 +1223,48 @@ qudt:derivedCoherentUnitOfSystem a owl:ObjectProperty ;
 
 qudt:dimensionExponentForAmountOfSubstance a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForAmountOfSubstance" ;
+    skos:definition "dimension exponent for amount of substance" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForElectricCurrent a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForElectricCurrent" ;
+    skos:definition "dimension exponent for electric current" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForLength a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForLength" ;
+    skos:definition "dimension exponent for length" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForLuminousIntensity a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForLuminousIntensity" ;
+    skos:definition "dimension exponent for luminous intensity" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForMass a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForMass" ;
+    skos:definition "dimension exponent for mass" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForThermodynamicTemperature a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForThermodynamicTemperature" ;
+    skos:definition "dimension exponent for thermodynamic temperature" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionExponentForTime a owl:ObjectProperty ;
     rdfs:label "dimensionExponentForTime" ;
+    skos:definition "dimension exponent for time" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionVectorForSI a owl:ObjectProperty ;
     rdfs:label "dimensionVectorForSI" ;
     rdfs:range qudt:QuantityKindDimensionVectorSI ;
+    skos:definition "dimension vector for SI" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dimensionlessExponent a owl:ObjectProperty ;
     rdfs:label "dimensionlessExponent" ;
+    skos:definition "dimensionless exponent" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:element a owl:ObjectProperty ;
@@ -1144,16 +1274,19 @@ qudt:element a owl:ObjectProperty ;
 
 qudt:encoding a owl:ObjectProperty ;
     rdfs:label "encoding" ;
+    skos:definition "encoding" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:enumeratedValue a owl:ObjectProperty ;
     rdfs:label "enumeratedValue" ;
     rdfs:range qudt:EnumeratedValue ;
+    skos:definition "enumerated value" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:enumeration a owl:ObjectProperty ;
     rdfs:label "enumeration" ;
     rdfs:range qudt:Enumeration ;
+    skos:definition "enumeration" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:factorUnitScalar a owl:ObjectProperty ;
@@ -1163,15 +1296,18 @@ qudt:factorUnitScalar a owl:ObjectProperty ;
 
 qudt:figureCaption a owl:ObjectProperty ;
     rdfs:label "figureCaption" ;
+    skos:definition "figure caption" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:figureLabel a owl:ObjectProperty ;
     rdfs:label "figureLabel" ;
+    skos:definition "figure label" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:guidance a owl:DatatypeProperty ;
     rdfs:label "guidance" ;
     rdfs:range xsd:string ;
+    skos:definition "guidance" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasAllowedUnit a owl:ObjectProperty ;
@@ -1191,6 +1327,7 @@ qudt:hasDerivedCoherentUnit a owl:ObjectProperty ;
     rdfs:label "hasDerivedCoherentUnit" ;
     rdfs:subPropertyOf qudt:hasCoherentUnit,
         qudt:hasDerivedUnit ;
+    skos:definition "derived coherent unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasFactorUnit a owl:ObjectProperty ;
@@ -1201,30 +1338,37 @@ qudt:hasFactorUnit a owl:ObjectProperty ;
 qudt:hasReciprocalUnit a owl:ObjectProperty ;
     rdfs:label "hasReciprocalUnit" ;
     rdfs:range qudt:Unit ;
+    skos:definition "has reciprocal unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasReferenceQuantityKind a owl:ObjectProperty ;
     rdfs:label "hasReferenceQuantityKind" ;
+    skos:definition "has reference quantity kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasRule a owl:ObjectProperty ;
     rdfs:label "hasRule" ;
+    skos:definition "has rule" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:height a owl:ObjectProperty ;
     rdfs:label "height" ;
+    skos:definition "height" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:image a owl:ObjectProperty ;
     rdfs:label "image" ;
+    skos:definition "image" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:imageLocation a owl:ObjectProperty ;
     rdfs:label "imageLocation" ;
+    skos:definition "image location" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:isDeltaQuantity a owl:DatatypeProperty ;
     rdfs:label "isDeltaQuantity" ;
+    skos:definition "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets." .
 
@@ -1234,14 +1378,17 @@ qudt:isReplacedBy a owl:ObjectProperty ;
 
 qudt:javaName a owl:ObjectProperty ;
     rdfs:label "javaName" ;
+    skos:definition "java name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:jsName a owl:ObjectProperty ;
     rdfs:label "jsName" ;
+    skos:definition "Javascript name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:landscape a owl:ObjectProperty ;
     rdfs:label "landscape" ;
+    skos:definition "landscape" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:length a owl:ObjectProperty ;
@@ -1250,10 +1397,12 @@ qudt:length a owl:ObjectProperty ;
 
 qudt:lowerBound a owl:ObjectProperty ;
     rdfs:label "lowerBound" ;
+    skos:definition "lower bound" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:matlabName a owl:ObjectProperty ;
     rdfs:label "matlabName" ;
+    skos:definition "matlab name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:maxExclusive a owl:ObjectProperty ;
@@ -1270,6 +1419,7 @@ qudt:maxInclusive a owl:ObjectProperty ;
 
 qudt:microsoftSQLServerName a owl:ObjectProperty ;
     rdfs:label "microsoftSQLServerName" ;
+    skos:definition "Microsoft SQL Server name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:minExclusive a owl:ObjectProperty ;
@@ -1286,10 +1436,12 @@ qudt:minInclusive a owl:ObjectProperty ;
 
 qudt:mySQLName a owl:ObjectProperty ;
     rdfs:label "mySQLName" ;
+    skos:definition "MySQL name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:odbcName a owl:ObjectProperty ;
     rdfs:label "odbcName" ;
+    skos:definition "ODBC name" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:oleDBName a owl:ObjectProperty ;
@@ -1299,6 +1451,7 @@ qudt:oleDBName a owl:ObjectProperty ;
 
 qudt:omUnit a owl:ObjectProperty ;
     rdfs:label "omUnit" ;
+    skos:definition "om unit" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:oracleSQLName a owl:DatatypeProperty ;
@@ -1308,10 +1461,12 @@ qudt:oracleSQLName a owl:DatatypeProperty ;
 
 qudt:order a owl:ObjectProperty ;
     rdfs:label "order" ;
+    skos:definition "order" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:orderedType a owl:ObjectProperty ;
     rdfs:label "orderedType" ;
+    skos:definition "ordered type" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:plainTextDescription a owl:ObjectProperty ;
@@ -1321,6 +1476,7 @@ qudt:plainTextDescription a owl:ObjectProperty ;
 
 qudt:prefixMultiplier a owl:ObjectProperty ;
     rdfs:label "prefixMultiplier" ;
+    skos:definition "prefix multiplier" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:protocolBuffersName a owl:DatatypeProperty ;
@@ -1336,10 +1492,12 @@ qudt:pythonName a owl:DatatypeProperty ;
 qudt:quantityValue a owl:ObjectProperty ;
     rdfs:label "quantityValue" ;
     rdfs:range qudt:QuantityValue ;
+    skos:definition "quantity value" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:rdfsDatatype a owl:ObjectProperty ;
     rdfs:label "rdfsDatatype" ;
+    skos:definition "rdfs datatype" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:relativeStandardUncertainty a owl:DatatypeProperty ;
@@ -1349,10 +1507,12 @@ qudt:relativeStandardUncertainty a owl:DatatypeProperty ;
 
 qudt:ruleType a owl:ObjectProperty ;
     rdfs:label "ruleType" ;
+    skos:definition "rule type" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:scaleType a owl:ObjectProperty ;
     rdfs:label "scaleType" ;
+    skos:definition "scale type" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:scalingOf a owl:ObjectProperty ;
@@ -1362,6 +1522,7 @@ qudt:scalingOf a owl:ObjectProperty ;
 
 qudt:siUnitsExpression a owl:ObjectProperty ;
     rdfs:label "siUnitsExpression" ;
+    skos:definition "si units expression" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:standardUncertainty a owl:DatatypeProperty ;
@@ -1377,6 +1538,7 @@ qudt:standardUncertaintySN a owl:DatatypeProperty ;
 qudt:systemDerivedQuantityKind a owl:ObjectProperty ;
     rdfs:label "systemDerivedQuantityKind" ;
     rdfs:subPropertyOf qudt:hasQuantityKind ;
+    skos:definition "system derived quantity kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:udunitsCode a owl:DatatypeProperty ;
@@ -1391,10 +1553,12 @@ qudt:uneceCommonCode a owl:DatatypeProperty ;
 
 qudt:unitFor a owl:ObjectProperty ;
     rdfs:label "unitFor" ;
+    skos:definition "unit for" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:upperBound a owl:ObjectProperty ;
     rdfs:label "upperBound" ;
+    skos:definition "upper bound" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:valueSN a owl:ObjectProperty ;
@@ -1409,77 +1573,83 @@ qudt:vbName a owl:DatatypeProperty ;
 
 qudt:vectorMagnitude a owl:DatatypeProperty ;
     rdfs:label "vectorMagnitude" ;
+    skos:definition "vector magnitude" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:width a owl:ObjectProperty ;
     rdfs:label "width" ;
+    skos:definition "width" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:wikidataMatch a owl:DatatypeProperty ;
     rdfs:label "wikidataMatch" ;
     rdfs:range xsd:anyURI ;
+    skos:definition "wikidata match" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:AbstractQuantityKind a owl:Class ;
     rdfs:label "AbstractQuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:broader ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:broader ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty qudt:broader ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:broader ],
+            owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:broader ],
         qudt:Concept ;
+    skos:definition "Quantity Kind (abstract)" ;
     skos:exactMatch qudt:AbstractQuantityKind ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:AngleUnit a owl:Class ;
     rdfs:label "AngleUnit" ;
     rdfs:subClassOf qudt:DimensionlessUnit ;
+    skos:definition "All units relating to specification of angles. " ;
     skos:exactMatch qudt:AngleUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:DataEncoding a owl:Class ;
     rdfs:label "DataEncoding" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Encoding ;
+            owl:onProperty qudt:encoding ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:byteOrder ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:bitOrder ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:byteOrder ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:EndianType ;
             owl:onProperty qudt:bitOrder ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Encoding ;
-            owl:onProperty qudt:encoding ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:byteOrder ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:encoding ],
         qudt:Aspect ;
+    skos:definition "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>" ;
     skos:exactMatch qudt:DataEncoding ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>^^rdf:HTML" .
@@ -1487,6 +1657,7 @@ qudt:DataEncoding a owl:Class ;
 qudt:MathsFunctionType a owl:Class ;
     rdfs:label "MathsFunctionType" ;
     rdfs:subClassOf qudt:Concept ;
+    skos:definition "Maths Function Type" ;
     skos:exactMatch qudt:MathsFunctionType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
@@ -1494,83 +1665,84 @@ qudt:PhysicalConstant a owl:Class ;
     rdfs:label "PhysicalConstant" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
+            owl:onProperty qudt:ucumCode ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:PhysicalConstant ;
-            owl:onProperty qudt:exactMatch ],
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:applicableSystem ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:ucumCode ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:normativeReference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:isoNormativeReference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:applicableUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:normativeReference ],
+            owl:onProperty qudt:hasDimensionVector ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:boolean ;
             owl:onProperty qudt:exactConstant ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableUnit ],
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:ucumCode ],
+            owl:onProperty qudt:latexDefinition ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:mathMLdefinition ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactConstant ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
+            owl:allValuesFrom qudt:PhysicalConstant ;
+            owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKindDimensionVector ;
             owl:onProperty qudt:hasDimensionVector ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
+            owl:onProperty qudt:applicableSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactConstant ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:isoNormativeReference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:isoNormativeReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:normativeReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
         qudt:Quantity ;
+    skos:definition "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used." ;
     skos:exactMatch qudt:PhysicalConstant ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.^^rdf:HTML" .
@@ -1578,29 +1750,38 @@ qudt:PhysicalConstant a owl:Class ;
 qudt:Quantifiable a owl:Class ;
     rdfs:label "Quantifiable" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:standardUncertaintySN ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:relativeStandardUncertainty ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Datatype ;
-            owl:onProperty qudt:datatype ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:value ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:valueSN ],
+            owl:onProperty qudt:value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:double ;
+            owl:onProperty qudt:standardUncertaintySN ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:datatype ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:DataEncoding ;
             owl:onProperty qudt:dataEncoding ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:standardUncertaintySN ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:double ;
+            owl:onProperty qudt:relativeStandardUncertainty ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:relativeStandardUncertainty ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:standardUncertainty ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:decimal ;
             owl:onProperty qudt:standardUncertainty ],
@@ -1609,23 +1790,15 @@ qudt:Quantifiable a owl:Class ;
             owl:onProperty qudt:valueSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:standardUncertainty ],
+            owl:onProperty qudt:valueSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:DataEncoding ;
             owl:onProperty qudt:dataEncoding ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:double ;
-            owl:onProperty qudt:relativeStandardUncertainty ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:double ;
-            owl:onProperty qudt:standardUncertaintySN ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasUnit ],
+            owl:allValuesFrom qudt:Datatype ;
+            owl:onProperty qudt:datatype ],
         qudt:Aspect ;
+    skos:definition "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>" ;
     skos:exactMatch qudt:Quantifiable ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>^^rdf:HTML" .
@@ -1633,25 +1806,38 @@ qudt:Quantifiable a owl:Class ;
 qudt:Quantity a owl:Class ;
     rdfs:label "Quantity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:boolean ;
             owl:onProperty qudt:isDeltaQuantity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:quantityValue ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty qudt:isDeltaQuantity ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityValue ;
             owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:isDeltaQuantity ],
         qudt:Concept,
         qudt:Quantifiable ;
+    skos:definition """<p class="lm-para">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.
+  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the
+  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific
+  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as
+  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+<p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points,
+velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p>
+<p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity
+kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance
+divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these
+expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded
+as "fundamental" in this sense.</p>
+<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>""" ;
     skos:exactMatch qudt:Quantity ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note """<p class=\\"lm-para\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.
@@ -1680,32 +1866,33 @@ qudt:SystemOfQuantityKinds a owl:Class ;
             owl:onProperty qudt:hasUnitSystem ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasBaseQuantityKind ],
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:systemDerivedQuantityKind ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Enumeration ;
             owl:onProperty qudt:baseDimensionEnumeration ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:systemDerivedQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasUnitSystem ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:systemDerivedQuantityKind ],
+            owl:onProperty qudt:hasBaseQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:baseDimensionEnumeration ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasBaseQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:systemDerivedQuantityKind ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasQuantityKind ],
         qudt:Concept ;
+    skos:definition "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention." ;
     skos:exactMatch qudt:SystemOfQuantityKinds ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention.^^rdf:HTML" .
@@ -1713,11 +1900,13 @@ qudt:SystemOfQuantityKinds a owl:Class ;
 qudt:TransformType a owl:Class ;
     rdfs:label "TransformType" ;
     rdfs:subClassOf qudt:EnumeratedValue ;
+    skos:definition "Transform type" ;
     skos:exactMatch qudt:TransformType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasUnitSystem a owl:ObjectProperty ;
     rdfs:label "hasUnitSystem" ;
+    skos:definition "has unit system" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Aspect a owl:Class ;
@@ -1730,98 +1919,80 @@ qudt:Aspect a owl:Class ;
 qudt:Datatype a owl:Class ;
     rdfs:label "Datatype" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:basis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:ansiSQLName ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:mySQLName ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:jsName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:odbcName ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:ansiSQLName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:orderedType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:mySQLName ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:microsoftSQLServerName ],
+            owl:onProperty qudt:protocolBuffersName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:oracleSQLName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:protocolBuffersName ],
+            owl:onProperty qudt:pythonName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:bounded ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:ansiSQLName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:microsoftSQLServerName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:pythonName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:ansiSQLName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:cName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:orderedType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:cardinality ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:OrderedType ;
             owl:onProperty qudt:orderedType ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:matlabName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:pythonName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Datatype ;
-            owl:onProperty qudt:basis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:CardinalityType ;
-            owl:onProperty qudt:cardinality ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:oleDBName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:cardinality ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:cName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:vbName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:microsoftSQLServerName ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:protocolBuffersName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:pythonName ],
+            owl:onProperty qudt:matlabName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:microsoftSQLServerName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:odbcName ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:bounded ],
+            owl:allValuesFrom qudt:Datatype ;
+            owl:onProperty qudt:basis ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:javaName ],
+            owl:onProperty qudt:mySQLName ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:jsName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:vbName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:oleDBName ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:cName ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:oleDBName ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bounded ],
@@ -1829,27 +2000,55 @@ qudt:Datatype a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:javaName ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:matlabName ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:oracleSQLName ],
         [ a owl:Restriction ;
+            owl:allValuesFrom qudt:CardinalityType ;
+            owl:onProperty qudt:cardinality ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:jsName ],
+            owl:onProperty qudt:vbName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:basis ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:cName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:matlabName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:javaName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:vbName ],
         qudt:Concept ;
+    skos:definition """
+   <p>A <em>Datatype</em> is a definition of the type of the "value" of a data item (for example, "all integers between 0 and 10"),
+   and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored.
+  Some types are primitive - built-in to the language, with no visible internal structure.
+  For example "Boolean"; others are composite - constructed from one or more other types (of either kind).
+  For example lists, arrays, structures, unions.
+  Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion.
+  </p>""" ;
     skos:exactMatch rdfs:Datatype ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:EndianType a owl:Class ;
     rdfs:label "EndianType" ;
     rdfs:subClassOf qudt:EnumeratedValue ;
+    skos:definition "Endian Type" ;
     skos:exactMatch qudt:EndianType ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityKindDimensionVectorCGS a owl:Class ;
     rdfs:label "QuantityKindDimensionVector_CGS" ;
     rdfs:subClassOf qudt:QuantityKindDimensionVector ;
+    skos:definition "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind." ;
     skos:exactMatch qudt:QuantityKindDimensionVector_CGS ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.^^rdf:HTML" .
@@ -1864,6 +2063,7 @@ qudt:QuantityValue a owl:Class ;
             owl:onProperty qudt:hasUnit ],
         qudt:Concept,
         qudt:Quantifiable ;
+    skos:definition "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values." ;
     skos:exactMatch qudt:QuantityValue ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\\\"http://physics.nist.gov/Pubs/SP811/sec07.html\\\">NIST SP 811 section 7</a> for more on quantity values.^^rdf:HTML" .
@@ -1879,10 +2079,12 @@ qudt:bits a owl:ObjectProperty ;
 
 qudt:bytes a owl:ObjectProperty ;
     rdfs:label "bytes" ;
+    skos:definition "bytes" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:dataStructure a owl:ObjectProperty ;
     rdfs:label "dataStructure" ;
+    skos:definition "data structure" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:definedUnitOfSystem a owl:ObjectProperty ;
@@ -1899,11 +2101,13 @@ qudt:derivedUnitOfSystem a owl:ObjectProperty ;
 
 qudt:exactConstant a owl:DatatypeProperty ;
     rdfs:label "exactConstant" ;
+    skos:definition "exact constant" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasBaseQuantityKind a owl:ObjectProperty ;
     rdfs:label "hasBaseQuantityKind" ;
     rdfs:subPropertyOf qudt:hasQuantityKind ;
+    skos:definition "has base quantity kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasCoherentUnit a owl:ObjectProperty ;
@@ -1931,6 +2135,7 @@ qudt:id a owl:ObjectProperty ;
 
 qudt:iec61360Code a owl:DatatypeProperty ;
     rdfs:label "iec61360Code" ;
+    skos:definition "iec-61360 code" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:isUnitOfSystem a owl:ObjectProperty ;
@@ -1947,40 +2152,48 @@ qudt:isoNormativeReference a owl:ObjectProperty ;
 
 qudt:permissibleMaths a owl:ObjectProperty ;
     rdfs:label "permissibleMaths" ;
+    skos:definition "permissible maths" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:permissibleTransformation a owl:ObjectProperty ;
     rdfs:label "permissibleTransformation" ;
+    skos:definition "permissible transformation" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:prefix a owl:ObjectProperty ;
     rdfs:label "prefix" ;
     rdfs:range qudt:Prefix ;
+    skos:definition "Associates a unit with the appropriate prefix, if any." ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Associates a unit with the appropriate prefix, if any." .
 
 qudt:qkdvDenominator a owl:ObjectProperty ;
     rdfs:label "qkdvDenominator" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
+    skos:definition "denominator dimension vector" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:qkdvNumerator a owl:ObjectProperty ;
     rdfs:label "qkdvNumerator" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
+    skos:definition "numerator dimension vector" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:rationale a owl:DatatypeProperty ;
     rdfs:label "rationale" ;
     rdfs:range xsd:string ;
+    skos:definition "rationale" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:url a owl:ObjectProperty ;
     rdfs:label "url" ;
+    skos:definition "url" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:DimensionlessUnit a owl:Class ;
     rdfs:label "DimensionlessUnit" ;
     rdfs:subClassOf qudt:Unit ;
+    skos:definition "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero." ;
     skos:exactMatch qudt:DimensionlessUnit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.^^rdf:HTML" .
@@ -1996,13 +2209,13 @@ qudt:Enumeration a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:abbreviation ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:default ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:element ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
+            owl:onProperty qudt:default ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:default ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:EnumeratedValue ;
@@ -2011,6 +2224,9 @@ qudt:Enumeration a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:abbreviation ],
         qudt:Concept ;
+    skos:definition """<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
+
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>""" ;
     skos:exactMatch qudt:Enumeration ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note """<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
@@ -2020,30 +2236,31 @@ qudt:Enumeration a owl:Class ;
 qudt:Scale a owl:Class ;
     rdfs:label "Scale" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:TransformType ;
-            owl:onProperty qudt:permissibleTransformation ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:permissibleMaths ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:dataStructure ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:scaleType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:ScaleType ;
             owl:onProperty qudt:scaleType ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:dataStructure ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:permissibleTransformation ],
+            owl:allValuesFrom qudt:ScaleType ;
+            owl:onProperty qudt:scaleType ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:MathsFunctionType ;
             owl:onProperty qudt:permissibleMaths ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:TransformType ;
+            owl:onProperty qudt:permissibleTransformation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:permissibleTransformation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:dataStructure ],
         qudt:Concept ;
+    skos:definition "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types." ;
     skos:exactMatch qudt:Scale ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "Scales (also called \\\"scales of measurement\\\" or \\\"levels of measurement\\\")  are expressions that typically refer to the theory of scale types.^^rdf:HTML" .
@@ -2056,6 +2273,7 @@ qudt:abbreviation a owl:ObjectProperty ;
 qudt:hasDimensionVector a owl:ObjectProperty ;
     rdfs:label "hasDimensionVector" ;
     rdfs:range qudt:QuantityKindDimensionVector ;
+    skos:definition "has dimension vector" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:literal a owl:ObjectProperty ;
@@ -2065,6 +2283,7 @@ qudt:literal a owl:ObjectProperty ;
 qudt:mathMLdefinition a owl:ObjectProperty ;
     rdfs:label "mathMLdefinition" ;
     rdfs:subPropertyOf qudt:mathDefinition ;
+    skos:definition "mathML definition" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:ucumCode a owl:ObjectProperty ;
@@ -2083,14 +2302,23 @@ qudt:Prefix a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:symbol ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Prefix ;
             owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:prefixMultiplier ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:UCUMcs-term ;
             owl:onProperty qudt:ucumCode ],
@@ -2099,71 +2327,64 @@ qudt:Prefix a owl:Class ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:prefixMultiplier ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:prefixMultiplier ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:altSymbol ],
         qudt:Concept,
         qudt:Verifiable ;
+    skos:definition "Prefix" ;
     skos:exactMatch qudt:Prefix ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Encoding a owl:Class ;
     rdfs:label "Encoding" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:bytes ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bits ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:bytes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:bits ],
         qudt:Concept ;
+    skos:definition "An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8." ;
     skos:exactMatch qudt:Encoding ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:Verifiable a owl:Class ;
     rdfs:label "Verifiable" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:wikidataMatch ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:normativeReference ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:isoNormativeReference ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dbpediaMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:dbpediaMatch ],
+            owl:onProperty qudt:normativeReference ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:normativeReference ],
+            owl:onProperty qudt:isoNormativeReference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:wikidataMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:normativeReference ],
+            owl:onProperty qudt:dbpediaMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:wikidataMatch ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:isoNormativeReference ],
+            owl:onProperty qudt:dbpediaMatch ],
         qudt:Aspect ;
     skos:exactMatch qudt:Verifiable ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
@@ -2175,6 +2396,7 @@ qudt:description a owl:ObjectProperty ;
 
 qudt:exactMatch a owl:ObjectProperty ;
     rdfs:label "exactMatch" ;
+    skos:definition "exact match" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:hasUnit a owl:ObjectProperty ;
@@ -2185,66 +2407,68 @@ qudt:hasUnit a owl:ObjectProperty ;
 
 qudt:latexDefinition a owl:ObjectProperty ;
     rdfs:label "latexDefinition" ;
+    skos:definition "latex definition" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:SystemOfUnits a owl:Class ;
     rdfs:label "SystemOfUnits" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasDerivedCoherentUnit ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:applicablePhysicalConstant ],
+            owl:onProperty qudt:hasDefinedUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasAllowedUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasBaseUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasCoherentUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:hasUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasDerivedUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicablePhysicalConstant ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasDerivedCoherentUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasDerivedUnit ],
+            owl:onProperty qudt:hasCoherentUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:hasAllowedUnit ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasBaseUnit ],
+            owl:allValuesFrom qudt:Prefix ;
+            owl:onProperty qudt:prefix ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasCoherentUnit ],
+            owl:onProperty qudt:prefix ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasDefinedUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasBaseUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:PhysicalConstant ;
             owl:onProperty qudt:applicablePhysicalConstant ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDefinedUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasBaseUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasCoherentUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:prefix ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasAllowedUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:hasDerivedUnit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Prefix ;
-            owl:onProperty qudt:prefix ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasDefinedUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasDerivedCoherentUnit ],
+            owl:onProperty qudt:hasUnit ],
         qudt:Concept,
         qudt:Verifiable ;
+    skos:definition "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind." ;
     skos:exactMatch qudt:SystemOfUnits ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.^^rdf:HTML" .
@@ -2264,6 +2488,7 @@ qudt:applicableUnit a owl:ObjectProperty ;
 qudt:hasQuantityKind a owl:ObjectProperty ;
     rdfs:label "hasQuantityKind" ;
     rdfs:range qudt:QuantityKind ;
+    skos:definition "has quantity kind" ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:latexSymbol a owl:ObjectProperty ;
@@ -2288,20 +2513,14 @@ qudt:symbol a owl:ObjectProperty ;
 qudt:EnumeratedValue a owl:Class ;
     rdfs:label "EnumeratedValue" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:altSymbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:abbreviation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:symbol ],
@@ -2309,18 +2528,65 @@ qudt:EnumeratedValue a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:altSymbol ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:abbreviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:symbol ],
         qudt:Concept,
         qudt:Verifiable ;
+    skos:definition """<p>This class is for all enumerated and/or coded values.  For example, it contains the dimension objects that are the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract vector space.</p>
+
+<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
+
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>""" ;
     skos:exactMatch qudt:EnumeratedValue ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
 
 qudt:QuantityKind a owl:Class ;
     rdfs:label "QuantityKind" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableSIUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:qkdvNumerator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableImperialUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableImperialUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableCGSUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVectorSI ;
+            owl:onProperty qudt:dimensionVectorForSI ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableISOUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfQuantityKinds ;
+            owl:onProperty qudt:belongsToSystemOfQuantities ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableUSCustomaryUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:qkdvDenominator ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:exactMatch ],
@@ -2328,88 +2594,53 @@ qudt:QuantityKind a owl:Class ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:qkdvDenominator ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:belongsToSystemOfQuantities ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:applicableCGSUnit ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableISOUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:mathMLdefinition ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableSIUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableSIUnit ],
+            owl:onProperty qudt:latexDefinition ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:hasDimensionVector ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:applicableUSCustomaryUnit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVectorSI ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableSIUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:dimensionVectorForSI ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
+            owl:onProperty qudt:mathMLdefinition ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:belongsToSystemOfQuantities ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableISOUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableCGSUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableImperialUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableUSCustomaryUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfQuantityKinds ;
-            owl:onProperty qudt:belongsToSystemOfQuantities ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:dimensionVectorForSI ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:iec61360Code ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableImperialUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableCGSUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:applicableISOUnit ],
         qudt:AbstractQuantityKind,
         qudt:Verifiable ;
+    skos:definition "A <b>Quantity Kind</b> is any observable property that can be measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity." ;
     skos:exactMatch qudt:QuantityKind ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.^^rdf:HTML" .
@@ -2417,72 +2648,77 @@ qudt:QuantityKind a owl:Class ;
 qudt:QuantityKindDimensionVector a owl:Class ;
     rdfs:label "QuantityKindDimensionVector" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForTime ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForTime ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForLength ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForLength ],
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qudt:dimensionExponentForElectricCurrent ],
         [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForLength ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForTime ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:latexSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
+            owl:onProperty qudt:dimensionlessExponent ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:latexSymbol ],
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForTime ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForMass ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasReferenceQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForMass ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qudt:dimensionExponentForLength ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionlessExponent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForLuminousIntensity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasReferenceQuantityKind ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasReferenceQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForElectricCurrent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionExponentForMass ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForMass ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionExponentForThermodynamicTemperature ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:dimensionExponentForAmountOfSubstance ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty qudt:dimensionlessExponent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:dimensionlessExponent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
         qudt:Concept ;
+    skos:definition """<p class="lm-para">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\theta$) as $dim \\, Q = L^{\\alpha} \\, M^{\\beta} \\, T^{\\gamma} \\, I ^{\\delta} \\, \\theta ^{\\epsilon} \\, N^{\\eta} \\, J ^{\\nu}$.</p>
+
+<p class="lm-para">The rational powers of the dimensional exponents, $\\alpha, \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\ , \\eta, \\, \\nu$, are positive, negative, or zero.</p>
+
+<p class="lm-para">For example, the dimension of the physical quantity kind $\\it{speed}$ is $\\ boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\boxed{mass \\times acceleration}$ or $\\boxed{mass \\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>""" ;
     skos:exactMatch qudt:QuantityKindDimensionVector ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note """<p class=\\"lm-para\\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\\\theta$) as $dim \\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta} \\\\, T^{\\\\gamma} \\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\ , N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>
@@ -2495,17 +2731,20 @@ qudt:Concept a owl:Class ;
     rdfs:label "Concept" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:guidance ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:isReplacedBy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:description ],
+            owl:onProperty qudt:abbreviation ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:plainTextDescription ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:deprecated ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:id ],
         [ a owl:Restriction ;
@@ -2513,35 +2752,33 @@ qudt:Concept a owl:Class ;
             owl:onProperty qudt:hasRule ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:isReplacedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:deprecated ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:abbreviation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:isReplacedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Rule ;
-            owl:onProperty qudt:hasRule ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:guidance ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty qudt:guidance ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:abbreviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:deprecated ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:plainTextDescription ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Rule ;
+            owl:onProperty qudt:hasRule ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:isReplacedBy ],
         qudt:Thing ;
+    skos:definition "The root class for all QUDT concepts." ;
     skos:exactMatch qudt:Concept ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> ;
     skos:note "The root class for all QUDT concepts.^^rdf:HTML" .
@@ -2550,79 +2787,10 @@ qudt:Unit a owl:Class ;
     rdfs:label "Unit" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:unitFor ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:conversionOffset ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:uneceCommonCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:qkdvNumerator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty qudt:conversionOffsetSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:hasReciprocalUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:siUnitsExpression ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:prefix ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:applicableSystem ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:iec61360Code ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:udunitsCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:isUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:conversionOffsetSN ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexSymbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:scalingOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:conversionOffset ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:conversionMultiplier ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:conversionMultiplier ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:definedUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:unitFor ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Prefix ;
-            owl:onProperty qudt:prefix ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
             owl:onProperty qudt:altSymbol ],
@@ -2630,32 +2798,83 @@ qudt:Unit a owl:Class ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasQuantityKind ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:isUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:conversionMultiplierSN ],
+            owl:onProperty qudt:omUnit ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:definedUnitOfSystem ],
+            owl:onProperty qudt:hasFactorUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:derivedUnitOfSystem ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:latexDefinition ],
+            owl:onProperty qudt:conversionMultiplier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:siUnitsExpression ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:altSymbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:exactMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:factorUnitScalar ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:definedUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:definedUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:conversionMultiplierSN ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasReciprocalUnit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:uneceCommonCode ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:qkdvNumerator ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:siUnitsExpression ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty qudt:iec61360Code ],
+            owl:onProperty qudt:udunitsCode ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:uneceCommonCode ],
+            owl:onProperty qudt:applicableSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:conversionOffsetSN ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:conversionMultiplierSN ],
@@ -2664,79 +2883,101 @@ qudt:Unit a owl:Class ;
             owl:onProperty qudt:factorUnitScalar ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty qudt:scalingOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:isUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:omUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:omUnit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:symbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:hasDimensionVector ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:udunitsCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:factorUnitScalar ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:mathMLdefinition ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:latexDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
-            owl:onProperty qudt:qkdvDenominator ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Class ;
-            owl:onProperty qudt:hasFactorUnit ],
+            owl:onProperty qudt:conversionOffset ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:derivedUnitOfSystem ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:exactMatch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:hasReciprocalUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:UCUMcs ;
-            owl:onProperty qudt:ucumCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty qudt:hasFactorUnit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:SystemOfUnits ;
-            owl:onProperty qudt:derivedUnitOfSystem ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:siUnitsExpression ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty qudt:mathMLdefinition ],
+            owl:onProperty qudt:conversionOffset ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:applicableSystem ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:omUnit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:exactMatch ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:conversionMultiplier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:qkdvNumerator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:uneceCommonCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:unitFor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:scalingOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:hasReciprocalUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:prefix ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Prefix ;
+            owl:onProperty qudt:prefix ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Class ;
+            owl:onProperty qudt:hasFactorUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:UCUMcs ;
+            owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:unitFor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:udunitsCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:symbol ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qudt:isUnitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:derivedCoherentUnitOfSystem ],
         qudt:Concept,
         qudt:Verifiable ;
+    skos:definition """
+  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).
+  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures).
+  Any measurement of the length can be expressed as a number multiplied by the unit meter.
+  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
+  """ ;
     skos:exactMatch qudt:Unit ;
     skos:inScheme <http://qudt.org/3.1.6/schema/qudt> .
-
-

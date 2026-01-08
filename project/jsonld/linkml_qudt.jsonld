@@ -394,6 +394,7 @@
     {
       "name": "applicableCGSUnit",
       "definition_uri": "https://w3id.org/None/applicableCGSUnit",
+      "description": "applicable CGS unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableCGSUnit"
@@ -409,6 +410,7 @@
     {
       "name": "applicableISOUnit",
       "definition_uri": "https://w3id.org/None/applicableISOUnit",
+      "description": "applicable ISO unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableISOUnit"
@@ -424,6 +426,7 @@
     {
       "name": "applicableImperialUnit",
       "definition_uri": "https://w3id.org/None/applicableImperialUnit",
+      "description": "applicable Imperial unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableImperialUnit"
@@ -439,6 +442,7 @@
     {
       "name": "applicablePhysicalConstant",
       "definition_uri": "https://w3id.org/None/applicablePhysicalConstant",
+      "description": "applicable physical constant",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicablePhysicalConstant"
@@ -451,6 +455,7 @@
     {
       "name": "applicablePlanckUnit",
       "definition_uri": "https://w3id.org/None/applicablePlanckUnit",
+      "description": "applicable Planck unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicablePlanckUnit"
@@ -466,6 +471,7 @@
     {
       "name": "applicableSIUnit",
       "definition_uri": "https://w3id.org/None/applicableSIUnit",
+      "description": "applicable SI unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableSIUnit"
@@ -494,6 +500,7 @@
     {
       "name": "applicableUSCustomaryUnit",
       "definition_uri": "https://w3id.org/None/applicableUSCustomaryUnit",
+      "description": "applicable US Customary unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableUSCustomaryUnit"
@@ -555,6 +562,7 @@
     {
       "name": "basis",
       "definition_uri": "https://w3id.org/None/basis",
+      "description": "basis",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/basis"
@@ -567,6 +575,7 @@
     {
       "name": "belongsToSystemOfQuantities",
       "definition_uri": "https://w3id.org/None/belongsToSystemOfQuantities",
+      "description": "belongs to system of quantities",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/belongsToSystemOfQuantities"
@@ -585,6 +594,7 @@
     {
       "name": "bitOrder",
       "definition_uri": "https://w3id.org/None/bitOrder",
+      "description": "bit order",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bitOrder"
@@ -629,6 +639,7 @@
     {
       "name": "cardinality",
       "definition_uri": "https://w3id.org/None/cardinality",
+      "description": "cardinality",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/cardinality"
@@ -641,6 +652,7 @@
     {
       "name": "categorizedAs",
       "definition_uri": "https://w3id.org/None/categorizedAs",
+      "description": "categorized as",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/categorizedAs"
@@ -667,6 +679,7 @@
     {
       "name": "dataEncoding",
       "definition_uri": "https://w3id.org/None/dataEncoding",
+      "description": "data encoding",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dataEncoding"
@@ -681,6 +694,7 @@
     {
       "name": "datatype",
       "definition_uri": "https://w3id.org/None/datatype",
+      "description": "datatype",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/datatype"
@@ -722,6 +736,7 @@
     {
       "name": "denominatorDimensionVector",
       "definition_uri": "https://w3id.org/None/denominatorDimensionVector",
+      "description": "denominator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/denominatorDimensionVector"
@@ -787,6 +802,7 @@
     {
       "name": "dimensionInverse",
       "definition_uri": "https://w3id.org/None/dimensionInverse",
+      "description": "dimension inverse",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionInverse"
@@ -799,6 +815,7 @@
     {
       "name": "dimensionVectorForSI",
       "definition_uri": "https://w3id.org/None/dimensionVectorForSI",
+      "description": "dimension vector for SI",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionVectorForSI"
@@ -826,6 +843,7 @@
     {
       "name": "elementKind",
       "definition_uri": "https://w3id.org/None/elementKind",
+      "description": "element kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/elementKind"
@@ -838,6 +856,7 @@
     {
       "name": "encoding",
       "definition_uri": "https://w3id.org/None/encoding",
+      "description": "encoding",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/encoding"
@@ -850,6 +869,7 @@
     {
       "name": "enumeratedValue",
       "definition_uri": "https://w3id.org/None/enumeratedValue",
+      "description": "enumerated value",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/enumeratedValue"
@@ -864,6 +884,7 @@
     {
       "name": "enumeration",
       "definition_uri": "https://w3id.org/None/enumeration",
+      "description": "enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/enumeration"
@@ -878,6 +899,7 @@
     {
       "name": "exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
+      "description": "exact match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactMatch"
@@ -934,6 +956,7 @@
     {
       "name": "hasBaseQuantityKind",
       "definition_uri": "https://w3id.org/None/hasBaseQuantityKind",
+      "description": "has base quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasBaseQuantityKind"
@@ -997,6 +1020,7 @@
     {
       "name": "hasDenominatorPart",
       "definition_uri": "https://w3id.org/None/hasDenominatorPart",
+      "description": "has quantity kind dimension vector denominator part",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDenominatorPart"
@@ -1009,6 +1033,7 @@
     {
       "name": "hasDerivedCoherentUnit",
       "definition_uri": "https://w3id.org/None/hasDerivedCoherentUnit",
+      "description": "derived coherent unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDerivedCoherentUnit"
@@ -1027,6 +1052,7 @@
     {
       "name": "hasDerivedNonCoherentUnit",
       "definition_uri": "https://w3id.org/None/hasDerivedNonCoherentUnit",
+      "description": "has coherent derived unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDerivedNonCoherentUnit"
@@ -1053,6 +1079,7 @@
     {
       "name": "hasDimension",
       "definition_uri": "https://w3id.org/None/hasDimension",
+      "description": "has dimension",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimension"
@@ -1065,6 +1092,7 @@
     {
       "name": "hasDimensionExpression",
       "definition_uri": "https://w3id.org/None/hasDimensionExpression",
+      "description": "dimension expression",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimensionExpression"
@@ -1077,6 +1105,7 @@
     {
       "name": "hasDimensionVector",
       "definition_uri": "https://w3id.org/None/hasDimensionVector",
+      "description": "has dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimensionVector"
@@ -1104,6 +1133,7 @@
     {
       "name": "hasNumeratorPart",
       "definition_uri": "https://w3id.org/None/hasNumeratorPart",
+      "description": "has quantity kind dimension vector numerator part",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasNumeratorPart"
@@ -1116,6 +1146,7 @@
     {
       "name": "hasPrefixUnit",
       "definition_uri": "https://w3id.org/None/hasPrefixUnit",
+      "description": "prefix unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasPrefixUnit"
@@ -1131,6 +1162,7 @@
     {
       "name": "hasQuantity",
       "definition_uri": "https://w3id.org/None/hasQuantity",
+      "description": "has quantity",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantity"
@@ -1145,6 +1177,7 @@
     {
       "name": "hasQuantityKind",
       "definition_uri": "https://w3id.org/None/hasQuantityKind",
+      "description": "has quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantityKind"
@@ -1159,6 +1192,7 @@
     {
       "name": "hasReciprocalUnit",
       "definition_uri": "https://w3id.org/None/hasReciprocalUnit",
+      "description": "has reciprocal unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasReciprocalUnit"
@@ -1177,6 +1211,7 @@
     {
       "name": "hasReferenceQuantityKind",
       "definition_uri": "https://w3id.org/None/hasReferenceQuantityKind",
+      "description": "has reference quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasReferenceQuantityKind"
@@ -1189,6 +1224,7 @@
     {
       "name": "hasRule",
       "definition_uri": "https://w3id.org/None/hasRule",
+      "description": "has rule",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasRule"
@@ -1216,6 +1252,7 @@
     {
       "name": "hasUnitSystem",
       "definition_uri": "https://w3id.org/None/hasUnitSystem",
+      "description": "has unit system",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnitSystem"
@@ -1228,6 +1265,7 @@
     {
       "name": "hasVocabulary",
       "definition_uri": "https://w3id.org/None/hasVocabulary",
+      "description": "has vocabulary",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasVocabulary"
@@ -1242,6 +1280,7 @@
     {
       "name": "isDimensionInSystem",
       "definition_uri": "https://w3id.org/None/isDimensionInSystem",
+      "description": "is dimension in system",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/isDimensionInSystem"
@@ -1273,6 +1312,7 @@
     {
       "name": "numeratorDimensionVector",
       "definition_uri": "https://w3id.org/None/numeratorDimensionVector",
+      "description": "numerator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/numeratorDimensionVector"
@@ -1287,6 +1327,7 @@
     {
       "name": "omUnit",
       "definition_uri": "https://w3id.org/None/omUnit",
+      "description": "om unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/omUnit"
@@ -1315,6 +1356,7 @@
     {
       "name": "orderedType",
       "definition_uri": "https://w3id.org/None/orderedType",
+      "description": "ordered type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/orderedType"
@@ -1327,6 +1369,7 @@
     {
       "name": "permissibleMaths",
       "definition_uri": "https://w3id.org/None/permissibleMaths",
+      "description": "permissible maths",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleMaths"
@@ -1339,6 +1382,7 @@
     {
       "name": "permissibleTransformation",
       "definition_uri": "https://w3id.org/None/permissibleTransformation",
+      "description": "permissible transformation",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleTransformation"
@@ -1351,6 +1395,7 @@
     {
       "name": "prefix",
       "definition_uri": "https://w3id.org/None/prefix",
+      "description": "Associates a unit with the appropriate prefix, if any.",
       "comments": [
         "Associates a unit with the appropriate prefix, if any."
       ],
@@ -1392,6 +1437,7 @@
     {
       "name": "qkdvDenominator",
       "definition_uri": "https://w3id.org/None/qkdvDenominator",
+      "description": "denominator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvDenominator"
@@ -1406,6 +1452,7 @@
     {
       "name": "qkdvNumerator",
       "definition_uri": "https://w3id.org/None/qkdvNumerator",
+      "description": "numerator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvNumerator"
@@ -1433,6 +1480,7 @@
     {
       "name": "quantityValue",
       "definition_uri": "https://w3id.org/None/quantityValue",
+      "description": "quantity value",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/quantityValue"
@@ -1447,6 +1495,7 @@
     {
       "name": "reference",
       "definition_uri": "https://w3id.org/None/reference",
+      "description": "reference",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/reference"
@@ -1459,6 +1508,7 @@
     {
       "name": "referenceUnit",
       "definition_uri": "https://w3id.org/None/referenceUnit",
+      "description": "reference unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/referenceUnit"
@@ -1471,6 +1521,7 @@
     {
       "name": "relevantQuantityKind",
       "definition_uri": "https://w3id.org/None/relevantQuantityKind",
+      "description": "relevant quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/relevantQuantityKind"
@@ -1485,6 +1536,7 @@
     {
       "name": "relevantUnit",
       "definition_uri": "https://w3id.org/None/relevantUnit",
+      "description": "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline.",
       "comments": [
         "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline."
       ],
@@ -1502,6 +1554,7 @@
     {
       "name": "ruleType",
       "definition_uri": "https://w3id.org/None/ruleType",
+      "description": "rule type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ruleType"
@@ -1514,6 +1567,7 @@
     {
       "name": "scaleType",
       "definition_uri": "https://w3id.org/None/scaleType",
+      "description": "scale type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/scaleType"
@@ -1539,6 +1593,7 @@
     {
       "name": "siExactMatch",
       "definition_uri": "https://w3id.org/None/siExactMatch",
+      "description": "Individual from SI Reference Point",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/siExactMatch"
@@ -1551,6 +1606,7 @@
     {
       "name": "systemDefinition",
       "definition_uri": "https://w3id.org/None/systemDefinition",
+      "description": "system definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/systemDefinition"
@@ -1563,6 +1619,7 @@
     {
       "name": "systemDerivedQuantityKind",
       "definition_uri": "https://w3id.org/None/systemDerivedQuantityKind",
+      "description": "system derived quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/systemDerivedQuantityKind"
@@ -1578,6 +1635,7 @@
     {
       "name": "systemDimension",
       "definition_uri": "https://w3id.org/None/systemDimension",
+      "description": "system dimension",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/systemDimension"
@@ -1590,6 +1648,7 @@
     {
       "name": "unitFor",
       "definition_uri": "https://w3id.org/None/unitFor",
+      "description": "unit for",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/unitFor"
@@ -1606,6 +1665,7 @@
     {
       "name": "valueQuantity",
       "definition_uri": "https://w3id.org/None/valueQuantity",
+      "description": "value for quantity",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/valueQuantity"
@@ -1681,6 +1741,7 @@
     {
       "name": "acronym",
       "definition_uri": "https://w3id.org/None/acronym",
+      "description": "acronym",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/acronym"
@@ -1693,6 +1754,7 @@
     {
       "name": "allowedPattern",
       "definition_uri": "https://w3id.org/None/allowedPattern",
+      "description": "allowed pattern",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/allowedPattern"
@@ -1731,6 +1793,7 @@
     {
       "name": "bounded",
       "definition_uri": "https://w3id.org/None/bounded",
+      "description": "bounded",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bounded"
@@ -1743,6 +1806,7 @@
     {
       "name": "bytes",
       "definition_uri": "https://w3id.org/None/bytes",
+      "description": "bytes",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bytes"
@@ -1755,6 +1819,7 @@
     {
       "name": "conversionMultiplier",
       "definition_uri": "https://w3id.org/None/conversionMultiplier",
+      "description": "conversion multiplier",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionMultiplier"
@@ -1767,6 +1832,7 @@
     {
       "name": "conversionMultiplierSN",
       "definition_uri": "https://w3id.org/None/conversionMultiplierSN",
+      "description": "conversion multiplier scientific",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionMultiplierSN"
@@ -1779,6 +1845,7 @@
     {
       "name": "conversionOffset",
       "definition_uri": "https://w3id.org/None/conversionOffset",
+      "description": "conversion offset",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionOffset"
@@ -1791,6 +1858,7 @@
     {
       "name": "conversionOffsetSN",
       "definition_uri": "https://w3id.org/None/conversionOffsetSN",
+      "description": "conversion offset scientific",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionOffsetSN"
@@ -1842,6 +1910,7 @@
     {
       "name": "dataStructure",
       "definition_uri": "https://w3id.org/None/dataStructure",
+      "description": "data structure",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dataStructure"
@@ -1854,6 +1923,7 @@
     {
       "name": "deprecated",
       "definition_uri": "https://w3id.org/None/deprecated",
+      "description": "deprecated",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/deprecated"
@@ -1866,6 +1936,7 @@
     {
       "name": "dimensionExponent",
       "definition_uri": "https://w3id.org/None/dimensionExponent",
+      "description": "dimension exponent",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponent"
@@ -1878,6 +1949,7 @@
     {
       "name": "dimensionExponentForAmountOfSubstance",
       "definition_uri": "https://w3id.org/None/dimensionExponentForAmountOfSubstance",
+      "description": "dimension exponent for amount of substance",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForAmountOfSubstance"
@@ -1890,6 +1962,7 @@
     {
       "name": "dimensionExponentForElectricCurrent",
       "definition_uri": "https://w3id.org/None/dimensionExponentForElectricCurrent",
+      "description": "dimension exponent for electric current",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForElectricCurrent"
@@ -1902,6 +1975,7 @@
     {
       "name": "dimensionExponentForLength",
       "definition_uri": "https://w3id.org/None/dimensionExponentForLength",
+      "description": "dimension exponent for length",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForLength"
@@ -1914,6 +1988,7 @@
     {
       "name": "dimensionExponentForLuminousIntensity",
       "definition_uri": "https://w3id.org/None/dimensionExponentForLuminousIntensity",
+      "description": "dimension exponent for luminous intensity",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForLuminousIntensity"
@@ -1926,6 +2001,7 @@
     {
       "name": "dimensionExponentForMass",
       "definition_uri": "https://w3id.org/None/dimensionExponentForMass",
+      "description": "dimension exponent for mass",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForMass"
@@ -1938,6 +2014,7 @@
     {
       "name": "dimensionExponentForThermodynamicTemperature",
       "definition_uri": "https://w3id.org/None/dimensionExponentForThermodynamicTemperature",
+      "description": "dimension exponent for thermodynamic temperature",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForThermodynamicTemperature"
@@ -1950,6 +2027,7 @@
     {
       "name": "dimensionExponentForTime",
       "definition_uri": "https://w3id.org/None/dimensionExponentForTime",
+      "description": "dimension exponent for time",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForTime"
@@ -1962,6 +2040,7 @@
     {
       "name": "dimensionlessExponent",
       "definition_uri": "https://w3id.org/None/dimensionlessExponent",
+      "description": "dimensionless exponent",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionlessExponent"
@@ -1974,6 +2053,7 @@
     {
       "name": "exactConstant",
       "definition_uri": "https://w3id.org/None/exactConstant",
+      "description": "exact constant",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactConstant"
@@ -1999,6 +2079,7 @@
     {
       "name": "fieldCode",
       "definition_uri": "https://w3id.org/None/fieldCode",
+      "description": "field code",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/fieldCode"
@@ -2011,6 +2092,7 @@
     {
       "name": "figureCaption",
       "definition_uri": "https://w3id.org/None/figureCaption",
+      "description": "figure caption",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/figureCaption"
@@ -2023,6 +2105,7 @@
     {
       "name": "figureLabel",
       "definition_uri": "https://w3id.org/None/figureLabel",
+      "description": "figure label",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/figureLabel"
@@ -2035,6 +2118,7 @@
     {
       "name": "guidance",
       "definition_uri": "https://w3id.org/None/guidance",
+      "description": "guidance",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/guidance"
@@ -2051,6 +2135,7 @@
     {
       "name": "hasCitation",
       "definition_uri": "https://w3id.org/None/hasCitation",
+      "description": "citation",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasCitation"
@@ -2063,6 +2148,7 @@
     {
       "name": "height",
       "definition_uri": "https://w3id.org/None/height",
+      "description": "height",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/height"
@@ -2092,6 +2178,7 @@
     {
       "name": "iec61360Code",
       "definition_uri": "https://w3id.org/None/iec61360Code",
+      "description": "iec-61360 code",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/iec61360Code"
@@ -2104,6 +2191,7 @@
     {
       "name": "image",
       "definition_uri": "https://w3id.org/None/image",
+      "description": "image",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/image"
@@ -2116,6 +2204,7 @@
     {
       "name": "imageLocation",
       "definition_uri": "https://w3id.org/None/imageLocation",
+      "description": "image location",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/imageLocation"
@@ -2128,6 +2217,7 @@
     {
       "name": "isDeltaQuantity",
       "definition_uri": "https://w3id.org/None/isDeltaQuantity",
+      "description": "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets.",
       "comments": [
         "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets."
       ],
@@ -2143,6 +2233,7 @@
     {
       "name": "isMetricUnit",
       "definition_uri": "https://w3id.org/None/isMetricUnit",
+      "description": "is metric unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/isMetricUnit"
@@ -2169,6 +2260,7 @@
     {
       "name": "javaName",
       "definition_uri": "https://w3id.org/None/javaName",
+      "description": "java name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/javaName"
@@ -2181,6 +2273,7 @@
     {
       "name": "jsName",
       "definition_uri": "https://w3id.org/None/jsName",
+      "description": "Javascript name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/jsName"
@@ -2193,6 +2286,7 @@
     {
       "name": "landscape",
       "definition_uri": "https://w3id.org/None/landscape",
+      "description": "landscape",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/landscape"
@@ -2205,6 +2299,7 @@
     {
       "name": "latexDefinition",
       "definition_uri": "https://w3id.org/None/latexDefinition",
+      "description": "latex definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexDefinition"
@@ -2242,6 +2337,7 @@
     {
       "name": "lowerBound",
       "definition_uri": "https://w3id.org/None/lowerBound",
+      "description": "lower bound",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/lowerBound"
@@ -2254,6 +2350,7 @@
     {
       "name": "mathDefinition",
       "definition_uri": "https://w3id.org/None/mathDefinition",
+      "description": "math definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mathDefinition"
@@ -2266,6 +2363,7 @@
     {
       "name": "mathMLdefinition",
       "definition_uri": "https://w3id.org/None/mathMLdefinition",
+      "description": "mathML definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mathMLdefinition"
@@ -2279,6 +2377,7 @@
     {
       "name": "matlabName",
       "definition_uri": "https://w3id.org/None/matlabName",
+      "description": "matlab name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/matlabName"
@@ -2319,6 +2418,7 @@
     {
       "name": "microsoftSQLServerName",
       "definition_uri": "https://w3id.org/None/microsoftSQLServerName",
+      "description": "Microsoft SQL Server name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/microsoftSQLServerName"
@@ -2359,6 +2459,7 @@
     {
       "name": "mySQLName",
       "definition_uri": "https://w3id.org/None/mySQLName",
+      "description": "MySQL name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mySQLName"
@@ -2397,6 +2498,7 @@
     {
       "name": "numericValue",
       "definition_uri": "https://w3id.org/None/numericValue",
+      "description": "numeric value",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/numericValue"
@@ -2411,6 +2513,7 @@
     {
       "name": "odbcName",
       "definition_uri": "https://w3id.org/None/odbcName",
+      "description": "ODBC name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/odbcName"
@@ -2436,6 +2539,7 @@
     {
       "name": "onlineReference",
       "definition_uri": "https://w3id.org/None/onlineReference",
+      "description": "online reference",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/onlineReference"
@@ -2448,6 +2552,7 @@
     {
       "name": "order",
       "definition_uri": "https://w3id.org/None/order",
+      "description": "order",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/order"
@@ -2460,6 +2565,7 @@
     {
       "name": "outOfScope",
       "definition_uri": "https://w3id.org/None/outOfScope",
+      "description": "out of scope",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/outOfScope"
@@ -2498,6 +2604,7 @@
     {
       "name": "prefixMultiplier",
       "definition_uri": "https://w3id.org/None/prefixMultiplier",
+      "description": "prefix multiplier",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/prefixMultiplier"
@@ -2510,6 +2617,7 @@
     {
       "name": "prefixMultiplierSN",
       "definition_uri": "https://w3id.org/None/prefixMultiplierSN",
+      "description": "prefix multiplier scientific",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/prefixMultiplierSN"
@@ -2522,6 +2630,7 @@
     {
       "name": "rationale",
       "definition_uri": "https://w3id.org/None/rationale",
+      "description": "rationale",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/rationale"
@@ -2534,6 +2643,7 @@
     {
       "name": "rdfsDatatype",
       "definition_uri": "https://w3id.org/None/rdfsDatatype",
+      "description": "rdfs datatype",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/rdfsDatatype"
@@ -2559,6 +2669,7 @@
     {
       "name": "siUnitsExpression",
       "definition_uri": "https://w3id.org/None/siUnitsExpression",
+      "description": "si units expression",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/siUnitsExpression"
@@ -2650,6 +2761,7 @@
     {
       "name": "upperBound",
       "definition_uri": "https://w3id.org/None/upperBound",
+      "description": "upper bound",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/upperBound"
@@ -2662,6 +2774,7 @@
     {
       "name": "url",
       "definition_uri": "https://w3id.org/None/url",
+      "description": "url",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/url"
@@ -2700,6 +2813,7 @@
     {
       "name": "vectorMagnitude",
       "definition_uri": "https://w3id.org/None/vectorMagnitude",
+      "description": "vector magnitude",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/vectorMagnitude"
@@ -2712,6 +2826,7 @@
     {
       "name": "width",
       "definition_uri": "https://w3id.org/None/width",
+      "description": "width",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/width"
@@ -2808,6 +2923,7 @@
     {
       "name": "dbpediaMatch",
       "definition_uri": "https://w3id.org/None/dbpediaMatch",
+      "description": "dbpedia match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dbpediaMatch"
@@ -2820,6 +2936,7 @@
     {
       "name": "example",
       "definition_uri": "https://w3id.org/None/example",
+      "description": "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges.",
       "comments": [
         "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges.^^rdf:HTML"
       ],
@@ -2835,6 +2952,7 @@
     {
       "name": "expression",
       "definition_uri": "https://w3id.org/None/expression",
+      "description": "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/expression"
@@ -2847,6 +2965,7 @@
     {
       "name": "informativeReference",
       "definition_uri": "https://w3id.org/None/informativeReference",
+      "description": "Provides a way to reference a source that provided useful but non-normative information.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/informativeReference"
@@ -2859,6 +2978,7 @@
     {
       "name": "wikidataMatch",
       "definition_uri": "https://w3id.org/None/wikidataMatch",
+      "description": "wikidata match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/wikidataMatch"
@@ -3066,6 +3186,7 @@
     {
       "name": "BaseDimensionMagnitude_hasBaseQuantityKind",
       "definition_uri": "https://w3id.org/None/hasBaseQuantityKind",
+      "description": "has base quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasBaseQuantityKind"
@@ -3090,6 +3211,7 @@
     {
       "name": "BaseDimensionMagnitude_vectorMagnitude",
       "definition_uri": "https://w3id.org/None/vectorMagnitude",
+      "description": "vector magnitude",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/vectorMagnitude"
@@ -3155,6 +3277,7 @@
     {
       "name": "Citation_url",
       "definition_uri": "https://w3id.org/None/url",
+      "description": "url",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/url"
@@ -3176,6 +3299,7 @@
     {
       "name": "Comment_rationale",
       "definition_uri": "https://w3id.org/None/rationale",
+      "description": "rationale",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/rationale"
@@ -3218,6 +3342,7 @@
     {
       "name": "Concept_hasRule",
       "definition_uri": "https://w3id.org/None/hasRule",
+      "description": "has rule",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasRule"
@@ -3305,6 +3430,7 @@
     {
       "name": "Concept_deprecated",
       "definition_uri": "https://w3id.org/None/deprecated",
+      "description": "deprecated",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/deprecated"
@@ -3370,6 +3496,7 @@
     {
       "name": "ConstantValue_exactConstant",
       "definition_uri": "https://w3id.org/None/exactConstant",
+      "description": "exact constant",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactConstant"
@@ -3453,6 +3580,7 @@
     {
       "name": "DataEncoding_bitOrder",
       "definition_uri": "https://w3id.org/None/bitOrder",
+      "description": "bit order",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bitOrder"
@@ -3476,6 +3604,7 @@
     {
       "name": "DataEncoding_encoding",
       "definition_uri": "https://w3id.org/None/encoding",
+      "description": "encoding",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/encoding"
@@ -3545,6 +3674,7 @@
     {
       "name": "Datatype_basis",
       "definition_uri": "https://w3id.org/None/basis",
+      "description": "basis",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/basis"
@@ -3568,6 +3698,7 @@
     {
       "name": "Datatype_cardinality",
       "definition_uri": "https://w3id.org/None/cardinality",
+      "description": "cardinality",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/cardinality"
@@ -3591,6 +3722,7 @@
     {
       "name": "Datatype_orderedType",
       "definition_uri": "https://w3id.org/None/orderedType",
+      "description": "ordered type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/orderedType"
@@ -3743,6 +3875,7 @@
     {
       "name": "Datatype_bounded",
       "definition_uri": "https://w3id.org/None/bounded",
+      "description": "bounded",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bounded"
@@ -3786,6 +3919,7 @@
     {
       "name": "Datatype_javaName",
       "definition_uri": "https://w3id.org/None/javaName",
+      "description": "java name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/javaName"
@@ -3807,6 +3941,7 @@
     {
       "name": "Datatype_jsName",
       "definition_uri": "https://w3id.org/None/jsName",
+      "description": "Javascript name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/jsName"
@@ -3828,6 +3963,7 @@
     {
       "name": "Datatype_matlabName",
       "definition_uri": "https://w3id.org/None/matlabName",
+      "description": "matlab name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/matlabName"
@@ -3849,6 +3985,7 @@
     {
       "name": "Datatype_microsoftSQLServerName",
       "definition_uri": "https://w3id.org/None/microsoftSQLServerName",
+      "description": "Microsoft SQL Server name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/microsoftSQLServerName"
@@ -3870,6 +4007,7 @@
     {
       "name": "Datatype_mySQLName",
       "definition_uri": "https://w3id.org/None/mySQLName",
+      "description": "MySQL name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mySQLName"
@@ -3891,6 +4029,7 @@
     {
       "name": "Datatype_odbcName",
       "definition_uri": "https://w3id.org/None/odbcName",
+      "description": "ODBC name",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/odbcName"
@@ -3934,6 +4073,7 @@
     {
       "name": "DateTimeStringEncodingType_allowedPattern",
       "definition_uri": "https://w3id.org/None/allowedPattern",
+      "description": "allowed pattern",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/allowedPattern"
@@ -3977,6 +4117,7 @@
     {
       "name": "Encoding_bytes",
       "definition_uri": "https://w3id.org/None/bytes",
+      "description": "bytes",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bytes"
@@ -3998,6 +4139,7 @@
     {
       "name": "EnumeratedQuantity_enumeratedValue",
       "definition_uri": "https://w3id.org/None/enumeratedValue",
+      "description": "enumerated value",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/enumeratedValue"
@@ -4021,6 +4163,7 @@
     {
       "name": "EnumeratedQuantity_enumeration",
       "definition_uri": "https://w3id.org/None/enumeration",
+      "description": "enumeration",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/enumeration"
@@ -4202,6 +4345,7 @@
     {
       "name": "Figure_imageLocation",
       "definition_uri": "https://w3id.org/None/imageLocation",
+      "description": "image location",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/imageLocation"
@@ -4224,6 +4368,7 @@
     {
       "name": "Figure_figureCaption",
       "definition_uri": "https://w3id.org/None/figureCaption",
+      "description": "figure caption",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/figureCaption"
@@ -4245,6 +4390,7 @@
     {
       "name": "Figure_figureLabel",
       "definition_uri": "https://w3id.org/None/figureLabel",
+      "description": "figure label",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/figureLabel"
@@ -4266,6 +4412,7 @@
     {
       "name": "Figure_height",
       "definition_uri": "https://w3id.org/None/height",
+      "description": "height",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/height"
@@ -4287,6 +4434,7 @@
     {
       "name": "Figure_image",
       "definition_uri": "https://w3id.org/None/image",
+      "description": "image",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/image"
@@ -4308,6 +4456,7 @@
     {
       "name": "Figure_landscape",
       "definition_uri": "https://w3id.org/None/landscape",
+      "description": "landscape",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/landscape"
@@ -4329,6 +4478,7 @@
     {
       "name": "Figure_width",
       "definition_uri": "https://w3id.org/None/width",
+      "description": "width",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/width"
@@ -4371,6 +4521,7 @@
     {
       "name": "OrdinalScale_order",
       "definition_uri": "https://w3id.org/None/order",
+      "description": "order",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/order"
@@ -4393,6 +4544,7 @@
     {
       "name": "Organization_url",
       "definition_uri": "https://w3id.org/None/url",
+      "description": "url",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/url"
@@ -4462,6 +4614,7 @@
     {
       "name": "PhysicalConstant_exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
+      "description": "exact match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactMatch"
@@ -4485,6 +4638,7 @@
     {
       "name": "PhysicalConstant_hasDimensionVector",
       "definition_uri": "https://w3id.org/None/hasDimensionVector",
+      "description": "has dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimensionVector"
@@ -4530,6 +4684,7 @@
     {
       "name": "PhysicalConstant_exactConstant",
       "definition_uri": "https://w3id.org/None/exactConstant",
+      "description": "exact constant",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactConstant"
@@ -4661,6 +4816,7 @@
     {
       "name": "PhysicalConstant_latexDefinition",
       "definition_uri": "https://w3id.org/None/latexDefinition",
+      "description": "latex definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexDefinition"
@@ -4682,6 +4838,7 @@
     {
       "name": "PhysicalConstant_mathMLdefinition",
       "definition_uri": "https://w3id.org/None/mathMLdefinition",
+      "description": "mathML definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mathMLdefinition"
@@ -4703,6 +4860,7 @@
     {
       "name": "Prefix_exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
+      "description": "exact match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactMatch"
@@ -4816,6 +4974,7 @@
     {
       "name": "Prefix_prefixMultiplier",
       "definition_uri": "https://w3id.org/None/prefixMultiplier",
+      "description": "prefix multiplier",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/prefixMultiplier"
@@ -4837,6 +4996,7 @@
     {
       "name": "Quantifiable_dataEncoding",
       "definition_uri": "https://w3id.org/None/dataEncoding",
+      "description": "data encoding",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dataEncoding"
@@ -4860,6 +5020,7 @@
     {
       "name": "Quantifiable_datatype",
       "definition_uri": "https://w3id.org/None/datatype",
+      "description": "datatype",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/datatype"
@@ -5017,6 +5178,7 @@
     {
       "name": "Quantity_hasQuantityKind",
       "definition_uri": "https://w3id.org/None/hasQuantityKind",
+      "description": "has quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantityKind"
@@ -5040,6 +5202,7 @@
     {
       "name": "Quantity_quantityValue",
       "definition_uri": "https://w3id.org/None/quantityValue",
+      "description": "quantity value",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/quantityValue"
@@ -5063,6 +5226,7 @@
     {
       "name": "Quantity_isDeltaQuantity",
       "definition_uri": "https://w3id.org/None/isDeltaQuantity",
+      "description": "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets.",
       "comments": [
         "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets."
       ],
@@ -5087,6 +5251,7 @@
     {
       "name": "QuantityKind_dimensionVectorForSI",
       "definition_uri": "https://w3id.org/None/dimensionVectorForSI",
+      "description": "dimension vector for SI",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionVectorForSI"
@@ -5110,6 +5275,7 @@
     {
       "name": "QuantityKind_exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
+      "description": "exact match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactMatch"
@@ -5133,6 +5299,7 @@
     {
       "name": "QuantityKind_hasDimensionVector",
       "definition_uri": "https://w3id.org/None/hasDimensionVector",
+      "description": "has dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimensionVector"
@@ -5156,6 +5323,7 @@
     {
       "name": "QuantityKind_iec61360Code",
       "definition_uri": "https://w3id.org/None/iec61360Code",
+      "description": "iec-61360 code",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/iec61360Code"
@@ -5177,6 +5345,7 @@
     {
       "name": "QuantityKind_applicableCGSUnit",
       "definition_uri": "https://w3id.org/None/applicableCGSUnit",
+      "description": "applicable CGS unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableCGSUnit"
@@ -5200,6 +5369,7 @@
     {
       "name": "QuantityKind_applicableISOUnit",
       "definition_uri": "https://w3id.org/None/applicableISOUnit",
+      "description": "applicable ISO unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableISOUnit"
@@ -5223,6 +5393,7 @@
     {
       "name": "QuantityKind_applicableImperialUnit",
       "definition_uri": "https://w3id.org/None/applicableImperialUnit",
+      "description": "applicable Imperial unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableImperialUnit"
@@ -5246,6 +5417,7 @@
     {
       "name": "QuantityKind_applicableSIUnit",
       "definition_uri": "https://w3id.org/None/applicableSIUnit",
+      "description": "applicable SI unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableSIUnit"
@@ -5269,6 +5441,7 @@
     {
       "name": "QuantityKind_applicableUSCustomaryUnit",
       "definition_uri": "https://w3id.org/None/applicableUSCustomaryUnit",
+      "description": "applicable US Customary unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicableUSCustomaryUnit"
@@ -5316,6 +5489,7 @@
     {
       "name": "QuantityKind_qkdvDenominator",
       "definition_uri": "https://w3id.org/None/qkdvDenominator",
+      "description": "denominator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvDenominator"
@@ -5339,6 +5513,7 @@
     {
       "name": "QuantityKind_qkdvNumerator",
       "definition_uri": "https://w3id.org/None/qkdvNumerator",
+      "description": "numerator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvNumerator"
@@ -5362,6 +5537,7 @@
     {
       "name": "QuantityKind_latexDefinition",
       "definition_uri": "https://w3id.org/None/latexDefinition",
+      "description": "latex definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexDefinition"
@@ -5383,6 +5559,7 @@
     {
       "name": "QuantityKind_mathMLdefinition",
       "definition_uri": "https://w3id.org/None/mathMLdefinition",
+      "description": "mathML definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mathMLdefinition"
@@ -5404,6 +5581,7 @@
     {
       "name": "QuantityKindDimensionVector_hasReferenceQuantityKind",
       "definition_uri": "https://w3id.org/None/hasReferenceQuantityKind",
+      "description": "has reference quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasReferenceQuantityKind"
@@ -5449,6 +5627,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForAmountOfSubstance",
       "definition_uri": "https://w3id.org/None/dimensionExponentForAmountOfSubstance",
+      "description": "dimension exponent for amount of substance",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForAmountOfSubstance"
@@ -5471,6 +5650,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForElectricCurrent",
       "definition_uri": "https://w3id.org/None/dimensionExponentForElectricCurrent",
+      "description": "dimension exponent for electric current",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForElectricCurrent"
@@ -5493,6 +5673,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForLength",
       "definition_uri": "https://w3id.org/None/dimensionExponentForLength",
+      "description": "dimension exponent for length",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForLength"
@@ -5515,6 +5696,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForLuminousIntensity",
       "definition_uri": "https://w3id.org/None/dimensionExponentForLuminousIntensity",
+      "description": "dimension exponent for luminous intensity",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForLuminousIntensity"
@@ -5537,6 +5719,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForMass",
       "definition_uri": "https://w3id.org/None/dimensionExponentForMass",
+      "description": "dimension exponent for mass",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForMass"
@@ -5559,6 +5742,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForThermodynamicTemperature",
       "definition_uri": "https://w3id.org/None/dimensionExponentForThermodynamicTemperature",
+      "description": "dimension exponent for thermodynamic temperature",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForThermodynamicTemperature"
@@ -5581,6 +5765,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionExponentForTime",
       "definition_uri": "https://w3id.org/None/dimensionExponentForTime",
+      "description": "dimension exponent for time",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionExponentForTime"
@@ -5603,6 +5788,7 @@
     {
       "name": "QuantityKindDimensionVector_dimensionlessExponent",
       "definition_uri": "https://w3id.org/None/dimensionlessExponent",
+      "description": "dimensionless exponent",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dimensionlessExponent"
@@ -5625,6 +5811,7 @@
     {
       "name": "QuantityKindDimensionVector_latexDefinition",
       "definition_uri": "https://w3id.org/None/latexDefinition",
+      "description": "latex definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexDefinition"
@@ -5694,6 +5881,7 @@
     {
       "name": "Rule_ruleType",
       "definition_uri": "https://w3id.org/None/ruleType",
+      "description": "rule type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/ruleType"
@@ -5717,6 +5905,7 @@
     {
       "name": "Rule_rationale",
       "definition_uri": "https://w3id.org/None/rationale",
+      "description": "rationale",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/rationale"
@@ -5738,6 +5927,7 @@
     {
       "name": "ScalarDatatype_rdfsDatatype",
       "definition_uri": "https://w3id.org/None/rdfsDatatype",
+      "description": "rdfs datatype",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/rdfsDatatype"
@@ -5782,6 +5972,7 @@
     {
       "name": "ScalarDatatype_bytes",
       "definition_uri": "https://w3id.org/None/bytes",
+      "description": "bytes",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/bytes"
@@ -5912,6 +6103,7 @@
     {
       "name": "Scale_permissibleMaths",
       "definition_uri": "https://w3id.org/None/permissibleMaths",
+      "description": "permissible maths",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleMaths"
@@ -5935,6 +6127,7 @@
     {
       "name": "Scale_permissibleTransformation",
       "definition_uri": "https://w3id.org/None/permissibleTransformation",
+      "description": "permissible transformation",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleTransformation"
@@ -5958,6 +6151,7 @@
     {
       "name": "Scale_scaleType",
       "definition_uri": "https://w3id.org/None/scaleType",
+      "description": "scale type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/scaleType"
@@ -5981,6 +6175,7 @@
     {
       "name": "Scale_dataStructure",
       "definition_uri": "https://w3id.org/None/dataStructure",
+      "description": "data structure",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dataStructure"
@@ -6002,6 +6197,7 @@
     {
       "name": "ScaleType_permissibleMaths",
       "definition_uri": "https://w3id.org/None/permissibleMaths",
+      "description": "permissible maths",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleMaths"
@@ -6025,6 +6221,7 @@
     {
       "name": "ScaleType_permissibleTransformation",
       "definition_uri": "https://w3id.org/None/permissibleTransformation",
+      "description": "permissible transformation",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/permissibleTransformation"
@@ -6048,6 +6245,7 @@
     {
       "name": "ScaleType_dataStructure",
       "definition_uri": "https://w3id.org/None/dataStructure",
+      "description": "data structure",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dataStructure"
@@ -6093,6 +6291,7 @@
     {
       "name": "SystemOfQuantityKinds_hasBaseQuantityKind",
       "definition_uri": "https://w3id.org/None/hasBaseQuantityKind",
+      "description": "has base quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasBaseQuantityKind"
@@ -6116,6 +6315,7 @@
     {
       "name": "SystemOfQuantityKinds_hasQuantityKind",
       "definition_uri": "https://w3id.org/None/hasQuantityKind",
+      "description": "has quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantityKind"
@@ -6139,6 +6339,7 @@
     {
       "name": "SystemOfQuantityKinds_hasUnitSystem",
       "definition_uri": "https://w3id.org/None/hasUnitSystem",
+      "description": "has unit system",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasUnitSystem"
@@ -6162,6 +6363,7 @@
     {
       "name": "SystemOfQuantityKinds_systemDerivedQuantityKind",
       "definition_uri": "https://w3id.org/None/systemDerivedQuantityKind",
+      "description": "system derived quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/systemDerivedQuantityKind"
@@ -6185,6 +6387,7 @@
     {
       "name": "SystemOfUnits_applicablePhysicalConstant",
       "definition_uri": "https://w3id.org/None/applicablePhysicalConstant",
+      "description": "applicable physical constant",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/applicablePhysicalConstant"
@@ -6304,6 +6507,7 @@
     {
       "name": "SystemOfUnits_hasDerivedCoherentUnit",
       "definition_uri": "https://w3id.org/None/hasDerivedCoherentUnit",
+      "description": "derived coherent unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDerivedCoherentUnit"
@@ -6378,6 +6582,7 @@
     {
       "name": "SystemOfUnits_prefix",
       "definition_uri": "https://w3id.org/None/prefix",
+      "description": "Associates a unit with the appropriate prefix, if any.",
       "comments": [
         "Associates a unit with the appropriate prefix, if any."
       ],
@@ -6503,6 +6708,7 @@
     {
       "name": "Unit_exactMatch",
       "definition_uri": "https://w3id.org/None/exactMatch",
+      "description": "exact match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/exactMatch"
@@ -6526,6 +6732,7 @@
     {
       "name": "Unit_hasDimensionVector",
       "definition_uri": "https://w3id.org/None/hasDimensionVector",
+      "description": "has dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasDimensionVector"
@@ -6573,6 +6780,7 @@
     {
       "name": "Unit_hasQuantityKind",
       "definition_uri": "https://w3id.org/None/hasQuantityKind",
+      "description": "has quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantityKind"
@@ -6596,6 +6804,7 @@
     {
       "name": "Unit_iec61360Code",
       "definition_uri": "https://w3id.org/None/iec61360Code",
+      "description": "iec-61360 code",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/iec61360Code"
@@ -6617,6 +6826,7 @@
     {
       "name": "Unit_prefix",
       "definition_uri": "https://w3id.org/None/prefix",
+      "description": "Associates a unit with the appropriate prefix, if any.",
       "comments": [
         "Associates a unit with the appropriate prefix, if any."
       ],
@@ -6643,6 +6853,7 @@
     {
       "name": "Unit_qkdvDenominator",
       "definition_uri": "https://w3id.org/None/qkdvDenominator",
+      "description": "denominator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvDenominator"
@@ -6666,6 +6877,7 @@
     {
       "name": "Unit_qkdvNumerator",
       "definition_uri": "https://w3id.org/None/qkdvNumerator",
+      "description": "numerator dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/qkdvNumerator"
@@ -6803,6 +7015,7 @@
     {
       "name": "Unit_latexDefinition",
       "definition_uri": "https://w3id.org/None/latexDefinition",
+      "description": "latex definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/latexDefinition"
@@ -6846,6 +7059,7 @@
     {
       "name": "Unit_siUnitsExpression",
       "definition_uri": "https://w3id.org/None/siUnitsExpression",
+      "description": "si units expression",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/siUnitsExpression"
@@ -6889,6 +7103,7 @@
     {
       "name": "Unit_conversionMultiplier",
       "definition_uri": "https://w3id.org/None/conversionMultiplier",
+      "description": "conversion multiplier",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionMultiplier"
@@ -6910,6 +7125,7 @@
     {
       "name": "Unit_conversionMultiplierSN",
       "definition_uri": "https://w3id.org/None/conversionMultiplierSN",
+      "description": "conversion multiplier scientific",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionMultiplierSN"
@@ -6931,6 +7147,7 @@
     {
       "name": "Unit_conversionOffset",
       "definition_uri": "https://w3id.org/None/conversionOffset",
+      "description": "conversion offset",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionOffset"
@@ -6952,6 +7169,7 @@
     {
       "name": "Unit_conversionOffsetSN",
       "definition_uri": "https://w3id.org/None/conversionOffsetSN",
+      "description": "conversion offset scientific",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/conversionOffsetSN"
@@ -6995,6 +7213,7 @@
     {
       "name": "Unit_mathMLdefinition",
       "definition_uri": "https://w3id.org/None/mathMLdefinition",
+      "description": "mathML definition",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/mathMLdefinition"
@@ -7016,6 +7235,7 @@
     {
       "name": "UserQuantityKind_hasQuantityKind",
       "definition_uri": "https://w3id.org/None/hasQuantityKind",
+      "description": "has quantity kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/hasQuantityKind"
@@ -7084,6 +7304,7 @@
     {
       "name": "Verifiable_wikidataMatch",
       "definition_uri": "https://w3id.org/None/wikidataMatch",
+      "description": "wikidata match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/wikidataMatch"
@@ -7105,6 +7326,7 @@
     {
       "name": "Verifiable_dbpediaMatch",
       "definition_uri": "https://w3id.org/None/dbpediaMatch",
+      "description": "dbpedia match",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "https://w3id.org/None/dbpediaMatch"
@@ -7140,6 +7362,7 @@
     {
       "name": "AbstractQuantityKind",
       "definition_uri": "https://w3id.org/None/AbstractQuantityKind",
+      "description": "Quantity Kind (abstract)",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:AbstractQuantityKind"
@@ -7166,6 +7389,7 @@
     {
       "name": "AngleUnit",
       "definition_uri": "https://w3id.org/None/AngleUnit",
+      "description": "All units relating to specification of angles. ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:AngleUnit"
@@ -7238,6 +7462,7 @@
     {
       "name": "AspectClass",
       "definition_uri": "https://w3id.org/None/AspectClass",
+      "description": "Aspect Class",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:AspectClass"
@@ -7250,6 +7475,7 @@
     {
       "name": "BaseDimensionMagnitude",
       "definition_uri": "https://w3id.org/None/BaseDimensionMagnitude",
+      "description": "<p class=\"lm-para\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>\n<p class=\"lm-para\">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>",
       "comments": [
         "<p class=\\\"lm-para\\\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>\n<p class=\\\"lm-para\\\">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>^^rdf:HTML"
       ],
@@ -7277,6 +7503,7 @@
     {
       "name": "BinaryPrefix",
       "definition_uri": "https://w3id.org/None/BinaryPrefix",
+      "description": "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2.",
       "comments": [
         "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2."
       ],
@@ -7312,6 +7539,7 @@
     {
       "name": "BitEncodingType",
       "definition_uri": "https://w3id.org/None/BitEncodingType",
+      "description": "A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to True.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:BitEncodingType"
@@ -7336,6 +7564,7 @@
     {
       "name": "BooleanEncodingType",
       "definition_uri": "https://w3id.org/None/BooleanEncodingType",
+      "description": "Boolean encoding type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:BooleanEncodingType"
@@ -7360,6 +7589,7 @@
     {
       "name": "ByteEncodingType",
       "definition_uri": "https://w3id.org/None/ByteEncodingType",
+      "description": "This class contains the various ways that information may be encoded into bytes.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:ByteEncodingType"
@@ -7384,6 +7614,7 @@
     {
       "name": "CardinalityType",
       "definition_uri": "https://w3id.org/None/CardinalityType",
+      "description": "\n  In mathematics, the cardinality of a set is a measure of the number of elements of the set.\n  For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.\n  There are two approaches to cardinality: one which compares sets directly using bijections and injections,\n   and another which uses cardinal numbers.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:CardinalityType"
@@ -7413,6 +7644,7 @@
     {
       "name": "CharEncodingType",
       "definition_uri": "https://w3id.org/None/CharEncodingType",
+      "description": "The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data as a sequence of bits or bytes.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:CharEncodingType"
@@ -7437,6 +7669,7 @@
     {
       "name": "Citation",
       "definition_uri": "https://w3id.org/None/Citation",
+      "description": "Provides a simple way of making citations.",
       "comments": [
         "Provides a simple way of making citations.^^rdf:HTML"
       ],
@@ -7463,6 +7696,7 @@
     {
       "name": "Comment",
       "definition_uri": "https://w3id.org/None/Comment",
+      "description": "Comment",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Comment"
@@ -7483,6 +7717,7 @@
     {
       "name": "Concept",
       "definition_uri": "https://w3id.org/None/Concept",
+      "description": "The root class for all QUDT concepts.",
       "comments": [
         "The root class for all QUDT concepts.^^rdf:HTML"
       ],
@@ -7508,6 +7743,7 @@
     {
       "name": "ConstantValue",
       "definition_uri": "https://w3id.org/None/ConstantValue",
+      "description": "Used to specify the values of a constant.",
       "comments": [
         "Used to specify the values of a constant.^^rdf:HTML"
       ],
@@ -7542,6 +7778,7 @@
     {
       "name": "ContextualUnit",
       "definition_uri": "https://w3id.org/None/ContextualUnit",
+      "description": "Contextual Unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:ContextualUnit"
@@ -7600,6 +7837,7 @@
     {
       "name": "CountingUnit",
       "definition_uri": "https://w3id.org/None/CountingUnit",
+      "description": "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second.",
       "comments": [
         "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second.^^rdf:HTML"
       ],
@@ -7660,6 +7898,7 @@
     {
       "name": "CurrencyUnit",
       "definition_uri": "https://w3id.org/None/CurrencyUnit",
+      "description": "Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units.",
       "comments": [
         "Currency Units have their own subclass of unit because: (a) they have additional properties such as 'country' and (b) their URIs do not conform to the same rules as other units.^^rdf:HTML",
         "Used for all units that express currency.^^rdf:HTML"
@@ -7723,6 +7962,7 @@
     {
       "name": "DataEncoding",
       "definition_uri": "https://w3id.org/None/DataEncoding",
+      "description": "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>",
       "comments": [
         "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>^^rdf:HTML"
       ],
@@ -7743,6 +7983,7 @@
     {
       "name": "DataItem",
       "definition_uri": "https://w3id.org/None/DataItem",
+      "description": "\n  <p>A <em>Data Item</em> holds a value that maybe a scalar or structured datatype.\n  <em>Quantity Value</em> specifies which case applies.\n  </p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:DataItem"
@@ -7766,6 +8007,7 @@
     {
       "name": "Datatype",
       "definition_uri": "https://w3id.org/None/Datatype",
+      "description": "\n   <p>A <em>Datatype</em> is a definition of the type of the \"value\" of a data item (for example, \"all integers between 0 and 10\"),\n   and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored.\n  Some types are primitive - built-in to the language, with no visible internal structure.\n  For example \"Boolean\"; others are composite - constructed from one or more other types (of either kind).\n  For example lists, arrays, structures, unions.\n  Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion.\n  </p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "rdfs:Datatype"
@@ -7805,6 +8047,7 @@
     {
       "name": "DateTimeStringEncodingType",
       "definition_uri": "https://w3id.org/None/DateTimeStringEncodingType",
+      "description": "Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous formatting and parsing rules.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:DateTimeStringEncodingType"
@@ -7820,6 +8063,7 @@
     {
       "name": "DecimalPrefix",
       "definition_uri": "https://w3id.org/None/DecimalPrefix",
+      "description": "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10.",
       "comments": [
         "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10."
       ],
@@ -7855,6 +8099,7 @@
     {
       "name": "DerivedUnit",
       "definition_uri": "https://w3id.org/None/DerivedUnit",
+      "description": "A DerivedUnit is a type specification for units that are derived from other units.",
       "comments": [
         "A DerivedUnit is a type specification for units that are derived from other units.^^rdf:HTML"
       ],
@@ -7915,6 +8160,7 @@
     {
       "name": "DimensionlessUnit",
       "definition_uri": "https://w3id.org/None/DimensionlessUnit",
+      "description": "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.",
       "comments": [
         "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.^^rdf:HTML"
       ],
@@ -7975,6 +8221,7 @@
     {
       "name": "Discipline",
       "definition_uri": "https://w3id.org/None/Discipline",
+      "description": "Discipline",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Discipline"
@@ -7997,6 +8244,7 @@
     {
       "name": "Encoding",
       "definition_uri": "https://w3id.org/None/Encoding",
+      "description": "An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Encoding"
@@ -8021,6 +8269,7 @@
     {
       "name": "EndianType",
       "definition_uri": "https://w3id.org/None/EndianType",
+      "description": "Endian Type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:EndianType"
@@ -8073,6 +8322,7 @@
     {
       "name": "EnumeratedValue",
       "definition_uri": "https://w3id.org/None/EnumeratedValue",
+      "description": "<p>This class is for all enumerated and/or coded values.  For example, it contains the dimension objects that are the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract vector space.</p>\n\n<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>\n\n<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:EnumeratedValue"
@@ -8104,6 +8354,7 @@
     {
       "name": "Enumeration",
       "definition_uri": "https://w3id.org/None/Enumeration",
+      "description": "<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>\n\n<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>",
       "comments": [
         "<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>\n\n<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>^^rdf:HTML"
       ],
@@ -8131,6 +8382,7 @@
     {
       "name": "EnumerationScale",
       "definition_uri": "https://w3id.org/None/EnumerationScale",
+      "description": "Enumeration scale",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:EnumerationScale"
@@ -8162,6 +8414,7 @@
     {
       "name": "Figure",
       "definition_uri": "https://w3id.org/None/Figure",
+      "description": "Figure",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Figure"
@@ -8191,6 +8444,7 @@
     {
       "name": "FloatingPointEncodingType",
       "definition_uri": "https://w3id.org/None/FloatingPointEncodingType",
+      "description": "A \"Encoding\" with the following instance(s): \"Double Precision Encoding\", \"Single Precision Real Encoding\".",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:FloatingPointEncodingType"
@@ -8215,6 +8469,7 @@
     {
       "name": "IntegerEncodingType",
       "definition_uri": "https://w3id.org/None/IntegerEncodingType",
+      "description": "The encoding scheme for integer types",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:IntegerEncodingType"
@@ -8239,6 +8494,7 @@
     {
       "name": "IntervalScale",
       "definition_uri": "https://w3id.org/None/IntervalScale",
+      "description": "<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 \u00b0C cannot be said to be \"twice as hot\" as 10 \u00b0C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \"scaled variables\", but the formal mathematical term is an affine space (in this case an affine line).</p>\n<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>",
       "comments": [
         "<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 \u00b0C cannot be said to be \\\"twice as hot\\\" as 10 \u00b0C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \\\"scaled variables\\\", but the formal mathematical term is an affine space (in this case an affine line).</p>\n<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>^^rdf:HTML",
         "median, percentile & Monotonic increasing (order (<)) & totally ordered set^^rdf:HTML"
@@ -8269,6 +8525,7 @@
     {
       "name": "LogarithmicUnit",
       "definition_uri": "https://w3id.org/None/LogarithmicUnit",
+      "description": "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel.",
       "comments": [
         "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel.^^rdf:HTML"
       ],
@@ -8329,6 +8586,7 @@
     {
       "name": "MathsFunctionType",
       "definition_uri": "https://w3id.org/None/MathsFunctionType",
+      "description": "Maths Function Type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:MathsFunctionType"
@@ -8351,6 +8609,7 @@
     {
       "name": "NISTSP811Comment",
       "definition_uri": "https://w3id.org/None/NISTSP811Comment",
+      "description": "NIST SP~811 Comment",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:NIST_SP811_Comment"
@@ -8371,6 +8630,7 @@
     {
       "name": "NominalScale",
       "definition_uri": "https://w3id.org/None/NominalScale",
+      "description": "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example.",
       "comments": [
         "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example.^^rdf:HTML"
       ],
@@ -8400,6 +8660,7 @@
     {
       "name": "NumericUnion",
       "definition_uri": "https://w3id.org/None/NumericUnion",
+      "description": "Numeric union",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:NumericUnion"
@@ -8424,6 +8685,7 @@
     {
       "name": "OrderedType",
       "definition_uri": "https://w3id.org/None/OrderedType",
+      "description": "Describes how a data or information structure is ordered.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:OrderedType"
@@ -8453,6 +8715,7 @@
     {
       "name": "OrdinalScale",
       "definition_uri": "https://w3id.org/None/OrdinalScale",
+      "description": "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion.",
       "comments": [
         "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion.^^rdf:HTML"
       ],
@@ -8483,6 +8746,7 @@
     {
       "name": "Organization",
       "definition_uri": "https://w3id.org/None/Organization",
+      "description": "Organization",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Organization"
@@ -8506,6 +8770,7 @@
     {
       "name": "PhysicalConstant",
       "definition_uri": "https://w3id.org/None/PhysicalConstant",
+      "description": "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space \u03b50, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.",
       "comments": [
         "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space \u03b50, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.^^rdf:HTML"
       ],
@@ -8555,6 +8820,7 @@
     {
       "name": "PlaneAngleUnit",
       "definition_uri": "https://w3id.org/None/PlaneAngleUnit",
+      "description": "Plane Angle Unit",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:PlaneAngleUnit"
@@ -8612,6 +8878,7 @@
     {
       "name": "Prefix",
       "definition_uri": "https://w3id.org/None/Prefix",
+      "description": "Prefix",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Prefix"
@@ -8647,6 +8914,7 @@
     {
       "name": "Quantifiable",
       "definition_uri": "https://w3id.org/None/Quantifiable",
+      "description": "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>",
       "comments": [
         "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>^^rdf:HTML"
       ],
@@ -8672,6 +8940,7 @@
     {
       "name": "Quantity",
       "definition_uri": "https://w3id.org/None/Quantity",
+      "description": "<p class=\"lm-para\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.\n  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the\n  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific\n  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as\n  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points,\nvelocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p>\n<p class=\"lm-para\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity\nkinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance\ndivided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these\nexpressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded\nas \"fundamental\" in this sense.</p>\n<p class=\"lm-para\">A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.</p>",
       "comments": [
         "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system.\n  A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the\n  underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific\n  quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as\n  the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n<p class=\\\"lm-para\\\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points,\nvelocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.</p>\n<p class=\\\"lm-para\\\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity\nkinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance\ndivided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these\nexpressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded\nas \\\"fundamental\\\" in this sense.</p>\n<p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\" in that the former carries a value and the latter is a type specifier.</p>^^rdf:HTML"
       ],
@@ -8711,6 +8980,7 @@
     {
       "name": "QuantityKind",
       "definition_uri": "https://w3id.org/None/QuantityKind",
+      "description": "A <b>Quantity Kind</b> is any observable property that can be measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.",
       "comments": [
         "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.^^rdf:HTML"
       ],
@@ -8762,6 +9032,7 @@
     {
       "name": "QuantityKindDimensionVector",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVector",
+      "description": "<p class=\"lm-para\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\theta$) as $dim \\, Q = L^{\\alpha} \\, M^{\\beta} \\, T^{\\gamma} \\, I ^{\\delta} \\, \\theta ^{\\epsilon} \\, N^{\\eta} \\, J ^{\\nu}$.</p>\n\n<p class=\"lm-para\">The rational powers of the dimensional exponents, $\\alpha, \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\ , \\eta, \\, \\nu$, are positive, negative, or zero.</p>\n\n<p class=\"lm-para\">For example, the dimension of the physical quantity kind $\\it{speed}$ is $\\ boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\boxed{mass \\times acceleration}$ or $\\boxed{mass \\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>",
       "comments": [
         "<p class=\\\"lm-para\\\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass ($M$), length ($L$), time ($T$) current ($I$), amount of substance ($N$), luminous intensity ($J$) and absolute temperature ($\\\\theta$) as $dim \\\\, Q = L^{\\\\alpha} \\\\, M^{\\\\beta} \\\\, T^{\\\\gamma} \\\\, I ^{\\\\delta} \\\\, \\\\theta ^{\\\\epsilon} \\\\ , N^{\\\\eta} \\\\, J ^{\\\\nu}$.</p>\n\n<p class=\\\"lm-para\\\">The rational powers of the dimensional exponents, $\\\\alpha, \\\\, \\\\beta, \\\\, \\\\gamma, \\\\, \\\\delta, \\\\, \\\\epsilon, \\\\, \\\\eta, \\\\, \\\\nu$, are positive, negative, or zero.</p>\n\n<p class=\\\"lm-para\\\">For example, the dimension of the physical quantity kind $\\\\it{speed}$ is $\\\\boxed{length/time}$, $L/T$ or $LT^{-1}$, and the dimension of the physical quantity kind force is $\\\\boxed{mass \\\\times acceleration}$ or $\\\\boxed{mass \\\\times (length/time)/time}$, $ML/T^2$ or $MLT^{-2}$ respectively.</p>^^rdf:HTML"
       ],
@@ -8798,6 +9069,7 @@
     {
       "name": "QuantityKindDimensionVectorCGS",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorCGS",
+      "description": "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.",
       "comments": [
         "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.^^rdf:HTML"
       ],
@@ -8834,6 +9106,7 @@
     {
       "name": "QuantityKindDimensionVectorCGS-EMU",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorCGS-EMU",
+      "description": "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.",
       "comments": [
         "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.^^rdf:HTML"
       ],
@@ -8870,6 +9143,7 @@
     {
       "name": "QuantityKindDimensionVectorCGS-ESU",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorCGS-ESU",
+      "description": "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.",
       "comments": [
         "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.^^rdf:HTML"
       ],
@@ -8906,6 +9180,7 @@
     {
       "name": "QuantityKindDimensionVectorCGS-GAUSS",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorCGS-GAUSS",
+      "description": "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.",
       "comments": [
         "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.^^rdf:HTML"
       ],
@@ -8942,6 +9217,7 @@
     {
       "name": "QuantityKindDimensionVectorCGS-LH",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorCGS-LH",
+      "description": "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.",
       "comments": [
         "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.^^rdf:HTML"
       ],
@@ -8978,6 +9254,7 @@
     {
       "name": "QuantityKindDimensionVectorISO",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorISO",
+      "description": "ISO Dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:QuantityKindDimensionVector_ISO"
@@ -9011,6 +9288,7 @@
     {
       "name": "QuantityKindDimensionVectorImperial",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorImperial",
+      "description": "Imperial dimension vector",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:QuantityKindDimensionVector_Imperial"
@@ -9044,6 +9322,7 @@
     {
       "name": "QuantityKindDimensionVectorSI",
       "definition_uri": "https://w3id.org/None/QuantityKindDimensionVectorSI",
+      "description": "Quantity Kind Dimension vector (SI)",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:QuantityKindDimensionVector_SI"
@@ -9077,6 +9356,7 @@
     {
       "name": "QuantityType",
       "definition_uri": "https://w3id.org/None/QuantityType",
+      "description": "\n  A $\\textit{Quantity Type}$ is an enumeration of quantity kinds.\n  It specializes $\\boxed{dtype:EnumeratedValue}$ by constrinaing $\\boxed{dtype:value}$ to instances of $\\boxed{qudt:QuantityKind}$.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:QuantityType"
@@ -9106,6 +9386,7 @@
     {
       "name": "QuantityValue",
       "definition_uri": "https://w3id.org/None/QuantityValue",
+      "description": "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values.",
       "comments": [
         "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\\\"http://physics.nist.gov/Pubs/SP811/sec07.html\\\">NIST SP 811 section 7</a> for more on quantity values.^^rdf:HTML"
       ],
@@ -9142,6 +9423,7 @@
     {
       "name": "RatioScale",
       "definition_uri": "https://w3id.org/None/RatioScale",
+      "description": "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero.",
       "comments": [
         "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \\\"twice the length\\\" of another (= is \\\"twice as long\\\"). Very informally, many ratio scales can be described as specifying \\\"how much\\\" of something (i.e. an amount or magnitude) or \\\"how many\\\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero.^^rdf:HTML"
       ],
@@ -9171,6 +9453,7 @@
     {
       "name": "Rule",
       "definition_uri": "https://w3id.org/None/Rule",
+      "description": "Rule",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Rule"
@@ -9202,6 +9485,7 @@
     {
       "name": "RuleType",
       "definition_uri": "https://w3id.org/None/RuleType",
+      "description": "Rule Type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:RuleType"
@@ -9230,6 +9514,7 @@
     {
       "name": "ScalarDatatype",
       "definition_uri": "https://w3id.org/None/ScalarDatatype",
+      "description": "Scalar data types are those that have a single value. The permissible values are defined over a domain that may be integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:ScalarDatatype"
@@ -9277,6 +9562,7 @@
     {
       "name": "Scale",
       "definition_uri": "https://w3id.org/None/Scale",
+      "description": "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types.",
       "comments": [
         "Scales (also called \\\"scales of measurement\\\" or \\\"levels of measurement\\\")  are expressions that typically refer to the theory of scale types.^^rdf:HTML"
       ],
@@ -9306,6 +9592,7 @@
     {
       "name": "ScaleType",
       "definition_uri": "https://w3id.org/None/ScaleType",
+      "description": "Scale type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:ScaleType"
@@ -9348,6 +9635,7 @@
     {
       "name": "SolidAngleUnit",
       "definition_uri": "https://w3id.org/None/SolidAngleUnit",
+      "description": "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi.",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:SolidAngleUnit"
@@ -9427,6 +9715,7 @@
     {
       "name": "Symbol",
       "definition_uri": "https://w3id.org/None/Symbol",
+      "description": "Symbol",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Symbol"
@@ -9460,6 +9749,7 @@
     {
       "name": "SystemOfQuantityKinds",
       "definition_uri": "https://w3id.org/None/SystemOfQuantityKinds",
+      "description": "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton\u2019s First Law of Motion, Coulomb\u2019s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention.",
       "comments": [
         "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton\u2019s First Law of Motion, Coulomb\u2019s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention.^^rdf:HTML"
       ],
@@ -9490,6 +9780,7 @@
     {
       "name": "SystemOfUnits",
       "definition_uri": "https://w3id.org/None/SystemOfUnits",
+      "description": "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.",
       "comments": [
         "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.^^rdf:HTML"
       ],
@@ -9531,6 +9822,7 @@
     {
       "name": "TransformType",
       "definition_uri": "https://w3id.org/None/TransformType",
+      "description": "Transform type",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:TransformType"
@@ -9559,6 +9851,7 @@
     {
       "name": "Unit",
       "definition_uri": "https://w3id.org/None/Unit",
+      "description": "\n  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).\n  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures).\n  Any measurement of the length can be expressed as a number multiplied by the unit meter.\n  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.\n  ",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:Unit"
@@ -9619,6 +9912,7 @@
     {
       "name": "UserQuantityKind",
       "definition_uri": "https://w3id.org/None/UserQuantityKind",
+      "description": "User Quantity Kind",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "mappings": [
         "qudt:UserQuantityKind"
@@ -9777,6 +10071,7 @@
     {
       "name": "LatexString",
       "definition_uri": "https://w3id.org/None/LatexString",
+      "description": "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering.",
       "comments": [
         "A type of string in which some characters may be wrapped with '$' and '$ characters for LaTeX rendering."
       ],
@@ -9788,6 +10083,7 @@
     {
       "name": "UCUMcs",
       "definition_uri": "https://w3id.org/None/UCUMcs",
+      "description": "Lexical pattern for the case-sensitive version of UCUM code",
       "comments": [
         "Lexical pattern for the case-sensitive version of UCUM code"
       ],
@@ -9800,6 +10096,7 @@
     {
       "name": "UCUMcs-term",
       "definition_uri": "https://w3id.org/None/UCUMcs-term",
+      "description": "Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code",
       "comments": [
         "Lexical pattern for the terminal symbols in the case-sensitive version of UCUM code"
       ],
@@ -9812,6 +10109,7 @@
     {
       "name": "ValueUnion",
       "definition_uri": "https://w3id.org/None/ValueUnion",
+      "description": "A datatype that is the union of numeric xsd data types. \"numericUnion\" is equivalent to the xsd specification that uses an xsd:union of memberTypes=\"xsd:decimal xsd:double xsd:float xsd:integer\".",
       "from_schema": "http://qudt.org/3.1.6/schema/qudt",
       "is_a": "Resource",
       "slot_usage": {},
@@ -9821,9 +10119,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "linkml_qudt.yaml",
-  "source_file_date": "2026-01-04T22:27:50",
-  "source_file_size": 63354,
-  "generation_date": "2026-01-06T20:52:59",
+  "source_file_date": "2026-01-07T23:15:59",
+  "source_file_size": 89588,
+  "generation_date": "2026-01-07T23:17:16",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/linkml_qudt.context.jsonld",

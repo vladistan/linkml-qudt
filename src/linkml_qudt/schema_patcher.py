@@ -49,7 +49,6 @@ def fix_slot_inheritance(content: CommentedMap) -> None:
 
 
 def fix_class_inheritance(content: CommentedMap) -> None:
-
     classes = content["classes"]
 
     def set_is_a(class_name: str, parent: str) -> None:
@@ -95,7 +94,6 @@ def fix_class_inheritance(content: CommentedMap) -> None:
 
 
 def fix_metadata(content: CommentedMap) -> None:
-
     content["version"] = "0.0.2"
 
     # Remove Error classes
@@ -105,7 +103,6 @@ def fix_metadata(content: CommentedMap) -> None:
 
 
 def add_prefixes(content: CommentedMap) -> None:
-
     prefixes = content["prefixes"]
     prefixes["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     prefixes["owl"] = "http://www.w3.org/2002/07/owl#"
@@ -119,7 +116,6 @@ def add_prefixes(content: CommentedMap) -> None:
 
 
 def reorder_keys(content: CommentedMap) -> CommentedMap:
-
     desired_order = [
         "id",
         "name",
@@ -150,7 +146,6 @@ def reorder_keys(content: CommentedMap) -> CommentedMap:
 
 
 def patch_schema(path: Path) -> None:
-
     content = load_schema(path)
 
     fix_slot_ranges(content)
