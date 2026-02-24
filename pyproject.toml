@@ -60,5 +60,9 @@ packages = ["src/linkml_qudt"]
 [project.scripts]
 patch-qudt-schema = "linkml_qudt.cli.patch_schema:app"
 
+[tool.codespell]
+skip = "original/*,project/*,datadict/*,src/linkml_qudt/datamodel/*"
+ignore-words = ".cspell"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
