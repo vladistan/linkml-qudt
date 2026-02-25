@@ -16,6 +16,7 @@ prefixes:
   owl: http://www.w3.org/2002/07/owl#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   dc: http://purl.org/dc/elements/1.1/
+  skos: http://www.w3.org/2004/02/skos/core#
   dcterms: http://purl.org/dc/terms/
   prov: http://www.w3.org/ns/prov#
   voag: http://voag.linkedmodel.org/schema/voag#
@@ -1292,6 +1293,10 @@ classes:
       "numericUnion" is equivalent to the xsd specification that uses an
       xsd:union of memberTypes="xsd:decimal xsd:double xsd:float xsd:integer".
 slots:
+  broader:
+    slot_uri: skos:broader
+    multivalued: true
+    description: broader/parent concept
   isReplacedBy:
     slot_uri: dcterms:isReplacedBy
     multivalued: true
@@ -1504,7 +1509,7 @@ slots:
     multivalued: true
     description: enumeration
   exactMatch:
-    slot_uri: qudt:exactMatch
+    slot_uri: skos:exactMatch
     multivalued: true
     description: exact match
   exponent:

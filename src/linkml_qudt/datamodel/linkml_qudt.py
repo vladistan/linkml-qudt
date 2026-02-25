@@ -1,5 +1,5 @@
 # Auto generated from linkml_qudt.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-01-10T14:25:18
+# Generation date: 2026-02-25T10:43:25
 # Schema: qudt
 #
 # id: http://qudt.org/3.1.6/schema/qudt
@@ -72,6 +72,7 @@ PROV = CurieNamespace('prov', 'http://www.w3.org/ns/prov#')
 QUDT = CurieNamespace('qudt', 'https://w3id.org/None/')
 RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
+SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
 VAEM = CurieNamespace('vaem', 'http://www.linkedmodel.org/schema/vaem#')
 VOAG = CurieNamespace('voag', 'http://voag.linkedmodel.org/schema/voag#')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
@@ -174,14 +175,15 @@ class AbstractQuantityKind(Concept):
     class_name: ClassVar[str] = "AbstractQuantityKind"
     class_model_uri: ClassVar[URIRef] = QUDT.AbstractQuantityKind
 
-    broader: Optional[Union[dict, "QuantityKind"]] = None
+    broader: Optional[Union[Union[dict, "QuantityKind"], list[Union[dict, "QuantityKind"]]]] = empty_list()
     altSymbol: Optional[Union[str, list[str]]] = empty_list()
     latexSymbol: Optional[Union[str, list[str]]] = empty_list()
     symbol: Optional[Union[str, list[str]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self.broader is not None and not isinstance(self.broader, QuantityKind):
-            self.broader = QuantityKind(**as_dict(self.broader))
+        if not isinstance(self.broader, list):
+            self.broader = [self.broader] if self.broader is not None else []
+        self.broader = [v if isinstance(v, QuantityKind) else QuantityKind(**as_dict(v)) for v in self.broader]
 
         if not isinstance(self.altSymbol, list):
             self.altSymbol = [self.altSymbol] if self.altSymbol is not None else []
@@ -959,9 +961,7 @@ class PhysicalConstant(Quantity):
             self.exactMatch = [self.exactMatch] if self.exactMatch is not None else []
         self.exactMatch = [v if isinstance(v, PhysicalConstant) else PhysicalConstant(**as_dict(v)) for v in self.exactMatch]
 
-        if not isinstance(self.hasDimensionVector, list):
-            self.hasDimensionVector = [self.hasDimensionVector] if self.hasDimensionVector is not None else []
-        self.hasDimensionVector = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.hasDimensionVector]
+        self._normalize_inlined_as_list(slot_name="hasDimensionVector", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.ucumCode, list):
             self.ucumCode = [self.ucumCode] if self.ucumCode is not None else []
@@ -2122,7 +2122,7 @@ class QuantityKind(Verifiable):
     abbreviation: Optional[Union[str, list[str]]] = empty_list()
     deprecated: Optional[Union[str, list[str]]] = empty_list()
     plainTextDescription: Optional[Union[str, list[str]]] = empty_list()
-    broader: Optional[Union[dict, "QuantityKind"]] = None
+    broader: Optional[Union[Union[dict, "QuantityKind"], list[Union[dict, "QuantityKind"]]]] = empty_list()
     altSymbol: Optional[Union[str, list[str]]] = empty_list()
     latexSymbol: Optional[Union[str, list[str]]] = empty_list()
     symbol: Optional[Union[str, list[str]]] = empty_list()
@@ -2132,17 +2132,13 @@ class QuantityKind(Verifiable):
             self.belongsToSystemOfQuantities = [self.belongsToSystemOfQuantities] if self.belongsToSystemOfQuantities is not None else []
         self.belongsToSystemOfQuantities = [v if isinstance(v, SystemOfQuantityKinds) else SystemOfQuantityKinds(**as_dict(v)) for v in self.belongsToSystemOfQuantities]
 
-        if not isinstance(self.dimensionVectorForSI, list):
-            self.dimensionVectorForSI = [self.dimensionVectorForSI] if self.dimensionVectorForSI is not None else []
-        self.dimensionVectorForSI = [v if isinstance(v, QuantityKindDimensionVectorSI) else QuantityKindDimensionVectorSI(**as_dict(v)) for v in self.dimensionVectorForSI]
+        self._normalize_inlined_as_list(slot_name="dimensionVectorForSI", slot_type=QuantityKindDimensionVectorSI, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.exactMatch, list):
             self.exactMatch = [self.exactMatch] if self.exactMatch is not None else []
         self.exactMatch = [v if isinstance(v, QuantityKind) else QuantityKind(**as_dict(v)) for v in self.exactMatch]
 
-        if not isinstance(self.hasDimensionVector, list):
-            self.hasDimensionVector = [self.hasDimensionVector] if self.hasDimensionVector is not None else []
-        self.hasDimensionVector = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.hasDimensionVector]
+        self._normalize_inlined_as_list(slot_name="hasDimensionVector", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.iec61360Code, list):
             self.iec61360Code = [self.iec61360Code] if self.iec61360Code is not None else []
@@ -2172,13 +2168,9 @@ class QuantityKind(Verifiable):
             self.applicableUnit = [self.applicableUnit] if self.applicableUnit is not None else []
         self.applicableUnit = [v if isinstance(v, Unit) else Unit(**as_dict(v)) for v in self.applicableUnit]
 
-        if not isinstance(self.qkdvDenominator, list):
-            self.qkdvDenominator = [self.qkdvDenominator] if self.qkdvDenominator is not None else []
-        self.qkdvDenominator = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.qkdvDenominator]
+        self._normalize_inlined_as_list(slot_name="qkdvDenominator", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
-        if not isinstance(self.qkdvNumerator, list):
-            self.qkdvNumerator = [self.qkdvNumerator] if self.qkdvNumerator is not None else []
-        self.qkdvNumerator = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.qkdvNumerator]
+        self._normalize_inlined_as_list(slot_name="qkdvNumerator", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.latexDefinition, list):
             self.latexDefinition = [self.latexDefinition] if self.latexDefinition is not None else []
@@ -2220,8 +2212,9 @@ class QuantityKind(Verifiable):
             self.plainTextDescription = [self.plainTextDescription] if self.plainTextDescription is not None else []
         self.plainTextDescription = [v if isinstance(v, str) else str(v) for v in self.plainTextDescription]
 
-        if self.broader is not None and not isinstance(self.broader, QuantityKind):
-            self.broader = QuantityKind(**as_dict(self.broader))
+        if not isinstance(self.broader, list):
+            self.broader = [self.broader] if self.broader is not None else []
+        self.broader = [v if isinstance(v, QuantityKind) else QuantityKind(**as_dict(v)) for v in self.broader]
 
         if not isinstance(self.altSymbol, list):
             self.altSymbol = [self.altSymbol] if self.altSymbol is not None else []
@@ -2585,9 +2578,7 @@ class Unit(Verifiable):
             self.exactMatch = [self.exactMatch] if self.exactMatch is not None else []
         self.exactMatch = [v if isinstance(v, Unit) else Unit(**as_dict(v)) for v in self.exactMatch]
 
-        if not isinstance(self.hasDimensionVector, list):
-            self.hasDimensionVector = [self.hasDimensionVector] if self.hasDimensionVector is not None else []
-        self.hasDimensionVector = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.hasDimensionVector]
+        self._normalize_inlined_as_list(slot_name="hasDimensionVector", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.hasFactorUnit, list):
             self.hasFactorUnit = [self.hasFactorUnit] if self.hasFactorUnit is not None else []
@@ -2605,13 +2596,9 @@ class Unit(Verifiable):
             self.prefix = [self.prefix] if self.prefix is not None else []
         self.prefix = [v if isinstance(v, Prefix) else Prefix(**as_dict(v)) for v in self.prefix]
 
-        if not isinstance(self.qkdvDenominator, list):
-            self.qkdvDenominator = [self.qkdvDenominator] if self.qkdvDenominator is not None else []
-        self.qkdvDenominator = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.qkdvDenominator]
+        self._normalize_inlined_as_list(slot_name="qkdvDenominator", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
-        if not isinstance(self.qkdvNumerator, list):
-            self.qkdvNumerator = [self.qkdvNumerator] if self.qkdvNumerator is not None else []
-        self.qkdvNumerator = [v if isinstance(v, QuantityKindDimensionVector) else QuantityKindDimensionVector(**as_dict(v)) for v in self.qkdvNumerator]
+        self._normalize_inlined_as_list(slot_name="qkdvNumerator", slot_type=QuantityKindDimensionVector, key_name="dimensionExponentForAmountOfSubstance", keyed=False)
 
         if not isinstance(self.scalingOf, list):
             self.scalingOf = [self.scalingOf] if self.scalingOf is not None else []
@@ -2720,11 +2707,12 @@ class ContextualUnit(Unit):
     class_name: ClassVar[str] = "ContextualUnit"
     class_model_uri: ClassVar[URIRef] = QUDT.ContextualUnit
 
-    broader: Optional[Union[dict, Unit]] = None
+    broader: Optional[Union[Union[dict, Unit], list[Union[dict, Unit]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self.broader is not None and not isinstance(self.broader, Unit):
-            self.broader = Unit(**as_dict(self.broader))
+        if not isinstance(self.broader, list):
+            self.broader = [self.broader] if self.broader is not None else []
+        self.broader = [v if isinstance(v, Unit) else Unit(**as_dict(v)) for v in self.broader]
 
         super().__post_init__(**kwargs)
 
@@ -3007,6 +2995,9 @@ class ValueUnion(Resource):
 class slots:
     pass
 
+slots.broader = Slot(uri=SKOS.broader, name="broader", curie=SKOS.curie('broader'),
+                   model_uri=QUDT.broader, domain=None, range=Optional[Union[str, list[str]]])
+
 slots.isReplacedBy = Slot(uri=DCTERMS.isReplacedBy, name="isReplacedBy", curie=DCTERMS.curie('isReplacedBy'),
                    model_uri=QUDT.isReplacedBy, domain=None, range=Optional[Union[str, list[str]]])
 
@@ -3115,7 +3106,7 @@ slots.enumeratedValue = Slot(uri=QUDT.enumeratedValue, name="enumeratedValue", c
 slots.enumeration = Slot(uri=QUDT.enumeration, name="enumeration", curie=QUDT.curie('enumeration'),
                    model_uri=QUDT.enumeration, domain=None, range=Optional[Union[Union[dict, Enumeration], list[Union[dict, Enumeration]]]])
 
-slots.exactMatch = Slot(uri=QUDT.exactMatch, name="exactMatch", curie=QUDT.curie('exactMatch'),
+slots.exactMatch = Slot(uri=SKOS.exactMatch, name="exactMatch", curie=SKOS.curie('exactMatch'),
                    model_uri=QUDT.exactMatch, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.exponent = Slot(uri=QUDT.exponent, name="exponent", curie=QUDT.curie('exponent'),
@@ -3604,11 +3595,8 @@ slots.created = Slot(uri=QUDT.created, name="created", curie=QUDT.curie('created
 slots.modified = Slot(uri=QUDT.modified, name="modified", curie=QUDT.curie('modified'),
                    model_uri=QUDT.modified, domain=None, range=Optional[Union[Union[str, XSDDate], list[Union[str, XSDDate]]]])
 
-slots.broader = Slot(uri=QUDT.broader, name="broader", curie=QUDT.curie('broader'),
-                   model_uri=QUDT.broader, domain=None, range=Optional[Union[dict, QuantityKind]])
-
-slots.AbstractQuantityKind_broader = Slot(uri=QUDT.broader, name="AbstractQuantityKind_broader", curie=QUDT.curie('broader'),
-                   model_uri=QUDT.AbstractQuantityKind_broader, domain=AbstractQuantityKind, range=Optional[Union[dict, "QuantityKind"]])
+slots.AbstractQuantityKind_broader = Slot(uri=SKOS.broader, name="AbstractQuantityKind_broader", curie=SKOS.curie('broader'),
+                   model_uri=QUDT.AbstractQuantityKind_broader, domain=AbstractQuantityKind, range=Optional[Union[Union[dict, "QuantityKind"], list[Union[dict, "QuantityKind"]]]])
 
 slots.AbstractQuantityKind_altSymbol = Slot(uri=QUDT.altSymbol, name="AbstractQuantityKind_altSymbol", curie=QUDT.curie('altSymbol'),
                    model_uri=QUDT.AbstractQuantityKind_altSymbol, domain=AbstractQuantityKind, range=Optional[Union[str, list[str]]])
@@ -3664,8 +3652,8 @@ slots.Concept_plainTextDescription = Slot(uri=QUDT.plainTextDescription, name="C
 slots.ConstantValue_exactConstant = Slot(uri=QUDT.exactConstant, name="ConstantValue_exactConstant", curie=QUDT.curie('exactConstant'),
                    model_uri=QUDT.ConstantValue_exactConstant, domain=ConstantValue, range=Optional[Union[str, list[str]]])
 
-slots.ContextualUnit_broader = Slot(uri=QUDT.broader, name="ContextualUnit_broader", curie=QUDT.curie('broader'),
-                   model_uri=QUDT.ContextualUnit_broader, domain=ContextualUnit, range=Optional[Union[dict, Unit]])
+slots.ContextualUnit_broader = Slot(uri=SKOS.broader, name="ContextualUnit_broader", curie=SKOS.curie('broader'),
+                   model_uri=QUDT.ContextualUnit_broader, domain=ContextualUnit, range=Optional[Union[Union[dict, Unit], list[Union[dict, Unit]]]])
 
 slots.CurrencyUnit_currencyCode = Slot(uri=QUDT.currencyCode, name="CurrencyUnit_currencyCode", curie=QUDT.curie('currencyCode'),
                    model_uri=QUDT.CurrencyUnit_currencyCode, domain=CurrencyUnit, range=Optional[Union[str, list[str]]])
@@ -3811,7 +3799,7 @@ slots.PhysicalConstant_applicableSystem = Slot(uri=QUDT.applicableSystem, name="
 slots.PhysicalConstant_applicableUnit = Slot(uri=QUDT.applicableUnit, name="PhysicalConstant_applicableUnit", curie=QUDT.curie('applicableUnit'),
                    model_uri=QUDT.PhysicalConstant_applicableUnit, domain=PhysicalConstant, range=Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]])
 
-slots.PhysicalConstant_exactMatch = Slot(uri=QUDT.exactMatch, name="PhysicalConstant_exactMatch", curie=QUDT.curie('exactMatch'),
+slots.PhysicalConstant_exactMatch = Slot(uri=SKOS.exactMatch, name="PhysicalConstant_exactMatch", curie=SKOS.curie('exactMatch'),
                    model_uri=QUDT.PhysicalConstant_exactMatch, domain=PhysicalConstant, range=Optional[Union[Union[dict, "PhysicalConstant"], list[Union[dict, "PhysicalConstant"]]]])
 
 slots.PhysicalConstant_hasDimensionVector = Slot(uri=QUDT.hasDimensionVector, name="PhysicalConstant_hasDimensionVector", curie=QUDT.curie('hasDimensionVector'),
@@ -3844,7 +3832,7 @@ slots.PhysicalConstant_latexDefinition = Slot(uri=QUDT.latexDefinition, name="Ph
 slots.PhysicalConstant_mathMLdefinition = Slot(uri=QUDT.mathMLdefinition, name="PhysicalConstant_mathMLdefinition", curie=QUDT.curie('mathMLdefinition'),
                    model_uri=QUDT.PhysicalConstant_mathMLdefinition, domain=PhysicalConstant, range=Optional[Union[str, list[str]]])
 
-slots.Prefix_exactMatch = Slot(uri=QUDT.exactMatch, name="Prefix_exactMatch", curie=QUDT.curie('exactMatch'),
+slots.Prefix_exactMatch = Slot(uri=SKOS.exactMatch, name="Prefix_exactMatch", curie=SKOS.curie('exactMatch'),
                    model_uri=QUDT.Prefix_exactMatch, domain=Prefix, range=Optional[Union[Union[dict, "Prefix"], list[Union[dict, "Prefix"]]]])
 
 slots.Prefix_ucumCode = Slot(uri=QUDT.ucumCode, name="Prefix_ucumCode", curie=QUDT.curie('ucumCode'),
@@ -3898,7 +3886,7 @@ slots.Quantity_isDeltaQuantity = Slot(uri=QUDT.isDeltaQuantity, name="Quantity_i
 slots.QuantityKind_dimensionVectorForSI = Slot(uri=QUDT.dimensionVectorForSI, name="QuantityKind_dimensionVectorForSI", curie=QUDT.curie('dimensionVectorForSI'),
                    model_uri=QUDT.QuantityKind_dimensionVectorForSI, domain=QuantityKind, range=Optional[Union[Union[dict, QuantityKindDimensionVectorSI], list[Union[dict, QuantityKindDimensionVectorSI]]]])
 
-slots.QuantityKind_exactMatch = Slot(uri=QUDT.exactMatch, name="QuantityKind_exactMatch", curie=QUDT.curie('exactMatch'),
+slots.QuantityKind_exactMatch = Slot(uri=SKOS.exactMatch, name="QuantityKind_exactMatch", curie=SKOS.curie('exactMatch'),
                    model_uri=QUDT.QuantityKind_exactMatch, domain=QuantityKind, range=Optional[Union[Union[dict, "QuantityKind"], list[Union[dict, "QuantityKind"]]]])
 
 slots.QuantityKind_hasDimensionVector = Slot(uri=QUDT.hasDimensionVector, name="QuantityKind_hasDimensionVector", curie=QUDT.curie('hasDimensionVector'),
@@ -4081,7 +4069,7 @@ slots.Unit_derivedCoherentUnitOfSystem = Slot(uri=QUDT.derivedCoherentUnitOfSyst
 slots.Unit_derivedUnitOfSystem = Slot(uri=QUDT.derivedUnitOfSystem, name="Unit_derivedUnitOfSystem", curie=QUDT.curie('derivedUnitOfSystem'),
                    model_uri=QUDT.Unit_derivedUnitOfSystem, domain=Unit, range=Optional[Union[Union[dict, SystemOfUnits], list[Union[dict, SystemOfUnits]]]])
 
-slots.Unit_exactMatch = Slot(uri=QUDT.exactMatch, name="Unit_exactMatch", curie=QUDT.curie('exactMatch'),
+slots.Unit_exactMatch = Slot(uri=SKOS.exactMatch, name="Unit_exactMatch", curie=SKOS.curie('exactMatch'),
                    model_uri=QUDT.Unit_exactMatch, domain=Unit, range=Optional[Union[Union[dict, "Unit"], list[Union[dict, "Unit"]]]])
 
 slots.Unit_hasDimensionVector = Slot(uri=QUDT.hasDimensionVector, name="Unit_hasDimensionVector", curie=QUDT.curie('hasDimensionVector'),

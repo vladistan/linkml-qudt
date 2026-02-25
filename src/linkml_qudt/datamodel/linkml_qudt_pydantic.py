@@ -29,7 +29,7 @@ from pydantic import (
 )
 
 
-metamodel_version = "None"
+metamodel_version = "1.7.0"
 version = "0.0.2"
 
 
@@ -94,6 +94,8 @@ linkml_meta = LinkMLMeta({'default_prefix': 'qudt',
                           'prefix_reference': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
                   'rdfs': {'prefix_prefix': 'rdfs',
                            'prefix_reference': 'http://www.w3.org/2000/01/rdf-schema#'},
+                  'skos': {'prefix_prefix': 'skos',
+                           'prefix_reference': 'http://www.w3.org/2004/02/skos/core#'},
                   'vaem': {'prefix_prefix': 'vaem',
                            'prefix_reference': 'http://www.linkedmodel.org/schema/vaem#'},
                   'voag': {'prefix_prefix': 'voag',
@@ -220,7 +222,7 @@ class DataEncoding(Aspect):
 
 class DataItem(Concept):
     """
-
+    
       <p>A <em>Data Item</em> holds a value that maybe a scalar or structured datatype.
       <em>Quantity Value</em> specifies which case applies.
       </p>
@@ -237,7 +239,7 @@ class DataItem(Concept):
 
 class Datatype(Concept):
     """
-
+    
        <p>A <em>Datatype</em> is a definition of the type of the \"value\" of a data item (for example, \"all integers between 0 and 10\"),
        and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored.
       Some types are primitive - built-in to the language, with no visible internal structure.
@@ -1133,12 +1135,12 @@ class EnumeratedValue(Verifiable, Concept):
 
 class CardinalityType(EnumeratedValue):
     """
-
+    
       In mathematics, the cardinality of a set is a measure of the number of elements of the set.
       For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.
       There are two approaches to cardinality: one which compares sets directly using bijections and injections,
        and another which uses cardinal numbers.
-
+      
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:CardinalityType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
@@ -1275,10 +1277,10 @@ class QuantityKind(Verifiable, AbstractQuantityKind):
 
 class QuantityType(EnumeratedValue):
     """
-
+    
       A $\textit{Quantity Type}$ is an enumeration of quantity kinds.
       It specializes $\boxed{dtype:EnumeratedValue}$ by constrinaing $\boxed{dtype:value}$ to instances of $\boxed{qudt:QuantityKind}$.
-
+      
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:QuantityType',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
@@ -1374,12 +1376,12 @@ class TransformType(EnumeratedValue):
 
 class Unit(Verifiable, Concept):
     """
-
+    
       A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).
       For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures).
       Any measurement of the length can be expressed as a number multiplied by the unit meter.
       More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
-
+      
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:Unit',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt',
@@ -1493,7 +1495,7 @@ class DimensionlessUnit(Unit):
 
 class AngleUnit(DimensionlessUnit):
     """
-    All units relating to specification of angles.
+    All units relating to specification of angles. 
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'qudt:AngleUnit',
          'from_schema': 'http://qudt.org/3.1.6/schema/qudt'})
